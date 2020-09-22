@@ -1,0 +1,3798 @@
+Model {
+SavedCharacterEncoding "ISO-8859-1"
+PreLoadFcn "M = 2;             % Mass of moving base\nm = 0.1;        % Mass of metronome\nJ = 0.1;          % Momentum of inertia of metronome\nr = 1;               % Length of metronome \ng =9.8;             % Gravitiy constant\nb= 0.04;           % Combined friction coefficicent\ntheta0 = pi/30;  % Escapement angle\nTheta1 = (pi/6);  % Initial phase angle of metronome 1\nTheta2 = (pi/8); % Initial phase angle of metronome 2\nTheta3 = (pi/12);  % Initial phase angle of metronome 3\n\n"
+EnableAccessToBaseWorkspace on
+SLXCompressionType "Normal"
+ScopeRefreshTime "0.035000"
+OverrideScopeRefreshTime on
+DisableAllScopes off
+DataTypeOverride "UseLocalSettings"
+DataTypeOverrideAppliesTo "AllNumericTypes"
+MinMaxOverflowLogging "UseLocalSettings"
+MinMaxOverflowArchiveMode "Overwrite"
+FPTRunName "Run 1"
+MaxMDLFileLineLength "120"
+LastSavedArchitecture "maci64"
+HideAutomaticNames on
+UpdateHistory "UpdateHistoryNever"
+ModifiedByFormat "The MathWorks Inc."
+ModifiedDateFormat "%<Auto>"
+RTWModifiedTimeStamp "466005689"
+ModelVersionFormat "1.%<AutoIncrement:155>"
+
+SampleTimeColors off
+SampleTimeAnnotations off
+LibraryLinkDisplay "none"
+WideLines off
+ShowLineDimensions off
+ShowPortDataTypes off
+ShowAllPropagatedSignalLabels off
+PortDataTypeDisplayFormat "AliasTypeOnly"
+ShowEditTimeErrors on
+ShowEditTimeWarnings on
+ShowEditTimeAdvisorChecks off
+ShowPortUnits on
+ShowDesignRanges off
+ShowLoopsOnError on
+IgnoreBidirectionalLines off
+ShowStorageClass off
+ShowTestPointIcons on
+ShowSignalResolutionIcons on
+ShowViewerIcons on
+SortedOrder off
+VariantCondition off
+ShowSubsystemDomainSpec off
+ExecutionContextIcon off
+ShowLinearizationAnnotations on
+ShowVisualizeInsertedRTB on
+ShowMarkup on
+BlockNameDataTip off
+BlockParametersDataTip off
+BlockDescriptionStringDataTip off
+BlockVariantConditionDataTip off
+ToolBar on
+StatusBar on
+BrowserShowLibraryLinks off
+FunctionConnectors off
+BrowserLookUnderMasks off
+MultiThreadCoSim on
+
+SimulationMode "normal"
+SILPILModeSetting "automated"
+SILPILSystemUnderTest "topmodel"
+SILPILSimulationModeTopModel "normal"
+SILPILSimulationModeModelRef "normal"
+SimTabSimulationMode "normal"
+CodeVerificationMode "software-in-the-loop (sil)"
+PauseTimes "5"
+NumberOfSteps "1"
+SnapshotBufferSize "10"
+SnapshotInterval "10"
+NumberOfLastSnapshots "0"
+EnablePacing off
+PacingRate "1"
+LinearizationMsg "none"
+Profile off
+ParamWorkspaceSource "MATLABWorkspace"
+AccelSystemTargetFile "accel.tlc"
+AccelTemplateMakefile "accel_default_tmf"
+AccelMakeCommand "make_rtw"
+TryForcingSFcnDF off
+Object {
+$PropName "DataLoggingOverride"
+$ObjectID 2
+$ClassName "Simulink.SimulationData.ModelLoggingInfo"
+model_ "$bdroot"
+Array {
+PropName "logAsSpecifiedByModels_"
+Type "Cell"
+Dimension 1
+Cell "$bdroot"
+}
+
+Array {
+PropName "logAsSpecifiedByModelsSSIDs_"
+Type "Cell"
+Dimension 1
+Cell ""
+}
+}
+
+ExtModeBatchMode off
+ExtModeEnableFloating on
+ExtModeTrigType "manual"
+ExtModeTrigMode "normal"
+ExtModeTrigPort "1"
+ExtModeTrigElement "any"
+ExtModeTrigDuration "1000"
+ExtModeTrigDurationFloating "auto"
+ExtModeTrigHoldOff "0"
+ExtModeTrigDelay "0"
+ExtModeTrigDirection "rising"
+ExtModeTrigLevel "0"
+ExtModeArchiveMode off
+ExtModeAutoIncOneShot off
+ExtModeIncDirWhenArm off
+ExtModeAddSuffixToVar off
+ExtModeWriteAllDataToWs off
+ExtModeArmWhenConnect on
+ExtModeSkipDownloadWhenConnect off
+ExtModeLogAll on
+ExtModeAutoUpdateStatusClock on
+
+ShowModelReferenceBlockVersion off
+ShowModelReferenceBlockIO off
+OrderedModelArguments on
+
+ExplicitPartitioning off
+Object {
+$PropName "DataTransfer"
+$ObjectID 3
+$ClassName "Simulink.GlobalDataTransfer"
+DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
+DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
+DefaultTransitionBetweenContTasks "Ensure deterministic transfer (minimum delay)"
+DefaultExtrapolationMethodBetweenContTasks "None"
+}
+
+System {
+Location [15, 25, 995, 641]
+Open on
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "55"
+ReportName "simulink-default.rpt"
+SIDHighWatermark "1126"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "SubSystem"
+Name "Metronome\nAnimation"
+SID "87"
+Ports [1]
+Position [700, 450, 755, 500]
+ZOrder "-1"
+RequestExecContextInheritance off
+Object {
+$PropName "MaskObject"
+$ObjectID 4
+$ClassName "Simulink.Mask"
+RunInitForIconRedraw "off"
+Display "plot([-10,10],[0 0],[-2 -2 2 2],[0 1 1 0],[0 3],[0.5 -5])"
+
+Type "Metronome animation plot"
+Object {
+$ObjectID 5
+$PropName "Parameters"
+$ClassName "Simulink.MaskParameter"
+Name "sampleTime"
+Type "edit"
+Tunable "off"
+Prompt "refreshtime"
+Value "0.1"
+}
+
+Description "Metronome plot"
+Help "Metronome animation function using Handle graphics."
+}
+
+System {
+Location [0, 23, 762, 714]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "in_1"
+SID "88"
+Position [40, 25, 60, 45]
+ZOrder "-1"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "S-Function"
+Name "S-function"
+SID "89"
+Ports [1]
+Position [95, 23, 150, 47]
+ZOrder "-2"
+DeleteFcn "pendan([],[],[],'DeleteBlock');"
+FunctionName "msfun_metronomean"
+Parameters "sampleTime"
+SFunctionDeploymentMode off
+EnableBusSupport off
+SFcnIsStateOwnerBlock off
+}
+
+Line {
+ZOrder "1"
+Src "88#out:1"
+Dst "89#in:1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Metronome1"
+SID "1039"
+Ports [1, 3]
+Position [315, 298, 390, 402]
+ZOrder "3"
+RequestExecContextInheritance off
+Port {
+PortNumber "1"
+Name "theta1"
+}
+
+System {
+Location [0, 0, 1920, 1169]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "93"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "xdotdot"
+SID "1040"
+Position [20, 28, 50, 42]
+ZOrder "-1"
+IconDisplay "Port number"
+Unit "m/s^2"
+}
+
+Block {
+BlockType "Sum"
+Name "Add"
+SID "1041"
+Ports [3, 1]
+Position [345, 34, 375, 106]
+ZOrder "-2"
+ShowName off
+Inputs "+++"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain1"
+SID "1042"
+Position [150, 165, 180, 195]
+ZOrder "-5"
+BlockMirror on
+NamePlacement "alternate"
+ShowName off
+Gain "b"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain2"
+SID "1043"
+Position [275, 245, 305, 275]
+ZOrder "-6"
+BlockMirror on
+NamePlacement "alternate"
+ShowName off
+Gain "g"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain4"
+SID "1044"
+Position [150, 245, 180, 275]
+ZOrder "-8"
+BlockMirror on
+NamePlacement "alternate"
+ShowName off
+Gain "m"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain5"
+SID "1045"
+Position [215, 245, 245, 275]
+ZOrder "-9"
+BlockMirror on
+NamePlacement "alternate"
+ShowName off
+Gain "r"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain6"
+SID "1046"
+Position [150, 285, 180, 315]
+ZOrder "-10"
+BlockMirror on
+NamePlacement "alternate"
+ShowName off
+Gain "m"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain7"
+SID "1047"
+Position [215, 285, 245, 315]
+ZOrder "-11"
+BlockMirror on
+NamePlacement "alternate"
+ShowName off
+Gain "r"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Integrator"
+Name "Integrator1"
+SID "1050"
+Ports [1, 1]
+Position [490, 55, 520, 85]
+ZOrder "8"
+ShowName off
+ContinuousStateAttributes "'Thetadot_1'"
+}
+
+Block {
+BlockType "Integrator"
+Name "Integrator2"
+SID "1051"
+Ports [1, 1]
+Position [590, 55, 620, 85]
+ZOrder "9"
+ShowName off
+InitialCondition "Theta1"
+ContinuousStateAttributes "'Theta1'"
+}
+
+Block {
+BlockType "Math"
+Name "Math\nFunction"
+SID "1052"
+Ports [1, 1]
+Position [465, 185, 495, 215]
+ZOrder "-14"
+BlockMirror on
+ShowName off
+Operator "square"
+}
+
+Block {
+BlockType "Product"
+Name "Product"
+SID "1053"
+Ports [2, 1]
+Position [345, 142, 375, 218]
+ZOrder "-15"
+BlockMirror on
+ShowName off
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Product"
+Name "Product1"
+SID "1054"
+Ports [2, 1]
+Position [100, 27, 130, 58]
+ZOrder "-16"
+ShowName off
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Trigonometry"
+Name "Trigonometric\nFunction"
+SID "1055"
+Ports [1, 2]
+Position [345, 242, 375, 318]
+ZOrder "-17"
+BlockMirror on
+ShowName off
+Operator "sincos"
+}
+
+Block {
+BlockType "Gain"
+Name "escapement\nangle"
+SID "1056"
+Position [515, 174, 575, 226]
+ZOrder "3"
+BlockMirror on
+Gain "1/theta0"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Bias"
+Name "friction"
+SID "1057"
+Position [405, 185, 445, 215]
+ZOrder "2"
+BlockMirror on
+Bias "-1.0"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "intertia"
+SID "1058"
+Position [405, 53, 450, 87]
+ZOrder "-7"
+Gain "-1/J"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Outport"
+Name "theta"
+SID "1059"
+Position [720, 18, 750, 32]
+ZOrder "-21"
+IconDisplay "Port number"
+Unit "rad"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "thetadot"
+SID "1060"
+Position [720, 103, 750, 117]
+ZOrder "-22"
+Port "2"
+IconDisplay "Port number"
+Unit "rad/s"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "thetadotdot"
+SID "1061"
+Position [720, 153, 750, 167]
+ZOrder "-23"
+Port "3"
+IconDisplay "Port number"
+Unit "rad/s^2"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "1"
+Labels [1, 0]
+Src "1051#out:1"
+Points [25, 0]
+Branch {
+ZOrder "2"
+Points [0, -45]
+Dst "1059#in:1"
+}
+
+Branch {
+ZOrder "3"
+Points [36, 0; 0, 130]
+Branch {
+ZOrder "4"
+Dst "1056#in:1"
+}
+
+Branch {
+ZOrder "5"
+Points [0, 80]
+Dst "1055#in:1"
+}
+}
+}
+
+Line {
+ZOrder "6"
+Src "1041#out:1"
+Dst "1058#in:1"
+}
+
+Line {
+ZOrder "7"
+Src "1058#out:1"
+Points [11, 0]
+Branch {
+ZOrder "37"
+Points [0, 90]
+Dst "1061#in:1"
+}
+
+Branch {
+ZOrder "36"
+Dst "1050#in:1"
+}
+}
+
+Line {
+ZOrder "12"
+Src "1055#out:1"
+Dst "1043#in:1"
+}
+
+Line {
+ZOrder "13"
+Src "1043#out:1"
+Dst "1045#in:1"
+}
+
+Line {
+ZOrder "14"
+Src "1052#out:1"
+Dst "1057#in:1"
+}
+
+Line {
+ZOrder "15"
+Src "1053#out:1"
+Dst "1042#in:1"
+}
+
+Line {
+ZOrder "16"
+Src "1045#out:1"
+Dst "1044#in:1"
+}
+
+Line {
+ZOrder "17"
+Src "1042#out:1"
+Points [-8, 0; 0, -85]
+Dst "1041#in:3"
+}
+
+Line {
+ZOrder "18"
+Src "1044#out:1"
+Points [-43, 0; 0, -190]
+Dst "1041#in:2"
+}
+
+Line {
+ZOrder "19"
+Src "1047#out:1"
+Dst "1046#in:1"
+}
+
+Line {
+ZOrder "20"
+Src "1055#out:2"
+Dst "1047#in:1"
+}
+
+Line {
+ZOrder "21"
+Src "1046#out:1"
+Points [-81, 0; 0, -250]
+Dst "1054#in:2"
+}
+
+Line {
+ZOrder "22"
+Src "1040#out:1"
+Dst "1054#in:1"
+}
+
+Line {
+ZOrder "23"
+Src "1054#out:1"
+Dst "1041#in:1"
+}
+
+Line {
+ZOrder "24"
+Src "1057#out:1"
+Dst "1053#in:2"
+}
+
+Line {
+ZOrder "25"
+Src "1056#out:1"
+Dst "1052#in:1"
+}
+
+Line {
+ZOrder "26"
+Src "1050#out:1"
+Points [31, 0]
+Branch {
+ZOrder "27"
+Points [0, 39]
+Branch {
+ZOrder "34"
+Points [0, 1]
+Dst "1060#in:1"
+}
+
+Branch {
+ZOrder "30"
+Points [-166, 0]
+Dst "1053#in:1"
+}
+}
+
+Branch {
+ZOrder "28"
+Dst "1051#in:1"
+}
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Metronome2"
+SID "1085"
+Ports [1, 3]
+Position [190, 193, 265, 297]
+ZOrder "5"
+RequestExecContextInheritance off
+Port {
+PortNumber "1"
+Name "theta2"
+}
+
+System {
+Location [0, 0, 1920, 1169]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "93"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "xdotdot"
+SID "1086"
+Position [20, 28, 50, 42]
+ZOrder "-1"
+IconDisplay "Port number"
+Unit "m/s^2"
+}
+
+Block {
+BlockType "Sum"
+Name "Add"
+SID "1087"
+Ports [3, 1]
+Position [345, 34, 375, 106]
+ZOrder "-2"
+ShowName off
+Inputs "+++"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain1"
+SID "1088"
+Position [150, 165, 180, 195]
+ZOrder "-5"
+BlockMirror on
+NamePlacement "alternate"
+ShowName off
+Gain "b"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain2"
+SID "1089"
+Position [275, 245, 305, 275]
+ZOrder "-6"
+BlockMirror on
+NamePlacement "alternate"
+ShowName off
+Gain "g"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain4"
+SID "1090"
+Position [150, 245, 180, 275]
+ZOrder "-8"
+BlockMirror on
+NamePlacement "alternate"
+ShowName off
+Gain "m"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain5"
+SID "1091"
+Position [215, 245, 245, 275]
+ZOrder "-9"
+BlockMirror on
+NamePlacement "alternate"
+ShowName off
+Gain "r"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain6"
+SID "1092"
+Position [150, 285, 180, 315]
+ZOrder "-10"
+BlockMirror on
+NamePlacement "alternate"
+ShowName off
+Gain "m"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain7"
+SID "1093"
+Position [215, 285, 245, 315]
+ZOrder "-11"
+BlockMirror on
+NamePlacement "alternate"
+ShowName off
+Gain "r"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Integrator"
+Name "Integrator1"
+SID "1094"
+Ports [1, 1]
+Position [490, 55, 520, 85]
+ZOrder "8"
+ShowName off
+ContinuousStateAttributes "'Thetadot_2'"
+}
+
+Block {
+BlockType "Integrator"
+Name "Integrator2"
+SID "1095"
+Ports [1, 1]
+Position [590, 55, 620, 85]
+ZOrder "9"
+ShowName off
+InitialCondition "Theta2"
+ContinuousStateAttributes "'Theta2'"
+}
+
+Block {
+BlockType "Math"
+Name "Math\nFunction"
+SID "1096"
+Ports [1, 1]
+Position [465, 185, 495, 215]
+ZOrder "-14"
+BlockMirror on
+ShowName off
+Operator "square"
+}
+
+Block {
+BlockType "Product"
+Name "Product"
+SID "1097"
+Ports [2, 1]
+Position [345, 142, 375, 218]
+ZOrder "-15"
+BlockMirror on
+ShowName off
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Product"
+Name "Product1"
+SID "1098"
+Ports [2, 1]
+Position [100, 27, 130, 58]
+ZOrder "-16"
+ShowName off
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Trigonometry"
+Name "Trigonometric\nFunction"
+SID "1099"
+Ports [1, 2]
+Position [345, 242, 375, 318]
+ZOrder "-17"
+BlockMirror on
+ShowName off
+Operator "sincos"
+}
+
+Block {
+BlockType "Gain"
+Name "escapement\nangle"
+SID "1100"
+Position [515, 174, 575, 226]
+ZOrder "3"
+BlockMirror on
+Gain "1/theta0"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Bias"
+Name "friction"
+SID "1101"
+Position [405, 185, 445, 215]
+ZOrder "2"
+BlockMirror on
+Bias "-1.0"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "intertia"
+SID "1102"
+Position [405, 53, 450, 87]
+ZOrder "-7"
+Gain "-1/J"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Outport"
+Name "theta"
+SID "1103"
+Position [720, 18, 750, 32]
+ZOrder "-21"
+IconDisplay "Port number"
+Unit "rad"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "thetadot"
+SID "1104"
+Position [720, 103, 750, 117]
+ZOrder "-22"
+Port "2"
+IconDisplay "Port number"
+Unit "rad/s"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "thetadotdot"
+SID "1105"
+Position [720, 153, 750, 167]
+ZOrder "-23"
+Port "3"
+IconDisplay "Port number"
+Unit "rad/s^2"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "1"
+Labels [1, 0]
+Src "1095#out:1"
+Points [25, 0]
+Branch {
+ZOrder "2"
+Points [0, -45]
+Dst "1103#in:1"
+}
+
+Branch {
+ZOrder "3"
+Points [36, 0; 0, 130]
+Branch {
+ZOrder "4"
+Dst "1100#in:1"
+}
+
+Branch {
+ZOrder "5"
+Points [0, 80]
+Dst "1099#in:1"
+}
+}
+}
+
+Line {
+ZOrder "6"
+Src "1087#out:1"
+Dst "1102#in:1"
+}
+
+Line {
+ZOrder "7"
+Src "1102#out:1"
+Points [11, 0]
+Branch {
+ZOrder "8"
+Points [0, 90]
+Dst "1105#in:1"
+}
+
+Branch {
+ZOrder "9"
+Dst "1094#in:1"
+}
+}
+
+Line {
+ZOrder "10"
+Src "1099#out:1"
+Dst "1089#in:1"
+}
+
+Line {
+ZOrder "11"
+Src "1089#out:1"
+Dst "1091#in:1"
+}
+
+Line {
+ZOrder "12"
+Src "1096#out:1"
+Dst "1101#in:1"
+}
+
+Line {
+ZOrder "13"
+Src "1097#out:1"
+Dst "1088#in:1"
+}
+
+Line {
+ZOrder "14"
+Src "1091#out:1"
+Dst "1090#in:1"
+}
+
+Line {
+ZOrder "15"
+Src "1088#out:1"
+Points [-8, 0; 0, -85]
+Dst "1087#in:3"
+}
+
+Line {
+ZOrder "16"
+Src "1090#out:1"
+Points [-43, 0; 0, -190]
+Dst "1087#in:2"
+}
+
+Line {
+ZOrder "17"
+Src "1093#out:1"
+Dst "1092#in:1"
+}
+
+Line {
+ZOrder "18"
+Src "1099#out:2"
+Dst "1093#in:1"
+}
+
+Line {
+ZOrder "19"
+Src "1092#out:1"
+Points [-81, 0; 0, -250]
+Dst "1098#in:2"
+}
+
+Line {
+ZOrder "20"
+Src "1086#out:1"
+Dst "1098#in:1"
+}
+
+Line {
+ZOrder "21"
+Src "1098#out:1"
+Dst "1087#in:1"
+}
+
+Line {
+ZOrder "22"
+Src "1101#out:1"
+Dst "1097#in:2"
+}
+
+Line {
+ZOrder "23"
+Src "1100#out:1"
+Dst "1096#in:1"
+}
+
+Line {
+ZOrder "24"
+Src "1094#out:1"
+Points [31, 0]
+Branch {
+ZOrder "25"
+Points [0, 39]
+Branch {
+ZOrder "26"
+Points [0, 1]
+Dst "1104#in:1"
+}
+
+Branch {
+ZOrder "27"
+Points [-166, 0]
+Dst "1097#in:1"
+}
+}
+
+Branch {
+ZOrder "28"
+Dst "1095#in:1"
+}
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Metronome3"
+SID "1106"
+Ports [1, 3]
+Position [60, 88, 135, 192]
+ZOrder "6"
+RequestExecContextInheritance off
+Port {
+PortNumber "1"
+Name "theta3"
+}
+
+System {
+Location [0, 0, 1920, 1169]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "93"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "xdotdot"
+SID "1107"
+Position [20, 28, 50, 42]
+ZOrder "-1"
+IconDisplay "Port number"
+Unit "m/s^2"
+}
+
+Block {
+BlockType "Sum"
+Name "Add"
+SID "1108"
+Ports [3, 1]
+Position [345, 34, 375, 106]
+ZOrder "-2"
+ShowName off
+Inputs "+++"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain1"
+SID "1109"
+Position [150, 165, 180, 195]
+ZOrder "-5"
+BlockMirror on
+NamePlacement "alternate"
+ShowName off
+Gain "b"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain2"
+SID "1110"
+Position [275, 245, 305, 275]
+ZOrder "-6"
+BlockMirror on
+NamePlacement "alternate"
+ShowName off
+Gain "g"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain4"
+SID "1111"
+Position [150, 245, 180, 275]
+ZOrder "-8"
+BlockMirror on
+NamePlacement "alternate"
+ShowName off
+Gain "m"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain5"
+SID "1112"
+Position [215, 245, 245, 275]
+ZOrder "-9"
+BlockMirror on
+NamePlacement "alternate"
+ShowName off
+Gain "r"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain6"
+SID "1113"
+Position [150, 285, 180, 315]
+ZOrder "-10"
+BlockMirror on
+NamePlacement "alternate"
+ShowName off
+Gain "m"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain7"
+SID "1114"
+Position [215, 285, 245, 315]
+ZOrder "-11"
+BlockMirror on
+NamePlacement "alternate"
+ShowName off
+Gain "r"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Integrator"
+Name "Integrator1"
+SID "1115"
+Ports [1, 1]
+Position [490, 55, 520, 85]
+ZOrder "8"
+ShowName off
+ContinuousStateAttributes "'Thetadot_3'"
+}
+
+Block {
+BlockType "Integrator"
+Name "Integrator2"
+SID "1116"
+Ports [1, 1]
+Position [590, 55, 620, 85]
+ZOrder "9"
+ShowName off
+InitialCondition "Theta3"
+ContinuousStateAttributes "'Theta3'"
+}
+
+Block {
+BlockType "Math"
+Name "Math\nFunction"
+SID "1117"
+Ports [1, 1]
+Position [465, 185, 495, 215]
+ZOrder "-14"
+BlockMirror on
+ShowName off
+Operator "square"
+}
+
+Block {
+BlockType "Product"
+Name "Product"
+SID "1118"
+Ports [2, 1]
+Position [345, 142, 375, 218]
+ZOrder "-15"
+BlockMirror on
+ShowName off
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Product"
+Name "Product1"
+SID "1119"
+Ports [2, 1]
+Position [100, 27, 130, 58]
+ZOrder "-16"
+ShowName off
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Trigonometry"
+Name "Trigonometric\nFunction"
+SID "1120"
+Ports [1, 2]
+Position [345, 242, 375, 318]
+ZOrder "-17"
+BlockMirror on
+ShowName off
+Operator "sincos"
+}
+
+Block {
+BlockType "Gain"
+Name "escapement\nangle"
+SID "1121"
+Position [515, 174, 575, 226]
+ZOrder "3"
+BlockMirror on
+Gain "1/theta0"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Bias"
+Name "friction"
+SID "1122"
+Position [405, 185, 445, 215]
+ZOrder "2"
+BlockMirror on
+Bias "-1.0"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "intertia"
+SID "1123"
+Position [405, 53, 450, 87]
+ZOrder "-7"
+Gain "-1/J"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Outport"
+Name "theta"
+SID "1124"
+Position [720, 18, 750, 32]
+ZOrder "-21"
+IconDisplay "Port number"
+Unit "rad"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "thetadot"
+SID "1125"
+Position [720, 103, 750, 117]
+ZOrder "-22"
+Port "2"
+IconDisplay "Port number"
+Unit "rad/s"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "thetadotdot"
+SID "1126"
+Position [720, 153, 750, 167]
+ZOrder "-23"
+Port "3"
+IconDisplay "Port number"
+Unit "rad/s^2"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "1"
+Labels [1, 0]
+Src "1116#out:1"
+Points [25, 0]
+Branch {
+ZOrder "2"
+Points [0, -45]
+Dst "1124#in:1"
+}
+
+Branch {
+ZOrder "3"
+Points [36, 0; 0, 130]
+Branch {
+ZOrder "4"
+Dst "1121#in:1"
+}
+
+Branch {
+ZOrder "5"
+Points [0, 80]
+Dst "1120#in:1"
+}
+}
+}
+
+Line {
+ZOrder "6"
+Src "1108#out:1"
+Dst "1123#in:1"
+}
+
+Line {
+ZOrder "7"
+Src "1123#out:1"
+Points [11, 0]
+Branch {
+ZOrder "8"
+Points [0, 90]
+Dst "1126#in:1"
+}
+
+Branch {
+ZOrder "9"
+Dst "1115#in:1"
+}
+}
+
+Line {
+ZOrder "10"
+Src "1120#out:1"
+Dst "1110#in:1"
+}
+
+Line {
+ZOrder "11"
+Src "1110#out:1"
+Dst "1112#in:1"
+}
+
+Line {
+ZOrder "12"
+Src "1117#out:1"
+Dst "1122#in:1"
+}
+
+Line {
+ZOrder "13"
+Src "1118#out:1"
+Dst "1109#in:1"
+}
+
+Line {
+ZOrder "14"
+Src "1112#out:1"
+Dst "1111#in:1"
+}
+
+Line {
+ZOrder "15"
+Src "1109#out:1"
+Points [-8, 0; 0, -85]
+Dst "1108#in:3"
+}
+
+Line {
+ZOrder "16"
+Src "1111#out:1"
+Points [-43, 0; 0, -190]
+Dst "1108#in:2"
+}
+
+Line {
+ZOrder "17"
+Src "1114#out:1"
+Dst "1113#in:1"
+}
+
+Line {
+ZOrder "18"
+Src "1120#out:2"
+Dst "1114#in:1"
+}
+
+Line {
+ZOrder "19"
+Src "1113#out:1"
+Points [-81, 0; 0, -250]
+Dst "1119#in:2"
+}
+
+Line {
+ZOrder "20"
+Src "1107#out:1"
+Dst "1119#in:1"
+}
+
+Line {
+ZOrder "21"
+Src "1119#out:1"
+Dst "1108#in:1"
+}
+
+Line {
+ZOrder "22"
+Src "1122#out:1"
+Dst "1118#in:2"
+}
+
+Line {
+ZOrder "23"
+Src "1121#out:1"
+Dst "1117#in:1"
+}
+
+Line {
+ZOrder "24"
+Src "1115#out:1"
+Points [31, 0]
+Branch {
+ZOrder "25"
+Points [0, 39]
+Branch {
+ZOrder "26"
+Points [0, 1]
+Dst "1125#in:1"
+}
+
+Branch {
+ZOrder "27"
+Points [-166, 0]
+Dst "1118#in:1"
+}
+}
+
+Branch {
+ZOrder "28"
+Dst "1116#in:1"
+}
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "More Info"
+SID "956"
+Ports []
+Position [30, 20, 53, 40]
+ZOrder "-5"
+DropShadow on
+ShowName off
+OpenFcn "showExample('simulink_general/sldemo_metroExample')"
+FontSize "12"
+RequestExecContextInheritance off
+Object {
+$PropName "MaskObject"
+$ObjectID 6
+$ClassName "Simulink.Mask"
+RunInitForIconRedraw "off"
+Display "disp('?')"
+
+}
+
+System {
+Location [979, 28, 1825, 1069]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+SimulinkSubDomain "Simulink"
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Moving base"
+SID "17"
+Ports [9, 2]
+Position [460, 88, 575, 402]
+ZOrder "-6"
+RequestExecContextInheritance off
+Port {
+PortNumber "2"
+Name "x: Position of moving base"
+}
+
+System {
+Location [0, 0, 1920, 1169]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "157"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "theta3"
+SID "19"
+Position [35, 38, 65, 52]
+ZOrder "-1"
+IconDisplay "Port number"
+Unit "rad"
+}
+
+Block {
+BlockType "Inport"
+Name "thetadot3"
+SID "20"
+Position [80, 63, 110, 77]
+ZOrder "-2"
+Port "2"
+IconDisplay "Port number"
+Unit "rad/s"
+}
+
+Block {
+BlockType "Inport"
+Name "thetadotdot3"
+SID "21"
+Position [145, 88, 175, 102]
+ZOrder "-3"
+Port "3"
+IconDisplay "Port number"
+Unit "rad/s^2"
+}
+
+Block {
+BlockType "Inport"
+Name "theta2"
+SID "571"
+Position [35, 143, 65, 157]
+ZOrder "-4"
+Port "4"
+IconDisplay "Port number"
+Unit "rad"
+}
+
+Block {
+BlockType "Inport"
+Name "thetadot2"
+SID "572"
+Position [80, 168, 110, 182]
+ZOrder "-5"
+Port "5"
+IconDisplay "Port number"
+Unit "rad/s"
+}
+
+Block {
+BlockType "Inport"
+Name "thetadotdot2"
+SID "573"
+Position [145, 193, 175, 207]
+ZOrder "-6"
+Port "6"
+IconDisplay "Port number"
+Unit "rad/s^2"
+}
+
+Block {
+BlockType "Inport"
+Name "theta1"
+SID "584"
+Position [35, 248, 65, 262]
+ZOrder "-7"
+Port "7"
+IconDisplay "Port number"
+Unit "rad"
+}
+
+Block {
+BlockType "Inport"
+Name "thetadot1"
+SID "585"
+Position [80, 273, 110, 287]
+ZOrder "-8"
+Port "8"
+IconDisplay "Port number"
+Unit "rad/s"
+}
+
+Block {
+BlockType "Inport"
+Name "thetadotdot1"
+SID "586"
+Position [145, 298, 175, 312]
+ZOrder "-9"
+Port "9"
+IconDisplay "Port number"
+Unit "rad/s^2"
+}
+
+Block {
+BlockType "Gain"
+Name "-m/(M+n*m)"
+SID "598"
+Position [485, 159, 615, 191]
+ZOrder "-10"
+Gain "-m/(M+3*m)"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Add"
+SID "557"
+Ports [3, 1]
+Position [365, 116, 400, 234]
+ZOrder "-11"
+Inputs "+++"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Integrator"
+Name "Integrator"
+SID "1024"
+Ports [1, 1]
+Position [665, 160, 695, 190]
+ZOrder "5"
+ShowName off
+}
+
+Block {
+BlockType "Integrator"
+Name "Integrator1"
+SID "1025"
+Ports [1, 1]
+Position [730, 160, 760, 190]
+ZOrder "6"
+ShowName off
+}
+
+Block {
+BlockType "SubSystem"
+Name "d2/dt2(sin(theta1))"
+SID "971"
+Ports [3, 1]
+Position [215, 239, 315, 321]
+ZOrder "3"
+RequestExecContextInheritance off
+System {
+Location [0, 0, 1920, 1169]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "125"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "In1"
+SID "972"
+Position [25, 33, 55, 47]
+ZOrder "-1"
+IconDisplay "Port number"
+Unit "rad"
+}
+
+Block {
+BlockType "Inport"
+Name "In2"
+SID "973"
+Position [25, 168, 55, 182]
+ZOrder "-2"
+Port "2"
+IconDisplay "Port number"
+Unit "rad/s"
+}
+
+Block {
+BlockType "Inport"
+Name "In3"
+SID "974"
+Position [25, 68, 55, 82]
+ZOrder "-3"
+Port "3"
+IconDisplay "Port number"
+Unit "rad/s^2"
+}
+
+Block {
+BlockType "Sum"
+Name "Add1"
+SID "975"
+Ports [2, 1]
+Position [240, 95, 270, 125]
+ZOrder "-4"
+NamePlacement "alternate"
+ShowName off
+IconShape "round"
+Inputs "+|-"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Product"
+Name "Product1"
+SID "976"
+Ports [2, 1]
+Position [160, 32, 195, 88]
+ZOrder "-5"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Product"
+Name "Product2"
+SID "977"
+Ports [3, 1]
+Position [160, 123, 195, 187]
+ZOrder "-6"
+Inputs "3"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Trigonometry"
+Name "Trigonometric\nFunction1"
+SID "978"
+Ports [1, 2]
+Position [75, 22, 110, 53]
+ZOrder "-7"
+ShowName off
+Operator "sincos"
+}
+
+Block {
+BlockType "Outport"
+Name "d2/dt2(sin(theta)"
+SID "979"
+Position [320, 103, 350, 117]
+ZOrder "-9"
+IconDisplay "Port number"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "1"
+Src "978#out:2"
+Dst "976#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "972#out:1"
+Dst "978#in:1"
+}
+
+Line {
+ZOrder "3"
+Src "978#out:1"
+Points [8, 0; 0, 105]
+Dst "977#in:1"
+}
+
+Line {
+ZOrder "4"
+Src "973#out:1"
+Points [62, 0]
+Branch {
+ZOrder "5"
+Points [0, -20]
+Dst "977#in:2"
+}
+
+Branch {
+ZOrder "6"
+Dst "977#in:3"
+}
+}
+
+Line {
+ZOrder "7"
+Src "974#out:1"
+Dst "976#in:2"
+}
+
+Line {
+ZOrder "8"
+Src "975#out:1"
+Dst "979#in:1"
+}
+
+Line {
+ZOrder "9"
+Src "976#out:1"
+Points [55, 0]
+Dst "975#in:1"
+}
+
+Line {
+ZOrder "10"
+Src "977#out:1"
+Points [55, 0]
+Dst "975#in:2"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "d2/dt2(sin(theta2))"
+SID "962"
+Ports [3, 1]
+Position [215, 134, 315, 216]
+ZOrder "2"
+RequestExecContextInheritance off
+System {
+Location [0, 0, 1920, 1169]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "125"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "In1"
+SID "963"
+Position [25, 33, 55, 47]
+ZOrder "-1"
+IconDisplay "Port number"
+Unit "rad"
+}
+
+Block {
+BlockType "Inport"
+Name "In2"
+SID "964"
+Position [25, 168, 55, 182]
+ZOrder "-2"
+Port "2"
+IconDisplay "Port number"
+Unit "rad/s"
+}
+
+Block {
+BlockType "Inport"
+Name "In3"
+SID "965"
+Position [25, 68, 55, 82]
+ZOrder "-3"
+Port "3"
+IconDisplay "Port number"
+Unit "rad/s^2"
+}
+
+Block {
+BlockType "Sum"
+Name "Add1"
+SID "966"
+Ports [2, 1]
+Position [240, 95, 270, 125]
+ZOrder "-4"
+NamePlacement "alternate"
+ShowName off
+IconShape "round"
+Inputs "+|-"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Product"
+Name "Product1"
+SID "967"
+Ports [2, 1]
+Position [160, 32, 195, 88]
+ZOrder "-5"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Product"
+Name "Product2"
+SID "968"
+Ports [3, 1]
+Position [160, 123, 195, 187]
+ZOrder "-6"
+Inputs "3"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Trigonometry"
+Name "Trigonometric\nFunction1"
+SID "969"
+Ports [1, 2]
+Position [75, 22, 110, 53]
+ZOrder "-7"
+ShowName off
+Operator "sincos"
+}
+
+Block {
+BlockType "Outport"
+Name "d2/dt2(sin(theta)"
+SID "970"
+Position [320, 103, 350, 117]
+ZOrder "-9"
+IconDisplay "Port number"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "1"
+Src "968#out:1"
+Points [55, 0]
+Dst "966#in:2"
+}
+
+Line {
+ZOrder "2"
+Src "967#out:1"
+Points [55, 0]
+Dst "966#in:1"
+}
+
+Line {
+ZOrder "3"
+Src "966#out:1"
+Dst "970#in:1"
+}
+
+Line {
+ZOrder "4"
+Src "965#out:1"
+Dst "967#in:2"
+}
+
+Line {
+ZOrder "5"
+Src "964#out:1"
+Points [62, 0]
+Branch {
+ZOrder "6"
+Dst "968#in:3"
+}
+
+Branch {
+ZOrder "7"
+Points [0, -20]
+Dst "968#in:2"
+}
+}
+
+Line {
+ZOrder "8"
+Src "969#out:1"
+Points [8, 0; 0, 105]
+Dst "968#in:1"
+}
+
+Line {
+ZOrder "9"
+Src "963#out:1"
+Dst "969#in:1"
+}
+
+Line {
+ZOrder "10"
+Src "969#out:2"
+Dst "967#in:1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "d2/dt2(sin(theta3))"
+SID "549"
+Ports [3, 1]
+Position [215, 29, 315, 111]
+ZOrder "-16"
+RequestExecContextInheritance off
+System {
+Location [0, 0, 1920, 1169]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "125"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "In1"
+SID "550"
+Position [25, 33, 55, 47]
+ZOrder "-1"
+IconDisplay "Port number"
+Unit "rad"
+}
+
+Block {
+BlockType "Inport"
+Name "In2"
+SID "552"
+Position [25, 168, 55, 182]
+ZOrder "-2"
+Port "2"
+IconDisplay "Port number"
+Unit "rad/s"
+}
+
+Block {
+BlockType "Inport"
+Name "In3"
+SID "554"
+Position [25, 68, 55, 82]
+ZOrder "-3"
+Port "3"
+IconDisplay "Port number"
+Unit "rad/s^2"
+}
+
+Block {
+BlockType "Sum"
+Name "Add1"
+SID "555"
+Ports [2, 1]
+Position [240, 95, 270, 125]
+ZOrder "-4"
+NamePlacement "alternate"
+ShowName off
+IconShape "round"
+Inputs "+|-"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Product"
+Name "Product1"
+SID "23"
+Ports [2, 1]
+Position [160, 32, 195, 88]
+ZOrder "-5"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Product"
+Name "Product2"
+SID "25"
+Ports [3, 1]
+Position [160, 123, 195, 187]
+ZOrder "-6"
+Inputs "3"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Trigonometry"
+Name "Trigonometric\nFunction1"
+SID "26"
+Ports [1, 2]
+Position [75, 22, 110, 53]
+ZOrder "-7"
+ShowName off
+Operator "sincos"
+}
+
+Block {
+BlockType "Outport"
+Name "d2/dt2(sin(theta)"
+SID "556"
+Position [320, 103, 350, 117]
+ZOrder "-9"
+IconDisplay "Port number"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "14"
+Src "26#out:2"
+Dst "23#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "550#out:1"
+Dst "26#in:1"
+}
+
+Line {
+ZOrder "5"
+Src "26#out:1"
+Points [8, 0; 0, 105]
+Dst "25#in:1"
+}
+
+Line {
+ZOrder "6"
+Src "552#out:1"
+Points [62, 0]
+Branch {
+ZOrder "19"
+Points [0, -20]
+Dst "25#in:2"
+}
+
+Branch {
+ZOrder "16"
+Dst "25#in:3"
+}
+}
+
+Line {
+ZOrder "11"
+Src "554#out:1"
+Dst "23#in:2"
+}
+
+Line {
+ZOrder "12"
+Src "555#out:1"
+Dst "556#in:1"
+}
+
+Line {
+ZOrder "13"
+Src "23#out:1"
+Points [55, 0]
+Dst "555#in:1"
+}
+
+Line {
+ZOrder "15"
+Src "25#out:1"
+Points [55, 0]
+Dst "555#in:2"
+}
+}
+}
+
+Block {
+BlockType "Gain"
+Name "r"
+SID "597"
+Position [430, 160, 465, 190]
+ZOrder "-17"
+Gain "r"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Outport"
+Name "xdotdot"
+SID "599"
+Position [800, 103, 830, 117]
+ZOrder "-18"
+IconDisplay "Port number"
+Unit "m/s^2"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "x"
+SID "602"
+Position [800, 168, 830, 182]
+ZOrder "-19"
+Port "2"
+IconDisplay "Port number"
+Unit "m"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "1"
+Src "21#out:1"
+Dst "549#in:3"
+}
+
+Line {
+ZOrder "2"
+Src "20#out:1"
+Dst "549#in:2"
+}
+
+Line {
+ZOrder "3"
+Src "19#out:1"
+Dst "549#in:1"
+}
+
+Line {
+ZOrder "4"
+Src "549#out:1"
+Points [15, 0; 0, 65]
+Dst "557#in:1"
+}
+
+Line {
+ZOrder "24"
+Src "573#out:1"
+Dst "962#in:3"
+}
+
+Line {
+ZOrder "25"
+Src "572#out:1"
+Dst "962#in:2"
+}
+
+Line {
+ZOrder "23"
+Src "571#out:1"
+Dst "962#in:1"
+}
+
+Line {
+ZOrder "22"
+Src "962#out:1"
+Dst "557#in:2"
+}
+
+Line {
+ZOrder "27"
+Src "586#out:1"
+Dst "971#in:3"
+}
+
+Line {
+ZOrder "28"
+Src "585#out:1"
+Dst "971#in:2"
+}
+
+Line {
+ZOrder "29"
+Src "584#out:1"
+Dst "971#in:1"
+}
+
+Line {
+ZOrder "26"
+Src "971#out:1"
+Points [15, 0; 0, -65]
+Dst "557#in:3"
+}
+
+Line {
+ZOrder "13"
+Src "557#out:1"
+Dst "597#in:1"
+}
+
+Line {
+ZOrder "14"
+Src "597#out:1"
+Dst "598#in:1"
+}
+
+Line {
+ZOrder "15"
+Src "598#out:1"
+Points [10, 0]
+Branch {
+ZOrder "40"
+Dst "1024#in:1"
+}
+
+Branch {
+ZOrder "16"
+Points [0, -65]
+Dst "599#in:1"
+}
+}
+
+Line {
+ZOrder "41"
+Src "1025#out:1"
+Dst "602#in:1"
+}
+
+Line {
+ZOrder "39"
+Src "1024#out:1"
+Dst "1025#in:1"
+}
+}
+}
+
+Block {
+BlockType "Mux"
+Name "Mux"
+SID "90"
+Ports [3, 1]
+Position [550, 436, 560, 554]
+ZOrder "-7"
+ShowName off
+Inputs "3"
+DisplayOption "bar"
+Port {
+PortNumber "1"
+Name "Phase angle: theta"
+}
+}
+
+Block {
+BlockType "Mux"
+Name "Mux1"
+SID "641"
+Ports [2, 1]
+Position [665, 426, 670, 519]
+ZOrder "-8"
+ShowName off
+Inputs "2"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Scope"
+Name "Scope"
+SID "758"
+Ports [2]
+Position [725, 251, 755, 289]
+ZOrder "-9"
+ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extmgr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('Sources','WiredSimulink',true,'DataLoggingSaveFormat','Array','DataLoggingDecimation','1','DataLoggingDecimateData',true),extmgr.Configuration('Visuals','Time Domain',true,'TimeAxisLabels','All','SerializedDisplays',{struct('MinYLimReal','-0.00959823','MaxYLimReal','0.086384','YLabelReal','%<SignalUnits>','MinYLimMag','0','MaxYLimMag','10','LegendVisibility','Off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',1,'LineNames',{{'x: Position of moving base'}},'ShowContent',true,'Placement',1),struct('MinYLimReal','-0.357264','MaxYLimReal','0.621472','YLabelReal','%<SignalUnits>','MinYLimMag','0','MaxYLimMag','10','LegendVisibility','Off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',3,'LineNames',{{'Phase angle: theta:1','Phase angle: theta:2','Phase angle: theta:3'}},'ShowContent',true,'Placement',2)},'DisplayPropertyDefaults',struct('MinYLimReal','-0.00959823','MaxYLimReal','0.086384','MinYLimMag','0','MaxYLimMag','10','AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',0,'LineNames',{{[]}},'ShowContent',true,'Placement',1),'DisplayLayoutDimensions',[2 1],'TimeRangeSamples','40','TimeRangeFrames','40'),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',false),extmgr.Configuration('Tools','Measurements',true,'Version','2016a')),'Version','2016a','Location',[18 704 437 1140])"
+NumInputPorts "2"
+Floating off
+}
+
+Line {
+Name "theta3"
+ZOrder "81"
+Src "1106#out:1"
+Points [32, 0]
+Branch {
+ZOrder "2"
+Labels [1, 0]
+Dst "17#in:1"
+}
+
+Branch {
+ZOrder "3"
+Labels [2, 0]
+Points [0, 430]
+Dst "90#in:3"
+}
+}
+
+Line {
+ZOrder "79"
+Src "1106#out:2"
+Dst "17#in:2"
+}
+
+Line {
+ZOrder "80"
+Src "1106#out:3"
+Dst "17#in:3"
+}
+
+Line {
+Name "theta2"
+ZOrder "76"
+Src "1085#out:1"
+Points [29, 0]
+Branch {
+ZOrder "7"
+Labels [1, 0]
+Dst "17#in:4"
+}
+
+Branch {
+ZOrder "8"
+Labels [2, 0]
+Points [0, 285]
+Dst "90#in:2"
+}
+}
+
+Line {
+Name "theta1"
+ZOrder "63"
+Src "1039#out:1"
+Points [29, 0]
+Branch {
+ZOrder "72"
+Labels [1, 0]
+Dst "17#in:7"
+}
+
+Branch {
+ZOrder "13"
+Labels [2, 0]
+Points [0, 140]
+Dst "90#in:1"
+}
+}
+
+Line {
+ZOrder "64"
+Src "1039#out:2"
+Dst "17#in:8"
+}
+
+Line {
+ZOrder "65"
+Src "1039#out:3"
+Dst "17#in:9"
+}
+
+Line {
+Name "x: Position of moving base"
+ZOrder "16"
+Src "17#out:2"
+Points [10, 0]
+Branch {
+ZOrder "74"
+Labels [-1, 0]
+Points [0, -65]
+Dst "758#in:1"
+}
+
+Branch {
+ZOrder "73"
+Points [30, 0; 0, 125]
+Dst "641#in:1"
+}
+}
+
+Line {
+ZOrder "19"
+Src "641#out:1"
+Dst "87#in:1"
+}
+
+Line {
+Name "Phase angle: theta"
+ZOrder "20"
+Labels [0, 0]
+Src "90#out:1"
+Points [35, 0]
+Branch {
+ZOrder "110"
+Dst "641#in:2"
+}
+
+Branch {
+ZOrder "22"
+Points [0, -215]
+Dst "758#in:2"
+}
+}
+
+Line {
+ZOrder "23"
+Src "17#out:1"
+Points [55, 0; 0, -95; -600, 0; 0, 65]
+Branch {
+ZOrder "82"
+Dst "1106#in:1"
+}
+
+Branch {
+ZOrder "24"
+Points [0, 105]
+Branch {
+ZOrder "78"
+Dst "1085#in:1"
+}
+
+Branch {
+ZOrder "70"
+Points [0, 105]
+Dst "1039#in:1"
+}
+}
+}
+
+Line {
+ZOrder "77"
+Src "1085#out:3"
+Dst "17#in:6"
+}
+
+Line {
+ZOrder "75"
+Src "1085#out:2"
+Dst "17#in:5"
+}
+
+Annotation {
+SID "958"
+Name "Acceleration of moving base"
+Position [575, 173, 704, 189]
+InternalMargins [1, 1, 1, 1]
+ZOrder "-2"
+}
+
+Annotation {
+SID "959"
+Name "Exploring the Solver Jacobian Structure of a Model"
+Position [200, 27, 592, 50]
+InternalMargins [1, 1, 1, 1]
+ZOrder "-3"
+FontSize "16"
+FontWeight "bold"
+}
+
+Annotation {
+SID "960"
+Name "Copyright 2010-2015 The MathWorks, Inc."
+Position [303, 563, 513, 580]
+InternalMargins [1, 1, 1, 1]
+ZOrder "-4"
+FontSize "11"
+}
+}
+
+DiagnosticSuppressor on
+
+LogicAnalyzerPlugin on
+
+NotesPlugin on
+
+SLCCPlugin on
+
+WebScopes_FoundationPlugin on
+
+GraphicalInterface {
+NumRootInports "0"
+NumRootOutports "0"
+ParameterArgumentNames ""
+NumModelReferences "0"
+NumTestPointedSignals "0"
+NumProvidedFunctions "0"
+NumRequiredFunctions "0"
+NumResetEvents "0"
+HasInitializeEvent "0"
+HasTerminateEvent "0"
+PreCompExecutionDomainType "Unset"
+IsExportFunctionModel "0"
+IsArchitectureModel "0"
+IsAUTOSARArchitectureModel "0"
+NumParameterArguments "0"
+NumExternalFileReferences "0"
+OrderedModelArguments "1"
+}
+
+Object {
+$PropName "HDLParams"
+$ObjectID 1
+$ClassName "slprops.hdlmdlprops"
+Array {
+PropName "mdlProps"
+Type "Cell"
+Dimension 2
+Cell "HDLSubsystem"
+Cell "$bdroot"
+}
+}
+
+Object {
+$PropName "BdWindowsInfo"
+$ObjectID 7
+$ClassName "Simulink.BDWindowsInfo"
+BDUuid "be0691f2-0c13-4d12-b011-24ae13bfe1cf"
+Object {
+$PropName "WindowsInfo"
+$ObjectID 8
+$ClassName "Simulink.WindowInfo"
+IsActive [1]
+Location [15.0, 25.0, 980.0, 616.0]
+WindowState "AAAA/wAAAAD9AAAAAgAAAAAAAAC9AAAB+PwCAAAAA/sAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABrAP///wAAAAEAAAAAAAAAAPwCAAAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZQBjAHQAbwByAAAAAAD/////AAAAOQD///8AAAPUAAABpgAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAB/////wEAAAAA/////wAAAAAAAAAA"
+WindowUuid "d876a593-9a85-4714-9a2f-8041fe46f0dd"
+Array {
+PropName "PersistedApps"
+Type "Cell"
+Dimension 0
+}
+
+Object {
+$PropName "ModelBrowserInfo"
+$ObjectID 9
+$ClassName "Simulink.ModelBrowserInfo"
+Visible [0]
+DockPosition "Left"
+Width [50]
+Height [50]
+Filter [9]
+Minimized "Unset"
+}
+
+Object {
+$PropName "ExplorerBarInfo"
+$ObjectID 10
+$ClassName "Simulink.ExplorerBarInfo"
+Visible [1]
+}
+
+Object {
+$PropName "EditorsInfo"
+$ObjectID 11
+$ClassName "Simulink.EditorInfo"
+IsActive [1]
+IsTabbed [1]
+ViewObjType "SimulinkTopLevel"
+LoadSaveID "0"
+Extents [942.0, 361.0]
+ZoomFactor [0.55087662337662335]
+Offset [-461.64982023928803, -27.659574468085111]
+SceneRectInView [-461.64982023928803, -27.659574468085111, 1710.0017681381505, 655.31914893617022]
+}
+
+Object {
+$PropName "DockComponentsInfo"
+$ObjectID 12
+$ClassName "Simulink.DockComponentInfo"
+Type "GLUE2:PropertyInspector"
+ID "Property Inspector"
+Visible [0]
+CreateCallback ""
+UserData ""
+Floating [0]
+DockPosition "Right"
+Width [640]
+Height [480]
+Minimized "Unset"
+}
+}
+}
+
+Array {
+Type "Handle"
+Dimension 1
+Simulink.ConfigSet {
+Version "19.1.1"
+$ClassName "Simulink.ConfigSet"
+DisabledProps []
+Description ""
+Name "Configuration"
+CurrentDlgPage "Solver"
+ConfigPrmDlgPosition [ 3, 21, 1083, 728 ]
+ExtraOptions ""
+Array {
+PropName "Components"
+Type "Handle"
+Dimension 10
+Simulink.SolverCC {
+$ObjectID 14
+Version "19.1.1"
+$ClassName "Simulink.SolverCC"
+DisabledProps []
+Description ""
+Components []
+StartTime "0.0"
+StopTime "40"
+AbsTol "auto"
+AutoScaleAbsTol on
+FixedStep "0.1"
+InitialStep "auto"
+MaxOrder "5"
+ZcThreshold "auto"
+ConsecutiveZCsStepRelTol "10*128*eps"
+MaxConsecutiveZCs "1000"
+ExtrapolationOrder "4"
+NumberNewtonIterations "1"
+MaxStep "auto"
+MinStep "auto"
+MaxConsecutiveMinStep "1"
+RelTol "1e-3"
+EnableMultiTasking on
+ConcurrentTasks off
+Solver "ode15s"
+SolverName "ode15s"
+SolverJacobianMethodControl "SparsePerturbation"
+ShapePreserveControl "DisableAll"
+ZeroCrossControl "UseLocalSettings"
+ZeroCrossAlgorithm "Nonadaptive"
+AlgebraicLoopSolver "TrustRegion"
+SolverInfoToggleStatus off
+IsAutoAppliedInSIP off
+SolverResetMethod "Fast"
+PositivePriorityOrder off
+AutoInsertRateTranBlk off
+SampleTimeConstraint "Unconstrained"
+InsertRTBMode "Whenever possible"
+SampleTimeProperty []
+DecoupledContinuousIntegration off
+MinimalZcImpactIntegration off
+SolverOrder "3"
+}
+
+Simulink.DataIOCC {
+$ObjectID 15
+Version "19.1.1"
+$ClassName "Simulink.DataIOCC"
+DisabledProps []
+Description ""
+Components []
+Decimation "1"
+ExternalInput [t, u]
+FinalStateName "xFinal"
+InitialState "xInitial"
+LimitDataPoints on
+MaxDataPoints "1000"
+LoadExternalInput off
+LoadInitialState off
+SaveFinalState off
+SaveOperatingPoint off
+SaveFormat "Array"
+SignalLoggingSaveFormat "Dataset"
+SaveOutput on
+SaveState off
+SignalLogging on
+DSMLogging on
+InspectSignalLogs off
+VisualizeSimOutput on
+StreamToWorkspace off
+StreamVariableName "streamout"
+SaveTime on
+ReturnWorkspaceOutputs on
+StateSaveName "xout"
+TimeSaveName "tout"
+OutputSaveName "yout"
+SignalLoggingName "logsout"
+DSMLoggingName "dsmout"
+OutputOption "RefineOutputTimes"
+OutputTimes []
+ReturnWorkspaceOutputsName "out"
+Refine "1"
+LoggingToFile off
+DatasetSignalFormat "timeseries"
+LoggingFileName "out.mat"
+LoggingIntervals [-inf, inf]
+}
+
+Simulink.OptimizationCC {
+$ObjectID 16
+Version "19.1.1"
+$ClassName "Simulink.OptimizationCC"
+Description ""
+Components []
+BlockReduction on
+BooleanDataType on
+ConditionallyExecuteInputs on
+DefaultParameterBehavior "Tunable"
+UseDivisionForNetSlopeComputation off
+GainParamInheritBuiltInType off
+UseFloatMulNetSlope off
+DefaultUnderspecifiedDataType "double"
+UseSpecifiedMinMax off
+InlineInvariantSignals off
+OptimizeBlockIOStorage on
+BufferReuse on
+EnhancedBackFolding off
+CachingGlobalReferences off
+GlobalBufferReuse on
+StrengthReduction off
+AdvancedOptControl ""
+ExpressionFolding on
+BooleansAsBitfields off
+BitfieldContainerType "uint_T"
+EnableMemcpy on
+MemcpyThreshold "64"
+PassReuseOutputArgsAs "Structure reference"
+PassReuseOutputArgsThreshold "12"
+ExpressionDepthLimit "2147483647"
+LocalBlockOutputs on
+RollThreshold "5"
+StateBitsets off
+DataBitsets off
+ActiveStateOutputEnumStorageType "Native Integer"
+ZeroExternalMemoryAtStartup on
+ZeroInternalMemoryAtStartup on
+InitFltsAndDblsToZero on
+NoFixptDivByZeroProtection off
+EfficientFloat2IntCast off
+EfficientMapNaN2IntZero on
+LifeSpan "inf"
+MaxStackSize "Inherit from target"
+BufferReusableBoundary on
+SimCompilerOptimization off
+AccelVerboseBuild off
+OptimizeBlockOrder off
+OptimizeDataStoreBuffers on
+BusAssignmentInplaceUpdate on
+DifferentSizesBufferReuse off
+UseRowMajorAlgorithm off
+OptimizationLevel "level2"
+OptimizationPriority "Balanced"
+OptimizationCustomize on
+LabelGuidedReuse off
+MultiThreadedLoops off
+DenormalBehavior "GradualUnderflow"
+EfficientTunableParamExpr off
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 9
+Cell "ZeroExternalMemoryAtStartup"
+Cell "ZeroInternalMemoryAtStartup"
+Cell "NoFixptDivByZeroProtection"
+Cell "OptimizeModelRefInitCode"
+Cell "BooleansAsBitfields"
+Cell "PassReuseOutputArgsAs"
+Cell "PassReuseOutputArgsThreshold"
+Cell "UseSpecifiedMinMax"
+Cell "EfficientTunableParamExpr"
+}
+}
+
+Simulink.DebuggingCC {
+$ObjectID 17
+Version "19.1.1"
+$ClassName "Simulink.DebuggingCC"
+Description ""
+Components []
+RTPrefix "error"
+ConsistencyChecking "none"
+ArrayBoundsChecking "none"
+SignalInfNanChecking "none"
+StringTruncationChecking "error"
+SignalRangeChecking "none"
+ReadBeforeWriteMsg "UseLocalSettings"
+WriteAfterWriteMsg "UseLocalSettings"
+WriteAfterReadMsg "UseLocalSettings"
+AlgebraicLoopMsg "none"
+ArtificialAlgebraicLoopMsg "warning"
+SaveWithDisabledLinksMsg "warning"
+SaveWithParameterizedLinksMsg "none"
+CheckSSInitialOutputMsg on
+UnderspecifiedInitializationDetection "Classic"
+MergeDetectMultiDrivingBlocksExec "none"
+CheckExecutionContextPreStartOutputMsg off
+CheckExecutionContextRuntimeOutputMsg off
+SignalResolutionControl "UseLocalSettings"
+BlockPriorityViolationMsg "warning"
+MinStepSizeMsg "warning"
+TimeAdjustmentMsg "none"
+MaxConsecutiveZCsMsg "error"
+MaskedZcDiagnostic "warning"
+IgnoredZcDiagnostic "warning"
+SolverPrmCheckMsg "warning"
+InheritedTsInSrcMsg "warning"
+MultiTaskDSMMsg "error"
+MultiTaskCondExecSysMsg "error"
+MultiTaskRateTransMsg "error"
+SingleTaskRateTransMsg "none"
+TasksWithSamePriorityMsg "warning"
+ExportedTasksRateTransMsg "none"
+SigSpecEnsureSampleTimeMsg "warning"
+CheckMatrixSingularityMsg "none"
+IntegerOverflowMsg "warning"
+Int32ToFloatConvMsg "warning"
+ParameterDowncastMsg "error"
+ParameterOverflowMsg "error"
+ParameterUnderflowMsg "none"
+ParameterPrecisionLossMsg "warning"
+ParameterTunabilityLossMsg "warning"
+FixptConstUnderflowMsg "none"
+FixptConstOverflowMsg "none"
+FixptConstPrecisionLossMsg "none"
+UnderSpecifiedDataTypeMsg "none"
+UnnecessaryDatatypeConvMsg "none"
+VectorMatrixConversionMsg "none"
+InvalidFcnCallConnMsg "error"
+FcnCallInpInsideContextMsg "warning"
+SignalLabelMismatchMsg "none"
+UnconnectedInputMsg "warning"
+UnconnectedOutputMsg "warning"
+UnconnectedLineMsg "warning"
+UseOnlyExistingSharedCode "error"
+SFcnCompatibilityMsg "none"
+FrameProcessingCompatibilityMsg "error"
+UniqueDataStoreMsg "none"
+BusObjectLabelMismatch "warning"
+RootOutportRequireBusObject "warning"
+AssertControl "UseLocalSettings"
+AllowSymbolicDim off
+RowMajorDimensionSupport off
+ModelReferenceIOMsg "none"
+ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+ModelReferenceVersionMismatchMessage "none"
+ModelReferenceIOMismatchMessage "none"
+UnknownTsInhSupMsg "warning"
+ModelReferenceDataLoggingMessage "warning"
+ModelReferenceSymbolNameMessage "warning"
+ModelReferenceExtraNoncontSigs "error"
+StateNameClashWarn "warning"
+OperatingPointInterfaceChecksumMismatchMsg "warning"
+NonCurrentReleaseOperatingPointMsg "error"
+ChecksumConsistencyForSSReuse "none"
+PregeneratedLibrarySubsystemCodeDiagnostic "none"
+MatchCodeGenerationContextForUpdateDiagram "none"
+InitInArrayFormatMsg "warning"
+StrictBusMsg "ErrorLevel1"
+BusNameAdapt "WarnAndRepair"
+NonBusSignalsTreatedAsBus "none"
+SymbolicDimMinMaxWarning "warning"
+LossOfSymbolicDimsSimulationWarning "warning"
+LossOfSymbolicDimsCodeGenerationWarning "error"
+SymbolicDimsDataTypeCodeGenerationDiagnostic "error"
+BlockIODiagnostic "none"
+SFUnusedDataAndEventsDiag "warning"
+SFUnexpectedBacktrackingDiag "warning"
+SFInvalidInputDataAccessInChartInitDiag "warning"
+SFNoUnconditionalDefaultTransitionDiag "warning"
+SFTransitionOutsideNaturalParentDiag "warning"
+SFUnreachableExecutionPathDiag "warning"
+SFUndirectedBroadcastEventsDiag "warning"
+SFTransitionActionBeforeConditionDiag "warning"
+SFOutputUsedAsStateInMooreChartDiag "error"
+SFTemporalDelaySmallerThanSampleTimeDiag "warning"
+SFSelfTransitionDiag "warning"
+SFExecutionAtInitializationDiag "none"
+SFMachineParentedDataDiag "warning"
+IntegerSaturationMsg "warning"
+AllowedUnitSystems "all"
+UnitsInconsistencyMsg "warning"
+AllowAutomaticUnitConversions on
+RCSCRenamedMsg "warning"
+RCSCObservableMsg "warning"
+ForceCombineOutputUpdateInSim off
+UnitDatabase ""
+UnderSpecifiedDimensionMsg "none"
+DebugExecutionForFMUViaOutOfProcess off
+ArithmeticOperatorsInVariantConditions "warning"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 1
+Cell "UseOnlyExistingSharedCode"
+}
+}
+
+Simulink.HardwareCC {
+$ObjectID 18
+Version "19.1.1"
+$ClassName "Simulink.HardwareCC"
+DisabledProps []
+Description ""
+Components []
+ProdBitPerChar "8"
+ProdBitPerShort "16"
+ProdBitPerInt "32"
+ProdBitPerLong "32"
+ProdBitPerLongLong "64"
+ProdBitPerFloat "32"
+ProdBitPerDouble "64"
+ProdBitPerPointer "32"
+ProdBitPerSizeT "32"
+ProdBitPerPtrDiffT "32"
+ProdLargestAtomicInteger "Char"
+ProdLargestAtomicFloat "None"
+ProdIntDivRoundTo "Undefined"
+ProdEndianess "Unspecified"
+ProdWordSize "32"
+ProdShiftRightIntArith on
+ProdLongLongMode off
+ProdHWDeviceType "32-bit Generic"
+TargetBitPerChar "8"
+TargetBitPerShort "16"
+TargetBitPerInt "32"
+TargetBitPerLong "32"
+TargetBitPerLongLong "64"
+TargetBitPerFloat "32"
+TargetBitPerDouble "64"
+TargetBitPerPointer "32"
+TargetBitPerSizeT "32"
+TargetBitPerPtrDiffT "32"
+TargetLargestAtomicInteger "Char"
+TargetLargestAtomicFloat "None"
+TargetShiftRightIntArith on
+TargetLongLongMode off
+TargetIntDivRoundTo "Undefined"
+TargetEndianess "Unspecified"
+TargetWordSize "32"
+TargetPreprocMaxBitsSint "32"
+TargetPreprocMaxBitsUint "32"
+TargetHWDeviceType "Specified"
+TargetUnknown off
+ProdEqTarget on
+UseEmbeddedCoderFeatures on
+UseSimulinkCoderFeatures on
+HardwareBoardFeatureSet "EmbeddedCoderHSP"
+}
+
+Simulink.ModelReferenceCC {
+$ObjectID 19
+Version "19.1.1"
+$ClassName "Simulink.ModelReferenceCC"
+DisabledProps []
+Description ""
+Components []
+UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+EnableRefExpFcnMdlSchedulingChecks on
+CheckModelReferenceTargetMessage "error"
+EnableParallelModelReferenceBuilds off
+ParallelModelReferenceErrorOnInvalidPool on
+ParallelModelReferenceMATLABWorkerInit "None"
+ModelReferenceNumInstancesAllowed "Multi"
+PropagateVarSize "Infer from blocks in model"
+ModelDependencies ""
+ModelReferencePassRootInputsByReference on
+ModelReferenceMinAlgLoopOccurrences off
+PropagateSignalLabelsOutOfModel off
+SupportModelReferenceSimTargetCustomCode off
+}
+
+Simulink.SFSimCC {
+$ObjectID 20
+Version "19.1.1"
+$ClassName "Simulink.SFSimCC"
+DisabledProps []
+Description ""
+Components []
+SimCustomSourceCode ""
+SimCustomHeaderCode ""
+SimCustomInitializer ""
+SimCustomTerminator ""
+SimReservedNameArray []
+SimUserSources ""
+SimUserIncludeDirs ""
+SimUserLibraries ""
+SimUserDefines ""
+SimCustomCompilerFlags ""
+SimCustomLinkerFlags ""
+SFSimEcho on
+SimCtrlC on
+SimIntegrity on
+SimUseLocalCustomCode off
+SimParseCustomCode on
+SimAnalyzeCustomCode off
+SimBuildMode "sf_incremental_build"
+SimGenImportedTypeDefs off
+ModelFunctionsGlobalVisibility on
+CompileTimeRecursionLimit "50"
+EnableRuntimeRecursion on
+MATLABDynamicMemAlloc on
+MATLABDynamicMemAllocThreshold "65536"
+CustomCodeFunctionArrayLayout []
+DefaultCustomCodeFunctionArrayLayout "NotSpecified"
+CustomCodeUndefinedFunction "UseInterfaceOnly"
+}
+
+Simulink.RTWCC {
+BackupClass "Simulink.RTWCC"
+$ObjectID 21
+Version "19.1.1"
+$ClassName "Simulink.RTWCC"
+Description ""
+SystemTargetFile "grt.tlc"
+HardwareBoard "None"
+ShowCustomHardwareApp off
+ShowEmbeddedHardwareApp off
+TLCOptions ""
+GenCodeOnly off
+MakeCommand "make_rtw"
+GenerateMakefile on
+PackageGeneratedCodeAndArtifacts off
+PackageName ""
+TemplateMakefile "grt_default_tmf"
+PostCodeGenCommand ""
+GenerateReport off
+RTWVerbose on
+RetainRTWFile off
+RTWBuildHooks []
+ProfileTLC off
+TLCDebug off
+TLCCoverage off
+TLCAssert off
+RTWUseLocalCustomCode off
+RTWUseSimCustomCode off
+CustomSourceCode ""
+CustomHeaderCode ""
+CustomInclude ""
+CustomSource ""
+CustomLibrary ""
+CustomDefine ""
+CustomBLASCallback ""
+CustomLAPACKCallback ""
+CustomFFTCallback ""
+CustomInitializer ""
+CustomTerminator ""
+Toolchain "Automatically locate an installed toolchain"
+BuildConfiguration "Faster Builds"
+CustomToolchainOptions []
+IncludeHyperlinkInReport off
+LaunchReport off
+PortableWordSizes off
+CreateSILPILBlock "None"
+CodeExecutionProfiling off
+CodeExecutionProfileVariable "executionProfile"
+CodeProfilingSaveOptions "SummaryOnly"
+CodeProfilingInstrumentation off
+SILDebugging off
+TargetLang "C"
+IncludeBusHierarchyInRTWFileBlockHierarchyMap off
+GenerateTraceInfo off
+GenerateTraceReport off
+GenerateTraceReportSl off
+GenerateTraceReportSf off
+GenerateTraceReportEml off
+GenerateWebview off
+GenerateCodeMetricsReport off
+GenerateCodeReplacementReport off
+GenerateMissedCodeReplacementReport off
+RTWCompilerOptimization off
+ObjectivePriorities []
+RTWCustomCompilerOptimizations ""
+CheckMdlBeforeBuild "Off"
+SharedConstantsCachingThreshold "1024"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 16
+Cell "IncludeHyperlinkInReport"
+Cell "GenerateTraceInfo"
+Cell "GenerateTraceReport"
+Cell "GenerateTraceReportSl"
+Cell "GenerateTraceReportSf"
+Cell "GenerateTraceReportEml"
+Cell "PortableWordSizes"
+Cell "GenerateWebview"
+Cell "GenerateCodeMetricsReport"
+Cell "GenerateCodeReplacementReport"
+Cell "GenerateMissedCodeReplacementReport"
+Cell "GenerateErtSFunction"
+Cell "CreateSILPILBlock"
+Cell "CodeExecutionProfiling"
+Cell "CodeProfilingSaveOptions"
+Cell "CodeProfilingInstrumentation"
+}
+
+Array {
+PropName "Components"
+Type "Handle"
+Dimension 2
+Object {
+$ObjectID 22
+Version "19.1.1"
+$ClassName "Simulink.CodeAppCC"
+Description ""
+Components []
+Comment ""
+ForceParamTrailComments off
+GenerateComments on
+CommentStyle "Auto"
+IgnoreCustomStorageClasses on
+IgnoreTestpoints off
+MaxIdLength "31"
+PreserveName off
+PreserveNameWithParent off
+ShowEliminatedStatement off
+OperatorAnnotations off
+SimulinkDataObjDesc off
+SFDataObjDesc off
+MATLABFcnDesc off
+MangleLength "1"
+SharedChecksumLength "8"
+CustomSymbolStrGlobalVar "$R$N$M"
+CustomSymbolStrType "$N$R$M_T"
+CustomSymbolStrField "$N$M"
+CustomSymbolStrFcn "$R$N$M$F"
+CustomSymbolStrModelFcn "$R$N"
+CustomSymbolStrFcnArg "rt$I$N$M"
+CustomSymbolStrBlkIO "rtb_$N$M"
+CustomSymbolStrTmpVar "$N$M"
+CustomSymbolStrMacro "$R$N$M"
+CustomSymbolStrUtil "$N$C"
+CustomSymbolStrEmxType "emxArray_$M$N"
+CustomSymbolStrEmxFcn "emx$M$N"
+CustomUserTokenString ""
+CustomCommentsFcn ""
+DefineNamingRule "None"
+DefineNamingFcn ""
+ParamNamingRule "None"
+ParamNamingFcn ""
+SignalNamingRule "None"
+SignalNamingFcn ""
+InsertBlockDesc off
+InsertPolySpaceComments off
+SimulinkBlockComments on
+BlockCommentType "BlockPathComment"
+StateflowObjectComments on
+MATLABSourceComments off
+EnableCustomComments off
+InternalIdentifierFile ""
+InternalIdentifier "Shortened"
+InlinedPrmAccess "Literals"
+ReqsInCode off
+UseSimReservedNames off
+ReservedNameArray []
+EnumMemberNameClash "error"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 28
+Cell "IgnoreCustomStorageClasses"
+Cell "InsertBlockDesc"
+Cell "SFDataObjDesc"
+Cell "SimulinkDataObjDesc"
+Cell "DefineNamingRule"
+Cell "SignalNamingRule"
+Cell "ParamNamingRule"
+Cell "InlinedPrmAccess"
+Cell "CustomSymbolStr"
+Cell "CustomSymbolStrGlobalVar"
+Cell "CustomSymbolStrType"
+Cell "CustomSymbolStrField"
+Cell "CustomSymbolStrFcn"
+Cell "CustomSymbolStrBlkIO"
+Cell "CustomSymbolStrTmpVar"
+Cell "CustomSymbolStrMacro"
+Cell "IgnoreTestpoints"
+Cell "InsertPolySpaceComments"
+Cell "MATLABFcnDesc"
+Cell "InternalIdentifier"
+Cell "CustomSymbolStrModelFcn"
+Cell "CustomSymbolStrFcnArg"
+Cell "CustomSymbolStrUtil"
+Cell "CustomUserTokenString"
+Cell "ReqsInCode"
+Cell "CustomSymbolStrEmxType"
+Cell "CustomSymbolStrEmxFcn"
+Cell "BlockCommentType"
+}
+}
+
+Object {
+BackupClass "Simulink.TargetCC"
+$ObjectID 23
+Version "19.1.1"
+$ClassName "Simulink.GRTTargetCC"
+Description ""
+Components []
+TargetFcnLib "ansi_tfl_tmw.mat"
+TargetLibSuffix ""
+TargetPreCompLibLocation ""
+GenFloatMathFcnCalls "NOT IN USE"
+TargetLangStandard "C89/C90 (ANSI)"
+CodeReplacementLibrary "None"
+UtilityFuncGeneration "Auto"
+MultiwordTypeDef "System defined"
+MultiwordLength "2048"
+DynamicStringBufferSize "256"
+GenerateFullHeader on
+InferredTypesCompatibility off
+ExistingSharedCode ""
+GenerateSampleERTMain off
+GenerateTestInterfaces off
+ModelReferenceCompliant on
+ParMdlRefBuildCompliant on
+CompOptLevelCompliant on
+ConcurrentExecutionCompliant on
+IncludeMdlTerminateFcn on
+GeneratePreprocessorConditionals "Disable all"
+CombineOutputUpdateFcns off
+CombineSignalStateStructs off
+GroupInternalDataByFunction off
+SuppressErrorStatus off
+IncludeFileDelimiter "Auto"
+ERTCustomFileBanners off
+SupportAbsoluteTime on
+LogVarNameModifier "rt_"
+MatFileLogging on
+MultiInstanceERTCode off
+CodeInterfacePackaging "Nonreusable function"
+PurelyIntegerCode off
+SupportNonFinite on
+SupportComplex on
+SupportContinuousTime on
+SupportNonInlinedSFcns on
+RemoveDisableFunc off
+RemoveResetFunc off
+SupportVariableSizeSignals off
+ParenthesesLevel "Nominal"
+CastingMode "Nominal"
+PreserveStateflowLocalDataDimensions off
+MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
+ModelStepFunctionPrototypeControlCompliant off
+CPPClassGenCompliant on
+AutosarCompliant off
+MDXCompliant off
+GRTInterface on
+GenerateAllocFcn off
+UseToolchainInfoCompliant on
+GenerateSharedConstants on
+CoderGroups []
+AccessMethods []
+LookupTableObjectStructAxisOrder "1,2,3,4,..."
+LUTObjectStructOrderExplicitValues "Size,Breakpoints,Table"
+LUTObjectStructOrderEvenSpacing "Size,Breakpoints,Table"
+ArrayLayout "Column-major"
+UnsupportedSFcnMsg "error"
+ERTHeaderFileRootName "$R$E"
+ERTSourceFileRootName "$R$E"
+ERTDataFileRootName "$R_data"
+UseMalloc off
+ExtMode off
+ExtModeStaticAlloc off
+ExtModeTesting off
+ExtModeStaticAllocSize "1000000"
+ExtModeTransport "0"
+ExtModeMexFile "ext_comm"
+ExtModeMexArgs ""
+ExtModeIntrfLevel "Level1"
+RTWCAPISignals off
+RTWCAPIParams off
+RTWCAPIStates off
+RTWCAPIRootIO off
+GenerateASAP2 off
+MultiInstanceErrorCode "Error"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 18
+Cell "IncludeMdlTerminateFcn"
+Cell "SupportNonInlinedSFcns"
+Cell "SuppressErrorStatus"
+Cell "ERTCustomFileBanners"
+Cell "GenerateSampleERTMain"
+Cell "GenerateTestInterfaces"
+Cell "ModelStepFunctionPrototypeControlCompliant"
+Cell "MultiInstanceERTCode"
+Cell "PurelyIntegerCode"
+Cell "PortableWordSizes"
+Cell "SupportComplex"
+Cell "SupportAbsoluteTime"
+Cell "SupportContinuousTime"
+Cell "RemoveResetFunc"
+Cell "ExistingSharedCode"
+Cell "GenerateAllocFcn"
+Cell "RemoveDisableFunc"
+Cell "PreserveStateflowLocalDataDimensions"
+}
+}
+}
+}
+
+SlCovCC.ConfigComp {
+$ObjectID 24
+Version "19.1.1"
+$ClassName "SlCovCC.ConfigComp"
+DisabledProps []
+Description "Simulink Coverage Configuration Component"
+Components []
+Name "Simulink Coverage"
+CovEnable off
+CovScope "EntireSystem"
+CovIncludeTopModel on
+RecordCoverage off
+CovPath "/"
+CovSaveName "covdata"
+CovCompData ""
+CovMetricSettings "dw"
+CovFilter ""
+CovHTMLOptions ""
+CovNameIncrementing off
+CovHtmlReporting on
+CovForceBlockReductionOff on
+CovEnableCumulative on
+CovSaveCumulativeToWorkspaceVar on
+CovSaveSingleToWorkspaceVar on
+CovCumulativeVarName "covCumulativeData"
+CovCumulativeReport off
+CovSaveOutputData on
+CovOutputDir "slcov_output/$ModelName$"
+CovDataFileName "$ModelName$_cvdata"
+CovShowResultsExplorer on
+CovReportOnPause on
+CovModelRefEnable off
+CovModelRefExcluded ""
+CovExternalEMLEnable off
+CovSFcnEnable off
+CovBoundaryAbsTol "1e-05"
+CovBoundaryRelTol "0.01"
+CovUseTimeInterval off
+CovStartTime "0"
+CovStopTime "0"
+CovMcdcMode "Masking"
+}
+
+hdlcoderui.hdlcc {
+$ObjectID 25
+Version "19.1.1"
+$ClassName "hdlcoderui.hdlcc"
+DisabledProps []
+Description "HDL Coder custom configuration component"
+Components []
+Name "HDL Coder"
+HDLCActiveTab "0"
+Array {
+PropName "HDLConfigFile"
+Type "Cell"
+Dimension 1
+Cell ""
+}
+}
+}
+}
+}
+
+System {
+PaperOrientation "landscape"
+PaperPositionMode "auto"
+PaperType "usletter"
+PaperUnits "inches"
+TiledPaperMargins [0.500000, 0.500000, 0.500000, 0.500000]
+TiledPageScale "1"
+ShowPageBoundaries off
+ModelBrowserVisibility off
+ModelBrowserWidth "200"
+ScreenColor "white"
+ZoomFactor "100"
+PortBlocksUseCompactNotation off
+Open off
+}
+
+BlockDefaults {
+ForegroundColor "black"
+BackgroundColor "white"
+DropShadow off
+NamePlacement "normal"
+FontName "Arial"
+FontSize "10"
+FontWeight "normal"
+FontAngle "normal"
+ShowName on
+HideAutomaticName on
+BlockRotation "0"
+BlockMirror off
+}
+
+AnnotationDefaults {
+HorizontalAlignment "center"
+VerticalAlignment "middle"
+ForegroundColor "black"
+BackgroundColor "white"
+DropShadow off
+FontName "Arial"
+FontSize "10"
+FontWeight "normal"
+FontAngle "normal"
+MarkupType "model"
+UseDisplayTextAsClickCallback off
+AnnotationType "note_annotation"
+FixedHeight off
+FixedWidth off
+Interpreter off
+}
+
+LineDefaults {
+FontName "Arial"
+FontSize "9"
+FontWeight "normal"
+FontAngle "normal"
+}
+
+MaskDefaults {
+SelfModifiable "off"
+IconFrame "on"
+IconOpaque "opaque"
+RunInitForIconRedraw "analyze"
+IconRotate "none"
+PortRotate "default"
+IconUnits "autoscale"
+Display ""
+
+}
+
+MaskParameterDefaults {
+Evaluate "on"
+Tunable "on"
+NeverSave "off"
+Internal "off"
+ReadOnly "off"
+Enabled "on"
+Visible "on"
+ToolTip "on"
+}
+
+BlockParameterDefaults {
+Block {
+BlockType "Bias"
+Bias "0"
+SaturateOnIntegerOverflow on
+}
+
+Block {
+BlockType "Gain"
+Gain "1"
+Multiplication "Element-wise(K.*u)"
+ParamMin []
+ParamMax []
+ParamDataTypeStr "Inherit: Same as input"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Same as input"
+LockScale off
+RndMeth "Floor"
+SaturateOnIntegerOverflow on
+SampleTime "-1"
+}
+
+Block {
+BlockType "Inport"
+Port "1"
+OutputFunctionCall off
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: auto"
+LockScale off
+BusOutputAsStruct off
+Unit "inherit"
+PortDimensions "-1"
+VarSizeSig "Inherit"
+SampleTime "-1"
+SignalType "auto"
+SamplingMode "auto"
+LatchByDelayingOutsideSignal off
+LatchInputForFeedbackSignals off
+Interpolate on
+}
+
+Block {
+BlockType "Integrator"
+ExternalReset "none"
+InitialConditionSource "internal"
+InitialCondition "0"
+LimitOutput off
+UpperSaturationLimit "inf"
+LowerSaturationLimit "-inf"
+WrapState off
+WrappedStateUpperValue "pi"
+WrappedStateLowerValue "-pi"
+ShowSaturationPort off
+ShowStatePort off
+AbsoluteTolerance "auto"
+IgnoreLimit off
+ZeroCross on
+ContinuousStateAttributes "''"
+}
+
+Block {
+BlockType "Math"
+Operator "exp"
+SignedPower on
+OutputSignalType "auto"
+SampleTime "-1"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Same as first input"
+LockScale off
+RndMeth "Floor"
+SaturateOnIntegerOverflow on
+IntermediateResultsDataTypeStr "Inherit: Inherit via internal rule"
+AlgorithmType "Newton-Raphson"
+Iterations "3"
+}
+
+Block {
+BlockType "Mux"
+Inputs "4"
+DisplayOption "none"
+UseBusObject off
+BusObject "BusObject"
+NonVirtualBus off
+}
+
+Block {
+BlockType "Outport"
+Port "1"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: auto"
+LockScale off
+BusOutputAsStruct off
+Unit "inherit"
+PortDimensions "-1"
+VarSizeSig "Inherit"
+SampleTime "-1"
+SignalType "auto"
+SamplingMode "auto"
+EnsureOutportIsVirtual off
+SourceOfInitialOutputValue "Dialog"
+OutputWhenDisabled "held"
+InitialOutput []
+MustResolveToSignalObject off
+OutputWhenUnConnected off
+OutputWhenUnconnectedValue "0"
+VectorParamsAs1DForOutWhenUnconnected on
+}
+
+Block {
+BlockType "Product"
+Inputs "2"
+Multiplication "Element-wise(.*)"
+CollapseMode "All dimensions"
+CollapseDim "1"
+InputSameDT on
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Same as first input"
+LockScale off
+RndMeth "Zero"
+SaturateOnIntegerOverflow on
+SampleTime "-1"
+}
+
+Block {
+BlockType "S-Function"
+FunctionName "system"
+SFunctionModules "''"
+PortCounts []
+MultiThreadCoSim "auto"
+}
+
+Block {
+BlockType "Scope"
+DefaultConfigurationName "Simulink.scopes.TimeScopeBlockCfg"
+}
+
+Block {
+BlockType "SubSystem"
+ShowPortLabels "FromPortIcon"
+Permissions "ReadWrite"
+PermitHierarchicalResolution "All"
+TreatAsAtomicUnit off
+MinAlgLoopOccurrences off
+PropExecContextOutsideSubsystem off
+ScheduleAs "Sample time"
+SystemSampleTime "-1"
+RTWSystemCode "Auto"
+RTWFcnNameOpts "Auto"
+RTWFileNameOpts "Auto"
+FunctionInterfaceSpec "void_void"
+FunctionWithSeparateData off
+RTWMemSecFuncInitTerm "Inherit from model"
+RTWMemSecFuncExecute "Inherit from model"
+RTWMemSecDataConstants "Inherit from model"
+RTWMemSecDataInternal "Inherit from model"
+RTWMemSecDataParameters "Inherit from model"
+SimViewingDevice off
+DataTypeOverride "UseLocalSettings"
+DataTypeOverrideAppliesTo "AllNumericTypes"
+MinMaxOverflowLogging "UseLocalSettings"
+Opaque off
+MaskHideContents off
+SFBlockType "NONE"
+VariantControlMode "Expression"
+Variant off
+GeneratePreprocessorConditionals off
+AllowZeroVariantControls off
+PropagateVariantConditions off
+TreatAsGroupedWhenPropagatingVariantConditions on
+ContentPreviewEnabled off
+IsWebBlock off
+IsObserver off
+Latency "0"
+AutoFrameSizeCalculation off
+IsWebBlockPanel off
+}
+
+Block {
+BlockType "Sum"
+IconShape "rectangular"
+Inputs "++"
+CollapseMode "All dimensions"
+CollapseDim "1"
+InputSameDT on
+AccumDataTypeStr "Inherit: Inherit via internal rule"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Same as first input"
+LockScale off
+RndMeth "Floor"
+SaturateOnIntegerOverflow on
+SampleTime "-1"
+}
+
+Block {
+BlockType "Trigonometry"
+Operator "sin"
+ApproximationMethod "None"
+NumberOfIterations "11"
+OutputSignalType "auto"
+SampleTime "-1"
+}
+}
+}
+

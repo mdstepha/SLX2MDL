@@ -1,0 +1,3161 @@
+Model {
+  Name			  "slexVariantCondPropToSubsystems"
+  Version		  10.0
+  SavedCharacterEncoding  "ISO-8859-1"
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    3
+    Outport {
+      Name		      "Out1"
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      UnitExpr		      "inherit"
+    }
+    Outport {
+      Name		      "Out2"
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      UnitExpr		      "inherit"
+    }
+    Outport {
+      Name		      "Out3"
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      UnitExpr		      "inherit"
+    }
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.96"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+    NumProvidedFunctions    0
+    NumRequiredFunctions    0
+    NumResetEvents	    0
+    HasInitializeEvent	    0
+    HasTerminateEvent	    0
+    PreCompExecutionDomainType "Unset"
+    IsExportFunctionModel   0
+    IsArchitectureModel	    0
+    IsAUTOSARArchitectureModel 0
+    NumParameterArguments   0
+    NumExternalFileReferences 3
+    ExternalFileReference {
+      Reference		      "simulink_need_slupdate/Unit Delay\nWith Preview\nResettable"
+      Path		      "slexVariantCondPropToSubsystems/Summary/MinMax(Grouped) /Unit Delay With Preview Resettable"
+      SID		      "88"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "simulink_need_slupdate/Unit Delay\nWith Preview\nResettable"
+      Path		      "slexVariantCondPropToSubsystems/Summary/MinMax(Nonvirtual)/Unit Delay With Preview Resettable"
+      SID		      "96"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "simulink_need_slupdate/Unit Delay\nWith Preview\nResettable"
+      Path		      "slexVariantCondPropToSubsystems/Summary/MinMax(Ungrouped) /Unit Delay With Preview Resettable"
+      SID		      "104"
+      Type		      "LIBRARY_BLOCK"
+    }
+    OrderedModelArguments   1
+  }
+  WebScopes_FoundationPlugin "on"
+  DiagnosticSuppressor	  "on"
+  AnimationPlugin	  "on"
+  SLCCPlugin		  "on"
+  NotesPlugin		  "on"
+  LogicAnalyzerPlugin	  "on"
+  slprops.hdlmdlprops {
+    $PropName		    "HDLParams"
+    $ObjectID		    1
+    Array {
+      Type		      "Cell"
+      Dimension		      2
+      Cell		      "HDLSubsystem"
+      Cell		      "$bdroot"
+      PropName		      "mdlProps"
+    }
+  }
+  PreLoadFcn		  "addpath(fileparts(which(bdroot)));"
+  PostLoadFcn		  "V = Simulink.Parameter(int32(1));\nV.StorageClass = 'Define (Custom)';\nV.CoderInfo.CustomAttributes"
+  ".HeaderFile='variant_defines.h';\n\nW=copy(V);\n"
+  EnableAccessToBaseWorkspace on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  FPTRunName		  "Run 1"
+  MaxMDLFileLineLength	  120
+  LastSavedArchitecture	  "maci64"
+  Object {
+    $PropName		    "BdWindowsInfo"
+    $ObjectID		    2
+    $ClassName		    "Simulink.BDWindowsInfo"
+    Object {
+      $PropName		      "WindowsInfo"
+      $ObjectID		      3
+      $ClassName	      "Simulink.WindowInfo"
+      IsActive		      [1]
+      Location		      [214.0, 100.0, 1056.0, 732.0]
+      Object {
+	$PropName		"ModelBrowserInfo"
+	$ObjectID		4
+	$ClassName		"Simulink.ModelBrowserInfo"
+	Visible			[0]
+	DockPosition		"Left"
+	Width			[50]
+	Height			[50]
+	Filter			[9]
+	Minimized		"Unset"
+      }
+      Object {
+	$PropName		"ExplorerBarInfo"
+	$ObjectID		5
+	$ClassName		"Simulink.ExplorerBarInfo"
+	Visible			[1]
+      }
+      Object {
+	$PropName		"EditorsInfo"
+	$ObjectID		6
+	$ClassName		"Simulink.EditorInfo"
+	IsActive		[1]
+	IsTabbed		[1]
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
+	Extents			[1018.0, 477.0]
+	ZoomFactor		[1.0]
+	Offset			[-477.5, -228.0]
+	SceneRectInView		[-477.5, -228.0, 1018.0, 477.0]
+      }
+      Object {
+	$PropName		"DockComponentsInfo"
+	$ObjectID		7
+	$ClassName		"Simulink.DockComponentInfo"
+	Type			"GLUE2:PropertyInspector"
+	ID			"Property Inspector"
+	Visible			[0]
+	CreateCallback		""
+	UserData		""
+	Floating		[0]
+	DockPosition		"Right"
+	Width			[640]
+	Height			[480]
+	Minimized		"Unset"
+      }
+      WindowState	      "AAAA/wAAAAD9AAAAAgAAAAAAAAC9AAAB+PwCAAAAA/sAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAA"
+      "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
+      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABrAP///wAAAAEAAAAAAAAAAPwCA"
+      "AAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZ"
+      "QBjAHQAbwByAAAAAAD/////AAAAOQD///8AAAQgAAACGgAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAB/////wEAAAAA/////wAAAAAAAAAA"
+      Array {
+	Type			"Cell"
+	Dimension		0
+	PropName		"PersistedApps"
+      }
+      WindowUuid	      "ebce9031-9a82-4bca-8a1a-7abd381ee670"
+    }
+    BDUuid		    "a3a26b92-fbcb-4dcb-853a-c1cb7ec02f14"
+  }
+  HideAutomaticNames	  on
+  Created		  "Sun Jan 25 19:39:57 2015"
+  Creator		  "The MathWorks, Inc."
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "bhisma"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu Jun 04 02:15:53 2020"
+  RTWModifiedTimeStamp	  471411624
+  ModelVersionFormat	  "1.%<AutoIncrement:96>"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "disabled"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowAllPropagatedSignalLabels	off
+  PortDataTypeDisplayFormat "AliasTypeOnly"
+  ShowEditTimeErrors	  on
+  ShowEditTimeWarnings	  on
+  ShowEditTimeAdvisorChecks off
+  ShowPortUnits		  off
+  ShowDesignRanges	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  VariantCondition	  on
+  ShowSubsystemDomainSpec off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ShowVisualizeInsertedRTB on
+  ShowMarkup		  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  BlockVariantConditionDataTip off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  FunctionConnectors	  off
+  BrowserLookUnderMasks	  off
+  MultiThreadCoSim	  on
+  SimulationMode	  "normal"
+  SILPILModeSetting	  "automated"
+  SILPILSystemUnderTest	  "topmodel"
+  SILPILSimulationModeTopModel "normal"
+  SILPILSimulationModeModelRef "normal"
+  SimTabSimulationMode	  "normal"
+  CodeVerificationMode	  "software-in-the-loop (sil)"
+  PauseTimes		  "5"
+  NumberOfSteps		  1
+  SnapshotBufferSize	  10
+  SnapshotInterval	  10
+  NumberOfLastSnapshots	  0
+  EnablePacing		  off
+  PacingRate		  1
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  Object {
+    $PropName		    "DataLoggingOverride"
+    $ObjectID		    8
+    $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
+    model_		    "slexVariantCondPropToSubsystems"
+    overrideMode_	    [0.0]
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      "slexVariantCondPropToSubsystems"
+      PropName		      "logAsSpecifiedByModels_"
+    }
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      []
+      PropName		      "logAsSpecifiedByModelsSSIDs_"
+    }
+  }
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  OrderedModelArguments	  on
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      9
+      Version		      "19.1.1"
+      DisabledProps	      []
+      Description	      ""
+      Array {
+	Type			"Handle"
+	Dimension		10
+	Simulink.SolverCC {
+	  $ObjectID		  10
+	  Version		  "19.1.1"
+	  DisabledProps		  []
+	  Description		  ""
+	  Components		  []
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  AutoScaleAbsTol	  on
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  EnableMultiTasking	  on
+	  ConcurrentTasks	  off
+	  Solver		  "FixedStepAuto"
+	  SolverName		  "FixedStepAuto"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverInfoToggleStatus  off
+	  IsAutoAppliedInSIP	  off
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	  SampleTimeProperty	  []
+	  DecoupledContinuousIntegration off
+	  MinimalZcImpactIntegration off
+	  SolverOrder		  3
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  11
+	  Version		  "19.1.1"
+	  DisabledProps		  []
+	  Description		  ""
+	  Components		  []
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveOperatingPoint	  off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "Dataset"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  VisualizeSimOutput	  on
+	  StreamToWorkspace	  off
+	  StreamVariableName	  "streamout"
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "out1,out2,out3"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	  LoggingToFile		  off
+	  DatasetSignalFormat	  "timeseries"
+	  LoggingFileName	  "out.mat"
+	  LoggingIntervals	  "[-inf, inf]"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  12
+	  Version		  "19.1.1"
+	  DisabledProps		  []
+	  Description		  ""
+	  Components		  []
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  DefaultParameterBehavior "Tunable"
+	  UseDivisionForNetSlopeComputation "off"
+	  GainParamInheritBuiltInType off
+	  UseFloatMulNetSlope	  off
+	  DefaultUnderspecifiedDataType	"double"
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  CachingGlobalReferences off
+	  GlobalBufferReuse	  on
+	  StrengthReduction	  off
+	  AdvancedOptControl	  ""
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  PassReuseOutputArgsThreshold 12
+	  ExpressionDepthLimit	  128
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  ActiveStateOutputEnumStorageType "Native Integer"
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  LifeSpan		  "1"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "off"
+	  AccelVerboseBuild	  off
+	  OptimizeBlockOrder	  "off"
+	  OptimizeDataStoreBuffers on
+	  BusAssignmentInplaceUpdate on
+	  DifferentSizesBufferReuse off
+	  UseRowMajorAlgorithm	  off
+	  OptimizationLevel	  "level2"
+	  OptimizationPriority	  "Balanced"
+	  OptimizationCustomize	  on
+	  LabelGuidedReuse	  off
+	  MultiThreadedLoops	  off
+	  DenormalBehavior	  "GradualUnderflow"
+	  EfficientTunableParamExpr on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  13
+	  Version		  "19.1.1"
+	  DisabledProps		  []
+	  Description		  ""
+	  Components		  []
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  StringTruncationChecking "error"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Simplified"
+	  MergeDetectMultiDrivingBlocksExec "error"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "none"
+	  InheritedTsInSrcMsg	  "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  ExportedTasksRateTransMsg "none"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "error"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  UseOnlyExistingSharedCode "error"
+	  SFcnCompatibilityMsg	  "none"
+	  FrameProcessingCompatibilityMsg "error"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  AllowSymbolicDim	  off
+	  RowMajorDimensionSupport off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "none"
+	  OperatingPointInterfaceChecksumMismatchMsg "warning"
+	  NonCurrentReleaseOperatingPointMsg "error"
+	  ChecksumConsistencyForSSReuse	"none"
+	  PregeneratedLibrarySubsystemCodeDiagnostic "none"
+	  MatchCodeGenerationContextForUpdateDiagram "none"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  SymbolicDimMinMaxWarning "warning"
+	  LossOfSymbolicDimsSimulationWarning "warning"
+	  LossOfSymbolicDimsCodeGenerationWarning "error"
+	  SymbolicDimsDataTypeCodeGenerationDiagnostic "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnreachableExecutionPathDiag "warning"
+	  SFUndirectedBroadcastEventsDiag "warning"
+	  SFTransitionActionBeforeConditionDiag	"warning"
+	  SFOutputUsedAsStateInMooreChartDiag "error"
+	  SFTemporalDelaySmallerThanSampleTimeDiag "warning"
+	  SFSelfTransitionDiag	  "warning"
+	  SFExecutionAtInitializationDiag "none"
+	  SFMachineParentedDataDiag "warning"
+	  IntegerSaturationMsg	  "warning"
+	  AllowedUnitSystems	  "all"
+	  UnitsInconsistencyMsg	  "warning"
+	  AllowAutomaticUnitConversions	on
+	  RCSCRenamedMsg	  "warning"
+	  RCSCObservableMsg	  "warning"
+	  ForceCombineOutputUpdateInSim	off
+	  UnitDatabase		  ""
+	  UnderSpecifiedDimensionMsg "none"
+	  DebugExecutionForFMUViaOutOfProcess off
+	  ArithmeticOperatorsInVariantConditions "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  14
+	  Version		  "19.1.1"
+	  DisabledProps		  []
+	  Description		  ""
+	  Components		  []
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerLongLong	  64
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdBitPerSizeT	  32
+	  ProdBitPerPtrDiffT	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdLongLongMode	  off
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerLongLong	  64
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetBitPerSizeT	  32
+	  TargetBitPerPtrDiffT	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetLongLongMode	  off
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	  UseEmbeddedCoderFeatures on
+	  UseSimulinkCoderFeatures on
+	  HardwareBoardFeatureSet "EmbeddedCoderHSP"
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  15
+	  Version		  "19.1.1"
+	  DisabledProps		  []
+	  Description		  ""
+	  Components		  []
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  EnableRefExpFcnMdlSchedulingChecks on
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelDependencies	  ""
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  16
+	  Version		  "19.1.1"
+	  DisabledProps		  []
+	  Description		  ""
+	  Components		  []
+	  SimCustomSourceCode	  ""
+	  SimCustomHeaderCode	  ""
+	  SimCustomInitializer	  ""
+	  SimCustomTerminator	  ""
+	  SimReservedNameArray	  []
+	  SimUserSources	  ""
+	  SimUserIncludeDirs	  ""
+	  SimUserLibraries	  ""
+	  SimUserDefines	  ""
+	  SimCustomCompilerFlags  ""
+	  SimCustomLinkerFlags	  ""
+	  SFSimEcho		  on
+	  SimCtrlC		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimAnalyzeCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	  SimGenImportedTypeDefs  off
+	  ModelFunctionsGlobalVisibility "on"
+	  CompileTimeRecursionLimit 50
+	  EnableRuntimeRecursion  on
+	  MATLABDynamicMemAlloc	  off
+	  MATLABDynamicMemAllocThreshold 65536
+	  CustomCodeFunctionArrayLayout	[]
+	  DefaultCustomCodeFunctionArrayLayout "NotSpecified"
+	  CustomCodeUndefinedFunction "UseInterfaceOnly"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  17
+	  Version		  "19.1.1"
+	  DisabledProps		  []
+	  Description		  "Embedded Coder"
+	  SystemTargetFile	  "ert.tlc"
+	  HardwareBoard		  "None"
+	  ShowCustomHardwareApp	  off
+	  ShowEmbeddedHardwareApp off
+	  TLCOptions		  ""
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  PackageGeneratedCodeAndArtifacts off
+	  PackageName		  ""
+	  TemplateMakefile	  "ert_default_tmf"
+	  PostCodeGenCommand	  ""
+	  GenerateReport	  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  RTWBuildHooks		  []
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  CustomSourceCode	  ""
+	  CustomHeaderCode	  ""
+	  CustomInclude		  ""
+	  CustomSource		  ""
+	  CustomLibrary		  ""
+	  CustomDefine		  ""
+	  CustomBLASCallback	  ""
+	  CustomLAPACKCallback	  ""
+	  CustomFFTCallback	  ""
+	  CustomInitializer	  ""
+	  CustomTerminator	  ""
+	  Toolchain		  "Automatically locate an installed toolchain"
+	  BuildConfiguration	  "Faster Builds"
+	  CustomToolchainOptions  []
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  PortableWordSizes	  off
+	  CreateSILPILBlock	  "None"
+	  CodeExecutionProfiling  off
+	  CodeExecutionProfileVariable "executionProfile"
+	  CodeProfilingSaveOptions "SummaryOnly"
+	  CodeProfilingInstrumentation "off"
+	  SILDebugging		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateWebview	  off
+	  GenerateCodeMetricsReport off
+	  GenerateCodeReplacementReport	off
+	  GenerateMissedCodeReplacementReport off
+	  RTWCompilerOptimization "off"
+	  ObjectivePriorities	  []
+	  RTWCustomCompilerOptimizations ""
+	  CheckMdlBeforeBuild	  "Off"
+	  SharedConstantsCachingThreshold 1024
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      18
+	      Version		      "19.1.1"
+	      DisabledProps	      []
+	      Description	      ""
+	      Components	      []
+	      Comment		      ""
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      CommentStyle	      "Auto"
+	      IgnoreCustomStorageClasses off
+	      IgnoreTestpoints	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      OperatorAnnotations     off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      MangleLength	      1
+	      SharedChecksumLength    8
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M_T"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrModelFcn "$N"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      CustomSymbolStrUtil     "$N$C"
+	      CustomSymbolStrEmxType  "emxArray_$M$N"
+	      CustomSymbolStrEmxFcn   "emx$M$N"
+	      CustomUserTokenString   ""
+	      CustomCommentsFcn	      ""
+	      DefineNamingRule	      "None"
+	      DefineNamingFcn	      ""
+	      ParamNamingRule	      "None"
+	      ParamNamingFcn	      ""
+	      SignalNamingRule	      "None"
+	      SignalNamingFcn	      ""
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      BlockCommentType	      "BlockPathComment"
+	      StateflowObjectComments on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InternalIdentifierFile  ""
+	      InternalIdentifier      "Shortened"
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	      ReservedNameArray	      []
+	      EnumMemberNameClash     "error"
+	    }
+	    Simulink.ERTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      19
+	      Version		      "19.1.1"
+	      DisabledProps	      []
+	      Description	      ""
+	      Components	      []
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      GenFloatMathFcnCalls    "NOT IN USE"
+	      TargetLangStandard      "C89/C90 (ANSI)"
+	      CodeReplacementLibrary  "None"
+	      UtilityFuncGeneration   "Auto"
+	      MultiwordTypeDef	      "System defined"
+	      MultiwordLength	      2048
+	      DynamicStringBufferSize 256
+	      GenerateFullHeader      on
+	      InferredTypesCompatibility off
+	      ExistingSharedCode      ""
+	      GenerateSampleERTMain   on
+	      GenerateTestInterfaces  off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      ConcurrentExecutionCompliant on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Use local settings"
+	      CombineOutputUpdateFcns on
+	      CombineSignalStateStructs	off
+	      GroupInternalDataByFunction off
+	      SuppressErrorStatus     off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    on
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      CodeInterfacePackaging  "Nonreusable function"
+	      PurelyIntegerCode	      off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      SupportContinuousTime   off
+	      SupportNonInlinedSFcns  off
+	      RemoveDisableFunc	      off
+	      RemoveResetFunc	      on
+	      SupportVariableSizeSignals off
+	      ParenthesesLevel	      "Nominal"
+	      CastingMode	      "Nominal"
+	      PreserveStateflowLocalDataDimensions off
+	      MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.ERTCustomization"
+	      ModelStepFunctionPrototypeControlCompliant on
+	      CPPClassGenCompliant    on
+	      AutosarCompliant	      off
+	      MDXCompliant	      off
+	      GRTInterface	      off
+	      GenerateAllocFcn	      off
+	      UseToolchainInfoCompliant	on
+	      GenerateSharedConstants on
+	      CoderGroups	      []
+	      AccessMethods	      []
+	      LookupTableObjectStructAxisOrder "1,2,3,4,..."
+	      LUTObjectStructOrderExplicitValues "Size,Breakpoints,Table"
+	      LUTObjectStructOrderEvenSpacing "Size,Breakpoints,Table"
+	      ArrayLayout	      "Column-major"
+	      UnsupportedSFcnMsg      "error"
+	      ERTHeaderFileRootName   "$R$E"
+	      ERTSourceFileRootName   "$R$E"
+	      ERTDataFileRootName     "$R_data"
+	      GenerateASAP2	      off
+	      DSAsUniqueAccess	      off
+	      ExtMode		      off
+	      ExtModeTransport	      0
+	      ExtModeStaticAlloc      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTesting	      off
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeMexArgs	      ""
+	      ExtModeIntrfLevel	      "Level1"
+	      InlinedParameterPlacement	"Hierarchical"
+	      TargetOS		      "BareBoardExample"
+	      MultiInstanceErrorCode  "Error"
+	      RootIOFormat	      "Individual arguments"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      ERTSrcFileBannerTemplate "ert_code_template.cgt"
+	      ERTHdrFileBannerTemplate "ert_code_template.cgt"
+	      ERTDataSrcFileTemplate  "ert_code_template.cgt"
+	      ERTDataHdrFileTemplate  "ert_code_template.cgt"
+	      ERTCustomFileTemplate   "example_file_process.tlc"
+	      EnableDataOwnership     off
+	      SignalDisplayLevel      10
+	      ParamTuneLevel	      10
+	      GlobalDataDefinition    "Auto"
+	      DataDefinitionFile      "global.c"
+	      GlobalDataReference     "Auto"
+	      ERTFilePackagingFormat  "Modular"
+	      RateTransitionBlockCode "Inline"
+	      DataReferenceFile	      "global.h"
+	      PreserveExpressionOrder off
+	      PreserveIfCondition     off
+	      ConvertIfToSwitch	      off
+	      PreserveExternInFcnDecls on
+	      PreserveStaticInFcnDecls on
+	      SuppressUnreachableDefaultCases off
+	      EnableSignedLeftShifts  on
+	      EnableSignedRightShifts on
+	      IndentStyle	      "K&R"
+	      IndentSize	      "2"
+	      NewlineStyle	      "Default"
+	      MaxLineWidth	      80
+	      EnableUserReplacementTypes off
+	      Array {
+		Type			"Struct"
+		Dimension		1
+		MATStruct {
+		  double		  ""
+		  single		  ""
+		  int32			  ""
+		  int16			  ""
+		  int8			  ""
+		  uint32		  ""
+		  uint16		  ""
+		  uint8			  ""
+		  boolean		  ""
+		  int			  ""
+		  uint			  ""
+		  char			  ""
+		  uint64		  ""
+		  int64			  ""
+		}
+		PropName		"ReplacementTypes"
+	      }
+	      MaxIdInt64	      "MAX_int64_T"
+	      MinIdInt64	      "MIN_int64_T"
+	      MaxIdUint64	      "MAX_uint64_T"
+	      MaxIdInt32	      "MAX_int32_T"
+	      MinIdInt32	      "MIN_int32_T"
+	      MaxIdUint32	      "MAX_uint32_T"
+	      MaxIdInt16	      "MAX_int16_T"
+	      MinIdInt16	      "MIN_int16_T"
+	      MaxIdUint16	      "MAX_uint16_T"
+	      MaxIdInt8		      "MAX_int8_T"
+	      MinIdInt8		      "MIN_int8_T"
+	      MaxIdUint8	      "MAX_uint8_T"
+	      BooleanTrueId	      "true"
+	      BooleanFalseId	      "false"
+	      TypeLimitIdReplacementHeaderFile ""
+	      MemSecPackage	      "--- None ---"
+	      MemSecDataConstants     "Default"
+	      MemSecDataIO	      "Default"
+	      MemSecDataInternal      "Default"
+	      MemSecDataParameters    "Default"
+	      MemSecFuncInitTerm      "Default"
+	      MemSecFuncExecute	      "Default"
+	      MemSecFuncSharedUtil    "Default"
+	      GroupConstants	      "Default"
+	      GroupRootInputs	      "Default"
+	      GroupRootOutputs	      "Default"
+	      GroupInternal	      "Default"
+	      GroupParameters	      "Default"
+	      GroupDataTransfer	      "Default"
+	      GroupSharedLocalDataStores "Default"
+	      GroupInstanceSpecificParameters "Default"
+	      GroupModelData	      "Default"
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	SlCovCC.ConfigComp {
+	  $ObjectID		  20
+	  Version		  "19.1.1"
+	  DisabledProps		  []
+	  Description		  "Simulink Coverage Configuration Component"
+	  Components		  []
+	  Name			  "Simulink Coverage"
+	  CovEnable		  off
+	  CovScope		  "EntireSystem"
+	  CovIncludeTopModel	  on
+	  RecordCoverage	  off
+	  CovPath		  "/"
+	  CovSaveName		  "covdata"
+	  CovCompData		  ""
+	  CovMetricSettings	  "dw"
+	  CovFilter		  ""
+	  CovHTMLOptions	  ""
+	  CovNameIncrementing	  off
+	  CovHtmlReporting	  on
+	  CovForceBlockReductionOff on
+	  CovEnableCumulative	  on
+	  CovSaveCumulativeToWorkspaceVar on
+	  CovSaveSingleToWorkspaceVar on
+	  CovCumulativeVarName	  "covCumulativeData"
+	  CovCumulativeReport	  off
+	  CovSaveOutputData	  on
+	  CovOutputDir		  "slcov_output/$ModelName$"
+	  CovDataFileName	  "$ModelName$_cvdata"
+	  CovShowResultsExplorer  on
+	  CovReportOnPause	  on
+	  CovModelRefEnable	  "off"
+	  CovModelRefExcluded	  ""
+	  CovExternalEMLEnable	  off
+	  CovSFcnEnable		  on
+	  CovBoundaryAbsTol	  1e-05
+	  CovBoundaryRelTol	  0.01
+	  CovUseTimeInterval	  off
+	  CovStartTime		  0
+	  CovStopTime		  0
+	  CovMcdcMode		  "Masking"
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  21
+	  Version		  "19.1.1"
+	  DisabledProps		  []
+	  Description		  "HDL Coder custom configuration component"
+	  Components		  []
+	  Name			  "HDL Coder"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    " "
+	    PropName		    "HDLConfigFile"
+	  }
+	  HDLCActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Code Generation"
+      ConfigPrmDlgPosition    [ 392, 49, 1754, 872 ]
+      ExtraOptions	      "-aGenerateTraceInfo=0 -aIgnoreTestpoints=0 "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    9
+  }
+  Object {
+    $PropName		    "DataTransfer"
+    $ObjectID		    22
+    $ClassName		    "Simulink.GlobalDataTransfer"
+    DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
+    DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
+    DefaultTransitionBetweenContTasks "Ensure deterministic transfer (minimum delay)"
+    DefaultExtrapolationMethodBetweenContTasks "None"
+  }
+  ExplicitPartitioning	  off
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    HideAutomaticName	    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    MarkupType		    "model"
+    UseDisplayTextAsClickCallback off
+    AnnotationType	    "note_annotation"
+    FixedHeight		    off
+    FixedWidth		    off
+    Interpreter		    "off"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  MaskDefaults {
+    SelfModifiable	    "off"
+    IconFrame		    "on"
+    IconOpaque		    "opaque"
+    RunInitForIconRedraw    "analyze"
+    IconRotate		    "none"
+    PortRotate		    "default"
+    IconUnits		    "autoscale"
+  }
+  MaskParameterDefaults {
+    Evaluate		    "on"
+    Tunable		    "on"
+    NeverSave		    "off"
+    Internal		    "off"
+    ReadOnly		    "off"
+    Enabled		    "on"
+    Visible		    "on"
+    ToolTip		    "on"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      DataTypeDuplicate
+      NumInputPorts	      "2"
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParamDataTypeStr	      "Inherit: Same as input"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      Unit		      "inherit"
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      MinMax
+      Function		      "min"
+      Inputs		      "1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      Unit		      "inherit"
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      EnsureOutportIsVirtual  off
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+      MustResolveToSignalObject	off
+      OutputWhenUnConnected   off
+      OutputWhenUnconnectedValue "0"
+      VectorParamsAs1DForOutWhenUnconnected on
+    }
+    Block {
+      BlockType		      Scope
+      DefaultConfigurationName "Simulink.scopes.TimeScopeBlockCfg"
+    }
+    Block {
+      BlockType		      Sin
+      SineType		      "Time based"
+      TimeSource	      "Use simulation time"
+      Amplitude		      "1"
+      Bias		      "0"
+      Frequency		      "1"
+      Phase		      "0"
+      Samples		      "10"
+      Offset		      "0"
+      SampleTime	      "-1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      ScheduleAs	      "Sample time"
+      SystemSampleTime	      "-1"
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      FunctionInterfaceSpec   "void_void"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      Opaque		      off
+      MaskHideContents	      off
+      SFBlockType	      "NONE"
+      VariantControlMode      "Expression"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+      AllowZeroVariantControls off
+      PropagateVariantConditions off
+      TreatAsGroupedWhenPropagatingVariantConditions on
+      ContentPreviewEnabled   off
+      IsWebBlock	      off
+      IsObserver	      off
+      Latency		      "0"
+      AutoFrameSizeCalculation off
+      IsWebBlockPanel	      off
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      VariableName	      "simulink_output"
+      MaxDataPoints	      "1000"
+      Decimation	      "1"
+      SaveFormat	      "Array"
+      Save2DSignal	      "3-D array (concatenate along third dimension)"
+      FixptAsFi		      off
+      NumInputs		      "1"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      VariantSink
+      VariantControlMode      "Expression"
+      GeneratePreprocessorConditionals off
+      ShowConditionOnBlock    off
+      AllowZeroVariantControls off
+    }
+    Block {
+      BlockType		      VariantSource
+      VariantControlMode      "Expression"
+      GeneratePreprocessorConditionals off
+      ShowConditionOnBlock    off
+      AllowZeroVariantControls off
+    }
+  }
+  System {
+    Name		    "slexVariantCondPropToSubsystems"
+    Location		    [214, 100, 1270, 832]
+    Open		    off
+    PortBlocksUseCompactNotation off
+    SetExecutionDomain	    off
+    ExecutionDomainType	    "Deduce"
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "154"
+    SimulinkSubDomain	    "Simulink"
+    Block {
+      BlockType		      Sum
+      Name		      "Add"
+      SID		      "72"
+      Ports		      [2, 1]
+      Position		      [-20, 90, 0, 110]
+      ZOrder		      44
+      InputSameDT	      off
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Atomic Subsystem"
+      SID		      "44"
+      Ports		      [0, 1]
+      Position		      [-135, 252, -75, 278]
+      ZOrder		      42
+      TreatAsAtomicUnit	      on
+      RequestExecContextInheritance off
+      System {
+	Name			"Atomic Subsystem"
+	Location		[214, 100, 1327, 899]
+	Open			off
+	PortBlocksUseCompactNotation off
+	SetExecutionDomain	off
+	ExecutionDomainType	"Deduce"
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SimulinkSubDomain	"Simulink"
+	Block {
+	  BlockType		  Sin
+	  Name			  "Sine2"
+	  SID			  "45"
+	  Ports			  [0, 1]
+	  Position		  [20, 80, 50, 110]
+	  ZOrder		  30
+	  SineType		  "Sample based"
+	  SampleTime		  "0.2"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace1"
+	  SID			  "46"
+	  Ports			  [1]
+	  Position		  [105, 20, 165, 50]
+	  ZOrder		  34
+	  VariableName		  "simout3"
+	  MaxDataPoints		  "inf"
+	  FixptAsFi		  on
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  SID			  "47"
+	  Position		  [235, 88, 265, 102]
+	  ZOrder		  35
+	  IconDisplay		  "Port number"
+	  VectorParamsAs1DForOutWhenUnconnected	off
+	}
+	Line {
+	  ZOrder		  1
+	  SrcBlock		  "Sine2"
+	  SrcPort		  1
+	  Points		  [27, 0]
+	  Branch {
+	    ZOrder		    2
+	    Points		    [0, -60]
+	    DstBlock		    "To Workspace1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    3
+	    DstBlock		    "Out1"
+	    DstPort		    1
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "GainA1"
+      SID		      "23"
+      Position		      [25, -85, 55, -55]
+      ZOrder		      21
+      Gain		      "2"
+      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "GainA2"
+      SID		      "31"
+      Position		      [25, 85, 55, 115]
+      ZOrder		      35
+      Gain		      "2"
+      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "GainA3"
+      SID		      "41"
+      Position		      [25, 250, 55, 280]
+      ZOrder		      41
+      Gain		      "2"
+      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "GainB1"
+      SID		      "7"
+      Position		      [135, -55, 165, -25]
+      ZOrder		      8
+      Gain		      "3"
+      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "GainB2"
+      SID		      "32"
+      Position		      [135, 115, 165, 145]
+      ZOrder		      32
+      NamePlacement	      "alternate"
+      Gain		      "3"
+      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "GainB3"
+      SID		      "42"
+      Position		      [135, 280, 165, 310]
+      ZOrder		      39
+      Gain		      "3"
+      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sin
+      Name		      "Sine1"
+      SID		      "4"
+      Ports		      [0, 1]
+      Position		      [-135, -85, -105, -55]
+      ZOrder		      5
+      SineType		      "Sample based"
+      SampleTime	      "0.2"
+    }
+    Block {
+      BlockType		      Sin
+      Name		      "Sine2"
+      SID		      "5"
+      Ports		      [0, 1]
+      Position		      [-135, -25, -105, 5]
+      ZOrder		      6
+      SineType		      "Sample based"
+      SampleTime	      "0.2"
+    }
+    Block {
+      BlockType		      Sin
+      Name		      "Sine3"
+      SID		      "33"
+      Ports		      [0, 1]
+      Position		      [-135, 145, -105, 175]
+      ZOrder		      31
+      SineType		      "Sample based"
+      SampleTime	      "0.2"
+    }
+    Block {
+      BlockType		      Sin
+      Name		      "Sine4"
+      SID		      "43"
+      Ports		      [0, 1]
+      Position		      [-135, 310, -105, 340]
+      ZOrder		      38
+      SineType		      "Sample based"
+      SampleTime	      "0.2"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Subsystem1"
+      SID		      "68"
+      Ports		      [0, 1]
+      Position		      [-135, 49, -85, 71]
+      ZOrder		      43
+      RequestExecContextInheritance off
+      System {
+	Name			"Subsystem1"
+	Location		[214, 100, 1234, 949]
+	Open			off
+	PortBlocksUseCompactNotation off
+	SetExecutionDomain	off
+	ExecutionDomainType	"Deduce"
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SimulinkSubDomain	"Simulink"
+	Block {
+	  BlockType		  Sin
+	  Name			  "Sine1"
+	  SID			  "69"
+	  Ports			  [0, 1]
+	  Position		  [20, 80, 50, 110]
+	  ZOrder		  30
+	  SineType		  "Sample based"
+	  SampleTime		  "0.2"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace1"
+	  SID			  "70"
+	  Ports			  [1]
+	  Position		  [105, 20, 165, 50]
+	  ZOrder		  34
+	  VariableName		  "simout1"
+	  MaxDataPoints		  "inf"
+	  FixptAsFi		  on
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  SID			  "71"
+	  Position		  [235, 88, 265, 102]
+	  ZOrder		  35
+	  IconDisplay		  "Port number"
+	  VectorParamsAs1DForOutWhenUnconnected	off
+	}
+	Line {
+	  ZOrder		  1
+	  SrcBlock		  "Sine1"
+	  SrcPort		  1
+	  Points		  [27, 0]
+	  Branch {
+	    ZOrder		    2
+	    Points		    [0, -60]
+	    DstBlock		    "To Workspace1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    3
+	    DstBlock		    "Out1"
+	    DstPort		    1
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Subsystem2"
+      SID		      "38"
+      Ports		      [0, 1]
+      Position		      [-135, 94, -85, 116]
+      ZOrder		      36
+      RequestExecContextInheritance off
+      TreatAsGroupedWhenPropagatingVariantConditions off
+      System {
+	Name			"Subsystem2"
+	Location		[214, 100, 1234, 949]
+	Open			off
+	PortBlocksUseCompactNotation off
+	SetExecutionDomain	off
+	ExecutionDomainType	"Deduce"
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SimulinkSubDomain	"Simulink"
+	Block {
+	  BlockType		  Sin
+	  Name			  "Sine1"
+	  SID			  "34"
+	  Ports			  [0, 1]
+	  Position		  [20, 80, 50, 110]
+	  ZOrder		  30
+	  SineType		  "Sample based"
+	  SampleTime		  "0.2"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace1"
+	  SID			  "35"
+	  Ports			  [1]
+	  Position		  [105, 20, 165, 50]
+	  ZOrder		  34
+	  VariableName		  "simout2"
+	  MaxDataPoints		  "inf"
+	  FixptAsFi		  on
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  SID			  "39"
+	  Position		  [235, 88, 265, 102]
+	  ZOrder		  35
+	  IconDisplay		  "Port number"
+	  VectorParamsAs1DForOutWhenUnconnected	off
+	}
+	Line {
+	  ZOrder		  49
+	  SrcBlock		  "Sine1"
+	  SrcPort		  1
+	  Points		  [27, 0]
+	  Branch {
+	    ZOrder		    50
+	    DstBlock		    "Out1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    47
+	    Points		    [0, -60]
+	    DstBlock		    "To Workspace1"
+	    DstPort		    1
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Summary"
+      SID		      "73"
+      Ports		      []
+      Position		      [295, 273, 395, 317]
+      ZOrder		      45
+      RequestExecContextInheritance off
+      System {
+	Name			"Summary"
+	Location		[214, 100, 1270, 953]
+	Open			off
+	PortBlocksUseCompactNotation off
+	SetExecutionDomain	off
+	ExecutionDomainType	"Deduce"
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SimulinkSubDomain	"Simulink"
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Bias5(Grouped)"
+	  SID			  "107"
+	  Ports			  [1, 1]
+	  Position		  [775, 100, 840, 140]
+	  ZOrder		  101
+	  RequestExecContextInheritance	off
+	  System {
+	    Name		    "Bias5(Grouped)"
+	    Location		    [214, 100, 1406, 869]
+	    Open		    off
+	    PortBlocksUseCompactNotation off
+	    SetExecutionDomain	    off
+	    ExecutionDomainType	    "Deduce"
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "458"
+	    SimulinkSubDomain	    "Simulink"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "u"
+	      SID		      "108"
+	      Position		      [20, 23, 50, 37]
+	      ZOrder		      74
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Cst"
+	      SID		      "109"
+	      Position		      [25, 55, 50, 75]
+	      ZOrder		      78
+	      Value		      "5"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "sum1"
+	      SID		      "110"
+	      Ports		      [2, 1]
+	      Position		      [110, 17, 160, 68]
+	      ZOrder		      77
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "y"
+	      SID		      "111"
+	      Position		      [240, 38, 270, 52]
+	      ZOrder		      76
+	      IconDisplay	      "Port number"
+	      VectorParamsAs1DForOutWhenUnconnected off
+	    }
+	    Line {
+	      ZOrder		      1
+	      SrcBlock		      "u"
+	      SrcPort		      1
+	      DstBlock		      "sum1"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      2
+	      SrcBlock		      "Cst"
+	      SrcPort		      1
+	      Points		      [23, 0; 0, -10]
+	      DstBlock		      "sum1"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      3
+	      SrcBlock		      "sum1"
+	      SrcPort		      1
+	      DstBlock		      "y"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Bias5(Nonvirtual)\n"
+	  SID			  "112"
+	  Ports			  [1, 1]
+	  Position		  [775, 270, 840, 310]
+	  ZOrder		  103
+	  TreatAsAtomicUnit	  on
+	  RequestExecContextInheritance	off
+	  TreatAsGroupedWhenPropagatingVariantConditions off
+	  System {
+	    Name		    "Bias5(Nonvirtual)\n"
+	    Location		    [432, 41, 1810, 1009]
+	    Open		    off
+	    PortBlocksUseCompactNotation off
+	    SetExecutionDomain	    off
+	    ExecutionDomainType	    "Deduce"
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "458"
+	    SimulinkSubDomain	    "Simulink"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "u"
+	      SID		      "113"
+	      Position		      [20, 23, 50, 37]
+	      ZOrder		      74
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Cst"
+	      SID		      "114"
+	      Position		      [20, 60, 50, 80]
+	      ZOrder		      78
+	      Value		      "5"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "sum1"
+	      SID		      "115"
+	      Ports		      [2, 1]
+	      Position		      [110, 17, 160, 68]
+	      ZOrder		      77
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "y"
+	      SID		      "116"
+	      Position		      [240, 38, 270, 52]
+	      ZOrder		      76
+	      IconDisplay	      "Port number"
+	      VectorParamsAs1DForOutWhenUnconnected off
+	    }
+	    Line {
+	      ZOrder		      1
+	      SrcBlock		      "u"
+	      SrcPort		      1
+	      DstBlock		      "sum1"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      2
+	      SrcBlock		      "Cst"
+	      SrcPort		      1
+	      Points		      [38, 0; 0, -15]
+	      DstBlock		      "sum1"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      3
+	      SrcBlock		      "sum1"
+	      SrcPort		      1
+	      DstBlock		      "y"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Bias5(Ungrouped)"
+	  SID			  "117"
+	  Ports			  [1, 1]
+	  Position		  [775, 185, 840, 225]
+	  ZOrder		  102
+	  RequestExecContextInheritance	off
+	  TreatAsGroupedWhenPropagatingVariantConditions off
+	  System {
+	    Name		    "Bias5(Ungrouped)"
+	    Location		    [214, 100, 1406, 869]
+	    Open		    off
+	    PortBlocksUseCompactNotation off
+	    SetExecutionDomain	    off
+	    ExecutionDomainType	    "Deduce"
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "458"
+	    SimulinkSubDomain	    "Simulink"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "u"
+	      SID		      "118"
+	      Position		      [20, 23, 50, 37]
+	      ZOrder		      74
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Cst"
+	      SID		      "119"
+	      Position		      [25, 60, 50, 80]
+	      ZOrder		      78
+	      Value		      "5"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "sum1"
+	      SID		      "120"
+	      Ports		      [2, 1]
+	      Position		      [110, 17, 160, 68]
+	      ZOrder		      77
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "y"
+	      SID		      "121"
+	      Position		      [240, 38, 270, 52]
+	      ZOrder		      76
+	      IconDisplay	      "Port number"
+	      VectorParamsAs1DForOutWhenUnconnected off
+	    }
+	    Line {
+	      ZOrder		      1
+	      SrcBlock		      "u"
+	      SrcPort		      1
+	      DstBlock		      "sum1"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      2
+	      SrcBlock		      "Cst"
+	      SrcPort		      1
+	      Points		      [38, 0; 0, -15]
+	      DstBlock		      "sum1"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      3
+	      SrcBlock		      "sum1"
+	      SrcPort		      1
+	      DstBlock		      "y"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "MinMax(Grouped)\n"
+	  SID			  "83"
+	  Ports			  [2, 1]
+	  Position		  [140, 87, 205, 138]
+	  ZOrder		  100
+	  RequestExecContextInheritance	off
+	  System {
+	    Name		    "MinMax(Grouped)\n"
+	    Location		    [432, 41, 1810, 1009]
+	    Open		    off
+	    PortBlocksUseCompactNotation off
+	    SetExecutionDomain	    off
+	    ExecutionDomainType	    "Deduce"
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SimulinkSubDomain	    "Simulink"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "u"
+	      SID		      "84"
+	      Position		      [20, 23, 50, 37]
+	      ZOrder		      74
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "R"
+	      SID		      "85"
+	      Position		      [200, 63, 230, 77]
+	      ZOrder		      75
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      DataTypeDuplicate
+	      Name		      "Data Type\nDuplicate"
+	      SID		      "86"
+	      Ports		      [3]
+	      Position		      [220, 165, 260, 205]
+	      ZOrder		      71
+	      DisableCoverage	      on
+	      NumInputPorts	      "3"
+	    }
+	    Block {
+	      BlockType		      MinMax
+	      Name		      "MinMax"
+	      SID		      "87"
+	      Ports		      [2, 1]
+	      Position		      [130, 20, 170, 60]
+	      ZOrder		      70
+	      DisableCoverage	      on
+	      Inputs		      "2"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+	      LockScale		      on
+	      SaturateOnIntegerOverflow	off
+	      ZeroCross		      off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Unit Delay\nWith Preview\nResettable"
+	      SID		      "88"
+	      Ports		      [2, 2]
+	      Position		      [310, 25, 370, 85]
+	      ZOrder		      69
+	      LibraryVersion	      "1.22"
+	      SourceBlock	      "simulink_need_slupdate/Unit Delay\nWith Preview\nResettable"
+	      SourceType	      "Unit Delay With Preview Resettable"
+	      SourceProductName	      "Simulink"
+	      SourceProductBaseCode   "SL"
+	      ContentPreviewEnabled   off
+	      vinit		      0.0
+	      tsamp		      -1
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "y"
+	      SID		      "89"
+	      Position		      [445, 33, 475, 47]
+	      ZOrder		      76
+	      IconDisplay	      "Port number"
+	      VectorParamsAs1DForOutWhenUnconnected off
+	    }
+	    Line {
+	      ZOrder		      1
+	      SrcBlock		      "Unit Delay\nWith Preview\nResettable"
+	      SrcPort		      1
+	      DstBlock		      "y"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      2
+	      SrcBlock		      "MinMax"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      Branch {
+		ZOrder			3
+		DstBlock		"Unit Delay\nWith Preview\nResettable"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			4
+		Points			[0, 130]
+		DstBlock		"Data Type\nDuplicate"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      ZOrder		      5
+	      SrcBlock		      "Unit Delay\nWith Preview\nResettable"
+	      SrcPort		      2
+	      Points		      [25, 0; 0, 65; -310, 0]
+	      Branch {
+		ZOrder			6
+		Points			[0, -85]
+		DstBlock		"MinMax"
+		DstPort			2
+	      }
+	      Branch {
+		ZOrder			7
+		Points			[0, 50]
+		DstBlock		"Data Type\nDuplicate"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      ZOrder		      8
+	      SrcBlock		      "u"
+	      SrcPort		      1
+	      Points		      [10, 0]
+	      Branch {
+		ZOrder			9
+		DstBlock		"MinMax"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			10
+		Points			[0, 170]
+		DstBlock		"Data Type\nDuplicate"
+		DstPort			3
+	      }
+	    }
+	    Line {
+	      ZOrder		      11
+	      SrcBlock		      "R"
+	      SrcPort		      1
+	      DstBlock		      "Unit Delay\nWith Preview\nResettable"
+	      DstPort		      2
+	    }
+	    Annotation {
+	      SID		      "90"
+	      Name		      "Reset"
+	      Position		      [242, 71, 270, 83]
+	      InternalMargins	      [0, 0, 0, 0]
+	      ZOrder		      -1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "MinMax(Nonvirtual)"
+	  SID			  "91"
+	  Ports			  [2, 1]
+	  Position		  [140, 274, 205, 321]
+	  ZOrder		  98
+	  TreatAsAtomicUnit	  on
+	  RequestExecContextInheritance	off
+	  TreatAsGroupedWhenPropagatingVariantConditions off
+	  System {
+	    Name		    "MinMax(Nonvirtual)"
+	    Location		    [214, 100, 1327, 899]
+	    Open		    off
+	    PortBlocksUseCompactNotation off
+	    SetExecutionDomain	    off
+	    ExecutionDomainType	    "Deduce"
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "128"
+	    SimulinkSubDomain	    "Simulink"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "u"
+	      SID		      "92"
+	      Position		      [20, 23, 50, 37]
+	      ZOrder		      74
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "R"
+	      SID		      "93"
+	      Position		      [200, 63, 230, 77]
+	      ZOrder		      75
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      DataTypeDuplicate
+	      Name		      "Data Type\nDuplicate"
+	      SID		      "94"
+	      Ports		      [3]
+	      Position		      [220, 165, 260, 205]
+	      ZOrder		      71
+	      DisableCoverage	      on
+	      NumInputPorts	      "3"
+	    }
+	    Block {
+	      BlockType		      MinMax
+	      Name		      "MinMax"
+	      SID		      "95"
+	      Ports		      [2, 1]
+	      Position		      [130, 20, 170, 60]
+	      ZOrder		      70
+	      DisableCoverage	      on
+	      Inputs		      "2"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+	      LockScale		      on
+	      SaturateOnIntegerOverflow	off
+	      ZeroCross		      off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Unit Delay\nWith Preview\nResettable"
+	      SID		      "96"
+	      Ports		      [2, 2]
+	      Position		      [310, 25, 370, 85]
+	      ZOrder		      69
+	      LibraryVersion	      "1.22"
+	      SourceBlock	      "simulink_need_slupdate/Unit Delay\nWith Preview\nResettable"
+	      SourceType	      "Unit Delay With Preview Resettable"
+	      SourceProductName	      "Simulink"
+	      SourceProductBaseCode   "SL"
+	      ContentPreviewEnabled   off
+	      vinit		      1
+	      tsamp		      -1
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "y"
+	      SID		      "97"
+	      Position		      [445, 33, 475, 47]
+	      ZOrder		      76
+	      IconDisplay	      "Port number"
+	      VectorParamsAs1DForOutWhenUnconnected off
+	    }
+	    Line {
+	      ZOrder		      1
+	      SrcBlock		      "Unit Delay\nWith Preview\nResettable"
+	      SrcPort		      1
+	      DstBlock		      "y"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      2
+	      SrcBlock		      "MinMax"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      Branch {
+		ZOrder			3
+		DstBlock		"Unit Delay\nWith Preview\nResettable"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			4
+		Points			[0, 130]
+		DstBlock		"Data Type\nDuplicate"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      ZOrder		      5
+	      SrcBlock		      "Unit Delay\nWith Preview\nResettable"
+	      SrcPort		      2
+	      Points		      [25, 0; 0, 65; -310, 0]
+	      Branch {
+		ZOrder			6
+		Points			[0, -85]
+		DstBlock		"MinMax"
+		DstPort			2
+	      }
+	      Branch {
+		ZOrder			7
+		Points			[0, 50]
+		DstBlock		"Data Type\nDuplicate"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      ZOrder		      8
+	      SrcBlock		      "u"
+	      SrcPort		      1
+	      Points		      [10, 0]
+	      Branch {
+		ZOrder			9
+		DstBlock		"MinMax"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			10
+		Points			[0, 170]
+		DstBlock		"Data Type\nDuplicate"
+		DstPort			3
+	      }
+	    }
+	    Line {
+	      ZOrder		      11
+	      SrcBlock		      "R"
+	      SrcPort		      1
+	      DstBlock		      "Unit Delay\nWith Preview\nResettable"
+	      DstPort		      2
+	    }
+	    Annotation {
+	      SID		      "98"
+	      Name		      "Reset"
+	      Position		      [242, 71, 270, 83]
+	      InternalMargins	      [0, 0, 0, 0]
+	      ZOrder		      -1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "MinMax(Ungrouped)\n"
+	  SID			  "99"
+	  Ports			  [2, 1]
+	  Position		  [140, 177, 205, 228]
+	  ZOrder		  95
+	  RequestExecContextInheritance	off
+	  TreatAsGroupedWhenPropagatingVariantConditions off
+	  System {
+	    Name		    "MinMax(Ungrouped)\n"
+	    Location		    [214, 100, 1270, 953]
+	    Open		    off
+	    PortBlocksUseCompactNotation off
+	    SetExecutionDomain	    off
+	    ExecutionDomainType	    "Deduce"
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "128"
+	    SimulinkSubDomain	    "Simulink"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "u"
+	      SID		      "100"
+	      Position		      [20, 23, 50, 37]
+	      ZOrder		      74
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "R"
+	      SID		      "101"
+	      Position		      [200, 63, 230, 77]
+	      ZOrder		      75
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      DataTypeDuplicate
+	      Name		      "Data Type\nDuplicate"
+	      SID		      "102"
+	      Ports		      [3]
+	      Position		      [220, 165, 260, 205]
+	      ZOrder		      71
+	      DisableCoverage	      on
+	      NumInputPorts	      "3"
+	    }
+	    Block {
+	      BlockType		      MinMax
+	      Name		      "MinMax"
+	      SID		      "103"
+	      Ports		      [2, 1]
+	      Position		      [130, 20, 170, 60]
+	      ZOrder		      70
+	      DisableCoverage	      on
+	      Inputs		      "2"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+	      LockScale		      on
+	      SaturateOnIntegerOverflow	off
+	      ZeroCross		      off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Unit Delay\nWith Preview\nResettable"
+	      SID		      "104"
+	      Ports		      [2, 2]
+	      Position		      [310, 25, 370, 85]
+	      ZOrder		      69
+	      LibraryVersion	      "1.22"
+	      SourceBlock	      "simulink_need_slupdate/Unit Delay\nWith Preview\nResettable"
+	      SourceType	      "Unit Delay With Preview Resettable"
+	      SourceProductName	      "Simulink"
+	      SourceProductBaseCode   "SL"
+	      ContentPreviewEnabled   off
+	      vinit		      1
+	      tsamp		      -1
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "y"
+	      SID		      "105"
+	      Position		      [445, 33, 475, 47]
+	      ZOrder		      76
+	      IconDisplay	      "Port number"
+	      VectorParamsAs1DForOutWhenUnconnected off
+	    }
+	    Line {
+	      ZOrder		      1
+	      SrcBlock		      "Unit Delay\nWith Preview\nResettable"
+	      SrcPort		      1
+	      DstBlock		      "y"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      2
+	      SrcBlock		      "MinMax"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      Branch {
+		ZOrder			3
+		DstBlock		"Unit Delay\nWith Preview\nResettable"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			4
+		Points			[0, 130]
+		DstBlock		"Data Type\nDuplicate"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      ZOrder		      5
+	      SrcBlock		      "Unit Delay\nWith Preview\nResettable"
+	      SrcPort		      2
+	      Points		      [25, 0; 0, 65; -310, 0]
+	      Branch {
+		ZOrder			6
+		Points			[0, -85]
+		DstBlock		"MinMax"
+		DstPort			2
+	      }
+	      Branch {
+		ZOrder			7
+		Points			[0, 50]
+		DstBlock		"Data Type\nDuplicate"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      ZOrder		      8
+	      SrcBlock		      "u"
+	      SrcPort		      1
+	      Points		      [10, 0]
+	      Branch {
+		ZOrder			9
+		DstBlock		"MinMax"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			10
+		Points			[0, 170]
+		DstBlock		"Data Type\nDuplicate"
+		DstPort			3
+	      }
+	    }
+	    Line {
+	      ZOrder		      11
+	      SrcBlock		      "R"
+	      SrcPort		      1
+	      DstBlock		      "Unit Delay\nWith Preview\nResettable"
+	      DstPort		      2
+	    }
+	    Annotation {
+	      SID		      "106"
+	      Name		      "Reset"
+	      Position		      [242, 71, 270, 83]
+	      InternalMargins	      [0, 0, 0, 0]
+	      ZOrder		      -1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Scope1"
+	  SID			  "130"
+	  Ports			  [1]
+	  Position		  [390, 189, 420, 221]
+	  ZOrder		  104
+	  ScopeSpecificationString "C++SS(StrPVP('SaveName','ScopeData'),StrPVP('LimitDataPoints','on'),StrPVP('DataFormat','"
+	  "Array'),StrPVP('Decimation','1'),StrPVP('BlockParamSampleInput','off'))"
+	  NumInputPorts		  "1"
+	  Floating		  off
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Scope2"
+	  SID			  "131"
+	  Ports			  [3]
+	  Position		  [925, 189, 955, 221]
+	  ZOrder		  105
+	  ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extmgr."
+	  "Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('Sources"
+	  "','WiredSimulink',true,'DataLoggingVariableName','Scope2Summary','DataLoggingLimitDataPoints',true,'DataLoggingSave"
+	  "Format','Structure','DataLoggingDecimation','1','DataLoggingDecimateData',true),extmgr.Configuration('Visuals','Tim"
+	  "e Domain',true,'SerializedDisplays',{struct('MinYLimReal','-10','MaxYLimReal','10','YLabelReal','','MinYLimMag','0'"
+	  ",'MaxYLimMag','10','LegendVisibility','Off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'Axe"
+	  "sTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.07450980"
+	  "39215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.07450980392"
+	  "15686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title',"
+	  "'%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',0,'LineNames',{{[]}},'ShowCon"
+	  "tent',true,'Placement',1)},'DisplayPropertyDefaults',struct('MinYLimReal','-10','MaxYLimReal','10','YLabelReal','',"
+	  "'MinYLimMag','0','MaxYLimMag','10','LegendVisibility','Off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesCol"
+	  "or',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[0.074509803921568"
+	  "6 0.623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.2745098039215"
+	  "69 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392"
+	  "156863])),extmgr.Configuration('Tools','Plot Navigation',true),extmgr.Configuration('Tools','Measurements',true,'Ve"
+	  "rsion','2016b')),'Version','2016b')"
+	  NumInputPorts		  "3"
+	  Floating		  off
+	}
+	Block {
+	  BlockType		  Sin
+	  Name			  "Sine1"
+	  SID			  "134"
+	  Ports			  [0, 1]
+	  Position		  [30, 85, 80, 105]
+	  ZOrder		  108
+	  SineType		  "Sample based"
+	  SampleTime		  "0.2"
+	}
+	Block {
+	  BlockType		  Sin
+	  Name			  "Sine2"
+	  SID			  "135"
+	  Ports			  [0, 1]
+	  Position		  [30, 125, 80, 145]
+	  ZOrder		  109
+	  SineType		  "Sample based"
+	  SampleTime		  "0.2"
+	}
+	Block {
+	  BlockType		  Sin
+	  Name			  "Sine3"
+	  SID			  "136"
+	  Ports			  [0, 1]
+	  Position		  [30, 175, 80, 195]
+	  ZOrder		  110
+	  SineType		  "Sample based"
+	  SampleTime		  "0.2"
+	}
+	Block {
+	  BlockType		  Sin
+	  Name			  "Sine4"
+	  SID			  "145"
+	  Ports			  [0, 1]
+	  Position		  [30, 215, 80, 235]
+	  ZOrder		  112
+	  SineType		  "Sample based"
+	  SampleTime		  "0.2"
+	}
+	Block {
+	  BlockType		  Sin
+	  Name			  "Sine5"
+	  SID			  "146"
+	  Ports			  [0, 1]
+	  Position		  [30, 265, 80, 285]
+	  ZOrder		  113
+	  SineType		  "Sample based"
+	  SampleTime		  "0.2"
+	}
+	Block {
+	  BlockType		  Sin
+	  Name			  "Sine6"
+	  SID			  "147"
+	  Ports			  [0, 1]
+	  Position		  [30, 310, 80, 330]
+	  ZOrder		  114
+	  SineType		  "Sample based"
+	  SampleTime		  "0.2"
+	}
+	Block {
+	  BlockType		  Sin
+	  Name			  "Sine7"
+	  SID			  "148"
+	  Ports			  [0, 1]
+	  Position		  [535, 195, 585, 215]
+	  ZOrder		  115
+	  SineType		  "Sample based"
+	  SampleTime		  "0.2"
+	}
+	Block {
+	  BlockType		  VariantSink
+	  Name			  "Variant Sink"
+	  SID			  "122"
+	  Ports			  [1, 3]
+	  Position		  [645, 74, 665, 336]
+	  ZOrder		  93
+	  VariantControls	  "DataTag0"
+	  GeneratePreprocessorConditionals on
+	}
+	Block {
+	  BlockType		  VariantSource
+	  Name			  "Variant Source"
+	  SID			  "123"
+	  Ports			  [3, 1]
+	  Position		  [300, 67, 320, 343]
+	  ZOrder		  88
+	  VariantControls	  "DataTag1"
+	  GeneratePreprocessorConditionals on
+	}
+	Line {
+	  ZOrder		  2
+	  SrcBlock		  "MinMax(Ungrouped)\n"
+	  SrcPort		  1
+	  DstBlock		  "Variant Source"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  19
+	  SrcBlock		  "Variant Source"
+	  SrcPort		  1
+	  DstBlock		  "Scope1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  4
+	  SrcBlock		  "MinMax(Grouped)\n"
+	  SrcPort		  1
+	  DstBlock		  "Variant Source"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  23
+	  SrcBlock		  "Sine1"
+	  SrcPort		  1
+	  Points		  [25, 0; 0, 5]
+	  DstBlock		  "MinMax(Grouped)\n"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  24
+	  SrcBlock		  "Sine2"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, -10]
+	  DstBlock		  "MinMax(Grouped)\n"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  25
+	  SrcBlock		  "Sine3"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, 5]
+	  DstBlock		  "MinMax(Ungrouped)\n"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  29
+	  SrcBlock		  "Sine7"
+	  SrcPort		  1
+	  DstBlock		  "Variant Sink"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  26
+	  SrcBlock		  "Sine4"
+	  SrcPort		  1
+	  Points		  [25, 0; 0, -10]
+	  DstBlock		  "MinMax(Ungrouped)\n"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  27
+	  SrcBlock		  "Sine5"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, 10]
+	  DstBlock		  "MinMax(Nonvirtual)"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  28
+	  SrcBlock		  "Sine6"
+	  SrcPort		  1
+	  Points		  [13, 0; 0, -15]
+	  DstBlock		  "MinMax(Nonvirtual)"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  12
+	  SrcBlock		  "MinMax(Nonvirtual)"
+	  SrcPort		  1
+	  DstBlock		  "Variant Source"
+	  DstPort		  3
+	}
+	Line {
+	  ZOrder		  13
+	  SrcBlock		  "Variant Sink"
+	  SrcPort		  1
+	  DstBlock		  "Bias5(Grouped)"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  14
+	  SrcBlock		  "Variant Sink"
+	  SrcPort		  2
+	  DstBlock		  "Bias5(Ungrouped)"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  15
+	  SrcBlock		  "Variant Sink"
+	  SrcPort		  3
+	  DstBlock		  "Bias5(Nonvirtual)\n"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  20
+	  SrcBlock		  "Bias5(Grouped)"
+	  SrcPort		  1
+	  Points		  [38, 0; 0, 75]
+	  DstBlock		  "Scope2"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  40
+	  SrcBlock		  "Bias5(Ungrouped)"
+	  SrcPort		  1
+	  DstBlock		  "Scope2"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  41
+	  SrcBlock		  "Bias5(Nonvirtual)\n"
+	  SrcPort		  1
+	  Points		  [40, 0; 0, -75]
+	  DstBlock		  "Scope2"
+	  DstPort		  3
+	}
+	Annotation {
+	  SID			  "125"
+	  Name			  "Copyright 2016 The MathWorks, Inc."
+	  Position		  [406, 549, 570, 561]
+	  InternalMargins	  [0, 0, 0, 0]
+	  HorizontalAlignment	  "left"
+	  VerticalAlignment	  "top"
+	  ZOrder		  -2
+	}
+	Annotation {
+	  SID			  "126"
+	  Name			  "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html"
+	  "><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</styl"
+	  "e></head><body style=\" font-family:'Helvetica'; font-size:10px; font-weight:400; font-style:normal;\">\n<p style=\""
+	  " margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> </p>"
+	  "</body></html>"
+	  Position		  [509, 551, 513, 566]
+	  InternalMargins	  [0, 0, 0, 0]
+	  HorizontalAlignment	  "left"
+	  VerticalAlignment	  "top"
+	  Interpreter		  "rich"
+	  ZOrder		  -3
+	}
+	Annotation {
+	  SID			  "127"
+	  Name			  "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html"
+	  "><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</styl"
+	  "e></head><body style=\" font-family:'Liberation Sans'; font-size:10px; font-weight:400; font-style:normal;\">\n<p s"
+	  "tyle=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+	  "line-height:100%;\"><span style=\" font-family:'Arial'; font-size:12px;\">This illustrates the behavior of  forward"
+	  " and backward variant condition propagation onto subsystems. In the base workspace,</span></p>\n<p style=\" margin-"
+	  "top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100"
+	  "%;\"><span style=\" font-family:'Arial'; font-size:12px;\">yout can change the value of W, the variant control vari"
+	  "anble used by the Variant Source and Variant Sink  by setting</span></p>\n<ul style=\"margin-top: 0px; margin-botto"
+	  "m: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;\"><li style=\" font-family:'Arial'; font-size:12px"
+	  ";\" style=\" margin-top:0px; margin-bottom:0px; margin-left:12px; margin-right:0px; -qt-block-indent:0; text-indent"
+	  ":0px; line-height:100%;\"><span style=\" font-size:12px;\">W.Value =  1   % (2 or 3)</span></li></ul></body></html>"
+	  Position		  [30, 19, 752, 83]
+	  InternalMargins	  [0, 0, 0, 0]
+	  FixedHeight		  on
+	  FixedWidth		  on
+	  HorizontalAlignment	  "left"
+	  VerticalAlignment	  "top"
+	  Interpreter		  "rich"
+	  ZOrder		  -4
+	}
+	Annotation {
+	  SID			  "128"
+	  Name			  "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html"
+	  "><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</styl"
+	  "e></head><body style=\" font-family:'Liberation Sans'; font-size:10px; font-weight:400; font-style:normal;\">\n<ul "
+	  "style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;\"><li style=\""
+	  " margin-top:12px; margin-bottom:12px; margin-left:12px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line"
+	  "-height:100%;\"><span style=\" font-family:'Helvetica'; font-size:12px;\">Virtual subsystems by default behave like"
+	  " a &quot;grouped&quot; collection of blocks where all the blocks contained inside the subsystem have the same varia"
+	  "nt condition. This is true when the TreatAsGroupedWhenPropagatingVariantConditions parameter is &quot;on&quot; (def"
+	  "ault setting). Here, the MinMax(Grouped) block gets the condition W==1 and so do all the blocks inside it. This ens"
+	  "ures that when this is placed in a library (for reuse) it behaves as a system of equations.  library blocks, they b"
+	  "ehave as entities.   </span></li>\n<li style=\" margin-top:12px; margin-bottom:12px; margin-left:12px; margin-right"
+	  ":0px; -qt-block-indent:0; text-indent:0px; line-height:100%;\"><span style=\" font-family:'Helvetica'; font-size:12"
+	  "px;\">Virtual subsystems behave like an ungrouped collection of blocks when the TreatAsGroupedWhenPropagatingVarian"
+	  "tConditions parameter is &quot;off&quot;. A dotted line for the MinMax(Ungrouped) block icon indicates this setting"
+	  ". In this example, the behavior of the MinMax(Ungrouped) may not be what one expects in that the block never become"
+	  "s conditional. Similar for the Bias5(Ungrouped) block in that it does not become conditional.</span></li>\n<li styl"
+	  "e=\" margin-top:12px; margin-bottom:12px; margin-left:12px; margin-right:0px; -qt-block-indent:0; text-indent:0px; "
+	  "line-height:100%;\"><span style=\" font-family:'Helvetica'; font-size:12px;\">Nonvirtual subsystems always behave l"
+	  "ike an entity and the contents only execute when the condition assigned to the subsystem is satisfied, i.e. nonvirt"
+	  "ual subsystems, Model blocks, and grouped virtual subsystems behave the same.</span></li></ul></body></html>"
+	  Position		  [20, 377, 1001, 594]
+	  InternalMargins	  [0, 0, 0, 0]
+	  FixedHeight		  on
+	  FixedWidth		  on
+	  HorizontalAlignment	  "left"
+	  VerticalAlignment	  "top"
+	  Interpreter		  "rich"
+	  ZOrder		  -5
+	}
+      }
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace1"
+      SID		      "22"
+      Ports		      [1]
+      Position		      [-50, -135, 10, -105]
+      ZOrder		      20
+      VariableName	      "simout"
+      MaxDataPoints	      "inf"
+      FixptAsFi		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      VariantSource
+      Name		      "Variant Source1"
+      SID		      "1"
+      Ports		      [2, 1]
+      Position		      [85, -99, 105, 19]
+      ZOrder		      2
+      VariantControls	      "DataTag2"
+      GeneratePreprocessorConditionals on
+    }
+    Block {
+      BlockType		      VariantSource
+      Name		      "Variant Source2"
+      SID		      "36"
+      Ports		      [2, 1]
+      Position		      [85, 71, 105, 189]
+      ZOrder		      29
+      VariantControls	      "DataTag3"
+      GeneratePreprocessorConditionals on
+    }
+    Block {
+      BlockType		      VariantSource
+      Name		      "Variant Source3"
+      SID		      "48"
+      Ports		      [2, 1]
+      Position		      [85, 236, 105, 354]
+      ZOrder		      37
+      VariantControls	      "DataTag4"
+      GeneratePreprocessorConditionals on
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "help"
+      SID		      "151"
+      Ports		      []
+      Position		      [-325, -186, -300, -164]
+      ZOrder		      46
+      ShowName		      off
+      RequestExecContextInheritance off
+      Object {
+	$PropName		"MaskObject"
+	$ObjectID		23
+	$ClassName		"Simulink.Mask"
+	Display			"disp('?')\n"
+	RunInitForIconRedraw	"off"
+      }
+      System {
+	Name			"help"
+	Location		[961, 211, 1768, 868]
+	Open			off
+	PortBlocksUseCompactNotation off
+	SetExecutionDomain	off
+	ExecutionDomainType	"Deduce"
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SimulinkSubDomain	"Simulink"
+	Annotation {
+	  SID			  "53"
+	  Name			  "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html"
+	  "><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</styl"
+	  "e></head><body style=\" font-family:'Liberation Sans'; font-size:12px; font-weight:400; font-style:normal;\">\n<p s"
+	  "tyle=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px"
+	  "; line-height:100%;\"><span style=\" font-size:12px;\">This illustrates the propagation of variant conditions to su"
+	  "bsystems. </span></p>\n<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-bloc"
+	  "k-indent:0; text-indent:0px; line-height:100%;\"><span style=\" font-size:12px;\">Variant Source1 has conditions V="
+	  "=1 and V==2 for its input ports. GainA1 is propagated the condition V==1. Similarly, Sine2 is propagated the condit"
+	  "ion V==2. Notice that Sine1 is unconditional. This is because the To Workspace1 block is unconditional and therefor"
+	  "e it's input which is the Sine1 must be unconditional. If we were to comment-out the To Workspace1 block, then Sine"
+	  "1 would be propagated the condition V==1.</span></p>\n<p style=\" margin-top:12px; margin-bottom:12px; margin-left:"
+	  "0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100%;\"><span style=\" font-size:12px;\">Su"
+	  "bsystem1 and Subsystem2 are virtual subsystems and have identical contents, a Sine Wave connected to a To Workspace"
+	  " and Outport blocks. Subsystem1 has its parameter &quot;Treat as grouped when propagating variant conditions&quot; "
+	  "selected. To access this parameter by right-clicking and selecting the </span><a href=\"matlab:open_system([bdroot,"
+	  "'/Subsystem1'],'parameter')\"><span style=\" font-size:12px; text-decoration: underline; color:#0000ff;\">Subsystem"
+	  "1 parameter dialog</span></a><span style=\" font-size:12px;\">. This setting specifies that the subsystem represent"
+	  "s a well-defined system of equations and therefore the system is propagated the condition V==1. Since Subsystem1 is"
+	  " a system, the condition also applies the blocks within the system.</span></p>\n<p style=\" margin-top:12px; margin"
+	  "-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100%;\"><span sty"
+	  "le=\" font-size:12px;\">Subsystem2 has its parameter, &quot;Treat as grouped when propagating variant conditions&qu"
+	  "ot; </span><a href=\"matlab:open_system([bdroot,'/Subsystem2'],'parameter')\"><span style=\" font-size:12px; text-d"
+	  "ecoration: underline; color:#0000ff;\">unselected</span></a><span style=\" font-size:12px;\">. This instructs Simul"
+	  "ink's variant condition propagation engine to treat the contents of the subsystem as an ungrouped collection of blo"
+	  "cks, i.e. it is not meant to represent a system of equations. There is no condition assigned to the Subsystem2 and "
+	  "the conditions are propagated into Subsystem2, resulting in the same conditions as if the subsystem were expanded i"
+	  "n place. The dotted lines on the Subsystem2 icon indicate that blocks inside will have ungroped semantics and do no"
+	  "t behave like a system.</span></p>\n<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:"
+	  "0px; -qt-block-indent:0; text-indent:0px; line-height:100%;\"><span style=\" font-size:12px;\">Nonvirtual subsystem"
+	  "s (and Model blocks) are always represent a system of equations and thus are handled as a system by variant conditi"
+	  "on propagation. For example, the conditions propagated to Subsystem1 and the Atomic Subsystem are the same. The Ato"
+	  "mic Subsystem contains the same contents as Subsystem1, a Sine Wave connected to a To Workspace and Outport blocks."
+	  " The system is assigned condition V==1 and therefore its contents only execute when V==1. </span></p>\n<p style=\" "
+	  "margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-h"
+	  "eight:100%;\"><span style=\" font-size:12px;\">The propagations of conditions to subsystems is the same when pbackw"
+	  "ards propagation as shown to the left, or forward propagation as shown in the  </span><a href=\"matlab:open_system("
+	  "[bdroot,'/Summary'])\"><span style=\" font-size:12px; text-decoration: underline; color:#0000ff;\">Summary</span></"
+	  "a><span style=\" font-size:12px;\"> subsystem. </span></p></body></html>"
+	  Position		  [44, 31, 644, 448]
+	  InternalMargins	  [0, 0, 0, 0]
+	  FixedHeight		  on
+	  FixedWidth		  on
+	  HorizontalAlignment	  "left"
+	  VerticalAlignment	  "top"
+	  Interpreter		  "rich"
+	  ZOrder		  -20
+	  FontName		  "Liberation Sans"
+	  FontSize		  12
+	}
+      }
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out1"
+      SID		      "8"
+      Position		      [195, -47, 225, -33]
+      ZOrder		      9
+      IconDisplay	      "Port number"
+      VectorParamsAs1DForOutWhenUnconnected off
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out2"
+      SID		      "37"
+      Position		      [195, 123, 225, 137]
+      ZOrder		      33
+      Port		      "2"
+      IconDisplay	      "Port number"
+      VectorParamsAs1DForOutWhenUnconnected off
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out3"
+      SID		      "49"
+      Position		      [195, 288, 225, 302]
+      ZOrder		      40
+      Port		      "3"
+      IconDisplay	      "Port number"
+      VectorParamsAs1DForOutWhenUnconnected off
+    }
+    Line {
+      ZOrder		      33
+      SrcBlock		      "Sine1"
+      SrcPort		      1
+      Points		      [27, 0]
+      Branch {
+	ZOrder			36
+	Points			[0, -50]
+	DstBlock		"To Workspace1"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			34
+	DstBlock		"GainA1"
+	DstPort			1
+      }
+    }
+    Line {
+      ZOrder		      39
+      SrcBlock		      "Sine2"
+      SrcPort		      1
+      DstBlock		      "Variant Source1"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      7
+      SrcBlock		      "Variant Source1"
+      SrcPort		      1
+      DstBlock		      "GainB1"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      9
+      SrcBlock		      "GainB1"
+      SrcPort		      1
+      DstBlock		      "Out1"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      37
+      SrcBlock		      "GainA1"
+      SrcPort		      1
+      DstBlock		      "Variant Source1"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      50
+      SrcBlock		      "Sine3"
+      SrcPort		      1
+      DstBlock		      "Variant Source2"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      51
+      SrcBlock		      "Variant Source2"
+      SrcPort		      1
+      DstBlock		      "GainB2"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      52
+      SrcBlock		      "GainB2"
+      SrcPort		      1
+      DstBlock		      "Out2"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      53
+      SrcBlock		      "GainA2"
+      SrcPort		      1
+      DstBlock		      "Variant Source2"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      55
+      SrcBlock		      "Sine4"
+      SrcPort		      1
+      DstBlock		      "Variant Source3"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      56
+      SrcBlock		      "Variant Source3"
+      SrcPort		      1
+      DstBlock		      "GainB3"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      57
+      SrcBlock		      "GainB3"
+      SrcPort		      1
+      DstBlock		      "Out3"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      58
+      SrcBlock		      "GainA3"
+      SrcPort		      1
+      DstBlock		      "Variant Source3"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      59
+      SrcBlock		      "Atomic Subsystem"
+      SrcPort		      1
+      DstBlock		      "GainA3"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      61
+      SrcBlock		      "Subsystem2"
+      SrcPort		      1
+      DstBlock		      "Add"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      62
+      SrcBlock		      "Add"
+      SrcPort		      1
+      DstBlock		      "GainA2"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      63
+      SrcBlock		      "Subsystem1"
+      SrcPort		      1
+      Points		      [23, 0; 0, 35]
+      DstBlock		      "Add"
+      DstPort		      1
+    }
+    Annotation {
+      SID		      "66"
+      Name		      "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+      "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }"
+      "\n</style></head><body style=\" font-family:'Liberation Sans'; font-size:10px; font-weight:400; font-style:norma"
+      "l;\">\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; tex"
+      "t-indent:0px; line-height:100%;\"><span style=\" font-size:16px; font-weight:600;\">Variant Condition Propagatio"
+      "n to Subsystems</span></p></body></html>"
+      Position		      [-160, -200, 217, -179]
+      InternalMargins	      [0, 0, 0, 0]
+      HorizontalAlignment     "left"
+      VerticalAlignment	      "top"
+      Interpreter	      "rich"
+      ZOrder		      -1
+    }
+    Annotation {
+      SID		      "65"
+      Name		      "Copyright 2016 The MathWorks, Inc."
+      Position		      [-21, 412, 143, 424]
+      InternalMargins	      [0, 0, 0, 0]
+      HorizontalAlignment     "left"
+      VerticalAlignment	      "top"
+      ZOrder		      -1
+    }
+    Annotation {
+      SID		      "51"
+      Name		      "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+      "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }"
+      "\n</style></head><body style=\" font-family:'Helvetica'; font-size:10px; font-weight:400; font-style:normal;\">\n"
+      "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-b"
+      "lock-indent:0; text-indent:0px;\"><br /></p></body></html>"
+      Position		      [55, -86, 57, -74]
+      InternalMargins	      [0, 0, 0, 0]
+      HorizontalAlignment     "left"
+      VerticalAlignment	      "top"
+      Interpreter	      "rich"
+      ZOrder		      -4
+    }
+    Annotation {
+      SID		      "153"
+      Position		      [-330, -187, -295, -138]
+      InternalMargins	      [0, 0, 0, 0]
+      FixedHeight	      on
+      FixedWidth	      on
+      HorizontalAlignment     "left"
+      VerticalAlignment	      "top"
+      ForegroundColor	      "[0.901961, 0.901961, 1.000000]"
+      BackgroundColor	      "[0.901961, 0.901961, 1.000000]"
+      DropShadow	      on
+      AnnotationType	      "area_annotation"
+      ZOrder		      28
+      FontSize		      12
+    }
+    Annotation {
+      SID		      "154"
+      Name		      "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+      "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }"
+      "\n</style></head><body style=\" font-family:'Liberation Sans'; font-size:10px; font-weight:400; font-style:norma"
+      "l;\">\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; tex"
+      "t-indent:0px; line-height:100%;\"><a href=\"matlab:open_system([bdroot,'/help'],'window')\n\"><span style=\" fon"
+      "t-size:10px; text-decoration: underline; color:#0000ff;\">help</span></a></p></body></html>"
+      Position		      [-325, -157, -300, -143]
+      InternalMargins	      [0, 0, 0, 0]
+      FixedHeight	      on
+      FixedWidth	      on
+      HorizontalAlignment     "left"
+      VerticalAlignment	      "top"
+      Interpreter	      "rich"
+      ZOrder		      -19
+    }
+  }
+}
+MatData {
+  NumRecords		  5
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    T     8    (     0         %    \"     ,    !     0         .    ,     8    (    !     "
+    "     %    \"     $    $     0         0  0 5ST],0X    P    !@    @    $          4    (     0    0    !         ! "
+    " ! !7/3TR#@   #     &    \"     0         !0    @    !    !     $         $  $ %<]/3,"
+  }
+  DataRecord {
+    Tag			    DataTag1
+    Data		    "  %)30     .    T     8    (     0         %    \"     ,    !     0         .    ,     8    (    !     "
+    "     %    \"     $    $     0         0  0 5ST],0X    P    !@    @    $          4    (     0    0    !         ! "
+    " ! !7/3TR#@   #     &    \"     0         !0    @    !    !     $         $  $ %<]/3,"
+  }
+  DataRecord {
+    Tag			    DataTag2
+    Data		    "  %)30     .    F     8    (     0         %    \"     (    !     0         .    ,     8    (    !     "
+    "     %    \"     $    $     0         0  0 5CT],0X    P    !@    @    $          4    (     0    0    !         ! "
+    " ! !6/3TR"
+  }
+  DataRecord {
+    Tag			    DataTag3
+    Data		    "  %)30     .    F     8    (     0         %    \"     (    !     0         .    ,     8    (    !     "
+    "     %    \"     $    $     0         0  0 5CT],0X    P    !@    @    $          4    (     0    0    !         ! "
+    " ! !6/3TR"
+  }
+  DataRecord {
+    Tag			    DataTag4
+    Data		    "  %)30     .    F     8    (     0         %    \"     (    !     0         .    ,     8    (    !     "
+    "     %    \"     $    $     0         0  0 5CT],0X    P    !@    @    $          4    (     0    0    !         ! "
+    " ! !6/3TR"
+  }
+}

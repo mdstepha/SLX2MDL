@@ -1,0 +1,45 @@
+redefine empty_elem_tag 
+    ... 
+    |   [default_element]
+end define 
+
+redefine tag_content 
+    ... 
+    |   [default_element]
+    |   [default_element_with_NL]
+end define 
+
+redefine default_value
+    ... 
+    |   [repeat chardata]
+    |   [dname]
+    |   '[ [repeat chardata] ']
+    |   '[ [dname] ']
+end define 
+
+redefine default_single_element 
+    [id] [SP] [default_value]
+end define
+
+define default_element_with_NL
+    [default_element] [NL]
+end define
+
+redefine default_list_element
+    [id] [repeat dot_id] '{		        [NL][IN]
+	[repeat default_element_with_NL]	[EX]    % replaced default_element with default_element_with_NL
+    [repeat content]                            % added this line          
+    '}					                [NL]
+end define 
+
+define tag_content_or_content 
+        [tag_content] 
+    |   [content]
+end define 
+
+redefine element 
+        [empty_elem_tag] [spaces]
+    |   [tag_content_or_content] [spaces] 
+end define 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

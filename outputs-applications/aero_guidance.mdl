@@ -1,0 +1,7946 @@
+Model {
+SavedCharacterEncoding "ISO-8859-1"
+PreLoadFcn "aero_guid_dat"
+EnableAccessToBaseWorkspace on
+SLXCompressionType "Normal"
+ScopeRefreshTime "0.035000"
+OverrideScopeRefreshTime on
+DisableAllScopes off
+DataTypeOverride "UseLocalSettings"
+DataTypeOverrideAppliesTo "AllNumericTypes"
+MinMaxOverflowLogging "UseLocalSettings"
+MinMaxOverflowArchiveMode "Overwrite"
+FPTRunName "Run 1"
+MaxMDLFileLineLength "120"
+CloseFcn "h=findobj('type','figure');if ~isempty(h);close(h);end"
+StopFcn "aero_guid_plot"
+LastSavedArchitecture "maci64"
+HideAutomaticNames on
+UpdateHistory "UpdateHistoryNever"
+ModifiedByFormat "%<Auto>"
+ModifiedDateFormat "%<Auto>"
+RTWModifiedTimeStamp "485891364"
+ModelVersionFormat "1.%<AutoIncrement:396>"
+
+SampleTimeColors off
+SampleTimeAnnotations off
+LibraryLinkDisplay "none"
+WideLines off
+ShowLineDimensions off
+ShowPortDataTypes off
+ShowAllPropagatedSignalLabels off
+PortDataTypeDisplayFormat "AliasTypeOnly"
+ShowEditTimeErrors on
+ShowEditTimeWarnings on
+ShowEditTimeAdvisorChecks off
+ShowPortUnits off
+ShowDesignRanges off
+ShowLoopsOnError on
+IgnoreBidirectionalLines off
+ShowStorageClass off
+ShowTestPointIcons on
+ShowSignalResolutionIcons on
+ShowViewerIcons on
+SortedOrder off
+VariantCondition off
+ShowSubsystemDomainSpec off
+ExecutionContextIcon off
+ShowLinearizationAnnotations on
+ShowVisualizeInsertedRTB on
+ShowMarkup on
+BlockNameDataTip off
+BlockParametersDataTip on
+BlockDescriptionStringDataTip off
+BlockVariantConditionDataTip off
+ToolBar on
+StatusBar on
+BrowserShowLibraryLinks off
+FunctionConnectors off
+BrowserLookUnderMasks off
+MultiThreadCoSim on
+
+SimulationMode "normal"
+SILPILModeSetting "automated"
+SILPILSystemUnderTest "topmodel"
+SILPILSimulationModeTopModel "normal"
+SILPILSimulationModeModelRef "normal"
+SimTabSimulationMode "normal"
+CodeVerificationMode "software-in-the-loop (sil)"
+PauseTimes "5"
+NumberOfSteps "1"
+SnapshotBufferSize "10"
+SnapshotInterval "10"
+NumberOfLastSnapshots "0"
+EnablePacing off
+PacingRate "1"
+LinearizationMsg "none"
+Profile off
+ParamWorkspaceSource "MATLABWorkspace"
+AccelSystemTargetFile "accel.tlc"
+AccelTemplateMakefile "accel_default_tmf"
+AccelMakeCommand "make_rtw"
+TryForcingSFcnDF off
+Object {
+$PropName "DataLoggingOverride"
+$ObjectID 1
+$ClassName "Simulink.SimulationData.ModelLoggingInfo"
+model_ "$bdroot"
+Array {
+PropName "logAsSpecifiedByModels_"
+Type "Cell"
+Dimension 1
+Cell "$bdroot"
+}
+
+Array {
+PropName "logAsSpecifiedByModelsSSIDs_"
+Type "Cell"
+Dimension 1
+Cell ""
+}
+}
+
+ExtModeBatchMode off
+ExtModeEnableFloating on
+ExtModeTrigType "manual"
+ExtModeTrigMode "oneshot"
+ExtModeTrigPort "1"
+ExtModeTrigElement "any"
+ExtModeTrigDuration "1000"
+ExtModeTrigDurationFloating "auto"
+ExtModeTrigHoldOff "0"
+ExtModeTrigDelay "0"
+ExtModeTrigDirection "rising"
+ExtModeTrigLevel "0"
+ExtModeArchiveMode off
+ExtModeAutoIncOneShot off
+ExtModeIncDirWhenArm off
+ExtModeAddSuffixToVar off
+ExtModeWriteAllDataToWs off
+ExtModeArmWhenConnect off
+ExtModeSkipDownloadWhenConnect off
+ExtModeLogAll on
+ExtModeAutoUpdateStatusClock off
+
+ShowModelReferenceBlockVersion off
+ShowModelReferenceBlockIO off
+OrderedModelArguments on
+
+ExplicitPartitioning off
+Object {
+$PropName "DataTransfer"
+$ObjectID 2
+$ClassName "Simulink.GlobalDataTransfer"
+DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
+DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
+DefaultTransitionBetweenContTasks "Ensure deterministic transfer (minimum delay)"
+DefaultExtrapolationMethodBetweenContTasks "None"
+}
+
+System {
+Location [258, 531, 1238, 1277]
+Open on
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ReportName "simulink-default.rpt"
+SIDHighWatermark "260"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Reference"
+Name "3DoF Animation"
+SID "1"
+Ports [3]
+Position [745, 75, 810, 205]
+ZOrder "-1"
+LibraryVersion "1.470"
+FontName "Arial"
+SourceBlock "aerospace/Animation/3DoF Animation"
+SourceType "3DoF Animation"
+ContentPreviewEnabled off
+u1 [0 5000 -2000 2000 -5050 -3050]
+u2 "0.03"
+u3 "1.8"
+u5 "Fly alongside"
+u6 [200 200 -50]
+u7 "20"
+u8 on
+
+}
+
+Block {
+BlockType "SubSystem"
+Name "Airframe\n&\nAutopilot"
+SID "2"
+Ports [1, 3]
+Position [565, 116, 645, 254]
+ZOrder "-2"
+BackgroundColor [0.976471, 0.592157, 0.643137]
+FontName "Arial"
+RequestExecContextInheritance off
+Port {
+PortNumber "1"
+Name "Missile Position"
+}
+
+Port {
+PortNumber "2"
+Name "Missile Attitude"
+}
+
+Port {
+PortNumber "3"
+Name "Missile Body Angular Rate"
+PropagatedSignals "Rate Gyro"
+}
+
+System {
+Location [11, 22, 892, 665]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ModelBrowserWidth "200"
+PaperOrientation "landscape"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Az_d"
+SID "3"
+Position [535, 398, 565, 412]
+ZOrder "-1"
+BlockMirror on
+FontName "Arial"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "SubSystem"
+Name "Aerodynamics &\nEquations of Motion"
+SID "4"
+Ports [4, 7]
+Position [110, 98, 220, 322]
+ZOrder "-2"
+BackgroundColor [0.666667, 0.666667, 0.835294]
+FontName "Arial"
+RequestExecContextInheritance off
+System {
+Location [12, 45, 890, 747]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ModelBrowserWidth "200"
+PaperOrientation "landscape"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Rho"
+SID "5"
+Position [40, 303, 70, 317]
+ZOrder "-1"
+FontName "Arial"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "a"
+SID "6"
+Position [40, 258, 70, 272]
+ZOrder "-2"
+FontName "Arial"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Thrust"
+SID "7"
+Position [40, 397, 70, 413]
+ZOrder "-3"
+FontName "Arial"
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Fin"
+SID "8"
+Position [40, 348, 70, 362]
+ZOrder "-4"
+FontName "Arial"
+Port "4"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Reference"
+Name " Equations of Motion\n(Body Axes)"
+SID "9"
+Ports [3, 6]
+Position [320, 171, 380, 384]
+ZOrder "-5"
+LibraryVersion "1.469"
+FontName "Arial"
+SourceBlock "aerospace/3DoF\nEquations\nof\nMotion / Equations of Motion\n(Body Axes)"
+SourceType "3 DOF equations of motion"
+ContentPreviewEnabled off
+v_ini "v_ini"
+theta_ini "theta_ini"
+alpha_ini "alpha_ini"
+q_ini "q_ini"
+pos_ini [x_ini -h_ini]
+mass "mass"
+Iyy "Iyy"
+g "g"
+
+}
+
+Block {
+BlockType "SubSystem"
+Name "Aerodynamics"
+SID "10"
+Ports [6, 4]
+Position [165, 104, 230, 381]
+ZOrder "-6"
+FontName "Arial"
+RequestExecContextInheritance off
+System {
+Location [120, 61, 786, 772]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ModelBrowserWidth "200"
+PaperOrientation "landscape"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "q"
+SID "11"
+Position [15, 408, 45, 422]
+ZOrder "-1"
+FontName "Arial"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "V"
+SID "12"
+Position [15, 123, 45, 137]
+ZOrder "-2"
+FontName "Arial"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Alpha"
+SID "13"
+Position [15, 238, 45, 252]
+ZOrder "-3"
+FontName "Arial"
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "a"
+SID "14"
+Position [15, 158, 45, 172]
+ZOrder "-4"
+FontName "Arial"
+Port "4"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Rho"
+SID "15"
+Position [15, 18, 45, 32]
+ZOrder "-5"
+FontName "Arial"
+Port "5"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Fin"
+SID "16"
+Position [15, 343, 45, 357]
+ZOrder "-6"
+FontName "Arial"
+Port "6"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Gain"
+Name "Body Rate"
+SID "17"
+Position [70, 392, 130, 438]
+ZOrder "-7"
+FontName "Arial"
+Gain "Cm_q"
+}
+
+Block {
+BlockType "Sum"
+Name "Cm_tot"
+SID "18"
+Ports [3, 1]
+Position [400, 243, 430, 307]
+ZOrder "-8"
+FontName "Arial"
+Inputs "+++"
+}
+
+Block {
+BlockType "Sum"
+Name "Cx_tot"
+SID "19"
+Ports [2, 1]
+Position [400, 127, 430, 158]
+ZOrder "-9"
+FontName "Arial"
+}
+
+Block {
+BlockType "Sum"
+Name "Cz_tot"
+SID "20"
+Ports [2, 1]
+Position [400, 187, 430, 218]
+ZOrder "-10"
+FontName "Arial"
+}
+
+Block {
+BlockType "Product"
+Name "Dynamic Pressure"
+SID "21"
+Ports [2, 1]
+Position [330, 15, 360, 55]
+ZOrder "-11"
+ShowName off
+FontName "Arial"
+RndMeth "Floor"
+}
+
+Block {
+BlockType "SubSystem"
+Name "Fins"
+SID "22"
+Ports [1, 3]
+Position [205, 312, 290, 388]
+ZOrder "-12"
+FontName "Arial"
+RequestExecContextInheritance off
+System {
+Location [227, 45, 563, 512]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ModelBrowserWidth "200"
+PaperOrientation "landscape"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Fin"
+SID "23"
+Position [25, 38, 55, 52]
+ZOrder "-1"
+FontName "Arial"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Gain"
+Name "Cm"
+SID "24"
+Position [100, 138, 160, 182]
+ZOrder "-2"
+FontName "Arial"
+Gain "Cm_el"
+}
+
+Block {
+BlockType "Gain"
+Name "Cx"
+SID "25"
+Position [100, 20, 160, 70]
+ZOrder "-3"
+FontName "Arial"
+Gain "0"
+}
+
+Block {
+BlockType "Gain"
+Name "Cz"
+SID "26"
+Position [100, 77, 160, 123]
+ZOrder "-4"
+FontName "Arial"
+Gain "Cz_el"
+}
+
+Block {
+BlockType "Outport"
+Name "Cx_el"
+SID "27"
+Position [180, 38, 210, 52]
+ZOrder "-5"
+FontName "Arial"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "Cz_el"
+SID "28"
+Position [180, 93, 210, 107]
+ZOrder "-6"
+FontName "Arial"
+Port "2"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "Cm_el"
+SID "29"
+Position [180, 153, 210, 167]
+ZOrder "-7"
+FontName "Arial"
+Port "3"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "1"
+Src "23#out:1"
+Points [15, 0]
+Branch {
+ZOrder "2"
+Dst "25#in:1"
+}
+
+Branch {
+ZOrder "3"
+Points [0, 55]
+Branch {
+ZOrder "4"
+Points [0, 60]
+Dst "24#in:1"
+}
+
+Branch {
+ZOrder "5"
+Dst "26#in:1"
+}
+}
+}
+
+Line {
+ZOrder "6"
+Src "25#out:1"
+Dst "27#in:1"
+}
+
+Line {
+ZOrder "7"
+Src "24#out:1"
+Dst "29#in:1"
+}
+
+Line {
+ZOrder "8"
+Src "26#out:1"
+Dst "28#in:1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Incidence"
+SID "30"
+Ports [2, 3]
+Position [205, 102, 290, 288]
+ZOrder "-13"
+FontName "Arial"
+RequestExecContextInheritance off
+System {
+Location [174, 92, 730, 696]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ModelBrowserWidth "200"
+PaperOrientation "landscape"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Mach"
+SID "31"
+Position [50, 178, 80, 192]
+ZOrder "-1"
+FontName "Arial"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Alpha"
+SID "32"
+Position [50, 63, 80, 77]
+ZOrder "-2"
+FontName "Arial"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Reference"
+Name "Alpha Index"
+SID "33"
+Ports [1, 1]
+Position [115, 44, 165, 96]
+ZOrder "-3"
+LibraryVersion "1.22"
+SourceBlock "simulink_need_slupdate/PreLookup\nIndex Search"
+SourceType "LookupIdxSearch"
+SourceProductName "Simulink"
+SourceProductBaseCode "SL"
+MultiThreadCoSim "auto"
+bpData "alpha_vec"
+searchMode "Binary Search"
+cacheBpFlag on
+outputFlag off
+IndexDataType "uint32"
+extrapMode "Linear Extrapolation"
+rangeErrorMode "None"
+
+}
+
+Block {
+BlockType "Reference"
+Name "Cm"
+SID "34"
+Ports [2, 1]
+Position [295, 240, 350, 295]
+ZOrder "-4"
+LibraryVersion "1.22"
+SourceBlock "simulink_need_slupdate/Interpolation (n-D)\nusing PreLookup"
+SourceType "LookupNDInterpIdx"
+SourceProductName "Simulink"
+SourceProductBaseCode "SL"
+MultiThreadCoSim "auto"
+numDimsPopupSelect "2"
+explicitNumDims "2"
+table "Cm_alpha"
+interpMethod "Linear"
+extrapMethod "Linear"
+rangeErrorMode "None"
+NumSelectionDims "0"
+
+}
+
+Block {
+BlockType "Reference"
+Name "Cx"
+SID "35"
+Ports [2, 1]
+Position [295, 55, 350, 110]
+ZOrder "-5"
+LibraryVersion "1.22"
+SourceBlock "simulink_need_slupdate/Interpolation (n-D)\nusing PreLookup"
+SourceType "LookupNDInterpIdx"
+SourceProductName "Simulink"
+SourceProductBaseCode "SL"
+MultiThreadCoSim "auto"
+numDimsPopupSelect "2"
+explicitNumDims "2"
+table "Cx_alpha"
+interpMethod "Linear"
+extrapMethod "Linear"
+rangeErrorMode "None"
+NumSelectionDims "0"
+
+}
+
+Block {
+BlockType "Reference"
+Name "Cz"
+SID "36"
+Ports [2, 1]
+Position [295, 145, 350, 200]
+ZOrder "-6"
+LibraryVersion "1.22"
+SourceBlock "simulink_need_slupdate/Interpolation (n-D)\nusing PreLookup"
+SourceType "LookupNDInterpIdx"
+SourceProductName "Simulink"
+SourceProductBaseCode "SL"
+MultiThreadCoSim "auto"
+numDimsPopupSelect "2"
+explicitNumDims "2"
+table "Cz_alpha"
+interpMethod "Linear"
+extrapMethod "Linear"
+rangeErrorMode "None"
+NumSelectionDims "0"
+
+}
+
+Block {
+BlockType "Reference"
+Name "Mach Index"
+SID "37"
+Ports [1, 1]
+Position [115, 159, 165, 211]
+ZOrder "-7"
+LibraryVersion "1.22"
+SourceBlock "simulink_need_slupdate/PreLookup\nIndex Search"
+SourceType "LookupIdxSearch"
+SourceProductName "Simulink"
+SourceProductBaseCode "SL"
+MultiThreadCoSim "auto"
+bpData "Mach_vec"
+searchMode "Binary Search"
+cacheBpFlag on
+outputFlag off
+IndexDataType "uint32"
+extrapMode "Linear Extrapolation"
+rangeErrorMode "None"
+
+}
+
+Block {
+BlockType "Outport"
+Name "Cx_alpha"
+SID "38"
+Position [410, 78, 440, 92]
+ZOrder "-8"
+FontName "Arial"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "Cz_alpha"
+SID "39"
+Position [410, 168, 440, 182]
+ZOrder "-9"
+FontName "Arial"
+Port "2"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "Cm_alpha"
+SID "40"
+Position [410, 263, 440, 277]
+ZOrder "-10"
+FontName "Arial"
+Port "3"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "1"
+Src "33#out:1"
+Points [75, 0]
+Branch {
+ZOrder "2"
+Dst "35#in:1"
+}
+
+Branch {
+ZOrder "3"
+Points [0, 90]
+Branch {
+ZOrder "4"
+Dst "36#in:1"
+}
+
+Branch {
+ZOrder "5"
+Points [0, 95]
+Dst "34#in:1"
+}
+}
+}
+
+Line {
+ZOrder "6"
+Src "37#out:1"
+Points [45, 0]
+Branch {
+ZOrder "7"
+Points [0, -90]
+Dst "35#in:2"
+}
+
+Branch {
+ZOrder "8"
+Points [0, 0]
+Branch {
+ZOrder "9"
+Dst "36#in:2"
+}
+
+Branch {
+ZOrder "10"
+Points [0, 95]
+Dst "34#in:2"
+}
+}
+}
+
+Line {
+ZOrder "11"
+Src "35#out:1"
+Dst "38#in:1"
+}
+
+Line {
+ZOrder "12"
+Src "36#out:1"
+Dst "39#in:1"
+}
+
+Line {
+ZOrder "13"
+Src "34#out:1"
+Dst "40#in:1"
+}
+
+Line {
+ZOrder "14"
+Src "32#out:1"
+Dst "33#in:1"
+}
+
+Line {
+ZOrder "15"
+Src "31#out:1"
+Dst "37#in:1"
+}
+}
+}
+
+Block {
+BlockType "Product"
+Name "Mach \nNumber"
+SID "41"
+Ports [2, 1]
+Position [120, 113, 150, 182]
+ZOrder "-14"
+FontName "Arial"
+Inputs "*/"
+RndMeth "Floor"
+}
+
+Block {
+BlockType "Math"
+Name "Math\nFunction"
+SID "42"
+Ports [1, 1]
+Position [120, 32, 145, 58]
+ZOrder "-15"
+ShowName off
+Operator "square"
+}
+
+Block {
+BlockType "Product"
+Name "Product2"
+SID "43"
+Ports [2, 1]
+Position [490, 137, 520, 168]
+ZOrder "-16"
+ShowName off
+FontName "Arial"
+RndMeth "Floor"
+}
+
+Block {
+BlockType "Product"
+Name "Product3"
+SID "44"
+Ports [2, 1]
+Position [490, 197, 520, 228]
+ZOrder "-17"
+ShowName off
+FontName "Arial"
+RndMeth "Floor"
+}
+
+Block {
+BlockType "Product"
+Name "Product4"
+SID "45"
+Ports [2, 1]
+Position [490, 252, 520, 283]
+ZOrder "-18"
+ShowName off
+FontName "Arial"
+RndMeth "Floor"
+}
+
+Block {
+BlockType "Gain"
+Name "Q"
+SID "46"
+Position [395, 18, 435, 52]
+ZOrder "-19"
+FontName "Arial"
+Gain "0.5"
+}
+
+Block {
+BlockType "Gain"
+Name "S_ref"
+SID "47"
+Position [540, 135, 605, 175]
+ZOrder "-20"
+FontName "Arial"
+Gain "S_ref"
+}
+
+Block {
+BlockType "Gain"
+Name "S_ref "
+SID "48"
+Position [540, 195, 605, 235]
+ZOrder "-21"
+FontName "Arial"
+Gain "S_ref"
+}
+
+Block {
+BlockType "Gain"
+Name "S_ref X d_ref"
+SID "49"
+Position [540, 250, 665, 290]
+ZOrder "-22"
+FontName "Arial"
+Gain "S_ref * d_ref"
+}
+
+Block {
+BlockType "Outport"
+Name " Mach"
+SID "50"
+Position [685, 73, 715, 87]
+ZOrder "-23"
+NamePlacement "alternate"
+FontName "Arial"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "Fx"
+SID "51"
+Position [685, 148, 715, 162]
+ZOrder "-24"
+FontName "Arial"
+Port "2"
+IconDisplay "Port number"
+InitialOutput [0]
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "Fz"
+SID "52"
+Position [685, 208, 715, 222]
+ZOrder "-25"
+FontName "Arial"
+Port "3"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name " M"
+SID "53"
+Position [685, 263, 715, 277]
+ZOrder "-26"
+FontName "Arial"
+Port "4"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "1"
+Src "42#out:1"
+Dst "21#in:2"
+}
+
+Line {
+ZOrder "2"
+Src "15#out:1"
+Dst "21#in:1"
+}
+
+Line {
+ZOrder "3"
+Src "21#out:1"
+Dst "46#in:1"
+}
+
+Line {
+ZOrder "4"
+Src "46#out:1"
+Points [25, 0; 0, 125]
+Branch {
+ZOrder "5"
+Dst "43#in:2"
+}
+
+Branch {
+ZOrder "6"
+Points [0, 60]
+Branch {
+ZOrder "7"
+Dst "44#in:2"
+}
+
+Branch {
+ZOrder "8"
+Points [0, 40]
+Dst "45#in:1"
+}
+}
+}
+
+Line {
+ZOrder "9"
+Src "12#out:1"
+Points [0, 0]
+Branch {
+ZOrder "10"
+Points [35, 0; 0, -85]
+Dst "42#in:1"
+}
+
+Branch {
+ZOrder "11"
+Dst "41#in:1"
+}
+}
+
+Line {
+ZOrder "12"
+Src "30#out:1"
+Dst "19#in:1"
+}
+
+Line {
+ZOrder "13"
+Src "22#out:1"
+Points [20, 0; 0, -175]
+Dst "19#in:2"
+}
+
+Line {
+ZOrder "14"
+Src "30#out:2"
+Dst "20#in:1"
+}
+
+Line {
+ZOrder "15"
+Src "22#out:2"
+Points [45, 0; 0, -140]
+Dst "20#in:2"
+}
+
+Line {
+ZOrder "16"
+Src "30#out:3"
+Dst "18#in:1"
+}
+
+Line {
+ZOrder "17"
+Src "22#out:3"
+Points [70, 0; 0, -100]
+Dst "18#in:2"
+}
+
+Line {
+ZOrder "18"
+Src "17#out:1"
+Points [250, 0]
+Dst "18#in:3"
+}
+
+Line {
+ZOrder "19"
+Src "14#out:1"
+Dst "41#in:2"
+}
+
+Line {
+ZOrder "20"
+Src "13#out:1"
+Dst "30#in:2"
+}
+
+Line {
+ZOrder "21"
+Src "19#out:1"
+Points [0, 0]
+Dst "43#in:1"
+}
+
+Line {
+ZOrder "22"
+Src "20#out:1"
+Points [0, 0]
+Dst "44#in:1"
+}
+
+Line {
+ZOrder "23"
+Src "43#out:1"
+Dst "47#in:1"
+}
+
+Line {
+ZOrder "24"
+Src "47#out:1"
+Points [0, 0]
+Dst "51#in:1"
+}
+
+Line {
+ZOrder "25"
+Src "44#out:1"
+Dst "48#in:1"
+}
+
+Line {
+ZOrder "26"
+Src "48#out:1"
+Points [0, 0]
+Dst "52#in:1"
+}
+
+Line {
+ZOrder "27"
+Src "16#out:1"
+Dst "22#in:1"
+}
+
+Line {
+ZOrder "28"
+Src "49#out:1"
+Dst "53#in:1"
+}
+
+Line {
+ZOrder "29"
+Src "45#out:1"
+Dst "49#in:1"
+}
+
+Line {
+ZOrder "30"
+Src "18#out:1"
+Points [0, 0]
+Dst "45#in:2"
+}
+
+Line {
+ZOrder "31"
+Src "11#out:1"
+Dst "17#in:1"
+}
+
+Line {
+ZOrder "32"
+Src "41#out:1"
+Points [0, 0; 25, 0]
+Branch {
+ZOrder "33"
+Points [0, -70]
+Dst "50#in:1"
+}
+
+Branch {
+ZOrder "34"
+Dst "30#in:1"
+}
+}
+}
+}
+
+Block {
+BlockType "Reference"
+Name "Incidence & Airspeed"
+SID "54"
+Ports [1, 2]
+Position [535, 304, 600, 351]
+ZOrder "-7"
+LibraryVersion "1.469"
+FontName "Arial"
+SourceBlock "aerospace/3DoF\nEquations\nof\nMotion /Incidence \n& Airspeed"
+SourceType "Incidence and Airspeed"
+ContentPreviewEnabled off
+
+}
+
+Block {
+BlockType "Sum"
+Name "Sum2"
+SID "55"
+Ports [2, 1]
+Position [260, 195, 290, 225]
+ZOrder "-8"
+ShowName off
+IconShape "round"
+Inputs "|++"
+}
+
+Block {
+BlockType "Outport"
+Name "Xe,Ze"
+SID "56"
+Position [470, 288, 500, 302]
+ZOrder "-9"
+FontName "Arial"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "Attitude"
+SID "57"
+Position [400, 183, 430, 197]
+ZOrder "-10"
+FontName "Arial"
+Port "2"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "q"
+SID "58"
+Position [470, 218, 500, 232]
+ZOrder "-11"
+FontName "Arial"
+Port "3"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "qdot"
+SID "59"
+Position [470, 253, 500, 267]
+ZOrder "-12"
+FontName "Arial"
+Port "4"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "Ax,Az"
+SID "60"
+Position [470, 358, 500, 372]
+ZOrder "-13"
+FontName "Arial"
+Port "5"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "Mach"
+SID "61"
+Position [260, 133, 290, 147]
+ZOrder "-14"
+NamePlacement "alternate"
+FontName "Arial"
+Port "6"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "Alpha"
+SID "62"
+Position [710, 308, 740, 322]
+ZOrder "-15"
+FontName "Arial"
+Port "7"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "1"
+Src "10#out:1"
+Dst "61#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "10#out:4"
+Dst "9#in:3"
+}
+
+Line {
+ZOrder "3"
+Src "55#out:1"
+Dst "9#in:1"
+}
+
+Line {
+ZOrder "4"
+Src "54#out:1"
+Points [0, 0; 20, 0]
+Branch {
+ZOrder "5"
+Points [0, -280; -525, 0; 0, 185]
+Dst "10#in:3"
+}
+
+Branch {
+ZOrder "6"
+Dst "62#in:1"
+}
+}
+
+Line {
+ZOrder "7"
+Src "5#out:1"
+Points [0, 0]
+Dst "10#in:5"
+}
+
+Line {
+ZOrder "8"
+Src "6#out:1"
+Points [0, 0]
+Dst "10#in:4"
+}
+
+Line {
+ZOrder "9"
+Src "8#out:1"
+Points [0, 0]
+Dst "10#in:6"
+}
+
+Line {
+ZOrder "10"
+Src "54#out:2"
+Points [40, 0; 0, -285; -530, 0; 0, 120]
+Dst "10#in:2"
+}
+
+Line {
+ZOrder "11"
+Src "10#out:3"
+Dst "9#in:2"
+}
+
+Line {
+ZOrder "12"
+Src "9#out:2"
+Points [0, 0; 60, 0]
+Branch {
+ZOrder "13"
+Dst "58#in:1"
+}
+
+Branch {
+ZOrder "14"
+Points [0, -150; -315, 0; 0, 55]
+Dst "10#in:1"
+}
+}
+
+Line {
+ZOrder "15"
+Src "9#out:3"
+Dst "59#in:1"
+}
+
+Line {
+ZOrder "16"
+Src "9#out:1"
+Dst "57#in:1"
+}
+
+Line {
+ZOrder "17"
+Src "9#out:4"
+Dst "56#in:1"
+}
+
+Line {
+ZOrder "18"
+Src "9#out:6"
+Dst "60#in:1"
+}
+
+Line {
+ZOrder "19"
+Src "9#out:5"
+Dst "54#in:1"
+}
+
+Line {
+ZOrder "20"
+Src "10#out:2"
+Dst "55#in:1"
+}
+
+Line {
+ZOrder "21"
+Src "7#out:1"
+Points [200, 0]
+Dst "55#in:2"
+}
+}
+}
+
+Block {
+BlockType "Reference"
+Name "Atmosphere"
+SID "63"
+Ports [1, 4]
+Position [340, 15, 520, 95]
+ZOrder "-3"
+BlockMirror on
+BackgroundColor [0.666667, 0.666667, 0.835294]
+LibraryVersion "1.469"
+FontName "arial"
+SourceBlock "aerospace/Atmosphere/Atmosphere\nmodel"
+SourceType "Atmosphere Model"
+ContentPreviewEnabled off
+
+}
+
+Block {
+BlockType "SubSystem"
+Name "Autopilot"
+SID "64"
+Ports [5, 1]
+Position [360, 316, 485, 414]
+ZOrder "-4"
+BlockMirror on
+BackgroundColor [0.956863, 1.000000, 0.666667]
+FontName "Arial"
+RequestExecContextInheritance off
+System {
+Location [87, 89, 1002, 747]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ModelBrowserWidth "200"
+PaperOrientation "landscape"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Alpha"
+SID "65"
+Position [20, 53, 50, 67]
+ZOrder "-1"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Mach"
+SID "66"
+Position [20, 113, 50, 127]
+ZOrder "-2"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Az_m"
+SID "67"
+Position [20, 208, 50, 222]
+ZOrder "-3"
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "q_m"
+SID "68"
+Position [20, 368, 50, 382]
+ZOrder "-4"
+Port "4"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Az_d"
+SID "69"
+Position [20, 263, 50, 277]
+ZOrder "-5"
+Port "5"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Gain"
+Name "Anti-Windup \nGain"
+SID "70"
+Position [530, 150, 610, 200]
+ZOrder "-6"
+BlockMirror on
+Gain "5000"
+}
+
+Block {
+BlockType "Saturate"
+Name "Demand\nlimits "
+SID "71"
+Ports [1, 1]
+Position [720, 243, 750, 267]
+ZOrder "-7"
+InputPortMap "u0"
+UpperLimit "fin_max"
+LowerLimit "fin_min"
+}
+
+Block {
+BlockType "SubSystem"
+Name "Gain\n Scheduled\nCoefficients"
+SID "72"
+Ports [2, 4]
+Position [85, 31, 165, 149]
+ZOrder "-8"
+RequestExecContextInheritance off
+System {
+Location [235, 45, 706, 674]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ModelBrowserWidth "200"
+PaperOrientation "landscape"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Alpha"
+SID "73"
+Position [35, 158, 65, 172]
+ZOrder "-1"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Mach"
+SID "74"
+Position [35, 43, 65, 57]
+ZOrder "-2"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Abs"
+Name "Abs"
+SID "75"
+Position [105, 153, 135, 177]
+ZOrder "-3"
+}
+
+Block {
+BlockType "Reference"
+Name "K"
+SID "76"
+Ports [2, 1]
+Position [285, 125, 340, 180]
+ZOrder "-4"
+LibraryVersion "1.22"
+SourceBlock "simulink_need_slupdate/Interpolation (n-D)\nusing PreLookup"
+SourceType "LookupNDInterpIdx"
+SourceProductName "Simulink"
+SourceProductBaseCode "SL"
+MultiThreadCoSim "auto"
+numDimsPopupSelect "2"
+explicitNumDims "2"
+table "K"
+interpMethod "Linear"
+extrapMethod "Linear"
+rangeErrorMode "None"
+NumSelectionDims "0"
+
+}
+
+Block {
+BlockType "Reference"
+Name "Ka"
+SID "77"
+Ports [2, 1]
+Position [285, 35, 340, 90]
+ZOrder "-5"
+LibraryVersion "1.22"
+SourceBlock "simulink_need_slupdate/Interpolation (n-D)\nusing PreLookup"
+SourceType "LookupNDInterpIdx"
+SourceProductName "Simulink"
+SourceProductBaseCode "SL"
+MultiThreadCoSim "auto"
+numDimsPopupSelect "2"
+explicitNumDims "2"
+table "Ka"
+interpMethod "Linear"
+extrapMethod "Linear"
+rangeErrorMode "None"
+NumSelectionDims "0"
+
+}
+
+Block {
+BlockType "Reference"
+Name "Kg"
+SID "78"
+Ports [2, 1]
+Position [285, 305, 340, 360]
+ZOrder "-6"
+LibraryVersion "1.22"
+SourceBlock "simulink_need_slupdate/Interpolation (n-D)\nusing PreLookup"
+SourceType "LookupNDInterpIdx"
+SourceProductName "Simulink"
+SourceProductBaseCode "SL"
+MultiThreadCoSim "auto"
+numDimsPopupSelect "2"
+explicitNumDims "2"
+table "Kg"
+interpMethod "Linear"
+extrapMethod "Linear"
+rangeErrorMode "None"
+NumSelectionDims "0"
+
+}
+
+Block {
+BlockType "Reference"
+Name "Ki"
+SID "79"
+Ports [2, 1]
+Position [285, 210, 340, 265]
+ZOrder "-7"
+LibraryVersion "1.22"
+SourceBlock "simulink_need_slupdate/Interpolation (n-D)\nusing PreLookup"
+SourceType "LookupNDInterpIdx"
+SourceProductName "Simulink"
+SourceProductBaseCode "SL"
+MultiThreadCoSim "auto"
+numDimsPopupSelect "2"
+explicitNumDims "2"
+table "Ki"
+interpMethod "Linear"
+extrapMethod "Linear"
+rangeErrorMode "None"
+NumSelectionDims "0"
+
+}
+
+Block {
+BlockType "Reference"
+Name "Mach\nIndex"
+SID "80"
+Ports [1, 1]
+Position [175, 24, 225, 76]
+ZOrder "-8"
+LibraryVersion "1.22"
+SourceBlock "simulink_need_slupdate/PreLookup\nIndex Search"
+SourceType "LookupIdxSearch"
+SourceProductName "Simulink"
+SourceProductBaseCode "SL"
+MultiThreadCoSim "auto"
+bpData "M_sch"
+searchMode "Binary Search"
+cacheBpFlag on
+outputFlag off
+IndexDataType "uint32"
+extrapMode "Linear Extrapolation"
+rangeErrorMode "None"
+
+}
+
+Block {
+BlockType "Reference"
+Name "|Alpha|\nIndex"
+SID "81"
+Ports [1, 1]
+Position [175, 139, 225, 191]
+ZOrder "-9"
+LibraryVersion "1.22"
+SourceBlock "simulink_need_slupdate/PreLookup\nIndex Search"
+SourceType "LookupIdxSearch"
+SourceProductName "Simulink"
+SourceProductBaseCode "SL"
+MultiThreadCoSim "auto"
+bpData "alpha_sch"
+searchMode "Binary Search"
+cacheBpFlag on
+outputFlag off
+IndexDataType "uint32"
+extrapMode "Linear Extrapolation"
+rangeErrorMode "None"
+
+}
+
+Block {
+BlockType "Outport"
+Name "Kg\n"
+SID "82"
+Position [375, 328, 405, 342]
+ZOrder "-10"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "KI "
+SID "83"
+Position [375, 233, 405, 247]
+ZOrder "-11"
+Port "2"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "K "
+SID "84"
+Position [375, 148, 405, 162]
+ZOrder "-12"
+Port "3"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "Ka "
+SID "85"
+Position [375, 58, 405, 72]
+ZOrder "-13"
+Port "4"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "1"
+Src "73#out:1"
+Points [0, 0]
+Dst "75#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "80#out:1"
+Points [0, 0; 20, 0]
+Branch {
+ZOrder "3"
+Dst "77#in:1"
+}
+
+Branch {
+ZOrder "4"
+Points [0, 90]
+Branch {
+ZOrder "5"
+Dst "76#in:1"
+}
+
+Branch {
+ZOrder "6"
+Points [0, 85]
+Branch {
+ZOrder "7"
+Dst "79#in:1"
+}
+
+Branch {
+ZOrder "8"
+Points [0, 95]
+Dst "78#in:1"
+}
+}
+}
+}
+
+Line {
+ZOrder "9"
+Src "81#out:1"
+Points [0, 0; 10, 0]
+Branch {
+ZOrder "10"
+Points [0, -90]
+Dst "77#in:2"
+}
+
+Branch {
+ZOrder "11"
+Points [0, 0]
+Branch {
+ZOrder "12"
+Dst "76#in:2"
+}
+
+Branch {
+ZOrder "13"
+Points [0, 85]
+Branch {
+ZOrder "14"
+Dst "79#in:2"
+}
+
+Branch {
+ZOrder "15"
+Points [0, 95]
+Dst "78#in:2"
+}
+}
+}
+}
+
+Line {
+ZOrder "16"
+Src "77#out:1"
+Points [0, 0]
+Dst "85#in:1"
+}
+
+Line {
+ZOrder "17"
+Src "76#out:1"
+Points [0, 0]
+Dst "84#in:1"
+}
+
+Line {
+ZOrder "18"
+Src "79#out:1"
+Points [0, 0]
+Dst "83#in:1"
+}
+
+Line {
+ZOrder "19"
+Src "78#out:1"
+Points [0, 0]
+Dst "82#in:1"
+}
+
+Line {
+ZOrder "20"
+Src "75#out:1"
+Dst "81#in:1"
+}
+
+Line {
+ZOrder "21"
+Src "74#out:1"
+Dst "80#in:1"
+}
+}
+}
+
+Block {
+BlockType "Integrator"
+Name "Integrator"
+SID "86"
+Ports [1, 1]
+Position [535, 244, 565, 276]
+ZOrder "-9"
+ShowName off
+}
+
+Block {
+BlockType "Product"
+Name "KI"
+SID "87"
+Ports [2, 1]
+Position [430, 241, 460, 274]
+ZOrder "-10"
+RndMeth "Floor"
+}
+
+Block {
+BlockType "Product"
+Name "Ka"
+SID "88"
+Ports [2, 1]
+Position [325, 246, 355, 279]
+ZOrder "-11"
+RndMeth "Floor"
+}
+
+Block {
+BlockType "Product"
+Name "Kg"
+SID "89"
+Ports [2, 1]
+Position [650, 236, 680, 269]
+ZOrder "-12"
+RndMeth "Floor"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux"
+SID "90"
+Ports [2, 1]
+Position [89, 305, 151, 310]
+ZOrder "-13"
+BlockRotation "270"
+BlockMirror on
+NamePlacement "alternate"
+ShowName off
+Inputs "2"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Product"
+Name "Product6"
+SID "91"
+Ports [2, 1]
+Position [215, 191, 245, 224]
+ZOrder "-14"
+ShowName off
+RndMeth "Floor"
+}
+
+Block {
+BlockType "Sum"
+Name "Sum10"
+SID "92"
+Ports [2, 1]
+Position [375, 250, 405, 280]
+ZOrder "-15"
+ShowName off
+IconShape "round"
+Inputs "|++"
+}
+
+Block {
+BlockType "Sum"
+Name "Sum11"
+SID "93"
+Ports [2, 1]
+Position [485, 245, 515, 275]
+ZOrder "-16"
+ShowName off
+IconShape "round"
+Inputs "-+|"
+}
+
+Block {
+BlockType "Sum"
+Name "Sum12"
+SID "94"
+Ports [2, 1]
+Position [685, 160, 715, 190]
+ZOrder "-17"
+BlockMirror on
+ShowName off
+IconShape "round"
+Inputs "|-+"
+}
+
+Block {
+BlockType "Sum"
+Name "Sum8"
+SID "95"
+Ports [2, 1]
+Position [595, 245, 625, 275]
+ZOrder "-18"
+ShowName off
+IconShape "round"
+Inputs "|++"
+}
+
+Block {
+BlockType "Sum"
+Name "Sum9"
+SID "96"
+Ports [2, 1]
+Position [255, 255, 285, 285]
+ZOrder "-19"
+ShowName off
+IconShape "round"
+Inputs "-+|"
+}
+
+Block {
+BlockType "ToWorkspace"
+Name "To Workspace2"
+SID "97"
+Ports [1]
+Position [780, 164, 830, 186]
+ZOrder "-20"
+ForegroundColor "blue"
+ShowName off
+VariableName "Fin_dem"
+MaxDataPoints "inf"
+SaveFormat "Structure With Time"
+SampleTime "-1"
+}
+
+Block {
+BlockType "ToWorkspace"
+Name "To Workspace3"
+SID "98"
+Ports [1]
+Position [95, 335, 145, 355]
+ZOrder "-21"
+BlockRotation "270"
+BlockMirror on
+ForegroundColor "blue"
+NamePlacement "alternate"
+ShowName off
+VariableName "Latax"
+MaxDataPoints "inf"
+SaveFormat "Structure With Time"
+SampleTime "-1"
+}
+
+Block {
+BlockType "Outport"
+Name "Fin\nDemand"
+SID "99"
+Position [790, 248, 820, 262]
+ZOrder "-22"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "1"
+Src "66#out:1"
+Dst "72#in:2"
+}
+
+Line {
+ZOrder "2"
+Src "65#out:1"
+Dst "72#in:1"
+}
+
+Line {
+ZOrder "3"
+Src "89#out:1"
+Points [15, 0]
+Branch {
+ZOrder "4"
+Dst "94#in:2"
+}
+
+Branch {
+ZOrder "5"
+Dst "71#in:1"
+}
+}
+
+Line {
+ZOrder "6"
+Src "72#out:1"
+Points [465, 0]
+Dst "89#in:1"
+}
+
+Line {
+ZOrder "7"
+Src "72#out:3"
+Points [140, 0]
+Dst "88#in:1"
+}
+
+Line {
+ZOrder "8"
+Src "72#out:2"
+Points [245, 0]
+Dst "87#in:1"
+}
+
+Line {
+ZOrder "9"
+Src "70#out:1"
+Points [-25, 0]
+Dst "93#in:1"
+}
+
+Line {
+ZOrder "10"
+Src "95#out:1"
+Dst "89#in:2"
+}
+
+Line {
+ZOrder "11"
+Src "86#out:1"
+Dst "95#in:1"
+}
+
+Line {
+ZOrder "12"
+Src "93#out:1"
+Dst "86#in:1"
+}
+
+Line {
+ZOrder "13"
+Src "91#out:1"
+Points [20, 0]
+Dst "96#in:1"
+}
+
+Line {
+ZOrder "14"
+Src "96#out:1"
+Dst "88#in:2"
+}
+
+Line {
+ZOrder "15"
+Src "88#out:1"
+Dst "92#in:1"
+}
+
+Line {
+ZOrder "16"
+Src "92#out:1"
+Dst "87#in:2"
+}
+
+Line {
+ZOrder "17"
+Src "87#out:1"
+Dst "93#in:2"
+}
+
+Line {
+ZOrder "18"
+Src "94#out:1"
+Dst "70#in:1"
+}
+
+Line {
+ZOrder "19"
+Src "69#out:1"
+Points [80, 0]
+Branch {
+ZOrder "20"
+Dst "90#in:2"
+}
+
+Branch {
+ZOrder "21"
+Dst "96#in:2"
+}
+}
+
+Line {
+ZOrder "22"
+Src "90#out:1"
+Dst "98#in:1"
+}
+
+Line {
+ZOrder "23"
+Src "68#out:1"
+Points [335, 0]
+Branch {
+ZOrder "24"
+Dst "92#in:2"
+}
+
+Branch {
+ZOrder "25"
+Points [220, 0]
+Dst "95#in:2"
+}
+}
+
+Line {
+ZOrder "26"
+Src "71#out:1"
+Points [5, 0]
+Branch {
+ZOrder "27"
+Dst "99#in:1"
+}
+
+Branch {
+ZOrder "28"
+Points [0, -80]
+Branch {
+ZOrder "29"
+Dst "94#in:1"
+}
+
+Branch {
+ZOrder "30"
+Dst "97#in:1"
+}
+}
+}
+
+Line {
+ZOrder "31"
+Src "67#out:1"
+Points [50, 0]
+Branch {
+ZOrder "32"
+Dst "90#in:1"
+}
+
+Branch {
+ZOrder "33"
+Dst "91#in:2"
+}
+}
+
+Line {
+ZOrder "34"
+Src "72#out:4"
+Points [20, 0; 0, 65]
+Dst "91#in:1"
+}
+
+Annotation {
+SID "100"
+Position [418, 7, 420, 32]
+InternalMargins [0, 0, 0, 0]
+ZOrder "-1"
+FontName "Arial"
+FontSize "20"
+FontWeight "bold"
+FontAngle "italic"
+}
+}
+}
+
+Block {
+BlockType "Reference"
+Name "Fin Actuator"
+SID "101"
+Ports [1, 1]
+Position [230, 346, 320, 384]
+ZOrder "-5"
+BlockMirror on
+BackgroundColor [0.666667, 0.666667, 0.835294]
+LibraryVersion "1.469"
+FontName "Arial"
+SourceBlock "aerospace/Actuators/2nd Order Non-linear Actuator"
+SourceType "Nonlinear 2nd order actuator model"
+ContentPreviewEnabled off
+wn_fin "wn_fin"
+z_fin "z_fin"
+fin_max "fin_max"
+fin_min "fin_min"
+fin_maxrate "fin_maxrate"
+fin_act_0 "fin_act_0"
+
+}
+
+Block {
+BlockType "Selector"
+Name "Selector"
+SID "102"
+Ports [1, 1]
+Position [640, 38, 660, 72]
+ZOrder "-6"
+BlockMirror on
+ShowName off
+InputPortWidth "2"
+IndexOptions "Index vector (dialog)"
+Indices [2]
+OutputSizes "1"
+}
+
+Block {
+BlockType "SubSystem"
+Name "Sensors"
+SID "103"
+Ports [3, 2]
+Position [560, 166, 635, 254]
+ZOrder "-7"
+BackgroundColor [0.666667, 0.666667, 0.835294]
+NamePlacement "alternate"
+FontName "Arial"
+RequestExecContextInheritance off
+System {
+Location [233, 45, 634, 445]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ModelBrowserWidth "200"
+PaperOrientation "landscape"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "q"
+SID "104"
+Position [40, 33, 70, 47]
+ZOrder "-1"
+FontName "Arial"
+IconDisplay "Port number"
+Port {
+PortNumber "1"
+Name "Rate Gyro"
+}
+}
+
+Block {
+BlockType "Inport"
+Name "qdot"
+SID "105"
+Position [40, 73, 70, 87]
+ZOrder "-2"
+FontName "Arial"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Ax,Az"
+SID "106"
+Position [40, 123, 70, 137]
+ZOrder "-3"
+FontName "Arial"
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Selector"
+Name "Selector"
+SID "107"
+Ports [1, 1]
+Position [120, 114, 130, 146]
+ZOrder "-4"
+ShowName off
+FontName "Arial"
+InputPortWidth "2"
+IndexOptions "Index vector (dialog)"
+Indices [2]
+OutputSizes "1"
+}
+
+Block {
+BlockType "Sum"
+Name "Sum"
+SID "108"
+Ports [2, 1]
+Position [175, 115, 205, 145]
+ZOrder "-5"
+ShowName off
+FontName "Arial"
+IconShape "round"
+Inputs "-+|"
+Port {
+PortNumber "1"
+Name "Accelerometer"
+}
+}
+
+Block {
+BlockType "Gain"
+Name "l"
+SID "109"
+Position [105, 53, 170, 107]
+ZOrder "-6"
+FontName "Arial"
+Gain "l_acc"
+}
+
+Block {
+BlockType "Outport"
+Name "q_m"
+SID "110"
+Position [295, 33, 325, 47]
+ZOrder "-7"
+FontName "Arial"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "Az_m"
+SID "111"
+Position [300, 123, 330, 137]
+ZOrder "-8"
+FontName "Arial"
+Port "2"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "1"
+Src "107#out:1"
+Dst "108#in:2"
+}
+
+Line {
+ZOrder "2"
+Src "106#out:1"
+Points [0, 0]
+Dst "107#in:1"
+}
+
+Line {
+Name "Rate Gyro"
+FontName "Arial"
+FontSize "10"
+ZOrder "3"
+Labels [-1, 0]
+Src "104#out:1"
+Points [0, 0]
+Dst "110#in:1"
+}
+
+Line {
+ZOrder "4"
+Src "109#out:1"
+Points [15, 0]
+Dst "108#in:1"
+}
+
+Line {
+Name "Accelerometer"
+FontName "Arial"
+FontSize "10"
+ZOrder "5"
+Labels [2, 1]
+Src "108#out:1"
+Points [0, 0]
+Dst "111#in:1"
+}
+
+Line {
+ZOrder "6"
+Src "105#out:1"
+Points [0, 0]
+Dst "109#in:1"
+}
+}
+}
+
+Block {
+BlockType "Constant"
+Name "Thrust"
+SID "112"
+Position [25, 230, 75, 250]
+ZOrder "-8"
+Value "Thrust"
+}
+
+Block {
+BlockType "ToWorkspace"
+Name "To Workspace"
+SID "113"
+Ports [1]
+Position [695, 45, 745, 65]
+ZOrder "-9"
+ForegroundColor "blue"
+ShowName off
+VariableName "Miss_pos"
+MaxDataPoints "inf"
+SaveFormat "Structure With Time"
+SampleTime "-1"
+}
+
+Block {
+BlockType "ToWorkspace"
+Name "To Workspace1"
+SID "114"
+Ports [1]
+Position [610, 334, 645, 356]
+ZOrder "-10"
+ForegroundColor "blue"
+ShowName off
+VariableName "Mach"
+MaxDataPoints "inf"
+SaveFormat "Structure With Time"
+SampleTime "-1"
+}
+
+Block {
+BlockType "ToWorkspace"
+Name "To Workspace2"
+SID "115"
+Ports [1]
+Position [540, 314, 575, 336]
+ZOrder "-11"
+ForegroundColor "blue"
+ShowName off
+VariableName "Incid"
+MaxDataPoints "inf"
+SaveFormat "Structure With Time"
+SampleTime "-1"
+}
+
+Block {
+BlockType "Gain"
+Name "l"
+SID "116"
+Position [555, 37, 605, 73]
+ZOrder "-12"
+BlockMirror on
+ShowName off
+FontName "Arial"
+Gain "-1"
+}
+
+Block {
+BlockType "Terminator"
+Name "tempscope1"
+SID "117"
+Position [305, 18, 320, 32]
+ZOrder "-13"
+BlockMirror on
+ShowName off
+}
+
+Block {
+BlockType "Terminator"
+Name "tempscope2"
+SID "118"
+Position [305, 58, 320, 72]
+ZOrder "-14"
+BlockMirror on
+ShowName off
+}
+
+Block {
+BlockType "Outport"
+Name "Xe,Ze"
+SID "119"
+Position [705, 113, 735, 127]
+ZOrder "-15"
+FontName "Arial"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "Attitude"
+SID "120"
+Position [705, 143, 735, 157]
+ZOrder "-16"
+FontName "Arial"
+Port "2"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "q"
+SID "121"
+Position [705, 183, 735, 197]
+ZOrder "-17"
+FontName "Arial"
+Port "3"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "1"
+Src "4#out:2"
+Dst "120#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "112#out:1"
+Dst "4#in:3"
+}
+
+Line {
+ZOrder "3"
+Src "63#out:3"
+Dst "118#in:1"
+}
+
+Line {
+ZOrder "4"
+Src "63#out:4"
+Points [-265, 0; 0, 45]
+Dst "4#in:1"
+}
+
+Line {
+ZOrder "5"
+Src "63#out:1"
+Dst "117#in:1"
+}
+
+Line {
+ZOrder "6"
+Src "63#out:2"
+Points [-285, 0; 0, 140]
+Dst "4#in:2"
+}
+
+Line {
+ZOrder "7"
+Src "102#out:1"
+Dst "116#in:1"
+}
+
+Line {
+ZOrder "8"
+Src "116#out:1"
+Dst "63#in:1"
+}
+
+Line {
+ZOrder "9"
+Src "4#out:5"
+Dst "103#in:3"
+}
+
+Line {
+ZOrder "10"
+Src "4#out:4"
+Dst "103#in:2"
+}
+
+Line {
+ZOrder "11"
+Src "4#out:1"
+Points [450, 0]
+Branch {
+ZOrder "12"
+Dst "119#in:1"
+}
+
+Branch {
+ZOrder "13"
+Points [0, -65]
+Branch {
+ZOrder "14"
+Dst "113#in:1"
+}
+
+Branch {
+ZOrder "15"
+Dst "102#in:1"
+}
+}
+}
+
+Line {
+ZOrder "16"
+Src "3#out:1"
+Dst "64#in:5"
+}
+
+Line {
+ZOrder "17"
+Src "64#out:1"
+Dst "101#in:1"
+}
+
+Line {
+ZOrder "18"
+Src "101#out:1"
+Points [-175, 0; 0, -70]
+Dst "4#in:4"
+}
+
+Line {
+ZOrder "19"
+Src "4#out:7"
+Points [295, 0; 0, 25]
+Branch {
+ZOrder "20"
+Dst "64#in:1"
+}
+
+Branch {
+ZOrder "21"
+Dst "115#in:1"
+}
+}
+
+Line {
+ZOrder "22"
+Src "103#out:2"
+Points [15, 0; 0, 130]
+Dst "64#in:3"
+}
+
+Line {
+ZOrder "23"
+Src "4#out:6"
+Points [360, 0; 0, 75]
+Branch {
+ZOrder "24"
+Dst "64#in:2"
+}
+
+Branch {
+ZOrder "25"
+Dst "114#in:1"
+}
+}
+
+Line {
+ZOrder "26"
+Src "103#out:1"
+Points [35, 0]
+Branch {
+ZOrder "27"
+Points [0, 195]
+Dst "64#in:4"
+}
+
+Branch {
+ZOrder "28"
+Dst "121#in:1"
+}
+}
+
+Line {
+ZOrder "29"
+Src "4#out:3"
+Dst "103#in:1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Guidance"
+SID "122"
+Ports [3, 3]
+Position [440, 115, 535, 255]
+ZOrder "-3"
+BackgroundColor [0.976471, 0.592157, 0.643137]
+FontName "Arial"
+RequestExecContextInheritance off
+Port {
+PortNumber "1"
+Name "Demanded look angle during target search"
+PropagatedSignals "Sigma_d"
+}
+
+System {
+Location [11, 22, 892, 665]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+PaperOrientation "landscape"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Sigmadot"
+SID "123"
+Position [335, 348, 365, 362]
+ZOrder "-1"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Vc"
+SID "124"
+Position [335, 318, 365, 332]
+ZOrder "-2"
+NamePlacement "alternate"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Rm"
+SID "125"
+Position [120, 33, 150, 47]
+ZOrder "-3"
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "UnitDelay"
+Name "0.01 Sec\nHold"
+SID "126"
+Position [200, 200, 235, 240]
+ZOrder "-4"
+FontName "Arial"
+SampleTime "0.01"
+HasFrameUpgradeWarning on
+}
+
+Block {
+BlockType "From"
+Name "Acquisition "
+SID "127"
+Position [20, 140, 80, 170]
+ZOrder "-5"
+FontName "Arial"
+GotoTag "Acquire"
+TagVisibility "global"
+}
+
+Block {
+BlockType "DataTypeConversion"
+Name "Data Type Conversion"
+SID "254"
+Position [120, 138, 195, 172]
+ZOrder "1"
+RndMeth "Floor"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "DataTypeConversion"
+Name "Data Type Conversion1"
+SID "255"
+Position [510, 58, 585, 92]
+ZOrder "2"
+RndMeth "Floor"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "DataTypeConversion"
+Name "Data Type Conversion2"
+SID "256"
+Position [610, 178, 685, 212]
+ZOrder "3"
+RndMeth "Floor"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Product"
+Name "Demands"
+SID "128"
+Ports [2, 1]
+Position [420, 308, 440, 372]
+ZOrder "-6"
+ShowName off
+FontName "Arial"
+RndMeth "Floor"
+}
+
+Block {
+BlockType "SubSystem"
+Name "Fuze"
+SID "129"
+Ports [2, 1, 1]
+Position [620, 22, 680, 93]
+ZOrder "-7"
+NamePlacement "alternate"
+ShowPortLabels "none"
+TreatAsAtomicUnit on
+RequestExecContextInheritance off
+System {
+Location [11, 22, 892, 665]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ModelBrowserWidth "200"
+PaperOrientation "landscape"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Rm"
+SID "130"
+Position [15, 153, 45, 167]
+ZOrder "-1"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Detonate"
+SID "131"
+Position [15, 38, 45, 52]
+ZOrder "-2"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "EnablePort"
+Name "Enable"
+SID "132"
+Ports []
+Position [250, 15, 270, 35]
+ZOrder "-3"
+}
+
+Block {
+BlockType "Reference"
+Name "Closest Approach"
+SID "258"
+Ports [1, 1]
+Position [130, 85, 160, 115]
+ZOrder "2"
+LibraryVersion "1.453"
+SourceBlock "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
+SourceType "Compare To Zero"
+SourceProductName "Simulink"
+SourceProductBaseCode "SL"
+ContentPreviewEnabled off
+relop ">="
+OutDataTypeStr "boolean"
+ZeroCross on
+
+}
+
+Block {
+BlockType "DataTypeConversion"
+Name "Data Type Conversion"
+SID "260"
+Position [235, 83, 280, 97]
+ZOrder "4"
+ShowName off
+OutDataTypeStr "double"
+RndMeth "Floor"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Derivative"
+Name "Derivative"
+SID "134"
+Position [80, 85, 110, 115]
+ZOrder "-5"
+ShowName off
+}
+
+Block {
+BlockType "HitCross"
+Name "Hit \nCrossing"
+SID "259"
+Ports [1, 1]
+Position [295, 75, 325, 105]
+ZOrder "3"
+HitCrossingDirection "rising"
+}
+
+Block {
+BlockType "Logic"
+Name "Logical\nOperator"
+SID "136"
+Ports [2, 1]
+Position [183, 72, 218, 108]
+ZOrder "-7"
+NamePlacement "alternate"
+ShowName off
+Operator "OR"
+IconShape "distinctive"
+OutDataTypeStr "boolean"
+}
+
+Block {
+BlockType "Memory"
+Name "Memory"
+SID "137"
+Position [390, 75, 420, 105]
+ZOrder "-8"
+ShowName off
+}
+
+Block {
+BlockType "SubSystem"
+Name "Miss distance"
+SID "138"
+Ports [1, 1, 0, 1]
+Position [335, 130, 390, 190]
+ZOrder "-9"
+ShowPortLabels "none"
+TreatAsAtomicUnit on
+RequestExecContextInheritance off
+System {
+Location [174, 211, 445, 584]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ModelBrowserWidth "200"
+PaperOrientation "landscape"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "In1"
+SID "139"
+Position [15, 68, 45, 82]
+ZOrder "-1"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "TriggerPort"
+Name "Trigger"
+SID "140"
+Ports []
+Position [100, 15, 120, 35]
+ZOrder "-2"
+VariantControl "(inherit)"
+}
+
+Block {
+BlockType "Outport"
+Name "Out1"
+SID "141"
+Position [165, 68, 195, 82]
+ZOrder "-3"
+IconDisplay "Port number"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "1"
+Src "139#out:1"
+Dst "141#in:1"
+}
+}
+}
+
+Block {
+BlockType "Stop"
+Name "Stop Simulation"
+SID "142"
+Position [460, 72, 495, 108]
+ZOrder "-10"
+}
+
+Block {
+BlockType "Outport"
+Name "Miss "
+SID "143"
+Position [465, 153, 495, 167]
+ZOrder "-11"
+FontName "Arial"
+IconDisplay "Port number"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "1"
+Src "134#out:1"
+Dst "258#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "131#out:1"
+Points [119, 0; 0, 35]
+Dst "136#in:1"
+}
+
+Line {
+ZOrder "3"
+Src "130#out:1"
+Points [7, 0]
+Branch {
+ZOrder "12"
+Dst "138#in:1"
+}
+
+Branch {
+ZOrder "5"
+Points [0, -60]
+Dst "134#in:1"
+}
+}
+
+Line {
+ZOrder "6"
+Src "258#out:1"
+Dst "136#in:2"
+}
+
+Line {
+ZOrder "7"
+Src "137#out:1"
+Dst "142#in:1"
+}
+
+Line {
+ZOrder "8"
+Src "138#out:1"
+Dst "143#in:1"
+}
+
+Line {
+ZOrder "13"
+Src "259#out:1"
+Points [30, 0]
+Branch {
+ZOrder "10"
+Dst "138#trigger"
+}
+
+Branch {
+ZOrder "11"
+Dst "137#in:1"
+}
+}
+
+Line {
+ZOrder "14"
+Src "260#out:1"
+Dst "259#in:1"
+}
+
+Line {
+ZOrder "15"
+Src "136#out:1"
+Dst "260#in:1"
+}
+
+Annotation {
+SID "144"
+Position [240, 5, 242, 26]
+InternalMargins [0, 0, 0, 0]
+ZOrder "-1"
+FontName "Arial"
+FontSize "16"
+FontWeight "bold"
+FontAngle "italic"
+}
+}
+}
+
+Block {
+BlockType "Goto"
+Name "Goto"
+SID "145"
+Position [730, 182, 770, 208]
+ZOrder "-8"
+ShowName off
+FontName "Arial"
+GotoTag "Mode"
+TagVisibility "global"
+}
+
+Block {
+BlockType "SubSystem"
+Name "Guidance Processor\n(Updated @100Hz)"
+SID "146"
+Ports [3, 5]
+Position [265, 58, 460, 252]
+ZOrder "-9"
+ErrorFcn "Stateflow.Translate.translate"
+PermitHierarchicalResolution "ExplicitOnly"
+TreatAsAtomicUnit on
+RequestExecContextInheritance off
+SFBlockType "Chart"
+System {
+Location [11, 15, 889, 654]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ModelBrowserWidth "200"
+PaperOrientation "landscape"
+SIDHighWatermark "36"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Range"
+SID "146::1"
+Position [20, 101, 40, 119]
+ZOrder "-1"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Acquire"
+SID "146::2"
+Position [20, 136, 40, 154]
+ZOrder "-2"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "az_dem"
+SID "146::3"
+Position [20, 171, 40, 189]
+ZOrder "-3"
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Demux"
+Name " Demux "
+SID "146::35"
+Ports [1, 1]
+Position [270, 315, 320, 355]
+ZOrder "24"
+Outputs "1"
+}
+
+Block {
+BlockType "S-Function"
+Name " SFunction "
+SID "146::34"
+Tag "Stateflow S-Function 1"
+Ports [3, 6]
+Position [180, 102, 230, 243]
+ZOrder "23"
+FunctionName "sf_sfun"
+PortCounts [3 6]
+SFunctionDeploymentMode off
+EnableBusSupport off
+SFcnIsStateOwnerBlock off
+Port {
+PortNumber "2"
+Name "Detonate"
+}
+
+Port {
+PortNumber "3"
+Name "Fuze"
+}
+
+Port {
+PortNumber "4"
+Name "Sigma_d"
+}
+
+Port {
+PortNumber "5"
+Name "Mode"
+}
+
+Port {
+PortNumber "6"
+Name "az_fix"
+}
+}
+
+Block {
+BlockType "Terminator"
+Name " Terminator "
+SID "146::36"
+Position [460, 326, 480, 344]
+ZOrder "25"
+}
+
+Block {
+BlockType "Outport"
+Name "Detonate"
+SID "146::7"
+Position [460, 101, 480, 119]
+ZOrder "-7"
+IconDisplay "Port number"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "Fuze"
+SID "146::8"
+Position [460, 136, 480, 154]
+ZOrder "-8"
+Port "2"
+IconDisplay "Port number"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "Sigma_d"
+SID "146::9"
+Position [460, 171, 480, 189]
+ZOrder "-9"
+Port "3"
+IconDisplay "Port number"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "Mode"
+SID "146::10"
+Position [460, 206, 480, 224]
+ZOrder "-10"
+Port "4"
+IconDisplay "Port number"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "az_fix"
+SID "146::11"
+Position [460, 246, 480, 264]
+ZOrder "-11"
+Port "5"
+IconDisplay "Port number"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "41"
+Src "146::1#out:1"
+Points [120, 0]
+Dst "146::34#in:1"
+}
+
+Line {
+ZOrder "42"
+Src "146::2#out:1"
+Dst "146::34#in:2"
+}
+
+Line {
+ZOrder "43"
+Src "146::3#out:1"
+Dst "146::34#in:3"
+}
+
+Line {
+Name "Detonate"
+ZOrder "44"
+Labels [0, 0]
+Src "146::34#out:2"
+Dst "146::7#in:1"
+}
+
+Line {
+Name "Fuze"
+ZOrder "45"
+Labels [0, 0]
+Src "146::34#out:3"
+Dst "146::8#in:1"
+}
+
+Line {
+Name "Sigma_d"
+ZOrder "46"
+Labels [0, 0]
+Src "146::34#out:4"
+Dst "146::9#in:1"
+}
+
+Line {
+Name "Mode"
+ZOrder "47"
+Labels [0, 0]
+Src "146::34#out:5"
+Dst "146::10#in:1"
+}
+
+Line {
+Name "az_fix"
+ZOrder "48"
+Labels [0, 0]
+Src "146::34#out:6"
+Dst "146::11#in:1"
+}
+
+Line {
+ZOrder "49"
+Src "146::35#out:1"
+Dst "146::36#in:1"
+}
+
+Line {
+ZOrder "50"
+Src "146::34#out:1"
+Dst "146::35#in:1"
+}
+}
+}
+
+Block {
+BlockType "Saturate"
+Name "Limit\nNormal Acceleration\nDemand "
+SID "147"
+Ports [1, 1]
+Position [660, 295, 690, 325]
+ZOrder "-10"
+InputPortMap "u0"
+FontName "Arial"
+UpperLimit "max_acc"
+LowerLimit "-max_acc"
+}
+
+Block {
+BlockType "MultiPortSwitch"
+Name "Multiport\nSwitch"
+SID "148"
+Ports [5, 1]
+Position [605, 228, 620, 392]
+ZOrder "-11"
+ShowName off
+Inputs "4"
+}
+
+Block {
+BlockType "Gain"
+Name "Proportional\nNavigation\nGain"
+SID "149"
+Position [460, 314, 520, 366]
+ZOrder "-12"
+FontName "Arial"
+Gain "-3.5"
+}
+
+Block {
+BlockType "ToWorkspace"
+Name "To Workspace1"
+SID "150"
+Ports [1]
+Position [595, 139, 630, 161]
+ZOrder "-13"
+ForegroundColor "blue"
+ShowName off
+VariableName "Mode"
+MaxDataPoints "inf"
+SaveFormat "Structure With Time"
+}
+
+Block {
+BlockType "Outport"
+Name "Sigma_d"
+SID "151"
+Position [510, 148, 540, 162]
+ZOrder "-14"
+IconDisplay "Port number"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "Az_d"
+SID "152"
+Position [755, 303, 785, 317]
+ZOrder "-15"
+Port "2"
+IconDisplay "Port number"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "Miss"
+SID "153"
+Position [720, 53, 750, 67]
+ZOrder "-16"
+Port "3"
+IconDisplay "Port number"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "1"
+Src "129#out:1"
+Dst "153#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "146#out:3"
+Dst "151#in:1"
+}
+
+Line {
+ZOrder "3"
+Src "127#out:1"
+Dst "254#in:1"
+}
+
+Line {
+ZOrder "4"
+Src "148#out:1"
+Dst "147#in:1"
+}
+
+Line {
+ZOrder "5"
+Src "146#out:1"
+Dst "255#in:1"
+}
+
+Line {
+ZOrder "6"
+Src "147#out:1"
+Points [40, 0]
+Branch {
+ZOrder "7"
+Dst "152#in:1"
+}
+
+Branch {
+ZOrder "8"
+Points [0, 105; -565, 0; 0, -195]
+Dst "126#in:1"
+}
+}
+
+Line {
+ZOrder "9"
+Src "146#out:5"
+Points [75, 0; 0, 60]
+Branch {
+ZOrder "10"
+Points [25, 0]
+Branch {
+ZOrder "11"
+Points [0, -15]
+Dst "148#in:2"
+}
+
+Branch {
+ZOrder "12"
+Points [0, 15]
+Dst "148#in:3"
+}
+}
+
+Branch {
+ZOrder "13"
+Points [0, 75]
+Dst "148#in:5"
+}
+}
+
+Line {
+ZOrder "14"
+Src "126#out:1"
+Dst "146#in:3"
+}
+
+Line {
+ZOrder "15"
+Src "123#out:1"
+Dst "128#in:2"
+}
+
+Line {
+ZOrder "16"
+Src "149#out:1"
+Dst "148#in:4"
+}
+
+Line {
+ZOrder "17"
+Src "124#out:1"
+Dst "128#in:1"
+}
+
+Line {
+ZOrder "18"
+Src "128#out:1"
+Dst "149#in:1"
+}
+
+Line {
+ZOrder "19"
+Src "125#out:1"
+Points [60, 0]
+Branch {
+ZOrder "20"
+Dst "129#in:1"
+}
+
+Branch {
+ZOrder "21"
+Points [0, 50]
+Dst "146#in:1"
+}
+}
+
+Line {
+ZOrder "22"
+Src "146#out:2"
+Points [185, 0]
+Dst "129#enable"
+}
+
+Line {
+ZOrder "23"
+Src "146#out:4"
+Points [100, 0]
+Branch {
+ZOrder "24"
+Dst "256#in:1"
+}
+
+Branch {
+ZOrder "25"
+Points [0, -45]
+Dst "150#in:1"
+}
+
+Branch {
+ZOrder "26"
+Points [0, 55]
+Dst "148#in:1"
+}
+}
+
+Line {
+ZOrder "27"
+Src "254#out:1"
+Dst "146#in:2"
+}
+
+Line {
+ZOrder "28"
+Src "255#out:1"
+Dst "129#in:2"
+}
+
+Line {
+ZOrder "29"
+Src "256#out:1"
+Dst "145#in:1"
+}
+}
+}
+
+Block {
+BlockType "Display"
+Name "Miss Distance"
+SID "154"
+Ports [1]
+Position [560, 311, 650, 339]
+ZOrder "-4"
+FontName "Arial"
+Decimation "1"
+}
+
+Block {
+BlockType "SubSystem"
+Name "Missile ---> Target\nSeparation"
+SID "155"
+Ports [1, 2]
+Position [150, 147, 210, 218]
+ZOrder "-5"
+BackgroundColor [0.678431, 0.905882, 0.972549]
+FontName "Arial"
+RequestExecContextInheritance off
+Object {
+$PropName "MaskObject"
+$ObjectID 3
+$ClassName "Simulink.Mask"
+RunInitForIconRedraw "off"
+Display "plot(0,0,100,100,[24,20,15,20,20],[85,95,85,95,20],[80,20,95,85,95,85],[70,20,20,15,20,24],[56,56,55,52,50,46],[20,26,31,35,38,42])"
+
+Type "Cart2Polar"
+Description "Transformation from cartesian to polar coordinates.\n[x, y] -> [r, theta]\n\nr = sqrt(x^2 + y^2);\ntheta = atan(y/x);"
+Help "Unmask this block for more help."
+}
+
+System {
+Location [563, 318, 924, 698]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ModelBrowserWidth "200"
+PaperOrientation "landscape"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "x"
+SID "156"
+Position [30, 55, 50, 75]
+ZOrder "-1"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Fcn"
+Name "Range"
+SID "157"
+Position [110, 22, 215, 48]
+ZOrder "-2"
+Expr "hypot(u[1],u[2])"
+}
+
+Block {
+BlockType "Fcn"
+Name "Sightline Angle"
+SID "158"
+Position [115, 79, 220, 101]
+ZOrder "-3"
+Expr "atan2(-u[2],u[1])"
+}
+
+Block {
+BlockType "Outport"
+Name "r"
+SID "159"
+Position [250, 25, 270, 45]
+ZOrder "-4"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "theta"
+SID "160"
+Position [250, 80, 270, 100]
+ZOrder "-5"
+Port "2"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "1"
+Src "156#out:1"
+Points [25, 0]
+Branch {
+ZOrder "2"
+Points [0, 25]
+Dst "158#in:1"
+}
+
+Branch {
+ZOrder "3"
+Points [0, -30]
+Dst "157#in:1"
+}
+}
+
+Line {
+ZOrder "4"
+Src "157#out:1"
+Dst "159#in:1"
+}
+
+Line {
+ZOrder "5"
+Src "158#out:1"
+Dst "160#in:1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "More Info"
+SID "161"
+Ports []
+Position [760, 25, 784, 48]
+ZOrder "-6"
+DropShadow on
+ShowName off
+OpenFcn "showdemo(bdroot(gcb))"
+RequestExecContextInheritance off
+Object {
+$PropName "MaskObject"
+$ObjectID 4
+$ClassName "Simulink.Mask"
+RunInitForIconRedraw "off"
+Display "disp('?')"
+
+}
+
+System {
+Location [64, 148, 758, 807]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ModelBrowserWidth "200"
+PaperOrientation "landscape"
+SimulinkSubDomain "Simulink"
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Seeker/Tracker"
+SID "162"
+Ports [4, 3]
+Position [310, 115, 415, 250]
+ZOrder "-7"
+BackgroundColor [0.976471, 0.592157, 0.643137]
+FontName "Arial"
+RequestExecContextInheritance off
+System {
+Location [12, 45, 912, 734]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ModelBrowserWidth "200"
+PaperOrientation "landscape"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Sigma_d"
+SID "163"
+Position [35, 223, 65, 237]
+ZOrder "-1"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Range"
+SID "164"
+Position [35, 298, 65, 312]
+ZOrder "-2"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Look Angle"
+SID "165"
+Position [40, 67, 70, 83]
+ZOrder "-3"
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "q"
+SID "166"
+Position [35, 173, 65, 187]
+ZOrder "-4"
+Port "4"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Goto"
+Name "Acquire"
+SID "167"
+Position [565, 95, 615, 125]
+ZOrder "-5"
+NamePlacement "alternate"
+ShowName off
+FontName "Arial"
+GotoTag "Acquire"
+TagVisibility "global"
+}
+
+Block {
+BlockType "Gain"
+Name "Radome \nAberration"
+SID "168"
+Position [95, 213, 140, 247]
+ZOrder "-6"
+ShowName off
+FontName "Arial"
+Gain "d2r"
+}
+
+Block {
+BlockType "SubSystem"
+Name "Range and \nClosing Velocity Estimates"
+SID "169"
+Ports [1, 2, 1]
+Position [430, 263, 545, 347]
+ZOrder "-7"
+FontName "Arial"
+TreatAsAtomicUnit on
+RequestExecContextInheritance off
+System {
+Location [203, 45, 680, 543]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ModelBrowserWidth "200"
+PaperOrientation "landscape"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "R"
+SID "170"
+Position [45, 123, 75, 137]
+ZOrder "-1"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "EnablePort"
+Name "Enable"
+SID "171"
+Ports []
+Position [225, 25, 245, 45]
+ZOrder "-2"
+BlockMirror on
+FontName "Arial"
+StatesWhenEnabling "reset"
+}
+
+Block {
+BlockType "Gain"
+Name "Bandwidth\nof Estimator"
+SID "172"
+Position [165, 112, 260, 148]
+ZOrder "-3"
+Gain "wn_hom"
+}
+
+Block {
+BlockType "Integrator"
+Name "Initialized\nat acquisition"
+SID "173"
+Ports [2, 1]
+Position [170, 190, 215, 245]
+ZOrder "-4"
+BlockMirror on
+InitialConditionSource "external"
+}
+
+Block {
+BlockType "Gain"
+Name "Rdot ---> Vc"
+SID "174"
+Position [290, 113, 375, 147]
+ZOrder "-5"
+FontName "Arial"
+Gain "-1"
+}
+
+Block {
+BlockType "Sum"
+Name "Sum"
+SID "175"
+Ports [2, 1]
+Position [105, 110, 145, 150]
+ZOrder "-6"
+ShowName off
+IconShape "round"
+Inputs "|+-"
+}
+
+Block {
+BlockType "Outport"
+Name "Closing\nVelocity"
+SID "176"
+Position [390, 123, 420, 137]
+ZOrder "-7"
+FontName "Arial"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "Range"
+SID "177"
+Position [390, 63, 420, 77]
+ZOrder "-8"
+FontName "Arial"
+Port "2"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "1"
+Src "170#out:1"
+Points [0, 0; 10, 0]
+Branch {
+ZOrder "2"
+Points [0, -60]
+Dst "177#in:1"
+}
+
+Branch {
+ZOrder "3"
+Points [0, 155; 165, 0; 0, -55]
+Dst "173#in:2"
+}
+
+Branch {
+ZOrder "4"
+Dst "175#in:1"
+}
+}
+
+Line {
+ZOrder "5"
+Src "175#out:1"
+Dst "172#in:1"
+}
+
+Line {
+ZOrder "6"
+Src "173#out:1"
+Points [-40, 0]
+Dst "175#in:2"
+}
+
+Line {
+ZOrder "7"
+Src "172#out:1"
+Points [0, 0; 10, 0]
+Branch {
+ZOrder "8"
+Dst "174#in:1"
+}
+
+Branch {
+ZOrder "9"
+Points [0, 75]
+Dst "173#in:1"
+}
+}
+
+Line {
+ZOrder "10"
+Src "174#out:1"
+Dst "176#in:1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Target\nAcquisition"
+SID "178"
+Ports [2, 1]
+Position [340, 42, 455, 178]
+ZOrder "-8"
+FontName "Arial"
+RequestExecContextInheritance off
+System {
+Location [11, 15, 892, 658]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ModelBrowserWidth "200"
+PaperOrientation "landscape"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Look Angle"
+SID "179"
+Position [15, 102, 45, 118]
+ZOrder "-1"
+FontName "Arial"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Gimbal\nAngle"
+SID "180"
+Position [15, 38, 45, 52]
+ZOrder "-2"
+FontName "Arial"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Abs"
+Name "Abs"
+SID "181"
+Position [235, 40, 265, 70]
+ZOrder "-3"
+ShowName off
+FontName "Arial"
+}
+
+Block {
+BlockType "Constant"
+Name "Beamwidth"
+SID "182"
+Position [195, 76, 295, 104]
+ZOrder "-4"
+FontName "Arial"
+Value "Beamwidth/2"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux"
+SID "183"
+Ports [2, 1]
+Position [115, 100, 120, 135]
+ZOrder "-5"
+ForegroundColor "blue"
+BackgroundColor "blue"
+NamePlacement "alternate"
+ShowName off
+Inputs "2"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "RelationalOperator"
+Name "Relational\nOperator"
+SID "184"
+Ports [2, 1]
+Position [320, 37, 350, 108]
+ZOrder "-6"
+ShowName off
+Operator "<"
+OutDataTypeStr "boolean"
+}
+
+Block {
+BlockType "Sum"
+Name "Sum"
+SID "185"
+Ports [2, 1]
+Position [140, 35, 170, 75]
+ZOrder "-7"
+ShowName off
+Inputs "+-"
+}
+
+Block {
+BlockType "ToWorkspace"
+Name "To Workspace2"
+SID "186"
+Ports [1]
+Position [140, 110, 190, 130]
+ZOrder "-8"
+ForegroundColor "blue"
+NamePlacement "alternate"
+ShowName off
+VariableName "Gimbal"
+MaxDataPoints "inf"
+SaveFormat "Structure With Time"
+SampleTime "-1"
+}
+
+Block {
+BlockType "Outport"
+Name "Acquire Flag"
+SID "187"
+Position [385, 68, 415, 82]
+ZOrder "-9"
+FontName "Arial"
+IconDisplay "Port number"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "1"
+Src "179#out:1"
+Points [30, 0]
+Branch {
+ZOrder "2"
+Points [0, -45]
+Dst "185#in:2"
+}
+
+Branch {
+ZOrder "3"
+Points [0, 15]
+Dst "183#in:2"
+}
+}
+
+Line {
+ZOrder "4"
+Src "180#out:1"
+Points [45, 0]
+Branch {
+ZOrder "5"
+Dst "185#in:1"
+}
+
+Branch {
+ZOrder "6"
+Points [0, 65]
+Dst "183#in:1"
+}
+}
+
+Line {
+ZOrder "7"
+Src "183#out:1"
+Dst "186#in:1"
+}
+
+Line {
+ZOrder "8"
+Src "185#out:1"
+Dst "181#in:1"
+}
+
+Line {
+ZOrder "9"
+Src "182#out:1"
+Dst "184#in:2"
+}
+
+Line {
+ZOrder "10"
+Src "184#out:1"
+Dst "187#in:1"
+}
+
+Line {
+ZOrder "11"
+Src "181#out:1"
+Dst "184#in:1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Tracker and Sightline Rate\nEstimator"
+SID "188"
+Ports [3, 2]
+Position [165, 108, 305, 252]
+ZOrder "-9"
+FontName "Arial"
+RequestExecContextInheritance off
+System {
+Location [11, 15, 889, 654]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ModelBrowserWidth "200"
+PaperOrientation "landscape"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Look Angle"
+SID "189"
+Position [30, 88, 60, 102]
+ZOrder "-1"
+FontName "Arial"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "q"
+SID "190"
+Position [30, 388, 60, 402]
+ZOrder "-2"
+FontName "Arial"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Sigma_d"
+SID "191"
+Position [295, 137, 325, 153]
+ZOrder "-3"
+FontName "Arial"
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Constant"
+Name "Angular Noise"
+SID "192"
+Position [214, 20, 256, 45]
+ZOrder "-4"
+BlockRotation "270"
+BlockMirror on
+NamePlacement "alternate"
+FontName "Arial"
+Value "0"
+}
+
+Block {
+BlockType "SubSystem"
+Name "Estimator Filter"
+SID "193"
+Ports [2, 1, 1]
+Position [640, 125, 745, 205]
+ZOrder "-5"
+FontName "Arial"
+TreatAsAtomicUnit on
+RequestExecContextInheritance off
+System {
+Location [331, 161, 844, 671]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ModelBrowserWidth "200"
+PaperOrientation "landscape"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Dish error"
+SID "194"
+Position [50, 78, 80, 92]
+ZOrder "-1"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "q"
+SID "195"
+Position [50, 228, 80, 242]
+ZOrder "-2"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "EnablePort"
+Name "Enable"
+SID "196"
+Ports []
+Position [215, 15, 235, 35]
+ZOrder "-3"
+FontName "Arial"
+StatesWhenEnabling "reset"
+}
+
+Block {
+BlockType "Integrator"
+Name "Integrator"
+SID "197"
+Ports [2, 1]
+Position [160, 145, 205, 185]
+ZOrder "-4"
+BlockMirror on
+ShowName off
+InitialConditionSource "external"
+}
+
+Block {
+BlockType "Sum"
+Name "Sum"
+SID "198"
+Ports [2, 1]
+Position [130, 65, 170, 105]
+ZOrder "-5"
+ShowName off
+IconShape "round"
+Inputs "|+-"
+}
+
+Block {
+BlockType "Sum"
+Name "Sum1"
+SID "199"
+Ports [2, 1]
+Position [100, 215, 140, 255]
+ZOrder "-6"
+ShowName off
+IconShape "round"
+Inputs "|+-"
+}
+
+Block {
+BlockType "Sum"
+Name "Sum5"
+SID "200"
+Ports [2, 1]
+Position [360, 65, 400, 105]
+ZOrder "-7"
+ShowName off
+IconShape "round"
+Inputs "|++"
+}
+
+Block {
+BlockType "Integrator"
+Name "q_filt"
+SID "201"
+Ports [1, 1]
+Position [310, 215, 355, 255]
+ZOrder "-8"
+}
+
+Block {
+BlockType "Gain"
+Name "wn_hom"
+SID "202"
+Position [210, 64, 285, 106]
+ZOrder "-9"
+Gain "wn_hom"
+}
+
+Block {
+BlockType "Gain"
+Name "wn_hom  "
+SID "203"
+Position [185, 214, 260, 256]
+ZOrder "-10"
+Gain "wn_hom"
+}
+
+Block {
+BlockType "Outport"
+Name "Sightline\nRate"
+SID "204"
+Position [425, 78, 455, 92]
+ZOrder "-11"
+FontName "Arial"
+IconDisplay "Port number"
+InitialOutput "0"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "1"
+Src "194#out:1"
+Points [0, 0; 20, 0]
+Branch {
+ZOrder "2"
+Dst "198#in:1"
+}
+
+Branch {
+ZOrder "3"
+Points [0, 115; 115, 0]
+Dst "197#in:2"
+}
+}
+
+Line {
+ZOrder "4"
+Src "198#out:1"
+Dst "202#in:1"
+}
+
+Line {
+ZOrder "5"
+Src "197#out:1"
+Points [-5, 0]
+Dst "198#in:2"
+}
+
+Line {
+ZOrder "6"
+Src "200#out:1"
+Dst "204#in:1"
+}
+
+Line {
+ZOrder "7"
+Src "202#out:1"
+Points [0, 0; 35, 0]
+Branch {
+ZOrder "8"
+Points [0, 70]
+Dst "197#in:1"
+}
+
+Branch {
+ZOrder "9"
+Dst "200#in:1"
+}
+}
+
+Line {
+ZOrder "10"
+Src "195#out:1"
+Dst "199#in:1"
+}
+
+Line {
+ZOrder "11"
+Src "199#out:1"
+Dst "203#in:1"
+}
+
+Line {
+ZOrder "12"
+Src "203#out:1"
+Dst "201#in:1"
+}
+
+Line {
+ZOrder "13"
+Src "201#out:1"
+Points [0, 0; 20, 0]
+Branch {
+ZOrder "14"
+Dst "200#in:2"
+}
+
+Branch {
+ZOrder "15"
+Points [0, 60; -260, 0]
+Dst "199#in:2"
+}
+}
+}
+}
+
+Block {
+BlockType "Gain"
+Name "Gimbal"
+SID "205"
+Position [365, 273, 445, 317]
+ZOrder "-6"
+BlockMirror on
+}
+
+Block {
+BlockType "Integrator"
+Name "Gimbal "
+SID "206"
+Ports [1, 1]
+Position [119, 225, 161, 265]
+ZOrder "-7"
+BlockRotation "270"
+NamePlacement "alternate"
+LimitOutput on
+UpperSaturationLimit "max_gimbal"
+LowerSaturationLimit "min_gimbal"
+}
+
+Block {
+BlockType "Fcn"
+Name "Guided Flight"
+SID "207"
+Position [610, 65, 655, 85]
+ZOrder "-8"
+FontName "Arial"
+Expr "u(1)>1"
+}
+
+Block {
+BlockType "From"
+Name "Mode"
+SID "208"
+Position [540, 65, 595, 85]
+ZOrder "-9"
+FontName "Arial"
+GotoTag "Mode"
+TagVisibility "global"
+}
+
+Block {
+BlockType "Gain"
+Name "Radome \nAberration"
+SID "209"
+Position [218, 130, 252, 175]
+ZOrder "-10"
+BlockRotation "270"
+NamePlacement "alternate"
+Gain "K_r"
+}
+
+Block {
+BlockType "Gain"
+Name "Receiver"
+SID "210"
+Position [280, 75, 345, 115]
+ZOrder "-11"
+Port {
+PortNumber "1"
+Name "e"
+}
+}
+
+Block {
+BlockType "TransferFcn"
+Name "Stabilization \nGain"
+SID "211"
+Position [220, 277, 255, 313]
+ZOrder "-12"
+BlockMirror on
+Numerator [Ks]
+Denominator [1 0]
+}
+
+Block {
+BlockType "TransferFcn"
+Name "Stabilizing Rate Gyro"
+SID "212"
+Position [285, 372, 425, 418]
+ZOrder "-13"
+Numerator [wgyro^2]
+Denominator [1 2*0.7*wgyro wgyro^2]
+}
+
+Block {
+BlockType "Sum"
+Name "Sum1"
+SID "213"
+Ports [2, 1]
+Position [120, 75, 160, 115]
+ZOrder "-14"
+ShowName off
+IconShape "round"
+Inputs "|+-"
+}
+
+Block {
+BlockType "Sum"
+Name "Sum2"
+SID "214"
+Ports [3, 1]
+Position [215, 75, 255, 115]
+ZOrder "-15"
+ShowName off
+IconShape "round"
+Inputs "+++"
+}
+
+Block {
+BlockType "Sum"
+Name "Sum3"
+SID "215"
+Ports [2, 1]
+Position [510, 275, 550, 315]
+ZOrder "-16"
+BlockMirror on
+ShowName off
+IconShape "round"
+Inputs "+-|"
+}
+
+Block {
+BlockType "Sum"
+Name "Sum4"
+SID "216"
+Ports [2, 1]
+Position [120, 375, 160, 415]
+ZOrder "-17"
+ShowName off
+IconShape "round"
+Inputs "++|"
+}
+
+Block {
+BlockType "SubSystem"
+Name "Switch to Closed\nLoop Tracking"
+SID "217"
+Ports [3, 1]
+Position [380, 70, 475, 220]
+ZOrder "-18"
+RequestExecContextInheritance off
+System {
+Location [481, 115, 818, 579]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ModelBrowserWidth "200"
+PaperOrientation "landscape"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Dish Error"
+SID "218"
+Position [120, 33, 150, 47]
+ZOrder "-1"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Sigma_d"
+SID "219"
+Position [55, 153, 85, 167]
+ZOrder "-2"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Gimbal"
+SID "220"
+Position [15, 128, 45, 142]
+ZOrder "-3"
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Fcn"
+Name "Guided Flight"
+SID "221"
+Position [90, 85, 155, 105]
+ZOrder "-4"
+NamePlacement "alternate"
+FontName "Arial"
+Expr "u(1)>1"
+}
+
+Block {
+BlockType "From"
+Name "Mode"
+SID "222"
+Position [30, 84, 70, 106]
+ZOrder "-5"
+FontName "Arial"
+GotoTag "Mode"
+TagVisibility "global"
+}
+
+Block {
+BlockType "Sum"
+Name "Sum5"
+SID "223"
+Ports [2, 1]
+Position [110, 120, 140, 175]
+ZOrder "-6"
+ShowName off
+Inputs "-+"
+}
+
+Block {
+BlockType "Switch"
+Name "Switch2"
+SID "224"
+Position [175, 13, 195, 177]
+ZOrder "-7"
+ShowName off
+FontName "Arial"
+Threshold "0.5"
+}
+
+Block {
+BlockType "Outport"
+Name "Dish\nError "
+SID "225"
+Position [220, 88, 250, 102]
+ZOrder "-8"
+IconDisplay "Port number"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "1"
+Src "222#out:1"
+Dst "221#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "221#out:1"
+Dst "224#in:2"
+}
+
+Line {
+ZOrder "3"
+Src "223#out:1"
+Dst "224#in:3"
+}
+
+Line {
+ZOrder "4"
+Src "218#out:1"
+Dst "224#in:1"
+}
+
+Line {
+ZOrder "5"
+Src "224#out:1"
+Dst "225#in:1"
+}
+
+Line {
+ZOrder "6"
+Src "219#out:1"
+Dst "223#in:2"
+}
+
+Line {
+ZOrder "7"
+Src "220#out:1"
+Dst "223#in:1"
+}
+}
+}
+
+Block {
+BlockType "Gain"
+Name "Tracking\nGain"
+SID "226"
+Position [506, 200, 554, 240]
+ZOrder "-19"
+BlockRotation "270"
+BlockMirror on
+Gain "1/tors"
+}
+
+Block {
+BlockType "Outport"
+Name "Gimbal\nAngle "
+SID "227"
+Position [30, 187, 60, 203]
+ZOrder "-20"
+BlockMirror on
+IconDisplay "Port number"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "Sightline \nRate"
+SID "228"
+Position [770, 158, 800, 172]
+ZOrder "-21"
+Port "2"
+IconDisplay "Port number"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "1"
+Src "206#out:1"
+Points [0, -25]
+Branch {
+ZOrder "2"
+Dst "213#in:2"
+}
+
+Branch {
+ZOrder "3"
+Points [95, 0]
+Branch {
+ZOrder "4"
+Dst "209#in:1"
+}
+
+Branch {
+ZOrder "5"
+Dst "217#in:3"
+}
+}
+
+Branch {
+ZOrder "6"
+Dst "227#in:1"
+}
+}
+
+Line {
+ZOrder "7"
+Src "211#out:1"
+Points [-75, 0]
+Branch {
+ZOrder "8"
+Dst "206#in:1"
+}
+
+Branch {
+ZOrder "9"
+Dst "216#in:1"
+}
+}
+
+Line {
+ZOrder "10"
+Src "205#out:1"
+Dst "211#in:1"
+}
+
+Line {
+ZOrder "11"
+Src "189#out:1"
+Dst "213#in:1"
+}
+
+Line {
+ZOrder "12"
+Src "214#out:1"
+Dst "210#in:1"
+}
+
+Line {
+Name "e"
+ZOrder "13"
+Labels [-1, 0]
+Src "210#out:1"
+Dst "217#in:1"
+}
+
+Line {
+ZOrder "14"
+Src "191#out:1"
+Dst "217#in:2"
+}
+
+Line {
+ZOrder "15"
+Src "193#out:1"
+Dst "228#in:1"
+}
+
+Line {
+ZOrder "16"
+Src "209#out:1"
+Dst "214#in:3"
+}
+
+Line {
+ZOrder "17"
+Src "213#out:1"
+Dst "214#in:2"
+}
+
+Line {
+ZOrder "18"
+Src "192#out:1"
+Dst "214#in:1"
+}
+
+Line {
+ZOrder "19"
+Src "216#out:1"
+Dst "212#in:1"
+}
+
+Line {
+ZOrder "20"
+Src "190#out:1"
+Dst "216#in:2"
+}
+
+Line {
+ZOrder "21"
+Src "212#out:1"
+Points [190, 0; 0, -100]
+Branch {
+ZOrder "22"
+Dst "215#in:2"
+}
+
+Branch {
+ZOrder "23"
+Points [0, -110]
+Dst "193#in:2"
+}
+}
+
+Line {
+ZOrder "24"
+Src "215#out:1"
+Dst "205#in:1"
+}
+
+Line {
+ZOrder "25"
+Src "226#out:1"
+Dst "215#in:1"
+}
+
+Line {
+ZOrder "26"
+Src "217#out:1"
+Points [50, 0]
+Branch {
+ZOrder "27"
+Dst "226#in:1"
+}
+
+Branch {
+ZOrder "28"
+Dst "193#in:1"
+}
+}
+
+Line {
+ZOrder "29"
+Src "207#out:1"
+Points [30, 0]
+Dst "193#enable"
+}
+
+Line {
+ZOrder "30"
+Src "208#out:1"
+Dst "207#in:1"
+}
+
+Annotation {
+SID "229"
+Position [266, 229, 268, 245]
+InternalMargins [0, 0, 0, 0]
+ForegroundColor "red"
+ZOrder "-1"
+FontName "Arial"
+FontSize "12"
+FontWeight "bold"
+FontAngle "italic"
+}
+
+Annotation {
+SID "230"
+Name "Stabilization Loop"
+Position [296, 341, 418, 360]
+InternalMargins [0, 0, 0, 0]
+ForegroundColor "red"
+ZOrder "-2"
+FontName "Arial"
+FontSize "14"
+FontWeight "bold"
+FontAngle "italic"
+}
+
+Annotation {
+SID "231"
+Name "Tracking Loop"
+Position [183, 236, 281, 255]
+InternalMargins [0, 0, 0, 0]
+ForegroundColor "red"
+ZOrder "-3"
+FontName "Arial"
+FontSize "14"
+FontWeight "bold"
+FontAngle "italic"
+}
+}
+}
+
+Block {
+BlockType "Outport"
+Name "Sigmadot"
+SID "232"
+Position [330, 208, 360, 222]
+ZOrder "-10"
+IconDisplay "Port number"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "Vc"
+SID "233"
+Position [585, 278, 615, 292]
+ZOrder "-11"
+Port "2"
+IconDisplay "Port number"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Block {
+BlockType "Outport"
+Name "Rm"
+SID "234"
+Position [585, 318, 615, 332]
+ZOrder "-12"
+Port "3"
+IconDisplay "Port number"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "1"
+Src "188#out:2"
+Points [0, 0]
+Dst "232#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "168#out:1"
+Dst "188#in:3"
+}
+
+Line {
+ZOrder "3"
+Src "188#out:1"
+Dst "178#in:2"
+}
+
+Line {
+ZOrder "4"
+Src "178#out:1"
+Points [0, 0; 25, 0]
+Branch {
+ZOrder "5"
+Dst "167#in:1"
+}
+
+Branch {
+ZOrder "6"
+Dst "169#enable"
+}
+}
+
+Line {
+ZOrder "7"
+Src "166#out:1"
+Dst "188#in:2"
+}
+
+Line {
+ZOrder "8"
+Src "165#out:1"
+Points [65, 0]
+Branch {
+ZOrder "9"
+Dst "178#in:1"
+}
+
+Branch {
+ZOrder "10"
+Points [0, 55]
+Dst "188#in:1"
+}
+}
+
+Line {
+ZOrder "11"
+Src "164#out:1"
+Points [0, 0]
+Dst "169#in:1"
+}
+
+Line {
+ZOrder "12"
+Src "169#out:2"
+Points [0, 0]
+Dst "234#in:1"
+}
+
+Line {
+ZOrder "13"
+Src "169#out:1"
+Points [0, 0]
+Dst "233#in:1"
+}
+
+Line {
+ZOrder "14"
+Src "163#out:1"
+Dst "168#in:1"
+}
+
+Annotation {
+SID "235"
+Position [309, 11, 311, 32]
+InternalMargins [0, 0, 0, 0]
+ZOrder "-1"
+FontName "Arial"
+FontSize "16"
+FontWeight "bold"
+FontAngle "italic"
+}
+}
+}
+
+Block {
+BlockType "Sum"
+Name "Sum"
+SID "236"
+Ports [2, 1]
+Position [245, 185, 275, 215]
+ZOrder "-8"
+ShowName off
+IconShape "round"
+Inputs "|+-"
+}
+
+Block {
+BlockType "Sum"
+Name "Sum2"
+SID "237"
+Ports [2, 1]
+Position [95, 170, 125, 200]
+ZOrder "-9"
+ShowName off
+IconShape "round"
+Inputs "|+-"
+}
+
+Block {
+BlockType "SubSystem"
+Name "Target\nPosition"
+SID "238"
+Ports [0, 1]
+Position [15, 169, 60, 201]
+ZOrder "-10"
+BackgroundColor [0.678431, 0.905882, 0.972549]
+FontName "Arial"
+RequestExecContextInheritance off
+System {
+Location [248, 45, 791, 539]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ModelBrowserWidth "200"
+PaperOrientation "landscape"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Gain"
+Name "Gain"
+SID "239"
+Position [120, 140, 150, 170]
+ZOrder "-1"
+ShowName off
+FontName "Arial"
+Gain "-1"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux"
+SID "240"
+Ports [2, 1]
+Position [370, 84, 375, 191]
+ZOrder "-2"
+ShowName off
+FontName "Arial"
+Inputs "2"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Product"
+Name "Product"
+SID "241"
+Ports [2, 1]
+Position [240, 92, 270, 123]
+ZOrder "-3"
+ShowName off
+FontName "Arial"
+RndMeth "Floor"
+}
+
+Block {
+BlockType "Product"
+Name "Product1"
+SID "242"
+Ports [2, 1]
+Position [240, 147, 270, 178]
+ZOrder "-4"
+ShowName off
+FontName "Arial"
+RndMeth "Floor"
+}
+
+Block {
+BlockType "ToWorkspace"
+Name "To Workspace"
+SID "243"
+Ports [1]
+Position [405, 170, 445, 190]
+ZOrder "-5"
+ForegroundColor "blue"
+ShowName off
+VariableName "Tgt_pos"
+MaxDataPoints "inf"
+SaveFormat "Structure"
+SampleTime "-1"
+}
+
+Block {
+BlockType "Trigonometry"
+Name "Trigonometric\nFunction"
+SID "244"
+Ports [1, 1]
+Position [170, 140, 200, 170]
+ZOrder "-6"
+ShowName off
+FontName "Arial"
+}
+
+Block {
+BlockType "Trigonometry"
+Name "Trigonometric\nFunction1"
+SID "245"
+Ports [1, 1]
+Position [170, 85, 200, 115]
+ZOrder "-7"
+ShowName off
+FontName "Arial"
+Operator "cos"
+}
+
+Block {
+BlockType "Constant"
+Name "direction"
+SID "246"
+Position [15, 111, 90, 139]
+ZOrder "-8"
+FontName "Arial"
+Value "theta_tgt"
+}
+
+Block {
+BlockType "Constant"
+Name "speed"
+SID "247"
+Position [30, 181, 85, 209]
+ZOrder "-9"
+FontName "Arial"
+Value "v_tgt"
+}
+
+Block {
+BlockType "Integrator"
+Name "x"
+SID "248"
+Ports [1, 1]
+Position [305, 95, 335, 125]
+ZOrder "-10"
+FontName "Arial"
+InitialCondition "pos_tgt(1)"
+}
+
+Block {
+BlockType "Integrator"
+Name "z"
+SID "249"
+Ports [1, 1]
+Position [305, 150, 335, 180]
+ZOrder "-11"
+FontName "Arial"
+InitialCondition "pos_tgt(2)"
+}
+
+Block {
+BlockType "Outport"
+Name "Target"
+SID "250"
+Position [410, 133, 440, 147]
+ZOrder "-12"
+FontName "Arial"
+IconDisplay "Port number"
+VectorParamsAs1DForOutWhenUnconnected off
+}
+
+Line {
+ZOrder "1"
+Src "248#out:1"
+Dst "240#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "249#out:1"
+Dst "240#in:2"
+}
+
+Line {
+ZOrder "3"
+Src "241#out:1"
+Dst "248#in:1"
+}
+
+Line {
+ZOrder "4"
+Src "242#out:1"
+Dst "249#in:1"
+}
+
+Line {
+ZOrder "5"
+Src "247#out:1"
+Points [120, 0; 0, -25]
+Branch {
+ZOrder "6"
+Points [0, -55]
+Dst "241#in:2"
+}
+
+Branch {
+ZOrder "7"
+Dst "242#in:2"
+}
+}
+
+Line {
+ZOrder "8"
+Src "244#out:1"
+Dst "242#in:1"
+}
+
+Line {
+ZOrder "9"
+Src "245#out:1"
+Dst "241#in:1"
+}
+
+Line {
+ZOrder "10"
+Src "246#out:1"
+Points [0, 0; 10, 0]
+Branch {
+ZOrder "11"
+Points [0, -25]
+Dst "245#in:1"
+}
+
+Branch {
+ZOrder "12"
+Dst "239#in:1"
+}
+}
+
+Line {
+ZOrder "13"
+Src "239#out:1"
+Dst "244#in:1"
+}
+
+Line {
+ZOrder "14"
+Src "240#out:1"
+Points [5, 0]
+Branch {
+ZOrder "15"
+Dst "250#in:1"
+}
+
+Branch {
+ZOrder "16"
+Points [0, 40]
+Dst "243#in:1"
+}
+}
+
+Annotation {
+SID "251"
+Position [230, 19, 232, 40]
+InternalMargins [0, 0, 0, 0]
+ZOrder "-1"
+FontName "Arial"
+FontSize "16"
+FontWeight "bold"
+FontAngle "italic"
+}
+}
+}
+
+Line {
+ZOrder "1"
+Src "155#out:2"
+Dst "236#in:1"
+}
+
+Line {
+ZOrder "2"
+Labels [1, 0]
+Src "122#out:2"
+Dst "2#in:1"
+}
+
+Line {
+ZOrder "3"
+Labels [1, 0]
+Src "162#out:2"
+Dst "122#in:2"
+}
+
+Line {
+ZOrder "4"
+Src "162#out:3"
+Dst "122#in:3"
+}
+
+Line {
+ZOrder "5"
+Src "122#out:3"
+Points [5, 0]
+Dst "154#in:1"
+}
+
+Line {
+ZOrder "6"
+Src "162#out:1"
+Dst "122#in:1"
+}
+
+Line {
+ZOrder "7"
+Src "236#out:1"
+Dst "162#in:3"
+}
+
+Line {
+Name "Missile Body Angular Rate"
+FontName "Arial"
+FontSize "10"
+ZOrder "8"
+Labels [3, 0]
+Src "2#out:3"
+Points [15, 0; 0, 135; -385, 0; 0, -130]
+Dst "162#in:4"
+}
+
+Line {
+Name "Demanded look angle during target search"
+FontName "Arial"
+FontSize "10"
+ZOrder "9"
+Labels [3, 0]
+Src "122#out:1"
+Points [10, 0; 0, -50; -270, 0; 0, 40]
+Dst "162#in:1"
+}
+
+Line {
+ZOrder "10"
+Src "155#out:1"
+Dst "162#in:2"
+}
+
+Line {
+Name "Missile Position"
+FontSize "10"
+ZOrder "11"
+Src "2#out:1"
+Points [55, 0]
+Branch {
+ZOrder "12"
+Dst "1#in:2"
+}
+
+Branch {
+ZOrder "13"
+Labels [2, 0]
+Points [0, 265; -595, 0]
+Dst "237#in:2"
+}
+}
+
+Line {
+Name "Missile Attitude"
+FontName "Arial"
+FontSize "10"
+ZOrder "14"
+Src "2#out:2"
+Points [35, 0]
+Branch {
+ZOrder "15"
+Dst "1#in:3"
+}
+
+Branch {
+ZOrder "16"
+Labels [2, 0]
+Points [0, 200; -425, 0]
+Dst "236#in:2"
+}
+}
+
+Line {
+ZOrder "17"
+Src "238#out:1"
+Points [5, 0]
+Branch {
+ZOrder "18"
+Dst "237#in:1"
+}
+
+Branch {
+ZOrder "19"
+Points [0, -120; 635, 0; 0, 30]
+Dst "1#in:1"
+}
+}
+
+Line {
+ZOrder "20"
+Src "237#out:1"
+Dst "155#in:1"
+}
+
+Annotation {
+SID "252"
+Name "Copyright 1990-2014 The MathWorks, Inc."
+Position [330, 440, 519, 452]
+InternalMargins [0, 0, 0, 0]
+ZOrder "-1"
+}
+
+Annotation {
+SID "253"
+Name "Missile Guidance System Example"
+Position [296, 22, 560, 43]
+InternalMargins [0, 0, 0, 0]
+ZOrder "-2"
+FontName "Arial"
+FontSize "16"
+FontWeight "bold"
+}
+}
+
+DiagnosticSuppressor on
+
+LogicAnalyzerPlugin on
+
+NotesPlugin on
+
+SLCCPlugin on
+
+WebScopes_FoundationPlugin on
+
+GraphicalInterface {
+NumRootInports "0"
+NumRootOutports "0"
+ParameterArgumentNames ""
+NumModelReferences "0"
+NumTestPointedSignals "0"
+NumProvidedFunctions "0"
+NumRequiredFunctions "0"
+NumResetEvents "0"
+HasInitializeEvent "0"
+HasTerminateEvent "0"
+PreCompExecutionDomainType "Unset"
+IsExportFunctionModel "0"
+IsArchitectureModel "0"
+IsAUTOSARArchitectureModel "0"
+NumParameterArguments "0"
+NumExternalFileReferences "17"
+OrderedModelArguments "1"
+ExternalFileReference {
+Reference "aerospace/Animation/3DoF Animation"
+Path "$bdroot/3DoF Animation"
+SID "1"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "aerospace/3DoF\nEquations\nof\nMotion / Equations of Motion\n(Body Axes)"
+Path "$bdroot/Airframe & Autopilot/Aerodynamics & Equations of Motion/ Equations of Motion (Body Axes)"
+SID "9"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "simulink_need_slupdate/PreLookup\nIndex Search"
+Path "$bdroot/Airframe & Autopilot/Aerodynamics & Equations of Motion/Aerodynamics/Incidence/Alpha Index"
+SID "33"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "simulink_need_slupdate/Interpolation (n-D)\nusing PreLookup"
+Path "$bdroot/Airframe & Autopilot/Aerodynamics & Equations of Motion/Aerodynamics/Incidence/Cm"
+SID "34"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "simulink_need_slupdate/Interpolation (n-D)\nusing PreLookup"
+Path "$bdroot/Airframe & Autopilot/Aerodynamics & Equations of Motion/Aerodynamics/Incidence/Cx"
+SID "35"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "simulink_need_slupdate/Interpolation (n-D)\nusing PreLookup"
+Path "$bdroot/Airframe & Autopilot/Aerodynamics & Equations of Motion/Aerodynamics/Incidence/Cz"
+SID "36"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "simulink_need_slupdate/PreLookup\nIndex Search"
+Path "$bdroot/Airframe & Autopilot/Aerodynamics & Equations of Motion/Aerodynamics/Incidence/Mach Index"
+SID "37"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "aerospace/3DoF\nEquations\nof\nMotion /Incidence \n& Airspeed"
+Path "$bdroot/Airframe & Autopilot/Aerodynamics & Equations of Motion/Incidence & Airspeed"
+SID "54"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "aerospace/Atmosphere/Atmosphere\nmodel"
+Path "$bdroot/Airframe & Autopilot/Atmosphere"
+SID "63"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "simulink_need_slupdate/Interpolation (n-D)\nusing PreLookup"
+Path "$bdroot/Airframe & Autopilot/Autopilot/Gain  Scheduled Coefficients/K"
+SID "76"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "simulink_need_slupdate/Interpolation (n-D)\nusing PreLookup"
+Path "$bdroot/Airframe & Autopilot/Autopilot/Gain  Scheduled Coefficients/Ka"
+SID "77"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "simulink_need_slupdate/Interpolation (n-D)\nusing PreLookup"
+Path "$bdroot/Airframe & Autopilot/Autopilot/Gain  Scheduled Coefficients/Kg"
+SID "78"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "simulink_need_slupdate/Interpolation (n-D)\nusing PreLookup"
+Path "$bdroot/Airframe & Autopilot/Autopilot/Gain  Scheduled Coefficients/Ki"
+SID "79"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "simulink_need_slupdate/PreLookup\nIndex Search"
+Path "$bdroot/Airframe & Autopilot/Autopilot/Gain  Scheduled Coefficients/Mach Index"
+SID "80"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "simulink_need_slupdate/PreLookup\nIndex Search"
+Path "$bdroot/Airframe & Autopilot/Autopilot/Gain  Scheduled Coefficients/|Alpha| Index"
+SID "81"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "aerospace/Actuators/2nd Order Non-linear Actuator"
+Path "$bdroot/Airframe & Autopilot/Fin Actuator"
+SID "101"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
+Path "$bdroot/Guidance/Fuze/Closest Approach"
+SID "258"
+Type "LIBRARY_BLOCK"
+}
+}
+
+Object {
+$PropName "BdWindowsInfo"
+$ObjectID 5
+$ClassName "Simulink.BDWindowsInfo"
+BDUuid "5e36a656-3f10-49ae-b4d6-8ea1f6509bd7"
+Object {
+$PropName "WindowsInfo"
+$ObjectID 6
+$ClassName "Simulink.WindowInfo"
+IsActive [1]
+Location [258.0, 531.0, 980.0, 746.0]
+WindowState "AAAA/wAAAAD9AAAAAgAAAAAAAAC9AAAB+PwCAAAAA/sAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABrAP///wAAAAEAAAAAAAAAAPwCAAAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZQBjAHQAbwByAAAAAAD/////AAAAOQD///8AAAPUAAACKAAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAB/////wEAAAAA/////wAAAAAAAAAA"
+WindowUuid "9ce280a4-a8cd-4663-865b-bd71b87614da"
+Array {
+PropName "PersistedApps"
+Type "Cell"
+Dimension 0
+}
+
+Object {
+$PropName "ModelBrowserInfo"
+$ObjectID 7
+$ClassName "Simulink.ModelBrowserInfo"
+Visible [0]
+DockPosition "Left"
+Width [50]
+Height [50]
+Filter [9]
+Minimized "Unset"
+}
+
+Object {
+$PropName "ExplorerBarInfo"
+$ObjectID 8
+$ClassName "Simulink.ExplorerBarInfo"
+Visible [1]
+}
+
+Object {
+$PropName "EditorsInfo"
+$ObjectID 9
+$ClassName "Simulink.EditorInfo"
+IsActive [1]
+IsTabbed [1]
+ViewObjType "SimulinkTopLevel"
+LoadSaveID "0"
+Extents [942.0, 491.0]
+ZoomFactor [1.0]
+Offset [-58.5, -8.5]
+SceneRectInView [-58.5, -8.5, 942.0, 491.0]
+}
+
+Object {
+$PropName "DockComponentsInfo"
+$ObjectID 10
+$ClassName "Simulink.DockComponentInfo"
+Type "GLUE2:PropertyInspector"
+ID "Property Inspector"
+Visible [0]
+CreateCallback ""
+UserData ""
+Floating [0]
+DockPosition "Right"
+Width [640]
+Height [480]
+Minimized "Unset"
+}
+}
+}
+
+Array {
+Type "Handle"
+Dimension 1
+Simulink.ConfigSet {
+Version "19.1.1"
+$ClassName "Simulink.ConfigSet"
+DisabledProps []
+Description ""
+Name "Configuration"
+CurrentDlgPage "Optimization"
+ConfigPrmDlgPosition [ 510, 335, 1410, 935 ]
+ExtraOptions ""
+Array {
+PropName "Components"
+Type "Handle"
+Dimension 9
+Simulink.SolverCC {
+$ObjectID 12
+Version "19.1.1"
+$ClassName "Simulink.SolverCC"
+DisabledProps []
+Description ""
+Components []
+StartTime "0.0"
+StopTime "20"
+AbsTol "1e-6"
+AutoScaleAbsTol off
+FixedStep "auto"
+InitialStep "auto"
+MaxOrder "5"
+ZcThreshold "auto"
+ConsecutiveZCsStepRelTol "10*128*eps"
+MaxConsecutiveZCs "1000"
+ExtrapolationOrder "4"
+NumberNewtonIterations "1"
+MaxStep "auto"
+MinStep "auto"
+MaxConsecutiveMinStep "1"
+RelTol "1e-3"
+EnableMultiTasking off
+ConcurrentTasks off
+Solver "ode45"
+SolverName "ode45"
+SolverJacobianMethodControl "auto"
+ShapePreserveControl "DisableAll"
+ZeroCrossControl "UseLocalSettings"
+ZeroCrossAlgorithm "Nonadaptive"
+AlgebraicLoopSolver "TrustRegion"
+SolverInfoToggleStatus off
+IsAutoAppliedInSIP off
+SolverResetMethod "Fast"
+PositivePriorityOrder off
+AutoInsertRateTranBlk off
+SampleTimeConstraint "Unconstrained"
+InsertRTBMode "Whenever possible"
+SampleTimeProperty []
+DecoupledContinuousIntegration off
+MinimalZcImpactIntegration off
+SolverOrder "3"
+}
+
+Simulink.DataIOCC {
+$ObjectID 13
+Version "19.1.1"
+$ClassName "Simulink.DataIOCC"
+DisabledProps []
+Description ""
+Components []
+Decimation "1"
+ExternalInput [t, u]
+FinalStateName "xFinal"
+InitialState "xInitial"
+LimitDataPoints off
+MaxDataPoints "1000"
+LoadExternalInput off
+LoadInitialState off
+SaveFinalState off
+SaveOperatingPoint off
+SaveFormat "Array"
+SignalLoggingSaveFormat "Dataset"
+SaveOutput off
+SaveState off
+SignalLogging on
+DSMLogging on
+InspectSignalLogs off
+VisualizeSimOutput on
+StreamToWorkspace off
+StreamVariableName "streamout"
+SaveTime on
+ReturnWorkspaceOutputs off
+StateSaveName "xbase"
+TimeSaveName "tout"
+OutputSaveName "ybase"
+SignalLoggingName "sigsOut"
+DSMLoggingName "dsmout"
+OutputOption "RefineOutputTimes"
+OutputTimes []
+ReturnWorkspaceOutputsName "out"
+Refine "1"
+LoggingToFile off
+DatasetSignalFormat "timeseries"
+LoggingFileName "out.mat"
+LoggingIntervals [-inf, inf]
+}
+
+Simulink.OptimizationCC {
+$ObjectID 14
+Version "19.1.1"
+$ClassName "Simulink.OptimizationCC"
+Description ""
+Components []
+BlockReduction off
+BooleanDataType on
+ConditionallyExecuteInputs on
+DefaultParameterBehavior "Tunable"
+UseDivisionForNetSlopeComputation off
+GainParamInheritBuiltInType off
+UseFloatMulNetSlope off
+DefaultUnderspecifiedDataType "double"
+UseSpecifiedMinMax off
+InlineInvariantSignals off
+OptimizeBlockIOStorage on
+BufferReuse on
+EnhancedBackFolding off
+CachingGlobalReferences off
+GlobalBufferReuse on
+StrengthReduction off
+AdvancedOptControl ""
+ExpressionFolding on
+BooleansAsBitfields off
+BitfieldContainerType "uint_T"
+EnableMemcpy on
+MemcpyThreshold "64"
+PassReuseOutputArgsAs "Structure reference"
+PassReuseOutputArgsThreshold "12"
+ExpressionDepthLimit "2147483647"
+LocalBlockOutputs on
+RollThreshold "5"
+StateBitsets off
+DataBitsets off
+ActiveStateOutputEnumStorageType "Native Integer"
+ZeroExternalMemoryAtStartup on
+ZeroInternalMemoryAtStartup on
+InitFltsAndDblsToZero on
+NoFixptDivByZeroProtection off
+EfficientFloat2IntCast off
+EfficientMapNaN2IntZero on
+LifeSpan "inf"
+MaxStackSize "Inherit from target"
+BufferReusableBoundary on
+SimCompilerOptimization off
+AccelVerboseBuild off
+OptimizeBlockOrder off
+OptimizeDataStoreBuffers on
+BusAssignmentInplaceUpdate on
+DifferentSizesBufferReuse off
+UseRowMajorAlgorithm off
+OptimizationLevel "level2"
+OptimizationPriority "Balanced"
+OptimizationCustomize on
+LabelGuidedReuse off
+MultiThreadedLoops off
+DenormalBehavior "GradualUnderflow"
+EfficientTunableParamExpr off
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 9
+Cell "ZeroExternalMemoryAtStartup"
+Cell "ZeroInternalMemoryAtStartup"
+Cell "NoFixptDivByZeroProtection"
+Cell "OptimizeModelRefInitCode"
+Cell "BooleansAsBitfields"
+Cell "PassReuseOutputArgsAs"
+Cell "PassReuseOutputArgsThreshold"
+Cell "UseSpecifiedMinMax"
+Cell "EfficientTunableParamExpr"
+}
+}
+
+Simulink.DebuggingCC {
+$ObjectID 15
+Version "19.1.1"
+$ClassName "Simulink.DebuggingCC"
+Description ""
+Components []
+RTPrefix "error"
+ConsistencyChecking "none"
+ArrayBoundsChecking "none"
+SignalInfNanChecking "none"
+StringTruncationChecking "error"
+SignalRangeChecking "none"
+ReadBeforeWriteMsg "UseLocalSettings"
+WriteAfterWriteMsg "UseLocalSettings"
+WriteAfterReadMsg "UseLocalSettings"
+AlgebraicLoopMsg "warning"
+ArtificialAlgebraicLoopMsg "warning"
+SaveWithDisabledLinksMsg "warning"
+SaveWithParameterizedLinksMsg "none"
+CheckSSInitialOutputMsg on
+UnderspecifiedInitializationDetection "Simplified"
+MergeDetectMultiDrivingBlocksExec "error"
+CheckExecutionContextPreStartOutputMsg off
+CheckExecutionContextRuntimeOutputMsg off
+SignalResolutionControl "TryResolveAllWithWarning"
+BlockPriorityViolationMsg "warning"
+MinStepSizeMsg "warning"
+TimeAdjustmentMsg "none"
+MaxConsecutiveZCsMsg "error"
+MaskedZcDiagnostic "warning"
+IgnoredZcDiagnostic "warning"
+SolverPrmCheckMsg "none"
+InheritedTsInSrcMsg "warning"
+MultiTaskDSMMsg "warning"
+MultiTaskCondExecSysMsg "none"
+MultiTaskRateTransMsg "error"
+SingleTaskRateTransMsg "none"
+TasksWithSamePriorityMsg "warning"
+ExportedTasksRateTransMsg "none"
+SigSpecEnsureSampleTimeMsg "none"
+CheckMatrixSingularityMsg "none"
+IntegerOverflowMsg "warning"
+Int32ToFloatConvMsg "warning"
+ParameterDowncastMsg "error"
+ParameterOverflowMsg "error"
+ParameterUnderflowMsg "none"
+ParameterPrecisionLossMsg "warning"
+ParameterTunabilityLossMsg "warning"
+FixptConstUnderflowMsg "none"
+FixptConstOverflowMsg "none"
+FixptConstPrecisionLossMsg "none"
+UnderSpecifiedDataTypeMsg "none"
+UnnecessaryDatatypeConvMsg "none"
+VectorMatrixConversionMsg "none"
+InvalidFcnCallConnMsg "error"
+FcnCallInpInsideContextMsg "warning"
+SignalLabelMismatchMsg "none"
+UnconnectedInputMsg "warning"
+UnconnectedOutputMsg "warning"
+UnconnectedLineMsg "warning"
+UseOnlyExistingSharedCode "error"
+SFcnCompatibilityMsg "none"
+FrameProcessingCompatibilityMsg "error"
+UniqueDataStoreMsg "none"
+BusObjectLabelMismatch "warning"
+RootOutportRequireBusObject "warning"
+AssertControl "UseLocalSettings"
+AllowSymbolicDim on
+RowMajorDimensionSupport off
+ModelReferenceIOMsg "none"
+ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+ModelReferenceVersionMismatchMessage "none"
+ModelReferenceIOMismatchMessage "none"
+UnknownTsInhSupMsg "warning"
+ModelReferenceDataLoggingMessage "warning"
+ModelReferenceSymbolNameMessage "warning"
+ModelReferenceExtraNoncontSigs "error"
+StateNameClashWarn "warning"
+OperatingPointInterfaceChecksumMismatchMsg "warning"
+NonCurrentReleaseOperatingPointMsg "error"
+ChecksumConsistencyForSSReuse "none"
+PregeneratedLibrarySubsystemCodeDiagnostic "warning"
+MatchCodeGenerationContextForUpdateDiagram "none"
+InitInArrayFormatMsg "warning"
+StrictBusMsg "ErrorLevel1"
+BusNameAdapt "WarnAndRepair"
+NonBusSignalsTreatedAsBus "none"
+SymbolicDimMinMaxWarning "warning"
+LossOfSymbolicDimsSimulationWarning "warning"
+LossOfSymbolicDimsCodeGenerationWarning "error"
+SymbolicDimsDataTypeCodeGenerationDiagnostic "error"
+BlockIODiagnostic "none"
+SFUnusedDataAndEventsDiag "warning"
+SFUnexpectedBacktrackingDiag "warning"
+SFInvalidInputDataAccessInChartInitDiag "warning"
+SFNoUnconditionalDefaultTransitionDiag "warning"
+SFTransitionOutsideNaturalParentDiag "warning"
+SFUnreachableExecutionPathDiag "warning"
+SFUndirectedBroadcastEventsDiag "warning"
+SFTransitionActionBeforeConditionDiag "warning"
+SFOutputUsedAsStateInMooreChartDiag "error"
+SFTemporalDelaySmallerThanSampleTimeDiag "warning"
+SFSelfTransitionDiag "warning"
+SFExecutionAtInitializationDiag "none"
+SFMachineParentedDataDiag "warning"
+IntegerSaturationMsg "warning"
+AllowedUnitSystems "all"
+UnitsInconsistencyMsg "warning"
+AllowAutomaticUnitConversions on
+RCSCRenamedMsg "warning"
+RCSCObservableMsg "warning"
+ForceCombineOutputUpdateInSim off
+UnitDatabase ""
+UnderSpecifiedDimensionMsg "none"
+DebugExecutionForFMUViaOutOfProcess off
+ArithmeticOperatorsInVariantConditions "warning"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 1
+Cell "UseOnlyExistingSharedCode"
+}
+}
+
+Simulink.HardwareCC {
+$ObjectID 16
+Version "19.1.1"
+$ClassName "Simulink.HardwareCC"
+DisabledProps []
+Description ""
+Components []
+ProdBitPerChar "8"
+ProdBitPerShort "16"
+ProdBitPerInt "32"
+ProdBitPerLong "32"
+ProdBitPerLongLong "64"
+ProdBitPerFloat "32"
+ProdBitPerDouble "64"
+ProdBitPerPointer "32"
+ProdBitPerSizeT "32"
+ProdBitPerPtrDiffT "32"
+ProdLargestAtomicInteger "Char"
+ProdLargestAtomicFloat "None"
+ProdIntDivRoundTo "Undefined"
+ProdEndianess "Unspecified"
+ProdWordSize "32"
+ProdShiftRightIntArith on
+ProdLongLongMode off
+ProdHWDeviceType "32-bit Generic"
+TargetBitPerChar "8"
+TargetBitPerShort "16"
+TargetBitPerInt "32"
+TargetBitPerLong "32"
+TargetBitPerLongLong "64"
+TargetBitPerFloat "32"
+TargetBitPerDouble "64"
+TargetBitPerPointer "32"
+TargetBitPerSizeT "32"
+TargetBitPerPtrDiffT "32"
+TargetLargestAtomicInteger "Char"
+TargetLargestAtomicFloat "None"
+TargetShiftRightIntArith on
+TargetLongLongMode off
+TargetIntDivRoundTo "Undefined"
+TargetEndianess "Unspecified"
+TargetWordSize "32"
+TargetPreprocMaxBitsSint "32"
+TargetPreprocMaxBitsUint "32"
+TargetHWDeviceType "Specified"
+TargetUnknown off
+ProdEqTarget on
+UseEmbeddedCoderFeatures on
+UseSimulinkCoderFeatures on
+HardwareBoardFeatureSet "EmbeddedCoderHSP"
+}
+
+Simulink.ModelReferenceCC {
+$ObjectID 17
+Version "19.1.1"
+$ClassName "Simulink.ModelReferenceCC"
+DisabledProps []
+Description ""
+Components []
+UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+EnableRefExpFcnMdlSchedulingChecks on
+CheckModelReferenceTargetMessage "error"
+EnableParallelModelReferenceBuilds off
+ParallelModelReferenceErrorOnInvalidPool on
+ParallelModelReferenceMATLABWorkerInit "None"
+ModelReferenceNumInstancesAllowed "Multi"
+PropagateVarSize "Infer from blocks in model"
+ModelDependencies ""
+ModelReferencePassRootInputsByReference on
+ModelReferenceMinAlgLoopOccurrences off
+PropagateSignalLabelsOutOfModel off
+SupportModelReferenceSimTargetCustomCode off
+}
+
+Simulink.SFSimCC {
+$ObjectID 18
+Version "19.1.1"
+$ClassName "Simulink.SFSimCC"
+DisabledProps []
+Description ""
+Components []
+SimCustomSourceCode ""
+SimCustomHeaderCode ""
+SimCustomInitializer ""
+SimCustomTerminator ""
+SimReservedNameArray []
+SimUserSources ""
+SimUserIncludeDirs ""
+SimUserLibraries ""
+SimUserDefines ""
+SimCustomCompilerFlags ""
+SimCustomLinkerFlags ""
+SFSimEcho on
+SimCtrlC on
+SimIntegrity on
+SimUseLocalCustomCode off
+SimParseCustomCode off
+SimAnalyzeCustomCode off
+SimBuildMode "sf_incremental_build"
+SimGenImportedTypeDefs off
+ModelFunctionsGlobalVisibility on
+CompileTimeRecursionLimit "50"
+EnableRuntimeRecursion on
+MATLABDynamicMemAlloc on
+MATLABDynamicMemAllocThreshold "65536"
+CustomCodeFunctionArrayLayout []
+DefaultCustomCodeFunctionArrayLayout "NotSpecified"
+CustomCodeUndefinedFunction "UseInterfaceOnly"
+}
+
+Simulink.RTWCC {
+BackupClass "Simulink.RTWCC"
+$ObjectID 19
+Version "19.1.1"
+$ClassName "Simulink.RTWCC"
+Description ""
+SystemTargetFile "grt.tlc"
+HardwareBoard "None"
+ShowCustomHardwareApp off
+ShowEmbeddedHardwareApp off
+TLCOptions ""
+GenCodeOnly off
+MakeCommand "make_rtw"
+GenerateMakefile on
+PackageGeneratedCodeAndArtifacts off
+PackageName ""
+TemplateMakefile "grt_default_tmf"
+PostCodeGenCommand ""
+GenerateReport off
+RTWVerbose on
+RetainRTWFile off
+RTWBuildHooks []
+ProfileTLC off
+TLCDebug off
+TLCCoverage off
+TLCAssert off
+RTWUseLocalCustomCode off
+RTWUseSimCustomCode off
+CustomSourceCode ""
+CustomHeaderCode ""
+CustomInclude ""
+CustomSource ""
+CustomLibrary ""
+CustomDefine ""
+CustomBLASCallback ""
+CustomLAPACKCallback ""
+CustomFFTCallback ""
+CustomInitializer ""
+CustomTerminator ""
+Toolchain "Automatically locate an installed toolchain"
+BuildConfiguration "Faster Builds"
+CustomToolchainOptions []
+IncludeHyperlinkInReport off
+LaunchReport off
+PortableWordSizes off
+CreateSILPILBlock "None"
+CodeExecutionProfiling off
+CodeExecutionProfileVariable "executionProfile"
+CodeProfilingSaveOptions "SummaryOnly"
+CodeProfilingInstrumentation off
+SILDebugging off
+TargetLang "C"
+IncludeBusHierarchyInRTWFileBlockHierarchyMap off
+GenerateTraceInfo off
+GenerateTraceReport off
+GenerateTraceReportSl off
+GenerateTraceReportSf off
+GenerateTraceReportEml off
+GenerateWebview off
+GenerateCodeMetricsReport off
+GenerateCodeReplacementReport off
+GenerateMissedCodeReplacementReport off
+RTWCompilerOptimization off
+ObjectivePriorities []
+RTWCustomCompilerOptimizations ""
+CheckMdlBeforeBuild "Off"
+SharedConstantsCachingThreshold "1024"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 16
+Cell "IncludeHyperlinkInReport"
+Cell "GenerateTraceInfo"
+Cell "GenerateTraceReport"
+Cell "GenerateTraceReportSl"
+Cell "GenerateTraceReportSf"
+Cell "GenerateTraceReportEml"
+Cell "PortableWordSizes"
+Cell "GenerateWebview"
+Cell "GenerateCodeMetricsReport"
+Cell "GenerateCodeReplacementReport"
+Cell "GenerateMissedCodeReplacementReport"
+Cell "GenerateErtSFunction"
+Cell "CreateSILPILBlock"
+Cell "CodeExecutionProfiling"
+Cell "CodeProfilingSaveOptions"
+Cell "CodeProfilingInstrumentation"
+}
+
+Array {
+PropName "Components"
+Type "Handle"
+Dimension 2
+Object {
+$ObjectID 20
+Version "19.1.1"
+$ClassName "Simulink.CodeAppCC"
+Description ""
+Components []
+Comment ""
+ForceParamTrailComments off
+GenerateComments on
+CommentStyle "Auto"
+IgnoreCustomStorageClasses on
+IgnoreTestpoints off
+MaxIdLength "31"
+PreserveName off
+PreserveNameWithParent off
+ShowEliminatedStatement off
+OperatorAnnotations off
+SimulinkDataObjDesc off
+SFDataObjDesc off
+MATLABFcnDesc off
+MangleLength "1"
+SharedChecksumLength "8"
+CustomSymbolStrGlobalVar "$R$N$M"
+CustomSymbolStrType "$N$R$M_T"
+CustomSymbolStrField "$N$M"
+CustomSymbolStrFcn "$R$N$M$F"
+CustomSymbolStrModelFcn "$R$N"
+CustomSymbolStrFcnArg "rt$I$N$M"
+CustomSymbolStrBlkIO "rtb_$N$M"
+CustomSymbolStrTmpVar "$N$M"
+CustomSymbolStrMacro "$R$N$M"
+CustomSymbolStrUtil "$N$C"
+CustomSymbolStrEmxType "emxArray_$M$N"
+CustomSymbolStrEmxFcn "emx$M$N"
+CustomUserTokenString ""
+CustomCommentsFcn ""
+DefineNamingRule "None"
+DefineNamingFcn ""
+ParamNamingRule "None"
+ParamNamingFcn ""
+SignalNamingRule "None"
+SignalNamingFcn ""
+InsertBlockDesc off
+InsertPolySpaceComments off
+SimulinkBlockComments on
+BlockCommentType "BlockPathComment"
+StateflowObjectComments on
+MATLABSourceComments off
+EnableCustomComments off
+InternalIdentifierFile ""
+InternalIdentifier "Shortened"
+InlinedPrmAccess "Literals"
+ReqsInCode off
+UseSimReservedNames off
+ReservedNameArray []
+EnumMemberNameClash "error"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 28
+Cell "IgnoreCustomStorageClasses"
+Cell "InsertBlockDesc"
+Cell "SFDataObjDesc"
+Cell "SimulinkDataObjDesc"
+Cell "DefineNamingRule"
+Cell "SignalNamingRule"
+Cell "ParamNamingRule"
+Cell "InlinedPrmAccess"
+Cell "CustomSymbolStr"
+Cell "IgnoreTestpoints"
+Cell "InsertPolySpaceComments"
+Cell "MATLABFcnDesc"
+Cell "InternalIdentifier"
+Cell "CustomSymbolStrGlobalVar"
+Cell "CustomSymbolStrType"
+Cell "CustomSymbolStrField"
+Cell "CustomSymbolStrFcn"
+Cell "CustomSymbolStrModelFcn"
+Cell "CustomSymbolStrFcnArg"
+Cell "CustomSymbolStrBlkIO"
+Cell "CustomSymbolStrTmpVar"
+Cell "CustomSymbolStrMacro"
+Cell "CustomSymbolStrUtil"
+Cell "CustomSymbolStrEmxType"
+Cell "CustomSymbolStrEmxFcn"
+Cell "CustomUserTokenString"
+Cell "ReqsInCode"
+Cell "BlockCommentType"
+}
+}
+
+Object {
+BackupClass "Simulink.TargetCC"
+$ObjectID 21
+Version "19.1.1"
+$ClassName "Simulink.GRTTargetCC"
+Description ""
+Components []
+TargetFcnLib "ansi_tfl_tmw.mat"
+TargetLibSuffix ""
+TargetPreCompLibLocation ""
+GenFloatMathFcnCalls "NOT IN USE"
+TargetLangStandard "C89/C90 (ANSI)"
+CodeReplacementLibrary "None"
+UtilityFuncGeneration "Auto"
+MultiwordTypeDef "System defined"
+MultiwordLength "2048"
+DynamicStringBufferSize "256"
+GenerateFullHeader on
+InferredTypesCompatibility off
+ExistingSharedCode ""
+GenerateSampleERTMain off
+GenerateTestInterfaces off
+ModelReferenceCompliant on
+ParMdlRefBuildCompliant on
+CompOptLevelCompliant on
+ConcurrentExecutionCompliant on
+IncludeMdlTerminateFcn on
+GeneratePreprocessorConditionals "Disable all"
+CombineOutputUpdateFcns off
+CombineSignalStateStructs off
+GroupInternalDataByFunction off
+SuppressErrorStatus off
+IncludeFileDelimiter "Auto"
+ERTCustomFileBanners off
+SupportAbsoluteTime on
+LogVarNameModifier "rt_"
+MatFileLogging on
+MultiInstanceERTCode off
+CodeInterfacePackaging "Nonreusable function"
+PurelyIntegerCode off
+SupportNonFinite on
+SupportComplex on
+SupportContinuousTime on
+SupportNonInlinedSFcns on
+RemoveDisableFunc off
+RemoveResetFunc off
+SupportVariableSizeSignals off
+ParenthesesLevel "Nominal"
+CastingMode "Nominal"
+PreserveStateflowLocalDataDimensions off
+MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
+ModelStepFunctionPrototypeControlCompliant off
+CPPClassGenCompliant on
+AutosarCompliant off
+MDXCompliant off
+GRTInterface on
+GenerateAllocFcn off
+UseToolchainInfoCompliant on
+GenerateSharedConstants on
+CoderGroups []
+AccessMethods []
+LookupTableObjectStructAxisOrder "1,2,3,4,..."
+LUTObjectStructOrderExplicitValues "Size,Breakpoints,Table"
+LUTObjectStructOrderEvenSpacing "Size,Breakpoints,Table"
+ArrayLayout "Column-major"
+UnsupportedSFcnMsg "error"
+ERTHeaderFileRootName "$R$E"
+ERTSourceFileRootName "$R$E"
+ERTDataFileRootName "$R_data"
+UseMalloc off
+ExtMode off
+ExtModeStaticAlloc off
+ExtModeTesting off
+ExtModeStaticAllocSize "1000000"
+ExtModeTransport "0"
+ExtModeMexFile "ext_comm"
+ExtModeMexArgs ""
+ExtModeIntrfLevel "Level1"
+RTWCAPISignals off
+RTWCAPIParams off
+RTWCAPIStates off
+RTWCAPIRootIO off
+GenerateASAP2 off
+MultiInstanceErrorCode "Error"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 16
+Cell "IncludeMdlTerminateFcn"
+Cell "GenerateAllocFcn"
+Cell "SuppressErrorStatus"
+Cell "ERTCustomFileBanners"
+Cell "GenerateSampleERTMain"
+Cell "SupportContinuousTime"
+Cell "PurelyIntegerCode"
+Cell "SupportNonInlinedSFcns"
+Cell "SupportComplex"
+Cell "SupportAbsoluteTime"
+Cell "RemoveResetFunc"
+Cell "ExistingSharedCode"
+Cell "GenerateTestInterfaces"
+Cell "ModelStepFunctionPrototypeControlCompliant"
+Cell "RemoveDisableFunc"
+Cell "PreserveStateflowLocalDataDimensions"
+}
+}
+}
+}
+
+SlCovCC.ConfigComp {
+$ObjectID 22
+Version "19.1.1"
+$ClassName "SlCovCC.ConfigComp"
+DisabledProps []
+Description "Simulink Coverage Configuration Component"
+Components []
+Name "Simulink Coverage"
+CovEnable off
+CovScope "EntireSystem"
+CovIncludeTopModel on
+RecordCoverage off
+CovPath "/"
+CovSaveName "covdata"
+CovCompData ""
+CovMetricSettings "d"
+CovFilter ""
+CovHTMLOptions ""
+CovNameIncrementing off
+CovHtmlReporting on
+CovForceBlockReductionOff on
+CovEnableCumulative on
+CovSaveCumulativeToWorkspaceVar on
+CovSaveSingleToWorkspaceVar on
+CovCumulativeVarName "covCumulativeData"
+CovCumulativeReport off
+CovSaveOutputData on
+CovOutputDir "slcov_output/$ModelName$"
+CovDataFileName "$ModelName$_cvdata"
+CovShowResultsExplorer on
+CovReportOnPause on
+CovModelRefEnable off
+CovModelRefExcluded ""
+CovExternalEMLEnable off
+CovSFcnEnable off
+CovBoundaryAbsTol "1e-05"
+CovBoundaryRelTol "0.01"
+CovUseTimeInterval off
+CovStartTime "0"
+CovStopTime "0"
+CovMcdcMode "Masking"
+}
+}
+}
+}
+
+System {
+PaperOrientation "portrait"
+PaperPositionMode "auto"
+PaperType "usletter"
+PaperUnits "inches"
+TiledPaperMargins [0.500000, 0.500000, 0.500000, 0.500000]
+TiledPageScale "1"
+ShowPageBoundaries off
+ModelBrowserVisibility off
+ModelBrowserWidth "212"
+ScreenColor "white"
+ZoomFactor "100"
+PortBlocksUseCompactNotation off
+Open off
+}
+
+BlockDefaults {
+ForegroundColor "black"
+BackgroundColor "white"
+DropShadow off
+NamePlacement "normal"
+FontName "Helvetica"
+FontSize "10"
+FontWeight "normal"
+FontAngle "normal"
+ShowName on
+HideAutomaticName on
+BlockRotation "0"
+BlockMirror off
+}
+
+AnnotationDefaults {
+HorizontalAlignment "center"
+VerticalAlignment "middle"
+ForegroundColor "black"
+BackgroundColor "white"
+DropShadow off
+FontName "Helvetica"
+FontSize "10"
+FontWeight "normal"
+FontAngle "normal"
+MarkupType "model"
+UseDisplayTextAsClickCallback off
+AnnotationType "note_annotation"
+FixedHeight off
+FixedWidth off
+Interpreter off
+}
+
+LineDefaults {
+FontName "Helvetica"
+FontSize "9"
+FontWeight "normal"
+FontAngle "normal"
+}
+
+MaskDefaults {
+SelfModifiable "off"
+IconFrame "on"
+IconOpaque "opaque"
+RunInitForIconRedraw "analyze"
+IconRotate "none"
+PortRotate "default"
+IconUnits "autoscale"
+Display ""
+
+}
+
+MaskParameterDefaults {
+Evaluate "on"
+Tunable "on"
+NeverSave "off"
+Internal "off"
+ReadOnly "off"
+Enabled "on"
+Visible "on"
+ToolTip "on"
+}
+
+BlockParameterDefaults {
+Block {
+BlockType "Abs"
+ZeroCross on
+SampleTime "-1"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Same as input"
+LockScale off
+RndMeth "Floor"
+SaturateOnIntegerOverflow on
+}
+
+Block {
+BlockType "Constant"
+Value "1"
+VectorParams1D on
+SamplingMode "Sample based"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Inherit from 'Constant value'"
+LockScale off
+SampleTime "inf"
+FramePeriod "inf"
+PreserveConstantTs off
+}
+
+Block {
+BlockType "DataTypeConversion"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Inherit via back propagation"
+LockScale off
+ConvertRealWorld "Real World Value (RWV)"
+RndMeth "Zero"
+SaturateOnIntegerOverflow on
+SampleTime "-1"
+}
+
+Block {
+BlockType "Demux"
+Outputs "4"
+DisplayOption "none"
+BusSelectionMode off
+}
+
+Block {
+BlockType "Derivative"
+CoefficientInTFapproximation "inf"
+}
+
+Block {
+BlockType "Display"
+Format "short"
+Decimation "10"
+Floating off
+Lockdown off
+SampleTime "-1"
+}
+
+Block {
+BlockType "EnablePort"
+StatesWhenEnabling "held"
+PropagateVarSize "Only when enabling"
+ShowOutputPort off
+ZeroCross on
+DisallowConstTsAndPrmTs off
+PortDimensions "1"
+SampleTime "-1"
+OutMin []
+OutMax []
+OutDataTypeStr "double"
+Interpolate on
+}
+
+Block {
+BlockType "Fcn"
+Expr "sin(u[1])"
+SampleTime "-1"
+}
+
+Block {
+BlockType "From"
+GotoTag "A"
+IconDisplay "Tag"
+TagVisibility "local"
+}
+
+Block {
+BlockType "Gain"
+Gain "1"
+Multiplication "Element-wise(K.*u)"
+ParamMin []
+ParamMax []
+ParamDataTypeStr "Inherit: Same as input"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Same as input"
+LockScale off
+RndMeth "Floor"
+SaturateOnIntegerOverflow on
+SampleTime "-1"
+}
+
+Block {
+BlockType "Goto"
+GotoTag "A"
+IconDisplay "Tag"
+TagVisibility "local"
+}
+
+Block {
+BlockType "HitCross"
+HitCrossingOffset "0"
+HitCrossingDirection "either"
+ShowOutputPort on
+HitCrossingOutputType "Signal"
+ZeroCross on
+SampleTime "-1"
+}
+
+Block {
+BlockType "Inport"
+Port "1"
+OutputFunctionCall off
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: auto"
+LockScale off
+BusOutputAsStruct off
+Unit "inherit"
+PortDimensions "-1"
+VarSizeSig "Inherit"
+SampleTime "-1"
+SignalType "auto"
+SamplingMode "auto"
+LatchByDelayingOutsideSignal off
+LatchInputForFeedbackSignals off
+Interpolate on
+}
+
+Block {
+BlockType "Integrator"
+ExternalReset "none"
+InitialConditionSource "internal"
+InitialCondition "0"
+LimitOutput off
+UpperSaturationLimit "inf"
+LowerSaturationLimit "-inf"
+WrapState off
+WrappedStateUpperValue "pi"
+WrappedStateLowerValue "-pi"
+ShowSaturationPort off
+ShowStatePort off
+AbsoluteTolerance "auto"
+IgnoreLimit off
+ZeroCross on
+ContinuousStateAttributes "''"
+}
+
+Block {
+BlockType "Logic"
+Operator "AND"
+Inputs "2"
+IconShape "rectangular"
+AllPortsSameDT on
+OutDataTypeStr "Inherit: Logical (see Configuration Parameters: Optimization)"
+SampleTime "-1"
+}
+
+Block {
+BlockType "Math"
+Operator "exp"
+SignedPower on
+OutputSignalType "auto"
+SampleTime "-1"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Same as first input"
+LockScale off
+RndMeth "Floor"
+SaturateOnIntegerOverflow on
+IntermediateResultsDataTypeStr "Inherit: Inherit via internal rule"
+AlgorithmType "Newton-Raphson"
+Iterations "3"
+}
+
+Block {
+BlockType "Memory"
+InitialCondition "0"
+InheritSampleTime off
+LinearizeMemory off
+LinearizeAsDelay off
+StateMustResolveToSignalObject off
+RTWStateStorageClass "Auto"
+}
+
+Block {
+BlockType "MultiPortSwitch"
+DataPortOrder "One-based contiguous"
+Inputs "3"
+DataPortIndices "{1,2,3}"
+DataPortForDefault "Last data port"
+DiagnosticForDefault "Error"
+zeroidx off
+InputSameDT on
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Inherit via internal rule"
+LockScale off
+RndMeth "Floor"
+SaturateOnIntegerOverflow on
+SampleTime "-1"
+AllowDiffInputSizes off
+}
+
+Block {
+BlockType "Mux"
+Inputs "4"
+DisplayOption "none"
+UseBusObject off
+BusObject "BusObject"
+NonVirtualBus off
+}
+
+Block {
+BlockType "Outport"
+Port "1"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: auto"
+LockScale off
+BusOutputAsStruct off
+Unit "inherit"
+PortDimensions "-1"
+VarSizeSig "Inherit"
+SampleTime "-1"
+SignalType "auto"
+SamplingMode "auto"
+EnsureOutportIsVirtual off
+SourceOfInitialOutputValue "Dialog"
+OutputWhenDisabled "held"
+InitialOutput []
+MustResolveToSignalObject off
+OutputWhenUnConnected off
+OutputWhenUnconnectedValue "0"
+VectorParamsAs1DForOutWhenUnconnected on
+}
+
+Block {
+BlockType "Product"
+Inputs "2"
+Multiplication "Element-wise(.*)"
+CollapseMode "All dimensions"
+CollapseDim "1"
+InputSameDT on
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Same as first input"
+LockScale off
+RndMeth "Zero"
+SaturateOnIntegerOverflow on
+SampleTime "-1"
+}
+
+Block {
+BlockType "RelationalOperator"
+Operator ">="
+InputSameDT on
+OutDataTypeStr "Inherit: Logical (see Configuration Parameters: Optimization)"
+ZeroCross on
+SampleTime "-1"
+RndMeth "Nearest"
+}
+
+Block {
+BlockType "S-Function"
+FunctionName "system"
+SFunctionModules "''"
+PortCounts []
+MultiThreadCoSim "auto"
+}
+
+Block {
+BlockType "Saturate"
+UpperLimitSource "Dialog"
+UpperLimit "0.5"
+LowerLimitSource "Dialog"
+LowerLimit "-0.5"
+LinearizeAsGain on
+ZeroCross on
+SampleTime "-1"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Same as input"
+LockScale off
+RndMeth "Floor"
+}
+
+Block {
+BlockType "Selector"
+NumberOfDimensions "1"
+IndexMode "One-based"
+InputPortWidth "-1"
+SampleTime "-1"
+}
+
+Block {
+BlockType "Stop"
+}
+
+Block {
+BlockType "SubSystem"
+ShowPortLabels "FromPortIcon"
+Permissions "ReadWrite"
+PermitHierarchicalResolution "All"
+TreatAsAtomicUnit off
+MinAlgLoopOccurrences off
+PropExecContextOutsideSubsystem off
+ScheduleAs "Sample time"
+SystemSampleTime "-1"
+RTWSystemCode "Auto"
+RTWFcnNameOpts "Auto"
+RTWFileNameOpts "Auto"
+FunctionInterfaceSpec "void_void"
+FunctionWithSeparateData off
+RTWMemSecFuncInitTerm "Inherit from model"
+RTWMemSecFuncExecute "Inherit from model"
+RTWMemSecDataConstants "Inherit from model"
+RTWMemSecDataInternal "Inherit from model"
+RTWMemSecDataParameters "Inherit from model"
+SimViewingDevice off
+DataTypeOverride "UseLocalSettings"
+DataTypeOverrideAppliesTo "AllNumericTypes"
+MinMaxOverflowLogging "UseLocalSettings"
+Opaque off
+MaskHideContents off
+SFBlockType "NONE"
+VariantControlMode "Expression"
+Variant off
+GeneratePreprocessorConditionals off
+AllowZeroVariantControls off
+PropagateVariantConditions off
+TreatAsGroupedWhenPropagatingVariantConditions on
+ContentPreviewEnabled off
+IsWebBlock off
+IsObserver off
+Latency "0"
+AutoFrameSizeCalculation off
+IsWebBlockPanel off
+}
+
+Block {
+BlockType "Sum"
+IconShape "rectangular"
+Inputs "++"
+CollapseMode "All dimensions"
+CollapseDim "1"
+InputSameDT on
+AccumDataTypeStr "Inherit: Inherit via internal rule"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Same as first input"
+LockScale off
+RndMeth "Floor"
+SaturateOnIntegerOverflow on
+SampleTime "-1"
+}
+
+Block {
+BlockType "Switch"
+Criteria "u2 >= Threshold"
+Threshold "0"
+InputSameDT on
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Inherit via internal rule"
+LockScale off
+RndMeth "Floor"
+SaturateOnIntegerOverflow on
+ZeroCross on
+SampleTime "-1"
+AllowDiffInputSizes off
+}
+
+Block {
+BlockType "Terminator"
+}
+
+Block {
+BlockType "ToWorkspace"
+VariableName "simulink_output"
+MaxDataPoints "1000"
+Decimation "1"
+SaveFormat "Array"
+Save2DSignal "3-D array (concatenate along third dimension)"
+FixptAsFi off
+NumInputs "1"
+SampleTime "0"
+}
+
+Block {
+BlockType "TransferFcn"
+Numerator [1]
+Denominator [1 2 1]
+AbsoluteTolerance "auto"
+ContinuousStateAttributes "''"
+Realization "auto"
+}
+
+Block {
+BlockType "TriggerPort"
+TriggerType "rising"
+IsSimulinkFunction off
+FunctionVisibility "global"
+Variant off
+GeneratePreprocessorConditionals off
+StatesWhenEnabling "inherit"
+PropagateVarSize "During execution"
+ShowOutputPort off
+OutputDataType "auto"
+SampleTimeType "triggered"
+SampleTime "1"
+ZeroCross on
+DisallowConstTsAndPrmTs off
+InitialTriggerSignalState "compatibility (no trigger on first evaluation)"
+PortDimensions "-1"
+TriggerSignalSampleTime "-1"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: auto"
+Interpolate on
+}
+
+Block {
+BlockType "Trigonometry"
+Operator "sin"
+ApproximationMethod "None"
+NumberOfIterations "11"
+OutputSignalType "auto"
+SampleTime "-1"
+}
+
+Block {
+BlockType "UnitDelay"
+InitialCondition "0"
+InputProcessing "Elements as channels (sample based)"
+SampleTime "1"
+StateMustResolveToSignalObject off
+CodeGenStateStorageClass "Auto"
+HasFrameUpgradeWarning off
+}
+}
+}
+
+Stateflow {
+
+machine {
+id 1
+name "dummy_name"
+firstTarget 2
+sfVersion 80000019
+sfDemoChecksum [3282095086 2661187107 2750475886 3891183919]
+zeroJitEmissions 1
+}
+
+chart {
+id 3
+treeNode [0 4 0 0]
+machine 1
+viewObj 3
+firstData 24
+firstEvent 34
+name "Guidance/Guidance Processor\n(Updated @100Hz)"
+windowPosition [70 191 369 709]
+viewLimits [-201.623 498.285 -3.486 390.108]
+zoomFactor 1.049
+chartColor [1 1 1]
+screen [1 1 1920 1200 1.25]
+ssIdHighWaterMark 31
+decomposition SET_CHART
+updateMethod DISCRETE
+sampleTime "0.01"
+chartFileNumber 1
+disableImplicitCasting 1
+supportVariableSizing 0
+}
+
+state {
+id 4
+ssIdNumber 1
+treeNode [3 5 0 17]
+chart 3
+subviewer 3
+firstTransition 11
+labelString "Guidance"
+position [5.833 6.585 284.996 239.13]
+fontSize 8
+type AND_STATE
+decomposition CLUSTER_STATE
+executionOrder 1
+subviewS {
+pos [0 0 0 0]
+fontSize 2
+}
+
+eml {
+fimathString "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', 'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+}
+
+}
+
+state {
+id 5
+ssIdNumber 2
+treeNode [4 0 0 7]
+chart 3
+subviewer 3
+firstTransition 6
+labelString "Target_Search\n  en: Mode=1;Sigma_d=0;incr=-100;Acquire_time=t;\n  du: Sigma_d=Sigma_d+0.01*incr;"
+position [15.886 29.97 184.35 66.627]
+fontSize 6.497
+arrowSize 5.792
+type OR_STATE
+decomposition CLUSTER_STATE
+subviewS {
+pos [0 0 0 0]
+fontSize 2
+}
+
+eml {
+fimathString "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', 'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+}
+
+}
+
+transition {
+id 6
+ssIdNumber 12
+linkNode [5 0 0]
+chart 3
+subviewer 3
+labelString "[Sigma_d>30||Sigma_d<-30]  / incr=-incr;"
+labelPosition [44.026 69.256 124.309 10.521]
+fontSize 6.497
+arrowSize 5.792
+midPoint [30.3984 71.9385]
+dataLimits [15.886 49.916 70.508 96.597]
+executionOrder 1
+
+src {
+id 5
+intersection [4 1 0 0.3915 15.8861 70.5105 0 0]
+}
+
+dst {
+id 5
+intersection [3 0 -1 0.8248 48.1787 96.5971 0 0]
+}
+
+slide {
+mode MIRROR_SLIDE
+sticky BOTH_STICK
+}
+
+}
+
+state {
+id 7
+ssIdNumber 3
+treeNode [4 0 5 8]
+chart 3
+subviewer 3
+labelString "Target_Lock\nen:Mode=2;Acquire_time=t;"
+position [127.19 116.064 94.207 25.386]
+fontSize 6.497
+arrowSize 5.043
+type OR_STATE
+decomposition CLUSTER_STATE
+subviewS {
+pos [0 0 0 0]
+fontSize 2
+}
+
+eml {
+fimathString "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', 'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+}
+
+}
+
+state {
+id 8
+ssIdNumber 4
+treeNode [4 0 7 9]
+chart 3
+subviewer 3
+labelString "Abort\nen:Detonate=1;"
+position [71.26 163.315 53.376 24.196]
+fontSize 6.497
+arrowSize 5.509
+type OR_STATE
+decomposition CLUSTER_STATE
+subviewS {
+pos [0 0 0 0]
+fontSize 2
+}
+
+eml {
+fimathString "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', 'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+}
+
+}
+
+state {
+id 9
+ssIdNumber 5
+treeNode [4 0 8 10]
+chart 3
+subviewer 3
+labelString "Radar_Guided\nen:Mode=3;\nex:az_fix=az_dem;"
+position [143.407 164.562 58.962 35.439]
+fontSize 6.497
+arrowSize 5.043
+type OR_STATE
+decomposition CLUSTER_STATE
+subviewS {
+pos [0 0 0 0]
+fontSize 2
+}
+
+eml {
+fimathString "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', 'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+}
+
+}
+
+state {
+id 10
+ssIdNumber 6
+treeNode [4 0 9 0]
+chart 3
+subviewer 3
+labelString "Blind_Range\nen:Mode=4;"
+position [152.948 217.334 42.751 21.723]
+fontSize 6.497
+arrowSize 5.043
+type OR_STATE
+decomposition CLUSTER_STATE
+subviewS {
+pos [0 0 0 0]
+fontSize 2
+}
+
+eml {
+fimathString "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', 'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+}
+
+}
+
+transition {
+id 11
+ssIdNumber 10
+linkNode [4 0 12]
+chart 3
+subviewer 3
+labelString "{az_fix=-9.81;}"
+labelPosition [81.802 9.556 44.396 10.521]
+fontSize 6.497
+arrowSize 5.792
+midPoint [81.4986 17.6425]
+dataLimits [79.541 83.016 13.694 29.97]
+executionOrder 1
+
+src {
+intersection [0 0 0 0 81.6627 13.6938 0 0]
+}
+
+dst {
+id 5
+intersection [1 0 -1 0.3547 81.2782 29.9697 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 12
+ssIdNumber 11
+linkNode [4 11 13]
+chart 3
+subviewer 3
+labelString "[Acquire==0]"
+labelPosition [242.64 80.741 37.938 10.521]
+fontSize 6.497
+arrowSize 5.792
+midPoint [246.9221 140.2854]
+dataLimits [200.236 248.55 61.52 184.011]
+executionOrder 1
+
+src {
+id 9
+intersection [2 1 0 0.5488 202.369 184.0114 0 0]
+}
+
+dst {
+id 5
+intersection [2 1 0 0.4996 200.2364 63.2576 0 0]
+}
+
+slide {
+mode MIRROR_SLIDE
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 13
+ssIdNumber 13
+linkNode [4 12 14]
+chart 3
+subviewer 3
+labelString "[t-Acquire_time>7] \n/ send(Timeout, Fuze);"
+labelPosition [20.028 125.642 62.25 16]
+fontSize 6.497
+arrowSize 5.509
+midPoint [97.2414 128.4725]
+dataLimits [95.637 98.942 96.597 163.315]
+executionOrder 2
+
+src {
+id 5
+intersection [3 0 1 0.559 97.1866 96.5971 0 0]
+}
+
+dst {
+id 8
+intersection [1 0 -1 0.4877 97.2895 163.3152 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 14
+ssIdNumber 14
+linkNode [4 13 15]
+chart 3
+subviewer 3
+labelString "[Acquire==1]"
+labelPosition [174.206 95.894 37.938 10.521]
+fontSize 6.497
+arrowSize 5.043
+midPoint [173.6565 101.8777]
+dataLimits [172.144 175.169 96.597 116.064]
+executionOrder 1
+
+src {
+id 5
+intersection [3 0 1 0.1442 173.6565 96.5971 0 0]
+}
+
+dst {
+id 7
+intersection [1 0 -1 0.4932 173.6565 116.0641 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 15
+ssIdNumber 15
+linkNode [4 14 16]
+chart 3
+subviewer 3
+labelString "[t-Acquire_time>0.2]"
+labelPosition [173.033 141.834 62.154 10.521]
+fontSize 6.497
+arrowSize 5.043
+midPoint [173.0063 147.9985]
+dataLimits [171.299 174.325 141.45 164.562]
+executionOrder 1
+
+src {
+id 7
+intersection [3 0 1 0.5129 173.0815 141.4499 0 0]
+}
+
+dst {
+id 9
+intersection [1 0 -1 0.4987 172.8117 164.5621 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 16
+ssIdNumber 16
+linkNode [4 15 0]
+chart 3
+subviewer 3
+labelString "[Range<200]"
+labelPosition [174.383 196.117 40.36 10.521]
+fontSize 6.497
+arrowSize 5.043
+midPoint [173.7289 204.5392]
+dataLimits [172.216 175.242 200.001 217.334]
+executionOrder 2
+
+src {
+id 9
+intersection [3 0 1 0.4857 173.7289 200.0007 0 0]
+}
+
+dst {
+id 10
+intersection [1 0 -1 0.4861 173.7289 217.334 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+state {
+id 17
+ssIdNumber 7
+treeNode [3 18 4 0]
+chart 3
+subviewer 3
+firstTransition 20
+labelString "Fuze"
+position [6.588 251.257 281.702 128.78]
+fontSize 8
+superState GROUPED
+type AND_STATE
+decomposition CLUSTER_STATE
+executionOrder 2
+subviewS {
+pos [0 0 0 0]
+fontSize 2
+}
+
+eml {
+fimathString "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', 'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+}
+
+}
+
+state {
+id 18
+ssIdNumber 9
+treeNode [17 0 0 19]
+chart 3
+subviewer 3
+labelString "Armed\nen:Fuze=1;"
+position [215.605 302.49 55.651 23.473]
+fontSize 7
+arrowSize 8.226
+isGrouped 1
+type OR_STATE
+decomposition CLUSTER_STATE
+subviewS {
+pos [0 0 0 0]
+fontSize 2
+}
+
+eml {
+fimathString "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', 'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+}
+
+}
+
+state {
+id 19
+ssIdNumber 8
+treeNode [17 0 18 0]
+chart 3
+subviewer 3
+labelString "Inert\nen:Fuze = 0;"
+position [12.808 303.191 60.082 25.11]
+fontSize 7
+arrowSize 8.226
+isGrouped 1
+type OR_STATE
+decomposition CLUSTER_STATE
+subviewS {
+pos [0 0 0 0]
+fontSize 2
+}
+
+eml {
+fimathString "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', 'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+}
+
+}
+
+transition {
+id 20
+ssIdNumber 20
+linkNode [17 0 21]
+chart 3
+subviewer 3
+labelString "[in(Guidance.Radar_Guided)&&Range<1000]"
+labelPosition [71.348 266.627 136.417 10.521]
+fontSize 7
+arrowSize 8.226
+midPoint [146.5546 254.1595]
+isGrouped 1
+dataLimits [51.894 232.105 254.153 303.191]
+executionOrder 2
+
+src {
+id 19
+intersection [1 0 -1 0.6505 51.8938 303.1907 0 0]
+}
+
+dst {
+id 18
+intersection [1 0 -1 0.2521 229.6373 302.4898 0 0]
+}
+
+slide {
+mode MIRROR_SLIDE
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 21
+ssIdNumber 17
+linkNode [17 20 22]
+chart 3
+subviewer 3
+labelPosition [34.903 281.335 5.65 10.521]
+fontSize 7
+arrowSize 8.226
+midPoint [39.4209 282.6926]
+isGrouped 1
+dataLimits [34.156 39.926 273.365 303.191]
+executionOrder 1
+
+src {
+intersection [0 0 0 0 36.6625 273.3649 0 0]
+}
+
+dst {
+id 19
+intersection [1 0 -1 0.3964 36.6236 303.1907 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 22
+ssIdNumber 19
+linkNode [17 21 23]
+chart 3
+subviewer 3
+labelString "Timeout"
+labelPosition [126.112 308.781 24.216 10.521]
+fontSize 7
+arrowSize 8.226
+midPoint [142.9692 313.5993]
+isGrouped 1
+dataLimits [72.89 215.605 311.331 316.267]
+executionOrder 1
+
+src {
+id 19
+intersection [2 1 0 0.4054 72.8903 313.3718 0 0]
+}
+
+dst {
+id 18
+intersection [4 -1 0 0.5182 215.6053 313.7991 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 23
+ssIdNumber 18
+linkNode [17 22 0]
+chart 3
+subviewer 3
+labelString "enter(Guidance.Target_Search)"
+labelPosition [81.657 353.755 94.442 10.521]
+fontSize 7
+arrowSize 8.226
+midPoint [135.032 376.222]
+isGrouped 1
+dataLimits [48.443 230.08 325.963 376.238]
+executionOrder 1
+
+src {
+id 18
+intersection [3 0 1 0.7399 230.0804 325.9628 0 0]
+}
+
+dst {
+id 19
+intersection [3 0 1 0.3658 50.9112 328.3007 0 0]
+}
+
+slide {
+mode MIRROR_SLIDE
+sticky BOTH_STICK
+}
+
+}
+
+data {
+id 24
+ssIdNumber 21
+linkNode [3 0 25]
+machine 1
+name "Range"
+scope INPUT_DATA
+dataType "double"
+props {
+type {
+primitive SF_DOUBLE_TYPE
+units metres
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 25
+ssIdNumber 22
+linkNode [3 24 26]
+machine 1
+name "Detonate"
+scope OUTPUT_DATA
+dataType "boolean"
+props {
+frame SF_FRAME_NO
+type {
+primitive SF_BOOLEAN_TYPE
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 26
+ssIdNumber 23
+linkNode [3 25 27]
+machine 1
+name "Fuze"
+scope OUTPUT_DATA
+dataType "boolean"
+props {
+frame SF_FRAME_NO
+type {
+primitive SF_BOOLEAN_TYPE
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 27
+ssIdNumber 24
+linkNode [3 26 28]
+machine 1
+name "Sigma_d"
+description "Demanded Seeker Look Angle"
+scope OUTPUT_DATA
+dataType "double"
+props {
+frame SF_FRAME_NO
+type {
+primitive SF_DOUBLE_TYPE
+units deg
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 28
+ssIdNumber 25
+linkNode [3 27 29]
+machine 1
+name "Mode"
+scope OUTPUT_DATA
+dataType "uint8"
+props {
+frame SF_FRAME_NO
+type {
+primitive SF_UINT8_TYPE
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 29
+ssIdNumber 26
+linkNode [3 28 30]
+machine 1
+name "Acquire"
+description "Seeker Acquisition Flag"
+scope INPUT_DATA
+dataType "boolean"
+props {
+type {
+primitive SF_BOOLEAN_TYPE
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 30
+ssIdNumber 27
+linkNode [3 29 31]
+machine 1
+name "Acquire_time"
+scope LOCAL_DATA
+dataType "double"
+props {
+type {
+primitive SF_DOUBLE_TYPE
+units Secs
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 31
+ssIdNumber 28
+linkNode [3 30 32]
+machine 1
+name "incr"
+description "Seeker Search Rate"
+scope LOCAL_DATA
+dataType "double"
+props {
+type {
+primitive SF_DOUBLE_TYPE
+units deg/sec
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 32
+ssIdNumber 29
+linkNode [3 31 33]
+machine 1
+name "az_dem"
+scope INPUT_DATA
+dataType "double"
+props {
+type {
+primitive SF_DOUBLE_TYPE
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 33
+ssIdNumber 30
+linkNode [3 32 0]
+machine 1
+name "az_fix"
+scope OUTPUT_DATA
+dataType "double"
+props {
+initialValue -9.81
+frame SF_FRAME_NO
+type {
+primitive SF_DOUBLE_TYPE
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+event {
+id 34
+ssIdNumber 31
+linkNode [3 0 0]
+machine 1
+name "Timeout"
+scope LOCAL_EVENT
+trigger EITHER_EDGE_EVENT
+}
+
+target {
+id 2
+linkNode [1 0 0]
+machine 1
+name "sfun"
+codeFlags ""
+}
+
+instance {
+id 35
+machine 1
+chart 3
+name "Guidance/Guidance Processor\n(Updated @100Hz)"
+}
+
+}
