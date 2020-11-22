@@ -234,7 +234,10 @@ class Transformer:
         # we don't want to remove any intermediate file in 'development' mode.
         if not cls._args['devt_mode']:
             Utils.remove_file(cls.filepath_original_mdl_at_current_directory)
-            Utils.remove_file(cls.filepath_output_mdl_at_current_directory)
+            # the file 'output.mdl' is produced in the current directory as an intermediate file during transformation 
+            # If the user specified --mdl-filepath as 'output.mdl', don't delete this file, otherwise delete it. 
+            if cls.filepath_output_mdl_at_current_directory != os.path.abspath('output.mdl'):
+                Utils.remove_file(cls.filepath_output_mdl_at_current_directory)
             Utils.remove_dirpath(cls.dirpath_working)
 
     @classmethod
