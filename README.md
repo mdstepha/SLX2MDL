@@ -1,7 +1,8 @@
-# slx2mdl-transormation
+# SLX2MDL transormation
 
+---
 - INSTALLATION:
-  - MacOS, Linux
+  - Linux, MacOS 
     - Make sure '/usr/local/bin/' is in the env var PATH
     - Make sure python3 is installed 
     - Run the script install.py as follows: 
@@ -74,7 +75,7 @@
           conversions. 
 
   - devt-mode 
-    - specifies whether to run the transformation in 'development' mode or in 'prodution' mode
+    - specifies whether to run the transformation in 'development' mode or in 'production' mode
     - valid values: 
       - 'yes' 
         - working directory is not deleted after transformation completes so that intermediate files 
@@ -110,6 +111,7 @@
     - valid options:
       - 'yes'
         - prints performance metrics i.e. number_of_lines_in_output_mdl_file, time_taken
+        - if devt-mode = yes, the performance metrics are also written in working-dir/performance-report.csv. If mode = batch, the metrics of all slx2mdl conversions are written in the same csv file. 
       - 'no'
         - default option
         - does not print these details 
@@ -120,7 +122,7 @@ EXAMPLE USAGE (Command line):
   1. slx2mdl --mode single --slx-filepath a/b/c/mymodel.slx  --mdl-filepath=x/y/z/mymodel_converted.mdl
   2. slx2mdl --mode batch --slx-dirpath a/b/my_slx_files --exit-on-failure no 
 
-- On Windows OS (This is also valid for Unix-like OS)
+- On Windows OS (This approach is valid for Unix-like OS as well)
   1. python3 <path_to_slx2mdl.py> --mode single --slx-filepath a/b/c/mymodel.slx  --mdl-filepath=x/y/z/mymodel_converted.mdl
   2. python3 <path_to_slx2mdl.py> --mode batch --slx-dirpath a/b/my_slx_files --exit-on-failure no 
 
