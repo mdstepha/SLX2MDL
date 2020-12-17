@@ -94,7 +94,7 @@
           <current_directory>/outputs-<name_of_input_slx_directory>
 
 
-  - remove-slx-file-on-success-in-batch-mode
+  - remove-slx
     - specifies whether to delete the source slx file after the transformation completes successfully
     - relevant only when mode = 'batch' and devt-mode = 'yes' (default option is used in other cases)
     - this is useful during development time when we need to test this tool on a large set of slx files (batch mode), by fixing the transformation logic (mostly adding new components as they are discovered) incrementally as new components are discovered -- we don't want to run the tool again in the slx files that were transformed successfully. 
