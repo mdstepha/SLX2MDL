@@ -79,6 +79,13 @@ class Utils:
         # otherwise these files either not be created at all, or deleted after the transformation completes or throws exception. 
         parser.add_argument('--devt-mode')  # 'yes'/'no' (default: 'no')
 
+        # specifies whether to delete the source slx file after the transformation completes successfully
+        # relevant only when --mode == 'batch' and --devt-mode == 'yes'
+        # this is useful during development time when we need to test this tool on a large set of slx files (batch mode), 
+        # by fixing the transformation logic (mostly adding new components as they are discovered) incrementally as new components 
+        # are discovered -- we don't want to run the tool again in the slx files that were transformed successfully.
+        parser.add_argument('--remove-slx')  # 'yes'/'no'  (default: 'no')
+
         # if dash (-) is present in the input argument,
         # it is automatically converted to underscore.
         # eg. slx-filepath --> slx_filepath
@@ -114,6 +121,8 @@ class Utils:
             if not os.path.exists(args['slx_dirpath']):
                 raise Exception(f"Invalid slx-dirpath: '{args['slx_dirpath']}'")
 
+        args['remove_slx'] = True if args['remove_slx'] == 'yes' else False 
+    
         return args
 
     @classmethod
@@ -504,6 +513,11 @@ class Utils:
 
                                     attrname = xml[index_attrname_start: index_attrname_end]
                                     attrval = xml[index_attrval_start: index_attrval_end]
+
+                                    # first found in corpus/matlab-central/HEV_Electrical_Lib.slx
+                                    # (see line: '<Block BlockType="Gain" Name="1\ib3" SID="2:35">' in file 'merged_uncommented_no_multiline_str_content'), 
+                                    # some tag attribute values (not just the tag content) contain characters that need replacement
+                                    attrval = Utils.str_content_replacements(attrval)
                                     xml_attr = XmlAttr(attrname, attrval)
                                     xml_attrs.append(xml_attr)
 
@@ -578,6 +592,7 @@ class Utils:
             'Display',          # first found in powerwindow05
             'Initialization',   # first found in powerwindow05
             'Callback',         # first found in applications/aero_dap3dof
+            'Option',           # first foundin github/AC_Quadcopter_Simulation
         ]
 
         # for any tag, start patterns can be of 2 types.
@@ -649,58 +664,72 @@ class Utils:
             # (the whitespace-like character is inside the quotes) 
             '�': '',
             '&quot;': '\\"',
+            '&#x9;': '	',  # tab character  (first found in corpus/github/ctrl_student)
+
+            # previously, in the method Utils.str_content_replacements we were making each 
+            # replacements individually (eg: \n --> \\n, \t --> \\t), which are now commented 
+            # out as we are using a generic replacement (\ --> \\) in that method. This generic
+            # replacement is still under test, so we have not deleted the previous individual 
+            # replacements entirely (we've just commented them out)
+            # With that generic replacement in method Utils.str_content_replacements, the 
+            # following replacemnents in this method i.e. (eg. \alpha --> \\alpha) introduce
+            # 'extra' unintended backslash character. Therefore this section has been commented out.
+            # we have not deleted it yet because the generic replacement code in Utils.str_content_replacements()
+            # (i.e. \ --> \\) is still experimental -- in case it fails we will have to resort to these individual 
+            # transformations 
+
             # alpha and delta were discovered in 'selxAircraftExample'
-            '\\alpha': '\\\\alpha',   #  \alpha --> \\alpha 
-            '\\Alpha': '\\\\Alpha',   #  \alpha --> \\alpha 
-            '\\beta': '\\\\beta', 
-            '\\Beta': '\\\\Beta', 
-            '\\gamma': '\\\\gamma', 
-            '\\Gamma': '\\\\Gamma', 
-            '\\delta': '\\\\delta', 
-            '\\Delta': '\\\\Delta', 
-            '\\epsilon': '\\\\epsilon', 
-            '\\Epsilon': '\\\\Epsilon', 
-            '\\zeta': '\\\\zeta', 
-            '\\Zeta': '\\\\Zeta', 
-            '\\eta': '\\\\eta', 
-            '\\Eta': '\\\\Eta', 
-            '\\theta': '\\\\theta', 
-            '\\Theta': '\\\\Theta', 
-            '\\iota': '\\\\iota', 
-            '\\Iota': '\\\\Iota', 
-            '\\kappa': '\\\\kappa', 
-            '\\Kappa': '\\\\Kappa', 
-            '\\lambda': '\\\\lambda', 
-            '\\Lambda': '\\\\Lambda', 
-            '\\mu': '\\\\mu', 
-            '\\Mu': '\\\\Mu', 
-            # 'nu' is commented out because it brought unintended changes: eg, \nusing --> \\nusing 
-            # so, currently our transformation fails if model contains 'nu' character (rare case)
-            # TODO: solve it 
-            # '\\nu': '\\\\nu',   
-            '\\Nu': '\\\\Nu',   
-            '\\xi': '\\\\xi', 
-            '\\Xi': '\\\\Xi', 
-            '\\omikron': '\\\\omikron', 
-            '\\Omikron': '\\\\Omikron', 
-            '\\pi': '\\\\pi', 
-            '\\Pi': '\\\\Pi', 
-            '\\rho': '\\\\rho', 
-            '\\Rho': '\\\\Rho', 
-            '\\sigma': '\\\\sigma', 
-            '\\Sigma': '\\\\Sigma', 
-            '\\tau': '\\\\tau', 
-            '\\Tau': '\\\\Tau', 
-            '\\upsilon': '\\\\upsilon', 
-            '\\Upsilon': '\\\\Upsilon', 
-            '\\phi': '\\\\phi', 
-            '\\Phi': '\\\\Phi', 
-            '\\chi': '\\\\chi', 
-            '\\Chi': '\\\\Chi', 
-            '\\psi': '\\\\psi', 
-            '\\Psi': '\\\\Psi', 
-            '\\omega': '\\\\omega', 
-            '\\Omega': '\\\\Omega', 
+            # '\\alpha': '\\\\alpha',   #  \alpha --> \\alpha 
+            # '\\Alpha': '\\\\Alpha',   #  \alpha --> \\alpha 
+            # '\\beta': '\\\\beta', 
+            # '\\Beta': '\\\\Beta', 
+            # '\\gamma': '\\\\gamma', 
+            # '\\Gamma': '\\\\Gamma', 
+            # # '\\delta': '\\\\delta', 
+            # '\\Delta': '\\\\Delta', 
+            # '\\epsilon': '\\\\epsilon', 
+            # '\\Epsilon': '\\\\Epsilon', 
+            # '\\zeta': '\\\\zeta', 
+            # '\\Zeta': '\\\\Zeta', 
+            # '\\eta': '\\\\eta', 
+            # '\\Eta': '\\\\Eta', 
+            # '\\theta': '\\\\theta', 
+            # '\\Theta': '\\\\Theta', 
+            # '\\iota': '\\\\iota', 
+            # '\\Iota': '\\\\Iota', 
+            # '\\kappa': '\\\\kappa', 
+            # '\\Kappa': '\\\\Kappa', 
+            # '\\lambda': '\\\\lambda', 
+            # '\\Lambda': '\\\\Lambda', 
+            # '\\mu': '\\\\mu', 
+            # '\\Mu': '\\\\Mu', 
+            # # 'nu' is commented out because it brought unintended changes: eg, \nusing --> \\nusing 
+            # # so, currently our transformation fails if model contains 'nu' character (rare case)
+            # # TODO: solve it 
+            # # '\\nu': '\\\\nu',   
+            # '\\Nu': '\\\\Nu',   
+            # '\\xi': '\\\\xi', 
+            # '\\Xi': '\\\\Xi', 
+            # '\\omikron': '\\\\omikron', 
+            # '\\Omikron': '\\\\Omikron', 
+            # '\\pi': '\\\\pi', 
+            # '\\Pi': '\\\\Pi', 
+            # '\\rho': '\\\\rho', 
+            # '\\Rho': '\\\\Rho', 
+            # '\\sigma': '\\\\sigma', 
+            # '\\Sigma': '\\\\Sigma', 
+            # '\\tau': '\\\\tau', 
+            # '\\Tau': '\\\\Tau', 
+            # '\\upsilon': '\\\\upsilon', 
+            # '\\Upsilon': '\\\\Upsilon', 
+            # '\\phi': '\\\\phi', 
+            # '\\Phi': '\\\\Phi', 
+            # '\\chi': '\\\\chi', 
+            # '\\Chi': '\\\\Chi', 
+            # '\\psi': '\\\\psi', 
+            # '\\Psi': '\\\\Psi', 
+            # '\\omega': '\\\\omega', 
+            # '\\Omega': '\\\\Omega', 
         }
 
         for k, v in replacements.items():
@@ -716,9 +745,17 @@ class Utils:
         # IMPORTANT replacement that affect xml parsing such as '&gt;' --> '>'
         # are not made by this method
 
+
         replacements = {
-            '\\n': '\\\\n',  # \n --> \\n   # first found in automotive/sldemo_wheelspeed_absbrake
-            '\\t': '\\\\t',  # \t --> \\t   # first found in automotive/sldemo_wheelspeed_absbrake
+            '\\' : '\\\\',   # \ --> \\ 
+
+            # todo: if the above replacement (\ --> \\) introduces unintended consequences, 
+            # get rid of the above entry and restore the following (commented-out) ones
+
+            # '\\n': '\\\\n',  # \n --> \\n  # first found in automotive/sldemo_wheelspeed_absbrake
+            # '\\t': '\\\\t',  # \t --> \\t  # first found in automotive/sldemo_wheelspeed_absbrake
+            # '\\x': '\\\\x',  # \x --> \\x  # first found in corpus/matlab-central/Chassis_Alpha.slx
+            # '\\i': '\\\\i',  # \i --> \\i  # first found in corpus/matlab-central/HEV_Electrical_Lib.slx 
         }
 
         for k, v in replacements.items():

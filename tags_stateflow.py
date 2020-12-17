@@ -6,13 +6,13 @@ from commons import Utils, UtilsStfl, XmlElement
 class StflXmlElement(XmlElement):
     # these mdl attributes are based on id, and thus the value from
     # xml cannot be used directly while forming mdl string.
-    # In XML tag they may either as attributes or enclosed <P> tags
+    # In XML tag they may appear either as attributes or enclosed <P> tags
     _id_based_mdl_attrs = [
         'chart',
         'firstSubWire',     # found in simulink_general/sldemo_boiler
         'id',
         'machine',
-        'outputData',       # found in state
+        'outputData',       # found in state, chart (corpus/matlab-central/stateflow_example.slx)
         'outputState',
         'quantum',          # found in automotive/sldemo_fuelsys(junction)
         'SSID',
@@ -253,7 +253,10 @@ class Chart(StflXmlElement):
         self.ps = []
         self.subviewSs = []
         self.emls = []
+        self.activeStateOutputs = []  # first found in corpus/matlab-central/stateflow_example.slx 
+        self.plantModelingInfos = []  # first found in corpus/other/fwr.slx 
         self.children = None
+        
 
         for x in self.inner_xmls:
             if x.tag == 'P':
@@ -264,6 +267,9 @@ class Chart(StflXmlElement):
                     # slx contains viewObj in <P> whose value is equal to its own idslx (observation so far) which needs to be mapped to idmdl
                     self.idmdl_viewObj = UtilsStfl.idmdl_by_idslx(idslx=p.content)
 
+                if p.name_attr.value == 'outputData':
+                    self.idmdl_outputData = UtilsStfl.idmdl_by_ssid(p.content, self.idmdl)
+
             if x.tag == 'subviewS':
                 self.subviewSs.append(SubviewS.from_StflXmlElement(x))
                 innerxml_used[x] = True
@@ -272,6 +278,14 @@ class Chart(StflXmlElement):
                 self.emls.append(Eml.from_StflXmlElement(x))
                 innerxml_used[x] = True
 
+            if x.tag == 'activeStateOutput':
+                self.activeStateOutputs.append(ActiveStateOutput.from_StflXmlElement(x))
+                innerxml_used[x] = True
+            
+            if x.tag == 'plantModelingInfo':
+                self.plantModelingInfos.append(PlantModelingInfo.from_StflXmlElement(x))
+                innerxml_used[x] = True
+            
             if x.tag == 'Children':
                 self.children = Children.from_StflXmlElement(x)
                 innerxml_used[x] = True
@@ -300,6 +314,8 @@ class Chart(StflXmlElement):
             str_ += f'firstJunction {self.firstJunction.idmdl}\n'
         if self.firstTransition:
             str_ += f'firstTransition {self.firstTransition.idmdl}\n'
+        if self.idmdl_outputData:
+            str_ += f'outputData {self.idmdl_outputData}\n'
 
         for x in self.attrs:
             if not x.name in self._id_based_mdl_attrs:
@@ -314,6 +330,12 @@ class Chart(StflXmlElement):
 
         for x in self.emls:
             str_ += f'{x.strmdl}\n'
+
+        for x in self.activeStateOutputs:
+            str_ += f'{x.strmdl}\n'
+
+        for x in self.plantModelingInfos:
+            str_ += f'{x.strmdl}\n' 
 
         str_ += '}\n\n'
 
@@ -417,6 +439,7 @@ class Data(StflXmlElement):
         self.ps = []
         self.propss = []
         self.messages = []  # first found in design-model-behavior/slexDynamicSchedulingExample
+        self.loggingInfos = []  # first found in corpus/github-downloaded/ATWS.slx
 
         for x in self.inner_xmls:
             if x.tag == 'P':
@@ -434,6 +457,12 @@ class Data(StflXmlElement):
             if x.tag == 'message':
                 self.messages.append(Message.from_StflXmlElement(x))
                 innerxml_used[x] = True
+
+            if x.tag == 'loggingInfo':
+                self.loggingInfos.append(LoggingInfo.from_StflXmlElement(x))
+                innerxml_used[x] = True
+
+            
 
         for ix, u in innerxml_used.items():
             if not u:
@@ -466,6 +495,11 @@ class Data(StflXmlElement):
 
         for x in self.messages:
             str_ += f'{x.strmdl}\n'
+
+        for x in self.loggingInfos:
+            str_ += f'{x.strmdl}\n'
+
+            
 
         str_ += '}\n\n'
         return str_
@@ -1007,6 +1041,50 @@ class P(StflXmlElement):
         if self.name_attr.value in quoted_list:
             return quoted
         return unquoted
+
+
+# this tag was first found in Corpus/other/fwr.slx
+# This slx file has 'empty' <plantModelingInfo>. 
+# so, at this point, we don't know what tags are contained inside
+# '<plantModelingInfo'>, and how they are transformed into mdl format.
+# Thus, at this point, we assume only <P> tags are contained inside <plantModelingInfo> tag. 
+class PlantModelingInfo(StflXmlElement):
+    def __init__(self, strval, parent_xml):
+        strval = strval.strip()
+        assert strval.startswith('<plantModelingInfo') and strval.endswith('</plantModelingInfo>')
+        super().__init__(strval, parent_xml)
+
+        innerxml_used = {x: False for x in self.inner_xmls if x.type == 'xml'}
+        self.ps = []
+
+        for x in self.inner_xmls:
+            if x.tag == 'P':
+                self.ps.append(P.from_StflXmlElement(x))
+                innerxml_used[x] = True
+
+        for ix, u in innerxml_used.items():
+            if not u:
+                raise Exception(f"Inner XML of 'PlantModelingInfo' not used.\nUnused XML:\n\n{ix.strval}")
+
+    @classmethod
+    def from_StflXmlElement(cls, stfl_xml_element):
+        return PlantModelingInfo(stfl_xml_element.strval, stfl_xml_element.parent_xml)
+
+    @property
+    def strmdl(self):
+        str_ = 'plantModelingInfo {\n'
+
+        for x in self.attrs:
+            if not x.name in self._id_based_mdl_attrs:
+                str_ += f'{x.name} "{x.value}"\n'
+
+        for x in self.ps:
+            if not x.name_attr.value in self._id_based_mdl_attrs:
+                str_ += f'{x.strmdl}\n'
+
+        str_ += '}\n\n'
+        return str_
+
 
 
 class Props(StflXmlElement):

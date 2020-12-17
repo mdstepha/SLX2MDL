@@ -89,6 +89,7 @@ class Array(XmlElement):
         self.objects = []
         self.cells = []
         self.mATStructs = []
+        self.arrays = []  # found in matlab-central/RC_Demo_C2000_Control_Unit
 
         for x in self.inner_xmls:
 
@@ -107,6 +108,12 @@ class Array(XmlElement):
             if x.tag == 'MATStruct':
                 self.mATStructs.append(MATStruct.from_XmlElement(x))
                 innerxml_used[x] = True
+
+            if x.tag == 'Array':
+                self.arrays.append(Array.from_XmlElement(x))
+                innerxml_used[x] = True
+
+                
 
         for ix, u in innerxml_used.items():
             if not u:
@@ -140,6 +147,11 @@ class Array(XmlElement):
         for x in self.mATStructs:
             str_ += f'{x.strmdl}\n'
 
+        for x in self.arrays:
+            str_ += f'{x.strmdl}\n'
+
+            
+
         str_ += '}\n\n'
         return str_
 
@@ -158,6 +170,10 @@ class Block(XmlElement):
         self.instanceDatas = []
         self.lists = []
         self.functionPorts = []
+        self.objects = [] 
+        self.linkDatas = []  # found in corpus/matlab-central/Dual_Clutch_Trans.slx 
+        self.instanceDatas = [] # found in corpus/matlab-central/HEV_Battery_Lib.slx
+        self.arrays = []  # found in corpus/github/daq2_sim.slx
 
         for x in self.inner_xmls:
             if x.tag == 'P':
@@ -186,6 +202,22 @@ class Block(XmlElement):
 
             if x.tag == 'FunctionPort':
                 self.functionPorts.append(FunctionPort.from_XmlElement(x))
+                innerxml_used[x] = True
+
+            if x.tag == 'Object':
+                self.objects.append(Object.from_XmlElement(x))
+                innerxml_used[x] = True
+
+            if x.tag == 'LinkData':
+                self.linkDatas.append(LinkData.from_XmlElement(x))
+                innerxml_used[x] = True
+
+            if x.tag == 'InstanceData':
+                self.instanceDatas.append(InstanceData.from_XmlElement(x))
+                innerxml_used[x] = True
+
+            if x.tag == 'Array':
+                self.arrays.append(Array.from_XmlElement(x))
                 innerxml_used[x] = True
 
         for ix, u in innerxml_used.items():
@@ -223,6 +255,19 @@ class Block(XmlElement):
 
         for x in self.functionPorts:
             str_ += f'{x.strmdl}\n'
+
+        for x in self.objects: 
+            str_ += f'{x.strmdl}\n'
+
+        for x in self.linkDatas: 
+            str_ += f'{x.strmdl}\n'
+
+        for x in self.instanceDatas: 
+            str_ += f'{x.strmdl}\n'
+
+        for x in self.arrays: 
+            str_ += f'{x.strmdl}\n'
+
 
         str_ += '}\n\n'
         return str_
@@ -483,7 +528,16 @@ class Cell(XmlElement):
         unquoted = f'Cell {self.content}'
         boxed = f'Cell [{self.content}]'
 
-        return quoted
+        # as seen from corpus/matlab-central/fir_filter_example.slx, 
+        # if attribute 'Class' = 'double', then content is boxed
+        # if attribute 'Class' = 'char', then content is quoted
+        
+        if self.class_attr and self.class_attr.value in ['double']:
+            if self.content.startswith('[') and self.content.endswith(']'):
+                return unquoted
+            return boxed
+        return quoted  # default 
+        
 
 
 class ConfigSet(XmlElement):
@@ -529,6 +583,58 @@ class ConfigSet(XmlElement):
             str_ += f'{x.strmdl}\n'
 
         str_ += '}\n\n'
+        return str_
+
+
+class ConfigurationSet(XmlElement):
+    def __init__(self, strval, parent_xml):
+        strval = strval.strip()
+        assert strval.startswith('<ConfigurationSet') and strval.endswith('</ConfigurationSet>')
+        super().__init__(strval, parent_xml)
+
+        innerxml_used = {x: False for x in self.inner_xmls if x.type == 'xml'}
+        self.ps = []
+        self.objects = []
+        self.arrays = []
+
+        for x in self.inner_xmls:
+            if x.tag == 'P':
+                self.ps.append(P.from_XmlElement(x))
+                innerxml_used[x] = True
+
+            if x.tag == 'Object':
+                self.objects.append(Object.from_XmlElement(x))
+                innerxml_used[x] = True
+
+            if x.tag == 'Array':
+                self.arrays.append(Array.from_XmlElement(x))
+                innerxml_used[x] = True
+
+        for ix, u in innerxml_used.items():
+            if not u:
+                raise Exception(f"Inner XML of 'ConfigurationSet' not used.\nUnused XML:\n\n{ix.strval}")
+
+    @classmethod
+    def from_XmlElement(cls, xml_element):
+        return ConfigurationSet(xml_element.strval, xml_element.parent_xml)
+
+    @property
+    def strmdl(self):
+        str_ = ''  # special
+
+        for x in self.attrs:
+            str_ += f'{x.name} "{x.value}"\n'
+
+        for x in self.ps:
+            str_ += f'{x.strmdl}\n'
+
+        for x in self.objects:
+            str_ += f'{x.strmdl}\n'
+
+        for x in self.arrays:
+            str_ += f'{x.strmdl}\n'
+
+        str_ += '\n\n'
         return str_
 
 
@@ -617,6 +723,42 @@ class ConfigManagerSettings(XmlElement):
         return str_
 
 
+class Connector(XmlElement):
+    def __init__(self, strval, parent_xml):
+        strval = strval.strip()
+        assert strval.startswith('<Connector') and strval.endswith('</Connector>')
+        super().__init__(strval, parent_xml)
+
+        innerxml_used = {x: False for x in self.inner_xmls if x.type == 'xml'}
+        self.ps = []
+
+        for x in self.inner_xmls:
+            if x.tag == 'P':
+                self.ps.append(P.from_XmlElement(x))
+                innerxml_used[x] = True
+
+        for ix, u in innerxml_used.items():
+            if not u:
+                raise Exception(f"Inner XML of 'Connector' not used.\nUnused XML:\n\n{ix.strval}")
+
+    @classmethod
+    def from_XmlElement(cls, xml_element):
+        return Connector(xml_element.strval, xml_element.parent_xml)
+
+    @property
+    def strmdl(self):
+        str_ = 'Connector {\n'
+
+        for x in self.attrs:
+            str_ += f'{x.name} "{x.value}"\n'
+
+        for x in self.ps:
+            str_ += f'{x.strmdl}\n'
+
+        str_ += '}\n\n'
+        return str_
+
+
 class ControlOptions(XmlElement):
     def __init__(self, strval, parent_xml):
         strval = strval.strip()
@@ -651,6 +793,52 @@ class ControlOptions(XmlElement):
         return str_
 
 
+class CustomProperty(XmlElement):
+    def __init__(self, strval, parent_xml):
+        strval = strval.strip()
+        assert strval.startswith('<CustomProperty') and strval.endswith('</CustomProperty>')
+        super().__init__(strval, parent_xml)
+
+        innerxml_used = {x: False for x in self.inner_xmls if x.type == 'xml'}
+        self.ps = []
+        self.enumStrPairss = []  # first found in corpus/github-downloaded/CSEI_u.slx
+
+        for x in self.inner_xmls:
+            if x.tag == 'P':
+                self.ps.append(P.from_XmlElement(x))
+                innerxml_used[x] = True
+
+            if x.tag == 'EnumStrPairs':
+                self.enumStrPairss.append(EnumStrPairs.from_XmlElement(x))
+                innerxml_used[x] = True
+
+
+        for ix, u in innerxml_used.items():
+            if not u:
+                raise Exception(f"Inner XML of 'CustomProperty' not used.\nUnused XML:\n\n{ix.strval}")
+
+    @classmethod
+    def from_XmlElement(cls, xml_element):
+        return CustomProperty(xml_element.strval, xml_element.parent_xml)
+
+    @property
+    def strmdl(self):
+        str_ = 'CustomProperty {\n'
+
+        for x in self.attrs:
+            str_ += f'{x.name} "{x.value}"\n'
+
+        for x in self.ps:
+            str_ += f'{x.strmdl}\n'
+
+        for x in self.enumStrPairss:
+            str_ += f'{x.strmdl}\n'
+
+            
+
+        str_ += '}\n\n'
+        return str_
+
 class Description(XmlElement):
     def __init__(self, strval, parent_xml):
         strval = strval.strip()
@@ -680,6 +868,7 @@ class DialogControl(XmlElement):
         self.dialogControls = []  # there can be nested <DialogControl> see: applications/sldemo_autotrans
         self.callbacks = []
         self.tooltips = []
+        self.filePaths = []  # first found in corpus/matlab-central/Contact_Forces_Lib.slx
 
         for x in self.inner_xmls:
             if x.tag == 'P':
@@ -705,6 +894,12 @@ class DialogControl(XmlElement):
             if x.tag == 'Tooltip':
                 self.tooltips.append(Tooltip.from_XmlElement(x))
                 innerxml_used[x] = True
+
+            if x.tag == 'FilePath':
+                self.filePaths.append(FilePath.from_XmlElement(x))
+                innerxml_used[x] = True
+
+                
 
         for ix, u in innerxml_used.items():
             if not u:
@@ -785,6 +980,11 @@ class DialogControl(XmlElement):
         for x in self.tooltips:
             str_ += f'{x.strmdl}\n'
 
+        for x in self.filePaths:
+            str_ += f'{x.strmdl}\n'
+
+            
+
         str_ += '}\n\n'
         return str_
 
@@ -803,6 +1003,13 @@ class DialogControl(XmlElement):
             'Button',
             'Group',
             'Text',
+            'TabContainer',  # first found in corpus/github-downloaded/adi_ad961_models.slx 
+            'Tab',  # first found in corpus/github-downloaded/adi_ad961_models.slx 
+            'CollapsiblePanel',  # first found in corpus/github-downloaded/adi_ad961_models.slx 
+            'Control',  # first found in corpus/github-downloaded/adi_ad961_models.slx
+            'Panel',  # first found in corpus/github/Lib_Turbo_CompressorVG_TMATS.slx 
+            'Image', # first found in corpus/github/matlab/Contact_Forces_Lib 
+            
         ]:
             return f'Simulink.dialog.{type}'
         elif type in [
@@ -810,6 +1017,8 @@ class DialogControl(XmlElement):
             'Edit',
             'Slider',
             'Spinbox',
+            'Popup',  # first found in corpus/github-downloaded/adi_ad961_models.slx 
+            'RadioButton', # first found in corpus/matlab-central/ACTimeOvercurrentRelayBlock
         ]:
             return f'Simulink.dialog.parameter.{type}'
         else:
@@ -848,6 +1057,40 @@ class DiagnosticSuppressor(XmlElement):
         str_ += '\n\n'
         return str_
 
+class DialogParameters(XmlElement):
+    def __init__(self, strval, parent_xml):
+        strval = strval.strip()
+        assert strval.startswith('<DialogParameters') and strval.endswith('</DialogParameters>')
+        super().__init__(strval, parent_xml)
+
+        innerxml_used = {x: False for x in self.inner_xmls if x.type == 'xml'}
+        self.ps = []
+
+        for x in self.inner_xmls:
+            if x.tag == 'P':
+                self.ps.append(P.from_XmlElement(x))
+                innerxml_used[x] = True
+
+        for ix, u in innerxml_used.items():
+            if not u:
+                raise Exception(f"Inner XML of 'DialogParameters' not used.\nUnused XML:\n\n{ix.strval}")
+
+    @classmethod
+    def from_XmlElement(cls, xml_element):
+        return DialogParameters(xml_element.strval, xml_element.parent_xml)
+
+    @property
+    def strmdl(self):
+        str_ = 'DialogParameters {\n'
+
+        for x in self.attrs:
+            str_ += f'{x.name} "{x.value}"\n'
+
+        for x in self.ps:
+            str_ += f'{x.strmdl}\n'
+
+        str_ += '}\n\n'
+        return str_
 
 class Display(XmlElement):
     def __init__(self, strval, parent_xml):
@@ -916,6 +1159,77 @@ class EditorSettings(XmlElement):
         str_ += '\n\n'
         return str_
 
+
+class EngineSettings(XmlElement):
+    def __init__(self, strval, parent_xml):
+        strval = strval.strip()
+        assert strval.startswith('<EngineSettings') and strval.endswith('</EngineSettings>')
+        super().__init__(strval, parent_xml)
+
+        innerxml_used = {x: False for x in self.inner_xmls if x.type == 'xml'}
+        self.ps = []
+
+        for x in self.inner_xmls:
+            if x.tag == 'P':
+                self.ps.append(P.from_XmlElement(x))
+                innerxml_used[x] = True
+
+        for ix, u in innerxml_used.items():
+            if not u:
+                raise Exception(f"Inner XML of 'EngineSettings' not used.\nUnused XML:\n\n{ix.strval}")
+
+    @classmethod
+    def from_XmlElement(cls, xml_element):
+        return EngineSettings(xml_element.strval, xml_element.parent_xml)
+
+    @property
+    def strmdl(self):
+        str_ = ''  # special 
+
+        for x in self.attrs:
+            str_ += f'{x.name} "{x.value}"\n'
+
+        for x in self.ps:
+            str_ += f'{x.strmdl}\n'
+
+        str_ += '\n\n'
+        return str_
+
+
+class EnumStrPairs(XmlElement):
+    def __init__(self, strval, parent_xml):
+        strval = strval.strip()
+        assert strval.startswith('<EnumStrPairs') and strval.endswith('</EnumStrPairs>')
+        super().__init__(strval, parent_xml)
+
+        innerxml_used = {x: False for x in self.inner_xmls if x.type == 'xml'}
+        self.ps = []
+
+        for x in self.inner_xmls:
+            if x.tag == 'P':
+                self.ps.append(P.from_XmlElement(x))
+                innerxml_used[x] = True
+
+        for ix, u in innerxml_used.items():
+            if not u:
+                raise Exception(f"Inner XML of 'EnumStrPairs' not used.\nUnused XML:\n\n{ix.strval}")
+
+    @classmethod
+    def from_XmlElement(cls, xml_element):
+        return EnumStrPairs(xml_element.strval, xml_element.parent_xml)
+
+    @property
+    def strmdl(self):
+        str_ = 'EnumStrPairs {\n'
+
+        for x in self.attrs:
+            str_ += f'{x.name} "{x.value}"\n'
+
+        for x in self.ps:
+            str_ += f'{x.strmdl}\n'
+
+        str_ += '}\n\n'
+        return str_
 
 class ExternalFileReference(XmlElement):
     def __init__(self, strval, parent_xml):
@@ -1014,6 +1328,23 @@ class Field(XmlElement):
                 return unquoted
             return boxed
         return quoted
+
+
+class FilePath(XmlElement):
+    def __init__(self, strval, parent_xml):
+        strval = strval.strip()
+        assert strval.startswith('<FilePath') and strval.endswith('</FilePath>')
+        super().__init__(strval, parent_xml)
+
+    @classmethod
+    def from_XmlElement(cls, xml_element):
+        return FilePath(xml_element.strval, xml_element.parent_xml)
+
+    @property
+    def strmdl(self):
+        return f'FilePath "{self.content}"'
+
+
 
 
 class FunctionConnector(XmlElement):
@@ -1254,11 +1585,18 @@ class InstanceData(XmlElement):
 
         innerxml_used = {x: False for x in self.inner_xmls if x.type == 'xml'}
         self.ps = []
+        self.objects = []  # found in matlab-central/HEV_Battery_Lib.slx
 
         for x in self.inner_xmls:
             if x.tag == 'P':
                 self.ps.append(P.from_XmlElement(x))
                 innerxml_used[x] = True
+
+            if x.tag == 'Object':
+                self.objects.append(Object.from_XmlElement(x))
+                innerxml_used[x] = True
+
+                
 
         for ix, u in innerxml_used.items():
             if not u:
@@ -1278,9 +1616,59 @@ class InstanceData(XmlElement):
         for x in self.ps:
             str_ += f'{x.strmdl}\n'
 
+        for x in self.objects:
+            str_ += f'{x.strmdl}\n'
+
+            
+
         str_ += '\n\n'
         return str_
 
+class LinkData(XmlElement):
+    def __init__(self, strval, parent_xml):
+        strval = strval.strip()
+        assert strval.startswith('<LinkData') and strval.endswith('</LinkData>')
+        super().__init__(strval, parent_xml)
+
+        innerxml_used = {x: False for x in self.inner_xmls if x.type == 'xml'}
+        self.ps = []
+        self.dialogParameterss = []  # found in matlab-central/Dual_Clutch_Trans.slx 
+
+        for x in self.inner_xmls:
+            if x.tag == 'P':
+                self.ps.append(P.from_XmlElement(x))
+                innerxml_used[x] = True
+
+            if x.tag == 'DialogParameters':
+                self.dialogParameterss.append(DialogParameters.from_XmlElement(x))
+                innerxml_used[x] = True
+
+
+        for ix, u in innerxml_used.items():
+            if not u:
+                raise Exception(f"Inner XML of 'LinkData' not used.\nUnused XML:\n\n{ix.strval}")
+
+    @classmethod
+    def from_XmlElement(cls, xml_element):
+        return LinkData(xml_element.strval, xml_element.parent_xml)
+
+    @property
+    def strmdl(self):
+        str_ = 'LinkData {\n'
+
+        for x in self.attrs:
+            str_ += f'{x.name} "{x.value}"\n'
+
+        for x in self.ps:
+            str_ += f'{x.strmdl}\n'
+
+        for x in self.dialogParameterss:
+            str_ += f'{x.strmdl}\n'
+
+
+
+        str_ += '}\n\n'
+        return str_
 
 class Line(XmlElement):
     def __init__(self, strval, parent_xml):
@@ -1639,6 +2027,7 @@ class MaskParameter(XmlElement):
         self.typeOptions = []
         self.callbacks = []
         self.ranges = []
+        self.tabNames = []  # first found in corpus/github/Lib_Cntrl_FirstOrderActuator_TMATS.slx
 
         for x in self.inner_xmls:
             if x.tag == 'P':
@@ -1664,6 +2053,12 @@ class MaskParameter(XmlElement):
             if x.tag == 'Range':
                 self.ranges.append(Range.from_XmlElement(x))
                 innerxml_used[x] = True
+
+            if x.tag == 'TabName':
+                self.tabNames.append(TabName.from_XmlElement(x))
+                innerxml_used[x] = True
+
+                
 
         for ix, u in innerxml_used.items():
             if not u:
@@ -1721,8 +2116,19 @@ class MaskParameter(XmlElement):
         for x in self.prompts:
             str_ += f'{x.strmdl}\n'
 
+        # special 
         for x in self.values:
             str_ += f'{x.strmdl}\n'
+
+        # special: inferred from corpus/matlab-central/Link_A.slx 
+        # Even if 'Value' does not appear in attributes or inner tags of <MaskParameter>,
+        # the corresponding mdl format still has 'Value' (set to ""). 
+        if not self.values:  # if empty
+            for x in self.attrs:
+                if x.name == 'Value':
+                    break 
+            else:  # none of the  attributes has name 'Value' 
+                str_ += f'Value ""\n'
 
         for x in self.typeOptions:
             str_ += f'{x.strmdl}\n'
@@ -1733,9 +2139,49 @@ class MaskParameter(XmlElement):
         for x in self.ranges:
             str_ += f'{x.strmdl}\n'
 
+        for x in self.tabNames:
+            str_ += f'{x.strmdl}\n'
+
+        
+    
+
         str_ += '}\n\n'
         return str_
 
+class MaskParameterDefaults(XmlElement):
+    def __init__(self, strval, parent_xml):
+        strval = strval.strip()
+        assert strval.startswith('<MaskParameterDefaults') and strval.endswith('</MaskParameterDefaults>')
+        super().__init__(strval, parent_xml)
+
+        innerxml_used = {x: False for x in self.inner_xmls if x.type == 'xml'}
+        self.ps = []
+
+        for x in self.inner_xmls:
+            if x.tag == 'P':
+                self.ps.append(P.from_XmlElement(x))
+                innerxml_used[x] = True
+
+        for ix, u in innerxml_used.items():
+            if not u:
+                raise Exception(f"Inner XML of 'MaskParameterDefaults' not used.\nUnused XML:\n\n{ix.strval}")
+
+    @classmethod
+    def from_XmlElement(cls, xml_element):
+        return MaskParameterDefaults(xml_element.strval, xml_element.parent_xml)
+
+    @property
+    def strmdl(self):
+        str_ = 'MaskParameterDefaults {\n'
+
+        for x in self.attrs:
+            str_ += f'{x.name} "{x.value}"\n'
+
+        for x in self.ps:
+            str_ += f'{x.strmdl}\n'
+
+        str_ += '}\n\n'
+        return str_
 
 class MATStruct(XmlElement):
     def __init__(self, strval, parent_xml):
@@ -1817,6 +2263,16 @@ class ModelOrLibraryOrSubsystem(XmlElement):
         self.windowsInfos = []
         self.configSets = []
         self.blockDiagramDefaults = []
+        self.verifications = []         # found in matlab-central/Baro_Library.slx
+        self.configurationSets = []     # found in matlab-central/Baro_Library.slx
+        self.systemDefaultss = []       # found in matlab-central/Baro_Library.slx
+        self.blockDefaultss = []        # found in matlab-central/Baro_Library.slx
+        self.annotationDefaultss = []   # found in matlab-central/Baro_Library.slx
+        self.lineDefaultss = []          # found in matlab-central/Baro_Library.slx
+        self.maskDefaultss = []          # found in matlab-central/Baro_Library.slx
+        self.maskParameterDefaultss = []          # found in matlab-central/Baro_Library.slx
+        self.blockParameterDefaultss = []          # found in matlab-central/Baro_Library.slx
+        self.engineSettingss = []        # found in matlab-central/Assembly_Quadrotor.slx 
 
         for x in self.inner_xmls:
             if x.tag == 'P':
@@ -1903,6 +2359,47 @@ class ModelOrLibraryOrSubsystem(XmlElement):
                 self.blockDiagramDefaults.append(BlockDiagramDefaults.from_XmlElement(x))
                 innerxml_used[x] = True
 
+            if x.tag == 'Verification':
+                self.verifications.append(Verification.from_XmlElement(x))
+                innerxml_used[x] = True
+
+            if x.tag == 'ConfigurationSet':
+                self.configurationSets.append(ConfigurationSet.from_XmlElement(x))
+                innerxml_used[x] = True
+
+            if x.tag == 'SystemDefaults':
+                self.systemDefaultss.append(SystemDefaults.from_XmlElement(x))
+                innerxml_used[x] = True
+
+            if x.tag == 'BlockDefaults':
+                self.blockDefaultss.append(BlockDefaults.from_XmlElement(x))
+                innerxml_used[x] = True
+
+            if x.tag == 'AnnotationDefaults':
+                self.annotationDefaultss.append(AnnotationDefaults.from_XmlElement(x))
+                innerxml_used[x] = True
+
+            if x.tag == 'LineDefaults':
+                self.lineDefaultss.append(LineDefaults.from_XmlElement(x))
+                innerxml_used[x] = True
+
+            if x.tag == 'MaskDefaults':
+                self.maskDefaultss.append(MaskDefaults.from_XmlElement(x))
+                innerxml_used[x] = True
+
+            if x.tag == 'MaskParameterDefaults':
+                self.maskParameterDefaultss.append(MaskParameterDefaults.from_XmlElement(x))
+                innerxml_used[x] = True
+
+            if x.tag == 'BlockParameterDefaults':
+                self.blockParameterDefaultss.append(BlockParameterDefaults.from_XmlElement(x))
+                innerxml_used[x] = True
+
+            if x.tag == 'EngineSettings':
+                self.engineSettingss.append(EngineSettings.from_XmlElement(x))
+                innerxml_used[x] = True
+
+
         for ix, u in innerxml_used.items():
             if not u:
                 raise Exception(f"Inner XML of 'ModelOrLibraryOrSubsystem' not used.\nUnused XML:\n\n{ix.strval}")
@@ -1978,6 +2475,37 @@ class ModelOrLibraryOrSubsystem(XmlElement):
 
         for x in self.blockDiagramDefaults:
             str_ += f'{x.strmdl}\n'
+
+        for x in self.verifications:
+            str_ += f'{x.strmdl}\n'
+
+        for x in self.configurationSets:
+            str_ += f'{x.strmdl}\n'
+
+        for x in self.systemDefaultss:
+            str_ += f'{x.strmdl}\n'
+
+        for x in self.blockDefaultss:
+            str_ += f'{x.strmdl}\n'
+
+        for x in self.annotationDefaultss:
+            str_ += f'{x.strmdl}\n'
+
+        for x in self.lineDefaultss:
+            str_ += f'{x.strmdl}\n'
+
+        for x in self.maskDefaultss:
+            str_ += f'{x.strmdl}\n'
+
+        for x in self.maskParameterDefaultss:
+            str_ += f'{x.strmdl}\n'
+
+        for x in self.blockParameterDefaultss:
+            str_ += f'{x.strmdl}\n'
+
+        for x in self.engineSettingss:
+            str_ += f'{x.strmdl}\n'
+
 
         str_ += '}\n\n'
 
@@ -2151,6 +2679,7 @@ class Object(XmlElement):
         self.ps = []
         self.arrays = []
         self.objects = []  # <Object> can contain children <Object>
+        self.customPropertys = []  # first found in corpus/github-downloaded/CSEI_u.slx
 
         for x in self.inner_xmls:
             if x.tag == 'P':
@@ -2163,6 +2692,10 @@ class Object(XmlElement):
 
             if x.tag == 'Object':
                 self.objects.append(Object.from_XmlElement(x))
+                innerxml_used[x] = True
+             
+            if x.tag == 'CustomProperty':
+                self.customPropertys.append(CustomProperty.from_XmlElement(x))
                 innerxml_used[x] = True
 
         for ix, u in innerxml_used.items():
@@ -2218,6 +2751,9 @@ class Object(XmlElement):
             str_ += f'{x.strmdl}\n'
 
         for x in self.objects:
+            str_ += f'{x.strmdl}\n'
+
+        for x in self.customPropertys:
             str_ += f'{x.strmdl}\n'
 
         str_ += '}\n\n'
@@ -2354,10 +2890,18 @@ class Port(XmlElement):
         super().__init__(strval, parent_xml)
         innerxml_used = {x: False for x in self.inner_xmls if x.type == 'xml'}
         self.ps = []
+        self.arrays = [] 
+
         for x in self.inner_xmls:
             if x.tag == 'P':
                 self.ps.append(P.from_XmlElement(x))
                 innerxml_used[x] = True
+        
+            if x.tag == 'Array':
+                self.arrays.append(Array.from_XmlElement(x))
+                innerxml_used[x] = True
+        
+        
         for ix, u in innerxml_used.items():
             if not u:
                 raise Exception(f"Inner XML of 'Port' not used.\nUnused XML:\n\n{ix.strval}")
@@ -2375,6 +2919,10 @@ class Port(XmlElement):
 
         for x in self.ps:
             str_ += f'{x.strmdl}\n'
+
+        for x in self.arrays:
+            str_ += f'{x.strmdl}\n'
+
 
         str_ += '}\n\n'
         return str_
@@ -2572,6 +3120,7 @@ class System(XmlElement):
         self.annotations = []
         self.lists = []
         self.functionConnectors = []
+        self.connectors = [] 
 
         for x in self.inner_xmls:
             if x.tag == 'P':
@@ -2597,6 +3146,12 @@ class System(XmlElement):
             if x.tag == 'FunctionConnector':
                 self.functionConnectors.append(FunctionConnector.from_XmlElement(x))
                 innerxml_used[x] = True
+
+            if x.tag == 'Connector':
+                self.connectors.append(Connector.from_XmlElement(x))
+                innerxml_used[x] = True
+
+                
 
         for ix, u in innerxml_used.items():
             if not u:
@@ -2627,6 +3182,11 @@ class System(XmlElement):
 
         for x in self.functionConnectors:
             str_ += f'{x.strmdl}\n'
+
+        for x in self.connectors:
+            str_ += f'{x.strmdl}\n'
+
+            
 
         str_ += '}\n\n'
         return str_
@@ -2666,6 +3226,24 @@ class SystemDefaults(XmlElement):
 
         str_ += '}\n\n'
         return str_
+
+
+
+class TabName(XmlElement):
+    def __init__(self, strval, parent_xml):
+        strval = strval.strip()
+        assert strval.startswith('<TabName') and strval.endswith('</TabName>')
+        super().__init__(strval, parent_xml)
+
+    @classmethod
+    def from_XmlElement(cls, xml_element):
+        return TabName(xml_element.strval, xml_element.parent_xml)
+
+    @property
+    def strmdl(self):
+        return f'TabName "{self.content}"'
+
+
 
 
 class TestPointedSignal(XmlElement):
@@ -2831,6 +3409,47 @@ class Value(XmlElement):
     @property
     def strmdl(self):
         return f'Value "{self.content}"'
+
+
+
+
+class Verification(XmlElement):
+    def __init__(self, strval, parent_xml):
+        strval = strval.strip()
+        assert strval.startswith('<Verification') and strval.endswith('</Verification>')
+        super().__init__(strval, parent_xml)
+
+        innerxml_used = {x: False for x in self.inner_xmls if x.type == 'xml'}
+        self.ps = []
+
+        for x in self.inner_xmls:
+            if x.tag == 'P':
+                self.ps.append(P.from_XmlElement(x))
+                innerxml_used[x] = True
+
+        for ix, u in innerxml_used.items():
+            if not u:
+                raise Exception(f"Inner XML of 'Verification' not used.\nUnused XML:\n\n{ix.strval}")
+
+    @classmethod
+    def from_XmlElement(cls, xml_element):
+        return Verification(xml_element.strval, xml_element.parent_xml)
+
+    @property
+    def strmdl(self):
+        # special: this tag was found in matlab-central/Baro_Library
+        # but the content was not found in corresponding mdl format
+        return ''
+        # str_ = 'Verification {\n'
+
+        # for x in self.attrs:
+        #     str_ += f'{x.name} "{x.value}"\n'
+
+        # for x in self.ps:
+        #     str_ += f'{x.strmdl}\n'
+
+        # str_ += '}\n\n'
+        # return str_
 
 
 class WebScopes_FoundationPlugin(XmlElement):

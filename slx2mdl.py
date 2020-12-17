@@ -73,6 +73,9 @@ class Transformer:
             # 'simulink/configSetInfo.xml',
             'simulink/graphicalInterface.xml',
         ]
+
+        blockdiagram_file_contains_stateflow = False 
+
         with open(output_filepath, 'w') as wfile:
             for f in files:
                 # it is not guarranted that every slx files contains all of these xml files
@@ -101,6 +104,9 @@ class Transformer:
                                     roottag = 'Subsystem'
                                     continue
 
+                                if line.strip() == '<Stateflow>': 
+                                    blockdiagram_file_contains_stateflow = True 
+
                             line = line[:-1] + comment + '\n'
                             # IMPORTANT: NEVER ADD ANY INDENTATION I.E. NEVER ADD ANY EXTRA SPACES TO THE
                             # LEFT OF THE LINES WHEN WRITING THEM TO THE FILE. OTHERWISE, WE WILL END UP
@@ -112,8 +118,39 @@ class Transformer:
             # finally write the closing tag for <Model> or <Library> or <Subsystem>
             wfile.write(f'</{roottag}>')
 
+        # First found in matlab-central/Tube_Alpha_sf.slx, 
+        # some slx files have <Stateflow> tag within <Model> tag inside simulink/blockdiagram.xml file, 
+        # rather than in simulink/stateflow.xml file. In such cases, 
+        # we extract the <Stateflow>...</Stateflow content from inside simulink/blockdiagram.xml, 
+        # and create the file simulink/stateflow.xml ourselves with the extracted content.
+        if blockdiagram_file_contains_stateflow:
+            temp_filepath = os.path.join(cls.dirpath_working, 'tempfile')
+            Utils.copy_file(output_filepath, temp_filepath)
+            stateflow_filepath = os.path.join(cls.dirpath_working, 'slx-files', 'simulink', 'stateflow.xml')
+
+            with open(temp_filepath) as rfile:
+                # with open(output_filepath, 'w') as merged_file:
+                with open(output_filepath, 'w') as merged_file:
+                    with open(stateflow_filepath, 'w') as sf_file:  
+                        sf_file.write('<?xml version="1.0" encoding="utf-8"?>\n')
+                        for line in rfile:
+                            if line.strip().startswith('<Stateflow>'):
+                                sf_starttagline = line # stateflow's start line 
+                                # write <Stateflow>...</Stateflow> in simulink/stateflow.file 
+                                while not line.strip().startswith('</Stateflow>'):
+                                    line = line.replace('<!--blockdiagram.xml-->', '')  # remove comment 
+                                    sf_file.write(line)
+                                    line = rfile.readline()
+                                # this makes sure the indentation of closing </Stateflow> tag is same as that of <Stateflow>
+                                sf_endtagline = sf_starttagline.replace('<!--blockdiagram.xml-->', '').replace('<Stateflow>', '</Stateflow>')
+                                sf_file.write(sf_endtagline) 
+                            else:
+                                merged_file.write(line)                     
+            Utils.remove_file(temp_filepath)
+
+
     @classmethod
-    def initialize(cls, args, filepath_slx, dirpath_working, dirpath_batch_prod_output, filepath_mdl=None, preetify=False):
+    def initialize(cls, args, filepath_slx, dirpath_working, dirpath_batch_prod_output, count, filepath_mdl=None, preetify=False):
         """Initialize the transformer.
 
         Parameters: 
@@ -125,6 +162,8 @@ class Transformer:
         dirpath_batch_prod_output(str) : If 'mode' is 'batch', and 'devt-mode' is 'no', then this directory will contain
                               all output mdl files immediately within itself (i.e. without nesting). If 'devt-mode' is 'yes',
                               this directory won't be created at all.
+        count(str)          : count of the slx file. If mode = 'single', set it to 1. If mode = 'batch', set it to the slx file
+                              count (beginning from 1.)
         filepath_mdl(str)   : absolute/relative filepath of output mdl file 
         preetify(bool)      : If true, output mdl file is preetified. 
         """
@@ -176,7 +215,16 @@ class Transformer:
         cls.filepath_original_mdl_at_working_directory = os.path.abspath(os.path.join(cls.dirpath_working, 'original.mdl'))
         cls.filepath_original_mdl_at_current_directory = os.path.abspath('original.mdl')
 
-        cls.filepath_error_log = os.path.abspath('error-log.txt')
+        cls.filepath_error_log = os.path.abspath('error.log')
+
+        # if mode is 'single', the performance report will be located in the working directory
+        # if mode is 'batch', the performance report will be located in the 'parent' working directory (not the individual slx file's working directory)
+        if args['mode'] == 'single':
+            cls.filepath_performance_report = os.path.join(cls.dirpath_working, 'performance-report.csv')
+        else:  # mode = batch
+            cls.filepath_performance_report = os.path.join(os.path.sep.join(cls.dirpath_working.split(os.path.sep)[:-1]), 'performance-report.csv')
+        
+            
 
         mode = f"{cls._args['mode']}, {'development' if cls._args['devt_mode'] else 'production'}"
 
@@ -188,7 +236,9 @@ class Transformer:
             print(f"dirpath_working                 : {cls.dirpath_working}")
         if dirpath_batch_prod_output:
             print(f"dirpath_batch_prod_output       : {cls.dirpath_batch_prod_output}")
-        print(f"filepath_error_log              : {cls.filepath_error_log}\n")
+        print(f"filepath_error_log              : {cls.filepath_error_log}")
+        print(f"filepath_performance_report     : {cls.filepath_performance_report}\n")
+        
 
         # remove previous files and  create all necessary files/folders
         # IMPORTANT: dirpath_batch_prod_output must not be removed or created from here,
@@ -203,6 +253,11 @@ class Transformer:
         Utils.remove_dirpath(cls.dirpath_working)
         Utils.create_dirpath(cls.dirpath_working)
         Utils.create_file(cls.filepath_mdl)
+        if args['report_performance'] and count == 1:
+            Utils.create_file(cls.filepath_performance_report)
+            with open(cls.filepath_performance_report, 'w') as file:
+                file.write(f"slx_filepath,n_lines_output_mdl,time_taken(s)\n") 
+            
 
         # copy original mdl file to working directory and current directory
         # do this in this method rather than in transform() so that even if transformation fails,
@@ -309,7 +364,12 @@ def main():
         time_start = time.time()
         try:
             Transformer.transform()
+
             print(f"slx to mdl conversion was successful!\n")
+
+            if args['remove_slx']:
+                print(f'deleting file: {Transformer.filepath_slx}')
+                Utils.remove_file(Transformer.filepath_slx)
 
             if args['report_performance']:
                 time_taken = time.time() - time_start
@@ -317,7 +377,12 @@ def main():
                     nlines = len(file.readlines())
                 print(f"Output mdl file size : {nlines} lines")
                 print(f"Time taken           : {time_taken:.4} seconds")
-                # print(f"({nlines}, {int(time_taken * 1000)}),")
+                
+                with open(Transformer.filepath_performance_report, 'a') as file:
+                    file.write(f"{Transformer.filepath_slx},{nlines},{time_taken}\n")
+
+
+
         except Exception as e:
             err_msg = "\n*** ERROR: slx to mdl conversion encountered a problem. See details below:\n\n"
             err_msg_print = err_msg + str(e)
@@ -345,7 +410,8 @@ def main():
             filepath_slx=args['slx_filepath'],
             dirpath_working='working-dir',
             dirpath_batch_prod_output=None,
-            filepath_mdl=args['mdl_filepath']
+            filepath_mdl=args['mdl_filepath'], 
+            count=1
         )
         try_transform(args)
         # Transformer.transform()
@@ -390,6 +456,7 @@ def main():
                     dirpath_working=dirpath_working,
                     dirpath_batch_prod_output=dirpath_batch_prod_output,
                     filepath_mdl=filepath_mdl,
+                    count=count,
                 )
                 try_transform(args)
 
@@ -404,7 +471,7 @@ def main():
 
 
 def test():
-    Utils.log(log_msg='hello there', log_filepath='error-log.txt', write_mode='append')
+    Utils.log(log_msg='hello there', log_filepath='error.log', write_mode='append')
     # from datetime import datetime
     # x = datetime.now()
     # print(x)
