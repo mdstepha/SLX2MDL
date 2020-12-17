@@ -2,10 +2,16 @@
 
 - INSTALLATION:
   - MacOS, Linux
-    - make sure '/usr/local/bin/' is in the env var PATH
-    - run the script install.py as follows: 
+    - Make sure '/usr/local/bin/' is in the env var PATH
+    - Make sure python3 is installed 
+    - Run the script install.py as follows: 
       - try: ./install.py 
       - if that does not work, try: sudo ./install.py  
+    - Now, you can use the command 'slx2mdl' (see example usage below) from the command line to use this software. 
+  - Windows 
+    - Make sure python3 is installed.
+    - SLX2MDL can be used in a Windows machine too. No specific installation is required. To use the tool, go to the command prompt and use it as: 
+      - python3 <path_to_slx2mdl.py> [options]
 
     
 ---
@@ -108,14 +114,16 @@
         - default option
         - does not print these details 
       
+---
+EXAMPLE USAGE (Command line): 
+- On Unix-like OS (after installing slx2mdl)
+  1. slx2mdl --mode single --slx-filepath a/b/c/mymodel.slx  --mdl-filepath=x/y/z/mymodel_converted.mdl
+  2. slx2mdl --mode batch --slx-dirpath a/b/my_slx_files --exit-on-failure no 
 
-EXAMPLE USAGE: 
+- On Windows OS (This is also valid for Unix-like OS)
+  1. python3 <path_to_slx2mdl.py> --mode single --slx-filepath a/b/c/mymodel.slx  --mdl-filepath=x/y/z/mymodel_converted.mdl
+  2. python3 <path_to_slx2mdl.py> --mode batch --slx-dirpath a/b/my_slx_files --exit-on-failure no 
 
-1. 
-./slx2mdl --mode single --slx-filepath a/b/c/mymodel.slx  --mdl-filepath=x/y/z/mymodel_converted.mdl
-
-2. 
-./slx2mdl --mode batch --slx-dirpath a/b/my_slx_files --exit-on-failure no 
 
   
 
