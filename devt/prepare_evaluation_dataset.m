@@ -1,6 +1,6 @@
 % working_dir = "/Users/bhisma/courses/archive/cse-690-grad-research/slx-mdl-transformation/simulink-models";
 working_dir = "/Users/bhisma/tmp";
-corpus_src = "corpus-mdls-slxs.bak";
+corpus_src = "corpus-all.bak";
 datasets = ["github", "matlab-central", "other", "source-forge"];
 path_logfile = "/Users/bhisma/courses/archive/cse-690-grad-research/slx-mdl-transformation/matlab-scripts/pipeline.log";
 
