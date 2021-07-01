@@ -1,7 +1,7 @@
 # SLX2MDL transormation
 
 ---
-- INSTALLATION:
+## INSTALLATION:
   - Linux, MacOS 
     - Make sure '/usr/local/bin/' is in the env var PATH
     - Make sure python3 is installed 
@@ -14,10 +14,9 @@
     - SLX2MDL can be used in a Windows machine too. No specific installation is required. To use the tool, go to the command prompt and use it as: 
       - python3 <path_to_slx2mdl.py> [options]
 
-    
 ---
 
-- ARGUMENTS AND USAGE: 
+## ARGUMENTS AND USAGE: 
   - mode
     - specifies the mode in which the tool is to be used. 
     - valid values: 
@@ -117,7 +116,7 @@
         - does not print these details 
       
 ---
-EXAMPLE USAGE (Command line): 
+## EXAMPLE USAGE (Command line): 
 - On Unix-like OS (after installing slx2mdl)
   1. slx2mdl --mode single --slx-filepath a/b/c/mymodel.slx  --mdl-filepath=x/y/z/mymodel_converted.mdl
   2. slx2mdl --mode batch --slx-dirpath a/b/my_slx_files --exit-on-failure no 
@@ -126,6 +125,98 @@ EXAMPLE USAGE (Command line):
   1. python3 <path_to_slx2mdl.py> --mode single --slx-filepath a/b/c/mymodel.slx  --mdl-filepath=x/y/z/mymodel_converted.mdl
   2. python3 <path_to_slx2mdl.py> --mode batch --slx-dirpath a/b/my_slx_files --exit-on-failure no 
 
+--- 
+## EVALUATION EXPERIMENTS: 
+We evaluated SLX2MDL using a corpus of Simulink models curated by Chowdhury et al. This corpus is available to download at https://github.com/verivital/slsf_randgen/wiki/. 
 
-  
+### DATASET PREPARATION: 
+The Simulink models included in the corpus are not perfectly suitable for evaluationg SLX2MDL for various reasons explained in our paper. Therefore, we needed to pre-process these models. The following steps were performed to pre-process the corpus and make it suitalbe for evaluating SLX2MDL. 
 
+1. Download the corpus made available by chowdhury et al. from https://drive.google.com/drive/folders/0ByjpWd4Nz7vtd0M1THRaRmF4c1k?resourcekey=0-QdVV_c6L5rumeFsnvRqBEw. 
+2. Update Corpus/Github directory by downloading and adding missing Simulink models (These models are not included in the corpus due to licensing issues. However, their github links are provided in the corpus). 
+3. Retain only .slx files in the corpus. All other files are not useful for our evaluation purpose. Also update the directory structure such that all these slx files are immediately inside the corresponding directory (github/matlab-central/other/source-forge), that is, they are not nested in inner directories. If this causes filename conflicts, resolve the conflict by adding a numeric suffix to the slx filename. 
+4. Remove any .slx files that are invalid. 1 slx file was found to be invalid. 
+5. Save all the slx files to R2019b version. Remove any slx files that cannot be updated to this version. 2 slx files were found to fail this conversion. 
+6. Convert all slx files to mdl format using Simulink's built-in conversion functionality. Don't delete the original slx files. This conversion gives the ground-truth MDL files with which to compare the results of our transformation. 
+
+### DATASET 
+Following above pre-processing, we obtained the following dataset (included in *evaluation/dataset*): 
+<pre>
+dataset
+├── readme.md 
+├── mdl_simulink
+│   ├── github 
+│   ├── matlab-central 
+│   ├── other
+│   └── source-forge
+├── mdl_SLX2MDL
+│   ├── outputs-github 
+│   ├── outputs-matlab-central 
+│   ├── outputs-other
+│   └── outputs-source-forge
+└── slx
+    ├── github 
+    ├── matlab-central 
+    ├── other
+    └── source-forge
+</pre>
+
+### RUNNING EVALUATION EXPERIMENTS: 
+- After preparing the dataset, we ran SLX2MDL in 'batch' mode for the Simulink models contained in each folder inside *evaluation/dataset/slx*. We then saved the results of the conversion inside *evaluation/dataset/mdl_SLX2MDL*. in corresponding sub-directories. 
+- Then, for each transformation, we conducted model comparison between the mdl file produced by SLX2MDL and the mdl file produced by Simulink's comparison tool. We inspected the differences manually, and logged the results in the following csv files. These csv reports are self-explanatory. 
+  - slx2mdl - github.csv 
+  - slx2mdl - matlab-central.csv 
+  - slx2mdl - other.csv 
+  - slx2mdl - sourceforge.csv 
+- Then, we summarized the results of these log files using *evaluation/print_evaluation_report.py*. 
+
+### RESULTS: 
+This script *evaluation/print_evaluation_report.py* produces the following output: 
+
+<pre>
+report
+{
+    "github": {
+        "filepath": "slx2mdl - github.csv",
+        "total": 339,
+        "good transformations": 307,
+        "good except for binary files": 28,
+        "failed transformations": 0,
+        "discarded slx files": 4
+    },
+    "matlab-central": {
+        "filepath": "slx2mdl - matlab-central.csv",
+        "total": 171,
+        "good transformations": 132,
+        "good except for binary files": 39,
+        "failed transformations": 0,
+        "discarded slx files": 0
+    },
+    "other": {
+        "filepath": "slx2mdl - other.csv",
+        "total": 20,
+        "good transformations": 15,
+        "good except for binary files": 5,
+        "failed transformations": 0,
+        "discarded slx files": 0
+    },
+    "sourceforge": {
+        "filepath": "slx2mdl - sourceforge.csv",
+        "total": 17,
+        "good transformations": 17,
+        "good except for binary files": 0,
+        "failed transformations": 0,
+        "discarded slx files": 0
+    }
+}
+
+
+summary
+{
+    "total": 547,
+    "good transformations": 471,
+    "good except for binary files": 72,
+    "failed transformations": 0,
+    "discarded slx files": 4
+}
+</pre>
