@@ -1,0 +1,5420 @@
+Model {
+  Name			  "h_bridge_implementation_org"
+  Version		  10.0
+  SavedCharacterEncoding  "ISO-8859-1"
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.91"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+    NumProvidedFunctions    0
+    NumRequiredFunctions    0
+    NumResetEvents	    0
+    HasInitializeEvent	    0
+    HasTerminateEvent	    0
+    PreCompExecutionDomainType "Unset"
+    IsExportFunctionModel   0
+    IsArchitectureModel	    0
+    IsAUTOSARArchitectureModel 0
+    NumParameterArguments   0
+    NumExternalFileReferences 44
+    ExternalFileReference {
+      Reference		      "dspsrcs4/Discrete \nImpulse"
+      Path		      "h_bridge_implementation_org/Disturbance/Discrete  Impulse"
+      SID		      "1334"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "fl_lib/Mechanical/Mechanisms/Wheel and Axle"
+      Path		      "h_bridge_implementation_org/Linear Actuator/Belt"
+      SID		      "1249"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "fl_lib/Mechanical/Rotational Elements/Rotational Friction"
+      Path		      "h_bridge_implementation_org/Linear Actuator/DC Motor/Friction Mr"
+      SID		      "1252"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "fl_lib/Electrical/Electrical Elements/Inductor"
+      Path		      "h_bridge_implementation_org/Linear Actuator/DC Motor/L"
+      SID		      "1253"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "fl_lib/Mechanical/Rotational Elements/Inertia"
+      Path		      "h_bridge_implementation_org/Linear Actuator/DC Motor/Motor Inertia J"
+      SID		      "1254"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "fl_lib/Electrical/Electrical Elements/Rotational\nElectromechanical\nConverter"
+      Path		      "h_bridge_implementation_org/Linear Actuator/DC Motor/Rotational Electromechanical Converter"
+      SID		      "1255"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "fl_lib/Electrical/Electrical Elements/Resistor"
+      Path		      "h_bridge_implementation_org/Linear Actuator/DC Motor/Rotor Resistance,R"
+      SID		      "1256"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "fl_lib/Mechanical/Mechanisms/Gear Box"
+      Path		      "h_bridge_implementation_org/Linear Actuator/Gear Box"
+      SID		      "1262"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "fl_lib/Mechanical/Rotational Elements/Mechanical\nRotational Reference"
+      Path		      "h_bridge_implementation_org/Linear Actuator/Mechanical Rotational Reference"
+      SID		      "1263"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "ee_lib/Integrated Circuits/Controlled PWM\nVoltage"
+      Path		      "h_bridge_implementation_org/Linear Actuator/PWM & H-Bridge/Controlled PWM Voltage"
+      SID		      "1368"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "fl_lib/Electrical/Electrical Elements/Electrical Reference"
+      Path		      "h_bridge_implementation_org/Linear Actuator/PWM & H-Bridge/Electrical Reference1"
+      SID		      "1369"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "fl_lib/Electrical/Electrical Elements/Electrical Reference"
+      Path		      "h_bridge_implementation_org/Linear Actuator/PWM & H-Bridge/Electrical Reference2"
+      SID		      "1370"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "ee_lib/Semiconductors &\nConverters/Converters/H-Bridge"
+      Path		      "h_bridge_implementation_org/Linear Actuator/PWM & H-Bridge/H-Bridge"
+      SID		      "1371"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "fl_lib/Electrical/Electrical Elements/Electrical Reference"
+      Path		      "h_bridge_implementation_org/Linear Actuator/PWM & H-Bridge/PWM Scope/Electrical Reference1"
+      SID		      "1373"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "nesl_utility/PS-Simulink\nConverter"
+      Path		      "h_bridge_implementation_org/Linear Actuator/PWM & H-Bridge/PWM Scope/PS-Simulink Converter 2"
+      SID		      "1374"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "fl_lib/Electrical/Electrical Sensors/Voltage Sensor"
+      Path		      "h_bridge_implementation_org/Linear Actuator/PWM & H-Bridge/PWM Scope/Voltage Sensor"
+      SID		      "1376"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "fl_lib/Electrical/Electrical Elements/Electrical Reference"
+      Path		      "h_bridge_implementation_org/Linear Actuator/PWM & H-Bridge/REV Scope/Electrical Reference1"
+      SID		      "1379"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "nesl_utility/PS-Simulink\nConverter"
+      Path		      "h_bridge_implementation_org/Linear Actuator/PWM & H-Bridge/REV Scope/PS-Simulink Converter 2"
+      SID		      "1380"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "fl_lib/Electrical/Electrical Sensors/Voltage Sensor"
+      Path		      "h_bridge_implementation_org/Linear Actuator/PWM & H-Bridge/REV Scope/Voltage Sensor"
+      SID		      "1382"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "fl_lib/Electrical/Electrical Elements/Electrical Reference"
+      Path		      "h_bridge_implementation_org/Linear Actuator/PWM & H-Bridge/Vr Scope/Electrical Reference1"
+      SID		      "1385"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "nesl_utility/PS-Simulink\nConverter"
+      Path		      "h_bridge_implementation_org/Linear Actuator/PWM & H-Bridge/Vr Scope/PS-Simulink Converter 2"
+      SID		      "1386"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "fl_lib/Electrical/Electrical Sensors/Voltage Sensor"
+      Path		      "h_bridge_implementation_org/Linear Actuator/PWM & H-Bridge/Vr Scope/Voltage Sensor"
+      SID		      "1387"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+      Path		      "h_bridge_implementation_org/Linear Actuator/Subsystem/Compare To Constant"
+      SID		      "1417"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "fl_lib/Electrical/Electrical Sources/Controlled Voltage\nSource"
+      Path		      "h_bridge_implementation_org/Linear Actuator/Subsystem/SL2V_1/Controlled Voltage Source"
+      SID		      "1400"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "fl_lib/Electrical/Electrical Elements/Electrical Reference"
+      Path		      "h_bridge_implementation_org/Linear Actuator/Subsystem/SL2V_1/Electrical Reference"
+      SID		      "1401"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "nesl_utility/Simulink-PS\nConverter"
+      Path		      "h_bridge_implementation_org/Linear Actuator/Subsystem/SL2V_1/Simulink-PS Converter"
+      SID		      "1402"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "fl_lib/Electrical/Electrical Sources/Controlled Voltage\nSource"
+      Path		      "h_bridge_implementation_org/Linear Actuator/Subsystem/SL2V_2/Controlled Voltage Source"
+      SID		      "1406"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "fl_lib/Electrical/Electrical Elements/Electrical Reference"
+      Path		      "h_bridge_implementation_org/Linear Actuator/Subsystem/SL2V_2/Electrical Reference"
+      SID		      "1407"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "nesl_utility/Simulink-PS\nConverter"
+      Path		      "h_bridge_implementation_org/Linear Actuator/Subsystem/SL2V_2/Simulink-PS Converter"
+      SID		      "1408"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "sm_lib/Body Elements/Brick Solid"
+      Path		      "h_bridge_implementation_org/Plant/Cart"
+      SID		      "144"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "fl_lib/Mechanical/Mechanical Sensors/Ideal Force Sensor"
+      Path		      "h_bridge_implementation_org/Plant/Force Sensor"
+      SID		      "1282"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "fl_lib/Mechanical/Translational\nElements/Mechanical\nTranslational\nReference"
+      Path		      "h_bridge_implementation_org/Plant/Mechanical Translational Reference"
+      SID		      "1283"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "sm_lib/Utilities/Mechanism\nConfiguration"
+      Path		      "h_bridge_implementation_org/Plant/Mechanism  Configuration"
+      SID		      "147"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "nesl_utility/PS-Simulink\nConverter"
+      Path		      "h_bridge_implementation_org/Plant/PS-Sa"
+      SID		      "148"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "nesl_utility/PS-Simulink\nConverter"
+      Path		      "h_bridge_implementation_org/Plant/PS-Sb"
+      SID		      "149"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "sm_lib/Body Elements/Brick Solid"
+      Path		      "h_bridge_implementation_org/Plant/Pendulum1"
+      SID		      "1318"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "sm_lib/Joints/Prismatic\nJoint"
+      Path		      "h_bridge_implementation_org/Plant/Prismatic  Joint"
+      SID		      "152"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "sm_lib/Joints/Revolute Joint"
+      Path		      "h_bridge_implementation_org/Plant/Revolute Joint"
+      SID		      "153"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "sm_lib/Frames and\nTransforms/Rigid\nTransform"
+      Path		      "h_bridge_implementation_org/Plant/Rigid  Transform1"
+      SID		      "154"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "sm_lib/Frames and\nTransforms/Rigid\nTransform"
+      Path		      "h_bridge_implementation_org/Plant/Rigid  Transform2"
+      SID		      "155"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "sm_lib/Frames and\nTransforms/Rigid\nTransform"
+      Path		      "h_bridge_implementation_org/Plant/Rigid  Transform3"
+      SID		      "156"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "sm_lib/Frames and\nTransforms/Rigid\nTransform"
+      Path		      "h_bridge_implementation_org/Plant/Rigid  Transform4"
+      SID		      "157"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "nesl_utility/Solver\nConfiguration"
+      Path		      "h_bridge_implementation_org/Plant/Solver Configuration"
+      SID		      "158"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "sm_lib/Frames and\nTransforms/World Frame"
+      Path		      "h_bridge_implementation_org/Plant/World Frame"
+      SID		      "160"
+      Type		      "LIBRARY_BLOCK"
+    }
+    OrderedModelArguments   1
+  }
+  WebScopes_FoundationPlugin "on"
+  DiagnosticSuppressor	  "on"
+  AnimationPlugin	  "on"
+  SLCCPlugin		  "on"
+  NotesPlugin		  "on"
+  LogicAnalyzerPlugin	  "on"
+  slprops.hdlmdlprops {
+    $PropName		    "HDLParams"
+    $ObjectID		    1
+    Array {
+      Type		      "Cell"
+      Dimension		      2
+      Cell		      "HDLSubsystem"
+      Cell		      "$bdroot"
+      PropName		      "mdlProps"
+    }
+  }
+  EnableAccessToBaseWorkspace on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  FPTRunName		  "Run 1"
+  MaxMDLFileLineLength	  120
+  UserBdParams		  "PhysicalModelingChecksum;PhysicalModelingParameterChecksum;PhysicalModelingProducts"
+  LastSavedArchitecture	  "maci64"
+  Object {
+    $PropName		    "BdWindowsInfo"
+    $ObjectID		    2
+    $ClassName		    "Simulink.BDWindowsInfo"
+    Object {
+      $PropName		      "WindowsInfo"
+      $ObjectID		      3
+      $ClassName	      "Simulink.WindowInfo"
+      IsActive		      [1]
+      Location		      [0.0, 23.0, 1280.0, 711.0]
+      Object {
+	$PropName		"ModelBrowserInfo"
+	$ObjectID		4
+	$ClassName		"Simulink.ModelBrowserInfo"
+	Visible			[0]
+	DockPosition		"Left"
+	Width			[50]
+	Height			[50]
+	Filter			[9]
+	Minimized		"Unset"
+      }
+      Object {
+	$PropName		"ExplorerBarInfo"
+	$ObjectID		5
+	$ClassName		"Simulink.ExplorerBarInfo"
+	Visible			[1]
+      }
+      Array {
+	Type			"Simulink.EditorInfo"
+	Dimension		4
+	Object {
+	  $ObjectID		  6
+	  IsActive		  [0]
+	  IsTabbed		  [1]
+	  ViewObjType		  "SimulinkTopLevel"
+	  LoadSaveID		  "0"
+	  Extents		  [1246.0, 538.0]
+	  ZoomFactor		  [1.2328172629000385]
+	  Offset		  [54.256619072287378, 254.74500494367379]
+	  SceneRectInView	  [0.0, 0.0, 0.0, 0.0]
+	}
+	Object {
+	  $ObjectID		  7
+	  IsActive		  [0]
+	  IsTabbed		  [1]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "1310"
+	  Extents		  [1246.0, 538.0]
+	  ZoomFactor		  [1.269475981162794]
+	  Offset		  [-125.71646088614034, 111.42982477310224]
+	  SceneRectInView	  [0.0, 0.0, 0.0, 0.0]
+	}
+	Object {
+	  $ObjectID		  8
+	  IsActive		  [0]
+	  IsTabbed		  [1]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "1378"
+	  Extents		  [1246.0, 538.0]
+	  ZoomFactor		  [1.0]
+	  Offset		  [0.0, 0.0]
+	  SceneRectInView	  [0.0, 0.0, 0.0, 0.0]
+	}
+	Object {
+	  $ObjectID		  9
+	  IsActive		  [1]
+	  IsTabbed		  [1]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "1367"
+	  Extents		  [1246.0, 538.0]
+	  ZoomFactor		  [1.0]
+	  Offset		  [-179.68618422746658, -182.6576866209507]
+	  SceneRectInView	  [0.0, 0.0, 0.0, 0.0]
+	}
+	PropName		"EditorsInfo"
+      }
+      DockComponentsInfo      []
+      WindowState	      ""
+      Array {
+	Type			"Cell"
+	Dimension		0
+	PropName		"PersistedApps"
+      }
+      WindowUuid	      ""
+    }
+    BDUuid		    "3bde4b10-454a-40e7-9bde-cddf9d5c71ab"
+  }
+  HideAutomaticNames	  on
+  PhysicalModelingChecksum "2289729637"
+  PhysicalModelingParameterChecksum "387052855"
+  PhysicalModelingProducts "SimElectronics|SimMechanics|Simscape"
+  Created		  "Fri Mar 22 12:44:45 2013"
+  Creator		  "The MathWorks, Inc."
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "bhisma"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu Jul 01 15:09:08 2021"
+  RTWModifiedTimeStamp	  399557431
+  ModelVersionFormat	  "1.%<AutoIncrement:91>"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "disabled"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowAllPropagatedSignalLabels	off
+  PortDataTypeDisplayFormat "AliasTypeOnly"
+  ShowEditTimeErrors	  on
+  ShowEditTimeWarnings	  off
+  ShowEditTimeAdvisorChecks off
+  ShowPortUnits		  off
+  ShowDesignRanges	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  VariantCondition	  off
+  ShowSubsystemDomainSpec off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ShowVisualizeInsertedRTB on
+  ShowMarkup		  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  BlockVariantConditionDataTip off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  FunctionConnectors	  off
+  BrowserLookUnderMasks	  off
+  MultiThreadCoSim	  on
+  SimulationMode	  "normal"
+  SILPILModeSetting	  "automated"
+  SILPILSystemUnderTest	  "topmodel"
+  SILPILSimulationModeTopModel "normal"
+  SILPILSimulationModeModelRef "normal"
+  SimTabSimulationMode	  "normal"
+  CodeVerificationMode	  "software-in-the-loop (sil)"
+  PauseTimes		  "5"
+  NumberOfSteps		  1
+  SnapshotBufferSize	  10
+  SnapshotInterval	  10
+  NumberOfLastSnapshots	  0
+  EnablePacing		  off
+  PacingRate		  1
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  Object {
+    $PropName		    "DataLoggingOverride"
+    $ObjectID		    10
+    $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
+    model_		    "h_bridge_implementation_org"
+    overrideMode_	    [0U]
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      "h_bridge_implementation_org"
+      PropName		      "logAsSpecifiedByModels_"
+    }
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      []
+      PropName		      "logAsSpecifiedByModelsSSIDs_"
+    }
+  }
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  OrderedModelArguments	  on
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      11
+      Version		      "19.1.1"
+      DisabledProps	      []
+      Description	      ""
+      Array {
+	Type			"Handle"
+	Dimension		11
+	Simulink.SolverCC {
+	  $ObjectID		  12
+	  Version		  "19.1.1"
+	  DisabledProps		  []
+	  Description		  ""
+	  Components		  []
+	  StartTime		  "0.0"
+	  StopTime		  "12.00"
+	  AbsTol		  "auto"
+	  AutoScaleAbsTol	  on
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "1e-3"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  EnableMultiTasking	  on
+	  ConcurrentTasks	  off
+	  Solver		  "ode15s"
+	  SolverName		  "ode15s"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverInfoToggleStatus  on
+	  IsAutoAppliedInSIP	  off
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	  SampleTimeProperty	  []
+	  DecoupledContinuousIntegration off
+	  MinimalZcImpactIntegration off
+	  SolverOrder		  3
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  13
+	  Version		  "19.1.1"
+	  DisabledProps		  []
+	  Description		  ""
+	  Components		  []
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveOperatingPoint	  off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "Dataset"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  VisualizeSimOutput	  on
+	  StreamToWorkspace	  off
+	  StreamVariableName	  "streamout"
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "SpecifiedOutputTimes"
+	  OutputTimes		  "0:1/30:12"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	  LoggingToFile		  off
+	  DatasetSignalFormat	  "timeseries"
+	  LoggingFileName	  "out.mat"
+	  LoggingIntervals	  "[-inf, inf]"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  14
+	  Version		  "19.1.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    9
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    Cell		    "EfficientTunableParamExpr"
+	    PropName		    "DisabledProps"
+	  }
+	  Description		  ""
+	  Components		  []
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  DefaultParameterBehavior "Tunable"
+	  UseDivisionForNetSlopeComputation "off"
+	  GainParamInheritBuiltInType off
+	  UseFloatMulNetSlope	  off
+	  DefaultUnderspecifiedDataType	"double"
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  CachingGlobalReferences off
+	  GlobalBufferReuse	  on
+	  StrengthReduction	  off
+	  AdvancedOptControl	  ""
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  PassReuseOutputArgsThreshold 12
+	  ExpressionDepthLimit	  128
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  ActiveStateOutputEnumStorageType "Native Integer"
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "off"
+	  AccelVerboseBuild	  off
+	  OptimizeBlockOrder	  "off"
+	  OptimizeDataStoreBuffers on
+	  BusAssignmentInplaceUpdate on
+	  DifferentSizesBufferReuse off
+	  UseRowMajorAlgorithm	  off
+	  OptimizationLevel	  "level2"
+	  OptimizationPriority	  "Balanced"
+	  OptimizationCustomize	  on
+	  LabelGuidedReuse	  off
+	  MultiThreadedLoops	  off
+	  DenormalBehavior	  "GradualUnderflow"
+	  EfficientTunableParamExpr off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  15
+	  Version		  "19.1.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "UseOnlyExistingSharedCode"
+	    PropName		    "DisabledProps"
+	  }
+	  Description		  ""
+	  Components		  []
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  StringTruncationChecking "error"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  ExportedTasksRateTransMsg "none"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "error"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  UseOnlyExistingSharedCode "error"
+	  SFcnCompatibilityMsg	  "none"
+	  FrameProcessingCompatibilityMsg "error"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  AllowSymbolicDim	  on
+	  RowMajorDimensionSupport off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  OperatingPointInterfaceChecksumMismatchMsg "warning"
+	  NonCurrentReleaseOperatingPointMsg "error"
+	  ChecksumConsistencyForSSReuse	"none"
+	  PregeneratedLibrarySubsystemCodeDiagnostic "warning"
+	  MatchCodeGenerationContextForUpdateDiagram "none"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  SymbolicDimMinMaxWarning "warning"
+	  LossOfSymbolicDimsSimulationWarning "warning"
+	  LossOfSymbolicDimsCodeGenerationWarning "error"
+	  SymbolicDimsDataTypeCodeGenerationDiagnostic "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnreachableExecutionPathDiag "warning"
+	  SFUndirectedBroadcastEventsDiag "warning"
+	  SFTransitionActionBeforeConditionDiag	"warning"
+	  SFOutputUsedAsStateInMooreChartDiag "error"
+	  SFTemporalDelaySmallerThanSampleTimeDiag "warning"
+	  SFSelfTransitionDiag	  "warning"
+	  SFExecutionAtInitializationDiag "warning"
+	  SFMachineParentedDataDiag "warning"
+	  IntegerSaturationMsg	  "warning"
+	  AllowedUnitSystems	  "all"
+	  UnitsInconsistencyMsg	  "warning"
+	  AllowAutomaticUnitConversions	on
+	  RCSCRenamedMsg	  "warning"
+	  RCSCObservableMsg	  "warning"
+	  ForceCombineOutputUpdateInSim	off
+	  UnitDatabase		  ""
+	  UnderSpecifiedDimensionMsg "none"
+	  DebugExecutionForFMUViaOutOfProcess off
+	  ArithmeticOperatorsInVariantConditions "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  16
+	  Version		  "19.1.1"
+	  DisabledProps		  []
+	  Description		  ""
+	  Components		  []
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerLongLong	  64
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdBitPerSizeT	  32
+	  ProdBitPerPtrDiffT	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdLongLongMode	  off
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerLongLong	  64
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetBitPerSizeT	  32
+	  TargetBitPerPtrDiffT	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetLongLongMode	  off
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	  UseEmbeddedCoderFeatures on
+	  UseSimulinkCoderFeatures on
+	  HardwareBoardFeatureSet "EmbeddedCoderHSP"
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  17
+	  Version		  "19.1.1"
+	  DisabledProps		  []
+	  Description		  ""
+	  Components		  []
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  EnableRefExpFcnMdlSchedulingChecks on
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelDependencies	  ""
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  18
+	  Version		  "19.1.1"
+	  DisabledProps		  []
+	  Description		  ""
+	  Components		  []
+	  SimCustomSourceCode	  ""
+	  SimCustomHeaderCode	  ""
+	  SimCustomInitializer	  ""
+	  SimCustomTerminator	  ""
+	  SimReservedNameArray	  []
+	  SimUserSources	  ""
+	  SimUserIncludeDirs	  ""
+	  SimUserLibraries	  ""
+	  SimUserDefines	  ""
+	  SimCustomCompilerFlags  ""
+	  SimCustomLinkerFlags	  ""
+	  SFSimEcho		  on
+	  SimCtrlC		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimAnalyzeCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	  SimGenImportedTypeDefs  off
+	  ModelFunctionsGlobalVisibility "on"
+	  CompileTimeRecursionLimit 50
+	  EnableRuntimeRecursion  on
+	  MATLABDynamicMemAlloc	  on
+	  MATLABDynamicMemAllocThreshold 65536
+	  CustomCodeFunctionArrayLayout	[]
+	  DefaultCustomCodeFunctionArrayLayout "NotSpecified"
+	  CustomCodeUndefinedFunction "UseInterfaceOnly"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  19
+	  Version		  "19.1.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    16
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "PortableWordSizes"
+	    Cell		    "GenerateWebview"
+	    Cell		    "GenerateCodeMetricsReport"
+	    Cell		    "GenerateCodeReplacementReport"
+	    Cell		    "GenerateErtSFunction"
+	    Cell		    "CreateSILPILBlock"
+	    Cell		    "CodeExecutionProfiling"
+	    Cell		    "CodeProfilingSaveOptions"
+	    Cell		    "CodeProfilingInstrumentation"
+	    Cell		    "GenerateMissedCodeReplacementReport"
+	    PropName		    "DisabledProps"
+	  }
+	  Description		  ""
+	  SystemTargetFile	  "grt.tlc"
+	  HardwareBoard		  "None"
+	  ShowCustomHardwareApp	  off
+	  ShowEmbeddedHardwareApp off
+	  TLCOptions		  ""
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  PackageGeneratedCodeAndArtifacts off
+	  PackageName		  ""
+	  TemplateMakefile	  "grt_default_tmf"
+	  PostCodeGenCommand	  ""
+	  GenerateReport	  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  RTWBuildHooks		  []
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  CustomSourceCode	  ""
+	  CustomHeaderCode	  ""
+	  CustomInclude		  ""
+	  CustomSource		  ""
+	  CustomLibrary		  ""
+	  CustomDefine		  ""
+	  CustomBLASCallback	  ""
+	  CustomLAPACKCallback	  ""
+	  CustomFFTCallback	  ""
+	  CustomInitializer	  ""
+	  CustomTerminator	  ""
+	  Toolchain		  "Automatically locate an installed toolchain"
+	  BuildConfiguration	  "Faster Builds"
+	  CustomToolchainOptions  []
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  PortableWordSizes	  off
+	  CreateSILPILBlock	  "None"
+	  CodeExecutionProfiling  off
+	  CodeExecutionProfileVariable "executionProfile"
+	  CodeProfilingSaveOptions "SummaryOnly"
+	  CodeProfilingInstrumentation "off"
+	  SILDebugging		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateWebview	  off
+	  GenerateCodeMetricsReport off
+	  GenerateCodeReplacementReport	off
+	  GenerateMissedCodeReplacementReport off
+	  RTWCompilerOptimization "off"
+	  ObjectivePriorities	  []
+	  RTWCustomCompilerOptimizations ""
+	  CheckMdlBeforeBuild	  "Off"
+	  SharedConstantsCachingThreshold 1024
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      20
+	      Version		      "19.1.1"
+	      Array {
+		Type			"Cell"
+		Dimension		28
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InternalIdentifier"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		Cell			"BlockCommentType"
+		Cell			"CustomSymbolStrModelFcn"
+		Cell			"CustomSymbolStrUtil"
+		Cell			"CustomSymbolStrEmxType"
+		Cell			"CustomSymbolStrEmxFcn"
+		Cell			"CustomUserTokenString"
+		PropName		"DisabledProps"
+	      }
+	      Description	      ""
+	      Components	      []
+	      Comment		      ""
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      CommentStyle	      "Auto"
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      OperatorAnnotations     off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      MangleLength	      1
+	      SharedChecksumLength    8
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M_T"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrModelFcn "$R$N"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      CustomSymbolStrUtil     "$N$C"
+	      CustomSymbolStrEmxType  "emxArray_$M$N"
+	      CustomSymbolStrEmxFcn   "emx$M$N"
+	      CustomUserTokenString   ""
+	      CustomCommentsFcn	      ""
+	      DefineNamingRule	      "None"
+	      DefineNamingFcn	      ""
+	      ParamNamingRule	      "None"
+	      ParamNamingFcn	      ""
+	      SignalNamingRule	      "None"
+	      SignalNamingFcn	      ""
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      BlockCommentType	      "BlockPathComment"
+	      StateflowObjectComments on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InternalIdentifierFile  ""
+	      InternalIdentifier      "Shortened"
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	      ReservedNameArray	      []
+	      EnumMemberNameClash     "error"
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      21
+	      Version		      "19.1.1"
+	      Array {
+		Type			"Cell"
+		Dimension		18
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"GenerateAllocFcn"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"ExistingSharedCode"
+		Cell			"RemoveDisableFunc"
+		Cell			"RemoveResetFunc"
+		Cell			"PreserveStateflowLocalDataDimensions"
+		PropName		"DisabledProps"
+	      }
+	      Description	      ""
+	      Components	      []
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      GenFloatMathFcnCalls    "NOT IN USE"
+	      TargetLangStandard      "C89/C90 (ANSI)"
+	      CodeReplacementLibrary  "None"
+	      UtilityFuncGeneration   "Auto"
+	      MultiwordTypeDef	      "System defined"
+	      MultiwordLength	      2048
+	      DynamicStringBufferSize 256
+	      GenerateFullHeader      on
+	      InferredTypesCompatibility off
+	      ExistingSharedCode      ""
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      ConcurrentExecutionCompliant on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns on
+	      CombineSignalStateStructs	off
+	      GroupInternalDataByFunction off
+	      SuppressErrorStatus     off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      CodeInterfacePackaging  "Nonreusable function"
+	      PurelyIntegerCode	      off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      RemoveDisableFunc	      off
+	      RemoveResetFunc	      off
+	      SupportVariableSizeSignals off
+	      ParenthesesLevel	      "Nominal"
+	      CastingMode	      "Nominal"
+	      PreserveStateflowLocalDataDimensions off
+	      MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    on
+	      AutosarCompliant	      off
+	      MDXCompliant	      off
+	      GRTInterface	      off
+	      GenerateAllocFcn	      off
+	      UseToolchainInfoCompliant	on
+	      GenerateSharedConstants on
+	      CoderGroups	      []
+	      AccessMethods	      []
+	      LookupTableObjectStructAxisOrder "1,2,3,4,..."
+	      LUTObjectStructOrderExplicitValues "Size,Breakpoints,Table"
+	      LUTObjectStructOrderEvenSpacing "Size,Breakpoints,Table"
+	      ArrayLayout	      "Column-major"
+	      UnsupportedSFcnMsg      "error"
+	      ERTHeaderFileRootName   "$R$E"
+	      ERTSourceFileRootName   "$R$E"
+	      ERTDataFileRootName     "$R_data"
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeMexArgs	      ""
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      GenerateASAP2	      off
+	      MultiInstanceErrorCode  "Error"
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	SlCovCC.ConfigComp {
+	  $ObjectID		  22
+	  Version		  "19.1.1"
+	  DisabledProps		  []
+	  Description		  "Simulink Coverage Configuration Component"
+	  Components		  []
+	  Name			  "Simulink Coverage"
+	  CovEnable		  off
+	  CovScope		  "EntireSystem"
+	  CovIncludeTopModel	  on
+	  RecordCoverage	  off
+	  CovPath		  "/"
+	  CovSaveName		  "covdata"
+	  CovCompData		  ""
+	  CovMetricSettings	  "dw"
+	  CovFilter		  ""
+	  CovHTMLOptions	  ""
+	  CovNameIncrementing	  off
+	  CovHtmlReporting	  on
+	  CovForceBlockReductionOff on
+	  CovEnableCumulative	  on
+	  CovSaveCumulativeToWorkspaceVar on
+	  CovSaveSingleToWorkspaceVar on
+	  CovCumulativeVarName	  "covCumulativeData"
+	  CovCumulativeReport	  off
+	  CovSaveOutputData	  on
+	  CovOutputDir		  "slcov_output/$ModelName$"
+	  CovDataFileName	  "$ModelName$_cvdata"
+	  CovShowResultsExplorer  on
+	  CovReportOnPause	  on
+	  CovModelRefEnable	  "off"
+	  CovModelRefExcluded	  ""
+	  CovExternalEMLEnable	  off
+	  CovSFcnEnable		  off
+	  CovBoundaryAbsTol	  1e-05
+	  CovBoundaryRelTol	  0.01
+	  CovUseTimeInterval	  off
+	  CovStartTime		  0
+	  CovStopTime		  0
+	  CovMcdcMode		  "Masking"
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  23
+	  Version		  "19.1.1"
+	  DisabledProps		  []
+	  Description		  "HDL Coder custom configuration component"
+	  Components		  []
+	  Name			  "HDL Coder"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    " "
+	    PropName		    "HDLConfigFile"
+	  }
+	  HDLCActiveTab		  "0"
+	}
+	SSC.SimscapeCC {
+	  $ObjectID		  24
+	  Version		  "1.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "Name"
+	    PropName		    "DisabledProps"
+	  }
+	  Description		  ""
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    MECH.SimMechanicsCC {
+	      $ObjectID		      25
+	      Version		      "19.1.1"
+	      DisabledProps	      []
+	      Description	      ""
+	      Components	      []
+	      Name		      "SimscapeMultibody1G"
+	      WarnOnRedundantConstraints on
+	      WarnOnSingularInitialAssembly off
+	      ShowCutJoints	      off
+	      VisOnUpdateDiagram      off
+	      VisDuringSimulation     off
+	      EnableVisSimulationTime on
+	      VisSampleTime	      "0"
+	      DisableBodyVisControl   off
+	      ShowCG		      on
+	      ShowCS		      on
+	      ShowOnlyPortCS	      off
+	      HighlightModel	      on
+	      FramesToBeSkipped	      "0"
+	      AnimationDelay	      "3"
+	      RecordAVI		      off
+	      CompressAVI	      on
+	      AviFileName	      ""
+	      AutoFitVis	      "off"
+	      EnableSelection	      on
+	      LastVizWinPosition      "[-1 -1 -1 -1]"
+	      CamPosition	      "[0 0 0]"
+	      CamTarget		      "[0 0 -1]"
+	      CamUpVector	      "[0 1 0]"
+	      CamHeight		      "-1"
+	      CamViewAngle	      "0"
+	      VisBackgroundColor      "[0.9 0.9 0.95]"
+	      DefaultBodyColor	      "[1 0 0]"
+	      MDLBodyVisualizationType "Convex hull from body CS locations"
+	      OVRRIDBodyVisualizationType "NONE"
+	      VisConfigFile	      ""
+	    }
+	    simmechanics.ConfigurationSet {
+	      $ObjectID		      26
+	      Version		      "19.1.1"
+	      DisabledProps	      []
+	      Description	      "SimMechanics 2G"
+	      Array {
+		Type			"Handle"
+		Dimension		2
+		simmechanics.DiagnosticsConfigSet {
+		  $ObjectID		  27
+		  Version		  "19.1.1"
+		  DisabledProps		  []
+		  Description		  "Diagnostics"
+		  Components		  []
+		  Name			  "DiagnosticsConfigSet"
+		  SimMechanicsInvalidVisualProperty "warning"
+		  SimMechanicsCrossSectionNullEdge "warning"
+		  SimMechanicsUnconnectedFramePorts "warning"
+		  SimMechanicsUnconnectedGeometryPorts "warning"
+		  SimMechanicsRedundantBlock "warning"
+		  SimMechanicsConflictingReferenceFrames "warning"
+		  SimMechanicsRigidlyBoundBlock	"error"
+		  SimMechanicsUnsatisfiedHighPriorityTargets "warning"
+		  SimMechanicsJointTargetOverSpecification "error"
+		}
+		simmechanics.ExplorerConfigSet {
+		  $ObjectID		  28
+		  Version		  "19.1.1"
+		  DisabledProps		  []
+		  Description		  "Explorer"
+		  Components		  []
+		  Name			  "ExplorerConfigSet"
+		  SimMechanicsOpenEditorOnUpdate on
+		  InternalSimMechanicsExplorerSettings "<ExplorerConfiguration><canonicalview>default</canonicalview><TilePanel><Til"
+		  "eInfo><Tiles Columns=\"1\" Count=\"1\" Rows=\"1\"><Column Left=\"2\" Weight=\"1\"/><Column Left=\"591\"/><Row Top="
+		  "\"2\" Weight=\"1\"/><Row Top=\"389\"/><Tile Height=\"1\" Width=\"1\" X=\"0\" Y=\"0\"/></Tiles></TileInfo><SceneInf"
+		  "o><SceneViewer><BGColor><R>0.60000002384185791</R><G>0.60000002384185791</G><B>0.60000002384185791</B></BGColor><C"
+		  "amera><Position><X>0.64243946887929204</X><Y>-49.663614699976236</Y><Z>0.22319801622928798</Z></Position><Center><"
+		  "X>0.64243946887929204</X><Y>0</Y><Z>0.22319801622928798</Z></Center><Up><X>0</X><Y>-0</Y><Z>1</Z></Up><Left>-0.881"
+		  "24258449330872</Left><Right>0.88124258449330872</Right><Bottom>-0.30475961919215644</Bottom><Top>0.304759619192156"
+		  "44</Top></Camera></SceneViewer></SceneInfo></TilePanel></ExplorerConfiguration>"
+		}
+		PropName		"Components"
+	      }
+	      Name		      "SimscapeMultibody"
+	    }
+	    PropName		    "Components"
+	  }
+	  Name			  "Simscape"
+	  EditingMode		  "Full"
+	  ExplicitSolverDiagnosticOptions "warning"
+	  GlobalZcOffDiagnosticOptions "warning"
+	  SimscapeNormalizeSystem off
+	  SimscapeNominalValues	  "[{\"value\":\"1\",\"unit\":\"A\"},{\"value\":\"1\",\"unit\":\"bar\"},{\"value\":\"1\",\"un"
+	  "it\":\"cm^2\"},{\"value\":\"1\",\"unit\":\"cm^3/s\"},{\"value\":\"1\",\"unit\":\"kJ/kg\"},{\"value\":\"1\",\"unit\""
+	  ":\"kW\"},{\"value\":\"1\",\"unit\":\"l\"},{\"value\":\"1\",\"unit\":\"N\"},{\"value\":\"1\",\"unit\":\"N*m\"},{\"va"
+	  "lue\":\"1\",\"unit\":\"V\"}]"
+	  SimscapeLogType	  "none"
+	  SimscapeLogSimulationStatistics off
+	  SimscapeLogToSDI	  off
+	  SimscapeLogOpenViewer	  off
+	  SimscapeLogName	  "simlog"
+	  SimscapeLogDecimation	  1
+	  SimscapeLogLimitData	  on
+	  SimscapeLogDataHistory  5000
+	  SimscapeUseOperatingPoints off
+	  SimscapeOperatingPoint  ""
+	  SelectedTab		  ""
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    [ 114, 92, 1210, 730 ]
+      ExtraOptions	      ""
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    11
+  }
+  Object {
+    $PropName		    "DataTransfer"
+    $ObjectID		    29
+    $ClassName		    "Simulink.GlobalDataTransfer"
+    DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
+    DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
+    DefaultTransitionBetweenContTasks "Ensure deterministic transfer (minimum delay)"
+    DefaultExtrapolationMethodBetweenContTasks "None"
+  }
+  ExplicitPartitioning	  off
+  WSDataSource		  "MATLAB Code"
+  WSMATLABCode		  "mCart = 1;\nmPend = 1;\ng = 9.81;\nL = 0.5; \ntheta0 = 0;\nKd = 10;"
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    HideAutomaticName	    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    MarkupType		    "model"
+    UseDisplayTextAsClickCallback off
+    AnnotationType	    "note_annotation"
+    FixedHeight		    off
+    FixedWidth		    off
+    Interpreter		    "off"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  MaskDefaults {
+    SelfModifiable	    "off"
+    IconFrame		    "on"
+    IconOpaque		    "opaque"
+    RunInitForIconRedraw    "analyze"
+    IconRotate		    "none"
+    PortRotate		    "default"
+    IconUnits		    "autoscale"
+  }
+  MaskParameterDefaults {
+    Evaluate		    "on"
+    Tunable		    "on"
+    NeverSave		    "off"
+    Internal		    "off"
+    ReadOnly		    "off"
+    Enabled		    "on"
+    Visible		    "on"
+    ToolTip		    "on"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Abs
+      ZeroCross		      on
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Derivative
+      CoefficientInTFapproximation "inf"
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParamDataTypeStr	      "Inherit: Same as input"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      Unit		      "inherit"
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      Unit		      "inherit"
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      EnsureOutportIsVirtual  off
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+      MustResolveToSignalObject	off
+      OutputWhenUnConnected   off
+      OutputWhenUnconnectedValue "0"
+      VectorParamsAs1DForOutWhenUnconnected on
+    }
+    Block {
+      BlockType		      PMIOPort
+      Port		      "1"
+    }
+    Block {
+      BlockType		      Scope
+      DefaultConfigurationName "Simulink.scopes.TimeScopeBlockCfg"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      ScheduleAs	      "Sample time"
+      SystemSampleTime	      "-1"
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      FunctionInterfaceSpec   "void_void"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      Opaque		      off
+      MaskHideContents	      off
+      SFBlockType	      "NONE"
+      VariantControlMode      "Expression"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+      AllowZeroVariantControls off
+      PropagateVariantConditions off
+      TreatAsGroupedWhenPropagatingVariantConditions on
+      ContentPreviewEnabled   off
+      IsWebBlock	      off
+      IsObserver	      off
+      Latency		      "0"
+      AutoFrameSizeCalculation off
+      IsWebBlockPanel	      off
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+  }
+  System {
+    Name		    "h_bridge_implementation_org"
+    Location		    [0, 23, 1280, 734]
+    Open		    off
+    PortBlocksUseCompactNotation off
+    SetExecutionDomain	    off
+    ExecutionDomainType	    "Deduce"
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "123"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "1420"
+    SimulinkSubDomain	    "Simulink"
+    Block {
+      BlockType		      Sum
+      Name		      "Add"
+      SID		      "1337"
+      Ports		      [2, 1]
+      Position		      [390, 467, 405, 498]
+      ZOrder		      2434
+      InputSameDT	      off
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Control System"
+      SID		      "1319"
+      Ports		      [2, 1]
+      Position		      [240, 450, 320, 530]
+      ZOrder		      2430
+      RequestExecContextInheritance off
+      System {
+	Name			"Control System"
+	Location		[0, 23, 1280, 734]
+	Open			off
+	PortBlocksUseCompactNotation off
+	SetExecutionDomain	off
+	ExecutionDomainType	"Deduce"
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"148"
+	SimulinkSubDomain	"Simulink"
+	Block {
+	  BlockType		  Inport
+	  Name			  "theta"
+	  SID			  "1320"
+	  Position		  [-120, 68, -90, 82]
+	  ZOrder		  54
+	  NamePlacement		  "alternate"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "x"
+	  SID			  "1321"
+	  Position		  [-120, 93, -90, 107]
+	  ZOrder		  55
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "LQR Controller"
+	  SID			  "1322"
+	  Ports			  [2, 1]
+	  Position		  [30, 61, 70, 114]
+	  ZOrder		  53
+	  RequestExecContextInheritance	off
+	  System {
+	    Name		    "LQR Controller"
+	    Location		    [1280, 23, 2560, 1374]
+	    Open		    off
+	    PortBlocksUseCompactNotation off
+	    SetExecutionDomain	    off
+	    ExecutionDomainType	    "Deduce"
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "148"
+	    SimulinkSubDomain	    "Simulink"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "theta"
+	      SID		      "1323"
+	      Position		      [-55, 63, -25, 77]
+	      ZOrder		      48
+	      NamePlacement	      "alternate"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "x"
+	      SID		      "1324"
+	      Position		      [-55, 13, -25, 27]
+	      ZOrder		      49
+	      NamePlacement	      "alternate"
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "LQR K"
+	      SID		      "1325"
+	      Position		      [235, 45, 280, 75]
+	      ZOrder		      39
+	      Gain		      "[-[-70.7107,-39.8418,-112.9919,-26.0522]]"
+	      Multiplication	      "Matrix(K*u)"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux"
+	      SID		      "1326"
+	      Ports		      [4, 1]
+	      Position		      [175, 11, 180, 104]
+	      ZOrder		      46
+	      NamePlacement	      "alternate"
+	      ShowName		      off
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Derivative
+	      Name		      "theta'"
+	      SID		      "1327"
+	      Position		      [60, 86, 90, 104]
+	      ZOrder		      54
+	    }
+	    Block {
+	      BlockType		      Derivative
+	      Name		      "x'"
+	      SID		      "1328"
+	      Position		      [105, 37, 135, 53]
+	      ZOrder		      55
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Vi"
+	      SID		      "1329"
+	      Position		      [470, 53, 500, 67]
+	      ZOrder		      52
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      ZOrder		      1
+	      SrcBlock		      "LQR K"
+	      SrcPort		      1
+	      DstBlock		      "Vi"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      2
+	      SrcBlock		      "Mux"
+	      SrcPort		      1
+	      DstBlock		      "LQR K"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      3
+	      SrcBlock		      "theta"
+	      SrcPort		      1
+	      Points		      [38, 0]
+	      Branch {
+		ZOrder			4
+		DstBlock		"Mux"
+		DstPort			3
+	      }
+	      Branch {
+		ZOrder			5
+		Points			[0, 25]
+		DstBlock		"theta'"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      ZOrder		      6
+	      SrcBlock		      "x'"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      7
+	      SrcBlock		      "theta'"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      4
+	    }
+	    Line {
+	      ZOrder		      8
+	      SrcBlock		      "x"
+	      SrcPort		      1
+	      Points		      [58, 0]
+	      Branch {
+		ZOrder			9
+		Points			[0, 25]
+		DstBlock		"x'"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			10
+		DstBlock		"Mux"
+		DstPort			1
+	      }
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Vi"
+	  SID			  "1330"
+	  Position		  [160, 83, 190, 97]
+	  ZOrder		  51
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  ZOrder		  1
+	  SrcBlock		  "LQR Controller"
+	  SrcPort		  1
+	  DstBlock		  "Vi"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  2
+	  SrcBlock		  "theta"
+	  SrcPort		  1
+	  DstBlock		  "LQR Controller"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  3
+	  SrcBlock		  "x"
+	  SrcPort		  1
+	  DstBlock		  "LQR Controller"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Disturbance"
+      SID		      "1333"
+      Ports		      [0, 1]
+      Position		      [270, 402, 295, 428]
+      ZOrder		      2433
+      NamePlacement	      "alternate"
+      RequestExecContextInheritance off
+      System {
+	Name			"Disturbance"
+	Location		[0, 23, 1280, 734]
+	Open			off
+	PortBlocksUseCompactNotation off
+	SetExecutionDomain	off
+	ExecutionDomainType	"Deduce"
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SimulinkSubDomain	"Simulink"
+	Block {
+	  BlockType		  Reference
+	  Name			  "Discrete \nImpulse"
+	  SID			  "1334"
+	  Ports			  [0, 1]
+	  Position		  [20, 21, 60, 59]
+	  ZOrder		  2184
+	  NamePlacement		  "alternate"
+	  LibraryVersion	  "1.773"
+	  SourceBlock		  "dspsrcs4/Discrete \nImpulse"
+	  SourceType		  "Discrete Impulse "
+	  SourceProductName	  "DSP System Toolbox"
+	  SourceProductBaseCode	  "DS"
+	  Delay			  5
+	  SampleTime		  1
+	  FrameSample		  1
+	  OutputFrames		  off
+	  additionalParams	  off
+	  allowOverrides	  on
+	  dataType		  double
+	  isSigned		  on
+	  wordLen		  16
+	  udDataType		  "sfix(16)"
+	  fracBitsMode		  "Best precision"
+	  numFracBits		  15
+	  OutDataTypeStr	  double
+	  LastOutDataTypeStr	  double
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  SID			  "1335"
+	  Position		  [110, 25, 140, 55]
+	  ZOrder		  2185
+	  NamePlacement		  "alternate"
+	  Gain			  "2"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "dF"
+	  SID			  "1336"
+	  Position		  [215, 33, 245, 47]
+	  ZOrder		  2186
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  ZOrder		  1
+	  SrcBlock		  "Discrete \nImpulse"
+	  SrcPort		  1
+	  DstBlock		  "Gain"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  2
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  DstBlock		  "dF"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Linear Actuator"
+      SID		      "1310"
+      Ports		      [1, 0, 0, 0, 0, 0, 1]
+      Position		      [460, 418, 600, 552]
+      ZOrder		      2420
+      RequestExecContextInheritance off
+      System {
+	Name			"Linear Actuator"
+	Location		[0, 23, 1280, 734]
+	Open			off
+	PortBlocksUseCompactNotation off
+	SetExecutionDomain	off
+	ExecutionDomainType	"Deduce"
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"127"
+	SimulinkSubDomain	"Simulink"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Vi"
+	  SID			  "1419"
+	  Position		  [40, 243, 70, 257]
+	  ZOrder		  2442
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Belt"
+	  SID			  "1249"
+	  Ports			  [0, 0, 0, 0, 0, 1, 1]
+	  Position		  [510, 215, 550, 255]
+	  ZOrder		  2426
+	  BackgroundColor	  "lightBlue"
+	  LibraryVersion	  "10000000.1"
+	  SourceBlock		  "fl_lib/Mechanical/Mechanisms/Wheel and Axle"
+	  SourceType		  "Wheel and Axle"
+	  SourceProductName	  "Simscape"
+	  SourceProductBaseCode	  "SS"
+	  LogSimulationData	  off
+	  SourceFile		  "foundation.mechanical.mechanisms.wheel_axle"
+	  InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"A\",\"label\":\"A\",\"type\":\"foundation.mec"
+	  "hanical.rotational.rotational\"}],\"Right\":[{\"id\":\"P\",\"label\":\"P\",\"type\":\"foundation.mechanical.transla"
+	  "tional.translational\"}],\"Top\":[]}"
+	  ComponentPath		  "foundation.mechanical.mechanisms.wheel_axle"
+	  ComponentVariants	  "foundation.mechanical.mechanisms.wheel_axle"
+	  ComponentVariantNames	  wheel_axle
+	  ClassName		  wheel_axle
+	  SchemaVersion		  1
+	  R			  ".001625"
+	  R_unit		  m
+	  R_conf		  compiletime
+	  or			  1
+	  or_unit		  1
+	  or_conf		  compiletime
+	  t_specify		  off
+	  t_priority		  High
+	  t			  0
+	  t_unit		  "N*m"
+	  t_nominal_specify	  off
+	  t_nominal_unit	  "N*m"
+	  t_nominal_value	  1
+	  f_specify		  off
+	  f_priority		  High
+	  f			  0
+	  f_unit		  N
+	  f_nominal_specify	  off
+	  f_nominal_unit	  N
+	  f_nominal_value	  1
+	  Port {
+	    PortType		    2
+	    PortNumber		    1
+	    Position		    [506, 235]
+	  }
+	  Port {
+	    PortType		    3
+	    PortNumber		    1
+	    Position		    [554, 235]
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "DC Motor"
+	  SID			  "1251"
+	  Ports			  [0, 0, 0, 0, 0, 2, 2]
+	  Position		  [325, 219, 390, 281]
+	  ZOrder		  2422
+	  BackgroundColor	  "orange"
+	  RequestExecContextInheritance	off
+	  System {
+	    Name		    "DC Motor"
+	    Location		    [0, 23, 1280, 734]
+	    Open		    off
+	    PortBlocksUseCompactNotation off
+	    SetExecutionDomain	    off
+	    ExecutionDomainType	    "Deduce"
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SimulinkSubDomain	    "Simulink"
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Friction Mr"
+	      SID		      "1252"
+	      Ports		      [0, 0, 0, 0, 0, 1, 1]
+	      Position		      [405, 120, 445, 160]
+	      ZOrder		      -1
+	      BlockRotation	      270
+	      BlockMirror	      on
+	      LibraryVersion	      "10000000.1"
+	      SourceBlock	      "fl_lib/Mechanical/Rotational Elements/Rotational Friction"
+	      SourceType	      "Rotational Friction"
+	      SourceProductName	      "Simscape"
+	      SourceProductBaseCode   "SS"
+	      LogSimulationData	      off
+	      SourceFile	      "foundation.mechanical.rotational.friction"
+	      InternalSimscapePortConfiguration	"{\"Bottom\":[],\"Left\":[{\"id\":\"R\",\"label\":\"R\",\"type\":\"foundation"
+	      ".mechanical.rotational.rotational\"}],\"Right\":[{\"id\":\"C\",\"label\":\"C\",\"type\":\"foundation.mechanical"
+	      ".rotational.rotational\"}],\"Top\":[]}"
+	      ComponentPath	      "foundation.mechanical.rotational.friction"
+	      ComponentVariants	      "foundation.mechanical.rotational.friction"
+	      ComponentVariantNames   friction
+	      ClassName		      friction_rot
+	      SchemaVersion	      1
+	      brkwy_trq		      0.02e-3
+	      brkwy_trq_unit	      "N*m"
+	      brkwy_trq_conf	      compiletime
+	      brkwy_vel		      0.03347
+	      brkwy_vel_unit	      "rad/s"
+	      brkwy_vel_conf	      compiletime
+	      Col_trq		      0.02e-3
+	      Col_trq_unit	      "N*m"
+	      Col_trq_conf	      compiletime
+	      visc_coef		      0
+	      visc_coef_unit	      "N*m/(rad/s)"
+	      visc_coef_conf	      compiletime
+	      w_specify		      off
+	      w_priority	      High
+	      w			      0
+	      w_unit		      "rad/s"
+	      w_nominal_specify	      off
+	      w_nominal_unit	      "rad/s"
+	      w_nominal_value	      1
+	      t_specify		      off
+	      t_priority	      High
+	      t			      0
+	      t_unit		      "N*m"
+	      t_nominal_specify	      off
+	      t_nominal_unit	      "N*m"
+	      t_nominal_value	      1
+	      Port {
+		PortType		2
+		PortNumber		1
+		Rotation		-1.5707963267948966
+		Position		[425, 116]
+	      }
+	      Port {
+		PortType		3
+		PortNumber		1
+		Rotation		-1.5707963267948966
+		Position		[425, 164]
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "L"
+	      SID		      "1253"
+	      Ports		      [0, 0, 0, 0, 0, 1, 1]
+	      Position		      [155, 71, 195, 99]
+	      ZOrder		      -2
+	      LibraryVersion	      "10000000.1"
+	      SourceBlock	      "fl_lib/Electrical/Electrical Elements/Inductor"
+	      SourceType	      "Inductor"
+	      SourceProductName	      "Simscape"
+	      SourceProductBaseCode   "SS"
+	      LogSimulationData	      off
+	      SourceFile	      "foundation.electrical.elements.inductor"
+	      InternalSimscapePortConfiguration	"{\"Bottom\":[],\"Left\":[{\"id\":\"p\",\"label\":\"+\",\"type\":\"foundation"
+	      ".electrical.electrical\"}],\"Right\":[{\"id\":\"n\",\"label\":\"-\",\"type\":\"foundation.electrical.electrical"
+	      "\"}],\"Top\":[]}"
+	      ComponentPath	      "foundation.electrical.elements.inductor"
+	      ComponentVariants	      "foundation.electrical.elements.inductor"
+	      ComponentVariantNames   inductor
+	      ClassName		      inductor
+	      SchemaVersion	      1
+	      l			      12e-6
+	      l_unit		      H
+	      l_conf		      compiletime
+	      r			      0
+	      r_unit		      Ohm
+	      r_conf		      compiletime
+	      g			      1e-09
+	      g_unit		      "1/Ohm"
+	      g_conf		      compiletime
+	      i_specify		      off
+	      i_priority	      High
+	      i			      0
+	      i_unit		      A
+	      i_nominal_specify	      off
+	      i_nominal_unit	      A
+	      i_nominal_value	      1
+	      v_specify		      off
+	      v_priority	      High
+	      v			      0
+	      v_unit		      V
+	      v_nominal_specify	      off
+	      v_nominal_unit	      V
+	      v_nominal_value	      1
+	      i_L_specify	      on
+	      i_L_priority	      High
+	      i_L		      0
+	      i_L_unit		      A
+	      i_L_nominal_specify     off
+	      i_L_nominal_unit	      A
+	      i_L_nominal_value	      1
+	      Port {
+		PortType		2
+		PortNumber		1
+		Position		[151, 85]
+	      }
+	      Port {
+		PortType		3
+		PortNumber		1
+		Position		[199, 85]
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Motor\nInertia J"
+	      SID		      "1254"
+	      Ports		      [0, 0, 0, 0, 0, 1]
+	      Position		      [375, 15, 415, 55]
+	      ZOrder		      -3
+	      LibraryVersion	      "10000000.1"
+	      SourceBlock	      "fl_lib/Mechanical/Rotational Elements/Inertia"
+	      SourceType	      "Inertia"
+	      SourceProductName	      "Simscape"
+	      SourceProductBaseCode   "SS"
+	      LogSimulationData	      off
+	      SourceFile	      "foundation.mechanical.rotational.inertia"
+	      InternalSimscapePortConfiguration	"{\"Bottom\":[],\"Left\":[{\"id\":\"I\",\"label\":\"\",\"type\":\"foundation."
+	      "mechanical.rotational.rotational\"}],\"Right\":[],\"Top\":[]}"
+	      ComponentPath	      "foundation.mechanical.rotational.inertia"
+	      ComponentVariants	      "foundation.mechanical.rotational.inertia"
+	      ComponentVariantNames   inertia
+	      ClassName		      inertia
+	      SchemaVersion	      1
+	      inertia		      0.01
+	      inertia_unit	      "g*cm^2"
+	      inertia_conf	      compiletime
+	      w_specify		      on
+	      w_priority	      High
+	      w			      0
+	      w_unit		      "rad/s"
+	      w_nominal_specify	      off
+	      w_nominal_unit	      "rad/s"
+	      w_nominal_value	      1
+	      t_specify		      off
+	      t_priority	      High
+	      t			      0
+	      t_unit		      "N*m"
+	      t_nominal_specify	      off
+	      t_nominal_unit	      "N*m"
+	      t_nominal_value	      1
+	      Port {
+		PortType		2
+		PortNumber		1
+		Position		[371, 35]
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Rotational\nElectromechanical\nConverter"
+	      SID		      "1255"
+	      Ports		      [0, 0, 0, 0, 0, 2, 2]
+	      Position		      [215, 105, 295, 160]
+	      ZOrder		      -4
+	      BlockRotation	      270
+	      BlockMirror	      on
+	      LibraryVersion	      "10000000.1"
+	      SourceBlock	      "fl_lib/Electrical/Electrical Elements/Rotational\nElectromechanical\nConverter"
+	      SourceType	      "Rotational\nElectromechanical\nConverter"
+	      SourceProductName	      "Simscape"
+	      SourceProductBaseCode   "SS"
+	      LogSimulationData	      off
+	      SourceFile	      "foundation.electrical.elements.rotational_converter"
+	      InternalSimscapePortConfiguration	"{\"Bottom\":[],\"Left\":[{\"id\":\"p\",\"label\":\"+\",\"type\":\"foundation"
+	      ".electrical.electrical\"},{\"id\":\"R\",\"label\":\"R\",\"type\":\"foundation.mechanical.rotational.rotational\""
+	      "}],\"Right\":[{\"id\":\"n\",\"label\":\"-\",\"type\":\"foundation.electrical.electrical\"},{\"id\":\"C\",\"labe"
+	      "l\":\"C\",\"type\":\"foundation.mechanical.rotational.rotational\"}],\"Top\":[]}"
+	      ComponentPath	      "foundation.electrical.elements.rotational_converter"
+	      ComponentVariants	      "foundation.electrical.elements.rotational_converter"
+	      ComponentVariantNames   rotational_converter
+	      ClassName		      rotational_converter
+	      SchemaVersion	      1
+	      K			      "0.072e-3*60/(2*pi)"
+	      K_unit		      "s*V/rad"
+	      K_conf		      compiletime
+	      i_specify		      off
+	      i_priority	      High
+	      i			      0
+	      i_unit		      A
+	      i_nominal_specify	      off
+	      i_nominal_unit	      A
+	      i_nominal_value	      1
+	      v_specify		      off
+	      v_priority	      High
+	      v			      0
+	      v_unit		      V
+	      v_nominal_specify	      off
+	      v_nominal_unit	      V
+	      v_nominal_value	      1
+	      t_specify		      off
+	      t_priority	      High
+	      t			      0
+	      t_unit		      "N*m"
+	      t_nominal_specify	      off
+	      t_nominal_unit	      "N*m"
+	      t_nominal_value	      1
+	      w_specify		      off
+	      w_priority	      High
+	      w			      0
+	      w_unit		      "rad/s"
+	      w_nominal_specify	      off
+	      w_nominal_unit	      "rad/s"
+	      w_nominal_value	      1
+	      Port {
+		PortType		2
+		PortNumber		1
+		Rotation		-1.5707963267948966
+		Position		[235, 101]
+	      }
+	      Port {
+		PortType		2
+		PortNumber		2
+		Rotation		-1.5707963267948966
+		Position		[275, 101]
+	      }
+	      Port {
+		PortType		3
+		PortNumber		1
+		Rotation		-1.5707963267948966
+		Position		[235, 164]
+	      }
+	      Port {
+		PortType		3
+		PortNumber		2
+		Rotation		-1.5707963267948966
+		Position		[275, 164]
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Rotor\nResistance,R"
+	      SID		      "1256"
+	      Tag		      "Factory Generic"
+	      Ports		      [0, 0, 0, 0, 0, 1, 1]
+	      Position		      [90, 71, 130, 99]
+	      ZOrder		      -5
+	      LibraryVersion	      "10000000.1"
+	      SourceBlock	      "fl_lib/Electrical/Electrical Elements/Resistor"
+	      SourceType	      "Resistor"
+	      SourceProductName	      "Simscape"
+	      SourceProductBaseCode   "SS"
+	      LogSimulationData	      off
+	      SourceFile	      "foundation.electrical.elements.resistor"
+	      InternalSimscapePortConfiguration	"{\"Bottom\":[],\"Left\":[{\"id\":\"p\",\"label\":\"+\",\"type\":\"foundation"
+	      ".electrical.electrical\"}],\"Right\":[{\"id\":\"n\",\"label\":\"-\",\"type\":\"foundation.electrical.electrical"
+	      "\"}],\"Top\":[]}"
+	      ComponentPath	      "foundation.electrical.elements.resistor"
+	      ComponentVariants	      "foundation.electrical.elements.resistor"
+	      ComponentVariantNames   resistor
+	      ClassName		      resistor
+	      SchemaVersion	      1
+	      R			      3.9
+	      R_unit		      Ohm
+	      R_conf		      compiletime
+	      i_specify		      off
+	      i_priority	      High
+	      i			      0
+	      i_unit		      A
+	      i_nominal_specify	      off
+	      i_nominal_unit	      A
+	      i_nominal_value	      1
+	      v_specify		      off
+	      v_priority	      High
+	      v			      0
+	      v_unit		      V
+	      v_nominal_specify	      off
+	      v_nominal_unit	      V
+	      v_nominal_value	      1
+	      Port {
+		PortType		2
+		PortNumber		1
+		Position		[86, 85]
+	      }
+	      Port {
+		PortType		3
+		PortNumber		1
+		Position		[134, 85]
+	      }
+	    }
+	    Block {
+	      BlockType		      PMIOPort
+	      Name		      "V+"
+	      SID		      "1257"
+	      Position		      [20, 78, 50, 92]
+	      ZOrder		      -6
+	      Side		      "Left"
+	    }
+	    Block {
+	      BlockType		      PMIOPort
+	      Name		      "R"
+	      SID		      "1258"
+	      Position		      [475, 78, 505, 92]
+	      ZOrder		      -7
+	      BlockMirror	      on
+	      Port		      "2"
+	      Side		      "Right"
+	    }
+	    Block {
+	      BlockType		      PMIOPort
+	      Name		      "C"
+	      SID		      "1259"
+	      Position		      [475, 183, 505, 197]
+	      ZOrder		      -8
+	      BlockMirror	      on
+	      Port		      "3"
+	      Side		      "Right"
+	    }
+	    Block {
+	      BlockType		      PMIOPort
+	      Name		      "V-"
+	      SID		      "1260"
+	      Position		      [20, 183, 50, 197]
+	      ZOrder		      -9
+	      Port		      "4"
+	      Side		      "Left"
+	    }
+	    Line {
+	      LineType		      "Connection"
+	      ZOrder		      1
+	      SrcBlock		      "Rotational\nElectromechanical\nConverter"
+	      SrcPort		      LConn1
+	      Points		      [-25, 0]
+	      DstBlock		      "L"
+	      DstPort		      RConn1
+	    }
+	    Line {
+	      LineType		      "Connection"
+	      ZOrder		      2
+	      SrcBlock		      "V-"
+	      SrcPort		      RConn1
+	      Points		      [170, 0]
+	      DstBlock		      "Rotational\nElectromechanical\nConverter"
+	      DstPort		      RConn1
+	    }
+	    Line {
+	      LineType		      "Connection"
+	      ZOrder		      3
+	      SrcBlock		      "Rotor\nResistance,R"
+	      SrcPort		      LConn1
+	      DstBlock		      "V+"
+	      DstPort		      RConn1
+	    }
+	    Line {
+	      LineType		      "Connection"
+	      ZOrder		      4
+	      SrcBlock		      "L"
+	      SrcPort		      LConn1
+	      DstBlock		      "Rotor\nResistance,R"
+	      DstPort		      RConn1
+	    }
+	    Line {
+	      LineType		      "Connection"
+	      ZOrder		      5
+	      SrcBlock		      "Rotational\nElectromechanical\nConverter"
+	      SrcPort		      LConn2
+	      Points		      [0, -5; 50, 0]
+	      Branch {
+		ConnectType		"DEST_SRC"
+		Points			[100, 0]
+		Branch {
+		  ConnectType		  "DEST_DEST"
+		  SrcBlock		  "R"
+		  SrcPort		  RConn1
+		  Points		  [-35, 0]
+		}
+		Branch {
+		  ConnectType		  "DEST_SRC"
+		  DstBlock		  "Friction Mr"
+		  DstPort		  LConn1
+		}
+	      }
+	      Branch {
+		ConnectType		"DEST_SRC"
+		Points			[0, -50]
+		DstBlock		"Motor\nInertia J"
+		DstPort			LConn1
+	      }
+	    }
+	    Line {
+	      LineType		      "Connection"
+	      ZOrder		      10
+	      SrcBlock		      "Rotational\nElectromechanical\nConverter"
+	      SrcPort		      RConn2
+	      Points		      [0, 15; 150, 0]
+	      Branch {
+		ConnectType		"DEST_SRC"
+		DstBlock		"C"
+		DstPort			RConn1
+	      }
+	      Branch {
+		ConnectType		"DEST_DEST"
+		SrcBlock		"Friction Mr"
+		SrcPort			RConn1
+		Points			[0, 15]
+	      }
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Gear Box"
+	  SID			  "1262"
+	  Ports			  [0, 0, 0, 0, 0, 1, 1]
+	  Position		  [430, 215, 470, 255]
+	  ZOrder		  2427
+	  BackgroundColor	  "lightBlue"
+	  LibraryVersion	  "10000000.1"
+	  SourceBlock		  "fl_lib/Mechanical/Mechanisms/Gear Box"
+	  SourceType		  "Gear Box"
+	  SourceProductName	  "Simscape"
+	  SourceProductBaseCode	  "SS"
+	  LogSimulationData	  off
+	  SourceFile		  "foundation.mechanical.mechanisms.gear_box"
+	  InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"S\",\"label\":\"S\",\"type\":\"foundation.mec"
+	  "hanical.rotational.rotational\"}],\"Right\":[{\"id\":\"O\",\"label\":\"O\",\"type\":\"foundation.mechanical.rotatio"
+	  "nal.rotational\"}],\"Top\":[]}"
+	  ComponentPath		  "foundation.mechanical.mechanisms.gear_box"
+	  ComponentVariants	  "foundation.mechanical.mechanisms.gear_box"
+	  ComponentVariantNames	  gear_box
+	  ClassName		  gear_box
+	  SchemaVersion		  1
+	  ratio			  6.25
+	  ratio_unit		  1
+	  ratio_conf		  compiletime
+	  t_in_specify		  off
+	  t_in_priority		  High
+	  t_in			  0
+	  t_in_unit		  "N*m"
+	  t_in_nominal_specify	  off
+	  t_in_nominal_unit	  "N*m"
+	  t_in_nominal_value	  1
+	  t_out_specify		  off
+	  t_out_priority	  High
+	  t_out			  0
+	  t_out_unit		  "N*m"
+	  t_out_nominal_specify	  off
+	  t_out_nominal_unit	  "N*m"
+	  t_out_nominal_value	  1
+	  Port {
+	    PortType		    2
+	    PortNumber		    1
+	    Position		    [426, 235]
+	  }
+	  Port {
+	    PortType		    3
+	    PortNumber		    1
+	    Position		    [474, 235]
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Mechanical\nRotational Reference"
+	  SID			  "1263"
+	  Ports			  [0, 0, 0, 0, 0, 1]
+	  Position		  [400, 300, 420, 320]
+	  ZOrder		  2420
+	  BlockRotation		  270
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  LibraryVersion	  "10000000.1"
+	  SourceBlock		  "fl_lib/Mechanical/Rotational Elements/Mechanical\nRotational Reference"
+	  SourceType		  "Mechanical\nRotational Reference"
+	  SourceProductName	  "Simscape"
+	  SourceProductBaseCode	  "SS"
+	  LogSimulationData	  off
+	  SourceFile		  "foundation.mechanical.rotational.reference"
+	  InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"W\",\"label\":\"\",\"type\":\"foundation.mech"
+	  "anical.rotational.rotational\"}],\"Right\":[],\"Top\":[]}"
+	  ComponentPath		  "foundation.mechanical.rotational.reference"
+	  ComponentVariants	  "foundation.mechanical.rotational.reference"
+	  ComponentVariantNames	  reference
+	  ClassName		  reference_rot
+	  SchemaVersion		  1
+	  Port {
+	    PortType		    2
+	    PortNumber		    1
+	    Rotation		    -1.5707963267948966
+	    Position		    [410, 296]
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "PWM &\nH-Bridge"
+	  SID			  "1367"
+	  Ports			  [0, 0, 0, 0, 0, 2, 2]
+	  Position		  [230, 218, 285, 282]
+	  ZOrder		  2432
+	  BackgroundColor	  "yellow"
+	  RequestExecContextInheritance	off
+	  System {
+	    Name		    "PWM &\nH-Bridge"
+	    Location		    [0, 23, 1280, 734]
+	    Open		    off
+	    PortBlocksUseCompactNotation off
+	    SetExecutionDomain	    off
+	    ExecutionDomainType	    "Deduce"
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SimulinkSubDomain	    "Simulink"
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Controlled PWM\nVoltage"
+	      SID		      "1368"
+	      Ports		      [0, 0, 0, 0, 0, 2, 2]
+	      Position		      [125, 70, 185, 110]
+	      ZOrder		      -1
+	      BackgroundColor	      "[1.000000, 1.000000, 0.498039]"
+	      LibraryVersion	      "10000000.2"
+	      SourceBlock	      "ee_lib/Integrated Circuits/Controlled PWM\nVoltage"
+	      SourceType	      "Controlled PWM\nVoltage"
+	      SourceProductName	      "Simscape Electrical"
+	      SourceProductBaseCode   "PS"
+	      LogSimulationData	      off
+	      SourceFile	      "ee.ic.controlled_pwm"
+	      InternalSimscapePortConfiguration	"{\"Bottom\":[],\"Left\":[{\"id\":\"p1\",\"label\":\"ref+\",\"type\":\"founda"
+	      "tion.electrical.electrical\"},{\"id\":\"n1\",\"label\":\"ref-\",\"type\":\"foundation.electrical.electrical\"}]"
+	      ",\"Right\":[{\"id\":\"p2\",\"label\":\"PWM\",\"type\":\"foundation.electrical.electrical\"},{\"id\":\"n2\",\"la"
+	      "bel\":\"REF\",\"type\":\"foundation.electrical.electrical\"}],\"Top\":[]}"
+	      ComponentPath	      "ee.ic.controlled_pwm"
+	      ComponentVariants	      "ee.ic.controlled_pwm, ee.ic.controlled_pwm_ps"
+	      ComponentVariantNames   "Electrical input ports, PS input"
+	      ClassName		      "Simscape variant"
+	      SchemaVersion	      1
+	      F			      10000
+	      F_unit		      Hz
+	      F_conf		      compiletime
+	      TD		      0
+	      TD_unit		      s
+	      TD_conf		      compiletime
+	      pulse_width_offset      0
+	      pulse_width_offset_unit s
+	      pulse_width_offset_conf compiletime
+	      pulse_min		      0
+	      pulse_min_unit	      s
+	      pulse_min_conf	      compiletime
+	      Vmin		      0
+	      Vmin_unit		      V
+	      Vmin_conf		      compiletime
+	      Vmax		      5
+	      Vmax_unit		      V
+	      Vmax_conf		      compiletime
+	      Vm		      5
+	      Vm_unit		      V
+	      Vm_conf		      compiletime
+	      pwm_or_av		      2
+	      pwm_or_av_unit	      1
+	      pwm_or_av_conf	      compiletime
+	      event_type	      1
+	      event_type_unit	      1
+	      event_type_conf	      compiletime
+	      sample_time	      1e-6
+	      sample_time_unit	      s
+	      sample_time_conf	      compiletime
+	      u_min		      0
+	      u_min_unit	      1
+	      u_min_conf	      compiletime
+	      u_max		      1
+	      u_max_unit	      1
+	      u_max_conf	      compiletime
+	      Port {
+		PortType		2
+		PortNumber		1
+		Position		[121, 80]
+	      }
+	      Port {
+		PortType		2
+		PortNumber		2
+		Position		[121, 100]
+	      }
+	      Port {
+		PortType		3
+		PortNumber		1
+		Position		[189, 80]
+	      }
+	      Port {
+		PortType		3
+		PortNumber		2
+		Position		[189, 100]
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Electrical Reference1"
+	      SID		      "1369"
+	      Ports		      [0, 0, 0, 0, 0, 1]
+	      Position		      [92, 170, 118, 195]
+	      ZOrder		      -2
+	      BlockRotation	      270
+	      BlockMirror	      on
+	      ShowName		      off
+	      LibraryVersion	      "10000000.1"
+	      SourceBlock	      "fl_lib/Electrical/Electrical Elements/Electrical Reference"
+	      SourceType	      "Electrical Reference"
+	      SourceProductName	      "Simscape"
+	      SourceProductBaseCode   "SS"
+	      LogSimulationData	      off
+	      SourceFile	      "foundation.electrical.elements.reference"
+	      InternalSimscapePortConfiguration	"{\"Bottom\":[],\"Left\":[{\"id\":\"V\",\"label\":\"\",\"type\":\"foundation."
+	      "electrical.electrical\"}],\"Right\":[],\"Top\":[]}"
+	      ComponentPath	      "foundation.electrical.elements.reference"
+	      ComponentVariants	      "foundation.electrical.elements.reference"
+	      ComponentVariantNames   reference
+	      ClassName		      reference_electrical
+	      SchemaVersion	      1
+	      Port {
+		PortType		2
+		PortNumber		1
+		Rotation		-1.5707963267948966
+		Position		[105, 166]
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Electrical Reference2"
+	      SID		      "1370"
+	      Ports		      [0, 0, 0, 0, 0, 1]
+	      Position		      [422, 170, 448, 195]
+	      ZOrder		      -3
+	      BlockRotation	      270
+	      BlockMirror	      on
+	      ShowName		      off
+	      LibraryVersion	      "10000000.1"
+	      SourceBlock	      "fl_lib/Electrical/Electrical Elements/Electrical Reference"
+	      SourceType	      "Electrical Reference"
+	      SourceProductName	      "Simscape"
+	      SourceProductBaseCode   "SS"
+	      LogSimulationData	      off
+	      SourceFile	      "foundation.electrical.elements.reference"
+	      InternalSimscapePortConfiguration	"{\"Bottom\":[],\"Left\":[{\"id\":\"V\",\"label\":\"\",\"type\":\"foundation."
+	      "electrical.electrical\"}],\"Right\":[],\"Top\":[]}"
+	      ComponentPath	      "foundation.electrical.elements.reference"
+	      ComponentVariants	      "foundation.electrical.elements.reference"
+	      ComponentVariantNames   reference
+	      ClassName		      reference_electrical
+	      SchemaVersion	      1
+	      Port {
+		PortType		2
+		PortNumber		1
+		Rotation		-1.5707963267948966
+		Position		[435, 166]
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "H-Bridge"
+	      SID		      "1371"
+	      Ports		      [0, 0, 0, 0, 0, 4, 2]
+	      Position		      [305, 66, 410, 154]
+	      ZOrder		      -4
+	      BackgroundColor	      "[1.000000, 1.000000, 0.498039]"
+	      LibraryVersion	      "10000000.2"
+	      SourceBlock	      "ee_lib/Semiconductors &\nConverters/Converters/H-Bridge"
+	      SourceType	      "H-Bridge"
+	      SourceProductName	      "Simscape Electrical"
+	      SourceProductBaseCode   "PS"
+	      LogSimulationData	      off
+	      SourceFile	      "ee.semiconductors.converters.h_bridge"
+	      InternalSimscapePortConfiguration	"{\"Bottom\":[],\"Left\":[{\"id\":\"ENA\",\"label\":\"PWM\",\"type\":\"founda"
+	      "tion.electrical.electrical\"},{\"id\":\"REF\",\"label\":\"REF\",\"type\":\"foundation.electrical.electrical\"},"
+	      "{\"id\":\"REV\",\"label\":\"REV\",\"type\":\"foundation.electrical.electrical\"},{\"id\":\"BRK\",\"label\":\"BR"
+	      "K\",\"type\":\"foundation.electrical.electrical\"}],\"Right\":[{\"id\":\"p2\",\"label\":\"+\",\"type\":\"founda"
+	      "tion.electrical.electrical\"},{\"id\":\"n2\",\"label\":\"-\",\"type\":\"foundation.electrical.electrical\"}],\""
+	      "Top\":[]}"
+	      ComponentPath	      "ee.semiconductors.converters.h_bridge"
+	      ComponentVariants	      "ee.semiconductors.converters.h_bridge, ee.semiconductors.converters.h_bridge_thermal"
+	      ComponentVariantNames   "No thermal port, Show thermal port"
+	      ClassName		      "Simscape variant"
+	      SchemaVersion	      1
+	      supply_ports	      "ee.enum.supply_ports.hidesupply"
+	      supply_ports_unit	      1
+	      supply_ports_conf	      compiletime
+	      Venable		      2.5
+	      Venable_unit	      V
+	      Venable_conf	      compiletime
+	      Vmax		      5
+	      Vmax_unit		      V
+	      Vmax_conf		      compiletime
+	      Vreverse		      2.5
+	      Vreverse_unit	      V
+	      Vreverse_conf	      compiletime
+	      Vbrake		      2.5
+	      Vbrake_unit	      V
+	      Vbrake_conf	      compiletime
+	      Vm		      24
+	      Vm_unit		      V
+	      Vm_conf		      compiletime
+	      pwm_or_av		      2
+	      pwm_or_av_unit	      1
+	      pwm_or_av_conf	      compiletime
+	      regenerative_braking_mode	2
+	      regenerative_braking_mode_unit 1
+	      regenerative_braking_mode_conf compiletime
+	      discontinuous	      0
+	      discontinuous_unit      1
+	      discontinuous_conf      compiletime
+	      freewheeling_mode	      1
+	      freewheeling_mode_unit  1
+	      freewheeling_mode_conf  compiletime
+	      Ron		      0.1
+	      Ron_unit		      Ohm
+	      Ron_conf		      compiletime
+	      Don		      0.1
+	      Don_unit		      Ohm
+	      Don_conf		      compiletime
+	      Goff		      1e-6
+	      Goff_unit		      S
+	      Goff_conf		      compiletime
+	      Rload		      10
+	      Rload_unit	      Ohm
+	      Rload_conf	      compiletime
+	      Lload		      1e-5
+	      Lload_unit	      H
+	      Lload_conf	      compiletime
+	      F			      10
+	      F_unit		      kHz
+	      F_conf		      compiletime
+	      thermal_mass	      100
+	      thermal_mass_unit	      "J/K"
+	      thermal_mass_conf	      compiletime
+	      initial_temperature     298.15
+	      initial_temperature_unit K
+	      initial_temperature_conf compiletime
+	      Ron2		      0.1
+	      Ron2_unit		      Ohm
+	      Ron2_conf		      compiletime
+	      Don2		      0.05
+	      Don2_unit		      Ohm
+	      Don2_conf		      compiletime
+	      Tmeas		      298.15
+	      Tmeas_unit	      K
+	      Tmeas_conf	      compiletime
+	      Tmeas2		      398.15
+	      Tmeas2_unit	      K
+	      Tmeas2_conf	      compiletime
+	      Port {
+		PortType		2
+		PortNumber		1
+		Position		[301, 80]
+	      }
+	      Port {
+		PortType		2
+		PortNumber		2
+		Position		[301, 100]
+	      }
+	      Port {
+		PortType		2
+		PortNumber		3
+		Position		[301, 120]
+	      }
+	      Port {
+		PortType		2
+		PortNumber		4
+		Position		[301, 140]
+	      }
+	      Port {
+		PortType		3
+		PortNumber		1
+		Position		[414, 90]
+	      }
+	      Port {
+		PortType		3
+		PortNumber		2
+		Position		[414, 135]
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "PWM Scope"
+	      SID		      "1372"
+	      Ports		      [0, 0, 0, 0, 0, 1]
+	      Position		      [250, 14, 280, 46]
+	      ZOrder		      -5
+	      BackgroundColor	      "[0.974950, 1.000000, 0.833000]"
+	      RequestExecContextInheritance off
+	      System {
+		Name			"PWM Scope"
+		Location		[0, 23, 1280, 1373]
+		Open			off
+		PortBlocksUseCompactNotation off
+		SetExecutionDomain	off
+		ExecutionDomainType	"Deduce"
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		SimulinkSubDomain	"Simulink"
+		Block {
+		  BlockType		  Reference
+		  Name			  "Electrical Reference1"
+		  SID			  "1373"
+		  Ports			  [0, 0, 0, 0, 0, 1]
+		  Position		  [82, 140, 108, 170]
+		  ZOrder		  -1
+		  BlockRotation		  270
+		  BlockMirror		  on
+		  LibraryVersion	  "10000000.1"
+		  SourceBlock		  "fl_lib/Electrical/Electrical Elements/Electrical Reference"
+		  SourceType		  "Electrical Reference"
+		  SourceProductName	  "Simscape"
+		  SourceProductBaseCode	  "SS"
+		  LogSimulationData	  off
+		  SourceFile		  "foundation.electrical.elements.reference"
+		  InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"V\",\"label\":\"\",\"type\":\"foundation.ele"
+		  "ctrical.electrical\"}],\"Right\":[],\"Top\":[]}"
+		  ComponentPath		  "foundation.electrical.elements.reference"
+		  ComponentVariants	  "foundation.electrical.elements.reference"
+		  ComponentVariantNames	  reference
+		  ClassName		  reference_electrical
+		  SchemaVersion		  1
+		  Port {
+		    PortType		    2
+		    PortNumber		    1
+		    Rotation		    -1.5707963267948966
+		    Position		    [95, 136]
+		  }
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "PS-Simulink\nConverter 2"
+		  SID			  "1374"
+		  Ports			  [0, 1, 0, 0, 0, 1]
+		  Position		  [45, 190, 75, 220]
+		  ZOrder		  -2
+		  ShowName		  off
+		  LibraryVersion	  "5.0"
+		  SourceBlock		  "nesl_utility/PS-Simulink\nConverter"
+		  SourceType		  "PS-Simulink\nConverter"
+		  SourceProductName	  "Simscape"
+		  SourceProductBaseCode	  "SS"
+		  ContentPreviewEnabled	  off
+		  PhysicalDomain	  network_engine_domain
+		  SubClassName		  ps_output
+		  LeftPortType		  input
+		  RightPortType		  output
+		  PseudoPeriodic	  off
+		  Frequencies		  []
+		  Unit			  V
+		  AffineConversion	  off
+		}
+		Block {
+		  BlockType		  Scope
+		  Name			  "PWM"
+		  SID			  "1375"
+		  Ports			  [1]
+		  Position		  [115, 189, 145, 221]
+		  ZOrder		  -3
+		  ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extmgr"
+		  ".Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('Sourc"
+		  "es','WiredSimulink',true,'DataLoggingVariableName','ScopeData6','DataLoggingSaveFormat','StructureWithTime','DataL"
+		  "oggingDecimation','1','DataLoggingDecimateData',true),extmgr.Configuration('Visuals','Time Domain',true,'Serialize"
+		  "dDisplays',{struct('MinYLimReal','-1','MaxYLimReal','6','YLabelReal','','MinYLimMag','0','MaxYLimMag','10','Legend"
+		  "Visibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.6862745098"
+		  "03922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.6235294117647"
+		  "06 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529"
+		  " 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','Line"
+		  "PropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',1,'LineNames',{{'PS-Simulink Converter 2'}},'ShowC"
+		  "ontent',true,'Placement',1)},'DisplayPropertyDefaults',struct('MinYLimReal','-1','MaxYLimReal','6','YLabelReal',''"
+		  ",'MinYLimMag','0','MaxYLimMag','10','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesC"
+		  "olor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.06666666"
+		  "66666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549"
+		  "019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.6509"
+		  "80392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',0,'Line"
+		  "Names',{{[]}},'ShowContent',true,'Placement',1)),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',"
+		  "false),extmgr.Configuration('Tools','Measurements',true,'Version','2016a')),'Version','2016a','Location',[398 140 "
+		  "722 379])"
+		  NumInputPorts		  "1"
+		  Floating		  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Voltage Sensor"
+		  SID			  "1376"
+		  Ports			  [0, 0, 0, 0, 0, 1, 2]
+		  Position		  [65, 65, 105, 105]
+		  ZOrder		  -4
+		  BlockRotation		  270
+		  BlockMirror		  on
+		  LibraryVersion	  "10000000.1"
+		  SourceBlock		  "fl_lib/Electrical/Electrical Sensors/Voltage Sensor"
+		  SourceType		  "Voltage Sensor"
+		  SourceProductName	  "Simscape"
+		  SourceProductBaseCode	  "SS"
+		  LogSimulationData	  off
+		  SourceFile		  "foundation.electrical.sensors.voltage"
+		  InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"p\",\"label\":\"+\",\"type\":\"foundation.el"
+		  "ectrical.electrical\"}],\"Right\":[{\"id\":\"V\",\"label\":\"V\",\"type\":\"output\"},{\"id\":\"n\",\"label\":\"-\""
+		  ",\"type\":\"foundation.electrical.electrical\"}],\"Top\":[]}"
+		  ComponentPath		  "foundation.electrical.sensors.voltage"
+		  ComponentVariants	  "foundation.electrical.sensors.voltage"
+		  ComponentVariantNames	  voltage
+		  ClassName		  sensor_voltage
+		  SchemaVersion		  1
+		  Port {
+		    PortType		    2
+		    PortNumber		    1
+		    Rotation		    -1.5707963267948966
+		    Position		    [85, 61]
+		  }
+		  Port {
+		    PortType		    3
+		    PortNumber		    1
+		    Rotation		    -1.5707963267948966
+		    Position		    [75, 109]
+		  }
+		  Port {
+		    PortType		    3
+		    PortNumber		    2
+		    Rotation		    -1.5707963267948966
+		    Position		    [95, 109]
+		  }
+		}
+		Block {
+		  BlockType		  PMIOPort
+		  Name			  "u"
+		  SID			  "1377"
+		  Position		  [70, 25, 100, 40]
+		  ZOrder		  -5
+		  BlockRotation		  270
+		  BlockMirror		  on
+		  Side			  "Left"
+		}
+		Line {
+		  LineType		  "Connection"
+		  ZOrder		  1
+		  SrcBlock		  "Voltage Sensor"
+		  SrcPort		  RConn2
+		  DstBlock		  "Electrical Reference1"
+		  DstPort		  LConn1
+		}
+		Line {
+		  LineType		  "Connection"
+		  ZOrder		  2
+		  SrcBlock		  "Voltage Sensor"
+		  SrcPort		  RConn1
+		  Points		  [0, 20; -45, 0]
+		  DstBlock		  "PS-Simulink\nConverter 2"
+		  DstPort		  LConn1
+		}
+		Line {
+		  ZOrder		  3
+		  SrcBlock		  "PS-Simulink\nConverter 2"
+		  SrcPort		  1
+		  DstBlock		  "PWM"
+		  DstPort		  1
+		}
+		Line {
+		  LineType		  "Connection"
+		  ZOrder		  4
+		  SrcBlock		  "u"
+		  SrcPort		  RConn1
+		  DstBlock		  "Voltage Sensor"
+		  DstPort		  LConn1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "REV Scope"
+	      SID		      "1378"
+	      Ports		      [0, 0, 0, 0, 0, 1]
+	      Position		      [310, 174, 340, 206]
+	      ZOrder		      -6
+	      BackgroundColor	      "[0.974950, 1.000000, 0.833000]"
+	      RequestExecContextInheritance off
+	      System {
+		Name			"REV Scope"
+		Location		[0, 23, 1280, 734]
+		Open			off
+		PortBlocksUseCompactNotation off
+		SetExecutionDomain	off
+		ExecutionDomainType	"Deduce"
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		SimulinkSubDomain	"Simulink"
+		Block {
+		  BlockType		  Reference
+		  Name			  "Electrical Reference1"
+		  SID			  "1379"
+		  Ports			  [0, 0, 0, 0, 0, 1]
+		  Position		  [82, 140, 108, 170]
+		  ZOrder		  -1
+		  BlockRotation		  270
+		  BlockMirror		  on
+		  LibraryVersion	  "10000000.1"
+		  SourceBlock		  "fl_lib/Electrical/Electrical Elements/Electrical Reference"
+		  SourceType		  "Electrical Reference"
+		  SourceProductName	  "Simscape"
+		  SourceProductBaseCode	  "SS"
+		  LogSimulationData	  off
+		  SourceFile		  "foundation.electrical.elements.reference"
+		  InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"V\",\"label\":\"\",\"type\":\"foundation.ele"
+		  "ctrical.electrical\"}],\"Right\":[],\"Top\":[]}"
+		  ComponentPath		  "foundation.electrical.elements.reference"
+		  ComponentVariants	  "foundation.electrical.elements.reference"
+		  ComponentVariantNames	  reference
+		  ClassName		  reference_electrical
+		  SchemaVersion		  1
+		  Port {
+		    PortType		    2
+		    PortNumber		    1
+		    Rotation		    -1.5707963267948966
+		    Position		    [95, 136]
+		  }
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "PS-Simulink\nConverter 2"
+		  SID			  "1380"
+		  Ports			  [0, 1, 0, 0, 0, 1]
+		  Position		  [45, 190, 75, 220]
+		  ZOrder		  -2
+		  ShowName		  off
+		  LibraryVersion	  "5.0"
+		  SourceBlock		  "nesl_utility/PS-Simulink\nConverter"
+		  SourceType		  "PS-Simulink\nConverter"
+		  SourceProductName	  "Simscape"
+		  SourceProductBaseCode	  "SS"
+		  ContentPreviewEnabled	  off
+		  PhysicalDomain	  network_engine_domain
+		  SubClassName		  ps_output
+		  LeftPortType		  input
+		  RightPortType		  output
+		  PseudoPeriodic	  off
+		  Frequencies		  []
+		  Unit			  V
+		  AffineConversion	  off
+		}
+		Block {
+		  BlockType		  Scope
+		  Name			  "REV"
+		  SID			  "1381"
+		  Ports			  [1]
+		  Position		  [115, 189, 145, 221]
+		  ZOrder		  -3
+		  ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extmgr"
+		  ".Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('Sourc"
+		  "es','WiredSimulink',true,'DataLoggingVariableName','ScopeData6','DataLoggingSaveFormat','StructureWithTime','DataL"
+		  "oggingDecimation','1','DataLoggingDecimateData',true),extmgr.Configuration('Visuals','Time Domain',true,'Serialize"
+		  "dDisplays',{struct('MinYLimReal','-1','MaxYLimReal','6','YLabelReal','','MinYLimMag','0','MaxYLimMag','10','Legend"
+		  "Visibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.6862745098"
+		  "03922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.6235294117647"
+		  "06 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529"
+		  " 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','Line"
+		  "PropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',1,'LineNames',{{'PS-Simulink Converter 2'}},'ShowC"
+		  "ontent',true,'Placement',1)},'DisplayPropertyDefaults',struct('MinYLimReal','-1','MaxYLimReal','6','YLabelReal',''"
+		  ",'MinYLimMag','0','MaxYLimMag','10','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesC"
+		  "olor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.06666666"
+		  "66666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549"
+		  "019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.6509"
+		  "80392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',0,'Line"
+		  "Names',{{[]}},'ShowContent',true,'Placement',1)),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',"
+		  "false),extmgr.Configuration('Tools','Measurements',true,'Version','2016a')),'Version','2016a','Location',[197 372 "
+		  "1127 611])"
+		  NumInputPorts		  "1"
+		  Floating		  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Voltage Sensor"
+		  SID			  "1382"
+		  Ports			  [0, 0, 0, 0, 0, 1, 2]
+		  Position		  [65, 65, 105, 105]
+		  ZOrder		  -4
+		  BlockRotation		  270
+		  BlockMirror		  on
+		  LibraryVersion	  "10000000.1"
+		  SourceBlock		  "fl_lib/Electrical/Electrical Sensors/Voltage Sensor"
+		  SourceType		  "Voltage Sensor"
+		  SourceProductName	  "Simscape"
+		  SourceProductBaseCode	  "SS"
+		  LogSimulationData	  off
+		  SourceFile		  "foundation.electrical.sensors.voltage"
+		  InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"p\",\"label\":\"+\",\"type\":\"foundation.el"
+		  "ectrical.electrical\"}],\"Right\":[{\"id\":\"V\",\"label\":\"V\",\"type\":\"output\"},{\"id\":\"n\",\"label\":\"-\""
+		  ",\"type\":\"foundation.electrical.electrical\"}],\"Top\":[]}"
+		  ComponentPath		  "foundation.electrical.sensors.voltage"
+		  ComponentVariants	  "foundation.electrical.sensors.voltage"
+		  ComponentVariantNames	  voltage
+		  ClassName		  sensor_voltage
+		  SchemaVersion		  1
+		  Port {
+		    PortType		    2
+		    PortNumber		    1
+		    Rotation		    -1.5707963267948966
+		    Position		    [85, 61]
+		  }
+		  Port {
+		    PortType		    3
+		    PortNumber		    1
+		    Rotation		    -1.5707963267948966
+		    Position		    [75, 109]
+		  }
+		  Port {
+		    PortType		    3
+		    PortNumber		    2
+		    Rotation		    -1.5707963267948966
+		    Position		    [95, 109]
+		  }
+		}
+		Block {
+		  BlockType		  PMIOPort
+		  Name			  "u"
+		  SID			  "1383"
+		  Position		  [70, 25, 100, 40]
+		  ZOrder		  -5
+		  BlockRotation		  270
+		  BlockMirror		  on
+		  Side			  "Left"
+		}
+		Line {
+		  LineType		  "Connection"
+		  ZOrder		  1
+		  SrcBlock		  "Voltage Sensor"
+		  SrcPort		  RConn2
+		  DstBlock		  "Electrical Reference1"
+		  DstPort		  LConn1
+		}
+		Line {
+		  LineType		  "Connection"
+		  ZOrder		  2
+		  SrcBlock		  "Voltage Sensor"
+		  SrcPort		  RConn1
+		  Points		  [0, 20; -45, 0]
+		  DstBlock		  "PS-Simulink\nConverter 2"
+		  DstPort		  LConn1
+		}
+		Line {
+		  ZOrder		  3
+		  SrcBlock		  "PS-Simulink\nConverter 2"
+		  SrcPort		  1
+		  DstBlock		  "REV"
+		  DstPort		  1
+		}
+		Line {
+		  LineType		  "Connection"
+		  ZOrder		  4
+		  SrcBlock		  "u"
+		  SrcPort		  RConn1
+		  DstBlock		  "Voltage Sensor"
+		  DstPort		  LConn1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Vr Scope"
+	      SID		      "1384"
+	      Ports		      [0, 0, 0, 0, 0, 1]
+	      Position		      [130, 14, 160, 46]
+	      ZOrder		      -7
+	      BackgroundColor	      "[0.974950, 1.000000, 0.833000]"
+	      RequestExecContextInheritance off
+	      System {
+		Name			"Vr Scope"
+		Location		[0, 23, 1280, 1373]
+		Open			off
+		PortBlocksUseCompactNotation off
+		SetExecutionDomain	off
+		ExecutionDomainType	"Deduce"
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		SimulinkSubDomain	"Simulink"
+		Block {
+		  BlockType		  Reference
+		  Name			  "Electrical Reference1"
+		  SID			  "1385"
+		  Ports			  [0, 0, 0, 0, 0, 1]
+		  Position		  [80, 140, 110, 170]
+		  ZOrder		  -1
+		  BlockRotation		  270
+		  BlockMirror		  on
+		  LibraryVersion	  "10000000.1"
+		  SourceBlock		  "fl_lib/Electrical/Electrical Elements/Electrical Reference"
+		  SourceType		  "Electrical Reference"
+		  SourceProductName	  "Simscape"
+		  SourceProductBaseCode	  "SS"
+		  LogSimulationData	  off
+		  SourceFile		  "foundation.electrical.elements.reference"
+		  InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"V\",\"label\":\"\",\"type\":\"foundation.ele"
+		  "ctrical.electrical\"}],\"Right\":[],\"Top\":[]}"
+		  ComponentPath		  "foundation.electrical.elements.reference"
+		  ComponentVariants	  "foundation.electrical.elements.reference"
+		  ComponentVariantNames	  reference
+		  ClassName		  reference_electrical
+		  SchemaVersion		  1
+		  Port {
+		    PortType		    2
+		    PortNumber		    1
+		    Rotation		    -1.5707963267948966
+		    Position		    [95, 136]
+		  }
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "PS-Simulink\nConverter 2"
+		  SID			  "1386"
+		  Ports			  [0, 1, 0, 0, 0, 1]
+		  Position		  [45, 190, 75, 220]
+		  ZOrder		  -2
+		  ShowName		  off
+		  LibraryVersion	  "5.0"
+		  SourceBlock		  "nesl_utility/PS-Simulink\nConverter"
+		  SourceType		  "PS-Simulink\nConverter"
+		  SourceProductName	  "Simscape"
+		  SourceProductBaseCode	  "SS"
+		  ContentPreviewEnabled	  off
+		  PhysicalDomain	  network_engine_domain
+		  SubClassName		  ps_output
+		  LeftPortType		  input
+		  RightPortType		  output
+		  PseudoPeriodic	  off
+		  Frequencies		  []
+		  Unit			  V
+		  AffineConversion	  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Voltage Sensor"
+		  SID			  "1387"
+		  Ports			  [0, 0, 0, 0, 0, 1, 2]
+		  Position		  [65, 65, 105, 105]
+		  ZOrder		  -3
+		  BlockRotation		  270
+		  BlockMirror		  on
+		  LibraryVersion	  "10000000.1"
+		  SourceBlock		  "fl_lib/Electrical/Electrical Sensors/Voltage Sensor"
+		  SourceType		  "Voltage Sensor"
+		  SourceProductName	  "Simscape"
+		  SourceProductBaseCode	  "SS"
+		  LogSimulationData	  off
+		  SourceFile		  "foundation.electrical.sensors.voltage"
+		  InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"p\",\"label\":\"+\",\"type\":\"foundation.el"
+		  "ectrical.electrical\"}],\"Right\":[{\"id\":\"V\",\"label\":\"V\",\"type\":\"output\"},{\"id\":\"n\",\"label\":\"-\""
+		  ",\"type\":\"foundation.electrical.electrical\"}],\"Top\":[]}"
+		  ComponentPath		  "foundation.electrical.sensors.voltage"
+		  ComponentVariants	  "foundation.electrical.sensors.voltage"
+		  ComponentVariantNames	  voltage
+		  ClassName		  sensor_voltage
+		  SchemaVersion		  1
+		  Port {
+		    PortType		    2
+		    PortNumber		    1
+		    Rotation		    -1.5707963267948966
+		    Position		    [85, 61]
+		  }
+		  Port {
+		    PortType		    3
+		    PortNumber		    1
+		    Rotation		    -1.5707963267948966
+		    Position		    [75, 109]
+		  }
+		  Port {
+		    PortType		    3
+		    PortNumber		    2
+		    Rotation		    -1.5707963267948966
+		    Position		    [95, 109]
+		  }
+		}
+		Block {
+		  BlockType		  Scope
+		  Name			  "Vr"
+		  SID			  "1388"
+		  Ports			  [1]
+		  Position		  [115, 189, 145, 221]
+		  ZOrder		  -4
+		  ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extmgr"
+		  ".Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('Sourc"
+		  "es','WiredSimulink',true,'DataLoggingVariableName','ScopeData6','DataLoggingSaveFormat','StructureWithTime','DataL"
+		  "oggingDecimation','1','DataLoggingDecimateData',true),extmgr.Configuration('Visuals','Time Domain',true,'Serialize"
+		  "dDisplays',{struct('MinYLimReal','-1','MaxYLimReal','6','YLabelReal','','MinYLimMag','0','MaxYLimMag','10','Legend"
+		  "Visibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.6862745098"
+		  "03922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.6235294117647"
+		  "06 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529"
+		  " 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','Line"
+		  "PropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',1,'LineNames',{{'PS-Simulink Converter 2'}},'ShowC"
+		  "ontent',true,'Placement',1)},'DisplayPropertyDefaults',struct('MinYLimReal','-1','MaxYLimReal','6','YLabelReal',''"
+		  ",'MinYLimMag','0','MaxYLimMag','10','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesC"
+		  "olor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.06666666"
+		  "66666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549"
+		  "019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.6509"
+		  "80392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',0,'Line"
+		  "Names',{{[]}},'ShowContent',true,'Placement',1)),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',"
+		  "false),extmgr.Configuration('Tools','Measurements',true,'Version','2016a')),'Version','2016a','Location',[1543 497"
+		  " 2030 922])"
+		  NumInputPorts		  "1"
+		  Floating		  off
+		}
+		Block {
+		  BlockType		  PMIOPort
+		  Name			  "u"
+		  SID			  "1389"
+		  Position		  [70, 25, 100, 40]
+		  ZOrder		  -5
+		  BlockRotation		  270
+		  BlockMirror		  on
+		  Side			  "Left"
+		}
+		Line {
+		  LineType		  "Connection"
+		  ZOrder		  1
+		  SrcBlock		  "u"
+		  SrcPort		  RConn1
+		  DstBlock		  "Voltage Sensor"
+		  DstPort		  LConn1
+		}
+		Line {
+		  ZOrder		  2
+		  SrcBlock		  "PS-Simulink\nConverter 2"
+		  SrcPort		  1
+		  DstBlock		  "Vr"
+		  DstPort		  1
+		}
+		Line {
+		  LineType		  "Connection"
+		  ZOrder		  3
+		  SrcBlock		  "Voltage Sensor"
+		  SrcPort		  RConn1
+		  Points		  [0, 20; -45, 0]
+		  DstBlock		  "PS-Simulink\nConverter 2"
+		  DstPort		  LConn1
+		}
+		Line {
+		  LineType		  "Connection"
+		  ZOrder		  4
+		  SrcBlock		  "Voltage Sensor"
+		  SrcPort		  RConn2
+		  DstBlock		  "Electrical Reference1"
+		  DstPort		  LConn1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      PMIOPort
+	      Name		      "V+"
+	      SID		      "1390"
+	      Position		      [460, 83, 490, 97]
+	      ZOrder		      -8
+	      BlockMirror	      on
+	      Side		      "Right"
+	    }
+	    Block {
+	      BlockType		      PMIOPort
+	      Name		      "V-"
+	      SID		      "1391"
+	      Position		      [460, 128, 490, 142]
+	      ZOrder		      -9
+	      BlockMirror	      on
+	      Port		      "2"
+	      Side		      "Right"
+	    }
+	    Block {
+	      BlockType		      PMIOPort
+	      Name		      "Vr"
+	      SID		      "1392"
+	      Position		      [45, 73, 75, 87]
+	      ZOrder		      -10
+	      Port		      "3"
+	      Side		      "Left"
+	    }
+	    Block {
+	      BlockType		      PMIOPort
+	      Name		      "REV"
+	      SID		      "1393"
+	      Position		      [230, 113, 260, 127]
+	      ZOrder		      -11
+	      Port		      "4"
+	      Side		      "Left"
+	    }
+	    Line {
+	      LineType		      "Connection"
+	      ZOrder		      1
+	      SrcBlock		      "V+"
+	      SrcPort		      RConn1
+	      DstBlock		      "H-Bridge"
+	      DstPort		      RConn1
+	    }
+	    Line {
+	      LineType		      "Connection"
+	      ZOrder		      2
+	      SrcBlock		      "H-Bridge"
+	      SrcPort		      RConn2
+	      Points		      [10, 0]
+	      Branch {
+		ConnectType		"DEST_SRC"
+		DstBlock		"V-"
+		DstPort			RConn1
+	      }
+	      Branch {
+		ConnectType		"DEST_SRC"
+		DstBlock		"Electrical Reference2"
+		DstPort			LConn1
+	      }
+	    }
+	    Line {
+	      LineType		      "Connection"
+	      ZOrder		      5
+	      Points		      [225, 80; 0, -50; 10, 0]
+	      DstBlock		      "PWM Scope"
+	      DstPort		      LConn1
+	      Branch {
+		ConnectType		"SRC_DEST"
+		SrcBlock		"H-Bridge"
+		SrcPort			LConn1
+		Points			[-65, 0]
+	      }
+	      Branch {
+		ConnectType		"SRC_SRC"
+		DstBlock		"Controlled PWM\nVoltage"
+		DstPort			RConn1
+	      }
+	    }
+	    Line {
+	      LineType		      "Connection"
+	      ZOrder		      8
+	      SrcBlock		      "H-Bridge"
+	      SrcPort		      LConn2
+	      Points		      [-75, 0]
+	      Branch {
+		ConnectType		"DEST_SRC"
+		Points			[0, 40]
+		Branch {
+		  ConnectType		  "DEST_SRC"
+		  Points		  [-110, 0]
+		  Branch {
+		    ConnectType		    "DEST_SRC"
+		    DstBlock		    "Electrical Reference1"
+		    DstPort		    LConn1
+		  }
+		  Branch {
+		    ConnectType		    "DEST_SRC"
+		    Points		    [0, -40]
+		    DstBlock		    "Controlled PWM\nVoltage"
+		    DstPort		    LConn2
+		  }
+		}
+		Branch {
+		  ConnectType		  "DEST_SRC"
+		  DstBlock		  "H-Bridge"
+		  DstPort		  LConn4
+		}
+	      }
+	      Branch {
+		ConnectType		"DEST_SRC"
+		DstBlock		"Controlled PWM\nVoltage"
+		DstPort			RConn2
+	      }
+	    }
+	    Line {
+	      LineType		      "Connection"
+	      ZOrder		      15
+	      Points		      [100, 80; 0, -50; 15, 0]
+	      DstBlock		      "Vr Scope"
+	      DstPort		      LConn1
+	      Branch {
+		ConnectType		"SRC_SRC"
+		DstBlock		"Controlled PWM\nVoltage"
+		DstPort			LConn1
+	      }
+	      Branch {
+		ConnectType		"SRC_DEST"
+		SrcBlock		"Vr"
+		SrcPort			RConn1
+		Points			[10, 0]
+	      }
+	    }
+	    Line {
+	      LineType		      "Connection"
+	      ZOrder		      18
+	      Points		      [285, 120; 0, 70; 10, 0]
+	      DstBlock		      "REV Scope"
+	      DstPort		      LConn1
+	      Branch {
+		ConnectType		"SRC_SRC"
+		DstBlock		"H-Bridge"
+		DstPort			LConn3
+	      }
+	      Branch {
+		ConnectType		"SRC_DEST"
+		SrcBlock		"REV"
+		SrcPort			RConn1
+		Points			[10, 0]
+	      }
+	    }
+	    Annotation {
+	      SID		      "1394"
+	      Name		      "For validation purposes the simulation mode\ncan be set to PWM in both the Controlled PWM\nand H-B"
+	      "ridge blocks. "
+	      Position		      [47, 207, 258, 245]
+	      InternalMargins	      [0, 0, 0, 0]
+	      HorizontalAlignment     "left"
+	      ZOrder		      -1
+	      FontName		      "Arial"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Subsystem"
+	  SID			  "1413"
+	  Ports			  [1, 0, 0, 0, 0, 0, 2]
+	  Position		  [125, 220, 185, 280]
+	  ZOrder		  -19
+	  RequestExecContextInheritance	off
+	  System {
+	    Name		    "Subsystem"
+	    Location		    [0, 23, 1280, 734]
+	    Open		    off
+	    PortBlocksUseCompactNotation off
+	    SetExecutionDomain	    off
+	    ExecutionDomainType	    "Deduce"
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SimulinkSubDomain	    "Simulink"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Vi"
+	      SID		      "1414"
+	      Position		      [20, 108, 50, 122]
+	      ZOrder		      2441
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Abs
+	      Name		      "Abs"
+	      SID		      "1395"
+	      Position		      [140, 100, 170, 130]
+	      ZOrder		      2440
+	      ZeroCross		      off
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Compare\nTo Constant"
+	      SID		      "1417"
+	      Ports		      [1, 1]
+	      Position		      [105, 25, 135, 55]
+	      ZOrder		      2444
+	      LibraryVersion	      "1.386"
+	      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+	      SourceType	      "Compare To Constant"
+	      SourceProductName	      "Simulink"
+	      SourceProductBaseCode   "SL"
+	      ContentPreviewEnabled   off
+	      relop		      "<"
+	      const		      0
+	      OutDataTypeStr	      boolean
+	      ZeroCross		      off
+	    }
+	    Block {
+	      BlockType		      DataTypeConversion
+	      Name		      "Data Type Conversion"
+	      SID		      "1420"
+	      Position		      [175, 30, 225, 50]
+	      ZOrder		      2446
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Logic\nthreshold"
+	      SID		      "1397"
+	      Position		      [260, 24, 295, 56]
+	      ZOrder		      2438
+	      Gain		      "5"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "SL2V_1"
+	      SID		      "1398"
+	      Ports		      [1, 0, 0, 0, 0, 0, 1]
+	      Position		      [240, 100, 270, 130]
+	      ZOrder		      2437
+	      BackgroundColor	      "[1.000000, 0.986800, 0.868000]"
+	      RequestExecContextInheritance off
+	      System {
+		Name			"SL2V_1"
+		Location		[21, 114, 810, 647]
+		Open			off
+		PortBlocksUseCompactNotation off
+		SetExecutionDomain	off
+		ExecutionDomainType	"Deduce"
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		SimulinkSubDomain	"Simulink"
+		Block {
+		  BlockType		  Inport
+		  Name			  "SL"
+		  SID			  "1399"
+		  Position		  [20, 113, 50, 127]
+		  ZOrder		  -1
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Controlled Voltage\nSource"
+		  SID			  "1400"
+		  Ports			  [0, 0, 0, 0, 0, 1, 2]
+		  Position		  [155, 65, 195, 105]
+		  ZOrder		  -2
+		  BlockRotation		  270
+		  BlockMirror		  on
+		  LibraryVersion	  "10000000.1"
+		  SourceBlock		  "fl_lib/Electrical/Electrical Sources/Controlled Voltage\nSource"
+		  SourceType		  "Controlled Voltage\nSource"
+		  SourceProductName	  "Simscape"
+		  SourceProductBaseCode	  "SS"
+		  LogSimulationData	  off
+		  SourceFile		  "foundation.electrical.sources.controlled_voltage"
+		  InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"p\",\"label\":\"\",\"type\":\"foundation.ele"
+		  "ctrical.electrical\"}],\"Right\":[{\"id\":\"vT\",\"label\":\"\",\"type\":\"input\"},{\"id\":\"n\",\"label\":\"\",\""
+		  "type\":\"foundation.electrical.electrical\"}],\"Top\":[]}"
+		  ComponentPath		  "foundation.electrical.sources.controlled_voltage"
+		  ComponentVariants	  "foundation.electrical.sources.controlled_voltage"
+		  ComponentVariantNames	  controlled_voltage
+		  ClassName		  controlled_voltage_source
+		  SchemaVersion		  1
+		  Port {
+		    PortType		    2
+		    PortNumber		    1
+		    Rotation		    -1.5707963267948966
+		    Position		    [175, 61]
+		  }
+		  Port {
+		    PortType		    3
+		    PortNumber		    1
+		    Rotation		    -1.5707963267948966
+		    Position		    [165, 109]
+		  }
+		  Port {
+		    PortType		    3
+		    PortNumber		    2
+		    Rotation		    -1.5707963267948966
+		    Position		    [185, 109]
+		  }
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Electrical Reference"
+		  SID			  "1401"
+		  Ports			  [0, 0, 0, 0, 0, 1]
+		  Position		  [172, 155, 198, 180]
+		  ZOrder		  -3
+		  BlockRotation		  270
+		  BlockMirror		  on
+		  LibraryVersion	  "10000000.1"
+		  SourceBlock		  "fl_lib/Electrical/Electrical Elements/Electrical Reference"
+		  SourceType		  "Electrical Reference"
+		  SourceProductName	  "Simscape"
+		  SourceProductBaseCode	  "SS"
+		  LogSimulationData	  off
+		  SourceFile		  "foundation.electrical.elements.reference"
+		  InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"V\",\"label\":\"\",\"type\":\"foundation.ele"
+		  "ctrical.electrical\"}],\"Right\":[],\"Top\":[]}"
+		  ComponentPath		  "foundation.electrical.elements.reference"
+		  ComponentVariants	  "foundation.electrical.elements.reference"
+		  ComponentVariantNames	  reference
+		  ClassName		  reference_electrical
+		  SchemaVersion		  1
+		  Port {
+		    PortType		    2
+		    PortNumber		    1
+		    Rotation		    -1.5707963267948966
+		    Position		    [185, 151]
+		  }
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Simulink-PS\nConverter"
+		  SID			  "1402"
+		  Ports			  [1, 0, 0, 0, 0, 0, 1]
+		  Position		  [80, 105, 110, 135]
+		  ZOrder		  -4
+		  LibraryVersion	  "5.0"
+		  SourceBlock		  "nesl_utility/Simulink-PS\nConverter"
+		  SourceType		  "Simulink-PS\nConverter"
+		  SourceProductName	  "Simscape"
+		  SourceProductBaseCode	  "SS"
+		  ContentPreviewEnabled	  off
+		  PhysicalDomain	  network_engine_domain
+		  SubClassName		  ps_input
+		  LeftPortType		  input
+		  RightPortType		  output
+		  PseudoPeriodic	  off
+		  Frequencies		  []
+		  NoiseDistribution	  none
+		  NoiseParameters	  []
+		  Unit			  V
+		  AffineConversion	  off
+		  FilteringAndDerivatives zero
+		  SimscapeFilterOrder	  1
+		  InputFilterTimeConstant ".001"
+		  UdotUserProvided	  0
+		}
+		Block {
+		  BlockType		  PMIOPort
+		  Name			  "V"
+		  SID			  "1403"
+		  Position		  [160, 25, 190, 40]
+		  ZOrder		  -5
+		  BlockRotation		  270
+		  BlockMirror		  on
+		  Side			  "Right"
+		}
+		Line {
+		  ZOrder		  1
+		  SrcBlock		  "SL"
+		  SrcPort		  1
+		  DstBlock		  "Simulink-PS\nConverter"
+		  DstPort		  1
+		}
+		Line {
+		  LineType		  "Connection"
+		  ZOrder		  2
+		  SrcBlock		  "Electrical Reference"
+		  SrcPort		  LConn1
+		  DstBlock		  "Controlled Voltage\nSource"
+		  DstPort		  RConn2
+		}
+		Line {
+		  LineType		  "Connection"
+		  ZOrder		  3
+		  SrcBlock		  "V"
+		  SrcPort		  RConn1
+		  DstBlock		  "Controlled Voltage\nSource"
+		  DstPort		  LConn1
+		}
+		Line {
+		  LineType		  "Connection"
+		  ZOrder		  4
+		  SrcBlock		  "Simulink-PS\nConverter"
+		  SrcPort		  RConn1
+		  DstBlock		  "Controlled Voltage\nSource"
+		  DstPort		  RConn1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "SL2V_2"
+	      SID		      "1404"
+	      Ports		      [1, 0, 0, 0, 0, 0, 1]
+	      Position		      [355, 25, 385, 55]
+	      ZOrder		      2436
+	      BackgroundColor	      "[1.000000, 0.986800, 0.868000]"
+	      RequestExecContextInheritance off
+	      System {
+		Name			"SL2V_2"
+		Location		[0, 23, 1280, 734]
+		Open			off
+		PortBlocksUseCompactNotation off
+		SetExecutionDomain	off
+		ExecutionDomainType	"Deduce"
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		SimulinkSubDomain	"Simulink"
+		Block {
+		  BlockType		  Inport
+		  Name			  "SL"
+		  SID			  "1405"
+		  Position		  [20, 113, 50, 127]
+		  ZOrder		  -1
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Controlled Voltage\nSource"
+		  SID			  "1406"
+		  Ports			  [0, 0, 0, 0, 0, 1, 2]
+		  Position		  [155, 65, 195, 105]
+		  ZOrder		  -2
+		  BlockRotation		  270
+		  BlockMirror		  on
+		  LibraryVersion	  "10000000.1"
+		  SourceBlock		  "fl_lib/Electrical/Electrical Sources/Controlled Voltage\nSource"
+		  SourceType		  "Controlled Voltage\nSource"
+		  SourceProductName	  "Simscape"
+		  SourceProductBaseCode	  "SS"
+		  LogSimulationData	  off
+		  SourceFile		  "foundation.electrical.sources.controlled_voltage"
+		  InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"p\",\"label\":\"\",\"type\":\"foundation.ele"
+		  "ctrical.electrical\"}],\"Right\":[{\"id\":\"vT\",\"label\":\"\",\"type\":\"input\"},{\"id\":\"n\",\"label\":\"\",\""
+		  "type\":\"foundation.electrical.electrical\"}],\"Top\":[]}"
+		  ComponentPath		  "foundation.electrical.sources.controlled_voltage"
+		  ComponentVariants	  "foundation.electrical.sources.controlled_voltage"
+		  ComponentVariantNames	  controlled_voltage
+		  ClassName		  controlled_voltage_source
+		  SchemaVersion		  1
+		  Port {
+		    PortType		    2
+		    PortNumber		    1
+		    Rotation		    -1.5707963267948966
+		    Position		    [175, 61]
+		  }
+		  Port {
+		    PortType		    3
+		    PortNumber		    1
+		    Rotation		    -1.5707963267948966
+		    Position		    [165, 109]
+		  }
+		  Port {
+		    PortType		    3
+		    PortNumber		    2
+		    Rotation		    -1.5707963267948966
+		    Position		    [185, 109]
+		  }
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Electrical Reference"
+		  SID			  "1407"
+		  Ports			  [0, 0, 0, 0, 0, 1]
+		  Position		  [172, 145, 198, 175]
+		  ZOrder		  -3
+		  BlockRotation		  270
+		  BlockMirror		  on
+		  LibraryVersion	  "10000000.1"
+		  SourceBlock		  "fl_lib/Electrical/Electrical Elements/Electrical Reference"
+		  SourceType		  "Electrical Reference"
+		  SourceProductName	  "Simscape"
+		  SourceProductBaseCode	  "SS"
+		  LogSimulationData	  off
+		  SourceFile		  "foundation.electrical.elements.reference"
+		  InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"V\",\"label\":\"\",\"type\":\"foundation.ele"
+		  "ctrical.electrical\"}],\"Right\":[],\"Top\":[]}"
+		  ComponentPath		  "foundation.electrical.elements.reference"
+		  ComponentVariants	  "foundation.electrical.elements.reference"
+		  ComponentVariantNames	  reference
+		  ClassName		  reference_electrical
+		  SchemaVersion		  1
+		  Port {
+		    PortType		    2
+		    PortNumber		    1
+		    Rotation		    -1.5707963267948966
+		    Position		    [185, 141]
+		  }
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Simulink-PS\nConverter"
+		  SID			  "1408"
+		  Ports			  [1, 0, 0, 0, 0, 0, 1]
+		  Position		  [105, 105, 135, 135]
+		  ZOrder		  -4
+		  LibraryVersion	  "5.0"
+		  SourceBlock		  "nesl_utility/Simulink-PS\nConverter"
+		  SourceType		  "Simulink-PS\nConverter"
+		  SourceProductName	  "Simscape"
+		  SourceProductBaseCode	  "SS"
+		  ContentPreviewEnabled	  off
+		  PhysicalDomain	  network_engine_domain
+		  SubClassName		  ps_input
+		  LeftPortType		  input
+		  RightPortType		  output
+		  PseudoPeriodic	  off
+		  Frequencies		  []
+		  NoiseDistribution	  none
+		  NoiseParameters	  []
+		  Unit			  V
+		  AffineConversion	  off
+		  FilteringAndDerivatives zero
+		  SimscapeFilterOrder	  1
+		  InputFilterTimeConstant ".001"
+		  UdotUserProvided	  0
+		}
+		Block {
+		  BlockType		  PMIOPort
+		  Name			  "V"
+		  SID			  "1409"
+		  Position		  [160, 25, 190, 40]
+		  ZOrder		  -5
+		  BlockRotation		  270
+		  BlockMirror		  on
+		  Side			  "Right"
+		}
+		Line {
+		  LineType		  "Connection"
+		  ZOrder		  1
+		  SrcBlock		  "Simulink-PS\nConverter"
+		  SrcPort		  RConn1
+		  DstBlock		  "Controlled Voltage\nSource"
+		  DstPort		  RConn1
+		}
+		Line {
+		  LineType		  "Connection"
+		  ZOrder		  2
+		  SrcBlock		  "V"
+		  SrcPort		  RConn1
+		  DstBlock		  "Controlled Voltage\nSource"
+		  DstPort		  LConn1
+		}
+		Line {
+		  LineType		  "Connection"
+		  ZOrder		  3
+		  SrcBlock		  "Electrical Reference"
+		  SrcPort		  LConn1
+		  DstBlock		  "Controlled Voltage\nSource"
+		  DstPort		  RConn2
+		}
+		Line {
+		  ZOrder		  4
+		  SrcBlock		  "SL"
+		  SrcPort		  1
+		  DstBlock		  "Simulink-PS\nConverter"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      PMIOPort
+	      Name		      "Vr"
+	      SID		      "1415"
+	      Position		      [315, 108, 345, 122]
+	      ZOrder		      2442
+	      BlockMirror	      on
+	      Side		      "Right"
+	    }
+	    Block {
+	      BlockType		      PMIOPort
+	      Name		      "REV"
+	      SID		      "1416"
+	      Position		      [430, 33, 460, 47]
+	      ZOrder		      2443
+	      BlockMirror	      on
+	      Port		      "2"
+	      Side		      "Right"
+	    }
+	    Line {
+	      ZOrder		      28
+	      SrcBlock		      "Abs"
+	      SrcPort		      1
+	      DstBlock		      "SL2V_1"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      29
+	      SrcBlock		      "Compare\nTo Constant"
+	      SrcPort		      1
+	      DstBlock		      "Data Type Conversion"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      21
+	      SrcBlock		      "Logic\nthreshold"
+	      SrcPort		      1
+	      DstBlock		      "SL2V_2"
+	      DstPort		      1
+	    }
+	    Line {
+	      LineType		      "Connection"
+	      ZOrder		      25
+	      SrcBlock		      "SL2V_2"
+	      SrcPort		      RConn1
+	      DstBlock		      "REV"
+	      DstPort		      RConn1
+	    }
+	    Line {
+	      ZOrder		      23
+	      SrcBlock		      "Vi"
+	      SrcPort		      1
+	      Points		      [20, 0]
+	      Branch {
+		ZOrder			26
+		Points			[0, -75]
+		DstBlock		"Compare\nTo Constant"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			17
+		DstBlock		"Abs"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      LineType		      "Connection"
+	      ZOrder		      24
+	      SrcBlock		      "SL2V_1"
+	      SrcPort		      RConn1
+	      DstBlock		      "Vr"
+	      DstPort		      RConn1
+	    }
+	    Line {
+	      ZOrder		      30
+	      SrcBlock		      "Data Type Conversion"
+	      SrcPort		      1
+	      DstBlock		      "Logic\nthreshold"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  PMIOPort
+	  Name			  "u"
+	  SID			  "1312"
+	  Position		  [605, 228, 635, 242]
+	  ZOrder		  2431
+	  BlockMirror		  on
+	  Side			  "Right"
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  1
+	  SrcBlock		  "DC Motor"
+	  SrcPort		  RConn2
+	  Points		  [5, 0]
+	  DstBlock		  "Mechanical\nRotational Reference"
+	  DstPort		  LConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  6
+	  SrcBlock		  "Gear Box"
+	  SrcPort		  RConn1
+	  DstBlock		  "Belt"
+	  DstPort		  LConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  7
+	  SrcBlock		  "Gear Box"
+	  SrcPort		  LConn1
+	  DstBlock		  "DC Motor"
+	  DstPort		  RConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  9
+	  SrcBlock		  "u"
+	  SrcPort		  RConn1
+	  DstBlock		  "Belt"
+	  DstPort		  RConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  12
+	  SrcBlock		  "PWM &\nH-Bridge"
+	  SrcPort		  RConn1
+	  DstBlock		  "DC Motor"
+	  DstPort		  LConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  13
+	  SrcBlock		  "PWM &\nH-Bridge"
+	  SrcPort		  RConn2
+	  DstBlock		  "DC Motor"
+	  DstPort		  LConn2
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  26
+	  SrcBlock		  "PWM &\nH-Bridge"
+	  SrcPort		  LConn1
+	  DstBlock		  "Subsystem"
+	  DstPort		  RConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  25
+	  SrcBlock		  "PWM &\nH-Bridge"
+	  SrcPort		  LConn2
+	  DstBlock		  "Subsystem"
+	  DstPort		  RConn2
+	}
+	Line {
+	  ZOrder		  27
+	  SrcBlock		  "Vi"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  1
+	}
+	Annotation {
+	  SID			  "1279"
+	  Name			  "k=Torque/V,\nwhere k=1;\nassume linear motor"
+	  Position		  [141, 354, 233, 386]
+	  InternalMargins	  [0, 0, 0, 0]
+	  HorizontalAlignment	  "left"
+	  VerticalAlignment	  "top"
+	  ZOrder		  -1
+	}
+	Annotation {
+	  SID			  "1280"
+	  Name			  "Permanent Magnet DC Motor"
+	  Position		  [276, 376, 442, 390]
+	  InternalMargins	  [0, 0, 0, 0]
+	  ZOrder		  -2
+	  FontSize		  12
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Plant"
+      SID		      "1285"
+      Ports		      [0, 2, 0, 0, 0, 1]
+      Position		      [670, 425, 795, 545]
+      ZOrder		      2421
+      RequestExecContextInheritance off
+      Port {
+	PortNumber		1
+	Name			"theta"
+      }
+      Port {
+	PortNumber		2
+	Name			"x"
+      }
+      System {
+	Name			"Plant"
+	Location		[0, 23, 1280, 734]
+	Open			off
+	PortBlocksUseCompactNotation off
+	SetExecutionDomain	off
+	ExecutionDomainType	"Deduce"
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"84"
+	SimulinkSubDomain	"Simulink"
+	Block {
+	  BlockType		  Reference
+	  Name			  "Cart"
+	  SID			  "144"
+	  Ports			  [0, 0, 0, 0, 0, 0, 1]
+	  Position		  [325, 225, 365, 265]
+	  ZOrder		  2278
+	  BlockRotation		  270
+	  BlockMirror		  on
+	  LibraryVersion	  "7.01"
+	  SourceBlock		  "sm_lib/Body Elements/Brick Solid"
+	  SourceType		  "Brick Solid"
+	  SourceProductName	  "Simscape Multibody"
+	  SourceProductBaseCode	  "MS"
+	  LogSimulationData	  off
+	  GraphicAmbientColor	  [0.15 0.15 0.15 1.0]
+	  GraphicAmbientColor_conf compiletime
+	  BasedOnType		  Mass
+	  BrickDimensions	  [0.1 0.1759 0.1759]
+	  BrickDimensionUnits	  m
+	  BrickDimensions_conf	  compiletime
+	  CenterOfMass		  [0 0 0]
+	  CenterOfMassUnits	  m
+	  CenterOfMass_conf	  compiletime
+	  GraphicDiffuseColor	  [0.5 0.5 0.5]
+	  GraphicDiffuseColor_conf compiletime
+	  Density		  1000
+	  DensityUnits		  "kg/(m^3)"
+	  Density_conf		  compiletime
+	  DoExposeReferenceFrame  on
+	  GraphicEmissiveColor	  [0.0 0.0 0.0 1.0]
+	  GraphicEmissiveColor_conf compiletime
+	  ExportEntireGeometry	  off
+	  SerializedFrames	  "<Frames/>"
+	  MarkerShape		  Sphere
+	  MarkerSize		  10
+	  MarkerSize_conf	  compiletime
+	  GraphicType		  FromGeometry
+	  InertiaType		  PointMass
+	  Mass			  0.25
+	  MassUnits		  kg
+	  Mass_conf		  compiletime
+	  MomentsOfInertia	  [1 1 1]
+	  MomentsOfInertiaUnits	  "kg*m^2"
+	  MomentsOfInertia_conf	  compiletime
+	  GraphicOpacity	  1.0
+	  GraphicOpacity_conf	  compiletime
+	  ProductsOfInertia	  [0 0 0]
+	  ProductsOfInertiaUnits  "kg*m^2"
+	  ProductsOfInertia_conf  compiletime
+	  GraphicShininess	  75
+	  GraphicShininess_conf	  compiletime
+	  GraphicSpecularColor	  [0.5 0.5 0.5 1.0]
+	  GraphicSpecularColor_conf compiletime
+	  GraphicVisPropType	  SimpleVisualProperties
+	  Port {
+	    PortType		    3
+	    PortNumber		    1
+	    Rotation		    -1.5707963267948966
+	    Position		    [345, 269]
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Force\nSensor"
+	  SID			  "1282"
+	  Ports			  [0, 0, 0, 0, 0, 1, 2]
+	  Position		  [305, 415, 345, 455]
+	  ZOrder		  2433
+	  BlockRotation		  180
+	  BlockMirror		  on
+	  LibraryVersion	  "10000000.1"
+	  SourceBlock		  "fl_lib/Mechanical/Mechanical Sensors/Ideal Force Sensor"
+	  SourceType		  "Ideal Force Sensor"
+	  SourceProductName	  "Simscape"
+	  SourceProductBaseCode	  "SS"
+	  LogSimulationData	  off
+	  SourceFile		  "foundation.mechanical.sensors.force"
+	  InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"R\",\"label\":\"R\",\"type\":\"foundation.mec"
+	  "hanical.translational.translational\"}],\"Right\":[{\"id\":\"C\",\"label\":\"C\",\"type\":\"foundation.mechanical.t"
+	  "ranslational.translational\"},{\"id\":\"F\",\"label\":\"F\",\"type\":\"output\"}],\"Top\":[]}"
+	  ComponentPath		  "foundation.mechanical.sensors.force"
+	  ComponentVariants	  "foundation.mechanical.sensors.force"
+	  ComponentVariantNames	  force
+	  ClassName		  force
+	  SchemaVersion		  1
+	  Port {
+	    PortType		    2
+	    PortNumber		    1
+	    Position		    [301, 435]
+	  }
+	  Port {
+	    PortType		    3
+	    PortNumber		    1
+	    Position		    [349, 445]
+	  }
+	  Port {
+	    PortType		    3
+	    PortNumber		    2
+	    Position		    [349, 425]
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Mechanical\nTranslational\nReference"
+	  SID			  "1283"
+	  Ports			  [0, 0, 0, 0, 0, 1]
+	  Position		  [365, 475, 385, 495]
+	  ZOrder		  2432
+	  BlockRotation		  270
+	  BlockMirror		  on
+	  ShowName		  off
+	  LibraryVersion	  "10000000.1"
+	  SourceBlock		  "fl_lib/Mechanical/Translational\nElements/Mechanical\nTranslational\nReference"
+	  SourceType		  "Mechanical\nTranslational\nReference"
+	  SourceProductName	  "Simscape"
+	  SourceProductBaseCode	  "SS"
+	  LogSimulationData	  off
+	  SourceFile		  "foundation.mechanical.translational.reference"
+	  InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"V\",\"label\":\"\",\"type\":\"foundation.mech"
+	  "anical.translational.translational\"}],\"Right\":[],\"Top\":[]}"
+	  ComponentPath		  "foundation.mechanical.translational.reference"
+	  ComponentVariants	  "foundation.mechanical.translational.reference"
+	  ComponentVariantNames	  reference
+	  ClassName		  reference_transl
+	  SchemaVersion		  1
+	  Port {
+	    PortType		    2
+	    PortNumber		    1
+	    Rotation		    -1.5707963267948966
+	    Position		    [375, 471]
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Mechanism \nConfiguration"
+	  SID			  "147"
+	  Ports			  [0, 0, 0, 0, 0, 0, 1]
+	  Position		  [155, 400, 185, 430]
+	  ZOrder		  2280
+	  LibraryVersion	  "7.01"
+	  SourceBlock		  "sm_lib/Utilities/Mechanism\nConfiguration"
+	  SourceType		  "Mechanism\nConfiguration"
+	  SourceProductName	  "Simscape Multibody"
+	  SourceProductBaseCode	  "MS"
+	  LogSimulationData	  off
+	  UniformGravity	  Constant
+	  GravityVector		  [0 0 -9.81]
+	  GravityUnits		  "m/s^2"
+	  GravityVector_conf	  compiletime
+	  LinearizationDelta	  0.001
+	  Port {
+	    PortType		    3
+	    PortNumber		    1
+	    Position		    [189, 415]
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "PS-Sa"
+	  SID			  "148"
+	  Ports			  [0, 1, 0, 0, 0, 1]
+	  Position		  [505, 135, 535, 165]
+	  ZOrder		  2288
+	  NamePlacement		  "alternate"
+	  LibraryVersion	  "5.0"
+	  SourceBlock		  "nesl_utility/PS-Simulink\nConverter"
+	  SourceType		  "PS-Simulink\nConverter"
+	  SourceProductName	  "Simscape"
+	  SourceProductBaseCode	  "SS"
+	  ContentPreviewEnabled	  off
+	  PhysicalDomain	  network_engine_domain
+	  SubClassName		  ps_output
+	  LeftPortType		  input
+	  RightPortType		  output
+	  PseudoPeriodic	  off
+	  Frequencies		  []
+	  Unit			  1
+	  AffineConversion	  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "PS-Sb"
+	  SID			  "149"
+	  Ports			  [0, 1, 0, 0, 0, 1]
+	  Position		  [505, 340, 535, 370]
+	  ZOrder		  2299
+	  NamePlacement		  "alternate"
+	  LibraryVersion	  "5.0"
+	  SourceBlock		  "nesl_utility/PS-Simulink\nConverter"
+	  SourceType		  "PS-Simulink\nConverter"
+	  SourceProductName	  "Simscape"
+	  SourceProductBaseCode	  "SS"
+	  ContentPreviewEnabled	  off
+	  PhysicalDomain	  network_engine_domain
+	  SubClassName		  ps_output
+	  LeftPortType		  input
+	  RightPortType		  output
+	  PseudoPeriodic	  off
+	  Frequencies		  []
+	  Unit			  1
+	  AffineConversion	  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Pendulum1"
+	  SID			  "1318"
+	  Ports			  [0, 0, 0, 0, 0, 0, 1]
+	  Position		  [435, 15, 475, 55]
+	  ZOrder		  2441
+	  BlockRotation		  270
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  LibraryVersion	  "7.01"
+	  SourceBlock		  "sm_lib/Body Elements/Brick Solid"
+	  SourceType		  "Brick Solid"
+	  SourceProductName	  "Simscape Multibody"
+	  SourceProductBaseCode	  "MS"
+	  LogSimulationData	  off
+	  GraphicAmbientColor	  [0.15 0.15 0.15 1.0]
+	  GraphicAmbientColor_conf compiletime
+	  BasedOnType		  Mass
+	  BrickDimensions	  [.3302 .0127 .0127]
+	  BrickDimensionUnits	  m
+	  BrickDimensions_conf	  compiletime
+	  CenterOfMass		  [.1651 0 0]
+	  CenterOfMassUnits	  m
+	  CenterOfMass_conf	  compiletime
+	  GraphicDiffuseColor	  [0.8 0.0 0.2]
+	  GraphicDiffuseColor_conf compiletime
+	  Density		  1000
+	  DensityUnits		  "kg/(m^3)"
+	  Density_conf		  compiletime
+	  DoExposeReferenceFrame  on
+	  GraphicEmissiveColor	  [0.0 0.0 0.0 1.0]
+	  GraphicEmissiveColor_conf compiletime
+	  ExportEntireGeometry	  off
+	  SerializedFrames	  "<Frames/>"
+	  MarkerShape		  Sphere
+	  MarkerSize		  10
+	  MarkerSize_conf	  compiletime
+	  GraphicType		  FromGeometry
+	  InertiaType		  Custom
+	  Mass			  ".1"
+	  MassUnits		  kg
+	  Mass_conf		  compiletime
+	  MomentsOfInertia	  [.006 .006 .006]
+	  MomentsOfInertiaUnits	  "kg*m^2"
+	  MomentsOfInertia_conf	  compiletime
+	  GraphicOpacity	  1.0
+	  GraphicOpacity_conf	  compiletime
+	  ProductsOfInertia	  [0 0 0]
+	  ProductsOfInertiaUnits  "kg*m^2"
+	  ProductsOfInertia_conf  compiletime
+	  GraphicShininess	  75
+	  GraphicShininess_conf	  compiletime
+	  GraphicSpecularColor	  [0.5 0.5 0.5 1.0]
+	  GraphicSpecularColor_conf compiletime
+	  GraphicVisPropType	  SimpleVisualProperties
+	  Port {
+	    PortType		    3
+	    PortNumber		    1
+	    Rotation		    -1.5707963267948966
+	    Position		    [455, 59]
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Prismatic \nJoint"
+	  SID			  "152"
+	  Ports			  [0, 0, 0, 0, 0, 2, 2]
+	  Position		  [420, 335, 460, 375]
+	  ZOrder		  2279
+	  NamePlacement		  "alternate"
+	  LibraryVersion	  "7.01"
+	  SourceBlock		  "sm_lib/Joints/Prismatic\nJoint"
+	  SourceType		  "Prismatic\nJoint"
+	  SourceProductName	  "Simscape Multibody"
+	  SourceProductBaseCode	  "MS"
+	  LogSimulationData	  off
+	  JointMode		  Normal
+	  SenseConstraintForce	  off
+	  SenseConstraintForceX	  off
+	  SenseConstraintForceY	  off
+	  SenseConstraintForceZ	  off
+	  SenseConstraintTorque	  off
+	  SenseConstraintTorqueX  off
+	  SenseConstraintTorqueY  off
+	  SenseConstraintTorqueZ  off
+	  SenseTotalForce	  off
+	  SenseTotalForceX	  off
+	  SenseTotalForceY	  off
+	  SenseTotalForceZ	  off
+	  SenseTotalTorque	  off
+	  SenseTotalTorqueX	  off
+	  SenseTotalTorqueY	  off
+	  SenseTotalTorqueZ	  off
+	  CompositeWrenchDir	  FollowerOnBase
+	  CompositeWrenchFrame	  BaseFrame
+	  EquilibriumPosition	  0
+	  EquilibriumPositionUnits m
+	  EquilibriumPosition_conf compiletime
+	  SpringStiffness	  0
+	  SpringStiffnessUnits	  "N/m"
+	  SpringStiffness_conf	  compiletime
+	  DampingCoefficient	  ".1"
+	  DampingCoefficientUnits "N/(m/s)"
+	  DampingCoefficient_conf compiletime
+	  TorqueActuationMode	  InputTorque
+	  MotionActuationMode	  ComputedMotion
+	  SensePosition		  on
+	  SenseVelocity		  off
+	  SenseAcceleration	  off
+	  SenseTorqueForce	  off
+	  SenseLowerLimitTorqueForce off
+	  SenseUpperLimitTorqueForce off
+	  LowerLimitSpecify	  off
+	  LowerLimitBound	  -1
+	  LowerLimitBoundUnits	  m
+	  LowerLimitBound_conf	  compiletime
+	  LowerLimitStiffness	  1e6
+	  LowerLimitStiffnessUnits "N/m"
+	  LowerLimitStiffness_conf compiletime
+	  LowerLimitDamping	  1e3
+	  LowerLimitDampingUnits  "N/(m/s)"
+	  LowerLimitDamping_conf  compiletime
+	  LowerLimitTransitionRegionWidth 1e-4
+	  LowerLimitTransitionRegionWidthUnits m
+	  LowerLimitTransitionRegionWidth_conf compiletime
+	  UpperLimitSpecify	  off
+	  UpperLimitBound	  1
+	  UpperLimitBoundUnits	  m
+	  UpperLimitBound_conf	  compiletime
+	  UpperLimitStiffness	  1e6
+	  UpperLimitStiffnessUnits "N/m"
+	  UpperLimitStiffness_conf compiletime
+	  UpperLimitDamping	  1e3
+	  UpperLimitDampingUnits  "N/(m/s)"
+	  UpperLimitDamping_conf  compiletime
+	  UpperLimitTransitionRegionWidth 1e-4
+	  UpperLimitTransitionRegionWidthUnits m
+	  UpperLimitTransitionRegionWidth_conf compiletime
+	  PositionTargetSpecify	  off
+	  PositionTargetPriority  High
+	  PositionTargetValue	  0
+	  PositionTargetValueUnits m
+	  PositionTargetValue_conf compiletime
+	  VelocityTargetSpecify	  off
+	  VelocityTargetPriority  High
+	  VelocityTargetValue	  0
+	  VelocityTargetValueUnits "m/s"
+	  VelocityTargetValue_conf compiletime
+	  Port {
+	    PortType		    2
+	    PortNumber		    1
+	    Position		    [416, 345]
+	  }
+	  Port {
+	    PortType		    2
+	    PortNumber		    2
+	    Position		    [416, 365]
+	  }
+	  Port {
+	    PortType		    3
+	    PortNumber		    1
+	    Position		    [464, 345]
+	  }
+	  Port {
+	    PortType		    3
+	    PortNumber		    2
+	    Position		    [464, 365]
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Revolute Joint"
+	  SID			  "153"
+	  Ports			  [0, 0, 0, 0, 0, 1, 2]
+	  Position		  [445, 170, 485, 210]
+	  ZOrder		  2284
+	  BlockRotation		  270
+	  NamePlacement		  "alternate"
+	  LibraryVersion	  "7.01"
+	  SourceBlock		  "sm_lib/Joints/Revolute Joint"
+	  SourceType		  "Revolute Joint"
+	  SourceProductName	  "Simscape Multibody"
+	  SourceProductBaseCode	  "MS"
+	  LogSimulationData	  off
+	  JointMode		  Normal
+	  SenseConstraintForce	  off
+	  SenseConstraintForceX	  off
+	  SenseConstraintForceY	  off
+	  SenseConstraintForceZ	  off
+	  SenseConstraintTorque	  off
+	  SenseConstraintTorqueX  off
+	  SenseConstraintTorqueY  off
+	  SenseConstraintTorqueZ  off
+	  SenseTotalForce	  off
+	  SenseTotalForceX	  off
+	  SenseTotalForceY	  off
+	  SenseTotalForceZ	  off
+	  SenseTotalTorque	  off
+	  SenseTotalTorqueX	  off
+	  SenseTotalTorqueY	  off
+	  SenseTotalTorqueZ	  off
+	  CompositeWrenchDir	  FollowerOnBase
+	  CompositeWrenchFrame	  BaseFrame
+	  EquilibriumPosition	  0
+	  EquilibriumPositionUnits deg
+	  EquilibriumPosition_conf compiletime
+	  SpringStiffness	  0
+	  SpringStiffnessUnits	  "N*m/deg"
+	  SpringStiffness_conf	  compiletime
+	  DampingCoefficient	  0.001
+	  DampingCoefficientUnits "N*m/(rad/s)"
+	  DampingCoefficient_conf compiletime
+	  TorqueActuationMode	  NoTorque
+	  MotionActuationMode	  ComputedMotion
+	  SensePosition		  on
+	  SenseVelocity		  off
+	  SenseAcceleration	  off
+	  SenseTorqueForce	  off
+	  SenseLowerLimitTorqueForce off
+	  SenseUpperLimitTorqueForce off
+	  LowerLimitSpecify	  off
+	  LowerLimitBound	  -90
+	  LowerLimitBoundUnits	  deg
+	  LowerLimitBound_conf	  compiletime
+	  LowerLimitStiffness	  1e4
+	  LowerLimitStiffnessUnits "N*m/deg"
+	  LowerLimitStiffness_conf compiletime
+	  LowerLimitDamping	  10
+	  LowerLimitDampingUnits  "N*m/(deg/s)"
+	  LowerLimitDamping_conf  compiletime
+	  LowerLimitTransitionRegionWidth 0.1
+	  LowerLimitTransitionRegionWidthUnits deg
+	  LowerLimitTransitionRegionWidth_conf compiletime
+	  UpperLimitSpecify	  off
+	  UpperLimitBound	  90
+	  UpperLimitBoundUnits	  deg
+	  UpperLimitBound_conf	  compiletime
+	  UpperLimitStiffness	  1e4
+	  UpperLimitStiffnessUnits "N*m/deg"
+	  UpperLimitStiffness_conf compiletime
+	  UpperLimitDamping	  10
+	  UpperLimitDampingUnits  "N*m/(deg/s)"
+	  UpperLimitDamping_conf  compiletime
+	  UpperLimitTransitionRegionWidth 0.1
+	  UpperLimitTransitionRegionWidthUnits deg
+	  UpperLimitTransitionRegionWidth_conf compiletime
+	  PositionTargetSpecify	  on
+	  PositionTargetPriority  High
+	  PositionTargetValue	  theta0
+	  PositionTargetValueUnits deg
+	  PositionTargetValue_conf compiletime
+	  VelocityTargetSpecify	  off
+	  VelocityTargetPriority  High
+	  VelocityTargetValue	  0
+	  VelocityTargetValueUnits "deg/s"
+	  VelocityTargetValue_conf compiletime
+	  Port {
+	    PortType		    2
+	    PortNumber		    1
+	    Rotation		    1.5707963267948966
+	    Position		    [465, 214]
+	  }
+	  Port {
+	    PortType		    3
+	    PortNumber		    1
+	    Rotation		    1.5707963267948966
+	    Position		    [455, 166]
+	  }
+	  Port {
+	    PortType		    3
+	    PortNumber		    2
+	    Rotation		    1.5707963267948966
+	    Position		    [475, 166]
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Rigid \nTransform1"
+	  SID			  "154"
+	  Ports			  [0, 0, 0, 0, 0, 1, 1]
+	  Position		  [265, 325, 305, 365]
+	  ZOrder		  2283
+	  LibraryVersion	  "7.01"
+	  SourceBlock		  "sm_lib/Frames and\nTransforms/Rigid\nTransform"
+	  SourceType		  "Rigid\nTransform"
+	  SourceProductName	  "Simscape Multibody"
+	  SourceProductBaseCode	  "MS"
+	  LogSimulationData	  off
+	  TranslationMethod	  None
+	  TranslationStandardOffset 0
+	  TranslationLengthUnit	  m
+	  TranslationStandardOffset_conf compiletime
+	  TranslationStandardAxis "+Z"
+	  TranslationCartesianOffset [0 0 0]
+	  TranslationCartesianOffset_conf compiletime
+	  TranslationROffset	  0
+	  TranslationROffsetUnits m
+	  TranslationROffset_conf compiletime
+	  TranslationZOffset	  0
+	  TranslationZOffsetUnits m
+	  TranslationZOffset_conf compiletime
+	  TranslationThetaOffset  0
+	  TranslationThetaOffsetUnits deg
+	  TranslationThetaOffset_conf compiletime
+	  RotationMethod	  StandardAxis
+	  RotationAngleUnits	  deg
+	  RotationStandardAxis	  "+Y"
+	  RotationAngle		  90
+	  RotationAngle_conf	  compiletime
+	  RotationArbitraryAxis	  [0 0 1]
+	  RotationArbitraryAxis_conf compiletime
+	  FollAlignAxisA	  "+X"
+	  BaseAlignAxisA	  "+Y"
+	  FollAlignAxisB	  "+Y"
+	  BaseAlignAxisB	  "+Z"
+	  RotationSequenceAxes	  FollowerAxes
+	  RotationSequence	  XYX
+	  RotationSequenceAngles  [0 0 0]
+	  RotationSequenceAnglesUnits deg
+	  RotationSequenceAngles_conf compiletime
+	  RotationMatrix	  [1 0 0; 0 1 0; 0 0 1]
+	  RotationMatrix_conf	  compiletime
+	  Port {
+	    PortType		    2
+	    PortNumber		    1
+	    Position		    [261, 345]
+	  }
+	  Port {
+	    PortType		    3
+	    PortNumber		    1
+	    Position		    [309, 345]
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Rigid \nTransform2"
+	  SID			  "155"
+	  Ports			  [0, 0, 0, 0, 0, 1, 1]
+	  Position		  [340, 325, 380, 365]
+	  ZOrder		  2289
+	  LibraryVersion	  "7.01"
+	  SourceBlock		  "sm_lib/Frames and\nTransforms/Rigid\nTransform"
+	  SourceType		  "Rigid\nTransform"
+	  SourceProductName	  "Simscape Multibody"
+	  SourceProductBaseCode	  "MS"
+	  LogSimulationData	  off
+	  TranslationMethod	  None
+	  TranslationStandardOffset 0
+	  TranslationLengthUnit	  m
+	  TranslationStandardOffset_conf compiletime
+	  TranslationStandardAxis "+Z"
+	  TranslationCartesianOffset [0 0 0]
+	  TranslationCartesianOffset_conf compiletime
+	  TranslationROffset	  0
+	  TranslationROffsetUnits m
+	  TranslationROffset_conf compiletime
+	  TranslationZOffset	  0
+	  TranslationZOffsetUnits m
+	  TranslationZOffset_conf compiletime
+	  TranslationThetaOffset  0
+	  TranslationThetaOffsetUnits deg
+	  TranslationThetaOffset_conf compiletime
+	  RotationMethod	  StandardAxis
+	  RotationAngleUnits	  deg
+	  RotationStandardAxis	  "+Z"
+	  RotationAngle		  180
+	  RotationAngle_conf	  compiletime
+	  RotationArbitraryAxis	  [0 0 1]
+	  RotationArbitraryAxis_conf compiletime
+	  FollAlignAxisA	  "+X"
+	  BaseAlignAxisA	  "+Y"
+	  FollAlignAxisB	  "+Y"
+	  BaseAlignAxisB	  "+Z"
+	  RotationSequenceAxes	  FollowerAxes
+	  RotationSequence	  XYX
+	  RotationSequenceAngles  [0 0 0]
+	  RotationSequenceAnglesUnits deg
+	  RotationSequenceAngles_conf compiletime
+	  RotationMatrix	  [1 0 0; 0 1 0; 0 0 1]
+	  RotationMatrix_conf	  compiletime
+	  Port {
+	    PortType		    2
+	    PortNumber		    1
+	    Position		    [336, 345]
+	  }
+	  Port {
+	    PortType		    3
+	    PortNumber		    1
+	    Position		    [384, 345]
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Rigid \nTransform3"
+	  SID			  "156"
+	  Ports			  [0, 0, 0, 0, 0, 1, 1]
+	  Position		  [445, 240, 485, 280]
+	  ZOrder		  2286
+	  BlockRotation		  270
+	  NamePlacement		  "alternate"
+	  LibraryVersion	  "7.01"
+	  SourceBlock		  "sm_lib/Frames and\nTransforms/Rigid\nTransform"
+	  SourceType		  "Rigid\nTransform"
+	  SourceProductName	  "Simscape Multibody"
+	  SourceProductBaseCode	  "MS"
+	  LogSimulationData	  off
+	  TranslationMethod	  None
+	  TranslationStandardOffset 0
+	  TranslationLengthUnit	  m
+	  TranslationStandardOffset_conf compiletime
+	  TranslationStandardAxis "+Z"
+	  TranslationCartesianOffset [0 0 0]
+	  TranslationCartesianOffset_conf compiletime
+	  TranslationROffset	  0
+	  TranslationROffsetUnits m
+	  TranslationROffset_conf compiletime
+	  TranslationZOffset	  0
+	  TranslationZOffsetUnits m
+	  TranslationZOffset_conf compiletime
+	  TranslationThetaOffset  0
+	  TranslationThetaOffsetUnits deg
+	  TranslationThetaOffset_conf compiletime
+	  RotationMethod	  StandardAxis
+	  RotationAngleUnits	  deg
+	  RotationStandardAxis	  "+X"
+	  RotationAngle		  90
+	  RotationAngle_conf	  compiletime
+	  RotationArbitraryAxis	  [0 0 1]
+	  RotationArbitraryAxis_conf compiletime
+	  FollAlignAxisA	  "+X"
+	  BaseAlignAxisA	  "+Y"
+	  FollAlignAxisB	  "+Y"
+	  BaseAlignAxisB	  "+Z"
+	  RotationSequenceAxes	  FollowerAxes
+	  RotationSequence	  XYX
+	  RotationSequenceAngles  [0 0 0]
+	  RotationSequenceAnglesUnits deg
+	  RotationSequenceAngles_conf compiletime
+	  RotationMatrix	  [1 0 0; 0 1 0; 0 0 1]
+	  RotationMatrix_conf	  compiletime
+	  Port {
+	    PortType		    2
+	    PortNumber		    1
+	    Rotation		    1.5707963267948966
+	    Position		    [465, 284]
+	  }
+	  Port {
+	    PortType		    3
+	    PortNumber		    1
+	    Rotation		    1.5707963267948966
+	    Position		    [465, 236]
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Rigid \nTransform4"
+	  SID			  "157"
+	  Ports			  [0, 0, 0, 0, 0, 1, 1]
+	  Position		  [435, 95, 475, 135]
+	  ZOrder		  2287
+	  BlockRotation		  270
+	  NamePlacement		  "alternate"
+	  LibraryVersion	  "7.01"
+	  SourceBlock		  "sm_lib/Frames and\nTransforms/Rigid\nTransform"
+	  SourceType		  "Rigid\nTransform"
+	  SourceProductName	  "Simscape Multibody"
+	  SourceProductBaseCode	  "MS"
+	  LogSimulationData	  off
+	  TranslationMethod	  StandardAxis
+	  TranslationStandardOffset 0.215
+	  TranslationLengthUnit	  m
+	  TranslationStandardOffset_conf compiletime
+	  TranslationStandardAxis "+X"
+	  TranslationCartesianOffset [0 0 0]
+	  TranslationCartesianOffset_conf compiletime
+	  TranslationROffset	  0
+	  TranslationROffsetUnits m
+	  TranslationROffset_conf compiletime
+	  TranslationZOffset	  0
+	  TranslationZOffsetUnits m
+	  TranslationZOffset_conf compiletime
+	  TranslationThetaOffset  0
+	  TranslationThetaOffsetUnits deg
+	  TranslationThetaOffset_conf compiletime
+	  RotationMethod	  StandardAxis
+	  RotationAngleUnits	  deg
+	  RotationStandardAxis	  "+X"
+	  RotationAngle		  90
+	  RotationAngle_conf	  compiletime
+	  RotationArbitraryAxis	  [0 0 1]
+	  RotationArbitraryAxis_conf compiletime
+	  FollAlignAxisA	  "+X"
+	  BaseAlignAxisA	  "+Y"
+	  FollAlignAxisB	  "+Y"
+	  BaseAlignAxisB	  "+Z"
+	  RotationSequenceAxes	  FollowerAxes
+	  RotationSequence	  XYX
+	  RotationSequenceAngles  [0 0 0]
+	  RotationSequenceAnglesUnits deg
+	  RotationSequenceAngles_conf compiletime
+	  RotationMatrix	  [1 0 0; 0 1 0; 0 0 1]
+	  RotationMatrix_conf	  compiletime
+	  Port {
+	    PortType		    2
+	    PortNumber		    1
+	    Rotation		    1.5707963267948966
+	    Position		    [455, 139]
+	  }
+	  Port {
+	    PortType		    3
+	    PortNumber		    1
+	    Rotation		    1.5707963267948966
+	    Position		    [455, 91]
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Solver\nConfiguration"
+	  SID			  "158"
+	  Ports			  [0, 0, 0, 0, 0, 0, 1]
+	  Position		  [150, 334, 190, 356]
+	  ZOrder		  2282
+	  LibraryVersion	  "5.0"
+	  SourceBlock		  "nesl_utility/Solver\nConfiguration"
+	  SourceType		  "Solver\nConfiguration"
+	  SourceProductName	  "Simscape"
+	  SourceProductBaseCode	  "SS"
+	  ContentPreviewEnabled	  off
+	  PhysicalDomain	  network_engine_domain
+	  SubClassName		  solver
+	  LeftPortType		  input
+	  RightPortType		  generic
+	  Tones			  []
+	  Harmonics		  []
+	  SimulateNoise		  off
+	  Profile		  off
+	  UseLocalSampling	  off
+	  EnableSwitchedLinearOptims on
+	  FrequencyDomain	  off
+	  UseCCode		  off
+	  RelTol		  0.001
+	  AbsTol		  1e-06
+	  MinStep		  1e-09
+	  ToWorkspace		  off
+	  RevertToSquareIcSolve	  off
+	  NumHomotopyIterations	  100
+	  PhasorMode		  off
+	  PhasorModeNumHarmonics  1
+	  DoDC			  off
+	  ResidualTolerance	  1e-09
+	  UseLocalSolver	  off
+	  LocalSolverChoice	  NE_BACKWARD_EULER_ADVANCER
+	  LocalSolverSampleTime	  0.001
+	  DoFixedCost		  off
+	  MaxNonlinIter		  3
+	  MaxModeIter		  2
+	  LinearAlgebra		  Sparse
+	  EquationFormulation	  NE_TIME_EF
+	  DelaysMemoryBudget	  1024
+	  AutomaticFiltering	  on
+	  FilteringTimeConstant	  0.001
+	  PartitionStorageMethod  AS_NEEDED
+	  PartitionMemoryBudget	  1024
+	  PartitionMethod	  FAST
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "World Frame"
+	  SID			  "160"
+	  Ports			  [0, 0, 0, 0, 0, 0, 1]
+	  Position		  [155, 275, 185, 305]
+	  ZOrder		  2281
+	  LibraryVersion	  "7.01"
+	  SourceBlock		  "sm_lib/Frames and\nTransforms/World Frame"
+	  SourceType		  "World Frame"
+	  SourceProductName	  "Simscape Multibody"
+	  SourceProductBaseCode	  "MS"
+	  LogSimulationData	  off
+	  Port {
+	    PortType		    3
+	    PortNumber		    1
+	    Position		    [189, 290]
+	  }
+	}
+	Block {
+	  BlockType		  PMIOPort
+	  Name			  "u"
+	  SID			  "1288"
+	  Position		  [95, 513, 125, 527]
+	  ZOrder		  2436
+	  Side			  "Left"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "theta"
+	  SID			  "1286"
+	  Position		  [635, 143, 665, 157]
+	  ZOrder		  2434
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "x"
+	  SID			  "1287"
+	  Position		  [635, 348, 665, 362]
+	  ZOrder		  2435
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  1
+	  SrcBlock		  "Force\nSensor"
+	  SrcPort		  LConn1
+	  Points		  [-39, 0; 0, 85]
+	  DstBlock		  "u"
+	  DstPort		  RConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  2
+	  SrcBlock		  "Prismatic \nJoint"
+	  SrcPort		  RConn1
+	  Points		  [5, 0; 0, -44; -15, 0]
+	  Branch {
+	    ConnectType		    "DEST_SRC"
+	    Points		    [-120, 0]
+	    DstBlock		    "Cart"
+	    DstPort		    RConn1
+	  }
+	  Branch {
+	    ConnectType		    "DEST_SRC"
+	    DstBlock		    "Rigid \nTransform3"
+	    DstPort		    LConn1
+	  }
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  5
+	  SrcBlock		  "World Frame"
+	  SrcPort		  RConn1
+	  Points		  [32, 0; 0, 55]
+	  Branch {
+	    ConnectType		    "DEST_DEST"
+	    SrcBlock		    "Solver\nConfiguration"
+	    SrcPort		    RConn1
+	    Points		    [27, 0]
+	  }
+	  Branch {
+	    ConnectType		    "DEST_DEST"
+	    SrcBlock		    "Rigid \nTransform1"
+	    SrcPort		    LConn1
+	    Points		    [-18, 0]
+	  }
+	  Branch {
+	    ConnectType		    "DEST_SRC"
+	    Points		    [0, 70]
+	    DstBlock		    "Mechanism \nConfiguration"
+	    DstPort		    RConn1
+	  }
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  9
+	  SrcBlock		  "Force\nSensor"
+	  SrcPort		  RConn1
+	  Points		  [15, 0]
+	  DstBlock		  "Mechanical\nTranslational\nReference"
+	  DstPort		  LConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  10
+	  SrcBlock		  "Rigid \nTransform3"
+	  SrcPort		  RConn1
+	  DstBlock		  "Revolute Joint"
+	  DstPort		  LConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  11
+	  SrcBlock		  "Revolute Joint"
+	  SrcPort		  RConn2
+	  Points		  [0, -5]
+	  DstBlock		  "PS-Sa"
+	  DstPort		  LConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  12
+	  SrcBlock		  "Rigid \nTransform2"
+	  SrcPort		  RConn1
+	  DstBlock		  "Prismatic \nJoint"
+	  DstPort		  LConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  13
+	  SrcBlock		  "Revolute Joint"
+	  SrcPort		  RConn1
+	  DstBlock		  "Rigid \nTransform4"
+	  DstPort		  LConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  14
+	  SrcBlock		  "Rigid \nTransform1"
+	  SrcPort		  RConn1
+	  DstBlock		  "Rigid \nTransform2"
+	  DstPort		  LConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  20
+	  SrcBlock		  "Pendulum1"
+	  SrcPort		  RConn1
+	  DstBlock		  "Rigid \nTransform4"
+	  DstPort		  RConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  16
+	  SrcBlock		  "Prismatic \nJoint"
+	  SrcPort		  RConn2
+	  Points		  [0, -10]
+	  DstBlock		  "PS-Sb"
+	  DstPort		  LConn1
+	}
+	Line {
+	  ZOrder		  17
+	  SrcBlock		  "PS-Sa"
+	  SrcPort		  1
+	  DstBlock		  "theta"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  18
+	  SrcBlock		  "PS-Sb"
+	  SrcPort		  1
+	  DstBlock		  "x"
+	  DstPort		  1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  19
+	  SrcBlock		  "Force\nSensor"
+	  SrcPort		  RConn2
+	  Points		  [41, 0; 0, -60]
+	  DstBlock		  "Prismatic \nJoint"
+	  DstPort		  LConn2
+	}
+      }
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Vi"
+      SID		      "1338"
+      Ports		      [1]
+      Position		      [515, 344, 545, 376]
+      ZOrder		      2435
+      NamePlacement	      "alternate"
+      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
+      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
+      "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData2'),extmgr.Configuration('Visuals','Time Domain"
+      "',true,'SerializedDisplays',{struct('MinYLimReal','-2.48345','MaxYLimReal','2.49816','YLabelReal','','MinYLimMag"
+      "','0.00000','MaxYLimMag','2.49816','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'Axes"
+      "Color',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.06666"
+      "66666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.8313"
+      "72549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686"
+      " 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines"
+      "',1,'LineNames',{{'Add'}},'ShowContent',true,'Placement',1)},'DisplayPropertyDefaults',struct('MinYLimReal','-2."
+      "48345','MaxYLimReal','2.49816','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','2.49816','LegendVisibility',"
+      "'off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.68"
+      "6274509803922 0.686274509803922],'ColorOrder',[0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.1607"
+      "8431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862745098 0.831372549019608 0.07"
+      "45098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863])),extmgr.Configuration('Tools','Pl"
+      "ot Navigation',true),extmgr.Configuration('Tools','Measurements',true,'Version','2016a')),'Version','2016a','Pos"
+      "ition',[166 112 754 593])"
+      NumInputPorts	      "1"
+      Floating		      off
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "theta"
+      SID		      "1331"
+      Ports		      [1]
+      Position		      [870, 439, 900, 471]
+      ZOrder		      2431
+      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
+      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
+      "ources','WiredSimulink',true),extmgr.Configuration('Visuals','Time Domain',true,'SerializedDisplays',{struct('Mi"
+      "nYLimReal','-0.03179','MaxYLimReal','0.03364','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','0.03364','Leg"
+      "endVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.68627"
+      "4509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529"
+      "411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647"
+      "058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLa"
+      "bel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',1,'LineNames',{{'theta'}},'ShowConten"
+      "t',true,'Placement',1)},'DisplayPropertyDefaults',struct('MinYLimReal','-0.03179','MaxYLimReal','0.03364','YLabe"
+      "lReal','','MinYLimMag','0.00000','MaxYLimMag','0.03364','LegendVisibility','off','XGrid',true,'YGrid',true,'Plot"
+      "MagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'Col"
+      "orOrder',[0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.7"
+      "17647058823529 0.274509803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1"
+      ";1 0.0745098039215686 0.650980392156863])),extmgr.Configuration('Tools','Plot Navigation',true),extmgr.Configura"
+      "tion('Tools','Measurements',true,'Version','2016a')),'Version','2016a')"
+      NumInputPorts	      "1"
+      Floating		      off
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "x"
+      SID		      "1332"
+      Ports		      [1]
+      Position		      [870, 499, 900, 531]
+      ZOrder		      2432
+      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
+      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
+      "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData1'),extmgr.Configuration('Visuals','Time Domain"
+      "',true,'SerializedDisplays',{struct('MinYLimReal','-0.0465','MaxYLimReal','0.01892','YLabelReal','','MinYLimMag'"
+      ",'0.00000','MaxYLimMag','0.0465','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesCo"
+      "lor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666"
+      "666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372"
+      "549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0"
+      ".650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',"
+      "1,'LineNames',{{'x'}},'ShowContent',true,'Placement',1)},'DisplayPropertyDefaults',struct('MinYLimReal','-0.0465"
+      "','MaxYLimReal','0.01892','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','0.0465','LegendVisibility','off',"
+      "'XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.68627450"
+      "9803922 0.686274509803922],'ColorOrder',[0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.1607843137"
+      "2549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862745098 0.831372549019608 0.07450980"
+      "39215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863])),extmgr.Configuration('Tools','Plot Nav"
+      "igation',true),extmgr.Configuration('Tools','Measurements',true,'Version','2016a','Measurements',struct('tcursor"
+      "s',struct('XCoordinates',[6.14377880184332 9],'YCoordinates',[-0.039903779654922 -5.13976204002346e-07],'CursorC"
+      "hannels',[1 1],'WaveformCursors',true,'ShowHorizontal',false,'ShowVertical',true,'LockCursorSpacing',false,'Snap"
+      "ToData',false,'SettingsPanelOpen',0,'MeasurementsPanelOpen',1)))),'Version','2016a','Position',[1 90 860 615])"
+      NumInputPorts	      "1"
+      Floating		      off
+    }
+    Line {
+      LineType		      "Connection"
+      ZOrder		      178
+      SrcBlock		      "Plant"
+      SrcPort		      LConn1
+      DstBlock		      "Linear Actuator"
+      DstPort		      RConn1
+    }
+    Line {
+      ZOrder		      199
+      SrcBlock		      "Control System"
+      SrcPort		      1
+      DstBlock		      "Add"
+      DstPort		      2
+    }
+    Line {
+      Name		      "theta"
+      ZOrder		      190
+      SrcBlock		      "Plant"
+      SrcPort		      1
+      Points		      [35, 0]
+      Branch {
+	ZOrder			195
+	DstBlock		"theta"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			194
+	Labels			[2, 0]
+	Points			[0, 153; -704, 0; 0, -138]
+	DstBlock		"Control System"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "x"
+      ZOrder		      192
+      Labels		      [0, 1]
+      SrcBlock		      "Plant"
+      SrcPort		      2
+      Points		      [9, 0]
+      Branch {
+	ZOrder			198
+	DstBlock		"x"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			197
+	Points			[0, 73; -642, 0; 0, -78]
+	DstBlock		"Control System"
+	DstPort			2
+      }
+    }
+    Line {
+      ZOrder		      200
+      SrcBlock		      "Add"
+      SrcPort		      1
+      Points		      [21, 0]
+      Branch {
+	ZOrder			211
+	DstBlock		"Linear Actuator"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			210
+	Points			[0, -125]
+	DstBlock		"Vi"
+	DstPort			1
+      }
+    }
+    Line {
+      ZOrder		      201
+      SrcBlock		      "Disturbance"
+      SrcPort		      1
+      Points		      [55, 0; 0, 60]
+      DstBlock		      "Add"
+      DstPort		      1
+    }
+  }
+}

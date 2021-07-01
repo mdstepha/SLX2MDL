@@ -1,0 +1,12631 @@
+Model {
+SavedCharacterEncoding "ISO-8859-1"
+EnableAccessToBaseWorkspace on
+SLXCompressionType "Normal"
+ScopeRefreshTime "0.035000"
+OverrideScopeRefreshTime on
+DisableAllScopes off
+DataTypeOverride "UseLocalSettings"
+DataTypeOverrideAppliesTo "AllNumericTypes"
+MinMaxOverflowLogging "UseLocalSettings"
+MinMaxOverflowArchiveMode "Overwrite"
+FPTRunName "Run 1"
+MaxMDLFileLineLength "120"
+LastSavedArchitecture "maci64"
+HideAutomaticNames on
+UpdateHistory "UpdateHistoryNever"
+ModifiedByFormat "%<Auto>"
+ModifiedDateFormat "%<Auto>"
+RTWModifiedTimeStamp "406555555"
+ModelVersionFormat "1.%<AutoIncrement:199>"
+
+SampleTimeColors off
+SampleTimeAnnotations off
+LibraryLinkDisplay "disabled"
+WideLines off
+ShowLineDimensions off
+ShowPortDataTypes off
+ShowAllPropagatedSignalLabels off
+PortDataTypeDisplayFormat "AliasTypeOnly"
+ShowEditTimeErrors on
+ShowEditTimeWarnings on
+ShowEditTimeAdvisorChecks off
+ShowPortUnits off
+ShowDesignRanges off
+ShowLoopsOnError on
+IgnoreBidirectionalLines off
+ShowStorageClass off
+ShowTestPointIcons on
+ShowSignalResolutionIcons on
+ShowViewerIcons on
+SortedOrder off
+VariantCondition off
+ShowSubsystemDomainSpec off
+ExecutionContextIcon off
+ShowLinearizationAnnotations on
+ShowVisualizeInsertedRTB on
+ShowMarkup on
+BlockNameDataTip off
+BlockParametersDataTip off
+BlockDescriptionStringDataTip off
+BlockVariantConditionDataTip off
+ToolBar on
+StatusBar on
+BrowserShowLibraryLinks off
+FunctionConnectors off
+BrowserLookUnderMasks off
+MultiThreadCoSim on
+
+SimulationMode "normal"
+SILPILModeSetting "automated"
+SILPILSystemUnderTest "topmodel"
+SILPILSimulationModeTopModel "normal"
+SILPILSimulationModeModelRef "normal"
+SimTabSimulationMode "normal"
+CodeVerificationMode "software-in-the-loop (sil)"
+PauseTimes "5"
+NumberOfSteps "1"
+SnapshotBufferSize "10"
+SnapshotInterval "10"
+NumberOfLastSnapshots "0"
+EnablePacing off
+PacingRate "1"
+LinearizationMsg "none"
+Profile off
+ParamWorkspaceSource "MATLABWorkspace"
+AccelSystemTargetFile "accel.tlc"
+AccelTemplateMakefile "accel_default_tmf"
+AccelMakeCommand "make_rtw"
+TryForcingSFcnDF off
+Object {
+$PropName "DataLoggingOverride"
+$ObjectID 1
+$ClassName "Simulink.SimulationData.ModelLoggingInfo"
+model_ "$bdroot"
+overrideMode_ [0U]
+Array {
+PropName "logAsSpecifiedByModels_"
+Type "Cell"
+Dimension 1
+Cell "$bdroot"
+}
+
+Array {
+PropName "logAsSpecifiedByModelsSSIDs_"
+Type "Cell"
+Dimension 1
+Cell []
+}
+}
+
+ExtModeBatchMode off
+ExtModeEnableFloating on
+ExtModeTrigType "manual"
+ExtModeTrigMode "normal"
+ExtModeTrigPort "1"
+ExtModeTrigElement "any"
+ExtModeTrigDuration "1000"
+ExtModeTrigDurationFloating "auto"
+ExtModeTrigHoldOff "0"
+ExtModeTrigDelay "0"
+ExtModeTrigDirection "rising"
+ExtModeTrigLevel "0"
+ExtModeArchiveMode off
+ExtModeAutoIncOneShot off
+ExtModeIncDirWhenArm off
+ExtModeAddSuffixToVar off
+ExtModeWriteAllDataToWs off
+ExtModeArmWhenConnect on
+ExtModeSkipDownloadWhenConnect off
+ExtModeLogAll on
+ExtModeAutoUpdateStatusClock on
+
+ShowModelReferenceBlockVersion off
+ShowModelReferenceBlockIO off
+OrderedModelArguments on
+
+ExplicitPartitioning off
+Object {
+$PropName "DataTransfer"
+$ObjectID 2
+$ClassName "Simulink.GlobalDataTransfer"
+DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
+DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
+DefaultTransitionBetweenContTasks "Ensure deterministic transfer (minimum delay)"
+DefaultExtrapolationMethodBetweenContTasks "None"
+}
+
+System {
+Location [198, 89, 1462, 888]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "133"
+ReportName "simulink-default.rpt"
+SIDHighWatermark "4537"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "eprc [1]"
+SID "33"
+Position [30, 63, 55, 77]
+ZOrder "22"
+BackgroundColor [1.000000, 0.690196, 0.984314]
+FontSize "12"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "delta [2-4]"
+SID "508"
+Position [30, 163, 55, 177]
+ZOrder "37"
+BackgroundColor [1.000000, 0.690196, 0.984314]
+FontSize "12"
+Port "2"
+IconDisplay "Port number"
+PortDimensions "3"
+}
+
+Block {
+BlockType "Inport"
+Name "Wind [5-7]"
+SID "1118"
+Position [30, 263, 60, 277]
+ZOrder "160"
+BackgroundColor [1.000000, 0.690196, 0.984314]
+FontSize "12"
+Port "3"
+IconDisplay "Port number"
+PortDimensions "3"
+}
+
+Block {
+BlockType "Inport"
+Name "ILSnoise [8-9]"
+SID "4486"
+Position [30, 363, 60, 377]
+ZOrder "518"
+BackgroundColor [1.000000, 0.690196, 0.984314]
+FontSize "12"
+Port "4"
+IconDisplay "Port number"
+PortDimensions "2"
+}
+
+Block {
+BlockType "SubSystem"
+Name "FALSIM"
+SID "3883"
+Ports [4, 3]
+Position [165, 16, 390, 424]
+ZOrder "517"
+DropShadow on
+FontSize "12"
+FontWeight "bold"
+RequestExecContextInheritance off
+Object {
+$PropName "MaskObject"
+$ObjectID 3
+$ClassName "Simulink.Mask"
+IconOpaque "transparent"
+Display "image(imread('FALSIM.png'));\ncolor('white');\ndisp('FINAL APPROACH & LANDING \\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n');\ndisp('SIMULATION MODEL \\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n');\n\ncolor('red');\ndisp('http://w3.onera.fr/smac/ \\n\\n\\n\\n');\n\n\n\ncolor('red');\n%disp('{\\bf\\fontsize{12}SMAC TOOLS}', 'texmode','on');\n\ncolor('yellow');\n\nport_label('output', 1,'{\\bf\\fontsize{12}States}', 'texmode','on');\nport_label('output', 2,'{\\bf\\fontsize{12}Non Measured Outputs}', 'texmode','on');\nport_label('output', 3,'{\\bf\\fontsize{12}Measured Outputs}', 'texmode','on');\nport_label('input', 1,'{\\bf\\fontsize{12}\\delta_{TH}}', 'texmode','on');\nport_label('input', 2,'{\\bf\\fontsize{12}\\delta_A , \\delta_E , \\delta_R}', 'texmode','on');\nport_label('input', 3,'{\\bf\\fontsize{12}W_x , W_y , W_z}', 'texmode','on');\nport_label('input', 4,'{\\bf\\fontsize{12}W_{LOC} , W_{GLD}}', 'texmode','on');"
+
+}
+
+System {
+Location [62, 14, 1500, 987]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "70"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "eprc [1]"
+SID "3884"
+Position [30, 148, 60, 162]
+ZOrder "228"
+BackgroundColor [1.000000, 0.690196, 0.984314]
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "delta [2-4]"
+SID "3885"
+Position [30, 248, 60, 262]
+ZOrder "229"
+BackgroundColor [1.000000, 0.690196, 0.984314]
+Port "2"
+IconDisplay "Port number"
+PortDimensions "3"
+}
+
+Block {
+BlockType "Inport"
+Name "wind [5-7]"
+SID "3886"
+Position [20, 528, 50, 542]
+ZOrder "230"
+BackgroundColor [1.000000, 0.690196, 0.984314]
+Port "3"
+IconDisplay "Port number"
+PortDimensions "3"
+}
+
+Block {
+BlockType "Inport"
+Name "ILSnoise"
+SID "4483"
+Position [20, 808, 50, 822]
+ZOrder "370"
+BackgroundColor [1.000000, 0.690196, 0.984314]
+Port "4"
+IconDisplay "Port number"
+PortDimensions "2"
+}
+
+Block {
+BlockType "SubSystem"
+Name "AC"
+SID "3887"
+Ports [3, 16]
+Position [500, 115, 650, 955]
+ZOrder "322"
+BackgroundColor [0.474510, 0.768627, 0.984314]
+RequestExecContextInheritance off
+Port {
+PortNumber "1"
+Name "Nxyz"
+}
+
+Port {
+PortNumber "2"
+Name "V"
+}
+
+Port {
+PortNumber "3"
+Name "OM"
+}
+
+Port {
+PortNumber "5"
+Name "PHI"
+}
+
+Port {
+PortNumber "6"
+Name "ab"
+}
+
+Port {
+PortNumber "7"
+Name "Vc"
+}
+
+Port {
+PortNumber "8"
+Name "Va"
+}
+
+Port {
+PortNumber "9"
+Name "Vg"
+}
+
+Port {
+PortNumber "10"
+Name "Vz"
+}
+
+Port {
+PortNumber "11"
+Name "H"
+}
+
+Port {
+PortNumber "12"
+Name "VzLG"
+}
+
+Port {
+PortNumber "15"
+Name "Chi"
+}
+
+System {
+Location [62, 14, 1500, 987]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "101"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "U"
+SID "3888"
+Position [305, 133, 335, 147]
+ZOrder "40"
+BackgroundColor [1.000000, 0.666667, 1.000000]
+NamePlacement "alternate"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Wind"
+SID "3889"
+Position [10, 198, 40, 212]
+ZOrder "42"
+BackgroundColor [1.000000, 0.666667, 1.000000]
+NamePlacement "alternate"
+Port "2"
+IconDisplay "Port number"
+PortDimensions "3"
+}
+
+Block {
+BlockType "Inport"
+Name "ILSnoise"
+SID "4484"
+Position [10, 288, 40, 302]
+ZOrder "226"
+BackgroundColor [1.000000, 0.666667, 1.000000]
+NamePlacement "alternate"
+Port "3"
+IconDisplay "Port number"
+PortDimensions "2"
+}
+
+Block {
+BlockType "SubSystem"
+Name "Dynamics"
+SID "3890"
+Ports [2, 2]
+Position [540, 31, 610, 389]
+ZOrder "29"
+RequestExecContextInheritance off
+System {
+Location [110, 17, 1877, 1040]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "190"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "F"
+SID "3891"
+Position [20, 308, 50, 322]
+ZOrder "30"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "M"
+SID "3892"
+Position [20, 28, 50, 42]
+ZOrder "29"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "SubSystem"
+Name "CP1"
+SID "3893"
+Ports [2, 1]
+Position [335, 96, 395, 154]
+ZOrder "9"
+BlockMirror on
+RequestExecContextInheritance off
+Object {
+$PropName "MaskObject"
+$ObjectID 4
+$ClassName "Simulink.Mask"
+Display "fprintf('CROSS \\n PRODUCT');\ncolor('red');\nfprintf('\\n\\n');\nfprintf(' \\n \\n \\n z=x^y');\n%text(3,1,'PRODUCT');\n%text(5,1,'z=x^y');"
+
+}
+
+System {
+Location [-38, 22, 1402, 896]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "x"
+SID "3894"
+Position [20, 53, 50, 67]
+ZOrder "7"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "y"
+SID "3895"
+Position [20, 103, 50, 117]
+ZOrder "8"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux"
+SID "3896"
+Ports [2, 1]
+Position [90, 36, 100, 134]
+ZOrder "5"
+ShowName off
+Inputs "2"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux1"
+SID "3897"
+Ports [3, 1]
+Position [410, 24, 420, 146]
+ZOrder "4"
+ShowName off
+Inputs "3"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Fcn"
+Name "Y1"
+SID "3898"
+Position [190, 34, 360, 56]
+ZOrder "3"
+Expr "u(2)*u(6)-u(3)*u(5)"
+}
+
+Block {
+BlockType "Fcn"
+Name "Y2"
+SID "3899"
+Position [190, 74, 360, 96]
+ZOrder "2"
+Expr "u(3)*u(4)-u(1)*u(6)"
+}
+
+Block {
+BlockType "Fcn"
+Name "Y3"
+SID "3900"
+Position [190, 114, 360, 136]
+ZOrder "1"
+Expr "u(1)*u(5)-u(2)*u(4)"
+}
+
+Block {
+BlockType "Outport"
+Name "z"
+SID "3901"
+Position [490, 78, 520, 92]
+ZOrder "9"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "3897#out:1"
+Dst "3901#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "3899#out:1"
+Dst "3897#in:2"
+}
+
+Line {
+ZOrder "3"
+Src "3898#out:1"
+Dst "3897#in:1"
+}
+
+Line {
+ZOrder "4"
+Src "3900#out:1"
+Dst "3897#in:3"
+}
+
+Line {
+ZOrder "5"
+Src "3895#out:1"
+Dst "3896#in:2"
+}
+
+Line {
+ZOrder "6"
+Src "3896#out:1"
+Points [40, 0]
+Branch {
+ZOrder "7"
+Dst "3899#in:1"
+}
+
+Branch {
+ZOrder "8"
+Points [0, 40]
+Dst "3900#in:1"
+}
+
+Branch {
+ZOrder "9"
+Points [0, -40]
+Dst "3898#in:1"
+}
+}
+
+Line {
+ZOrder "10"
+Src "3894#out:1"
+Dst "3896#in:1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "CP2"
+SID "3902"
+Ports [2, 1]
+Position [335, 201, 395, 259]
+ZOrder "24"
+BlockMirror on
+RequestExecContextInheritance off
+Object {
+$PropName "MaskObject"
+$ObjectID 5
+$ClassName "Simulink.Mask"
+Display "fprintf('CROSS \\n PRODUCT');\ncolor('red');\nfprintf('\\n\\n');\nfprintf(' \\n \\n \\n z=x^y');\n%text(3,1,'PRODUCT');\n%text(5,1,'z=x^y');"
+
+}
+
+System {
+Location [-38, 22, 1402, 896]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "x"
+SID "3903"
+Position [20, 53, 50, 67]
+ZOrder "7"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "y"
+SID "3904"
+Position [20, 103, 50, 117]
+ZOrder "8"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux"
+SID "3905"
+Ports [2, 1]
+Position [90, 36, 100, 134]
+ZOrder "5"
+ShowName off
+Inputs "2"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux1"
+SID "3906"
+Ports [3, 1]
+Position [410, 24, 420, 146]
+ZOrder "4"
+ShowName off
+Inputs "3"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Fcn"
+Name "Y1"
+SID "3907"
+Position [190, 34, 360, 56]
+ZOrder "3"
+Expr "u(2)*u(6)-u(3)*u(5)"
+}
+
+Block {
+BlockType "Fcn"
+Name "Y2"
+SID "3908"
+Position [190, 74, 360, 96]
+ZOrder "2"
+Expr "u(3)*u(4)-u(1)*u(6)"
+}
+
+Block {
+BlockType "Fcn"
+Name "Y3"
+SID "3909"
+Position [190, 114, 360, 136]
+ZOrder "1"
+Expr "u(1)*u(5)-u(2)*u(4)"
+}
+
+Block {
+BlockType "Outport"
+Name "z"
+SID "3910"
+Position [490, 78, 520, 92]
+ZOrder "9"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "3906#out:1"
+Dst "3910#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "3908#out:1"
+Dst "3906#in:2"
+}
+
+Line {
+ZOrder "3"
+Src "3907#out:1"
+Dst "3906#in:1"
+}
+
+Line {
+ZOrder "4"
+Src "3909#out:1"
+Dst "3906#in:3"
+}
+
+Line {
+ZOrder "5"
+Src "3904#out:1"
+Dst "3905#in:2"
+}
+
+Line {
+ZOrder "6"
+Src "3905#out:1"
+Points [40, 0]
+Branch {
+ZOrder "7"
+Dst "3908#in:1"
+}
+
+Branch {
+ZOrder "8"
+Points [0, 40]
+Dst "3909#in:1"
+}
+
+Branch {
+ZOrder "9"
+Points [0, -40]
+Dst "3907#in:1"
+}
+}
+
+Line {
+ZOrder "10"
+Src "3903#out:1"
+Dst "3905#in:1"
+}
+}
+}
+
+Block {
+BlockType "Gain"
+Name "Inertia"
+SID "3911"
+Position [435, 125, 560, 155]
+ZOrder "10"
+BlockMirror on
+BackgroundColor [0.745098, 0.996078, 0.027451]
+Gain "ACSP.MIG.I"
+Multiplication "Matrix(K*u)"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Inertia^-1"
+SID "3912"
+Position [320, 19, 445, 51]
+ZOrder "12"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+Gain "ACSP.MIG.J"
+Multiplication "Matrix(K*u)"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Integrator"
+Name "Int_OM"
+SID "3913"
+Ports [1, 1]
+Position [495, 20, 525, 50]
+ZOrder "172"
+InitialCondition "ACSP.X0.OM"
+ContinuousStateAttributes "'OM'"
+}
+
+Block {
+BlockType "Integrator"
+Name "Int_V"
+SID "3914"
+Ports [1, 1]
+Position [500, 300, 530, 330]
+ZOrder "173"
+InitialCondition "ACSP.X0.V"
+ContinuousStateAttributes "'V'"
+}
+
+Block {
+BlockType "Gain"
+Name "Mass^-1"
+SID "3915"
+Position [85, 297, 225, 333]
+ZOrder "27"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+Gain "1/ACSP.MIG.mass"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum"
+SID "3916"
+Ports [2, 1]
+Position [265, 25, 285, 45]
+ZOrder "11"
+ShowName off
+IconShape "round"
+Inputs "|+-"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum1"
+SID "3917"
+Ports [2, 1]
+Position [265, 305, 285, 325]
+ZOrder "26"
+ShowName off
+IconShape "round"
+Inputs "-+|"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Outport"
+Name "V"
+SID "3918"
+Position [635, 308, 665, 322]
+ZOrder "32"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "OM"
+SID "3919"
+Position [635, 28, 665, 42]
+ZOrder "31"
+Port "2"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "3914#out:1"
+Points [60, 0]
+Branch {
+ZOrder "2"
+Points [0, -70]
+Dst "3902#in:2"
+}
+
+Branch {
+ZOrder "3"
+Dst "3918#in:1"
+}
+}
+
+Line {
+ZOrder "4"
+Src "3917#out:1"
+Dst "3914#in:1"
+}
+
+Line {
+ZOrder "5"
+Src "3916#out:1"
+Dst "3912#in:1"
+}
+
+Line {
+ZOrder "6"
+Src "3892#out:1"
+Dst "3916#in:1"
+}
+
+Line {
+ZOrder "7"
+Src "3912#out:1"
+Dst "3913#in:1"
+}
+
+Line {
+ZOrder "8"
+Src "3891#out:1"
+Dst "3915#in:1"
+}
+
+Line {
+ZOrder "9"
+Src "3913#out:1"
+Points [67, 0]
+Branch {
+ZOrder "10"
+Points [0, 75]
+Branch {
+ZOrder "11"
+Dst "3893#in:1"
+}
+
+Branch {
+ZOrder "12"
+Points [0, 30]
+Branch {
+ZOrder "13"
+Dst "3911#in:1"
+}
+
+Branch {
+ZOrder "14"
+Points [0, 75]
+Dst "3902#in:1"
+}
+}
+}
+
+Branch {
+ZOrder "15"
+Dst "3919#in:1"
+}
+}
+
+Line {
+ZOrder "16"
+Src "3902#out:1"
+Points [-55, 0]
+Dst "3917#in:1"
+}
+
+Line {
+ZOrder "17"
+Src "3893#out:1"
+Points [-55, 0]
+Dst "3916#in:2"
+}
+
+Line {
+ZOrder "18"
+Src "3915#out:1"
+Dst "3917#in:2"
+}
+
+Line {
+ZOrder "19"
+Src "3911#out:1"
+Dst "3893#in:2"
+}
+
+Annotation {
+SID "3921"
+Name "F =mass*(Vdot + OM x V)"
+Position [75, 183, 242, 199]
+InternalMargins [0, 0, 0, 0]
+ZOrder "-1"
+FontSize "14"
+FontWeight "bold"
+}
+
+Annotation {
+SID "3920"
+Name "M = I*OMdot + OM x (I*OM)"
+Position [74, 148, 252, 164]
+InternalMargins [0, 0, 0, 0]
+ZOrder "-2"
+FontSize "14"
+FontWeight "bold"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "F and M"
+SID "3922"
+Ports [6, 3]
+Position [385, 70, 455, 345]
+ZOrder "36"
+RequestExecContextInheritance off
+System {
+Location [110, 17, 1877, 1040]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "164"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "ab"
+SID "3923"
+Position [20, 68, 50, 82]
+ZOrder "36"
+NamePlacement "alternate"
+IconDisplay "Port number"
+Port {
+PortNumber "1"
+Name "alpha"
+}
+}
+
+Block {
+BlockType "Inport"
+Name "U"
+SID "3924"
+Position [20, 178, 50, 192]
+ZOrder "43"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Va"
+SID "3925"
+Position [20, 133, 50, 147]
+ZOrder "38"
+Port "3"
+IconDisplay "Port number"
+Port {
+PortNumber "1"
+Name "Va"
+}
+}
+
+Block {
+BlockType "Inport"
+Name "qd"
+SID "3926"
+Position [270, 208, 300, 222]
+ZOrder "39"
+Port "4"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "HLG"
+SID "3927"
+Position [55, 148, 85, 162]
+ZOrder "45"
+Port "5"
+IconDisplay "Port number"
+Port {
+PortNumber "1"
+Name "Hlg"
+}
+}
+
+Block {
+BlockType "Inport"
+Name "OM"
+SID "3928"
+Position [20, 103, 50, 117]
+ZOrder "42"
+NamePlacement "alternate"
+Port "6"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "BusCreator"
+Name "Bus Creator"
+SID "3929"
+Ports [10, 1]
+Position [215, 54, 230, 211]
+ZOrder "52"
+ShowName off
+Inputs "10"
+DisplayOption "bar"
+InheritFromInputs on
+}
+
+Block {
+BlockType "Demux"
+Name "Demux1"
+SID "3930"
+Ports [1, 3]
+Position [150, 87, 155, 133]
+ZOrder "50"
+ShowName off
+Outputs "3"
+DisplayOption "bar"
+Port {
+PortNumber "1"
+Name "p"
+}
+
+Port {
+PortNumber "2"
+Name "q"
+}
+
+Port {
+PortNumber "3"
+Name "r"
+}
+}
+
+Block {
+BlockType "Demux"
+Name "Demux2"
+SID "3931"
+Ports [1, 3]
+Position [165, 163, 170, 207]
+ZOrder "51"
+ShowName off
+Outputs "3"
+DisplayOption "bar"
+Port {
+PortNumber "1"
+Name "da"
+}
+
+Port {
+PortNumber "2"
+Name "de"
+}
+
+Port {
+PortNumber "3"
+Name "dr"
+}
+}
+
+Block {
+BlockType "Demux"
+Name "Demux3"
+SID "3932"
+Ports [1, 2]
+Position [80, 57, 85, 88]
+ZOrder "60"
+ShowName off
+Outputs "2"
+DisplayOption "bar"
+Port {
+PortNumber "1"
+Name "alpha"
+}
+
+Port {
+PortNumber "2"
+Name "beta"
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Forces"
+SID "3933"
+Ports [3, 3]
+Position [485, 120, 545, 200]
+ZOrder "34"
+NamePlacement "alternate"
+RequestExecContextInheritance off
+System {
+Location [110, 17, 1877, 1040]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "175"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "E"
+SID "3934"
+Position [15, 243, 45, 257]
+ZOrder "136"
+NamePlacement "alternate"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "TH"
+SID "3935"
+Position [15, 98, 45, 112]
+ZOrder "124"
+NamePlacement "alternate"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "qS"
+SID "3936"
+Position [165, 268, 195, 282]
+ZOrder "132"
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "SubSystem"
+Name "Body2Aero"
+SID "3937"
+Ports [2, 1]
+Position [290, 205, 355, 285]
+ZOrder "152"
+RequestExecContextInheritance off
+System {
+Location [110, 17, 1877, 1040]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "174"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "alpha"
+SID "3938"
+Position [20, 38, 50, 52]
+ZOrder "152"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Fb"
+SID "3939"
+Position [20, 138, 50, 152]
+ZOrder "153"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Selector"
+Name "Fy"
+SID "3940"
+Ports [1, 1]
+Position [445, 76, 480, 114]
+ZOrder "155"
+InputPortWidth "5"
+IndexOptions "Index vector (dialog)"
+Indices "4"
+OutputSizes "1"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux"
+SID "3941"
+Ports [3, 1]
+Position [270, 23, 280, 167]
+ZOrder "147"
+ShowName off
+Inputs [1 1 3]
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux3"
+SID "3942"
+Ports [3, 1]
+Position [605, 21, 615, 169]
+ZOrder "146"
+ShowName off
+Inputs "3"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Trigonometry"
+Name "Trigonometric\nFunction1"
+SID "3943"
+Ports [1, 1]
+Position [195, 86, 225, 104]
+ZOrder "140"
+DropShadow on
+ShowName off
+}
+
+Block {
+BlockType "Trigonometry"
+Name "Trigonometric\nFunction2"
+SID "3944"
+Ports [1, 1]
+Position [195, 36, 225, 54]
+ZOrder "137"
+DropShadow on
+ShowName off
+Operator "cos"
+}
+
+Block {
+BlockType "Fcn"
+Name "ca*Fx-sa*Fz"
+SID "3945"
+Position [380, 34, 550, 56]
+ZOrder "148"
+Expr "u(1)*u(3)-u(2)*u(5)"
+}
+
+Block {
+BlockType "Fcn"
+Name "sa*Fx+ca*Fz"
+SID "3946"
+Position [380, 134, 550, 156]
+ZOrder "151"
+Expr "u(2)*u(3)+u(1)*u(5)"
+}
+
+Block {
+BlockType "Outport"
+Name "Fa"
+SID "3947"
+Position [695, 88, 725, 102]
+ZOrder "154"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "3940#out:1"
+Dst "3942#in:2"
+}
+
+Line {
+ZOrder "2"
+Src "3942#out:1"
+Dst "3947#in:1"
+}
+
+Line {
+ZOrder "3"
+Src "3941#out:1"
+Points [55, 0]
+Branch {
+ZOrder "4"
+Dst "3940#in:1"
+}
+
+Branch {
+ZOrder "5"
+Points [0, -50]
+Dst "3945#in:1"
+}
+
+Branch {
+ZOrder "6"
+Points [0, 50]
+Dst "3946#in:1"
+}
+}
+
+Line {
+ZOrder "7"
+Src "3945#out:1"
+Dst "3942#in:1"
+}
+
+Line {
+ZOrder "8"
+Src "3946#out:1"
+Dst "3942#in:3"
+}
+
+Line {
+ZOrder "9"
+Src "3944#out:1"
+Dst "3941#in:1"
+}
+
+Line {
+ZOrder "10"
+Src "3943#out:1"
+Dst "3941#in:2"
+}
+
+Line {
+ZOrder "11"
+Src "3939#out:1"
+Dst "3941#in:3"
+}
+
+Line {
+ZOrder "12"
+Src "3938#out:1"
+Points [97, 0]
+Branch {
+ZOrder "13"
+Dst "3944#in:1"
+}
+
+Branch {
+ZOrder "14"
+Points [0, 50]
+Dst "3943#in:1"
+}
+}
+}
+}
+
+Block {
+BlockType "BusSelector"
+Name "Bus Selector"
+SID "3948"
+Ports [1, 1]
+Position [195, 216, 205, 234]
+ZOrder "154"
+ShowName off
+OutputSignals "alpha"
+OutputAsBus off
+Port {
+PortNumber "1"
+Name "<alpha>"
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "CXYZ"
+SID "3949"
+Ports [1, 1]
+Position [95, 238, 145, 262]
+ZOrder "153"
+RequestExecContextInheritance off
+System {
+Location [110, 17, 1877, 1040]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "126"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "U"
+SID "3950"
+Position [30, 78, 60, 92]
+ZOrder "132"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Abs"
+Name "Abs"
+SID "3951"
+Position [340, 380, 370, 410]
+ZOrder "160"
+ShowName off
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "BusSelector"
+Name "Bus Selector"
+SID "3952"
+Ports [1, 1]
+Position [100, 76, 110, 94]
+ZOrder "136"
+ShowName off
+OutputSignals "alpha"
+OutputAsBus off
+Port {
+PortNumber "1"
+Name "<alpha>"
+}
+}
+
+Block {
+BlockType "BusSelector"
+Name "Bus Selector1"
+SID "3953"
+Ports [1, 2]
+Position [100, 146, 110, 219]
+ZOrder "148"
+ShowName off
+OutputSignals "beta,dr"
+OutputAsBus off
+Port {
+PortNumber "1"
+Name "<beta>"
+}
+
+Port {
+PortNumber "2"
+Name "<dr>"
+}
+}
+
+Block {
+BlockType "BusSelector"
+Name "Bus Selector2"
+SID "3954"
+Ports [1, 4]
+Position [100, 243, 110, 367]
+ZOrder "153"
+ShowName off
+OutputSignals "alpha,q,Va,de"
+OutputAsBus off
+Port {
+PortNumber "1"
+Name "<alpha>"
+}
+
+Port {
+PortNumber "2"
+Name "<q>"
+}
+
+Port {
+PortNumber "3"
+Name "<Va>"
+}
+
+Port {
+PortNumber "4"
+Name "<de>"
+}
+}
+
+Block {
+BlockType "BusSelector"
+Name "Bus Selector3"
+SID "3955"
+Ports [1, 1]
+Position [100, 386, 110, 404]
+ZOrder "165"
+ShowName off
+OutputSignals "Hlg"
+OutputAsBus off
+Port {
+PortNumber "1"
+Name "<Hlg>"
+}
+}
+
+Block {
+BlockType "Constant"
+Name "CD0"
+SID "3956"
+Position [240, 27, 345, 53]
+ZOrder "134"
+BackgroundColor [0.666667, 1.000000, 0.043137]
+NamePlacement "alternate"
+Value "ACSP.COEF.CD.CD0"
+}
+
+Block {
+BlockType "Gain"
+Name "CD_alpha"
+SID "3957"
+Position [275, 68, 430, 102]
+ZOrder "133"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+NamePlacement "alternate"
+ShowName off
+Gain "ACSP.COEF.CD.CDa"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "CD_alpha2"
+SID "3958"
+Position [305, 113, 475, 147]
+ZOrder "135"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+ShowName off
+Gain "ACSP.COEF.CD.CDa2"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Constant"
+Name "CL0"
+SID "3959"
+Position [440, 202, 560, 228]
+ZOrder "152"
+BackgroundColor [0.666667, 1.000000, 0.043137]
+NamePlacement "alternate"
+ShowName off
+Value "ACSP.COEF.CL.CL0"
+}
+
+Block {
+BlockType "Gain"
+Name "CLa"
+SID "3960"
+Position [410, 243, 590, 277]
+ZOrder "155"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+ShowName off
+Gain "ACSP.COEF.CL.CLa"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "CLa1"
+SID "3961"
+Position [155, 378, 325, 412]
+ZOrder "157"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+ShowName off
+Gain "ACSP.COEF.CL.lambdah"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "CLa2"
+SID "3962"
+Position [505, 378, 655, 412]
+ZOrder "161"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+ShowName off
+Gain "ACSP.COEF.CL.CLh"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "CLa3"
+SID "3963"
+Position [410, 333, 585, 367]
+ZOrder "162"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+ShowName off
+Gain "ACSP.COEF.CL.CLde"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "CLa4"
+SID "3964"
+Position [410, 288, 585, 322]
+ZOrder "166"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+ShowName off
+Gain "ACSP.COEF.CL.CLq"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "CLa5"
+SID "3965"
+Position [235, 288, 350, 322]
+ZOrder "189"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+ShowName off
+Gain "ACSP.MIG.Lref"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "CY_beta"
+SID "3966"
+Position [190, 148, 360, 182]
+ZOrder "149"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+NamePlacement "alternate"
+ShowName off
+Gain "ACSP.COEF.CY.CYb"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "CY_dr"
+SID "3967"
+Position [190, 185, 365, 215]
+ZOrder "150"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+ShowName off
+Gain "ACSP.COEF.CY.CYdr"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain"
+SID "3968"
+Position [800, 70, 830, 100]
+ZOrder "139"
+ShowName off
+Gain "-1"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain1"
+SID "3969"
+Position [800, 270, 830, 300]
+ZOrder "143"
+ShowName off
+Gain "-1"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain2"
+SID "3970"
+Position [395, 380, 425, 410]
+ZOrder "159"
+ShowName off
+Gain "-1"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Math"
+Name "Math Function"
+SID "3971"
+Ports [1, 1]
+Position [450, 380, 480, 410]
+ZOrder "158"
+ShowName off
+}
+
+Block {
+BlockType "Mux"
+Name "Mux"
+SID "3972"
+Ports [3, 1]
+Position [870, 32, 885, 338]
+ZOrder "142"
+ShowName off
+Inputs "3"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Product"
+Name "Product"
+SID "3973"
+Ports [2, 1]
+Position [240, 112, 260, 148]
+ZOrder "137"
+ShowName off
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Product"
+Name "Product1"
+SID "3974"
+Ports [2, 1]
+Position [170, 276, 190, 334]
+ZOrder "154"
+ShowName off
+Inputs "*/"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum1"
+SID "3975"
+Ports [2, 1]
+Position [405, 147, 420, 218]
+ZOrder "151"
+ShowName off
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum2"
+SID "3976"
+Ports [3, 1]
+Position [530, 18, 545, 152]
+ZOrder "156"
+ShowName off
+Inputs "+++"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum3"
+SID "3977"
+Ports [4, 1]
+Position [665, 190, 680, 375]
+ZOrder "163"
+ShowName off
+Inputs "++++"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum4"
+SID "3978"
+Ports [2, 1]
+Position [730, 275, 750, 295]
+ZOrder "164"
+ShowName off
+IconShape "round"
+Inputs "|++"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Outport"
+Name "CXYZ"
+SID "3979"
+Position [935, 178, 965, 192]
+ZOrder "32"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "3978#out:1"
+Dst "3969#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "3976#out:1"
+Dst "3968#in:1"
+}
+
+Line {
+ZOrder "3"
+Src "3964#out:1"
+Dst "3977#in:3"
+}
+
+Line {
+ZOrder "4"
+Src "3962#out:1"
+Points [80, 0]
+Dst "3978#in:2"
+}
+
+Line {
+Name "<Hlg>"
+ZOrder "5"
+Labels [0, 0]
+Src "3955#out:1"
+Dst "3961#in:1"
+}
+
+Line {
+ZOrder "6"
+Src "3977#out:1"
+Dst "3978#in:1"
+}
+
+Line {
+ZOrder "7"
+Src "3963#out:1"
+Dst "3977#in:4"
+}
+
+Line {
+Name "<de>"
+ZOrder "8"
+Labels [0, 0]
+Src "3954#out:4"
+Dst "3963#in:1"
+}
+
+Line {
+ZOrder "9"
+Src "3972#out:1"
+Dst "3979#in:1"
+}
+
+Line {
+ZOrder "10"
+Src "3975#out:1"
+Dst "3972#in:2"
+}
+
+Line {
+ZOrder "11"
+Src "3968#out:1"
+Dst "3972#in:1"
+}
+
+Line {
+ZOrder "12"
+Src "3969#out:1"
+Dst "3972#in:3"
+}
+
+Line {
+ZOrder "13"
+Src "3959#out:1"
+Dst "3977#in:1"
+}
+
+Line {
+Name "<alpha>"
+ZOrder "14"
+Labels [0, 0]
+Src "3954#out:1"
+Dst "3960#in:1"
+}
+
+Line {
+Name "<Va>"
+ZOrder "15"
+Labels [0, 0]
+Src "3954#out:3"
+Dst "3974#in:2"
+}
+
+Line {
+Name "<q>"
+ZOrder "16"
+Labels [0, 0]
+Src "3954#out:2"
+Dst "3974#in:1"
+}
+
+Line {
+ZOrder "17"
+Src "3960#out:1"
+Dst "3977#in:2"
+}
+
+Line {
+ZOrder "18"
+Src "3974#out:1"
+Dst "3965#in:1"
+}
+
+Line {
+ZOrder "19"
+Src "3971#out:1"
+Dst "3962#in:1"
+}
+
+Line {
+ZOrder "20"
+Src "3951#out:1"
+Dst "3970#in:1"
+}
+
+Line {
+ZOrder "21"
+Src "3970#out:1"
+Dst "3971#in:1"
+}
+
+Line {
+ZOrder "22"
+Src "3961#out:1"
+Dst "3951#in:1"
+}
+
+Line {
+ZOrder "23"
+Src "3956#out:1"
+Dst "3976#in:1"
+}
+
+Line {
+ZOrder "24"
+Src "3958#out:1"
+Dst "3976#in:3"
+}
+
+Line {
+ZOrder "25"
+Src "3957#out:1"
+Dst "3976#in:2"
+}
+
+Line {
+ZOrder "26"
+Src "3967#out:1"
+Dst "3975#in:2"
+}
+
+Line {
+ZOrder "27"
+Src "3966#out:1"
+Dst "3975#in:1"
+}
+
+Line {
+Name "<dr>"
+ZOrder "28"
+Labels [0, 0]
+Src "3953#out:2"
+Dst "3967#in:1"
+}
+
+Line {
+Name "<beta>"
+ZOrder "29"
+Labels [0, 0]
+Src "3953#out:1"
+Dst "3966#in:1"
+}
+
+Line {
+ZOrder "30"
+Src "3973#out:1"
+Dst "3958#in:1"
+}
+
+Line {
+Name "<alpha>"
+ZOrder "31"
+Labels [0, 0]
+Src "3952#out:1"
+Points [54, 0]
+Branch {
+ZOrder "32"
+Dst "3957#in:1"
+}
+
+Branch {
+ZOrder "33"
+Points [0, 35]
+Branch {
+ZOrder "34"
+Dst "3973#in:1"
+}
+
+Branch {
+ZOrder "35"
+Points [0, 20]
+Dst "3973#in:2"
+}
+}
+}
+
+Line {
+ZOrder "36"
+Src "3950#out:1"
+Points [10, 0]
+Branch {
+ZOrder "37"
+Dst "3952#in:1"
+}
+
+Branch {
+ZOrder "38"
+Points [0, 100]
+Branch {
+ZOrder "39"
+Dst "3953#in:1"
+}
+
+Branch {
+ZOrder "40"
+Points [0, 120]
+Branch {
+ZOrder "41"
+Dst "3954#in:1"
+}
+
+Branch {
+ZOrder "42"
+Points [0, 90]
+Dst "3955#in:1"
+}
+}
+}
+}
+
+Line {
+ZOrder "43"
+Src "3965#out:1"
+Dst "3964#in:1"
+}
+}
+}
+
+Block {
+BlockType "Constant"
+Name "Constant1"
+SID "3980"
+Position [20, 144, 40, 166]
+ZOrder "126"
+ShowName off
+Value "0"
+}
+
+Block {
+BlockType "Constant"
+Name "Constant2"
+SID "3981"
+Position [20, 119, 40, 141]
+ZOrder "125"
+ShowName off
+Value "0"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux2"
+SID "3982"
+Ports [3, 1]
+Position [145, 94, 155, 166]
+ZOrder "123"
+ShowName off
+Inputs "3"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Product"
+Name "Product"
+SID "3983"
+Ports [2, 1]
+Position [225, 239, 245, 286]
+ZOrder "133"
+ShowName off
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum1"
+SID "3984"
+Ports [2, 1]
+Position [605, 120, 625, 140]
+ZOrder "26"
+ShowName off
+IconShape "round"
+Inputs "++|"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum2"
+SID "3985"
+Ports [2, 1]
+Position [385, 120, 405, 140]
+ZOrder "155"
+ShowName off
+IconShape "round"
+Inputs "|++"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Selector"
+Name "[3 6 9]"
+SID "3986"
+Ports [1, 1]
+Position [105, 39, 140, 61]
+ZOrder "128"
+InputPortWidth "9"
+IndexOptions "Index vector (dialog)"
+Indices [3 6 9]
+OutputSizes "1"
+}
+
+Block {
+BlockType "Gain"
+Name "gMass"
+SID "3987"
+Position [195, 32, 330, 68]
+ZOrder "130"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+Gain "9.81*ACSP.MIG.mass"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "inv_Mass"
+SID "3988"
+Position [485, 169, 625, 211]
+ZOrder "157"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+Gain "-1/ACSP.MIG.mass"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "From"
+Name "u2"
+SID "3989"
+Position [15, 37, 60, 63]
+ZOrder "129"
+BackgroundColor "orange"
+ShowName off
+GotoTag "RV2B"
+TagVisibility "global"
+}
+
+Block {
+BlockType "Outport"
+Name "Fa"
+SID "3990"
+Position [680, 238, 710, 252]
+ZOrder "134"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "F"
+SID "3991"
+Position [680, 123, 710, 137]
+ZOrder "32"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "Nxyz"
+SID "3992"
+Position [680, 183, 710, 197]
+ZOrder "156"
+Port "3"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "3988#out:1"
+Dst "3992#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "3987#out:1"
+Points [280, 0]
+Dst "3984#in:1"
+}
+
+Line {
+ZOrder "3"
+Src "3985#out:1"
+Points [42, 0]
+Branch {
+ZOrder "4"
+Dst "3984#in:2"
+}
+
+Branch {
+ZOrder "5"
+Points [0, 60]
+Dst "3988#in:1"
+}
+}
+
+Line {
+ZOrder "6"
+Src "3982#out:1"
+Dst "3985#in:1"
+}
+
+Line {
+Name "<alpha>"
+ZOrder "7"
+Labels [1, 0]
+Src "3948#out:1"
+Dst "3937#in:1"
+}
+
+Line {
+ZOrder "8"
+Src "3949#out:1"
+Dst "3983#in:1"
+}
+
+Line {
+ZOrder "9"
+Src "3934#out:1"
+Points [18, 0]
+Branch {
+ZOrder "10"
+Dst "3949#in:1"
+}
+
+Branch {
+ZOrder "11"
+Points [0, -25]
+Dst "3948#in:1"
+}
+}
+
+Line {
+ZOrder "12"
+Src "3983#out:1"
+Dst "3937#in:2"
+}
+
+Line {
+ZOrder "13"
+Src "3937#out:1"
+Points [35, 0]
+Branch {
+ZOrder "14"
+Dst "3990#in:1"
+}
+
+Branch {
+ZOrder "15"
+Dst "3985#in:2"
+}
+}
+
+Line {
+ZOrder "16"
+Src "3936#out:1"
+Dst "3983#in:2"
+}
+
+Line {
+ZOrder "17"
+Src "3984#out:1"
+Dst "3991#in:1"
+}
+
+Line {
+ZOrder "18"
+Src "3986#out:1"
+Dst "3987#in:1"
+}
+
+Line {
+ZOrder "19"
+Src "3989#out:1"
+Dst "3986#in:1"
+}
+
+Line {
+ZOrder "20"
+Src "3980#out:1"
+Dst "3982#in:3"
+}
+
+Line {
+ZOrder "21"
+Src "3981#out:1"
+Dst "3982#in:2"
+}
+
+Line {
+ZOrder "22"
+Src "3935#out:1"
+Dst "3982#in:1"
+}
+
+Annotation {
+SID "3995"
+Name "Fg"
+Position [476, 29, 489, 41]
+InternalMargins [0, 0, 0, 0]
+ZOrder "-1"
+}
+
+Annotation {
+SID "3994"
+Name "Fengine"
+Position [246, 112, 284, 124]
+InternalMargins [0, 0, 0, 0]
+ZOrder "-2"
+}
+
+Annotation {
+SID "3993"
+Name "Faero"
+Position [470, 251, 498, 263]
+InternalMargins [0, 0, 0, 0]
+ZOrder "-3"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Moments"
+SID "3996"
+Ports [4, 1]
+Position [645, 17, 700, 333]
+ZOrder "35"
+RequestExecContextInheritance off
+System {
+Location [110, 17, 1877, 1040]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "171"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "E"
+SID "3997"
+Position [30, 178, 60, 192]
+ZOrder "29"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Fa"
+SID "3998"
+Position [250, 88, 280, 102]
+ZOrder "132"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "qS"
+SID "3999"
+Position [30, 158, 60, 172]
+ZOrder "134"
+NamePlacement "alternate"
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "TH"
+SID "4000"
+Position [30, 258, 60, 272]
+ZOrder "124"
+NamePlacement "alternate"
+Port "4"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Constant"
+Name "CD0"
+SID "4001"
+Position [45, 23, 135, 57]
+ZOrder "142"
+BackgroundColor [0.666667, 1.000000, 0.043137]
+NamePlacement "alternate"
+ShowName off
+Value "ACSP.MIG.dxG"
+}
+
+Block {
+BlockType "SubSystem"
+Name "CP"
+SID "4002"
+Ports [2, 1]
+Position [335, 51, 395, 109]
+ZOrder "137"
+RequestExecContextInheritance off
+Object {
+$PropName "MaskObject"
+$ObjectID 6
+$ClassName "Simulink.Mask"
+Display "fprintf('CROSS \\n PRODUCT');\ncolor('red');\nfprintf('\\n\\n');\nfprintf(' \\n \\n \\n z=x^y');\n%text(3,1,'PRODUCT');\n%text(5,1,'z=x^y');"
+
+}
+
+System {
+Location [-151, 22, 1289, 896]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "x"
+SID "4003"
+Position [20, 53, 50, 67]
+ZOrder "7"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "y"
+SID "4004"
+Position [20, 103, 50, 117]
+ZOrder "8"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux"
+SID "4005"
+Ports [2, 1]
+Position [90, 36, 100, 134]
+ZOrder "5"
+ShowName off
+Inputs "2"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux1"
+SID "4006"
+Ports [3, 1]
+Position [410, 24, 420, 146]
+ZOrder "4"
+ShowName off
+Inputs "3"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Fcn"
+Name "Y1"
+SID "4007"
+Position [190, 34, 360, 56]
+ZOrder "3"
+Expr "u(2)*u(6)-u(3)*u(5)"
+}
+
+Block {
+BlockType "Fcn"
+Name "Y2"
+SID "4008"
+Position [190, 74, 360, 96]
+ZOrder "2"
+Expr "u(3)*u(4)-u(1)*u(6)"
+}
+
+Block {
+BlockType "Fcn"
+Name "Y3"
+SID "4009"
+Position [190, 114, 360, 136]
+ZOrder "1"
+Expr "u(1)*u(5)-u(2)*u(4)"
+}
+
+Block {
+BlockType "Outport"
+Name "z"
+SID "4010"
+Position [490, 78, 520, 92]
+ZOrder "9"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "4006#out:1"
+Dst "4010#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "4008#out:1"
+Dst "4006#in:2"
+}
+
+Line {
+ZOrder "3"
+Src "4007#out:1"
+Dst "4006#in:1"
+}
+
+Line {
+ZOrder "4"
+Src "4009#out:1"
+Dst "4006#in:3"
+}
+
+Line {
+ZOrder "5"
+Src "4004#out:1"
+Dst "4005#in:2"
+}
+
+Line {
+ZOrder "6"
+Src "4005#out:1"
+Points [40, 0]
+Branch {
+ZOrder "7"
+Dst "4008#in:1"
+}
+
+Branch {
+ZOrder "8"
+Points [0, 40]
+Dst "4009#in:1"
+}
+
+Branch {
+ZOrder "9"
+Points [0, -40]
+Dst "4007#in:1"
+}
+}
+
+Line {
+ZOrder "10"
+Src "4003#out:1"
+Dst "4005#in:1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Clmn"
+SID "4011"
+Ports [1, 1]
+Position [110, 173, 160, 197]
+ZOrder "144"
+RequestExecContextInheritance off
+System {
+Location [110, 17, 1877, 1040]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "206"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "U"
+SID "4012"
+Position [20, 158, 50, 172]
+ZOrder "132"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "SubSystem"
+Name "Cl"
+SID "4013"
+Ports [1, 1]
+Position [165, 47, 240, 103]
+ZOrder "202"
+RequestExecContextInheritance off
+System {
+Location [110, 17, 1877, 1040]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "144"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "U"
+SID "4014"
+Position [20, 153, 50, 167]
+ZOrder "200"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "BusSelector"
+Name "Bus Selector"
+SID "4015"
+Ports [1, 7]
+Position [115, 19, 130, 301]
+ZOrder "169"
+ShowName off
+OutputSignals "beta,p,alpha,r,Va,da,dr"
+OutputAsBus off
+Port {
+PortNumber "1"
+Name "<beta>"
+}
+
+Port {
+PortNumber "2"
+Name "<p>"
+}
+
+Port {
+PortNumber "3"
+Name "<alpha>"
+}
+
+Port {
+PortNumber "4"
+Name "<r>"
+}
+
+Port {
+PortNumber "5"
+Name "<Va>"
+}
+
+Port {
+PortNumber "6"
+Name "<da>"
+}
+
+Port {
+PortNumber "7"
+Name "<dr>"
+}
+}
+
+Block {
+BlockType "Constant"
+Name "CD0"
+SID "4016"
+Position [320, 134, 420, 156]
+ZOrder "167"
+BackgroundColor [0.666667, 1.000000, 0.043137]
+NamePlacement "alternate"
+ShowName off
+Value "ACSP.COEF.Cl.Clr0"
+}
+
+Block {
+BlockType "Gain"
+Name "CD_alpha"
+SID "4017"
+Position [215, 23, 360, 57]
+ZOrder "166"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+NamePlacement "alternate"
+ShowName off
+Gain "ACSP.COEF.Cl.Clb"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "CD_alpha1"
+SID "4018"
+Position [215, 63, 360, 97]
+ZOrder "192"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+NamePlacement "alternate"
+ShowName off
+Gain "ACSP.COEF.Cl.Clp"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "CD_alpha2"
+SID "4019"
+Position [215, 103, 360, 137]
+ZOrder "168"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+ShowName off
+Gain "ACSP.COEF.Cl.Clra"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "CD_alpha3"
+SID "4020"
+Position [215, 223, 375, 257]
+ZOrder "197"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+ShowName off
+Gain "ACSP.COEF.Cl.Clda"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "CD_alpha4"
+SID "4021"
+Position [215, 263, 370, 297]
+ZOrder "198"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+ShowName off
+Gain "ACSP.COEF.Cl.Cldr"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "CLa3"
+SID "4022"
+Position [635, 150, 745, 190]
+ZOrder "188"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+ShowName off
+Gain "ACSP.MIG.Lref"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Product"
+Name "Product1"
+SID "4023"
+Ports [2, 1]
+Position [480, 98, 495, 182]
+ZOrder "180"
+ShowName off
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Product"
+Name "Product2"
+SID "4024"
+Ports [2, 1]
+Position [585, 110, 600, 230]
+ZOrder "196"
+ShowName off
+Inputs "*/"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum1"
+SID "4025"
+Ports [2, 1]
+Position [435, 222, 450, 298]
+ZOrder "194"
+ShowName off
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum2"
+SID "4026"
+Ports [3, 1]
+Position [780, 160, 800, 180]
+ZOrder "199"
+ShowName off
+IconShape "round"
+Inputs "+++"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum4"
+SID "4027"
+Ports [2, 1]
+Position [435, 110, 455, 130]
+ZOrder "193"
+ShowName off
+IconShape "round"
+Inputs "|++"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum5"
+SID "4028"
+Ports [2, 1]
+Position [535, 130, 555, 150]
+ZOrder "195"
+ShowName off
+IconShape "round"
+Inputs "++|"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Outport"
+Name "Cl"
+SID "4029"
+Position [840, 163, 870, 177]
+ZOrder "201"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "4016#out:1"
+Dst "4027#in:2"
+}
+
+Line {
+ZOrder "2"
+Src "4028#out:1"
+Dst "4024#in:1"
+}
+
+Line {
+ZOrder "3"
+Src "4022#out:1"
+Dst "4026#in:2"
+}
+
+Line {
+ZOrder "4"
+Src "4025#out:1"
+Points [335, 0]
+Dst "4026#in:3"
+}
+
+Line {
+Name "<Va>"
+ZOrder "5"
+Labels [0, 0]
+Src "4015#out:5"
+Dst "4024#in:2"
+}
+
+Line {
+Name "<p>"
+ZOrder "6"
+Labels [0, 0]
+Src "4015#out:2"
+Dst "4018#in:1"
+}
+
+Line {
+ZOrder "7"
+Src "4026#out:1"
+Dst "4029#in:1"
+}
+
+Line {
+ZOrder "8"
+Src "4021#out:1"
+Dst "4025#in:2"
+}
+
+Line {
+ZOrder "9"
+Src "4019#out:1"
+Dst "4027#in:1"
+}
+
+Line {
+Name "<beta>"
+ZOrder "10"
+Labels [0, 0]
+Src "4015#out:1"
+Dst "4017#in:1"
+}
+
+Line {
+ZOrder "11"
+Src "4020#out:1"
+Dst "4025#in:1"
+}
+
+Line {
+ZOrder "12"
+Src "4017#out:1"
+Points [425, 0]
+Dst "4026#in:1"
+}
+
+Line {
+ZOrder "13"
+Src "4027#out:1"
+Dst "4023#in:1"
+}
+
+Line {
+ZOrder "14"
+Src "4024#out:1"
+Dst "4022#in:1"
+}
+
+Line {
+Name "<dr>"
+ZOrder "15"
+Labels [0, 0]
+Src "4015#out:7"
+Dst "4021#in:1"
+}
+
+Line {
+ZOrder "16"
+Src "4018#out:1"
+Points [180, 0]
+Dst "4028#in:1"
+}
+
+Line {
+ZOrder "17"
+Src "4023#out:1"
+Dst "4028#in:2"
+}
+
+Line {
+Name "<da>"
+ZOrder "18"
+Labels [0, 0]
+Src "4015#out:6"
+Dst "4020#in:1"
+}
+
+Line {
+Name "<r>"
+ZOrder "19"
+Labels [0, 0]
+Src "4015#out:4"
+Dst "4023#in:2"
+}
+
+Line {
+Name "<alpha>"
+ZOrder "20"
+Labels [0, 0]
+Src "4015#out:3"
+Dst "4019#in:1"
+}
+
+Line {
+ZOrder "21"
+Src "4014#out:1"
+Dst "4015#in:1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Cm"
+SID "4030"
+Ports [1, 1]
+Position [165, 137, 240, 193]
+ZOrder "203"
+RequestExecContextInheritance off
+System {
+Location [110, 17, 1877, 1040]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "174"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "U"
+SID "4031"
+Position [20, 128, 50, 142]
+ZOrder "200"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Abs"
+Name "Abs"
+SID "4032"
+Position [395, 245, 425, 275]
+ZOrder "211"
+ShowName off
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "BusSelector"
+Name "Bus Selector"
+SID "4033"
+Ports [1, 4]
+Position [115, 54, 130, 216]
+ZOrder "169"
+ShowName off
+OutputSignals "alpha,q,Va,de"
+OutputAsBus off
+Port {
+PortNumber "1"
+Name "<alpha>"
+}
+
+Port {
+PortNumber "2"
+Name "<q>"
+}
+
+Port {
+PortNumber "3"
+Name "<Va>"
+}
+
+Port {
+PortNumber "4"
+Name "<de>"
+}
+}
+
+Block {
+BlockType "BusSelector"
+Name "Bus Selector3"
+SID "4034"
+Ports [1, 2]
+Position [115, 239, 130, 321]
+ZOrder "207"
+ShowName off
+OutputSignals "Hlg,alpha"
+OutputAsBus off
+Port {
+PortNumber "1"
+Name "<Hlg>"
+}
+
+Port {
+PortNumber "2"
+Name "<alpha>"
+}
+}
+
+Block {
+BlockType "Gain"
+Name "CD_alpha"
+SID "4035"
+Position [185, 58, 340, 92]
+ZOrder "166"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+NamePlacement "alternate"
+ShowName off
+Gain "ACSP.COEF.Cm.Cma"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "CD_alpha5"
+SID "4036"
+Position [185, 98, 340, 132]
+ZOrder "203"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+NamePlacement "alternate"
+ShowName off
+Gain "ACSP.COEF.Cm.Cmq"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "CD_alpha6"
+SID "4037"
+Position [185, 180, 365, 210]
+ZOrder "204"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+NamePlacement "alternate"
+ShowName off
+Gain "ACSP.COEF.Cm.Cmde"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "CD_alpha7"
+SID "4038"
+Position [185, 285, 370, 315]
+ZOrder "206"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+NamePlacement "alternate"
+ShowName off
+Gain "ACSP.COEF.Cm.Cmha"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Constant"
+Name "CL0"
+SID "4039"
+Position [185, 22, 285, 48]
+ZOrder "202"
+BackgroundColor [0.666667, 1.000000, 0.043137]
+NamePlacement "alternate"
+ShowName off
+Value "ACSP.COEF.Cm.Cm0"
+}
+
+Block {
+BlockType "Constant"
+Name "CL1"
+SID "4040"
+Position [210, 327, 320, 353]
+ZOrder "205"
+BackgroundColor [0.666667, 1.000000, 0.043137]
+NamePlacement "alternate"
+ShowName off
+Value "ACSP.COEF.Cm.Cmh0"
+}
+
+Block {
+BlockType "Gain"
+Name "CLa1"
+SID "4041"
+Position [185, 245, 370, 275]
+ZOrder "208"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+ShowName off
+Gain "ACSP.COEF.Cm.lambdah"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "CLa3"
+SID "4042"
+Position [440, 115, 555, 155]
+ZOrder "188"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+ShowName off
+Gain "ACSP.MIG.Lref"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain2"
+SID "4043"
+Position [445, 245, 475, 275]
+ZOrder "210"
+ShowName off
+Gain "-1"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Math"
+Name "Math Function"
+SID "4044"
+Ports [1, 1]
+Position [495, 245, 525, 275]
+ZOrder "209"
+ShowName off
+}
+
+Block {
+BlockType "Product"
+Name "Product1"
+SID "4045"
+Ports [2, 1]
+Position [550, 239, 565, 321]
+ZOrder "213"
+ShowName off
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Product"
+Name "Product2"
+SID "4046"
+Ports [2, 1]
+Position [390, 94, 405, 176]
+ZOrder "196"
+ShowName off
+Inputs "*/"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum1"
+SID "4047"
+Ports [3, 1]
+Position [580, 43, 595, 227]
+ZOrder "194"
+ShowName off
+Inputs "+++"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum2"
+SID "4048"
+Ports [2, 1]
+Position [625, 125, 645, 145]
+ZOrder "214"
+ShowName off
+IconShape "round"
+Inputs "|++"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum3"
+SID "4049"
+Ports [2, 1]
+Position [445, 290, 465, 310]
+ZOrder "215"
+ShowName off
+IconShape "round"
+Inputs "|++"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum5"
+SID "4050"
+Ports [2, 1]
+Position [440, 65, 460, 85]
+ZOrder "195"
+ShowName off
+IconShape "round"
+Inputs "++|"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Outport"
+Name "Cm"
+SID "4051"
+Position [690, 128, 720, 142]
+ZOrder "201"
+NamePlacement "alternate"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "4048#out:1"
+Dst "4051#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "4050#out:1"
+Dst "4047#in:1"
+}
+
+Line {
+ZOrder "3"
+Src "4042#out:1"
+Dst "4047#in:2"
+}
+
+Line {
+ZOrder "4"
+Src "4037#out:1"
+Dst "4047#in:3"
+}
+
+Line {
+ZOrder "5"
+Src "4039#out:1"
+Points [160, 0]
+Dst "4050#in:1"
+}
+
+Line {
+ZOrder "6"
+Src "4035#out:1"
+Dst "4050#in:2"
+}
+
+Line {
+ZOrder "7"
+Src "4049#out:1"
+Dst "4045#in:2"
+}
+
+Line {
+ZOrder "8"
+Src "4040#out:1"
+Points [130, 0]
+Dst "4049#in:2"
+}
+
+Line {
+ZOrder "9"
+Src "4038#out:1"
+Dst "4049#in:1"
+}
+
+Line {
+Name "<alpha>"
+ZOrder "10"
+Labels [0, 0]
+Src "4034#out:2"
+Dst "4038#in:1"
+}
+
+Line {
+Name "<Hlg>"
+ZOrder "11"
+Labels [0, 0]
+Src "4034#out:1"
+Dst "4041#in:1"
+}
+
+Line {
+ZOrder "12"
+Src "4044#out:1"
+Dst "4045#in:1"
+}
+
+Line {
+ZOrder "13"
+Src "4045#out:1"
+Points [65, 0]
+Dst "4048#in:2"
+}
+
+Line {
+ZOrder "14"
+Src "4047#out:1"
+Dst "4048#in:1"
+}
+
+Line {
+ZOrder "15"
+Src "4032#out:1"
+Dst "4043#in:1"
+}
+
+Line {
+ZOrder "16"
+Src "4043#out:1"
+Dst "4044#in:1"
+}
+
+Line {
+ZOrder "17"
+Src "4041#out:1"
+Dst "4032#in:1"
+}
+
+Line {
+Name "<de>"
+ZOrder "18"
+Labels [0, 0]
+Src "4033#out:4"
+Dst "4037#in:1"
+}
+
+Line {
+ZOrder "19"
+Src "4046#out:1"
+Dst "4042#in:1"
+}
+
+Line {
+Name "<Va>"
+ZOrder "20"
+Labels [0, 0]
+Src "4033#out:3"
+Dst "4046#in:2"
+}
+
+Line {
+ZOrder "21"
+Src "4036#out:1"
+Dst "4046#in:1"
+}
+
+Line {
+Name "<q>"
+ZOrder "22"
+Labels [0, 0]
+Src "4033#out:2"
+Dst "4036#in:1"
+}
+
+Line {
+Name "<alpha>"
+ZOrder "23"
+Labels [0, 0]
+Src "4033#out:1"
+Dst "4035#in:1"
+}
+
+Line {
+ZOrder "24"
+Src "4031#out:1"
+Points [21, 0]
+Branch {
+ZOrder "25"
+Dst "4033#in:1"
+}
+
+Branch {
+ZOrder "26"
+Points [0, 145]
+Dst "4034#in:1"
+}
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Cn"
+SID "4052"
+Ports [1, 1]
+Position [165, 227, 240, 283]
+ZOrder "204"
+RequestExecContextInheritance off
+System {
+Location [62, 14, 1500, 987]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "132"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "U"
+SID "4053"
+Position [20, 188, 50, 202]
+ZOrder "200"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "BusSelector"
+Name "Bus Selector"
+SID "4054"
+Ports [1, 8]
+Position [115, 51, 130, 334]
+ZOrder "169"
+ShowName off
+OutputSignals "alpha,beta,alpha,p,r,Va,da,dr"
+OutputAsBus off
+Port {
+PortNumber "1"
+Name "<alpha>"
+}
+
+Port {
+PortNumber "2"
+Name "<beta>"
+}
+
+Port {
+PortNumber "3"
+Name "<alpha>"
+}
+
+Port {
+PortNumber "4"
+Name "<p>"
+}
+
+Port {
+PortNumber "5"
+Name "<r>"
+}
+
+Port {
+PortNumber "6"
+Name "<Va>"
+}
+
+Port {
+PortNumber "7"
+Name "<da>"
+}
+
+Port {
+PortNumber "8"
+Name "<dr>"
+}
+}
+
+Block {
+BlockType "Constant"
+Name "CD0"
+SID "4055"
+Position [190, 14, 300, 36]
+ZOrder "167"
+BackgroundColor [0.666667, 1.000000, 0.043137]
+NamePlacement "alternate"
+ShowName off
+Value "ACSP.COEF.Cn.Cnb0"
+}
+
+Block {
+BlockType "Constant"
+Name "CD1"
+SID "4056"
+Position [450, 104, 560, 126]
+ZOrder "203"
+BackgroundColor [0.666667, 1.000000, 0.043137]
+NamePlacement "alternate"
+ShowName off
+Value "ACSP.COEF.Cn.Cnp0"
+}
+
+Block {
+BlockType "Gain"
+Name "CD_alpha1"
+SID "4057"
+Position [190, 193, 345, 227]
+ZOrder "207"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+ShowName off
+Gain "ACSP.COEF.Cn.Cnr"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "CD_alpha2"
+SID "4058"
+Position [190, 53, 345, 87]
+ZOrder "168"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+ShowName off
+Gain "ACSP.COEF.Cn.Cnba"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "CD_alpha3"
+SID "4059"
+Position [190, 263, 345, 297]
+ZOrder "209"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+ShowName off
+Gain "ACSP.COEF.Cn.Cnda"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "CD_alpha4"
+SID "4060"
+Position [190, 298, 345, 332]
+ZOrder "210"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+ShowName off
+Gain "ACSP.COEF.Cn.Cndr"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "CD_alpha5"
+SID "4061"
+Position [190, 123, 345, 157]
+ZOrder "202"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+ShowName off
+Gain "ACSP.COEF.Cn.Cnpa"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "CLa3"
+SID "4062"
+Position [805, 183, 935, 217]
+ZOrder "188"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+ShowName off
+Gain "ACSP.MIG.Lref"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Product"
+Name "Product1"
+SID "4063"
+Ports [2, 1]
+Position [420, 53, 435, 122]
+ZOrder "180"
+ShowName off
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Product"
+Name "Product2"
+SID "4064"
+Ports [2, 1]
+Position [730, 112, 745, 288]
+ZOrder "196"
+ShowName off
+Inputs "*/"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Product"
+Name "Product3"
+SID "4065"
+Ports [2, 1]
+Position [640, 107, 655, 198]
+ZOrder "206"
+ShowName off
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum1"
+SID "4066"
+Ports [2, 1]
+Position [420, 262, 435, 333]
+ZOrder "194"
+ShowName off
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum2"
+SID "4067"
+Ports [3, 1]
+Position [980, 190, 1000, 210]
+ZOrder "199"
+ShowName off
+IconShape "round"
+Inputs "+++"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum3"
+SID "4068"
+Ports [2, 1]
+Position [685, 145, 705, 165]
+ZOrder "212"
+ShowName off
+IconShape "round"
+Inputs "|++"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum5"
+SID "4069"
+Ports [2, 1]
+Position [365, 60, 385, 80]
+ZOrder "195"
+ShowName off
+IconShape "round"
+Inputs "++|"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum6"
+SID "4070"
+Ports [2, 1]
+Position [600, 104, 615, 151]
+ZOrder "205"
+ShowName off
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Outport"
+Name "Cn"
+SID "4071"
+Position [1035, 193, 1065, 207]
+ZOrder "201"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "4068#out:1"
+Dst "4064#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "4065#out:1"
+Dst "4068#in:1"
+}
+
+Line {
+ZOrder "3"
+Src "4062#out:1"
+Dst "4067#in:2"
+}
+
+Line {
+ZOrder "4"
+Src "4066#out:1"
+Points [550, 0]
+Dst "4067#in:3"
+}
+
+Line {
+ZOrder "5"
+Src "4060#out:1"
+Dst "4066#in:2"
+}
+
+Line {
+ZOrder "6"
+Src "4059#out:1"
+Dst "4066#in:1"
+}
+
+Line {
+Name "<dr>"
+ZOrder "7"
+Labels [0, 0]
+Src "4054#out:8"
+Dst "4060#in:1"
+}
+
+Line {
+Name "<da>"
+ZOrder "8"
+Labels [0, 0]
+Src "4054#out:7"
+Dst "4059#in:1"
+}
+
+Line {
+Name "<Va>"
+ZOrder "9"
+Labels [0, 0]
+Src "4054#out:6"
+Dst "4064#in:2"
+}
+
+Line {
+ZOrder "10"
+Src "4057#out:1"
+Points [345, 0]
+Dst "4068#in:2"
+}
+
+Line {
+Name "<r>"
+ZOrder "11"
+Labels [0, 0]
+Src "4054#out:5"
+Dst "4057#in:1"
+}
+
+Line {
+Name "<p>"
+ZOrder "12"
+Labels [0, 0]
+Src "4054#out:4"
+Dst "4065#in:2"
+}
+
+Line {
+ZOrder "13"
+Src "4070#out:1"
+Dst "4065#in:1"
+}
+
+Line {
+ZOrder "14"
+Src "4056#out:1"
+Dst "4070#in:1"
+}
+
+Line {
+ZOrder "15"
+Src "4061#out:1"
+Dst "4070#in:2"
+}
+
+Line {
+ZOrder "16"
+Src "4063#out:1"
+Points [550, 0]
+Dst "4067#in:1"
+}
+
+Line {
+Name "<alpha>"
+ZOrder "17"
+Labels [0, 0]
+Src "4054#out:3"
+Dst "4061#in:1"
+}
+
+Line {
+ZOrder "18"
+Src "4069#out:1"
+Dst "4063#in:1"
+}
+
+Line {
+Name "<beta>"
+ZOrder "19"
+Labels [0, 0]
+Src "4054#out:2"
+Dst "4063#in:2"
+}
+
+Line {
+ZOrder "20"
+Src "4055#out:1"
+Points [70, 0]
+Dst "4069#in:1"
+}
+
+Line {
+ZOrder "21"
+Src "4058#out:1"
+Dst "4069#in:2"
+}
+
+Line {
+Name "<alpha>"
+ZOrder "22"
+Labels [0, 0]
+Src "4054#out:1"
+Dst "4058#in:1"
+}
+
+Line {
+ZOrder "23"
+Src "4067#out:1"
+Dst "4071#in:1"
+}
+
+Line {
+ZOrder "24"
+Src "4064#out:1"
+Dst "4062#in:1"
+}
+
+Line {
+ZOrder "25"
+Src "4053#out:1"
+Dst "4054#in:1"
+}
+}
+}
+
+Block {
+BlockType "Mux"
+Name "Mux"
+SID "4072"
+Ports [3, 1]
+Position [505, 29, 520, 301]
+ZOrder "172"
+ShowName off
+Inputs "3"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Outport"
+Name "Clmn"
+SID "4073"
+Position [585, 158, 615, 172]
+ZOrder "32"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "4072#out:1"
+Dst "4073#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "4052#out:1"
+Dst "4072#in:3"
+}
+
+Line {
+ZOrder "3"
+Src "4030#out:1"
+Dst "4072#in:2"
+}
+
+Line {
+ZOrder "4"
+Src "4013#out:1"
+Dst "4072#in:1"
+}
+
+Line {
+ZOrder "5"
+Src "4012#out:1"
+Points [52, 0]
+Branch {
+ZOrder "6"
+Dst "4030#in:1"
+}
+
+Branch {
+ZOrder "7"
+Points [0, -90]
+Dst "4013#in:1"
+}
+
+Branch {
+ZOrder "8"
+Points [0, 90]
+Dst "4052#in:1"
+}
+}
+}
+}
+
+Block {
+BlockType "Constant"
+Name "Constant1"
+SID "4074"
+Position [140, 279, 160, 301]
+ZOrder "126"
+ShowName off
+Value "0"
+}
+
+Block {
+BlockType "Constant"
+Name "Constant2"
+SID "4075"
+Position [140, 229, 160, 251]
+ZOrder "125"
+ShowName off
+Value "0"
+}
+
+Block {
+BlockType "Constant"
+Name "Constant3"
+SID "4076"
+Position [140, 54, 160, 76]
+ZOrder "140"
+ShowName off
+Value "0"
+}
+
+Block {
+BlockType "Constant"
+Name "Constant4"
+SID "4077"
+Position [140, 79, 160, 101]
+ZOrder "141"
+ShowName off
+Value "0"
+}
+
+Block {
+BlockType "Gain"
+Name "Engine vertical position"
+SID "4078"
+Position [210, 249, 325, 281]
+ZOrder "135"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+ShowName off
+Gain "ACSP.MIG.dzE"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Lref"
+SID "4079"
+Position [570, 159, 690, 191]
+ZOrder "143"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+ShowName off
+Gain "ACSP.MIG.Lref"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Mux"
+Name "Mux1"
+SID "4080"
+Ports [3, 1]
+Position [205, 29, 215, 101]
+ZOrder "139"
+ShowName off
+Inputs "3"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux2"
+SID "4081"
+Ports [3, 1]
+Position [360, 229, 370, 301]
+ZOrder "123"
+ShowName off
+Inputs "3"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Product"
+Name "Product"
+SID "4082"
+Ports [2, 1]
+Position [215, 157, 235, 193]
+ZOrder "136"
+ShowName off
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum1"
+SID "4083"
+Ports [3, 1]
+Position [505, 165, 525, 185]
+ZOrder "26"
+ShowName off
+IconShape "round"
+Inputs "+++"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Outport"
+Name "M"
+SID "4084"
+Position [715, 168, 745, 182]
+ZOrder "32"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "3997#out:1"
+Dst "4011#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "4011#out:1"
+Dst "4082#in:2"
+}
+
+Line {
+ZOrder "3"
+Src "4079#out:1"
+Dst "4084#in:1"
+}
+
+Line {
+ZOrder "4"
+Src "4081#out:1"
+Points [140, 0]
+Dst "4083#in:3"
+}
+
+Line {
+ZOrder "5"
+Src "4082#out:1"
+Dst "4083#in:2"
+}
+
+Line {
+ZOrder "6"
+Src "4001#out:1"
+Dst "4080#in:1"
+}
+
+Line {
+ZOrder "7"
+Src "4077#out:1"
+Dst "4080#in:3"
+}
+
+Line {
+ZOrder "8"
+Src "4076#out:1"
+Dst "4080#in:2"
+}
+
+Line {
+ZOrder "9"
+Src "4002#out:1"
+Points [115, 0]
+Dst "4083#in:1"
+}
+
+Line {
+ZOrder "10"
+Src "4080#out:1"
+Dst "4002#in:1"
+}
+
+Line {
+ZOrder "11"
+Src "3998#out:1"
+Dst "4002#in:2"
+}
+
+Line {
+ZOrder "12"
+Src "3999#out:1"
+Dst "4082#in:1"
+}
+
+Line {
+ZOrder "13"
+Src "4075#out:1"
+Dst "4081#in:1"
+}
+
+Line {
+ZOrder "14"
+Src "4078#out:1"
+Dst "4081#in:2"
+}
+
+Line {
+ZOrder "15"
+Src "4000#out:1"
+Dst "4078#in:1"
+}
+
+Line {
+ZOrder "16"
+Src "4083#out:1"
+Dst "4079#in:1"
+}
+
+Line {
+ZOrder "17"
+Src "4074#out:1"
+Dst "4081#in:3"
+}
+
+Annotation {
+SID "4087"
+Name "Ma"
+Position [450, 159, 465, 171]
+InternalMargins [0, 0, 0, 0]
+ZOrder "-1"
+}
+
+Annotation {
+SID "4086"
+Name "Mengine"
+Position [435, 247, 475, 259]
+InternalMargins [0, 0, 0, 0]
+ZOrder "-2"
+}
+
+Annotation {
+SID "4085"
+Name "MFaero"
+Position [441, 61, 477, 73]
+InternalMargins [0, 0, 0, 0]
+ZOrder "-3"
+}
+}
+}
+
+Block {
+BlockType "Gain"
+Name "S"
+SID "4088"
+Position [315, 198, 425, 232]
+ZOrder "46"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+Gain "ACSP.MIG.Sref"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Selector"
+Name "Selector"
+SID "4089"
+Ports [1, 1]
+Position [105, 168, 140, 202]
+ZOrder "56"
+ShowName off
+InputPortWidth "4"
+IndexOptions "Index vector (dialog)"
+Indices [2 3 4]
+OutputSizes "1"
+}
+
+Block {
+BlockType "Selector"
+Name "Selector1"
+SID "4090"
+Ports [1, 1]
+Position [105, 280, 140, 310]
+ZOrder "58"
+ShowName off
+InputPortWidth "4"
+IndexOptions "Index vector (dialog)"
+Indices [1]
+OutputSizes "1"
+}
+
+Block {
+BlockType "Outport"
+Name "F"
+SID "4091"
+Position [585, 153, 615, 167]
+ZOrder "40"
+NamePlacement "alternate"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "Nxyz"
+SID "4092"
+Position [585, 178, 615, 192]
+ZOrder "59"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "M"
+SID "4093"
+Position [735, 168, 765, 182]
+ZOrder "41"
+Port "3"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "3933#out:3"
+Dst "4092#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "4090#out:1"
+Points [107, 0]
+Branch {
+ZOrder "3"
+Dst "3996#in:4"
+}
+
+Branch {
+ZOrder "4"
+Points [0, -135]
+Dst "3933#in:2"
+}
+}
+
+Line {
+ZOrder "5"
+Src "3933#out:2"
+Dst "4091#in:1"
+}
+
+Line {
+ZOrder "6"
+Src "4088#out:1"
+Points [12, 0]
+Branch {
+ZOrder "7"
+Dst "3996#in:3"
+}
+
+Branch {
+ZOrder "8"
+Points [0, -30]
+Dst "3933#in:3"
+}
+}
+
+Line {
+ZOrder "9"
+Src "3933#out:1"
+Dst "3996#in:2"
+}
+
+Line {
+ZOrder "10"
+Src "3924#out:1"
+Points [13, 0]
+Branch {
+ZOrder "11"
+Dst "4089#in:1"
+}
+
+Branch {
+ZOrder "12"
+Points [0, 110]
+Dst "4090#in:1"
+}
+}
+
+Line {
+ZOrder "13"
+Src "4089#out:1"
+Dst "3931#in:1"
+}
+
+Line {
+ZOrder "14"
+Src "3996#out:1"
+Dst "4093#in:1"
+}
+
+Line {
+ZOrder "15"
+Src "3929#out:1"
+Points [206, 0]
+Branch {
+ZOrder "16"
+Points [0, -80]
+Dst "3996#in:1"
+}
+
+Branch {
+ZOrder "17"
+Dst "3933#in:1"
+}
+}
+
+Line {
+Name "p"
+ZOrder "18"
+Labels [1, 0]
+Src "3930#out:1"
+Dst "3929#in:3"
+}
+
+Line {
+Name "q"
+ZOrder "19"
+Labels [1, 0]
+Src "3930#out:2"
+Dst "3929#in:4"
+}
+
+Line {
+Name "r"
+ZOrder "20"
+Labels [1, 0]
+Src "3930#out:3"
+Dst "3929#in:5"
+}
+
+Line {
+Name "beta"
+ZOrder "21"
+Labels [0, 1]
+Src "3932#out:2"
+Dst "3929#in:2"
+}
+
+Line {
+Name "dr"
+ZOrder "22"
+Labels [1, 0]
+Src "3931#out:3"
+Dst "3929#in:10"
+}
+
+Line {
+Name "de"
+ZOrder "23"
+Labels [1, 0]
+Src "3931#out:2"
+Dst "3929#in:9"
+}
+
+Line {
+Name "da"
+ZOrder "24"
+Labels [1, 0]
+Src "3931#out:1"
+Dst "3929#in:8"
+}
+
+Line {
+Name "Va"
+ZOrder "25"
+Labels [1, 0]
+Src "3925#out:1"
+Dst "3929#in:6"
+}
+
+Line {
+Name "Hlg"
+ZOrder "26"
+Labels [1, 0]
+Src "3927#out:1"
+Dst "3929#in:7"
+}
+
+Line {
+ZOrder "27"
+Src "3928#out:1"
+Dst "3930#in:1"
+}
+
+Line {
+ZOrder "28"
+Src "3926#out:1"
+Dst "4088#in:1"
+}
+
+Line {
+Name "alpha"
+ZOrder "29"
+Labels [0, 1]
+Src "3932#out:1"
+Dst "3929#in:1"
+}
+
+Line {
+Name "alpha"
+ZOrder "30"
+Src "3923#out:1"
+Dst "3932#in:1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Kinematics"
+SID "4095"
+Ports [2, 3]
+Position [690, 32, 765, 388]
+ZOrder "31"
+RequestExecContextInheritance off
+System {
+Location [62, 14, 1500, 987]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "244"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "V"
+SID "4096"
+Position [40, 313, 70, 327]
+ZOrder "30"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "OM"
+SID "4097"
+Position [45, 48, 75, 62]
+ZOrder "29"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Integrator"
+Name "Int_PHI"
+SID "4098"
+Ports [1, 1]
+Position [240, 30, 270, 60]
+ZOrder "169"
+InitialCondition "ACSP.X0.PHI"
+ContinuousStateAttributes "'PHI'"
+}
+
+Block {
+BlockType "Integrator"
+Name "Int_X"
+SID "4099"
+Ports [1, 1]
+Position [240, 295, 270, 325]
+ZOrder "170"
+InitialCondition "ACSP.X0.X"
+ContinuousStateAttributes "'X'"
+}
+
+Block {
+BlockType "SubSystem"
+Name "R(PHI)"
+SID "4100"
+Ports [2, 1]
+Position [125, 284, 185, 331]
+ZOrder "73"
+RequestExecContextInheritance off
+Object {
+$PropName "MaskObject"
+$ObjectID 7
+$ClassName "Simulink.Mask"
+Display "fprintf('MATRIX \\n PRODUCT');\ncolor('red');\nfprintf('\\n\\n');\nfprintf(' \\n \\n \\n z=M(x)*y');\n"
+
+}
+
+System {
+Location [2004, 14, 3512, 1040]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "245"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "x"
+SID "4101"
+Position [20, 53, 50, 67]
+ZOrder "7"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "y"
+SID "4102"
+Position [20, 103, 50, 117]
+ZOrder "8"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux"
+SID "4103"
+Ports [2, 1]
+Position [90, 36, 100, 134]
+ZOrder "5"
+ShowName off
+Inputs "2"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux1"
+SID "4104"
+Ports [3, 1]
+Position [410, 24, 420, 146]
+ZOrder "4"
+ShowName off
+Inputs "3"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Fcn"
+Name "Y1"
+SID "4105"
+Position [185, 34, 355, 56]
+ZOrder "12"
+Expr "u(1)*u(10)+u(2)*u(11)+u(3)*u(12)"
+}
+
+Block {
+BlockType "Fcn"
+Name "Y2"
+SID "4106"
+Position [185, 74, 355, 96]
+ZOrder "13"
+Expr "u(4)*u(10)+u(5)*u(11)+u(6)*u(12)"
+}
+
+Block {
+BlockType "Fcn"
+Name "Y3"
+SID "4107"
+Position [185, 114, 355, 136]
+ZOrder "14"
+Expr "u(7)*u(10)+u(8)*u(11)+u(9)*u(12)"
+}
+
+Block {
+BlockType "Outport"
+Name "z"
+SID "4108"
+Position [490, 78, 520, 92]
+ZOrder "9"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "4104#out:1"
+Dst "4108#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "4106#out:1"
+Dst "4104#in:2"
+}
+
+Line {
+ZOrder "3"
+Src "4105#out:1"
+Dst "4104#in:1"
+}
+
+Line {
+ZOrder "4"
+Src "4107#out:1"
+Dst "4104#in:3"
+}
+
+Line {
+ZOrder "5"
+Src "4102#out:1"
+Dst "4103#in:2"
+}
+
+Line {
+ZOrder "6"
+Src "4103#out:1"
+Points [40, 0]
+Branch {
+ZOrder "7"
+Dst "4106#in:1"
+}
+
+Branch {
+ZOrder "8"
+Points [0, -40]
+Dst "4105#in:1"
+}
+
+Branch {
+ZOrder "9"
+Points [0, 40]
+Dst "4107#in:1"
+}
+}
+
+Line {
+ZOrder "10"
+Src "4101#out:1"
+Dst "4103#in:1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Rotations and transformations matrices"
+SID "4109"
+Ports [1, 3]
+Position [105, 124, 270, 236]
+ZOrder "68"
+BlockMirror on
+RequestExecContextInheritance off
+System {
+Location [62, 14, 1500, 987]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "117"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "PHI"
+SID "4110"
+Position [25, 123, 55, 137]
+ZOrder "67"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Constant"
+Name "Constant"
+SID "4111"
+Position [125, 269, 145, 291]
+ZOrder "54"
+ShowName off
+Port {
+PortNumber "1"
+Name "T11"
+}
+}
+
+Block {
+BlockType "Constant"
+Name "Constant1"
+SID "4112"
+Position [210, 389, 230, 411]
+ZOrder "59"
+ShowName off
+Value "0"
+Port {
+PortNumber "1"
+Name "T21"
+}
+}
+
+Block {
+BlockType "Constant"
+Name "Constant2"
+SID "4113"
+Position [205, 509, 225, 531]
+ZOrder "62"
+ShowName off
+Value "0"
+Port {
+PortNumber "1"
+Name "T31"
+}
+}
+
+Block {
+BlockType "Demux"
+Name "Demux"
+SID "4114"
+Ports [1, 3]
+Position [75, 16, 85, 244]
+ZOrder "45"
+ShowName off
+Outputs "3"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Gain"
+Name "Gain"
+SID "4115"
+Position [195, 465, 225, 495]
+ZOrder "61"
+ShowName off
+Gain "-1"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+Port {
+PortNumber "1"
+Name "T23"
+}
+}
+
+Block {
+BlockType "Gain"
+Name "Gain1"
+SID "4116"
+Position [755, 440, 785, 470]
+ZOrder "107"
+ShowName off
+Gain "-1"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Mux"
+Name "Mux"
+SID "4117"
+Ports [9, 1]
+Position [830, 60, 845, 610]
+ZOrder "114"
+ShowName off
+Inputs "9"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux1"
+SID "4118"
+Ports [9, 1]
+Position [280, 262, 295, 618]
+ZOrder "115"
+ShowName off
+Inputs "9"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Product"
+Name "Product1"
+SID "4119"
+Ports [2, 1]
+Position [210, 300, 225, 335]
+ZOrder "51"
+ShowName off
+Port {
+PortNumber "1"
+Name "T12"
+}
+}
+
+Block {
+BlockType "Product"
+Name "Product10"
+SID "4120"
+Ports [3, 1]
+Position [740, 187, 755, 243]
+ZOrder "84"
+ShowName off
+Inputs "3"
+}
+
+Block {
+BlockType "Product"
+Name "Product11"
+SID "4121"
+Ports [2, 1]
+Position [740, 255, 755, 290]
+ZOrder "90"
+ShowName off
+}
+
+Block {
+BlockType "Product"
+Name "Product12"
+SID "4122"
+Ports [3, 1]
+Position [740, 307, 755, 363]
+ZOrder "91"
+ShowName off
+Inputs "3"
+}
+
+Block {
+BlockType "Product"
+Name "Product13"
+SID "4123"
+Ports [2, 1]
+Position [535, 275, 550, 310]
+ZOrder "94"
+ShowName off
+}
+
+Block {
+BlockType "Product"
+Name "Product14"
+SID "4124"
+Ports [3, 1]
+Position [740, 367, 755, 423]
+ZOrder "100"
+ShowName off
+Inputs "3"
+}
+
+Block {
+BlockType "Product"
+Name "Product15"
+SID "4125"
+Ports [2, 1]
+Position [535, 415, 550, 450]
+ZOrder "104"
+ShowName off
+}
+
+Block {
+BlockType "Product"
+Name "Product16"
+SID "4126"
+Ports [2, 1]
+Position [740, 495, 755, 530]
+ZOrder "109"
+ShowName off
+}
+
+Block {
+BlockType "Product"
+Name "Product17"
+SID "4127"
+Ports [2, 1]
+Position [740, 555, 755, 590]
+ZOrder "110"
+ShowName off
+}
+
+Block {
+BlockType "Product"
+Name "Product2"
+SID "4128"
+Ports [2, 1]
+Position [210, 340, 225, 375]
+ZOrder "57"
+ShowName off
+Port {
+PortNumber "1"
+Name "T13"
+}
+}
+
+Block {
+BlockType "Product"
+Name "Product3"
+SID "4129"
+Ports [2, 1]
+Position [120, 532, 135, 583]
+ZOrder "63"
+ShowName off
+Inputs "*/"
+Port {
+PortNumber "1"
+Name "T32"
+}
+}
+
+Block {
+BlockType "Product"
+Name "Product4"
+SID "4130"
+Ports [2, 1]
+Position [80, 307, 95, 358]
+ZOrder "49"
+ShowName off
+Inputs "*/"
+}
+
+Block {
+BlockType "Product"
+Name "Product5"
+SID "4131"
+Ports [2, 1]
+Position [740, 75, 755, 110]
+ZOrder "72"
+ShowName off
+}
+
+Block {
+BlockType "Product"
+Name "Product6"
+SID "4132"
+Ports [2, 1]
+Position [220, 572, 235, 623]
+ZOrder "64"
+ShowName off
+Inputs "*/"
+Port {
+PortNumber "1"
+Name "T33"
+}
+}
+
+Block {
+BlockType "Product"
+Name "Product7"
+SID "4133"
+Ports [3, 1]
+Position [740, 127, 755, 183]
+ZOrder "75"
+ShowName off
+Inputs "3"
+}
+
+Block {
+BlockType "Product"
+Name "Product8"
+SID "4134"
+Ports [2, 1]
+Position [570, 95, 585, 130]
+ZOrder "79"
+ShowName off
+}
+
+Block {
+BlockType "Product"
+Name "Product9"
+SID "4135"
+Ports [2, 1]
+Position [570, 230, 585, 265]
+ZOrder "81"
+ShowName off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum1"
+SID "4136"
+Ports [2, 1]
+Position [780, 325, 800, 345]
+ZOrder "92"
+ShowName off
+IconShape "round"
+Inputs "++|"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum2"
+SID "4137"
+Ports [2, 1]
+Position [780, 385, 800, 405]
+ZOrder "101"
+ShowName off
+IconShape "round"
+Inputs "|+-"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum3"
+SID "4138"
+Ports [2, 1]
+Position [780, 145, 800, 165]
+ZOrder "82"
+ShowName off
+IconShape "round"
+Inputs "-+|"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum4"
+SID "4139"
+Ports [2, 1]
+Position [780, 205, 800, 225]
+ZOrder "77"
+ShowName off
+IconShape "round"
+Inputs "|++"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Selector"
+Name "Transpose"
+SID "4140"
+Ports [1, 1]
+Position [945, 354, 1000, 436]
+ZOrder "116"
+InputPortWidth "9"
+IndexOptions "Index vector (dialog)"
+Indices [1 4 7 2 5 8 3 6 9]
+OutputSizes "1"
+}
+
+Block {
+BlockType "Trigonometry"
+Name "Trigonometric\nFunction2"
+SID "4141"
+Ports [1, 1]
+Position [140, 76, 170, 94]
+ZOrder "44"
+DropShadow on
+ShowName off
+Operator "cos"
+}
+
+Block {
+BlockType "Trigonometry"
+Name "Trigonometric\nFunction3"
+SID "4142"
+Ports [1, 1]
+Position [140, 46, 170, 64]
+ZOrder "43"
+DropShadow on
+ShowName off
+}
+
+Block {
+BlockType "Trigonometry"
+Name "Trigonometric\nFunction6"
+SID "4143"
+Ports [1, 1]
+Position [140, 121, 170, 139]
+ZOrder "42"
+DropShadow on
+ShowName off
+}
+
+Block {
+BlockType "Trigonometry"
+Name "Trigonometric\nFunction7"
+SID "4144"
+Ports [1, 1]
+Position [140, 151, 170, 169]
+ZOrder "41"
+DropShadow on
+ShowName off
+Operator "cos"
+}
+
+Block {
+BlockType "Trigonometry"
+Name "Trigonometric\nFunction8"
+SID "4145"
+Ports [1, 1]
+Position [140, 226, 170, 244]
+ZOrder "40"
+DropShadow on
+ShowName off
+Operator "cos"
+}
+
+Block {
+BlockType "Trigonometry"
+Name "Trigonometric\nFunction9"
+SID "4146"
+Ports [1, 1]
+Position [140, 196, 170, 214]
+ZOrder "39"
+DropShadow on
+ShowName off
+}
+
+Block {
+BlockType "Goto"
+Name "u1"
+SID "4147"
+Position [225, 121, 260, 139]
+ZOrder "38"
+ShowName off
+GotoTag "stet"
+}
+
+Block {
+BlockType "From"
+Name "u10"
+SID "4148"
+Position [20, 469, 55, 491]
+ZOrder "60"
+ShowName off
+GotoTag "sphi"
+}
+
+Block {
+BlockType "From"
+Name "u11"
+SID "4149"
+Position [120, 299, 155, 321]
+ZOrder "48"
+ShowName off
+GotoTag "sphi"
+}
+
+Block {
+BlockType "From"
+Name "u12"
+SID "4150"
+Position [20, 560, 55, 580]
+ZOrder "65"
+ShowName off
+GotoTag "ctet"
+}
+
+Block {
+BlockType "From"
+Name "u13"
+SID "4151"
+Position [155, 575, 190, 595]
+ZOrder "66"
+ShowName off
+GotoTag "cphi"
+}
+
+Block {
+BlockType "From"
+Name "u14"
+SID "4152"
+Position [600, 75, 635, 95]
+ZOrder "71"
+ShowName off
+GotoTag "ctet"
+}
+
+Block {
+BlockType "From"
+Name "u15"
+SID "4153"
+Position [660, 90, 695, 110]
+ZOrder "73"
+ShowName off
+GotoTag "cpsi"
+}
+
+Block {
+BlockType "From"
+Name "u16"
+SID "4154"
+Position [600, 145, 635, 165]
+ZOrder "74"
+ShowName off
+GotoTag "stet"
+}
+
+Block {
+BlockType "From"
+Name "u17"
+SID "4155"
+Position [660, 124, 695, 146]
+ZOrder "76"
+ShowName off
+GotoTag "sphi"
+}
+
+Block {
+BlockType "From"
+Name "u18"
+SID "4156"
+Position [405, 95, 440, 115]
+ZOrder "78"
+ShowName off
+GotoTag "cphi"
+}
+
+Block {
+BlockType "From"
+Name "u19"
+SID "4157"
+Position [490, 110, 525, 130]
+ZOrder "80"
+ShowName off
+GotoTag "spsi"
+}
+
+Block {
+BlockType "Goto"
+Name "u2"
+SID "4158"
+Position [225, 150, 260, 170]
+ZOrder "37"
+ShowName off
+GotoTag "ctet"
+}
+
+Block {
+BlockType "From"
+Name "u20"
+SID "4159"
+Position [660, 165, 695, 185]
+ZOrder "83"
+ShowName off
+GotoTag "cpsi"
+}
+
+Block {
+BlockType "From"
+Name "u21"
+SID "4160"
+Position [660, 225, 695, 245]
+ZOrder "86"
+ShowName off
+GotoTag "cphi"
+}
+
+Block {
+BlockType "From"
+Name "u22"
+SID "4161"
+Position [405, 245, 440, 265]
+ZOrder "87"
+ShowName off
+GotoTag "spsi"
+}
+
+Block {
+BlockType "From"
+Name "u23"
+SID "4162"
+Position [490, 229, 525, 251]
+ZOrder "88"
+ShowName off
+GotoTag "sphi"
+}
+
+Block {
+BlockType "From"
+Name "u24"
+SID "4163"
+Position [660, 255, 695, 275]
+ZOrder "89"
+ShowName off
+GotoTag "ctet"
+}
+
+Block {
+BlockType "From"
+Name "u25"
+SID "4164"
+Position [405, 275, 440, 295]
+ZOrder "93"
+ShowName off
+GotoTag "cpsi"
+}
+
+Block {
+BlockType "From"
+Name "u26"
+SID "4165"
+Position [455, 290, 490, 310]
+ZOrder "95"
+ShowName off
+GotoTag "cphi"
+}
+
+Block {
+BlockType "From"
+Name "u27"
+SID "4166"
+Position [600, 270, 635, 290]
+ZOrder "96"
+ShowName off
+GotoTag "spsi"
+}
+
+Block {
+BlockType "From"
+Name "u28"
+SID "4167"
+Position [660, 345, 695, 365]
+ZOrder "97"
+ShowName off
+GotoTag "spsi"
+}
+
+Block {
+BlockType "From"
+Name "u29"
+SID "4168"
+Position [600, 325, 635, 345]
+ZOrder "98"
+ShowName off
+GotoTag "stet"
+}
+
+Block {
+BlockType "Goto"
+Name "u3"
+SID "4169"
+Position [225, 46, 260, 64]
+ZOrder "36"
+ShowName off
+GotoTag "sphi"
+}
+
+Block {
+BlockType "From"
+Name "u30"
+SID "4170"
+Position [660, 304, 695, 326]
+ZOrder "99"
+ShowName off
+GotoTag "sphi"
+}
+
+Block {
+BlockType "From"
+Name "u31"
+SID "4171"
+Position [600, 405, 635, 425]
+ZOrder "102"
+ShowName off
+GotoTag "cphi"
+}
+
+Block {
+BlockType "From"
+Name "u32"
+SID "4172"
+Position [405, 415, 440, 435]
+ZOrder "103"
+ShowName off
+GotoTag "cpsi"
+}
+
+Block {
+BlockType "From"
+Name "u33"
+SID "4173"
+Position [455, 430, 490, 450]
+ZOrder "105"
+ShowName off
+GotoTag "sphi"
+}
+
+Block {
+BlockType "From"
+Name "u34"
+SID "4174"
+Position [665, 445, 700, 465]
+ZOrder "106"
+ShowName off
+GotoTag "stet"
+}
+
+Block {
+BlockType "From"
+Name "u35"
+SID "4175"
+Position [650, 510, 685, 530]
+ZOrder "108"
+ShowName off
+GotoTag "ctet"
+}
+
+Block {
+BlockType "From"
+Name "u36"
+SID "4176"
+Position [455, 495, 490, 515]
+ZOrder "111"
+ShowName off
+GotoTag "sphi"
+}
+
+Block {
+BlockType "From"
+Name "u37"
+SID "4177"
+Position [455, 570, 490, 590]
+ZOrder "112"
+ShowName off
+GotoTag "cphi"
+}
+
+Block {
+BlockType "Goto"
+Name "u4"
+SID "4178"
+Position [225, 76, 260, 94]
+ZOrder "35"
+ShowName off
+GotoTag "cphi"
+}
+
+Block {
+BlockType "Goto"
+Name "u5"
+SID "4179"
+Position [225, 196, 260, 214]
+ZOrder "34"
+ShowName off
+GotoTag "spsi"
+}
+
+Block {
+BlockType "Goto"
+Name "u6"
+SID "4180"
+Position [225, 226, 260, 244]
+ZOrder "33"
+ShowName off
+GotoTag "cpsi"
+}
+
+Block {
+BlockType "From"
+Name "u7"
+SID "4181"
+Position [20, 335, 55, 355]
+ZOrder "50"
+ShowName off
+GotoTag "ctet"
+}
+
+Block {
+BlockType "From"
+Name "u8"
+SID "4182"
+Position [20, 310, 55, 330]
+ZOrder "47"
+ShowName off
+GotoTag "stet"
+}
+
+Block {
+BlockType "From"
+Name "u9"
+SID "4183"
+Position [120, 355, 155, 375]
+ZOrder "52"
+ShowName off
+GotoTag "cphi"
+Port {
+PortNumber "1"
+Name "T22"
+}
+}
+
+Block {
+BlockType "Outport"
+Name "TPHI"
+SID "4184"
+Position [330, 433, 360, 447]
+ZOrder "68"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "RV2B"
+SID "4185"
+Position [1035, 388, 1065, 402]
+ZOrder "113"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "RB2V"
+SID "4186"
+Position [1035, 328, 1065, 342]
+ZOrder "70"
+Port "3"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "4140#out:1"
+Dst "4185#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "4117#out:1"
+Points [45, 0]
+Branch {
+ZOrder "3"
+Dst "4186#in:1"
+}
+
+Branch {
+ZOrder "4"
+Points [0, 60]
+Dst "4140#in:1"
+}
+}
+
+Line {
+ZOrder "5"
+Src "4118#out:1"
+Dst "4184#in:1"
+}
+
+Line {
+ZOrder "6"
+Src "4177#out:1"
+Dst "4127#in:2"
+}
+
+Line {
+ZOrder "7"
+Src "4176#out:1"
+Dst "4126#in:1"
+}
+
+Line {
+ZOrder "8"
+Src "4127#out:1"
+Dst "4117#in:9"
+}
+
+Line {
+ZOrder "9"
+Src "4175#out:1"
+Points [18, 0]
+Branch {
+ZOrder "10"
+Dst "4126#in:2"
+}
+
+Branch {
+ZOrder "11"
+Points [0, 45]
+Dst "4127#in:1"
+}
+}
+
+Line {
+ZOrder "12"
+Src "4126#out:1"
+Dst "4117#in:8"
+}
+
+Line {
+ZOrder "13"
+Src "4174#out:1"
+Dst "4116#in:1"
+}
+
+Line {
+ZOrder "14"
+Src "4116#out:1"
+Dst "4117#in:7"
+}
+
+Line {
+ZOrder "15"
+Src "4125#out:1"
+Points [235, 0]
+Dst "4137#in:2"
+}
+
+Line {
+ZOrder "16"
+Src "4173#out:1"
+Dst "4125#in:2"
+}
+
+Line {
+ZOrder "17"
+Src "4172#out:1"
+Dst "4125#in:1"
+}
+
+Line {
+ZOrder "18"
+Src "4171#out:1"
+Dst "4124#in:3"
+}
+
+Line {
+ZOrder "19"
+Src "4137#out:1"
+Dst "4117#in:6"
+}
+
+Line {
+ZOrder "20"
+Src "4124#out:1"
+Dst "4137#in:1"
+}
+
+Line {
+ZOrder "21"
+Src "4170#out:1"
+Dst "4122#in:1"
+}
+
+Line {
+ZOrder "22"
+Src "4168#out:1"
+Points [5, 0]
+Branch {
+ZOrder "23"
+Dst "4122#in:2"
+}
+
+Branch {
+ZOrder "24"
+Points [0, 60]
+Dst "4124#in:2"
+}
+}
+
+Line {
+ZOrder "25"
+Src "4167#out:1"
+Points [6, 0]
+Branch {
+ZOrder "26"
+Dst "4122#in:3"
+}
+
+Branch {
+ZOrder "27"
+Points [0, 20]
+Dst "4124#in:1"
+}
+}
+
+Line {
+ZOrder "28"
+Src "4166#out:1"
+Dst "4121#in:2"
+}
+
+Line {
+ZOrder "29"
+Src "4123#out:1"
+Points [235, 0]
+Dst "4136#in:1"
+}
+
+Line {
+ZOrder "30"
+Src "4165#out:1"
+Dst "4123#in:2"
+}
+
+Line {
+ZOrder "31"
+Src "4164#out:1"
+Dst "4123#in:1"
+}
+
+Line {
+ZOrder "32"
+Src "4136#out:1"
+Dst "4117#in:5"
+}
+
+Line {
+ZOrder "33"
+Src "4122#out:1"
+Dst "4136#in:2"
+}
+
+Line {
+ZOrder "34"
+Src "4121#out:1"
+Dst "4117#in:4"
+}
+
+Line {
+ZOrder "35"
+Src "4163#out:1"
+Dst "4121#in:1"
+}
+
+Line {
+ZOrder "36"
+Src "4161#out:1"
+Dst "4135#in:2"
+}
+
+Line {
+ZOrder "37"
+Src "4162#out:1"
+Dst "4135#in:1"
+}
+
+Line {
+ZOrder "38"
+Src "4135#out:1"
+Points [200, 0]
+Dst "4139#in:2"
+}
+
+Line {
+ZOrder "39"
+Src "4160#out:1"
+Dst "4120#in:3"
+}
+
+Line {
+ZOrder "40"
+Src "4159#out:1"
+Points [9, 0]
+Branch {
+ZOrder "41"
+Dst "4133#in:3"
+}
+
+Branch {
+ZOrder "42"
+Points [0, 20]
+Dst "4120#in:1"
+}
+}
+
+Line {
+ZOrder "43"
+Src "4155#out:1"
+Dst "4133#in:1"
+}
+
+Line {
+ZOrder "44"
+Src "4120#out:1"
+Dst "4139#in:1"
+}
+
+Line {
+ZOrder "45"
+Src "4139#out:1"
+Dst "4117#in:3"
+}
+
+Line {
+ZOrder "46"
+Src "4134#out:1"
+Points [200, 0]
+Dst "4138#in:1"
+}
+
+Line {
+ZOrder "47"
+Src "4138#out:1"
+Dst "4117#in:2"
+}
+
+Line {
+ZOrder "48"
+Src "4133#out:1"
+Dst "4138#in:2"
+}
+
+Line {
+ZOrder "49"
+Src "4157#out:1"
+Dst "4134#in:2"
+}
+
+Line {
+ZOrder "50"
+Src "4156#out:1"
+Dst "4134#in:1"
+}
+
+Line {
+ZOrder "51"
+Src "4154#out:1"
+Points [5, 0]
+Branch {
+ZOrder "52"
+Dst "4133#in:2"
+}
+
+Branch {
+ZOrder "53"
+Points [0, 60]
+Dst "4120#in:2"
+}
+}
+
+Line {
+ZOrder "54"
+Src "4153#out:1"
+Dst "4131#in:2"
+}
+
+Line {
+ZOrder "55"
+Src "4152#out:1"
+Dst "4131#in:1"
+}
+
+Line {
+ZOrder "56"
+Src "4131#out:1"
+Dst "4117#in:1"
+}
+
+Line {
+ZOrder "57"
+Src "4110#out:1"
+Dst "4114#in:1"
+}
+
+Line {
+Name "T32"
+ZOrder "58"
+Labels [0, 0]
+Src "4129#out:1"
+Dst "4118#in:8"
+}
+
+Line {
+ZOrder "59"
+Src "4151#out:1"
+Dst "4132#in:1"
+}
+
+Line {
+Name "T23"
+ZOrder "60"
+Labels [0, 0]
+Src "4115#out:1"
+Dst "4118#in:6"
+}
+
+Line {
+Name "T31"
+ZOrder "61"
+Labels [0, 0]
+Src "4113#out:1"
+Dst "4118#in:7"
+}
+
+Line {
+ZOrder "62"
+Src "4148#out:1"
+Points [22, 0]
+Branch {
+ZOrder "63"
+Dst "4115#in:1"
+}
+
+Branch {
+ZOrder "64"
+Points [0, 65]
+Dst "4129#in:1"
+}
+}
+
+Line {
+Name "T33"
+ZOrder "65"
+Labels [0, 0]
+Src "4132#out:1"
+Dst "4118#in:9"
+}
+
+Line {
+Name "T21"
+ZOrder "66"
+Labels [0, 0]
+Src "4112#out:1"
+Dst "4118#in:4"
+}
+
+Line {
+Name "T13"
+ZOrder "67"
+Labels [0, 0]
+Src "4128#out:1"
+Dst "4118#in:3"
+}
+
+Line {
+Name "T11"
+ZOrder "68"
+Labels [0, 0]
+Src "4111#out:1"
+Dst "4118#in:1"
+}
+
+Line {
+ZOrder "69"
+Src "4150#out:1"
+Points [22, 0]
+Branch {
+ZOrder "70"
+Dst "4129#in:2"
+}
+
+Branch {
+ZOrder "71"
+Points [0, 40]
+Dst "4132#in:2"
+}
+}
+
+Line {
+Name "T12"
+ZOrder "72"
+Labels [0, 0]
+Src "4119#out:1"
+Dst "4118#in:2"
+}
+
+Line {
+Name "T22"
+ZOrder "73"
+Labels [0, 0]
+Src "4183#out:1"
+Points [31, 0]
+Branch {
+ZOrder "74"
+Dst "4128#in:2"
+}
+
+Branch {
+ZOrder "75"
+Points [0, 75]
+Dst "4118#in:5"
+}
+}
+
+Line {
+ZOrder "76"
+Src "4142#out:1"
+Dst "4169#in:1"
+}
+
+Line {
+ZOrder "77"
+Src "4114#out:1"
+Points [19, 0]
+Branch {
+ZOrder "78"
+Points [0, 30]
+Dst "4141#in:1"
+}
+
+Branch {
+ZOrder "79"
+Dst "4142#in:1"
+}
+}
+
+Line {
+ZOrder "80"
+Src "4141#out:1"
+Dst "4178#in:1"
+}
+
+Line {
+ZOrder "81"
+Src "4114#out:2"
+Points [20, 0]
+Branch {
+ZOrder "82"
+Dst "4143#in:1"
+}
+
+Branch {
+ZOrder "83"
+Points [0, 30]
+Dst "4144#in:1"
+}
+}
+
+Line {
+ZOrder "84"
+Src "4144#out:1"
+Dst "4158#in:1"
+}
+
+Line {
+ZOrder "85"
+Src "4143#out:1"
+Dst "4147#in:1"
+}
+
+Line {
+ZOrder "86"
+Src "4114#out:3"
+Points [22, 0]
+Branch {
+ZOrder "87"
+Points [0, 30]
+Dst "4145#in:1"
+}
+
+Branch {
+ZOrder "88"
+Dst "4146#in:1"
+}
+}
+
+Line {
+ZOrder "89"
+Src "4146#out:1"
+Dst "4179#in:1"
+}
+
+Line {
+ZOrder "90"
+Src "4145#out:1"
+Dst "4180#in:1"
+}
+
+Line {
+ZOrder "91"
+Src "4130#out:1"
+Points [90, 0]
+Branch {
+ZOrder "92"
+Points [0, 15]
+Dst "4128#in:1"
+}
+
+Branch {
+ZOrder "93"
+Points [0, -10]
+Dst "4119#in:2"
+}
+}
+
+Line {
+ZOrder "94"
+Src "4149#out:1"
+Dst "4119#in:1"
+}
+
+Line {
+ZOrder "95"
+Src "4181#out:1"
+Dst "4130#in:2"
+}
+
+Line {
+ZOrder "96"
+Src "4182#out:1"
+Dst "4130#in:1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "T(PHI)"
+SID "4187"
+Ports [2, 1]
+Position [120, 19, 180, 66]
+ZOrder "82"
+RequestExecContextInheritance off
+Object {
+$PropName "MaskObject"
+$ObjectID 8
+$ClassName "Simulink.Mask"
+Display "fprintf('MATRIX \\n PRODUCT');\ncolor('red');\nfprintf('\\n\\n');\nfprintf(' \\n \\n \\n z=M(x)*y');\n"
+
+}
+
+System {
+Location [2004, 14, 3512, 1040]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "245"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "x"
+SID "4188"
+Position [20, 53, 50, 67]
+ZOrder "7"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "y"
+SID "4189"
+Position [20, 103, 50, 117]
+ZOrder "8"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux"
+SID "4190"
+Ports [2, 1]
+Position [90, 36, 100, 134]
+ZOrder "5"
+ShowName off
+Inputs "2"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux1"
+SID "4191"
+Ports [3, 1]
+Position [410, 24, 420, 146]
+ZOrder "4"
+ShowName off
+Inputs "3"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Fcn"
+Name "Y1"
+SID "4192"
+Position [185, 34, 355, 56]
+ZOrder "12"
+Expr "u(1)*u(10)+u(2)*u(11)+u(3)*u(12)"
+}
+
+Block {
+BlockType "Fcn"
+Name "Y2"
+SID "4193"
+Position [185, 74, 355, 96]
+ZOrder "13"
+Expr "u(4)*u(10)+u(5)*u(11)+u(6)*u(12)"
+}
+
+Block {
+BlockType "Fcn"
+Name "Y3"
+SID "4194"
+Position [185, 114, 355, 136]
+ZOrder "14"
+Expr "u(7)*u(10)+u(8)*u(11)+u(9)*u(12)"
+}
+
+Block {
+BlockType "Outport"
+Name "z"
+SID "4195"
+Position [490, 78, 520, 92]
+ZOrder "9"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "4191#out:1"
+Dst "4195#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "4193#out:1"
+Dst "4191#in:2"
+}
+
+Line {
+ZOrder "3"
+Src "4192#out:1"
+Dst "4191#in:1"
+}
+
+Line {
+ZOrder "4"
+Src "4194#out:1"
+Dst "4191#in:3"
+}
+
+Line {
+ZOrder "5"
+Src "4189#out:1"
+Dst "4190#in:2"
+}
+
+Line {
+ZOrder "6"
+Src "4190#out:1"
+Points [40, 0]
+Branch {
+ZOrder "7"
+Dst "4193#in:1"
+}
+
+Branch {
+ZOrder "8"
+Points [0, -40]
+Dst "4192#in:1"
+}
+
+Branch {
+ZOrder "9"
+Points [0, 40]
+Dst "4194#in:1"
+}
+}
+
+Line {
+ZOrder "10"
+Src "4188#out:1"
+Dst "4190#in:1"
+}
+}
+}
+
+Block {
+BlockType "Goto"
+Name "u6"
+SID "4196"
+Position [20, 168, 70, 192]
+ZOrder "81"
+BlockMirror on
+BackgroundColor "orange"
+ShowName off
+GotoTag "RV2B"
+TagVisibility "global"
+}
+
+Block {
+BlockType "Outport"
+Name "X"
+SID "4197"
+Position [360, 303, 390, 317]
+ZOrder "32"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "Xdot"
+SID "4198"
+Position [360, 263, 390, 277]
+ZOrder "83"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "PHI"
+SID "4199"
+Position [360, 38, 390, 52]
+ZOrder "31"
+Port "3"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "4187#out:1"
+Dst "4098#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "4109#out:2"
+Dst "4196#in:1"
+}
+
+Line {
+ZOrder "3"
+Src "4109#out:1"
+Points [-70, 0; 0, -115]
+Dst "4187#in:1"
+}
+
+Line {
+ZOrder "4"
+Src "4109#out:3"
+Points [-72, 0; 0, 80]
+Dst "4100#in:1"
+}
+
+Line {
+ZOrder "5"
+Src "4099#out:1"
+Dst "4197#in:1"
+}
+
+Line {
+ZOrder "6"
+Src "4098#out:1"
+Points [40, 0]
+Branch {
+ZOrder "7"
+Dst "4199#in:1"
+}
+
+Branch {
+ZOrder "8"
+Points [0, 135]
+Dst "4109#in:1"
+}
+}
+
+Line {
+ZOrder "9"
+Src "4100#out:1"
+Points [23, 0]
+Branch {
+ZOrder "10"
+Points [0, -40]
+Dst "4198#in:1"
+}
+
+Branch {
+ZOrder "11"
+Dst "4099#in:1"
+}
+}
+
+Line {
+ZOrder "12"
+Src "4096#out:1"
+Dst "4100#in:2"
+}
+
+Line {
+ZOrder "13"
+Src "4097#out:1"
+Dst "4187#in:2"
+}
+}
+}
+
+Block {
+BlockType "Selector"
+Name "Selector10"
+SID "4200"
+Ports [1, 1]
+Position [290, 261, 325, 289]
+ZOrder "220"
+ShowName off
+InputPortWidth "3"
+IndexOptions "Index vector (dialog)"
+Indices "3"
+OutputSizes "1"
+}
+
+Block {
+BlockType "SubSystem"
+Name "Trajectory"
+SID "4201"
+Ports [5, 8]
+Position [75, 263, 145, 567]
+ZOrder "171"
+RequestExecContextInheritance off
+System {
+Location [82, 14, 1480, 891]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "90"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "ILSnoise"
+SID "4485"
+Position [30, 408, 60, 422]
+ZOrder "307"
+BackgroundColor [1.000000, 0.666667, 1.000000]
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "X"
+SID "4202"
+Position [540, 208, 570, 222]
+ZOrder "29"
+BackgroundColor [1.000000, 0.666667, 1.000000]
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Xdot"
+SID "4203"
+Position [25, 528, 55, 542]
+ZOrder "153"
+BackgroundColor [1.000000, 0.666667, 1.000000]
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "PHI"
+SID "4204"
+Position [405, 648, 435, 662]
+ZOrder "204"
+BackgroundColor [1.000000, 0.666667, 1.000000]
+Port "4"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "OM"
+SID "4205"
+Position [120, 608, 150, 622]
+ZOrder "152"
+BackgroundColor [1.000000, 0.666667, 1.000000]
+Port "5"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Gain"
+Name "Gain1"
+SID "4481"
+Position [770, 460, 800, 490]
+ZOrder "306"
+ShowName off
+Gain "10"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Selector"
+Name "ILS"
+SID "4207"
+Ports [1, 1]
+Position [535, 136, 575, 164]
+ZOrder "216"
+NamePlacement "alternate"
+InputPortWidth "6"
+IndexOptions "Index vector (dialog)"
+Indices [2 4 6]
+OutputSizes "1"
+}
+
+Block {
+BlockType "Selector"
+Name "LG"
+SID "4208"
+Ports [1, 1]
+Position [535, 301, 575, 329]
+ZOrder "215"
+InputPortWidth "6"
+IndexOptions "Index vector (dialog)"
+Indices [1 3 5]
+OutputSizes "1"
+}
+
+Block {
+BlockType "Gain"
+Name "Lref1"
+SID "4209"
+Position [410, 199, 485, 231]
+ZOrder "145"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+ShowName off
+Gain "ACSP.MIG.Lref"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Lref2"
+SID "4210"
+Position [390, 599, 500, 631]
+ZOrder "159"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+ShowName off
+Gain "ACSP.MIG.Lref"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Mux"
+Name "Mux"
+SID "4212"
+Ports [6, 1]
+Position [375, 70, 385, 360]
+ZOrder "193"
+ShowName off
+Inputs "6"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux1"
+SID "4213"
+Ports [2, 1]
+Position [1115, 71, 1125, 229]
+ZOrder "228"
+ShowName off
+Inputs "2"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux3"
+SID "4461"
+Ports [3, 1]
+Position [1005, 295, 1015, 405]
+ZOrder "252"
+ShowName off
+Inputs "3"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Product"
+Name "Product1"
+SID "4451"
+Ports [2, 1]
+Position [905, 461, 925, 514]
+ZOrder "243"
+ShowName off
+}
+
+Block {
+BlockType "Product"
+Name "Product2"
+SID "4215"
+Ports [2, 1]
+Position [385, 506, 400, 544]
+ZOrder "200"
+ShowName off
+}
+
+Block {
+BlockType "Product"
+Name "Product3"
+SID "4494"
+Ports [2, 1]
+Position [1025, 33, 1040, 77]
+ZOrder "315"
+ShowName off
+}
+
+Block {
+BlockType "Product"
+Name "Product4"
+SID "4497"
+Ports [2, 1]
+Position [1025, 123, 1040, 167]
+ZOrder "318"
+ShowName off
+}
+
+Block {
+BlockType "Constant"
+Name "RwyElev"
+SID "4488"
+Position [1035, 284, 1140, 316]
+ZOrder "309"
+BackgroundColor [0.666667, 1.000000, 0.043137]
+Value "ACSP.RWY.elevation"
+}
+
+Block {
+BlockType "Gain"
+Name "RwySlope1"
+SID "4447"
+Position [580, 484, 705, 516]
+ZOrder "239"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+NamePlacement "alternate"
+ShowName off
+Gain "ACSP.RWY.slope"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "RwySlope2"
+SID "4454"
+Position [820, 399, 945, 431]
+ZOrder "246"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+NamePlacement "alternate"
+ShowName off
+Gain "ACSP.RWY.slope"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Saturate"
+Name "Sat"
+SID "4457"
+Ports [1, 1]
+Position [770, 400, 800, 430]
+ZOrder "249"
+ShowName off
+InputPortMap "u0"
+UpperLimit "1000"
+LowerLimit "0"
+}
+
+Block {
+BlockType "Saturate"
+Name "Sat01"
+SID "4480"
+Ports [1, 1]
+Position [830, 460, 860, 490]
+ZOrder "305"
+NamePlacement "alternate"
+InputPortMap "u0"
+UpperLimit "1"
+LowerLimit "0"
+}
+
+Block {
+BlockType "Selector"
+Name "Selector1"
+SID "4217"
+Ports [1, 1]
+Position [185, 566, 220, 594]
+ZOrder "180"
+ShowName off
+InputPortWidth "3"
+IndexOptions "Index vector (dialog)"
+Indices "3"
+OutputSizes "1"
+}
+
+Block {
+BlockType "Selector"
+Name "Selector10"
+SID "4218"
+Ports [1, 1]
+Position [660, 176, 695, 204]
+ZOrder "219"
+ShowName off
+InputPortWidth "3"
+IndexOptions "Index vector (dialog)"
+Indices "1"
+OutputSizes "1"
+}
+
+Block {
+BlockType "Selector"
+Name "Selector11"
+SID "4219"
+Ports [1, 1]
+Position [660, 136, 695, 164]
+ZOrder "220"
+ShowName off
+InputPortWidth "3"
+IndexOptions "Index vector (dialog)"
+Indices "3"
+OutputSizes "1"
+}
+
+Block {
+BlockType "Selector"
+Name "Selector12"
+SID "4220"
+Ports [1, 1]
+Position [660, 96, 695, 124]
+ZOrder "221"
+ShowName off
+InputPortWidth "3"
+IndexOptions "Index vector (dialog)"
+Indices "2"
+OutputSizes "1"
+}
+
+Block {
+BlockType "Selector"
+Name "Selector13"
+SID "4490"
+Ports [1, 1]
+Position [660, 51, 695, 79]
+ZOrder "311"
+ShowName off
+InputPortWidth "3"
+IndexOptions "Index vector (dialog)"
+Indices "1"
+OutputSizes "1"
+}
+
+Block {
+BlockType "Selector"
+Name "Selector14"
+SID "4500"
+Ports [1, 1]
+Position [100, 401, 135, 429]
+ZOrder "321"
+ShowName off
+InputPortWidth "2"
+IndexOptions "Index vector (dialog)"
+Indices "1"
+OutputSizes "1"
+}
+
+Block {
+BlockType "Selector"
+Name "Selector15"
+SID "4501"
+Ports [1, 1]
+Position [100, 446, 135, 474]
+ZOrder "322"
+ShowName off
+InputPortWidth "2"
+IndexOptions "Index vector (dialog)"
+Indices "2"
+OutputSizes "1"
+}
+
+Block {
+BlockType "Selector"
+Name "Selector17"
+SID "4534"
+Ports [1, 1]
+Position [820, 251, 855, 279]
+ZOrder "329"
+ShowName off
+InputPortWidth "3"
+IndexOptions "Index vector (dialog)"
+Indices "3"
+OutputSizes "1"
+}
+
+Block {
+BlockType "Selector"
+Name "Selector2"
+SID "4221"
+Ports [1, 1]
+Position [185, 601, 220, 629]
+ZOrder "158"
+ShowName off
+InputPortWidth "3"
+IndexOptions "Index vector (dialog)"
+Indices "2"
+OutputSizes "1"
+}
+
+Block {
+BlockType "Selector"
+Name "Selector3"
+SID "4222"
+Ports [1, 1]
+Position [660, 371, 695, 399]
+ZOrder "232"
+ShowName off
+InputPortWidth "3"
+IndexOptions "Index vector (dialog)"
+Indices "3"
+OutputSizes "1"
+}
+
+Block {
+BlockType "Selector"
+Name "Selector4"
+SID "4223"
+Ports [1, 1]
+Position [185, 706, 220, 734]
+ZOrder "181"
+ShowName off
+InputPortWidth "3"
+IndexOptions "Index vector (dialog)"
+Indices "1"
+OutputSizes "1"
+}
+
+Block {
+BlockType "Selector"
+Name "Selector5"
+SID "4224"
+Ports [1, 1]
+Position [185, 676, 220, 704]
+ZOrder "183"
+ShowName off
+InputPortWidth "3"
+IndexOptions "Index vector (dialog)"
+Indices "2"
+OutputSizes "1"
+}
+
+Block {
+BlockType "Selector"
+Name "Selector6"
+SID "4448"
+Ports [1, 1]
+Position [660, 303, 695, 327]
+ZOrder "240"
+ShowName off
+InputPortWidth "3"
+IndexOptions "Index vector (dialog)"
+Indices "1"
+OutputSizes "1"
+}
+
+Block {
+BlockType "Selector"
+Name "Selector7"
+SID "4225"
+Ports [1, 1]
+Position [185, 521, 220, 549]
+ZOrder "197"
+ShowName off
+InputPortWidth "3"
+IndexOptions "Index vector (dialog)"
+Indices "1"
+OutputSizes "1"
+}
+
+Block {
+BlockType "Selector"
+Name "Selector8"
+SID "4460"
+Ports [1, 1]
+Position [660, 336, 695, 364]
+ZOrder "251"
+ShowName off
+InputPortWidth "3"
+IndexOptions "Index vector (dialog)"
+Indices "2"
+OutputSizes "1"
+}
+
+Block {
+BlockType "Selector"
+Name "Selector9"
+SID "4226"
+Ports [1, 1]
+Position [470, 641, 505, 669]
+ZOrder "206"
+ShowName off
+InputPortWidth "3"
+IndexOptions "Index vector (dialog)"
+Indices "3"
+OutputSizes "1"
+}
+
+Block {
+BlockType "Constant"
+Name "SlopeStart"
+SID "4452"
+Position [515, 402, 595, 428]
+ZOrder "244"
+BackgroundColor [0.666667, 1.000000, 0.043137]
+Value "60"
+}
+
+Block {
+BlockType "Sqrt"
+Name "Sqrt"
+SID "4227"
+Position [430, 510, 460, 540]
+ZOrder "199"
+ShowName off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum"
+SID "4228"
+Ports [2, 1]
+Position [600, 305, 620, 325]
+ZOrder "217"
+ShowName off
+IconShape "round"
+Inputs "++|"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum1"
+SID "4230"
+Ports [2, 1]
+Position [500, 570, 520, 590]
+ZOrder "160"
+ShowName off
+IconShape "round"
+Inputs "|-+"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum10"
+SID "4493"
+Ports [2, 1]
+Position [1050, 100, 1070, 120]
+ZOrder "314"
+ShowName off
+IconShape "round"
+Inputs "++|"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum11"
+SID "4469"
+Ports [2, 1]
+Position [710, 405, 730, 425]
+ZOrder "303"
+ShowName off
+IconShape "round"
+Inputs "+-|"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum12"
+SID "4496"
+Ports [2, 1]
+Position [1050, 180, 1070, 200]
+ZOrder "317"
+ShowName off
+IconShape "round"
+Inputs "++|"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum13"
+SID "4508"
+Ports [2, 1]
+Position [1155, 255, 1175, 275]
+ZOrder "326"
+ShowName off
+IconShape "round"
+Inputs "|-+"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum2"
+SID "4231"
+Ports [2, 1]
+Position [545, 645, 565, 665]
+ZOrder "207"
+ShowName off
+IconShape "round"
+Inputs "|-+"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum3"
+SID "4232"
+Ports [2, 1]
+Position [600, 140, 620, 160]
+ZOrder "218"
+ShowName off
+IconShape "round"
+Inputs "|++"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum4"
+SID "4233"
+Ports [2, 1]
+Position [860, 180, 880, 200]
+ZOrder "229"
+ShowName off
+IconShape "round"
+Inputs "-+|"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum6"
+SID "4235"
+Ports [2, 1]
+Position [740, 180, 760, 200]
+ZOrder "230"
+ShowName off
+IconShape "round"
+Inputs "|+-"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum7"
+SID "4470"
+Ports [2, 1]
+Position [965, 480, 985, 500]
+ZOrder "304"
+ShowName off
+IconShape "round"
+Inputs "|-+"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum8"
+SID "4491"
+Ports [2, 1]
+Position [850, 55, 870, 75]
+ZOrder "312"
+ShowName off
+IconShape "round"
+Inputs "++|"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum9"
+SID "4536"
+Ports [2, 1]
+Position [965, 375, 985, 395]
+ZOrder "331"
+ShowName off
+IconShape "round"
+Inputs "|--"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Trigonometry"
+Name "Trigonometric\nFunction"
+SID "4236"
+Ports [2, 1]
+Position [335, 677, 365, 733]
+ZOrder "185"
+ShowName off
+Operator "atan2"
+}
+
+Block {
+BlockType "Selector"
+Name "[1 7]"
+SID "4237"
+Ports [1, 1]
+Position [140, 104, 175, 126]
+ZOrder "187"
+InputPortWidth "9"
+IndexOptions "Index vector (dialog)"
+Indices [1 7]
+OutputSizes "1"
+}
+
+Block {
+BlockType "Selector"
+Name "[2 8]"
+SID "4238"
+Ports [1, 1]
+Position [140, 204, 175, 226]
+ZOrder "202"
+InputPortWidth "9"
+IndexOptions "Index vector (dialog)"
+Indices [2 8]
+OutputSizes "1"
+}
+
+Block {
+BlockType "Selector"
+Name "[3 9]"
+SID "4239"
+Ports [1, 1]
+Position [140, 309, 175, 331]
+ZOrder "133"
+InputPortWidth "9"
+IndexOptions "Index vector (dialog)"
+Indices [3 9]
+OutputSizes "1"
+}
+
+Block {
+BlockType "Gain"
+Name "[dxGL   dzGL]"
+SID "4240"
+Position [260, 124, 345, 156]
+ZOrder "211"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+NamePlacement "alternate"
+Gain [ACSP.MIG.dxGL ACSP.MIG.dzGL]
+Multiplication "Matrix(K*u)"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "[dxGL  dzGL]"
+SID "4241"
+Position [260, 324, 345, 356]
+ZOrder "213"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+NamePlacement "alternate"
+Gain [ACSP.MIG.dxGL ACSP.MIG.dzGL]
+Multiplication "Matrix(K*u)"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "[dxL   dzL]"
+SID "4242"
+Position [260, 174, 345, 206]
+ZOrder "201"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+NamePlacement "alternate"
+Gain [ACSP.MIG.dxL ACSP.MIG.dzL]
+Multiplication "Matrix(K*u)"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "[dxL  dzL]"
+SID "4243"
+Position [260, 274, 345, 306]
+ZOrder "150"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+NamePlacement "alternate"
+Gain [ACSP.MIG.dxL ACSP.MIG.dzL]
+Multiplication "Matrix(K*u)"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "[dxL dzL]"
+SID "4244"
+Position [260, 74, 345, 106]
+ZOrder "191"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+NamePlacement "alternate"
+Gain [ACSP.MIG.dxL ACSP.MIG.dzL]
+Multiplication "Matrix(K*u)"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "[dxLOC  dzLOC]"
+SID "4245"
+Position [260, 224, 345, 256]
+ZOrder "212"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+NamePlacement "alternate"
+Gain [ACSP.MIG.dxLO ACSP.MIG.dzLO]
+Multiplication "Matrix(K*u)"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "dxL"
+SID "4246"
+Position [270, 599, 350, 631]
+ZOrder "157"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+Gain "ACSP.MIG.dxL"
+Multiplication "Matrix(K*u)"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "From"
+Name "fromasv1"
+SID "4503"
+Position [975, 146, 1010, 164]
+ZOrder "324"
+BackgroundColor [1.000000, 0.666667, 1.000000]
+ShowName off
+GotoTag "gldN"
+}
+
+Block {
+BlockType "From"
+Name "fromasv15"
+SID "4498"
+Position [975, 36, 1010, 54]
+ZOrder "320"
+BackgroundColor [1.000000, 0.666667, 1.000000]
+ShowName off
+GotoTag "locN"
+}
+
+Block {
+BlockType "Gain"
+Name "gldns"
+SID "4495"
+Position [890, 121, 970, 149]
+ZOrder "316"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+Gain "0.000084"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "inv_xloc"
+SID "4489"
+Position [715, 46, 830, 84]
+ZOrder "310"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+Gain "-1/ACSP.ILS.xloc"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "locns"
+SID "4492"
+Position [890, 51, 965, 79]
+ZOrder "313"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+Gain "0.7"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Constant"
+Name "one"
+SID "4487"
+Position [660, 19, 695, 41]
+ZOrder "308"
+ShowName off
+}
+
+Block {
+BlockType "Gain"
+Name "tangGLD"
+SID "4247"
+Position [805, 171, 840, 209]
+ZOrder "223"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+Gain "ACSP.ILS.tanggld"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Goto"
+Name "toasv1"
+SID "4502"
+Position [175, 450, 210, 470]
+ZOrder "323"
+BackgroundColor [1.000000, 0.666667, 1.000000]
+ShowName off
+GotoTag "gldN"
+}
+
+Block {
+BlockType "Goto"
+Name "toasv6"
+SID "4499"
+Position [175, 405, 210, 425]
+ZOrder "319"
+BackgroundColor [1.000000, 0.666667, 1.000000]
+ShowName off
+GotoTag "locN"
+}
+
+Block {
+BlockType "From"
+Name "u1"
+SID "4248"
+Position [20, 202, 65, 228]
+ZOrder "188"
+BackgroundColor "orange"
+ShowName off
+GotoTag "RV2B"
+TagVisibility "global"
+}
+
+Block {
+BlockType "Constant"
+Name "xgld"
+SID "4249"
+Position [650, 217, 725, 243]
+ZOrder "225"
+BackgroundColor [0.666667, 1.000000, 0.043137]
+Value "ACSP.ILS.xgld"
+}
+
+Block {
+BlockType "Outport"
+Name "dyzILS"
+SID "4250"
+Position [1200, 143, 1230, 157]
+ZOrder "226"
+BackgroundColor [1.000000, 1.000000, 0.498039]
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "xyzLG"
+SID "4252"
+Position [1200, 343, 1230, 357]
+ZOrder "132"
+BackgroundColor [1.000000, 1.000000, 0.498039]
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "H"
+SID "4466"
+Position [1200, 258, 1230, 272]
+ZOrder "300"
+BackgroundColor [1.000000, 1.000000, 0.498039]
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "VzLG"
+SID "4467"
+Position [1200, 483, 1230, 497]
+ZOrder "301"
+BackgroundColor [1.000000, 1.000000, 0.498039]
+Port "4"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "Vz"
+SID "4253"
+Position [1200, 573, 1230, 587]
+ZOrder "154"
+BackgroundColor [1.000000, 1.000000, 0.498039]
+Port "5"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "ssLG"
+SID "4254"
+Position [1200, 648, 1230, 662]
+ZOrder "208"
+BackgroundColor [1.000000, 1.000000, 0.498039]
+Port "6"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "Vground"
+SID "4255"
+Position [1200, 518, 1230, 532]
+ZOrder "182"
+BackgroundColor [1.000000, 1.000000, 0.498039]
+Port "7"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "Chi"
+SID "4256"
+Position [1200, 698, 1230, 712]
+ZOrder "186"
+BackgroundColor [1.000000, 1.000000, 0.498039]
+Port "8"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "4203#out:1"
+Points [32, 0]
+Branch {
+ZOrder "2"
+Points [0, 45]
+Branch {
+ZOrder "3"
+Dst "4217#in:1"
+}
+
+Branch {
+ZOrder "4"
+Points [0, 110]
+Branch {
+ZOrder "5"
+Points [0, 30]
+Dst "4223#in:1"
+}
+
+Branch {
+ZOrder "6"
+Dst "4224#in:1"
+}
+}
+}
+
+Branch {
+ZOrder "7"
+Dst "4225#in:1"
+}
+}
+
+Line {
+ZOrder "8"
+Src "4205#out:1"
+Dst "4221#in:1"
+}
+
+Line {
+ZOrder "9"
+Src "4221#out:1"
+Dst "4246#in:1"
+}
+
+Line {
+ZOrder "10"
+Src "4246#out:1"
+Dst "4210#in:1"
+}
+
+Line {
+ZOrder "11"
+Src "4210#out:1"
+Points [5, 0]
+Dst "4230#in:2"
+}
+
+Line {
+ZOrder "12"
+Src "4230#out:1"
+Points [450, 0]
+Branch {
+ZOrder "13"
+Dst "4253#in:1"
+}
+
+Branch {
+ZOrder "14"
+Dst "4470#in:2"
+}
+}
+
+Line {
+ZOrder "15"
+Src "4248#out:1"
+Points [9, 0]
+Branch {
+ZOrder "16"
+Points [0, -100]
+Dst "4237#in:1"
+}
+
+Branch {
+ZOrder "17"
+Points [0, 105]
+Dst "4239#in:1"
+}
+
+Branch {
+ZOrder "18"
+Dst "4238#in:1"
+}
+}
+
+Line {
+ZOrder "19"
+Src "4217#out:1"
+Dst "4230#in:1"
+}
+
+Line {
+ZOrder "20"
+Src "4224#out:1"
+Dst "4236#in:1"
+}
+
+Line {
+ZOrder "21"
+Src "4236#out:1"
+Points [185, 0]
+Branch {
+ZOrder "22"
+Dst "4231#in:2"
+}
+
+Branch {
+ZOrder "23"
+Dst "4256#in:1"
+}
+}
+
+Line {
+ZOrder "24"
+Src "4237#out:1"
+Points [50, 0]
+Branch {
+ZOrder "25"
+Points [0, -25]
+Dst "4244#in:1"
+}
+
+Branch {
+ZOrder "26"
+Points [0, 25]
+Dst "4240#in:1"
+}
+}
+
+Line {
+ZOrder "27"
+Src "4215#out:1"
+Dst "4227#in:1"
+}
+
+Line {
+ZOrder "28"
+Src "4223#out:1"
+Dst "4236#in:2"
+}
+
+Line {
+ZOrder "29"
+Src "4225#out:1"
+Points [49, 0]
+Branch {
+ZOrder "30"
+Dst "4215#in:2"
+}
+
+Branch {
+ZOrder "31"
+Points [0, -20]
+Dst "4215#in:1"
+}
+}
+
+Line {
+ZOrder "32"
+Src "4227#out:1"
+Points [53, 0]
+Branch {
+ZOrder "33"
+Dst "4255#in:1"
+}
+
+Branch {
+ZOrder "34"
+Points [0, -25]
+Dst "4447#in:1"
+}
+}
+
+Line {
+ZOrder "35"
+Src "4238#out:1"
+Points [50, 0]
+Branch {
+ZOrder "36"
+Points [0, -25]
+Dst "4242#in:1"
+}
+
+Branch {
+ZOrder "37"
+Points [0, 25]
+Dst "4245#in:1"
+}
+}
+
+Line {
+ZOrder "38"
+Src "4204#out:1"
+Dst "4226#in:1"
+}
+
+Line {
+ZOrder "39"
+Src "4226#out:1"
+Dst "4231#in:1"
+}
+
+Line {
+ZOrder "40"
+Src "4231#out:1"
+Dst "4254#in:1"
+}
+
+Line {
+ZOrder "41"
+Src "4239#out:1"
+Points [49, 0]
+Branch {
+ZOrder "42"
+Points [0, -30]
+Dst "4243#in:1"
+}
+
+Branch {
+ZOrder "43"
+Points [0, 20]
+Dst "4241#in:1"
+}
+}
+
+Line {
+ZOrder "44"
+Src "4244#out:1"
+Dst "4212#in:1"
+}
+
+Line {
+ZOrder "45"
+Src "4240#out:1"
+Dst "4212#in:2"
+}
+
+Line {
+ZOrder "46"
+Src "4242#out:1"
+Dst "4212#in:3"
+}
+
+Line {
+ZOrder "47"
+Src "4245#out:1"
+Dst "4212#in:4"
+}
+
+Line {
+ZOrder "48"
+Src "4243#out:1"
+Dst "4212#in:5"
+}
+
+Line {
+ZOrder "49"
+Src "4241#out:1"
+Dst "4212#in:6"
+}
+
+Line {
+ZOrder "50"
+Src "4212#out:1"
+Dst "4209#in:1"
+}
+
+Line {
+ZOrder "51"
+Src "4209#out:1"
+Points [22, 0]
+Branch {
+ZOrder "52"
+Points [0, 100]
+Dst "4208#in:1"
+}
+
+Branch {
+ZOrder "53"
+Points [0, -65]
+Dst "4207#in:1"
+}
+}
+
+Line {
+ZOrder "54"
+Src "4207#out:1"
+Dst "4232#in:1"
+}
+
+Line {
+ZOrder "55"
+Src "4232#out:1"
+Points [10, 0]
+Branch {
+ZOrder "56"
+Points [0, 40]
+Dst "4218#in:1"
+}
+
+Branch {
+ZOrder "57"
+Dst "4219#in:1"
+}
+
+Branch {
+ZOrder "58"
+Points [0, -40]
+Branch {
+ZOrder "59"
+Dst "4220#in:1"
+}
+
+Branch {
+ZOrder "60"
+Points [0, -45]
+Dst "4490#in:1"
+}
+}
+}
+
+Line {
+ZOrder "61"
+Src "4235#out:1"
+Points [18, 0]
+Branch {
+ZOrder "62"
+Points [0, -55]
+Dst "4495#in:1"
+}
+
+Branch {
+ZOrder "63"
+Dst "4247#in:1"
+}
+}
+
+Line {
+ZOrder "64"
+Src "4218#out:1"
+Dst "4235#in:1"
+}
+
+Line {
+ZOrder "65"
+Src "4249#out:1"
+Points [20, 0]
+Dst "4235#in:2"
+}
+
+Line {
+ZOrder "66"
+Src "4213#out:1"
+Dst "4250#in:1"
+}
+
+Line {
+ZOrder "67"
+Src "4220#out:1"
+Dst "4493#in:2"
+}
+
+Line {
+ZOrder "68"
+Src "4219#out:1"
+Points [170, 0]
+Dst "4233#in:1"
+}
+
+Line {
+ZOrder "69"
+Src "4247#out:1"
+Dst "4233#in:2"
+}
+
+Line {
+ZOrder "70"
+Src "4233#out:1"
+Dst "4496#in:2"
+}
+
+Line {
+ZOrder "71"
+Src "4208#out:1"
+Dst "4228#in:2"
+}
+
+Line {
+ZOrder "72"
+Src "4202#out:1"
+Points [35, 0]
+Branch {
+ZOrder "73"
+Points [0, 50]
+Branch {
+ZOrder "74"
+Dst "4534#in:1"
+}
+
+Branch {
+ZOrder "75"
+Dst "4228#in:1"
+}
+}
+
+Branch {
+ZOrder "76"
+Dst "4232#in:2"
+}
+}
+
+Line {
+ZOrder "77"
+Src "4228#out:1"
+Points [10, 0]
+Branch {
+ZOrder "78"
+Dst "4448#in:1"
+}
+
+Branch {
+ZOrder "79"
+Points [0, 35]
+Branch {
+ZOrder "80"
+Points [0, 35]
+Dst "4222#in:1"
+}
+
+Branch {
+ZOrder "81"
+Dst "4460#in:1"
+}
+}
+}
+
+Line {
+ZOrder "82"
+Src "4480#out:1"
+Dst "4451#in:1"
+}
+
+Line {
+ZOrder "83"
+Src "4447#out:1"
+Dst "4451#in:2"
+}
+
+Line {
+ZOrder "84"
+Src "4469#out:1"
+Points [12, 0]
+Branch {
+ZOrder "85"
+Points [0, 60]
+Dst "4481#in:1"
+}
+
+Branch {
+ZOrder "86"
+Dst "4457#in:1"
+}
+}
+
+Line {
+ZOrder "87"
+Src "4451#out:1"
+Dst "4470#in:1"
+}
+
+Line {
+ZOrder "88"
+Src "4457#out:1"
+Dst "4454#in:1"
+}
+
+Line {
+ZOrder "89"
+Src "4461#out:1"
+Dst "4252#in:1"
+}
+
+Line {
+ZOrder "90"
+Src "4460#out:1"
+Dst "4461#in:2"
+}
+
+Line {
+ZOrder "91"
+Src "4448#out:1"
+Points [20, 0]
+Branch {
+ZOrder "92"
+Dst "4469#in:1"
+}
+
+Branch {
+ZOrder "93"
+Dst "4461#in:1"
+}
+}
+
+Line {
+ZOrder "94"
+Src "4452#out:1"
+Dst "4469#in:2"
+}
+
+Line {
+ZOrder "95"
+Src "4470#out:1"
+Dst "4467#in:1"
+}
+
+Line {
+ZOrder "96"
+Src "4481#out:1"
+Dst "4480#in:1"
+}
+
+Line {
+ZOrder "97"
+Src "4490#out:1"
+Dst "4489#in:1"
+}
+
+Line {
+ZOrder "98"
+Src "4489#out:1"
+Dst "4491#in:2"
+}
+
+Line {
+ZOrder "99"
+Src "4487#out:1"
+Points [160, 0]
+Dst "4491#in:1"
+}
+
+Line {
+ZOrder "100"
+Src "4491#out:1"
+Dst "4492#in:1"
+}
+
+Line {
+ZOrder "101"
+Src "4493#out:1"
+Dst "4213#in:1"
+}
+
+Line {
+ZOrder "102"
+Src "4492#out:1"
+Dst "4494#in:2"
+}
+
+Line {
+ZOrder "103"
+Src "4494#out:1"
+Points [15, 0]
+Dst "4493#in:1"
+}
+
+Line {
+ZOrder "104"
+Src "4496#out:1"
+Dst "4213#in:2"
+}
+
+Line {
+ZOrder "105"
+Src "4497#out:1"
+Points [15, 0]
+Dst "4496#in:1"
+}
+
+Line {
+ZOrder "106"
+Src "4495#out:1"
+Dst "4497#in:1"
+}
+
+Line {
+ZOrder "107"
+Src "4485#out:1"
+Points [13, 0]
+Branch {
+ZOrder "108"
+Points [0, 45]
+Dst "4501#in:1"
+}
+
+Branch {
+ZOrder "109"
+Dst "4500#in:1"
+}
+}
+
+Line {
+ZOrder "110"
+Src "4500#out:1"
+Dst "4499#in:1"
+}
+
+Line {
+ZOrder "111"
+Src "4501#out:1"
+Dst "4502#in:1"
+}
+
+Line {
+ZOrder "112"
+Src "4498#out:1"
+Dst "4494#in:1"
+}
+
+Line {
+ZOrder "113"
+Src "4503#out:1"
+Dst "4497#in:2"
+}
+
+Line {
+ZOrder "114"
+Src "4488#out:1"
+Points [20, 0]
+Dst "4508#in:2"
+}
+
+Line {
+ZOrder "115"
+Src "4508#out:1"
+Dst "4466#in:1"
+}
+
+Line {
+ZOrder "116"
+Src "4534#out:1"
+Dst "4508#in:1"
+}
+
+Line {
+ZOrder "117"
+Src "4536#out:1"
+Dst "4461#in:3"
+}
+
+Line {
+ZOrder "118"
+Src "4454#out:1"
+Points [25, 0]
+Dst "4536#in:2"
+}
+
+Line {
+ZOrder "119"
+Src "4222#out:1"
+Dst "4536#in:1"
+}
+
+Annotation {
+SID "4259"
+Name [-st;ct*cphi]
+Position [135, 287, 186, 299]
+InternalMargins [0, 0, 0, 0]
+ZOrder "-1"
+}
+
+Annotation {
+SID "4258"
+Name [ct*cpsi;st*cphi*cpsi+st*spsi]
+Position [92, 87, 218, 99]
+InternalMargins [0, 0, 0, 0]
+ZOrder "-2"
+}
+
+Annotation {
+SID "4257"
+Name [spsi*ct;spsi*st*cphi-cpsi*sphi]
+Position [88, 187, 222, 199]
+InternalMargins [0, 0, 0, 0]
+ZOrder "-3"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Wind and ATM"
+SID "4260"
+Ports [2, 4]
+Position [75, 75, 145, 250]
+ZOrder "30"
+DropShadow on
+NamePlacement "alternate"
+RequestExecContextInheritance off
+System {
+Location [140, 54, 1491, 914]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "173"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "V"
+SID "4261"
+Position [55, 88, 85, 102]
+ZOrder "-3"
+DropShadow on
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Wind"
+SID "4262"
+Position [55, 178, 85, 192]
+ZOrder "-1"
+DropShadow on
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux"
+SID "4263"
+Ports [2, 1]
+Position [670, 23, 680, 132]
+ZOrder "146"
+ShowName off
+Inputs "2"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Product"
+Name "Product1"
+SID "4264"
+Ports [2, 1]
+Position [545, 86, 560, 124]
+ZOrder "-10"
+ShowName off
+Inputs "*/"
+}
+
+Block {
+BlockType "Product"
+Name "Product2"
+SID "4265"
+Ports [2, 1]
+Position [320, 146, 335, 184]
+ZOrder "-11"
+ShowName off
+}
+
+Block {
+BlockType "Selector"
+Name "Selector1"
+SID "4266"
+Ports [1, 1]
+Position [370, 82, 400, 108]
+ZOrder "17"
+ShowName off
+InputPortWidth "3"
+IndexOptions "Index vector (dialog)"
+Indices "2"
+OutputSizes "1"
+}
+
+Block {
+BlockType "Selector"
+Name "Selector2"
+SID "4267"
+Ports [1, 1]
+Position [370, 22, 400, 48]
+ZOrder "16"
+ShowName off
+InputPortWidth "3"
+IndexOptions "Index vector (dialog)"
+Indices "3"
+OutputSizes "1"
+}
+
+Block {
+BlockType "Selector"
+Name "Selector3"
+SID "4268"
+Ports [1, 1]
+Position [370, 52, 400, 78]
+ZOrder "83"
+ShowName off
+InputPortWidth "3"
+IndexOptions "Index vector (dialog)"
+Indices "1"
+OutputSizes "1"
+}
+
+Block {
+BlockType "Sqrt"
+Name "Sqrt"
+SID "4269"
+Position [455, 150, 485, 180]
+ZOrder "-14"
+ShowName off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum of\nElements"
+SID "4270"
+Ports [1, 1]
+Position [370, 150, 400, 180]
+ZOrder "-15"
+ShowName off
+Inputs "+"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum1"
+SID "4271"
+Ports [2, 1]
+Position [245, 165, 265, 185]
+ZOrder "-16"
+ShowName off
+IconShape "round"
+Inputs "+-|"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Trigonometry"
+Name "Trigonometric\nFunction"
+SID "4272"
+Ports [2, 1]
+Position [590, 22, 625, 78]
+ZOrder "-19"
+ShowName off
+Operator "atan2"
+}
+
+Block {
+BlockType "Trigonometry"
+Name "Trigonometric\nFunction1"
+SID "4273"
+Ports [1, 1]
+Position [590, 92, 625, 118]
+ZOrder "-20"
+ShowName off
+Operator "asin"
+}
+
+Block {
+BlockType "SubSystem"
+Name "V2B"
+SID "4274"
+Ports [2, 1]
+Position [155, 149, 215, 196]
+ZOrder "144"
+RequestExecContextInheritance off
+Object {
+$PropName "MaskObject"
+$ObjectID 9
+$ClassName "Simulink.Mask"
+Display "fprintf('MATRIX \\n PRODUCT');\ncolor('red');\nfprintf('\\n\\n');\nfprintf(' \\n \\n \\n z=M(x)*y');\n"
+
+}
+
+System {
+Location [2004, 14, 3512, 1040]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "245"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "x"
+SID "4275"
+Position [20, 53, 50, 67]
+ZOrder "7"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "y"
+SID "4276"
+Position [20, 103, 50, 117]
+ZOrder "8"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux"
+SID "4277"
+Ports [2, 1]
+Position [90, 36, 100, 134]
+ZOrder "5"
+ShowName off
+Inputs "2"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux1"
+SID "4278"
+Ports [3, 1]
+Position [410, 24, 420, 146]
+ZOrder "4"
+ShowName off
+Inputs "3"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Fcn"
+Name "Y1"
+SID "4279"
+Position [185, 34, 355, 56]
+ZOrder "12"
+Expr "u(1)*u(10)+u(2)*u(11)+u(3)*u(12)"
+}
+
+Block {
+BlockType "Fcn"
+Name "Y2"
+SID "4280"
+Position [185, 74, 355, 96]
+ZOrder "13"
+Expr "u(4)*u(10)+u(5)*u(11)+u(6)*u(12)"
+}
+
+Block {
+BlockType "Fcn"
+Name "Y3"
+SID "4281"
+Position [185, 114, 355, 136]
+ZOrder "14"
+Expr "u(7)*u(10)+u(8)*u(11)+u(9)*u(12)"
+}
+
+Block {
+BlockType "Outport"
+Name "z"
+SID "4282"
+Position [490, 78, 520, 92]
+ZOrder "9"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "4278#out:1"
+Dst "4282#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "4280#out:1"
+Dst "4278#in:2"
+}
+
+Line {
+ZOrder "3"
+Src "4279#out:1"
+Dst "4278#in:1"
+}
+
+Line {
+ZOrder "4"
+Src "4281#out:1"
+Dst "4278#in:3"
+}
+
+Line {
+ZOrder "5"
+Src "4276#out:1"
+Dst "4277#in:2"
+}
+
+Line {
+ZOrder "6"
+Src "4277#out:1"
+Points [40, 0]
+Branch {
+ZOrder "7"
+Dst "4280#in:1"
+}
+
+Branch {
+ZOrder "8"
+Points [0, -40]
+Dst "4279#in:1"
+}
+
+Branch {
+ZOrder "9"
+Points [0, 40]
+Dst "4281#in:1"
+}
+}
+
+Line {
+ZOrder "10"
+Src "4275#out:1"
+Dst "4277#in:1"
+}
+}
+}
+
+Block {
+BlockType "Gain"
+Name "Va2Vc"
+SID "4283"
+Position [565, 186, 690, 224]
+ZOrder "131"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+Gain "ACSP.ATM.va2vc"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "half"
+SID "4284"
+Position [455, 292, 500, 318]
+ZOrder "128"
+ShowName off
+Gain "0.5"
+}
+
+Block {
+BlockType "Gain"
+Name "rho"
+SID "4285"
+Position [565, 286, 690, 324]
+ZOrder "129"
+BackgroundColor [0.745098, 0.996078, 0.027451]
+Gain "ACSP.ATM.rho"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "From"
+Name "u8"
+SID "4286"
+Position [55, 147, 100, 173]
+ZOrder "76"
+BackgroundColor "orange"
+ShowName off
+GotoTag "RV2B"
+TagVisibility "global"
+}
+
+Block {
+BlockType "Outport"
+Name "ab"
+SID "4287"
+Position [730, 73, 760, 87]
+ZOrder "-25"
+DropShadow on
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "Vc"
+SID "4288"
+Position [730, 198, 760, 212]
+ZOrder "-24"
+DropShadow on
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "Va"
+SID "4289"
+Position [730, 158, 760, 172]
+ZOrder "-27"
+DropShadow on
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "qd"
+SID "4290"
+Position [730, 298, 760, 312]
+ZOrder "-23"
+DropShadow on
+Port "4"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "4262#out:1"
+Dst "4274#in:2"
+}
+
+Line {
+ZOrder "2"
+Src "4285#out:1"
+Dst "4290#in:1"
+}
+
+Line {
+ZOrder "3"
+Src "4284#out:1"
+Dst "4285#in:1"
+}
+
+Line {
+ZOrder "4"
+Src "4283#out:1"
+Dst "4288#in:1"
+}
+
+Line {
+ZOrder "5"
+Src "4271#out:1"
+Points [8, 0]
+Branch {
+ZOrder "6"
+Dst "4265#in:2"
+}
+
+Branch {
+ZOrder "7"
+Points [0, -20]
+Branch {
+ZOrder "8"
+Dst "4265#in:1"
+}
+
+Branch {
+ZOrder "9"
+Points [0, -60]
+Branch {
+ZOrder "10"
+Points [0, -30]
+Branch {
+ZOrder "11"
+Dst "4268#in:1"
+}
+
+Branch {
+ZOrder "12"
+Points [0, -30]
+Dst "4267#in:1"
+}
+}
+
+Branch {
+ZOrder "13"
+Dst "4266#in:1"
+}
+}
+}
+}
+
+Line {
+ZOrder "14"
+Src "4266#out:1"
+Dst "4264#in:1"
+}
+
+Line {
+ZOrder "15"
+Src "4267#out:1"
+Dst "4272#in:1"
+}
+
+Line {
+ZOrder "16"
+Src "4268#out:1"
+Dst "4272#in:2"
+}
+
+Line {
+ZOrder "17"
+Src "4286#out:1"
+Dst "4274#in:1"
+}
+
+Line {
+ZOrder "18"
+Src "4274#out:1"
+Dst "4271#in:2"
+}
+
+Line {
+ZOrder "19"
+Src "4261#out:1"
+Points [165, 0]
+Dst "4271#in:1"
+}
+
+Line {
+ZOrder "20"
+Src "4265#out:1"
+Dst "4270#in:1"
+}
+
+Line {
+ZOrder "21"
+Src "4269#out:1"
+Points [29, 0]
+Branch {
+ZOrder "22"
+Dst "4289#in:1"
+}
+
+Branch {
+ZOrder "23"
+Points [0, -50]
+Dst "4264#in:2"
+}
+
+Branch {
+ZOrder "24"
+Points [0, 40]
+Dst "4283#in:1"
+}
+}
+
+Line {
+ZOrder "25"
+Src "4264#out:1"
+Dst "4273#in:1"
+}
+
+Line {
+ZOrder "26"
+Src "4270#out:1"
+Points [19, 0]
+Branch {
+ZOrder "27"
+Dst "4269#in:1"
+}
+
+Branch {
+ZOrder "28"
+Points [0, 140]
+Dst "4284#in:1"
+}
+}
+
+Line {
+ZOrder "29"
+Src "4272#out:1"
+Dst "4263#in:1"
+}
+
+Line {
+ZOrder "30"
+Src "4273#out:1"
+Dst "4263#in:2"
+}
+
+Line {
+ZOrder "31"
+Src "4263#out:1"
+Dst "4287#in:1"
+}
+}
+}
+
+Block {
+BlockType "Outport"
+Name "Nxyz"
+SID "4291"
+Position [495, 203, 525, 217]
+ZOrder "159"
+BackgroundColor [1.000000, 1.000000, 0.498039]
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "V"
+SID "4292"
+Position [950, 8, 980, 22]
+ZOrder "43"
+BackgroundColor [1.000000, 1.000000, 0.498039]
+NamePlacement "alternate"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "OM"
+SID "4293"
+Position [715, 583, 745, 597]
+ZOrder "44"
+BackgroundColor [1.000000, 1.000000, 0.498039]
+NamePlacement "alternate"
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "X"
+SID "4294"
+Position [950, 83, 980, 97]
+ZOrder "45"
+BackgroundColor [1.000000, 1.000000, 0.498039]
+Port "4"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "PHI"
+SID "4295"
+Position [835, 323, 865, 337]
+ZOrder "46"
+BackgroundColor [1.000000, 1.000000, 0.498039]
+Port "5"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "ab"
+SID "4296"
+Position [185, 68, 215, 82]
+ZOrder "160"
+BackgroundColor [1.000000, 1.000000, 0.498039]
+NamePlacement "alternate"
+Port "6"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "Vc"
+SID "4297"
+Position [185, 133, 215, 147]
+ZOrder "161"
+BackgroundColor [1.000000, 1.000000, 0.498039]
+NamePlacement "alternate"
+Port "7"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "Va"
+SID "4298"
+Position [185, 198, 215, 212]
+ZOrder "163"
+BackgroundColor [1.000000, 1.000000, 0.498039]
+Port "8"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "Vground"
+SID "4299"
+Position [270, 508, 300, 522]
+ZOrder "168"
+BackgroundColor [1.000000, 1.000000, 0.498039]
+Port "9"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "Vz"
+SID "4472"
+Position [270, 428, 300, 442]
+ZOrder "225"
+BackgroundColor [1.000000, 1.000000, 0.498039]
+Port "10"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "H"
+SID "4471"
+Position [270, 348, 300, 362]
+ZOrder "224"
+BackgroundColor [1.000000, 1.000000, 0.498039]
+Port "11"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "VzLG"
+SID "4301"
+Position [270, 388, 300, 402]
+ZOrder "165"
+BackgroundColor [1.000000, 1.000000, 0.498039]
+Port "12"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "xyzLG"
+SID "4302"
+Position [270, 308, 300, 322]
+ZOrder "164"
+BackgroundColor [1.000000, 1.000000, 0.498039]
+Port "13"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "ssLG"
+SID "4303"
+Position [270, 468, 300, 482]
+ZOrder "173"
+BackgroundColor [1.000000, 1.000000, 0.498039]
+Port "14"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "Chi"
+SID "4300"
+Position [270, 548, 300, 562]
+ZOrder "169"
+BackgroundColor [1.000000, 1.000000, 0.498039]
+Port "15"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "dyzILS"
+SID "4304"
+Position [185, 268, 215, 282]
+ZOrder "222"
+BackgroundColor [1.000000, 1.000000, 0.498039]
+Port "16"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "3922#out:2"
+Dst "4291#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "4260#out:1"
+Points [13, 0]
+Branch {
+ZOrder "3"
+Dst "3922#in:1"
+}
+
+Branch {
+ZOrder "4"
+Points [0, -20]
+Dst "4296#in:1"
+}
+}
+
+Line {
+ZOrder "5"
+Src "3888#out:1"
+Dst "3922#in:2"
+}
+
+Line {
+ZOrder "6"
+Src "4260#out:4"
+Dst "3922#in:4"
+}
+
+Line {
+ZOrder "7"
+Src "4260#out:3"
+Points [13, 0]
+Branch {
+ZOrder "8"
+Dst "3922#in:3"
+}
+
+Branch {
+ZOrder "9"
+Points [0, 20]
+Dst "4298#in:1"
+}
+}
+
+Line {
+ZOrder "10"
+Src "4260#out:2"
+Dst "4297#in:1"
+}
+
+Line {
+ZOrder "11"
+Src "3889#out:1"
+Dst "4260#in:2"
+}
+
+Line {
+ZOrder "12"
+Src "4095#out:2"
+Points [108, 0; 0, 429; -851, 0; 0, -224]
+Dst "4201#in:3"
+}
+
+Line {
+ZOrder "13"
+Src "4095#out:3"
+Points [37, 0]
+Branch {
+ZOrder "14"
+Points [0, 288; -769, 0; 0, -143]
+Dst "4201#in:4"
+}
+
+Branch {
+ZOrder "15"
+Dst "4295#in:1"
+}
+}
+
+Line {
+ZOrder "16"
+Src "3890#out:2"
+Points [45, 0]
+Branch {
+ZOrder "17"
+Dst "4095#in:2"
+}
+
+Branch {
+ZOrder "18"
+Points [0, 290]
+Branch {
+ZOrder "19"
+Points [-306, 0]
+Branch {
+ZOrder "20"
+Points [0, -270]
+Dst "3922#in:6"
+}
+
+Branch {
+ZOrder "21"
+Points [-306, 0; 0, -55]
+Dst "4201#in:5"
+}
+}
+
+Branch {
+ZOrder "22"
+Dst "4293#in:1"
+}
+}
+}
+
+Line {
+ZOrder "23"
+Src "3890#out:1"
+Points [33, 0]
+Branch {
+ZOrder "24"
+Dst "4095#in:1"
+}
+
+Branch {
+ZOrder "25"
+Points [0, -105]
+Branch {
+ZOrder "26"
+Dst "4292#in:1"
+}
+
+Branch {
+ZOrder "27"
+Points [-618, 0; 0, 105]
+Dst "4260#in:1"
+}
+}
+}
+
+Line {
+ZOrder "28"
+Src "3922#out:1"
+Dst "3890#in:1"
+}
+
+Line {
+ZOrder "29"
+Src "3922#out:3"
+Dst "3890#in:2"
+}
+
+Line {
+ZOrder "30"
+Src "4095#out:1"
+Points [135, 0]
+Branch {
+ZOrder "31"
+Dst "4294#in:1"
+}
+
+Branch {
+ZOrder "32"
+Points [0, 565; -891, 0; 0, -300]
+Dst "4201#in:2"
+}
+}
+
+Line {
+ZOrder "33"
+Src "4200#out:1"
+Dst "3922#in:5"
+}
+
+Line {
+ZOrder "34"
+Src "4201#out:2"
+Points [85, 0]
+Branch {
+ZOrder "35"
+Dst "4302#in:1"
+}
+
+Branch {
+ZOrder "36"
+Points [0, -40]
+Dst "4200#in:1"
+}
+}
+
+Line {
+ZOrder "37"
+Src "4201#out:1"
+Dst "4304#in:1"
+}
+
+Line {
+ZOrder "38"
+Src "4201#out:4"
+Dst "4301#in:1"
+}
+
+Line {
+ZOrder "39"
+Src "4201#out:8"
+Dst "4300#in:1"
+}
+
+Line {
+ZOrder "40"
+Src "4201#out:7"
+Dst "4299#in:1"
+}
+
+Line {
+ZOrder "41"
+Src "4201#out:6"
+Dst "4303#in:1"
+}
+
+Line {
+ZOrder "42"
+Src "4201#out:3"
+Dst "4471#in:1"
+}
+
+Line {
+ZOrder "43"
+Src "4201#out:5"
+Dst "4472#in:1"
+}
+
+Line {
+ZOrder "44"
+Src "4484#out:1"
+Dst "4201#in:1"
+}
+}
+}
+
+Block {
+BlockType "BusCreator"
+Name "Bus Creator"
+SID "4306"
+Ports [12, 1]
+Position [1435, 344, 1485, 926]
+ZOrder "273"
+ShowName off
+Inputs "12"
+DisplayOption "bar"
+InheritFromInputs on
+}
+
+Block {
+BlockType "BusCreator"
+Name "Bus Creator1"
+SID "4307"
+Ports [5, 1]
+Position [1075, 115, 1120, 285]
+ZOrder "255"
+ShowName off
+Inputs "5"
+DisplayOption "bar"
+InheritFromInputs on
+}
+
+Block {
+BlockType "BusCreator"
+Name "Bus Creator2"
+SID "4308"
+Ports [3, 1]
+Position [940, 374, 960, 446]
+ZOrder "312"
+ShowName off
+Inputs "3"
+DisplayOption "bar"
+InheritFromInputs on
+Port {
+PortNumber "1"
+Name "OM"
+}
+}
+
+Block {
+BlockType "BusCreator"
+Name "Bus Creator3"
+SID "4309"
+Ports [3, 1]
+Position [1290, 324, 1310, 396]
+ZOrder "314"
+ShowName off
+Inputs "3"
+DisplayOption "bar"
+InheritFromInputs on
+Port {
+PortNumber "1"
+Name "Nxyz"
+}
+}
+
+Block {
+BlockType "BusCreator"
+Name "Bus Creator4"
+SID "4310"
+Ports [3, 1]
+Position [1290, 422, 1310, 498]
+ZOrder "316"
+ShowName off
+Inputs "3"
+DisplayOption "bar"
+InheritFromInputs on
+Port {
+PortNumber "1"
+Name "PHI"
+}
+}
+
+Block {
+BlockType "BusCreator"
+Name "Bus Creator5"
+SID "4311"
+Ports [2, 1]
+Position [1250, 872, 1270, 943]
+ZOrder "318"
+ShowName off
+Inputs "2"
+DisplayOption "bar"
+InheritFromInputs on
+Port {
+PortNumber "1"
+Name "ILS"
+}
+}
+
+Block {
+BlockType "BusCreator"
+Name "Bus Creator6"
+SID "4312"
+Ports [4, 1]
+Position [935, 217, 960, 318]
+ZOrder "321"
+ShowName off
+Inputs "4"
+DisplayOption "bar"
+InheritFromInputs on
+Port {
+PortNumber "1"
+Name "ACT"
+}
+}
+
+Block {
+BlockType "BusCreator"
+Name "Bus Creator7"
+SID "4313"
+Ports [5, 1]
+Position [1435, 124, 1485, 296]
+ZOrder "348"
+ShowName off
+Inputs "5"
+DisplayOption "bar"
+InheritFromInputs on
+Port {
+PortNumber "1"
+Name "SIM"
+}
+}
+
+Block {
+BlockType "Demux"
+Name "Demux1"
+SID "4315"
+Ports [1, 3]
+Position [860, 373, 875, 447]
+ZOrder "313"
+ShowName off
+Outputs "3"
+DisplayOption "bar"
+Port {
+PortNumber "1"
+Name "p"
+}
+
+Port {
+PortNumber "2"
+Name "q"
+}
+
+Port {
+PortNumber "3"
+Name "r"
+}
+}
+
+Block {
+BlockType "Demux"
+Name "Demux2"
+SID "4316"
+Ports [1, 3]
+Position [1205, 325, 1220, 395]
+ZOrder "315"
+ShowName off
+Outputs "3"
+DisplayOption "bar"
+Port {
+PortNumber "1"
+Name "nx"
+}
+
+Port {
+PortNumber "2"
+Name "ny"
+}
+
+Port {
+PortNumber "3"
+Name "nz"
+}
+}
+
+Block {
+BlockType "Demux"
+Name "Demux3"
+SID "4317"
+Ports [1, 3]
+Position [1205, 421, 1220, 499]
+ZOrder "317"
+ShowName off
+Outputs "3"
+DisplayOption "bar"
+Port {
+PortNumber "1"
+Name "phi"
+}
+
+Port {
+PortNumber "2"
+Name "teta"
+}
+
+Port {
+PortNumber "3"
+Name "psi"
+}
+}
+
+Block {
+BlockType "Demux"
+Name "Demux4"
+SID "4318"
+Ports [1, 2]
+Position [725, 872, 740, 943]
+ZOrder "319"
+ShowName off
+Outputs "2"
+DisplayOption "bar"
+Port {
+PortNumber "1"
+Name "dy"
+}
+
+Port {
+PortNumber "2"
+Name "dz"
+}
+}
+
+Block {
+BlockType "Demux"
+Name "Demux5"
+SID "4319"
+Ports [1, 4]
+Position [860, 215, 875, 320]
+ZOrder "320"
+ShowName off
+DisplayOption "bar"
+Port {
+PortNumber "1"
+Name "DTH"
+}
+
+Port {
+PortNumber "2"
+Name "DA"
+}
+
+Port {
+PortNumber "3"
+Name "DE"
+}
+
+Port {
+PortNumber "4"
+Name "DR"
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Engines and Actuators"
+SID "4320"
+Ports [2, 2]
+Position [220, 107, 325, 303]
+ZOrder "353"
+RequestExecContextInheritance off
+System {
+Location [110, 17, 1877, 1040]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "152"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "eprc"
+SID "4321"
+Position [20, 133, 50, 147]
+ZOrder "218"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "deflections"
+SID "4322"
+Position [20, 233, 50, 247]
+ZOrder "219"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "SubSystem"
+Name "Actuators"
+SID "4323"
+Ports [1, 1]
+Position [255, 205, 315, 275]
+ZOrder "217"
+RequestExecContextInheritance off
+System {
+Location [292, 93, 1643, 953]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "186"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "deltac"
+SID "4325"
+Position [25, 78, 55, 92]
+ZOrder "165"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Gain"
+Name "Gain2"
+SID "4326"
+Position [160, 67, 295, 103]
+ZOrder "192"
+BackgroundColor [0.607843, 0.964706, 0.113725]
+ShowName off
+Gain "1./ACSP.ACT.tau"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Integrator"
+Name "Int_ASD"
+SID "4327"
+Ports [1, 1]
+Position [415, 70, 445, 100]
+ZOrder "191"
+ContinuousStateAttributes "'xASD'"
+}
+
+Block {
+BlockType "Saturate"
+Name "ML [55 25 30]"
+SID "4328"
+Ports [1, 1]
+Position [515, 70, 545, 100]
+ZOrder "174"
+InputPortMap "u0"
+UpperLimit "ACSP.ACT.ML"
+LowerLimit "-ACSP.ACT.ML"
+}
+
+Block {
+BlockType "Saturate"
+Name "RL [60 20 30]"
+SID "4329"
+Ports [1, 1]
+Position [335, 70, 365, 100]
+ZOrder "172"
+InputPortMap "u0"
+UpperLimit "ACSP.ACT.RL"
+LowerLimit "-ACSP.ACT.RL"
+}
+
+Block {
+BlockType "Sum"
+Name "Sum"
+SID "4330"
+Ports [2, 1]
+Position [95, 75, 115, 95]
+ZOrder "170"
+ShowName off
+IconShape "round"
+Inputs "|+-"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Outport"
+Name "delta"
+SID "4332"
+Position [600, 78, 630, 92]
+ZOrder "166"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "4328#out:1"
+Dst "4332#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "4330#out:1"
+Dst "4326#in:1"
+}
+
+Line {
+ZOrder "3"
+Src "4325#out:1"
+Dst "4330#in:1"
+}
+
+Line {
+ZOrder "4"
+Src "4327#out:1"
+Points [32, 0]
+Branch {
+ZOrder "5"
+Dst "4328#in:1"
+}
+
+Branch {
+ZOrder "6"
+Points [0, 55; -377, 0]
+Dst "4330#in:2"
+}
+}
+
+Line {
+ZOrder "7"
+Src "4329#out:1"
+Dst "4327#in:1"
+}
+
+Line {
+ZOrder "8"
+Src "4326#out:1"
+Dst "4329#in:1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Engines"
+SID "4517"
+Ports [2, 2]
+Position [255, 74, 315, 161]
+ZOrder "224"
+RequestExecContextInheritance off
+Port {
+PortNumber "2"
+Name "EPR"
+}
+
+System {
+Location [470, 93, 1821, 953]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "155"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "epr0"
+SID "4518"
+Position [5, 158, 35, 172]
+ZOrder "164"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "eprc"
+SID "4519"
+Position [5, 88, 35, 102]
+ZOrder "165"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Saturate"
+Name "EML"
+SID "4520"
+Ports [1, 1]
+Position [490, 80, 520, 110]
+ZOrder "194"
+InputPortMap "u0"
+UpperLimit "ACSP.ENG.UML"
+LowerLimit "ACSP.ENG.LML"
+}
+
+Block {
+BlockType "Saturate"
+Name "ERL"
+SID "4521"
+Ports [1, 1]
+Position [290, 80, 320, 110]
+ZOrder "172"
+InputPortMap "u0"
+UpperLimit "ACSP.ENG.RL"
+LowerLimit "-ACSP.ENG.RL"
+}
+
+Block {
+BlockType "Gain"
+Name "Gain1"
+SID "4522"
+Position [125, 77, 260, 113]
+ZOrder "171"
+BackgroundColor [0.607843, 0.964706, 0.113725]
+ShowName off
+Gain "1/ACSP.ENG.tau"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain2"
+SID "4523"
+Position [585, 77, 720, 113]
+ZOrder "187"
+BackgroundColor [0.607843, 0.964706, 0.113725]
+ShowName off
+Gain "ACSP.ENG.Ga"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Constant"
+Name "Gb"
+SID "4524"
+Position [585, 22, 685, 48]
+ZOrder "189"
+BackgroundColor [0.666667, 1.000000, 0.043137]
+NamePlacement "alternate"
+ShowName off
+Value "ACSP.ENG.Gb"
+}
+
+Block {
+BlockType "Integrator"
+Name "Int_ENG"
+SID "4525"
+Ports [1, 1]
+Position [355, 80, 385, 110]
+ZOrder "173"
+ContinuousStateAttributes "'xENG'"
+}
+
+Block {
+BlockType "Sum"
+Name "Sum"
+SID "4526"
+Ports [2, 1]
+Position [75, 85, 95, 105]
+ZOrder "170"
+ShowName off
+IconShape "round"
+Inputs "|+-"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum1"
+SID "4527"
+Ports [2, 1]
+Position [545, 155, 565, 175]
+ZOrder "196"
+ShowName off
+IconShape "round"
+Inputs "+-|"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum2"
+SID "4528"
+Ports [2, 1]
+Position [435, 85, 455, 105]
+ZOrder "195"
+ShowName off
+IconShape "round"
+Inputs "|++"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum3"
+SID "4529"
+Ports [2, 1]
+Position [750, 85, 770, 105]
+ZOrder "186"
+ShowName off
+IconShape "round"
+Inputs "++|"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Outport"
+Name "TH"
+SID "4530"
+Position [805, 88, 835, 102]
+ZOrder "166"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "epr"
+SID "4531"
+Position [805, 158, 835, 172]
+ZOrder "192"
+Port "2"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "4528#out:1"
+Dst "4520#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "4524#out:1"
+Points [70, 0]
+Dst "4529#in:1"
+}
+
+Line {
+ZOrder "3"
+Src "4523#out:1"
+Dst "4529#in:2"
+}
+
+Line {
+ZOrder "4"
+Src "4529#out:1"
+Dst "4530#in:1"
+}
+
+Line {
+ZOrder "5"
+Src "4519#out:1"
+Dst "4526#in:1"
+}
+
+Line {
+ZOrder "6"
+Src "4525#out:1"
+Points [20, 0]
+Branch {
+ZOrder "7"
+Dst "4528#in:1"
+}
+
+Branch {
+ZOrder "8"
+Points [0, 50; -325, 0]
+Dst "4526#in:2"
+}
+}
+
+Line {
+ZOrder "9"
+Src "4521#out:1"
+Dst "4525#in:1"
+}
+
+Line {
+ZOrder "10"
+Src "4522#out:1"
+Dst "4521#in:1"
+}
+
+Line {
+ZOrder "11"
+Src "4526#out:1"
+Dst "4522#in:1"
+}
+
+Line {
+ZOrder "12"
+Src "4520#out:1"
+Points [30, 0]
+Branch {
+ZOrder "13"
+Dst "4527#in:1"
+}
+
+Branch {
+ZOrder "14"
+Dst "4523#in:1"
+}
+}
+
+Line {
+ZOrder "15"
+Src "4518#out:1"
+Points [405, 0]
+Branch {
+ZOrder "16"
+Dst "4527#in:2"
+}
+
+Branch {
+ZOrder "17"
+Dst "4528#in:2"
+}
+}
+
+Line {
+ZOrder "18"
+Src "4527#out:1"
+Dst "4531#in:1"
+}
+}
+}
+
+Block {
+BlockType "Mux"
+Name "Mux"
+SID "4346"
+Ports [2, 1]
+Position [605, 22, 625, 313]
+ZOrder "211"
+ShowName off
+Inputs "2"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux1"
+SID "4347"
+Ports [2, 1]
+Position [410, 126, 425, 184]
+ZOrder "222"
+ShowName off
+Inputs "2"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Sum"
+Name "Sum3"
+SID "4331"
+Ports [2, 1]
+Position [500, 230, 520, 250]
+ZOrder "223"
+ShowName off
+IconShape "round"
+Inputs "|++"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Constant"
+Name "delta0"
+SID "4348"
+Position [105, 307, 205, 333]
+ZOrder "161"
+BackgroundColor [0.666667, 1.000000, 0.043137]
+Value "ACSP.U0.delta"
+}
+
+Block {
+BlockType "Constant"
+Name "epr0"
+SID "4349"
+Position [105, 82, 205, 108]
+ZOrder "166"
+BackgroundColor [0.666667, 1.000000, 0.043137]
+Value "ACSP.U0.epr"
+}
+
+Block {
+BlockType "Outport"
+Name "states"
+SID "4350"
+Position [495, 148, 525, 162]
+ZOrder "220"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "U"
+SID "4351"
+Position [715, 163, 745, 177]
+ZOrder "221"
+Port "2"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "4323#out:1"
+Points [36, 0]
+Branch {
+ZOrder "2"
+Dst "4331#in:1"
+}
+
+Branch {
+ZOrder "3"
+Points [0, -70]
+Dst "4347#in:2"
+}
+}
+
+Line {
+ZOrder "4"
+Src "4517#out:1"
+Dst "4346#in:1"
+}
+
+Line {
+ZOrder "5"
+Src "4321#out:1"
+Dst "4517#in:2"
+}
+
+Line {
+ZOrder "6"
+Src "4322#out:1"
+Dst "4323#in:1"
+}
+
+Line {
+ZOrder "7"
+Src "4349#out:1"
+Dst "4517#in:1"
+}
+
+Line {
+ZOrder "8"
+Src "4346#out:1"
+Dst "4351#in:1"
+}
+
+Line {
+Name "EPR"
+ZOrder "9"
+Src "4517#out:2"
+Dst "4347#in:1"
+}
+
+Line {
+ZOrder "10"
+Src "4347#out:1"
+Dst "4350#in:1"
+}
+
+Line {
+ZOrder "11"
+Src "4331#out:1"
+Dst "4346#in:2"
+}
+
+Line {
+ZOrder "12"
+Src "4348#out:1"
+Points [300, 0]
+Dst "4331#in:2"
+}
+}
+}
+
+Block {
+BlockType "Constant"
+Name "Gb"
+SID "4505"
+Position [200, 462, 300, 488]
+ZOrder "373"
+BackgroundColor [0.666667, 1.000000, 0.043137]
+NamePlacement "alternate"
+ShowName off
+Value "ACSP.U0.wind"
+}
+
+Block {
+BlockType "Selector"
+Name "Selector1"
+SID "4354"
+Ports [1, 1]
+Position [765, 786, 800, 814]
+ZOrder "338"
+ShowName off
+InputPortWidth "3"
+IndexOptions "Index vector (dialog)"
+Indices "2"
+OutputSizes "1"
+}
+
+Block {
+BlockType "Selector"
+Name "Selector10"
+SID "4355"
+Ports [1, 1]
+Position [765, 746, 800, 774]
+ZOrder "330"
+ShowName off
+InputPortWidth "3"
+IndexOptions "Index vector (dialog)"
+Indices "3"
+OutputSizes "1"
+Port {
+PortNumber "1"
+Name "HLG"
+}
+}
+
+Block {
+BlockType "Selector"
+Name "Selector2"
+SID "4356"
+Ports [1, 1]
+Position [765, 706, 800, 734]
+ZOrder "333"
+ShowName off
+InputPortWidth "3"
+IndexOptions "Index vector (dialog)"
+Indices "1"
+OutputSizes "1"
+}
+
+Block {
+BlockType "Selector"
+Name "Selector3"
+SID "4475"
+Ports [1, 1]
+Position [1145, 496, 1180, 524]
+ZOrder "365"
+ShowName off
+InputPortWidth "2"
+IndexOptions "Index vector (dialog)"
+Indices "1"
+OutputSizes "1"
+Port {
+PortNumber "1"
+Name "alpha"
+}
+}
+
+Block {
+BlockType "Selector"
+Name "Selector4"
+SID "4478"
+Ports [1, 1]
+Position [1300, 266, 1335, 294]
+ZOrder "369"
+ShowName off
+InputPortWidth "2"
+IndexOptions "Index vector (dialog)"
+Indices "2"
+OutputSizes "1"
+Port {
+PortNumber "1"
+Name "beta"
+}
+}
+
+Block {
+BlockType "Sum"
+Name "Sum3"
+SID "4506"
+Ports [2, 1]
+Position [365, 525, 385, 545]
+ZOrder "371"
+ShowName off
+IconShape "round"
+Inputs "++|"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "From"
+Name "fromasv14"
+SID "4362"
+Position [1080, 451, 1115, 469]
+ZOrder "295"
+ShowName off
+GotoTag "PHI"
+Port {
+PortNumber "1"
+Name "PHI"
+}
+}
+
+Block {
+BlockType "From"
+Name "fromasv15"
+SID "4363"
+Position [790, 401, 825, 419]
+ZOrder "296"
+ShowName off
+GotoTag "OM"
+Port {
+PortNumber "1"
+Name "OM"
+}
+}
+
+Block {
+BlockType "From"
+Name "fromasv16"
+SID "4364"
+Position [1080, 351, 1115, 369]
+ZOrder "297"
+ShowName off
+GotoTag "Nxyz"
+Port {
+PortNumber "1"
+Name "Nxyz"
+}
+}
+
+Block {
+BlockType "From"
+Name "fromasv18"
+SID "4366"
+Position [1240, 166, 1280, 184]
+ZOrder "350"
+ShowName off
+GotoTag "DLG"
+Port {
+PortNumber "1"
+Name "DLG"
+}
+}
+
+Block {
+BlockType "From"
+Name "fromasv19"
+SID "4367"
+Position [1240, 201, 1280, 219]
+ZOrder "351"
+ShowName off
+GotoTag "yLG"
+Port {
+PortNumber "1"
+Name "YLG"
+}
+}
+
+Block {
+BlockType "From"
+Name "fromasv2"
+SID "4368"
+Position [995, 191, 1030, 209]
+ZOrder "266"
+ShowName off
+GotoTag "X"
+Port {
+PortNumber "1"
+Name "X"
+}
+}
+
+Block {
+BlockType "From"
+Name "fromasv20"
+SID "4369"
+Position [1240, 236, 1280, 254]
+ZOrder "352"
+ShowName off
+GotoTag "ssLG"
+Port {
+PortNumber "1"
+Name "ssLG"
+}
+}
+
+Block {
+BlockType "From"
+Name "fromasv21"
+SID "4370"
+Position [790, 261, 825, 279]
+ZOrder "355"
+ShowName off
+GotoTag "xEA"
+}
+
+Block {
+BlockType "From"
+Name "fromasv25"
+SID "4479"
+Position [1240, 271, 1275, 289]
+ZOrder "368"
+ShowName off
+GotoTag "ab"
+}
+
+Block {
+BlockType "From"
+Name "fromasv3"
+SID "4371"
+Position [995, 226, 1030, 244]
+ZOrder "267"
+ShowName off
+GotoTag "PHI"
+Port {
+PortNumber "1"
+Name "PHI"
+}
+}
+
+Block {
+BlockType "From"
+Name "fromasv4"
+SID "4372"
+Position [995, 156, 1030, 174]
+ZOrder "268"
+ShowName off
+GotoTag "OM"
+Port {
+PortNumber "1"
+Name "OM"
+}
+}
+
+Block {
+BlockType "From"
+Name "fromasv5"
+SID "4373"
+Position [995, 121, 1030, 139]
+ZOrder "269"
+ShowName off
+GotoTag "V"
+Port {
+PortNumber "1"
+Name "V"
+}
+}
+
+Block {
+BlockType "From"
+Name "fromasv8"
+SID "4376"
+Position [1080, 501, 1115, 519]
+ZOrder "289"
+ShowName off
+GotoTag "ab"
+}
+
+Block {
+BlockType "From"
+Name "fromasv9"
+SID "4377"
+Position [1240, 131, 1275, 149]
+ZOrder "290"
+ShowName off
+GotoTag "VzLG"
+Port {
+PortNumber "1"
+Name "VzLG"
+}
+}
+
+Block {
+BlockType "Goto"
+Name "toasv1"
+SID "4378"
+Position [680, 300, 715, 320]
+ZOrder "259"
+ShowName off
+GotoTag "X"
+}
+
+Block {
+BlockType "Goto"
+Name "toasv10"
+SID "4379"
+Position [670, 700, 705, 720]
+ZOrder "282"
+ShowName off
+GotoTag "VzLG"
+}
+
+Block {
+BlockType "Goto"
+Name "toasv13"
+SID "4382"
+Position [440, 145, 475, 165]
+ZOrder "354"
+ShowName off
+GotoTag "xEA"
+}
+
+Block {
+BlockType "Goto"
+Name "toasv14"
+SID "4383"
+Position [830, 790, 865, 810]
+ZOrder "341"
+ShowName off
+GotoTag "yLG"
+}
+
+Block {
+BlockType "Goto"
+Name "toasv15"
+SID "4384"
+Position [670, 800, 705, 820]
+ZOrder "342"
+ShowName off
+GotoTag "ssLG"
+}
+
+Block {
+BlockType "Goto"
+Name "toasv19"
+SID "4388"
+Position [830, 710, 865, 730]
+ZOrder "346"
+ShowName off
+GotoTag "DLG"
+}
+
+Block {
+BlockType "Goto"
+Name "toasv2"
+SID "4389"
+Position [680, 200, 715, 220]
+ZOrder "260"
+ShowName off
+GotoTag "V"
+}
+
+Block {
+BlockType "Goto"
+Name "toasv3"
+SID "4390"
+Position [680, 250, 715, 270]
+ZOrder "261"
+ShowName off
+GotoTag "OM"
+}
+
+Block {
+BlockType "Goto"
+Name "toasv4"
+SID "4391"
+Position [680, 350, 715, 370]
+ZOrder "262"
+ShowName off
+GotoTag "PHI"
+}
+
+Block {
+BlockType "Goto"
+Name "toasv5"
+SID "4392"
+Position [680, 150, 715, 170]
+ZOrder "277"
+ShowName off
+GotoTag "Nxyz"
+}
+
+Block {
+BlockType "Goto"
+Name "toasv6"
+SID "4393"
+Position [680, 400, 715, 420]
+ZOrder "278"
+ShowName off
+GotoTag "ab"
+}
+
+Block {
+BlockType "Outport"
+Name "x"
+SID "4397"
+Position [1170, 193, 1200, 207]
+ZOrder "231"
+ForegroundColor "red"
+BackgroundColor [1.000000, 0.800000, 0.196078]
+NamePlacement "alternate"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "ys"
+SID "4398"
+Position [1525, 203, 1555, 217]
+ZOrder "232"
+BackgroundColor [0.886275, 1.000000, 0.215686]
+NamePlacement "alternate"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "ym"
+SID "4509"
+Position [1525, 628, 1555, 642]
+ZOrder "374"
+BackgroundColor [0.886275, 1.000000, 0.215686]
+NamePlacement "alternate"
+Port "3"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "3886#out:1"
+Dst "4506#in:2"
+}
+
+Line {
+Name "alpha"
+ZOrder "2"
+Labels [-1, 0]
+Src "4475#out:1"
+Dst "4306#in:4"
+}
+
+Line {
+ZOrder "3"
+Src "4376#out:1"
+Dst "4475#in:1"
+}
+
+Line {
+Name "OM"
+ZOrder "4"
+Labels [0, 0]
+Src "4308#out:1"
+Dst "4306#in:2"
+}
+
+Line {
+Name "r"
+ZOrder "5"
+Labels [0, 0]
+Src "4315#out:3"
+Dst "4308#in:3"
+}
+
+Line {
+Name "q"
+ZOrder "6"
+Labels [0, 0]
+Src "4315#out:2"
+Dst "4308#in:2"
+}
+
+Line {
+Name "p"
+ZOrder "7"
+Labels [0, 0]
+Src "4315#out:1"
+Dst "4308#in:1"
+}
+
+Line {
+Name "OM"
+ZOrder "8"
+Labels [0, 0]
+Src "4363#out:1"
+Dst "4315#in:1"
+}
+
+Line {
+Name "nz"
+ZOrder "9"
+Labels [0, 0]
+Src "4316#out:3"
+Dst "4309#in:3"
+}
+
+Line {
+Name "ny"
+ZOrder "10"
+Labels [0, 0]
+Src "4316#out:2"
+Dst "4309#in:2"
+}
+
+Line {
+Name "nx"
+ZOrder "11"
+Labels [0, 0]
+Src "4316#out:1"
+Dst "4309#in:1"
+}
+
+Line {
+Name "Nxyz"
+ZOrder "12"
+Labels [1, 1]
+Src "4364#out:1"
+Dst "4316#in:1"
+}
+
+Line {
+Name "Nxyz"
+ZOrder "13"
+Labels [0, 0]
+Src "4309#out:1"
+Dst "4306#in:1"
+}
+
+Line {
+Name "psi"
+ZOrder "14"
+Labels [0, 0]
+Src "4317#out:3"
+Dst "4310#in:3"
+}
+
+Line {
+Name "teta"
+ZOrder "15"
+Labels [0, 0]
+Src "4317#out:2"
+Dst "4310#in:2"
+}
+
+Line {
+Name "phi"
+ZOrder "16"
+Labels [0, 0]
+Src "4317#out:1"
+Dst "4310#in:1"
+}
+
+Line {
+Name "PHI"
+ZOrder "17"
+Labels [1, 1]
+Src "4362#out:1"
+Dst "4317#in:1"
+}
+
+Line {
+Name "PHI"
+ZOrder "18"
+Labels [0, 0]
+Src "4310#out:1"
+Dst "4306#in:3"
+}
+
+Line {
+ZOrder "19"
+Src "3887#out:13"
+Points [73, 0]
+Branch {
+ZOrder "20"
+Points [0, 40]
+Dst "4354#in:1"
+}
+
+Branch {
+ZOrder "21"
+Dst "4355#in:1"
+}
+
+Branch {
+ZOrder "22"
+Points [0, -40]
+Dst "4356#in:1"
+}
+}
+
+Line {
+ZOrder "23"
+Src "4354#out:1"
+Dst "4383#in:1"
+}
+
+Line {
+ZOrder "24"
+Src "3887#out:14"
+Dst "4384#in:1"
+}
+
+Line {
+ZOrder "25"
+Src "3887#out:16"
+Dst "4318#in:1"
+}
+
+Line {
+Name "dy"
+ZOrder "26"
+Labels [-1, 0]
+Src "4318#out:1"
+Dst "4311#in:1"
+}
+
+Line {
+Name "dz"
+ZOrder "27"
+Labels [-1, 0]
+Src "4318#out:2"
+Dst "4311#in:2"
+}
+
+Line {
+ZOrder "28"
+Src "4356#out:1"
+Dst "4388#in:1"
+}
+
+Line {
+Name "HLG"
+ZOrder "29"
+Labels [-1, 0]
+Src "4355#out:1"
+Points [86, 0; 0, 50]
+Dst "4306#in:10"
+}
+
+Line {
+Name "Nxyz"
+ZOrder "30"
+Src "3887#out:1"
+Dst "4392#in:1"
+}
+
+Line {
+Name "V"
+ZOrder "31"
+Src "3887#out:2"
+Dst "4389#in:1"
+}
+
+Line {
+Name "OM"
+ZOrder "32"
+Src "3887#out:3"
+Dst "4390#in:1"
+}
+
+Line {
+ZOrder "33"
+Src "3887#out:4"
+Dst "4378#in:1"
+}
+
+Line {
+Name "PHI"
+ZOrder "34"
+Src "3887#out:5"
+Dst "4391#in:1"
+}
+
+Line {
+Name "ab"
+ZOrder "35"
+Src "3887#out:6"
+Dst "4393#in:1"
+}
+
+Line {
+Name "Vc"
+ZOrder "36"
+Labels [-1, 0]
+Src "3887#out:7"
+Points [374, 0; 0, 100]
+Dst "4306#in:5"
+}
+
+Line {
+Name "Va"
+ZOrder "37"
+Labels [-1, 0]
+Src "3887#out:8"
+Points [344, 0; 0, 100]
+Dst "4306#in:6"
+}
+
+Line {
+Name "Vg"
+ZOrder "38"
+Labels [-1, 0]
+Src "3887#out:9"
+Points [315, 0; 0, 100]
+Dst "4306#in:7"
+}
+
+Line {
+Name "Chi"
+ZOrder "39"
+Labels [-1, 0]
+Src "3887#out:15"
+Dst "4306#in:11"
+}
+
+Line {
+Name "VzLG"
+ZOrder "40"
+Src "3887#out:12"
+Dst "4379#in:1"
+}
+
+Line {
+Name "V"
+ZOrder "41"
+Src "4373#out:1"
+Dst "4307#in:1"
+}
+
+Line {
+Name "OM"
+ZOrder "42"
+Src "4372#out:1"
+Dst "4307#in:2"
+}
+
+Line {
+Name "X"
+ZOrder "43"
+Src "4368#out:1"
+Dst "4307#in:3"
+}
+
+Line {
+Name "PHI"
+ZOrder "44"
+Src "4371#out:1"
+Dst "4307#in:4"
+}
+
+Line {
+ZOrder "45"
+Src "4307#out:1"
+Dst "4397#in:1"
+}
+
+Line {
+ZOrder "46"
+Src "3884#out:1"
+Dst "4320#in:1"
+}
+
+Line {
+ZOrder "47"
+Src "4320#out:2"
+Dst "3887#in:1"
+}
+
+Line {
+ZOrder "48"
+Src "4320#out:1"
+Dst "4382#in:1"
+}
+
+Line {
+Name "DTH"
+ZOrder "49"
+Labels [0, 0]
+Src "4319#out:1"
+Dst "4312#in:1"
+}
+
+Line {
+Name "DA"
+ZOrder "50"
+Labels [0, 0]
+Src "4319#out:2"
+Dst "4312#in:2"
+}
+
+Line {
+Name "DE"
+ZOrder "51"
+Labels [0, 0]
+Src "4319#out:3"
+Dst "4312#in:3"
+}
+
+Line {
+Name "DR"
+ZOrder "52"
+Labels [1, 1]
+Src "4319#out:4"
+Dst "4312#in:4"
+}
+
+Line {
+ZOrder "53"
+Src "4370#out:1"
+Dst "4319#in:1"
+}
+
+Line {
+Name "ACT"
+ZOrder "54"
+Src "4312#out:1"
+Dst "4307#in:5"
+}
+
+Line {
+Name "ILS"
+ZOrder "55"
+Labels [1, 1]
+Src "4311#out:1"
+Dst "4306#in:12"
+}
+
+Line {
+ZOrder "56"
+Src "4479#out:1"
+Dst "4478#in:1"
+}
+
+Line {
+Name "Vz"
+ZOrder "57"
+Labels [-1, 0]
+Src "3887#out:10"
+Points [292, 0; 0, 100]
+Dst "4306#in:8"
+}
+
+Line {
+Name "H"
+ZOrder "58"
+Labels [-1, 0]
+Src "3887#out:11"
+Points [266, 0; 0, 100]
+Dst "4306#in:9"
+}
+
+Line {
+ZOrder "59"
+Src "4483#out:1"
+Dst "3887#in:3"
+}
+
+Line {
+ZOrder "60"
+Src "4505#out:1"
+Points [70, 0]
+Dst "4506#in:1"
+}
+
+Line {
+ZOrder "61"
+Src "4506#out:1"
+Dst "3887#in:2"
+}
+
+Line {
+ZOrder "62"
+Src "4306#out:1"
+Dst "4509#in:1"
+}
+
+Line {
+Name "SIM"
+ZOrder "63"
+Src "4313#out:1"
+Dst "4398#in:1"
+}
+
+Line {
+ZOrder "64"
+Src "3885#out:1"
+Dst "4320#in:2"
+}
+
+Line {
+Name "beta"
+ZOrder "65"
+Labels [1, 1]
+Src "4478#out:1"
+Dst "4313#in:5"
+}
+
+Line {
+Name "ssLG"
+ZOrder "66"
+Labels [1, 1]
+Src "4369#out:1"
+Dst "4313#in:4"
+}
+
+Line {
+Name "YLG"
+ZOrder "67"
+Labels [1, 1]
+Src "4367#out:1"
+Dst "4313#in:3"
+}
+
+Line {
+Name "DLG"
+ZOrder "68"
+Labels [1, 1]
+Src "4366#out:1"
+Dst "4313#in:2"
+}
+
+Line {
+Name "VzLG"
+ZOrder "69"
+Labels [1, 1]
+Src "4377#out:1"
+Dst "4313#in:1"
+}
+
+Annotation {
+SID "4400"
+Name "Developed by \nJean-Marc Biannic, ONERA\nfor the SMAC project  "
+Position [192, 669, 357, 716]
+InternalMargins [0, 0, 0, 0]
+ZOrder "-1"
+FontName "Sans Serif"
+FontSize "12"
+FontWeight "bold"
+}
+
+Annotation {
+SID "4399"
+Name "http://w3.onera.fr/smac"
+Position [186, 735, 363, 754]
+InternalMargins [0, 0, 0, 0]
+ForegroundColor "blue"
+ZOrder "-2"
+FontName "Sans Serif"
+FontSize "14"
+FontWeight "bold"
+}
+}
+}
+
+Block {
+BlockType "Outport"
+Name "X  \n(size=16)"
+SID "1096"
+Position [585, 78, 615, 92]
+ZOrder "158"
+BackgroundColor [1.000000, 0.658824, 0.376471]
+NamePlacement "alternate"
+FontSize "12"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "YM\n(size=19)"
+SID "4510"
+Position [585, 348, 615, 362]
+ZOrder "519"
+BackgroundColor [0.666667, 1.000000, 0.000000]
+NamePlacement "alternate"
+FontSize "12"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "YS\n(size=5)"
+SID "1853"
+Position [585, 213, 615, 227]
+ZOrder "215"
+BackgroundColor [1.000000, 1.000000, 0.000000]
+NamePlacement "alternate"
+FontSize "12"
+Port "3"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "3883#out:1"
+Dst "1096#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "33#out:1"
+Dst "3883#in:1"
+}
+
+Line {
+ZOrder "3"
+Src "508#out:1"
+Dst "3883#in:2"
+}
+
+Line {
+ZOrder "4"
+Src "1118#out:1"
+Dst "3883#in:3"
+}
+
+Line {
+ZOrder "5"
+Src "3883#out:2"
+Dst "1853#in:1"
+}
+
+Line {
+ZOrder "6"
+Src "4486#out:1"
+Dst "3883#in:4"
+}
+
+Line {
+ZOrder "7"
+Src "3883#out:3"
+Dst "4510#in:1"
+}
+
+Annotation {
+SID "4512"
+Name "20        21      22      23      24\nVzLG   DLG  YLG  ssLG   beta"
+Position [466, 236, 603, 258]
+InternalMargins [0, 0, 0, 0]
+BackgroundColor [1.000000, 1.000000, 0.000000]
+DropShadow on
+ZOrder "-1"
+}
+
+Annotation {
+SID "4511"
+Name "YM\n\n01. Nx\n02. Ny\n03. Nz\n04. p \n05. q \n06. r \n07. phi\n08. theta\n09. psi\n10. alpha\n11. Vc\n12. Va\n13. Vg\n14. Vz\n15. H\n16. HLG\n17. Chi\n18. dY\n19. dZ\n"
+Position [643, 173, 686, 395]
+InternalMargins [0, 0, 0, 0]
+BackgroundColor [0.666667, 1.000000, 0.000000]
+DropShadow on
+ZOrder "-2"
+}
+
+Annotation {
+SID "4516"
+Name "V(3)  OM(3)  X(3)  PHI(3)  ACT(4)"
+Position [459, 101, 609, 113]
+InternalMargins [0, 0, 0, 0]
+BackgroundColor [1.000000, 0.666667, 0.498039]
+DropShadow on
+ZOrder "-3"
+}
+}
+
+DiagnosticSuppressor on
+
+LogicAnalyzerPlugin on
+
+NotesPlugin on
+
+SLCCPlugin on
+
+WebScopes_FoundationPlugin on
+
+GraphicalInterface {
+NumRootInports "4"
+NumRootOutports "3"
+ParameterArgumentNames ""
+NumModelReferences "0"
+NumTestPointedSignals "0"
+NumProvidedFunctions "0"
+NumRequiredFunctions "0"
+NumResetEvents "0"
+HasInitializeEvent "0"
+HasTerminateEvent "0"
+PreCompExecutionDomainType "Unset"
+IsExportFunctionModel "0"
+IsArchitectureModel "0"
+IsAUTOSARArchitectureModel "0"
+NumParameterArguments "0"
+NumExternalFileReferences "0"
+OrderedModelArguments "1"
+Inport {
+Name "eprc [1]"
+BusObject ""
+OutputFunctionCall off
+SampleTime "-1"
+UnitExpr "inherit"
+}
+
+Inport {
+Name "delta [2-4]"
+BusObject ""
+OutputFunctionCall off
+SampleTime "-1"
+UnitExpr "inherit"
+DimensionsExpr [3]
+}
+
+Inport {
+Name "Wind [5-7]"
+BusObject ""
+OutputFunctionCall off
+SampleTime "-1"
+UnitExpr "inherit"
+DimensionsExpr [3]
+}
+
+Inport {
+Name "ILSnoise [8-9]"
+BusObject ""
+OutputFunctionCall off
+SampleTime "-1"
+UnitExpr "inherit"
+DimensionsExpr [2]
+}
+
+Outport {
+Name "X   (size=16)"
+BusObject ""
+BusOutputAsStruct off
+UnitExpr "inherit"
+}
+
+Outport {
+Name "YM (size=19)"
+BusObject ""
+BusOutputAsStruct off
+UnitExpr "inherit"
+}
+
+Outport {
+Name "YS (size=5)"
+BusObject ""
+BusOutputAsStruct off
+UnitExpr "inherit"
+}
+}
+
+Object {
+$PropName "BdWindowsInfo"
+$ObjectID 10
+$ClassName "Simulink.BDWindowsInfo"
+BDUuid "2ce0881e-0e8f-4c18-b0ee-5b7375a11201"
+Object {
+$PropName "WindowsInfo"
+$ObjectID 11
+$ClassName "Simulink.WindowInfo"
+IsActive [1]
+Location [198.0, 89.0, 1264.0, 799.0]
+DockComponentsInfo []
+WindowState ""
+WindowUuid ""
+Array {
+PropName "EditorsInfo"
+Type "Simulink.EditorInfo"
+Dimension 2
+Object {
+$ObjectID 14
+IsActive [1]
+IsTabbed [1]
+ViewObjType "SimulinkTopLevel"
+LoadSaveID "0"
+Extents [1013.0, 603.0]
+ZoomFactor [1.3395784543325526]
+Offset [-16.994318181818187, 5.61382139875337]
+SceneRectInView [0.0, 0.0, 0.0, 0.0]
+}
+
+Object {
+$ObjectID 15
+IsActive [0]
+IsTabbed [1]
+ViewObjType "SimulinkSubsys"
+LoadSaveID "4052"
+Extents [1187.0, 777.0]
+ZoomFactor [1.32]
+Offset [198.03030303030312, -113.63636363636363]
+SceneRectInView [0.0, 0.0, 0.0, 0.0]
+}
+}
+
+Array {
+PropName "PersistedApps"
+Type "Cell"
+Dimension 0
+}
+
+Object {
+$PropName "ModelBrowserInfo"
+$ObjectID 12
+$ClassName "Simulink.ModelBrowserInfo"
+Visible [1]
+DockPosition "Left"
+Width [50]
+Height [50]
+Filter [9]
+Minimized "Unset"
+}
+
+Object {
+$PropName "ExplorerBarInfo"
+$ObjectID 13
+$ClassName "Simulink.ExplorerBarInfo"
+Visible [1]
+}
+}
+}
+
+Array {
+Type "Handle"
+Dimension 1
+Simulink.ConfigSet {
+Version "19.1.1"
+$ClassName "Simulink.ConfigSet"
+DisabledProps []
+Description ""
+Name "Configuration"
+CurrentDlgPage "Diagnostics"
+ConfigPrmDlgPosition [ 260, 115, 1180, 841 ]
+ExtraOptions ""
+Array {
+PropName "Components"
+Type "Handle"
+Dimension 9
+Simulink.SolverCC {
+$ObjectID 17
+Version "19.1.1"
+$ClassName "Simulink.SolverCC"
+DisabledProps []
+Description ""
+Components []
+StartTime "0.0"
+StopTime "200"
+AbsTol "auto"
+AutoScaleAbsTol on
+FixedStep "0.05"
+InitialStep "auto"
+MaxOrder "5"
+ZcThreshold "auto"
+ConsecutiveZCsStepRelTol "10*128*eps"
+MaxConsecutiveZCs "1000"
+ExtrapolationOrder "4"
+NumberNewtonIterations "1"
+MaxStep "auto"
+MinStep "auto"
+MaxConsecutiveMinStep "1"
+RelTol "1e-3"
+EnableMultiTasking on
+ConcurrentTasks off
+Solver "ode1"
+SolverName "ode1"
+SolverJacobianMethodControl "auto"
+ShapePreserveControl "DisableAll"
+ZeroCrossControl "UseLocalSettings"
+ZeroCrossAlgorithm "Nonadaptive"
+AlgebraicLoopSolver "TrustRegion"
+SolverInfoToggleStatus off
+IsAutoAppliedInSIP off
+SolverResetMethod "Fast"
+PositivePriorityOrder off
+AutoInsertRateTranBlk off
+SampleTimeConstraint "Unconstrained"
+InsertRTBMode "Whenever possible"
+SampleTimeProperty []
+DecoupledContinuousIntegration off
+MinimalZcImpactIntegration off
+SolverOrder "3"
+}
+
+Simulink.DataIOCC {
+$ObjectID 18
+Version "19.1.1"
+$ClassName "Simulink.DataIOCC"
+DisabledProps []
+Description ""
+Components []
+Decimation "1"
+ExternalInput [t, u]
+FinalStateName "xFinal"
+InitialState []
+LimitDataPoints on
+MaxDataPoints "1000"
+LoadExternalInput off
+LoadInitialState on
+SaveFinalState off
+SaveOperatingPoint off
+SaveFormat "Array"
+SignalLoggingSaveFormat "Dataset"
+SaveOutput on
+SaveState off
+SignalLogging on
+DSMLogging on
+InspectSignalLogs off
+VisualizeSimOutput on
+StreamToWorkspace off
+StreamVariableName "streamout"
+SaveTime on
+ReturnWorkspaceOutputs off
+StateSaveName "xout"
+TimeSaveName "tout"
+OutputSaveName "yout"
+SignalLoggingName "logsout"
+DSMLoggingName "dsmout"
+OutputOption "RefineOutputTimes"
+OutputTimes []
+ReturnWorkspaceOutputsName "out"
+Refine "1"
+LoggingToFile off
+DatasetSignalFormat "timeseries"
+LoggingFileName "out.mat"
+LoggingIntervals [-inf, inf]
+}
+
+Simulink.OptimizationCC {
+$ObjectID 19
+Version "19.1.1"
+$ClassName "Simulink.OptimizationCC"
+Description ""
+Components []
+BlockReduction on
+BooleanDataType on
+ConditionallyExecuteInputs on
+DefaultParameterBehavior "Inlined"
+UseDivisionForNetSlopeComputation off
+GainParamInheritBuiltInType off
+UseFloatMulNetSlope off
+DefaultUnderspecifiedDataType "double"
+UseSpecifiedMinMax off
+InlineInvariantSignals off
+OptimizeBlockIOStorage on
+BufferReuse off
+EnhancedBackFolding off
+CachingGlobalReferences off
+GlobalBufferReuse on
+StrengthReduction off
+AdvancedOptControl ""
+ExpressionFolding on
+BooleansAsBitfields off
+BitfieldContainerType "uint_T"
+EnableMemcpy on
+MemcpyThreshold "64"
+PassReuseOutputArgsAs "Structure reference"
+PassReuseOutputArgsThreshold "12"
+ExpressionDepthLimit "2147483647"
+LocalBlockOutputs on
+RollThreshold "5"
+StateBitsets off
+DataBitsets off
+ActiveStateOutputEnumStorageType "Native Integer"
+ZeroExternalMemoryAtStartup on
+ZeroInternalMemoryAtStartup on
+InitFltsAndDblsToZero off
+NoFixptDivByZeroProtection off
+EfficientFloat2IntCast off
+EfficientMapNaN2IntZero on
+LifeSpan "inf"
+MaxStackSize "Inherit from target"
+BufferReusableBoundary on
+SimCompilerOptimization off
+AccelVerboseBuild off
+OptimizeBlockOrder off
+OptimizeDataStoreBuffers on
+BusAssignmentInplaceUpdate on
+DifferentSizesBufferReuse off
+UseRowMajorAlgorithm off
+OptimizationLevel "level2"
+OptimizationPriority "Balanced"
+OptimizationCustomize on
+LabelGuidedReuse off
+MultiThreadedLoops off
+DenormalBehavior "GradualUnderflow"
+EfficientTunableParamExpr off
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 9
+Cell "BooleansAsBitfields"
+Cell "PassReuseOutputArgsAs"
+Cell "PassReuseOutputArgsThreshold"
+Cell "ZeroExternalMemoryAtStartup"
+Cell "ZeroInternalMemoryAtStartup"
+Cell "OptimizeModelRefInitCode"
+Cell "NoFixptDivByZeroProtection"
+Cell "UseSpecifiedMinMax"
+Cell "EfficientTunableParamExpr"
+}
+}
+
+Simulink.DebuggingCC {
+$ObjectID 20
+Version "19.1.1"
+$ClassName "Simulink.DebuggingCC"
+Description ""
+Components []
+RTPrefix "error"
+ConsistencyChecking "none"
+ArrayBoundsChecking "none"
+SignalInfNanChecking "none"
+StringTruncationChecking "error"
+SignalRangeChecking "none"
+ReadBeforeWriteMsg "UseLocalSettings"
+WriteAfterWriteMsg "UseLocalSettings"
+WriteAfterReadMsg "UseLocalSettings"
+AlgebraicLoopMsg "warning"
+ArtificialAlgebraicLoopMsg "none"
+SaveWithDisabledLinksMsg "warning"
+SaveWithParameterizedLinksMsg "warning"
+CheckSSInitialOutputMsg on
+UnderspecifiedInitializationDetection "Classic"
+MergeDetectMultiDrivingBlocksExec "none"
+CheckExecutionContextPreStartOutputMsg off
+CheckExecutionContextRuntimeOutputMsg off
+SignalResolutionControl "UseLocalSettings"
+BlockPriorityViolationMsg "warning"
+MinStepSizeMsg "warning"
+TimeAdjustmentMsg "none"
+MaxConsecutiveZCsMsg "error"
+MaskedZcDiagnostic "warning"
+IgnoredZcDiagnostic "warning"
+SolverPrmCheckMsg "none"
+InheritedTsInSrcMsg "warning"
+MultiTaskDSMMsg "error"
+MultiTaskCondExecSysMsg "error"
+MultiTaskRateTransMsg "error"
+SingleTaskRateTransMsg "none"
+TasksWithSamePriorityMsg "warning"
+ExportedTasksRateTransMsg "none"
+SigSpecEnsureSampleTimeMsg "warning"
+CheckMatrixSingularityMsg "none"
+IntegerOverflowMsg "warning"
+Int32ToFloatConvMsg "warning"
+ParameterDowncastMsg "error"
+ParameterOverflowMsg "error"
+ParameterUnderflowMsg "none"
+ParameterPrecisionLossMsg "warning"
+ParameterTunabilityLossMsg "warning"
+FixptConstUnderflowMsg "none"
+FixptConstOverflowMsg "none"
+FixptConstPrecisionLossMsg "none"
+UnderSpecifiedDataTypeMsg "none"
+UnnecessaryDatatypeConvMsg "none"
+VectorMatrixConversionMsg "none"
+InvalidFcnCallConnMsg "error"
+FcnCallInpInsideContextMsg "error"
+SignalLabelMismatchMsg "none"
+UnconnectedInputMsg "warning"
+UnconnectedOutputMsg "warning"
+UnconnectedLineMsg "warning"
+UseOnlyExistingSharedCode "error"
+SFcnCompatibilityMsg "none"
+FrameProcessingCompatibilityMsg "error"
+UniqueDataStoreMsg "none"
+BusObjectLabelMismatch "warning"
+RootOutportRequireBusObject "warning"
+AssertControl "UseLocalSettings"
+AllowSymbolicDim on
+RowMajorDimensionSupport off
+ModelReferenceIOMsg "none"
+ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+ModelReferenceVersionMismatchMessage "none"
+ModelReferenceIOMismatchMessage "none"
+UnknownTsInhSupMsg "warning"
+ModelReferenceDataLoggingMessage "warning"
+ModelReferenceSymbolNameMessage "warning"
+ModelReferenceExtraNoncontSigs "error"
+StateNameClashWarn "warning"
+OperatingPointInterfaceChecksumMismatchMsg "warning"
+NonCurrentReleaseOperatingPointMsg "error"
+ChecksumConsistencyForSSReuse "none"
+PregeneratedLibrarySubsystemCodeDiagnostic "warning"
+MatchCodeGenerationContextForUpdateDiagram "none"
+InitInArrayFormatMsg "none"
+StrictBusMsg "ErrorLevel1"
+BusNameAdapt "WarnAndRepair"
+NonBusSignalsTreatedAsBus "none"
+SymbolicDimMinMaxWarning "warning"
+LossOfSymbolicDimsSimulationWarning "warning"
+LossOfSymbolicDimsCodeGenerationWarning "error"
+SymbolicDimsDataTypeCodeGenerationDiagnostic "error"
+BlockIODiagnostic "none"
+SFUnusedDataAndEventsDiag "warning"
+SFUnexpectedBacktrackingDiag "warning"
+SFInvalidInputDataAccessInChartInitDiag "warning"
+SFNoUnconditionalDefaultTransitionDiag "warning"
+SFTransitionOutsideNaturalParentDiag "warning"
+SFUnreachableExecutionPathDiag "warning"
+SFUndirectedBroadcastEventsDiag "warning"
+SFTransitionActionBeforeConditionDiag "warning"
+SFOutputUsedAsStateInMooreChartDiag "error"
+SFTemporalDelaySmallerThanSampleTimeDiag "warning"
+SFSelfTransitionDiag "warning"
+SFExecutionAtInitializationDiag "none"
+SFMachineParentedDataDiag "warning"
+IntegerSaturationMsg "warning"
+AllowedUnitSystems "all"
+UnitsInconsistencyMsg "warning"
+AllowAutomaticUnitConversions on
+RCSCRenamedMsg "warning"
+RCSCObservableMsg "warning"
+ForceCombineOutputUpdateInSim off
+UnitDatabase ""
+UnderSpecifiedDimensionMsg "none"
+DebugExecutionForFMUViaOutOfProcess off
+ArithmeticOperatorsInVariantConditions "warning"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 1
+Cell "UseOnlyExistingSharedCode"
+}
+}
+
+Simulink.HardwareCC {
+$ObjectID 21
+Version "19.1.1"
+$ClassName "Simulink.HardwareCC"
+DisabledProps []
+Description ""
+Components []
+ProdBitPerChar "8"
+ProdBitPerShort "16"
+ProdBitPerInt "32"
+ProdBitPerLong "32"
+ProdBitPerLongLong "64"
+ProdBitPerFloat "32"
+ProdBitPerDouble "64"
+ProdBitPerPointer "32"
+ProdBitPerSizeT "32"
+ProdBitPerPtrDiffT "32"
+ProdLargestAtomicInteger "Char"
+ProdLargestAtomicFloat "None"
+ProdIntDivRoundTo "Undefined"
+ProdEndianess "Unspecified"
+ProdWordSize "32"
+ProdShiftRightIntArith on
+ProdLongLongMode off
+ProdHWDeviceType "32-bit Generic"
+TargetBitPerChar "8"
+TargetBitPerShort "16"
+TargetBitPerInt "32"
+TargetBitPerLong "32"
+TargetBitPerLongLong "64"
+TargetBitPerFloat "32"
+TargetBitPerDouble "64"
+TargetBitPerPointer "32"
+TargetBitPerSizeT "32"
+TargetBitPerPtrDiffT "32"
+TargetLargestAtomicInteger "Char"
+TargetLargestAtomicFloat "None"
+TargetShiftRightIntArith on
+TargetLongLongMode off
+TargetIntDivRoundTo "Undefined"
+TargetEndianess "Unspecified"
+TargetWordSize "32"
+TargetPreprocMaxBitsSint "32"
+TargetPreprocMaxBitsUint "32"
+TargetHWDeviceType "Specified"
+TargetUnknown off
+ProdEqTarget on
+UseEmbeddedCoderFeatures on
+UseSimulinkCoderFeatures on
+HardwareBoardFeatureSet "EmbeddedCoderHSP"
+}
+
+Simulink.ModelReferenceCC {
+$ObjectID 22
+Version "19.1.1"
+$ClassName "Simulink.ModelReferenceCC"
+DisabledProps []
+Description ""
+Components []
+UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+EnableRefExpFcnMdlSchedulingChecks on
+CheckModelReferenceTargetMessage "error"
+EnableParallelModelReferenceBuilds off
+ParallelModelReferenceErrorOnInvalidPool on
+ParallelModelReferenceMATLABWorkerInit "None"
+ModelReferenceNumInstancesAllowed "Multi"
+PropagateVarSize "Infer from blocks in model"
+ModelDependencies ""
+ModelReferencePassRootInputsByReference on
+ModelReferenceMinAlgLoopOccurrences off
+PropagateSignalLabelsOutOfModel off
+SupportModelReferenceSimTargetCustomCode off
+}
+
+Simulink.SFSimCC {
+$ObjectID 23
+Version "19.1.1"
+$ClassName "Simulink.SFSimCC"
+DisabledProps []
+Description ""
+Components []
+SimCustomSourceCode ""
+SimCustomHeaderCode ""
+SimCustomInitializer ""
+SimCustomTerminator ""
+SimReservedNameArray []
+SimUserSources ""
+SimUserIncludeDirs ""
+SimUserLibraries ""
+SimUserDefines ""
+SimCustomCompilerFlags ""
+SimCustomLinkerFlags ""
+SFSimEcho on
+SimCtrlC on
+SimIntegrity on
+SimUseLocalCustomCode off
+SimParseCustomCode on
+SimAnalyzeCustomCode off
+SimBuildMode "sf_incremental_build"
+SimGenImportedTypeDefs off
+ModelFunctionsGlobalVisibility on
+CompileTimeRecursionLimit "50"
+EnableRuntimeRecursion on
+MATLABDynamicMemAlloc on
+MATLABDynamicMemAllocThreshold "65536"
+CustomCodeFunctionArrayLayout []
+DefaultCustomCodeFunctionArrayLayout "NotSpecified"
+CustomCodeUndefinedFunction "UseInterfaceOnly"
+}
+
+Simulink.RTWCC {
+BackupClass "Simulink.RTWCC"
+$ObjectID 24
+Version "19.1.1"
+$ClassName "Simulink.RTWCC"
+Description ""
+SystemTargetFile "grt.tlc"
+HardwareBoard "None"
+ShowCustomHardwareApp off
+ShowEmbeddedHardwareApp off
+TLCOptions ""
+GenCodeOnly off
+MakeCommand "make_rtw"
+GenerateMakefile on
+PackageGeneratedCodeAndArtifacts off
+PackageName ""
+TemplateMakefile "grt_default_tmf"
+PostCodeGenCommand ""
+GenerateReport off
+RTWVerbose on
+RetainRTWFile off
+RTWBuildHooks []
+ProfileTLC off
+TLCDebug off
+TLCCoverage off
+TLCAssert off
+RTWUseLocalCustomCode off
+RTWUseSimCustomCode off
+CustomSourceCode ""
+CustomHeaderCode ""
+CustomInclude ""
+CustomSource ""
+CustomLibrary ""
+CustomDefine ""
+CustomBLASCallback ""
+CustomLAPACKCallback ""
+CustomFFTCallback ""
+CustomInitializer ""
+CustomTerminator ""
+Toolchain "Automatically locate an installed toolchain"
+BuildConfiguration "Faster Builds"
+CustomToolchainOptions []
+IncludeHyperlinkInReport off
+LaunchReport off
+PortableWordSizes off
+CreateSILPILBlock "None"
+CodeExecutionProfiling off
+CodeExecutionProfileVariable "executionProfile"
+CodeProfilingSaveOptions "SummaryOnly"
+CodeProfilingInstrumentation off
+SILDebugging off
+TargetLang "C"
+IncludeBusHierarchyInRTWFileBlockHierarchyMap off
+GenerateTraceInfo off
+GenerateTraceReport off
+GenerateTraceReportSl off
+GenerateTraceReportSf off
+GenerateTraceReportEml off
+GenerateWebview off
+GenerateCodeMetricsReport off
+GenerateCodeReplacementReport off
+GenerateMissedCodeReplacementReport off
+RTWCompilerOptimization off
+ObjectivePriorities []
+RTWCustomCompilerOptimizations ""
+CheckMdlBeforeBuild "Off"
+SharedConstantsCachingThreshold "1024"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 16
+Cell "IncludeHyperlinkInReport"
+Cell "GenerateTraceInfo"
+Cell "GenerateTraceReport"
+Cell "GenerateTraceReportSl"
+Cell "GenerateTraceReportSf"
+Cell "GenerateTraceReportEml"
+Cell "PortableWordSizes"
+Cell "GenerateWebview"
+Cell "GenerateCodeMetricsReport"
+Cell "GenerateCodeReplacementReport"
+Cell "GenerateErtSFunction"
+Cell "CreateSILPILBlock"
+Cell "CodeExecutionProfiling"
+Cell "CodeProfilingSaveOptions"
+Cell "CodeProfilingInstrumentation"
+Cell "GenerateMissedCodeReplacementReport"
+}
+
+Array {
+PropName "Components"
+Type "Handle"
+Dimension 2
+Object {
+$ObjectID 25
+Version "19.1.1"
+$ClassName "Simulink.CodeAppCC"
+Description ""
+Components []
+Comment ""
+ForceParamTrailComments off
+GenerateComments on
+CommentStyle "Auto"
+IgnoreCustomStorageClasses on
+IgnoreTestpoints off
+MaxIdLength "31"
+PreserveName off
+PreserveNameWithParent off
+ShowEliminatedStatement off
+OperatorAnnotations off
+SimulinkDataObjDesc off
+SFDataObjDesc off
+MATLABFcnDesc off
+MangleLength "1"
+SharedChecksumLength "8"
+CustomSymbolStrGlobalVar "$R$N$M"
+CustomSymbolStrType "$N$R$M_T"
+CustomSymbolStrField "$N$M"
+CustomSymbolStrFcn "$R$N$M$F"
+CustomSymbolStrModelFcn "$R$N"
+CustomSymbolStrFcnArg "rt$I$N$M"
+CustomSymbolStrBlkIO "rtb_$N$M"
+CustomSymbolStrTmpVar "$N$M"
+CustomSymbolStrMacro "$R$N$M"
+CustomSymbolStrUtil "$N$C"
+CustomSymbolStrEmxType "emxArray_$M$N"
+CustomSymbolStrEmxFcn "emx$M$N"
+CustomUserTokenString ""
+CustomCommentsFcn ""
+DefineNamingRule "None"
+DefineNamingFcn ""
+ParamNamingRule "None"
+ParamNamingFcn ""
+SignalNamingRule "None"
+SignalNamingFcn ""
+InsertBlockDesc off
+InsertPolySpaceComments off
+SimulinkBlockComments on
+BlockCommentType "BlockPathComment"
+StateflowObjectComments on
+MATLABSourceComments off
+EnableCustomComments off
+InternalIdentifierFile ""
+InternalIdentifier "Shortened"
+InlinedPrmAccess "Literals"
+ReqsInCode off
+UseSimReservedNames off
+ReservedNameArray []
+EnumMemberNameClash "error"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 28
+Cell "IgnoreCustomStorageClasses"
+Cell "IgnoreTestpoints"
+Cell "InsertBlockDesc"
+Cell "InsertPolySpaceComments"
+Cell "SFDataObjDesc"
+Cell "MATLABFcnDesc"
+Cell "SimulinkDataObjDesc"
+Cell "DefineNamingRule"
+Cell "SignalNamingRule"
+Cell "ParamNamingRule"
+Cell "InternalIdentifier"
+Cell "InlinedPrmAccess"
+Cell "CustomSymbolStr"
+Cell "CustomSymbolStrGlobalVar"
+Cell "CustomSymbolStrType"
+Cell "CustomSymbolStrField"
+Cell "CustomSymbolStrFcn"
+Cell "CustomSymbolStrFcnArg"
+Cell "CustomSymbolStrBlkIO"
+Cell "CustomSymbolStrTmpVar"
+Cell "CustomSymbolStrMacro"
+Cell "ReqsInCode"
+Cell "BlockCommentType"
+Cell "CustomSymbolStrModelFcn"
+Cell "CustomSymbolStrUtil"
+Cell "CustomSymbolStrEmxType"
+Cell "CustomSymbolStrEmxFcn"
+Cell "CustomUserTokenString"
+}
+}
+
+Object {
+BackupClass "Simulink.TargetCC"
+$ObjectID 26
+Version "19.1.1"
+$ClassName "Simulink.GRTTargetCC"
+Description ""
+Components []
+TargetFcnLib "ansi_tfl_table_tmw.mat"
+TargetLibSuffix ""
+TargetPreCompLibLocation ""
+GenFloatMathFcnCalls "NOT IN USE"
+TargetLangStandard "C89/C90 (ANSI)"
+CodeReplacementLibrary "None"
+UtilityFuncGeneration "Auto"
+MultiwordTypeDef "System defined"
+MultiwordLength "2048"
+DynamicStringBufferSize "256"
+GenerateFullHeader on
+InferredTypesCompatibility off
+ExistingSharedCode ""
+GenerateSampleERTMain off
+GenerateTestInterfaces off
+ModelReferenceCompliant on
+ParMdlRefBuildCompliant on
+CompOptLevelCompliant on
+ConcurrentExecutionCompliant on
+IncludeMdlTerminateFcn on
+GeneratePreprocessorConditionals "Disable all"
+CombineOutputUpdateFcns on
+CombineSignalStateStructs off
+GroupInternalDataByFunction off
+SuppressErrorStatus off
+IncludeFileDelimiter "Auto"
+ERTCustomFileBanners off
+SupportAbsoluteTime on
+LogVarNameModifier "rt_"
+MatFileLogging on
+MultiInstanceERTCode off
+CodeInterfacePackaging "Nonreusable function"
+PurelyIntegerCode off
+SupportNonFinite on
+SupportComplex on
+SupportContinuousTime on
+SupportNonInlinedSFcns on
+RemoveDisableFunc off
+RemoveResetFunc off
+SupportVariableSizeSignals off
+ParenthesesLevel "Nominal"
+CastingMode "Nominal"
+PreserveStateflowLocalDataDimensions off
+MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
+ModelStepFunctionPrototypeControlCompliant off
+CPPClassGenCompliant on
+AutosarCompliant off
+MDXCompliant off
+GRTInterface off
+GenerateAllocFcn off
+UseToolchainInfoCompliant on
+GenerateSharedConstants on
+CoderGroups []
+AccessMethods []
+LookupTableObjectStructAxisOrder "1,2,3,4,..."
+LUTObjectStructOrderExplicitValues "Size,Breakpoints,Table"
+LUTObjectStructOrderEvenSpacing "Size,Breakpoints,Table"
+ArrayLayout "Column-major"
+UnsupportedSFcnMsg "error"
+ERTHeaderFileRootName "$R$E"
+ERTSourceFileRootName "$R$E"
+ERTDataFileRootName "$R_data"
+UseMalloc off
+ExtMode off
+ExtModeStaticAlloc off
+ExtModeTesting off
+ExtModeStaticAllocSize "1000000"
+ExtModeTransport "0"
+ExtModeMexFile "ext_comm"
+ExtModeMexArgs ""
+ExtModeIntrfLevel "Level1"
+RTWCAPISignals off
+RTWCAPIParams off
+RTWCAPIStates off
+RTWCAPIRootIO off
+GenerateASAP2 off
+MultiInstanceErrorCode "Error"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 18
+Cell "GeneratePreprocessorConditionals"
+Cell "IncludeMdlTerminateFcn"
+Cell "PreserveStateflowLocalDataDimensions"
+Cell "SuppressErrorStatus"
+Cell "ERTCustomFileBanners"
+Cell "GenerateSampleERTMain"
+Cell "GenerateTestInterfaces"
+Cell "ModelStepFunctionPrototypeControlCompliant"
+Cell "GenerateAllocFcn"
+Cell "SupportNonInlinedSFcns"
+Cell "PurelyIntegerCode"
+Cell "SupportComplex"
+Cell "SupportAbsoluteTime"
+Cell "SupportContinuousTime"
+Cell "CPPClassGenCompliant"
+Cell "ExistingSharedCode"
+Cell "RemoveDisableFunc"
+Cell "RemoveResetFunc"
+}
+}
+}
+}
+
+SlCovCC.ConfigComp {
+$ObjectID 27
+Version "19.1.1"
+$ClassName "SlCovCC.ConfigComp"
+DisabledProps []
+Description "Simulink Coverage Configuration Component"
+Components []
+Name "Simulink Coverage"
+CovEnable off
+CovScope "EntireSystem"
+CovIncludeTopModel on
+RecordCoverage off
+CovPath "/"
+CovSaveName "covdata"
+CovCompData ""
+CovMetricSettings "dw"
+CovFilter ""
+CovHTMLOptions ""
+CovNameIncrementing off
+CovHtmlReporting on
+CovForceBlockReductionOff on
+CovEnableCumulative on
+CovSaveCumulativeToWorkspaceVar on
+CovSaveSingleToWorkspaceVar on
+CovCumulativeVarName "covCumulativeData"
+CovCumulativeReport off
+CovSaveOutputData on
+CovOutputDir "slcov_output/$ModelName$"
+CovDataFileName "$ModelName$_cvdata"
+CovShowResultsExplorer on
+CovReportOnPause on
+CovModelRefEnable off
+CovModelRefExcluded ""
+CovExternalEMLEnable off
+CovSFcnEnable on
+CovBoundaryAbsTol "1e-05"
+CovBoundaryRelTol "0.01"
+CovUseTimeInterval off
+CovStartTime "0"
+CovStopTime "0"
+CovMcdcMode "Masking"
+}
+}
+}
+}
+
+System {
+PaperOrientation "landscape"
+PaperPositionMode "auto"
+PaperType "A4"
+PaperUnits "centimeters"
+TiledPaperMargins [1.270000, 1.270000, 1.270000, 1.270000]
+TiledPageScale "1"
+ShowPageBoundaries off
+ModelBrowserVisibility on
+ModelBrowserWidth "200"
+ScreenColor "white"
+ZoomFactor "100"
+PortBlocksUseCompactNotation off
+Open off
+}
+
+BlockDefaults {
+ForegroundColor "black"
+BackgroundColor "white"
+DropShadow off
+NamePlacement "normal"
+FontName "Helvetica"
+FontSize "10"
+FontWeight "normal"
+FontAngle "normal"
+ShowName on
+HideAutomaticName on
+BlockRotation "0"
+BlockMirror off
+}
+
+AnnotationDefaults {
+HorizontalAlignment "center"
+VerticalAlignment "middle"
+ForegroundColor "black"
+BackgroundColor "white"
+DropShadow off
+FontName "Helvetica"
+FontSize "10"
+FontWeight "normal"
+FontAngle "normal"
+MarkupType "model"
+UseDisplayTextAsClickCallback off
+AnnotationType "note_annotation"
+FixedHeight off
+FixedWidth off
+Interpreter off
+}
+
+LineDefaults {
+FontName "Helvetica"
+FontSize "9"
+FontWeight "normal"
+FontAngle "normal"
+}
+
+MaskDefaults {
+SelfModifiable "off"
+IconFrame "on"
+IconOpaque "opaque"
+RunInitForIconRedraw "analyze"
+IconRotate "none"
+PortRotate "default"
+IconUnits "autoscale"
+Display ""
+
+}
+
+MaskParameterDefaults {
+Evaluate "on"
+Tunable "on"
+NeverSave "off"
+Internal "off"
+ReadOnly "off"
+Enabled "on"
+Visible "on"
+ToolTip "on"
+Value ""
+}
+
+BlockParameterDefaults {
+Block {
+BlockType "Abs"
+ZeroCross on
+SampleTime "-1"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Same as input"
+LockScale off
+RndMeth "Floor"
+SaturateOnIntegerOverflow on
+}
+
+Block {
+BlockType "BusCreator"
+DisplayOption "none"
+OutDataTypeStr "Inherit: auto"
+NonVirtualBus off
+}
+
+Block {
+BlockType "BusSelector"
+}
+
+Block {
+BlockType "Constant"
+Value "1"
+VectorParams1D on
+SamplingMode "Sample based"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Inherit from 'Constant value'"
+LockScale off
+SampleTime "inf"
+FramePeriod "inf"
+PreserveConstantTs off
+}
+
+Block {
+BlockType "Demux"
+Outputs "4"
+DisplayOption "none"
+BusSelectionMode off
+}
+
+Block {
+BlockType "Fcn"
+Expr "sin(u[1])"
+SampleTime "-1"
+}
+
+Block {
+BlockType "From"
+GotoTag "A"
+IconDisplay "Tag"
+TagVisibility "local"
+}
+
+Block {
+BlockType "Gain"
+Gain "1"
+Multiplication "Element-wise(K.*u)"
+ParamMin []
+ParamMax []
+ParamDataTypeStr "Inherit: Same as input"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Same as input"
+LockScale off
+RndMeth "Floor"
+SaturateOnIntegerOverflow on
+SampleTime "-1"
+}
+
+Block {
+BlockType "Goto"
+GotoTag "A"
+IconDisplay "Tag"
+TagVisibility "local"
+}
+
+Block {
+BlockType "Inport"
+Port "1"
+OutputFunctionCall off
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: auto"
+LockScale off
+BusOutputAsStruct off
+Unit "inherit"
+PortDimensions "-1"
+VarSizeSig "Inherit"
+SampleTime "-1"
+SignalType "auto"
+SamplingMode "auto"
+LatchByDelayingOutsideSignal off
+LatchInputForFeedbackSignals off
+Interpolate on
+}
+
+Block {
+BlockType "Integrator"
+ExternalReset "none"
+InitialConditionSource "internal"
+InitialCondition "0"
+LimitOutput off
+UpperSaturationLimit "inf"
+LowerSaturationLimit "-inf"
+WrapState off
+WrappedStateUpperValue "pi"
+WrappedStateLowerValue "-pi"
+ShowSaturationPort off
+ShowStatePort off
+AbsoluteTolerance "auto"
+IgnoreLimit off
+ZeroCross on
+ContinuousStateAttributes "''"
+}
+
+Block {
+BlockType "Math"
+Operator "exp"
+SignedPower on
+OutputSignalType "auto"
+SampleTime "-1"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Same as first input"
+LockScale off
+RndMeth "Floor"
+SaturateOnIntegerOverflow on
+IntermediateResultsDataTypeStr "Inherit: Inherit via internal rule"
+AlgorithmType "Newton-Raphson"
+Iterations "3"
+}
+
+Block {
+BlockType "Mux"
+Inputs "4"
+DisplayOption "none"
+UseBusObject off
+BusObject "BusObject"
+NonVirtualBus off
+}
+
+Block {
+BlockType "Outport"
+Port "1"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: auto"
+LockScale off
+BusOutputAsStruct off
+Unit "inherit"
+PortDimensions "-1"
+VarSizeSig "Inherit"
+SampleTime "-1"
+SignalType "auto"
+SamplingMode "auto"
+EnsureOutportIsVirtual off
+SourceOfInitialOutputValue "Dialog"
+OutputWhenDisabled "held"
+InitialOutput []
+MustResolveToSignalObject off
+OutputWhenUnConnected off
+OutputWhenUnconnectedValue "0"
+VectorParamsAs1DForOutWhenUnconnected on
+}
+
+Block {
+BlockType "Product"
+Inputs "2"
+Multiplication "Element-wise(.*)"
+CollapseMode "All dimensions"
+CollapseDim "1"
+InputSameDT on
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Same as first input"
+LockScale off
+RndMeth "Zero"
+SaturateOnIntegerOverflow on
+SampleTime "-1"
+}
+
+Block {
+BlockType "Saturate"
+UpperLimitSource "Dialog"
+UpperLimit "0.5"
+LowerLimitSource "Dialog"
+LowerLimit "-0.5"
+LinearizeAsGain on
+ZeroCross on
+SampleTime "-1"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Same as input"
+LockScale off
+RndMeth "Floor"
+}
+
+Block {
+BlockType "Selector"
+NumberOfDimensions "1"
+IndexMode "One-based"
+InputPortWidth "-1"
+SampleTime "-1"
+}
+
+Block {
+BlockType "Sqrt"
+Operator "sqrt"
+OutputSignalType "auto"
+SampleTime "-1"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Same as first input"
+LockScale off
+RndMeth "Floor"
+SaturateOnIntegerOverflow on
+IntermediateResultsDataTypeStr "Inherit: Inherit via internal rule"
+AlgorithmType "Exact"
+Iterations "3"
+}
+
+Block {
+BlockType "SubSystem"
+ShowPortLabels "FromPortIcon"
+Permissions "ReadWrite"
+PermitHierarchicalResolution "All"
+TreatAsAtomicUnit off
+MinAlgLoopOccurrences off
+PropExecContextOutsideSubsystem off
+ScheduleAs "Sample time"
+SystemSampleTime "-1"
+RTWSystemCode "Auto"
+RTWFcnNameOpts "Auto"
+RTWFileNameOpts "Auto"
+FunctionInterfaceSpec "void_void"
+FunctionWithSeparateData off
+RTWMemSecFuncInitTerm "Inherit from model"
+RTWMemSecFuncExecute "Inherit from model"
+RTWMemSecDataConstants "Inherit from model"
+RTWMemSecDataInternal "Inherit from model"
+RTWMemSecDataParameters "Inherit from model"
+SimViewingDevice off
+DataTypeOverride "UseLocalSettings"
+DataTypeOverrideAppliesTo "AllNumericTypes"
+MinMaxOverflowLogging "UseLocalSettings"
+Opaque off
+MaskHideContents off
+SFBlockType "NONE"
+VariantControlMode "Expression"
+Variant off
+GeneratePreprocessorConditionals off
+AllowZeroVariantControls off
+PropagateVariantConditions off
+TreatAsGroupedWhenPropagatingVariantConditions on
+ContentPreviewEnabled off
+IsWebBlock off
+IsObserver off
+Latency "0"
+AutoFrameSizeCalculation off
+IsWebBlockPanel off
+}
+
+Block {
+BlockType "Sum"
+IconShape "rectangular"
+Inputs "++"
+CollapseMode "All dimensions"
+CollapseDim "1"
+InputSameDT on
+AccumDataTypeStr "Inherit: Inherit via internal rule"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Same as first input"
+LockScale off
+RndMeth "Floor"
+SaturateOnIntegerOverflow on
+SampleTime "-1"
+}
+
+Block {
+BlockType "Trigonometry"
+Operator "sin"
+ApproximationMethod "None"
+NumberOfIterations "11"
+OutputSignalType "auto"
+SampleTime "-1"
+}
+}
+}
+

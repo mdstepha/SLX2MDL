@@ -1,0 +1,2871 @@
+Model {
+SavedCharacterEncoding "ISO-8859-1"
+EnableAccessToBaseWorkspace on
+SLXCompressionType "Normal"
+ScopeRefreshTime "0.035000"
+OverrideScopeRefreshTime on
+DisableAllScopes off
+DataTypeOverride "UseLocalSettings"
+DataTypeOverrideAppliesTo "AllNumericTypes"
+MinMaxOverflowLogging "UseLocalSettings"
+MinMaxOverflowArchiveMode "Overwrite"
+FPTRunName "Run 1"
+MaxMDLFileLineLength "120"
+LastSavedArchitecture "maci64"
+HideAutomaticNames on
+UpdateHistory "UpdateHistoryNever"
+ModifiedByFormat "%<Auto>"
+ModifiedDateFormat "%<Auto>"
+RTWModifiedTimeStamp "286410553"
+ModelVersionFormat "1.%<AutoIncrement:1>"
+
+SampleTimeColors off
+SampleTimeAnnotations off
+LibraryLinkDisplay "disabled"
+WideLines off
+ShowLineDimensions off
+ShowPortDataTypes off
+ShowAllPropagatedSignalLabels off
+PortDataTypeDisplayFormat "AliasTypeOnly"
+ShowEditTimeErrors on
+ShowEditTimeWarnings on
+ShowEditTimeAdvisorChecks off
+ShowPortUnits off
+ShowDesignRanges off
+ShowLoopsOnError on
+IgnoreBidirectionalLines off
+ShowStorageClass off
+ShowTestPointIcons on
+ShowSignalResolutionIcons on
+ShowViewerIcons on
+SortedOrder off
+VariantCondition off
+ShowSubsystemDomainSpec off
+ExecutionContextIcon off
+ShowLinearizationAnnotations on
+ShowVisualizeInsertedRTB on
+ShowMarkup on
+BlockNameDataTip off
+BlockParametersDataTip off
+BlockDescriptionStringDataTip off
+BlockVariantConditionDataTip off
+ToolBar on
+StatusBar on
+BrowserShowLibraryLinks off
+FunctionConnectors off
+BrowserLookUnderMasks off
+MultiThreadCoSim on
+
+SimulationMode "normal"
+SILPILModeSetting "automated"
+SILPILSystemUnderTest "topmodel"
+SILPILSimulationModeTopModel "normal"
+SILPILSimulationModeModelRef "normal"
+SimTabSimulationMode "normal"
+CodeVerificationMode "software-in-the-loop (sil)"
+PauseTimes "5"
+NumberOfSteps "1"
+SnapshotBufferSize "10"
+SnapshotInterval "10"
+NumberOfLastSnapshots "0"
+EnablePacing off
+PacingRate "1"
+LinearizationMsg "none"
+Profile off
+ParamWorkspaceSource "MATLABWorkspace"
+AccelSystemTargetFile "accel.tlc"
+AccelTemplateMakefile "accel_default_tmf"
+AccelMakeCommand "make_rtw"
+TryForcingSFcnDF off
+Object {
+$PropName "DataLoggingOverride"
+$ObjectID 1
+$ClassName "Simulink.SimulationData.ModelLoggingInfo"
+model_ "$bdroot"
+overrideMode_ [0U]
+Array {
+PropName "logAsSpecifiedByModels_"
+Type "Cell"
+Dimension 1
+Cell "$bdroot"
+}
+
+Array {
+PropName "logAsSpecifiedByModelsSSIDs_"
+Type "Cell"
+Dimension 1
+Cell ""
+}
+}
+
+ExtModeBatchMode off
+ExtModeEnableFloating on
+ExtModeTrigType "manual"
+ExtModeTrigMode "normal"
+ExtModeTrigPort "1"
+ExtModeTrigElement "any"
+ExtModeTrigDuration "1000"
+ExtModeTrigDurationFloating "auto"
+ExtModeTrigHoldOff "0"
+ExtModeTrigDelay "0"
+ExtModeTrigDirection "rising"
+ExtModeTrigLevel "0"
+ExtModeArchiveMode off
+ExtModeAutoIncOneShot off
+ExtModeIncDirWhenArm off
+ExtModeAddSuffixToVar off
+ExtModeWriteAllDataToWs off
+ExtModeArmWhenConnect on
+ExtModeSkipDownloadWhenConnect off
+ExtModeLogAll on
+ExtModeAutoUpdateStatusClock on
+
+ShowModelReferenceBlockVersion off
+ShowModelReferenceBlockIO off
+OrderedModelArguments on
+
+ExplicitPartitioning off
+Object {
+$PropName "DataTransfer"
+$ObjectID 2
+$ClassName "Simulink.GlobalDataTransfer"
+DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
+DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
+DefaultTransitionBetweenContTasks "Ensure deterministic transfer (minimum delay)"
+DefaultExtrapolationMethodBetweenContTasks "None"
+}
+
+System {
+Location [94, 71, 910, 609]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ReportName "simulink-default.rpt"
+SIDHighWatermark "5"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "SubSystem"
+Name "Water Foot"
+SID "1"
+Ports [0, 1, 0, 0, 0, 1]
+Position [15, 15, 125, 65]
+ZOrder "220"
+BackgroundColor "orange"
+AncestorBlock "WaterRunner_lib/Water Foot"
+LibraryVersion "*1.308"
+RequestExecContextInheritance off
+System {
+Location [0, 0, 800, 860]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "88"
+SIDHighWatermark "1072"
+SIDPrevWatermark "1061"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Constant"
+Name "Constant2"
+SID "1:100"
+Position [370, 321, 440, 349]
+ZOrder "-4"
+Value "water_level"
+Port {
+PortNumber "1"
+Name "yw"
+}
+}
+
+Block {
+BlockType "Demux"
+Name "Demux"
+SID "1:101"
+Ports [1, 2]
+Position [825, 396, 830, 434]
+ZOrder "-6"
+ShowName off
+Outputs "2"
+DisplayOption "bar"
+Port {
+PortNumber "1"
+Name "x-force"
+}
+
+Port {
+PortNumber "2"
+Name "y-force"
+}
+}
+
+Block {
+BlockType "Demux"
+Name "Demux1"
+SID "1:621"
+Ports [1, 3]
+Position [785, 187, 790, 283]
+ZOrder "-6"
+ShowName off
+Outputs "3"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Display"
+Name "Display"
+SID "1:1071"
+Ports [1]
+Position [710, 460, 795, 600]
+ZOrder "222"
+Decimation "1"
+}
+
+Block {
+BlockType "Display"
+Name "Display1"
+SID "1:1072"
+Ports [1]
+Position [955, 460, 1040, 600]
+ZOrder "223"
+Decimation "1"
+}
+
+Block {
+BlockType "Reference"
+Name "External Force \nand Torque"
+SID "1:612"
+Ports [0, 0, 0, 0, 0, 3, 1]
+Position [880, 191, 935, 279]
+ZOrder "1"
+LibraryVersion "7.01"
+SourceBlock "sm_lib/Forces and\nTorques/External Force\nand Torque"
+SourceType "External Force\nand Torque"
+SourceProductName "Simscape Multibody"
+SourceProductBaseCode "MS"
+Port {
+PortType "2"
+PortNumber "1"
+Position [876, 205]
+}
+
+Port {
+PortType "2"
+PortNumber "2"
+Position [876, 235]
+}
+
+Port {
+PortType "2"
+PortNumber "3"
+Position [876, 265]
+}
+
+Port {
+PortType "3"
+PortNumber "1"
+Position [939, 235]
+}
+
+LogSimulationData off
+ForceResolutionFrame "World"
+EnableForceX off
+EnableForceY on
+EnableForceZ on
+EnableForce off
+TorqueResolutionFrame "World"
+EnableTorqueX on
+EnableTorqueY off
+EnableTorqueZ off
+EnableTorque off
+
+LogSimulationData off
+ForceResolutionFrame "World"
+EnableForceX off
+EnableForceY on
+EnableForceZ on
+EnableForce off
+TorqueResolutionFrame "World"
+EnableTorqueX on
+EnableTorqueY off
+EnableTorqueZ off
+EnableTorque off
+
+LogSimulationData off
+ForceResolutionFrame "World"
+EnableForceX off
+EnableForceY on
+EnableForceZ on
+EnableForce off
+TorqueResolutionFrame "World"
+EnableTorqueX on
+EnableTorqueY off
+EnableTorqueZ off
+EnableTorque off
+
+LogSimulationData off
+ForceResolutionFrame "World"
+EnableForceX off
+EnableForceY on
+EnableForceZ on
+EnableForce off
+TorqueResolutionFrame "World"
+EnableTorqueX on
+EnableTorqueY off
+EnableTorqueZ off
+EnableTorque off
+
+}
+
+Block {
+BlockType "MATLABFcn"
+Name "Interpreted MATLAB\nFunction"
+SID "1:102"
+Ports [1, 1]
+Position [650, 220, 720, 250]
+ZOrder "-2"
+MATLABFcn "water_model"
+Port {
+PortNumber "1"
+Name "Force"
+}
+}
+
+Block {
+BlockType "Mux"
+Name "Mux"
+SID "1:105"
+Ports [6, 1]
+Position [620, 172, 625, 298]
+ZOrder "-12"
+ShowName off
+Inputs "6"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux1"
+SID "1:106"
+Ports [3, 1]
+Position [860, 376, 865, 434]
+ZOrder "-12"
+ShowName off
+Inputs "3"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Reference"
+Name "PS-Sim"
+SID "1:616"
+Ports [0, 1, 0, 0, 0, 1]
+Position [400, 138, 425, 152]
+ZOrder "1"
+LibraryVersion "5.0"
+SourceBlock "nesl_utility/PS-Simulink\nConverter"
+SourceType "PS-Simulink\nConverter"
+SourceProductName "Simscape"
+SourceProductBaseCode "SS"
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "1"
+AffineConversion off
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "1"
+AffineConversion off
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "1"
+AffineConversion off
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "1"
+AffineConversion off
+
+}
+
+Block {
+BlockType "Reference"
+Name "PS-Sim1"
+SID "1:617"
+Ports [0, 1, 0, 0, 0, 1]
+Position [425, 173, 450, 187]
+ZOrder "1"
+LibraryVersion "5.0"
+SourceBlock "nesl_utility/PS-Simulink\nConverter"
+SourceType "PS-Simulink\nConverter"
+SourceProductName "Simscape"
+SourceProductBaseCode "SS"
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "1"
+AffineConversion off
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "1"
+AffineConversion off
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "1"
+AffineConversion off
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "1"
+AffineConversion off
+
+}
+
+Block {
+BlockType "Reference"
+Name "PS-Sim2"
+SID "1:618"
+Ports [0, 1, 0, 0, 0, 1]
+Position [425, 208, 450, 222]
+ZOrder "1"
+LibraryVersion "5.0"
+SourceBlock "nesl_utility/PS-Simulink\nConverter"
+SourceType "PS-Simulink\nConverter"
+SourceProductName "Simscape"
+SourceProductBaseCode "SS"
+Port {
+PortNumber "1"
+Name "y"
+}
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "1"
+AffineConversion off
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "1"
+AffineConversion off
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "1"
+AffineConversion off
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "1"
+AffineConversion off
+
+}
+
+Block {
+BlockType "Reference"
+Name "PS-Sim3"
+SID "1:619"
+Ports [0, 1, 0, 0, 0, 1]
+Position [425, 243, 450, 257]
+ZOrder "1"
+LibraryVersion "5.0"
+SourceBlock "nesl_utility/PS-Simulink\nConverter"
+SourceType "PS-Simulink\nConverter"
+SourceProductName "Simscape"
+SourceProductBaseCode "SS"
+Port {
+PortNumber "1"
+Name "vx"
+}
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "1"
+AffineConversion off
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "1"
+AffineConversion off
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "1"
+AffineConversion off
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "1"
+AffineConversion off
+
+}
+
+Block {
+BlockType "Reference"
+Name "PS-Sim4"
+SID "1:620"
+Ports [0, 1, 0, 0, 0, 1]
+Position [425, 278, 450, 292]
+ZOrder "1"
+LibraryVersion "5.0"
+SourceBlock "nesl_utility/PS-Simulink\nConverter"
+SourceType "PS-Simulink\nConverter"
+SourceProductName "Simscape"
+SourceProductBaseCode "SS"
+Port {
+PortNumber "1"
+Name "vy"
+}
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "1"
+AffineConversion off
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "1"
+AffineConversion off
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "1"
+AffineConversion off
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "1"
+AffineConversion off
+
+}
+
+Block {
+BlockType "SubSystem"
+Name "Quat to Euler"
+SID "1:1062"
+Ports [1, 3]
+Position [490, 129, 545, 161]
+ZOrder "25"
+RequestExecContextInheritance off
+Port {
+PortNumber "3"
+Name "phi"
+}
+
+System {
+Location [-8, -8, 1604, 868]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "93"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Q"
+SID "1:1063"
+Position [320, 20, 350, 35]
+ZOrder "22"
+BlockRotation "270"
+BlockMirror on
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Fcn"
+Name "f1"
+SID "1:1064"
+Position [260, 120, 320, 150]
+ZOrder "19"
+BlockMirror on
+Expr "atan2( 2*(u(1)*u(2) + u(3)*u(4)) , 1-2*(u(2)^2+u(3)^2) )"
+}
+
+Block {
+BlockType "Fcn"
+Name "f2"
+SID "1:1065"
+Position [260, 165, 320, 195]
+ZOrder "21"
+BlockMirror on
+Expr "asin(2*(u(1)*u(2) - u(4)*u(2)))"
+}
+
+Block {
+BlockType "Fcn"
+Name "f3"
+SID "1:1066"
+Position [260, 210, 320, 240]
+ZOrder "20"
+BlockMirror on
+Expr "atan2( 2*(u(1)*u(4) + u(2)*u(3)) , 1-2*(u(3)^2+u(4)^2) )"
+}
+
+Block {
+BlockType "Outport"
+Name "phi_x"
+SID "1:1067"
+Position [145, 128, 175, 142]
+ZOrder "23"
+BlockMirror on
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "phi_y"
+SID "1:1068"
+Position [145, 173, 175, 187]
+ZOrder "24"
+BlockMirror on
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "phi_z"
+SID "1:1069"
+Position [145, 218, 175, 232]
+ZOrder "25"
+BlockMirror on
+Port "3"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "1:1063#out:1"
+Points [0, 95]
+Branch {
+ZOrder "2"
+Points [0, 45]
+Branch {
+ZOrder "3"
+Dst "1:1066#in:1"
+}
+
+Branch {
+ZOrder "4"
+Dst "1:1065#in:1"
+}
+}
+
+Branch {
+ZOrder "5"
+Dst "1:1064#in:1"
+}
+}
+
+Line {
+ZOrder "6"
+Src "1:1064#out:1"
+Dst "1:1067#in:1"
+}
+
+Line {
+ZOrder "7"
+Src "1:1065#out:1"
+Dst "1:1068#in:1"
+}
+
+Line {
+ZOrder "8"
+Src "1:1066#out:1"
+Dst "1:1069#in:1"
+}
+}
+}
+
+Block {
+BlockType "Scope"
+Name "Scope4"
+SID "1:1070"
+Ports [2]
+Position [805, 321, 835, 354]
+ZOrder "221"
+ScopeSpecificationString "C++SS(StrPVP('Location','[110, 60, 696, 490]'),StrPVP('Open','off'),MxPVP('AxesTitles',54,'struct(''axes1'',''%<SignalLabel>'',''axes2'',''%<SignalLabel>'')'),MxPVP('ScopeGraphics',57,'struct(''FigureColor'',''[0.5 0.5 0.5]'',''AxesColor'',''[0 0 0]'',''AxesTickColor'',''[1 1 1]'',''LineColors'',''[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]'',''LineStyles'',''-|-|-|-|-|-'',''LineWidths'',''[0.5 0.5 0.5 0.5 0.5 0.5]'',''MarkerStyles'',''none|none|none|none|none|none'')'),StrPVP('ShowLegends','on'),StrPVP('YMin','-50~-30'),StrPVP('YMax','25~130'),StrPVP('SaveName','ScopeData7'),StrPVP('DataFormat','StructureWithTime'),StrPVP('LimitDataPoints','off'),StrPVP('BlockParamSampleTime','0'),StrPVP('Decimation','1'),StrPVP('BlockParamSampleInput','off'))"
+NumInputPorts "2"
+Floating off
+}
+
+Block {
+BlockType "Selector"
+Name "Selector"
+SID "1:107"
+Ports [1, 1]
+Position [775, 400, 800, 430]
+ZOrder "-17"
+InputPortWidth "3"
+IndexOptions "Index vector (dialog)"
+Indices [1 2]
+OutputSizes "1"
+}
+
+Block {
+BlockType "Reference"
+Name "Sim-PS"
+SID "1:623"
+Ports [1, 0, 0, 0, 0, 0, 1]
+Position [815, 198, 840, 212]
+ZOrder "2"
+LibraryVersion "5.0"
+SourceBlock "nesl_utility/Simulink-PS\nConverter"
+SourceType "Simulink-PS\nConverter"
+SourceProductName "Simscape"
+SourceProductBaseCode "SS"
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_input"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+NoiseDistribution "none"
+NoiseParameters []
+Unit "1"
+AffineConversion off
+FilteringAndDerivatives "zero"
+SimscapeFilterOrder "1"
+InputFilterTimeConstant ".001"
+UdotUserProvided []
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_input"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+NoiseDistribution "none"
+NoiseParameters []
+Unit "1"
+AffineConversion off
+FilteringAndDerivatives "zero"
+SimscapeFilterOrder "1"
+InputFilterTimeConstant ".001"
+UdotUserProvided []
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_input"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+NoiseDistribution "none"
+NoiseParameters []
+Unit "1"
+AffineConversion off
+FilteringAndDerivatives "zero"
+SimscapeFilterOrder "1"
+InputFilterTimeConstant ".001"
+UdotUserProvided []
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_input"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+NoiseDistribution "none"
+NoiseParameters []
+Unit "1"
+AffineConversion off
+FilteringAndDerivatives "zero"
+SimscapeFilterOrder "1"
+InputFilterTimeConstant ".001"
+UdotUserProvided []
+
+}
+
+Block {
+BlockType "Reference"
+Name "Sim-PS1"
+SID "1:625"
+Ports [1, 0, 0, 0, 0, 0, 1]
+Position [815, 228, 840, 242]
+ZOrder "2"
+LibraryVersion "5.0"
+SourceBlock "nesl_utility/Simulink-PS\nConverter"
+SourceType "Simulink-PS\nConverter"
+SourceProductName "Simscape"
+SourceProductBaseCode "SS"
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_input"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+NoiseDistribution "none"
+NoiseParameters []
+Unit "1"
+AffineConversion off
+FilteringAndDerivatives "zero"
+SimscapeFilterOrder "1"
+InputFilterTimeConstant ".001"
+UdotUserProvided []
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_input"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+NoiseDistribution "none"
+NoiseParameters []
+Unit "1"
+AffineConversion off
+FilteringAndDerivatives "zero"
+SimscapeFilterOrder "1"
+InputFilterTimeConstant ".001"
+UdotUserProvided []
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_input"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+NoiseDistribution "none"
+NoiseParameters []
+Unit "1"
+AffineConversion off
+FilteringAndDerivatives "zero"
+SimscapeFilterOrder "1"
+InputFilterTimeConstant ".001"
+UdotUserProvided []
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_input"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+NoiseDistribution "none"
+NoiseParameters []
+Unit "1"
+AffineConversion off
+FilteringAndDerivatives "zero"
+SimscapeFilterOrder "1"
+InputFilterTimeConstant ".001"
+UdotUserProvided []
+
+}
+
+Block {
+BlockType "Reference"
+Name "Sim-PS2"
+SID "1:627"
+Ports [1, 0, 0, 0, 0, 0, 1]
+Position [815, 258, 840, 272]
+ZOrder "2"
+LibraryVersion "5.0"
+SourceBlock "nesl_utility/Simulink-PS\nConverter"
+SourceType "Simulink-PS\nConverter"
+SourceProductName "Simscape"
+SourceProductBaseCode "SS"
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_input"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+NoiseDistribution "none"
+NoiseParameters []
+Unit "1"
+AffineConversion off
+FilteringAndDerivatives "zero"
+SimscapeFilterOrder "1"
+InputFilterTimeConstant ".001"
+UdotUserProvided []
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_input"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+NoiseDistribution "none"
+NoiseParameters []
+Unit "1"
+AffineConversion off
+FilteringAndDerivatives "zero"
+SimscapeFilterOrder "1"
+InputFilterTimeConstant ".001"
+UdotUserProvided []
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_input"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+NoiseDistribution "none"
+NoiseParameters []
+Unit "1"
+AffineConversion off
+FilteringAndDerivatives "zero"
+SimscapeFilterOrder "1"
+InputFilterTimeConstant ".001"
+UdotUserProvided []
+
+ContentPreviewEnabled on
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_input"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+NoiseDistribution "none"
+NoiseParameters []
+Unit "1"
+AffineConversion off
+FilteringAndDerivatives "zero"
+SimscapeFilterOrder "1"
+InputFilterTimeConstant ".001"
+UdotUserProvided []
+
+}
+
+Block {
+BlockType "Reference"
+Name "Transform \nSensor"
+SID "1:613"
+Ports [0, 0, 0, 0, 0, 1, 6]
+Position [305, 93, 355, 302]
+ZOrder "3"
+LibraryVersion "7.01"
+SourceBlock "sm_lib/Frames and\nTransforms/Transform\nSensor"
+SourceType "Transform\nSensor"
+SourceProductName "Simscape Multibody"
+SourceProductBaseCode "MS"
+Port {
+PortType "2"
+PortNumber "1"
+Position [301, 200]
+}
+
+Port {
+PortType "3"
+PortNumber "1"
+Position [359, 110]
+}
+
+Port {
+PortType "3"
+PortNumber "2"
+Position [359, 145]
+}
+
+Port {
+PortType "3"
+PortNumber "3"
+Position [359, 180]
+}
+
+Port {
+PortType "3"
+PortNumber "4"
+Position [359, 215]
+}
+
+Port {
+PortType "3"
+PortNumber "5"
+Position [359, 250]
+}
+
+Port {
+PortType "3"
+PortNumber "6"
+Position [359, 285]
+}
+
+LogSimulationData off
+MeasurementFrame "World"
+SenseAngle off
+SenseAxis off
+SenseAngle1 off
+SenseAngle2 off
+SenseAngle3 off
+SenseQ on
+SenseR off
+SenseOmegaX off
+SenseOmegaY off
+SenseOmegaZ on
+SenseOmega1 off
+SenseOmega2 off
+SenseOmega3 off
+SenseQDot off
+SenseRDot off
+SenseAlphaX off
+SenseAlphaY off
+SenseAlphaZ off
+SenseAlpha1 off
+SenseAlpha2 off
+SenseAlpha3 off
+SenseQDDot off
+SenseRDDot off
+SenseX off
+SenseY on
+SenseZ off
+SenseRad off
+SenseAzim off
+SenseDist off
+SenseInc off
+SenseXDot on
+SenseYDot on
+SenseZDot off
+SenseRadDot off
+SenseAzimDot off
+SenseDistDot off
+SenseIncDot off
+SenseXDDot off
+SenseYDDot off
+SenseZDDot off
+SenseRadDDot off
+SenseAzimDDot off
+SenseDistDDot off
+SenseIncDDot off
+
+LogSimulationData off
+MeasurementFrame "World"
+SenseAngle off
+SenseAxis off
+SenseAngle1 off
+SenseAngle2 off
+SenseAngle3 off
+SenseQ on
+SenseR off
+SenseOmegaX off
+SenseOmegaY off
+SenseOmegaZ on
+SenseOmega1 off
+SenseOmega2 off
+SenseOmega3 off
+SenseQDot off
+SenseRDot off
+SenseAlphaX off
+SenseAlphaY off
+SenseAlphaZ off
+SenseAlpha1 off
+SenseAlpha2 off
+SenseAlpha3 off
+SenseQDDot off
+SenseRDDot off
+SenseX off
+SenseY on
+SenseZ off
+SenseRad off
+SenseAzim off
+SenseDist off
+SenseInc off
+SenseXDot on
+SenseYDot on
+SenseZDot off
+SenseRadDot off
+SenseAzimDot off
+SenseDistDot off
+SenseIncDot off
+SenseXDDot off
+SenseYDDot off
+SenseZDDot off
+SenseRadDDot off
+SenseAzimDDot off
+SenseDistDDot off
+SenseIncDDot off
+
+LogSimulationData off
+MeasurementFrame "World"
+SenseAngle off
+SenseAxis off
+SenseAngle1 off
+SenseAngle2 off
+SenseAngle3 off
+SenseQ on
+SenseR off
+SenseOmegaX off
+SenseOmegaY off
+SenseOmegaZ on
+SenseOmega1 off
+SenseOmega2 off
+SenseOmega3 off
+SenseQDot off
+SenseRDot off
+SenseAlphaX off
+SenseAlphaY off
+SenseAlphaZ off
+SenseAlpha1 off
+SenseAlpha2 off
+SenseAlpha3 off
+SenseQDDot off
+SenseRDDot off
+SenseX off
+SenseY on
+SenseZ off
+SenseRad off
+SenseAzim off
+SenseDist off
+SenseInc off
+SenseXDot on
+SenseYDot on
+SenseZDot off
+SenseRadDot off
+SenseAzimDot off
+SenseDistDot off
+SenseIncDot off
+SenseXDDot off
+SenseYDDot off
+SenseZDDot off
+SenseRadDDot off
+SenseAzimDDot off
+SenseDistDDot off
+SenseIncDDot off
+
+LogSimulationData off
+MeasurementFrame "World"
+SenseAngle off
+SenseAxis off
+SenseAngle1 off
+SenseAngle2 off
+SenseAngle3 off
+SenseQ on
+SenseR off
+SenseOmegaX off
+SenseOmegaY off
+SenseOmegaZ on
+SenseOmega1 off
+SenseOmega2 off
+SenseOmega3 off
+SenseQDot off
+SenseRDot off
+SenseAlphaX off
+SenseAlphaY off
+SenseAlphaZ off
+SenseAlpha1 off
+SenseAlpha2 off
+SenseAlpha3 off
+SenseQDDot off
+SenseRDDot off
+SenseX off
+SenseY on
+SenseZ off
+SenseRad off
+SenseAzim off
+SenseDist off
+SenseInc off
+SenseXDot on
+SenseYDot on
+SenseZDot off
+SenseRadDot off
+SenseAzimDot off
+SenseDistDot off
+SenseIncDot off
+SenseXDDot off
+SenseYDDot off
+SenseZDDot off
+SenseRadDDot off
+SenseAzimDDot off
+SenseDistDDot off
+SenseIncDDot off
+
+}
+
+Block {
+BlockType "Reference"
+Name "World Frame"
+SID "1:615"
+Ports [0, 0, 0, 0, 0, 0, 1]
+Position [235, 205, 275, 245]
+ZOrder "4"
+LibraryVersion "7.01"
+SourceBlock "sm_lib/Frames and\nTransforms/World Frame"
+SourceType "World Frame"
+SourceProductName "Simscape Multibody"
+SourceProductBaseCode "MS"
+Port {
+PortType "3"
+PortNumber "1"
+Position [279, 225]
+}
+
+LogSimulationData off
+
+LogSimulationData off
+
+LogSimulationData off
+
+LogSimulationData off
+
+}
+
+Block {
+BlockType "PMIOPort"
+Name "tail"
+SID "1:633"
+Position [1005, 225, 1025, 245]
+ZOrder "5"
+BlockMirror on
+Side "Left"
+}
+
+Block {
+BlockType "Outport"
+Name "forces for\nscope"
+SID "1:114"
+Position [895, 398, 925, 412]
+ZOrder "-23"
+IconDisplay "Port number"
+}
+
+Line {
+LineType "Connection"
+ZOrder "1"
+Src "1:612#lconn:3"
+Dst "1:627#rconn:1"
+}
+
+Line {
+LineType "Connection"
+ZOrder "2"
+Src "1:612#lconn:2"
+Dst "1:625#rconn:1"
+}
+
+Line {
+LineType "Connection"
+ZOrder "3"
+Src "1:612#lconn:1"
+Dst "1:623#rconn:1"
+}
+
+Line {
+ZOrder "4"
+Src "1:621#out:3"
+Dst "1:627#in:1"
+}
+
+Line {
+ZOrder "5"
+Src "1:621#out:2"
+Dst "1:625#in:1"
+}
+
+Line {
+ZOrder "6"
+Src "1:621#out:1"
+Dst "1:623#in:1"
+}
+
+Line {
+LineType "Connection"
+ZOrder "7"
+Src "1:613#rconn:6"
+Dst "1:620#lconn:1"
+}
+
+Line {
+LineType "Connection"
+ZOrder "8"
+Src "1:619#lconn:1"
+Dst "1:613#rconn:5"
+}
+
+Line {
+LineType "Connection"
+ZOrder "9"
+Src "1:613#rconn:4"
+Dst "1:618#lconn:1"
+}
+
+Line {
+LineType "Connection"
+ZOrder "10"
+Src "1:617#lconn:1"
+Dst "1:613#rconn:3"
+}
+
+Line {
+LineType "Connection"
+ZOrder "11"
+Src "1:616#lconn:1"
+Dst "1:613#rconn:2"
+}
+
+Line {
+LineType "Connection"
+ZOrder "12"
+Src "1:615#rconn:1"
+Dst "1:613#lconn:1"
+}
+
+Line {
+LineType "Connection"
+ZOrder "13"
+Src "1:612#rconn:1"
+Points [8, 0]
+Branch {
+ConnectType "DEST_DEST"
+Src "1:633#rconn:1"
+Points [-32, 0]
+}
+
+Branch {
+ConnectType "DEST_SRC"
+Points [0, -125]
+Dst "1:613#rconn:1"
+}
+}
+
+Line {
+ZOrder "16"
+Src "1:105#out:1"
+Points [4, 0]
+Branch {
+ZOrder "17"
+Points [0, 110]
+Branch {
+ZOrder "18"
+Dst "1:1070#in:2"
+}
+
+Branch {
+ZOrder "19"
+Points [0, 185]
+Dst "1:1071#in:1"
+}
+}
+
+Branch {
+ZOrder "20"
+Dst "1:102#in:1"
+}
+}
+
+Line {
+Name "Force"
+ZOrder "21"
+Labels [0, 0]
+Src "1:102#out:1"
+Points [26, 0]
+Branch {
+ZOrder "22"
+Labels [1, 0]
+Points [0, 100]
+Branch {
+ZOrder "23"
+Points [39, 0]
+Branch {
+ZOrder "24"
+Points [0, 35; 147, 0; 0, 160]
+Dst "1:1072#in:1"
+}
+
+Branch {
+ZOrder "25"
+Dst "1:1070#in:1"
+}
+}
+
+Branch {
+ZOrder "26"
+Points [0, 80]
+Dst "1:107#in:1"
+}
+}
+
+Branch {
+ZOrder "27"
+Dst "1:621#in:1"
+}
+}
+
+Line {
+ZOrder "28"
+Src "1:106#out:1"
+Dst "1:114#in:1"
+}
+
+Line {
+ZOrder "29"
+Src "1:107#out:1"
+Dst "1:101#in:1"
+}
+
+Line {
+Name "x-force"
+ZOrder "30"
+Labels [1, 0]
+Src "1:101#out:1"
+Dst "1:106#in:2"
+}
+
+Line {
+Name "y-force"
+ZOrder "31"
+Labels [0, 0]
+Src "1:101#out:2"
+Dst "1:106#in:3"
+}
+
+Line {
+Name "y"
+ZOrder "32"
+Labels [3, 1]
+Src "1:618#out:1"
+Points [63, 0; 0, -30]
+Dst "1:105#in:1"
+}
+
+Line {
+Name "vx"
+ZOrder "33"
+Labels [3, 1]
+Src "1:619#out:1"
+Points [89, 0; 0, -45]
+Dst "1:105#in:2"
+}
+
+Line {
+Name "vy"
+ZOrder "34"
+Labels [3, 1]
+Src "1:620#out:1"
+Points [127, 0; 0, -60]
+Dst "1:105#in:3"
+}
+
+Line {
+ZOrder "35"
+Src "1:617#out:1"
+Points [42, 0; 0, 65]
+Dst "1:105#in:4"
+}
+
+Line {
+Name "yw"
+ZOrder "36"
+Labels [1, 1]
+Src "1:100#out:1"
+Points [156, 0; 0, -50]
+Dst "1:105#in:6"
+}
+
+Line {
+ZOrder "37"
+Src "1:616#out:1"
+Dst "1:1062#in:1"
+}
+
+Line {
+Name "phi"
+ZOrder "38"
+Labels [2, 1]
+Src "1:1062#out:3"
+Points [51, 0; 0, 108]
+Branch {
+ZOrder "39"
+Points [-9, 0; 0, 122]
+Dst "1:106#in:1"
+}
+
+Branch {
+ZOrder "40"
+Points [0, 2]
+Dst "1:105#in:5"
+}
+}
+
+Annotation {
+SID "1:110"
+Position [804, 354, 806, 366]
+InternalMargins [0, 0, 0, 0]
+ZOrder "-1"
+}
+}
+}
+}
+
+DiagnosticSuppressor on
+
+LogicAnalyzerPlugin on
+
+NotesPlugin on
+
+SLCCPlugin on
+
+WebScopes_FoundationPlugin on
+
+GraphicalInterface {
+NumRootInports "0"
+NumRootOutports "0"
+ParameterArgumentNames ""
+NumModelReferences "0"
+NumTestPointedSignals "0"
+NumProvidedFunctions "0"
+NumRequiredFunctions "0"
+NumResetEvents "0"
+HasInitializeEvent "0"
+HasTerminateEvent "0"
+PreCompExecutionDomainType "Unset"
+IsExportFunctionModel "0"
+IsArchitectureModel "0"
+IsAUTOSARArchitectureModel "0"
+NumParameterArguments "0"
+NumExternalFileReferences "11"
+OrderedModelArguments "1"
+ExternalFileReference {
+Reference "sm_lib/Forces and\nTorques/External Force\nand Torque"
+Path "$bdroot/Water Foot/External Force  and Torque"
+SID "1:612"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "nesl_utility/PS-Simulink\nConverter"
+Path "$bdroot/Water Foot/PS-Sim"
+SID "1:616"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "nesl_utility/PS-Simulink\nConverter"
+Path "$bdroot/Water Foot/PS-Sim1"
+SID "1:617"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "nesl_utility/PS-Simulink\nConverter"
+Path "$bdroot/Water Foot/PS-Sim2"
+SID "1:618"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "nesl_utility/PS-Simulink\nConverter"
+Path "$bdroot/Water Foot/PS-Sim3"
+SID "1:619"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "nesl_utility/PS-Simulink\nConverter"
+Path "$bdroot/Water Foot/PS-Sim4"
+SID "1:620"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "nesl_utility/Simulink-PS\nConverter"
+Path "$bdroot/Water Foot/Sim-PS"
+SID "1:623"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "nesl_utility/Simulink-PS\nConverter"
+Path "$bdroot/Water Foot/Sim-PS1"
+SID "1:625"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "nesl_utility/Simulink-PS\nConverter"
+Path "$bdroot/Water Foot/Sim-PS2"
+SID "1:627"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "sm_lib/Frames and\nTransforms/Transform\nSensor"
+Path "$bdroot/Water Foot/Transform  Sensor"
+SID "1:613"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "sm_lib/Frames and\nTransforms/World Frame"
+Path "$bdroot/Water Foot/World Frame"
+SID "1:615"
+Type "LIBRARY_BLOCK"
+}
+}
+
+PhysicalModelingChecksum "2172660651"
+PhysicalModelingParameterChecksum "1200543795"
+PhysicalModelingProducts "SimMechanics|Simscape"
+
+Object {
+$PropName "BdWindowsInfo"
+$ObjectID 3
+$ClassName "Simulink.BDWindowsInfo"
+BDUuid "8bad0744-2c34-407a-a767-30c9dcdb7d32"
+Object {
+$PropName "WindowsInfo"
+$ObjectID 4
+$ClassName "Simulink.WindowInfo"
+IsActive [1]
+Location [94.0, 71.0, 816.0, 538.0]
+DockComponentsInfo []
+WindowState ""
+WindowUuid ""
+Array {
+PropName "PersistedApps"
+Type "Cell"
+Dimension 0
+}
+
+Object {
+$PropName "ModelBrowserInfo"
+$ObjectID 5
+$ClassName "Simulink.ModelBrowserInfo"
+Visible [1]
+DockPosition "Left"
+Width [50]
+Height [50]
+Filter [15]
+Minimized "Unset"
+}
+
+Object {
+$PropName "ExplorerBarInfo"
+$ObjectID 6
+$ClassName "Simulink.ExplorerBarInfo"
+Visible [1]
+}
+
+Object {
+$PropName "EditorsInfo"
+$ObjectID 7
+$ClassName "Simulink.EditorInfo"
+IsActive [1]
+IsTabbed [1]
+ViewObjType "SimulinkTopLevel"
+LoadSaveID "0"
+Extents [571.0, 362.0]
+ZoomFactor [1.0]
+Offset [0.0, 0.0]
+SceneRectInView [0.0, 0.0, 0.0, 0.0]
+}
+}
+}
+
+Array {
+Type "Handle"
+Dimension 1
+Simulink.ConfigSet {
+Version "19.1.1"
+$ClassName "Simulink.ConfigSet"
+DisabledProps []
+Description ""
+Name "Configuration"
+CurrentDlgPage "Solver"
+ConfigPrmDlgPosition [ 360, 135, 1240, 765 ]
+ExtraOptions ""
+Array {
+PropName "Components"
+Type "Handle"
+Dimension 10
+Simulink.SolverCC {
+$ObjectID 9
+Version "19.1.1"
+$ClassName "Simulink.SolverCC"
+DisabledProps []
+Description ""
+Components []
+StartTime "0.0"
+StopTime "10.0"
+AbsTol "auto"
+AutoScaleAbsTol on
+FixedStep "auto"
+InitialStep "auto"
+MaxOrder "5"
+ZcThreshold "auto"
+ConsecutiveZCsStepRelTol "10*128*eps"
+MaxConsecutiveZCs "1000"
+ExtrapolationOrder "4"
+NumberNewtonIterations "1"
+MaxStep "auto"
+MinStep "auto"
+MaxConsecutiveMinStep "1"
+RelTol "1e-3"
+EnableMultiTasking on
+ConcurrentTasks off
+Solver "ode45"
+SolverName "ode45"
+SolverJacobianMethodControl "auto"
+ShapePreserveControl "DisableAll"
+ZeroCrossControl "UseLocalSettings"
+ZeroCrossAlgorithm "Nonadaptive"
+AlgebraicLoopSolver "TrustRegion"
+SolverInfoToggleStatus off
+IsAutoAppliedInSIP off
+SolverResetMethod "Fast"
+PositivePriorityOrder off
+AutoInsertRateTranBlk off
+SampleTimeConstraint "Unconstrained"
+InsertRTBMode "Whenever possible"
+SampleTimeProperty []
+DecoupledContinuousIntegration off
+MinimalZcImpactIntegration off
+SolverOrder "3"
+}
+
+Simulink.DataIOCC {
+$ObjectID 10
+Version "19.1.1"
+$ClassName "Simulink.DataIOCC"
+DisabledProps []
+Description ""
+Components []
+Decimation "1"
+ExternalInput [t, u]
+FinalStateName "xFinal"
+InitialState "xInitial"
+LimitDataPoints on
+MaxDataPoints "1000"
+LoadExternalInput off
+LoadInitialState off
+SaveFinalState off
+SaveOperatingPoint off
+SaveFormat "Array"
+SignalLoggingSaveFormat "Dataset"
+SaveOutput on
+SaveState off
+SignalLogging on
+DSMLogging on
+InspectSignalLogs off
+VisualizeSimOutput on
+StreamToWorkspace off
+StreamVariableName "streamout"
+SaveTime on
+ReturnWorkspaceOutputs off
+StateSaveName "xout"
+TimeSaveName "tout"
+OutputSaveName "yout"
+SignalLoggingName "logsout"
+DSMLoggingName "dsmout"
+OutputOption "RefineOutputTimes"
+OutputTimes []
+ReturnWorkspaceOutputsName "out"
+Refine "1"
+LoggingToFile off
+DatasetSignalFormat "timeseries"
+LoggingFileName "out.mat"
+LoggingIntervals [-inf, inf]
+}
+
+Simulink.OptimizationCC {
+$ObjectID 11
+Version "19.1.1"
+$ClassName "Simulink.OptimizationCC"
+Description ""
+Components []
+BlockReduction on
+BooleanDataType on
+ConditionallyExecuteInputs on
+DefaultParameterBehavior "Tunable"
+UseDivisionForNetSlopeComputation off
+GainParamInheritBuiltInType off
+UseFloatMulNetSlope off
+DefaultUnderspecifiedDataType "double"
+UseSpecifiedMinMax off
+InlineInvariantSignals off
+OptimizeBlockIOStorage on
+BufferReuse on
+EnhancedBackFolding off
+CachingGlobalReferences off
+GlobalBufferReuse on
+StrengthReduction off
+AdvancedOptControl ""
+ExpressionFolding on
+BooleansAsBitfields off
+BitfieldContainerType "uint_T"
+EnableMemcpy on
+MemcpyThreshold "64"
+PassReuseOutputArgsAs "Structure reference"
+PassReuseOutputArgsThreshold "12"
+ExpressionDepthLimit "2147483647"
+LocalBlockOutputs on
+RollThreshold "5"
+StateBitsets off
+DataBitsets off
+ActiveStateOutputEnumStorageType "Native Integer"
+ZeroExternalMemoryAtStartup on
+ZeroInternalMemoryAtStartup on
+InitFltsAndDblsToZero off
+NoFixptDivByZeroProtection off
+EfficientFloat2IntCast off
+EfficientMapNaN2IntZero on
+LifeSpan "inf"
+MaxStackSize "Inherit from target"
+BufferReusableBoundary on
+SimCompilerOptimization off
+AccelVerboseBuild off
+OptimizeBlockOrder off
+OptimizeDataStoreBuffers on
+BusAssignmentInplaceUpdate on
+DifferentSizesBufferReuse off
+UseRowMajorAlgorithm off
+OptimizationLevel "level2"
+OptimizationPriority "Balanced"
+OptimizationCustomize on
+LabelGuidedReuse off
+MultiThreadedLoops off
+DenormalBehavior "GradualUnderflow"
+EfficientTunableParamExpr off
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 9
+Cell "BooleansAsBitfields"
+Cell "PassReuseOutputArgsAs"
+Cell "PassReuseOutputArgsThreshold"
+Cell "ZeroExternalMemoryAtStartup"
+Cell "ZeroInternalMemoryAtStartup"
+Cell "OptimizeModelRefInitCode"
+Cell "NoFixptDivByZeroProtection"
+Cell "UseSpecifiedMinMax"
+Cell "EfficientTunableParamExpr"
+}
+}
+
+Simulink.DebuggingCC {
+$ObjectID 12
+Version "19.1.1"
+$ClassName "Simulink.DebuggingCC"
+Description ""
+Components []
+RTPrefix "error"
+ConsistencyChecking "none"
+ArrayBoundsChecking "none"
+SignalInfNanChecking "none"
+StringTruncationChecking "error"
+SignalRangeChecking "none"
+ReadBeforeWriteMsg "UseLocalSettings"
+WriteAfterWriteMsg "UseLocalSettings"
+WriteAfterReadMsg "UseLocalSettings"
+AlgebraicLoopMsg "warning"
+ArtificialAlgebraicLoopMsg "warning"
+SaveWithDisabledLinksMsg "warning"
+SaveWithParameterizedLinksMsg "warning"
+CheckSSInitialOutputMsg on
+UnderspecifiedInitializationDetection "Classic"
+MergeDetectMultiDrivingBlocksExec "none"
+CheckExecutionContextPreStartOutputMsg off
+CheckExecutionContextRuntimeOutputMsg off
+SignalResolutionControl "UseLocalSettings"
+BlockPriorityViolationMsg "warning"
+MinStepSizeMsg "warning"
+TimeAdjustmentMsg "none"
+MaxConsecutiveZCsMsg "error"
+MaskedZcDiagnostic "warning"
+IgnoredZcDiagnostic "warning"
+SolverPrmCheckMsg "warning"
+InheritedTsInSrcMsg "warning"
+MultiTaskDSMMsg "error"
+MultiTaskCondExecSysMsg "error"
+MultiTaskRateTransMsg "error"
+SingleTaskRateTransMsg "none"
+TasksWithSamePriorityMsg "warning"
+ExportedTasksRateTransMsg "none"
+SigSpecEnsureSampleTimeMsg "warning"
+CheckMatrixSingularityMsg "none"
+IntegerOverflowMsg "warning"
+Int32ToFloatConvMsg "warning"
+ParameterDowncastMsg "error"
+ParameterOverflowMsg "error"
+ParameterUnderflowMsg "none"
+ParameterPrecisionLossMsg "warning"
+ParameterTunabilityLossMsg "warning"
+FixptConstUnderflowMsg "none"
+FixptConstOverflowMsg "none"
+FixptConstPrecisionLossMsg "none"
+UnderSpecifiedDataTypeMsg "none"
+UnnecessaryDatatypeConvMsg "none"
+VectorMatrixConversionMsg "none"
+InvalidFcnCallConnMsg "error"
+FcnCallInpInsideContextMsg "error"
+SignalLabelMismatchMsg "none"
+UnconnectedInputMsg "warning"
+UnconnectedOutputMsg "warning"
+UnconnectedLineMsg "warning"
+UseOnlyExistingSharedCode "error"
+SFcnCompatibilityMsg "none"
+FrameProcessingCompatibilityMsg "error"
+UniqueDataStoreMsg "none"
+BusObjectLabelMismatch "warning"
+RootOutportRequireBusObject "warning"
+AssertControl "UseLocalSettings"
+AllowSymbolicDim on
+RowMajorDimensionSupport off
+ModelReferenceIOMsg "none"
+ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+ModelReferenceVersionMismatchMessage "none"
+ModelReferenceIOMismatchMessage "none"
+UnknownTsInhSupMsg "warning"
+ModelReferenceDataLoggingMessage "warning"
+ModelReferenceSymbolNameMessage "warning"
+ModelReferenceExtraNoncontSigs "error"
+StateNameClashWarn "warning"
+OperatingPointInterfaceChecksumMismatchMsg "warning"
+NonCurrentReleaseOperatingPointMsg "error"
+ChecksumConsistencyForSSReuse "none"
+PregeneratedLibrarySubsystemCodeDiagnostic "warning"
+MatchCodeGenerationContextForUpdateDiagram "none"
+InitInArrayFormatMsg "warning"
+StrictBusMsg "ErrorLevel1"
+BusNameAdapt "WarnAndRepair"
+NonBusSignalsTreatedAsBus "none"
+SymbolicDimMinMaxWarning "warning"
+LossOfSymbolicDimsSimulationWarning "warning"
+LossOfSymbolicDimsCodeGenerationWarning "error"
+SymbolicDimsDataTypeCodeGenerationDiagnostic "error"
+BlockIODiagnostic "none"
+SFUnusedDataAndEventsDiag "warning"
+SFUnexpectedBacktrackingDiag "warning"
+SFInvalidInputDataAccessInChartInitDiag "warning"
+SFNoUnconditionalDefaultTransitionDiag "warning"
+SFTransitionOutsideNaturalParentDiag "warning"
+SFUnreachableExecutionPathDiag "warning"
+SFUndirectedBroadcastEventsDiag "warning"
+SFTransitionActionBeforeConditionDiag "warning"
+SFOutputUsedAsStateInMooreChartDiag "error"
+SFTemporalDelaySmallerThanSampleTimeDiag "warning"
+SFSelfTransitionDiag "warning"
+SFExecutionAtInitializationDiag "none"
+SFMachineParentedDataDiag "warning"
+IntegerSaturationMsg "warning"
+AllowedUnitSystems "all"
+UnitsInconsistencyMsg "warning"
+AllowAutomaticUnitConversions on
+RCSCRenamedMsg "warning"
+RCSCObservableMsg "warning"
+ForceCombineOutputUpdateInSim off
+UnitDatabase ""
+UnderSpecifiedDimensionMsg "none"
+DebugExecutionForFMUViaOutOfProcess off
+ArithmeticOperatorsInVariantConditions "warning"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 1
+Cell "UseOnlyExistingSharedCode"
+}
+}
+
+Simulink.HardwareCC {
+$ObjectID 13
+Version "19.1.1"
+$ClassName "Simulink.HardwareCC"
+DisabledProps []
+Description ""
+Components []
+ProdBitPerChar "8"
+ProdBitPerShort "16"
+ProdBitPerInt "32"
+ProdBitPerLong "32"
+ProdBitPerLongLong "64"
+ProdBitPerFloat "32"
+ProdBitPerDouble "64"
+ProdBitPerPointer "32"
+ProdBitPerSizeT "32"
+ProdBitPerPtrDiffT "32"
+ProdLargestAtomicInteger "Char"
+ProdLargestAtomicFloat "None"
+ProdIntDivRoundTo "Undefined"
+ProdEndianess "Unspecified"
+ProdWordSize "32"
+ProdShiftRightIntArith on
+ProdLongLongMode off
+ProdHWDeviceType "32-bit Generic"
+TargetBitPerChar "8"
+TargetBitPerShort "16"
+TargetBitPerInt "32"
+TargetBitPerLong "32"
+TargetBitPerLongLong "64"
+TargetBitPerFloat "32"
+TargetBitPerDouble "64"
+TargetBitPerPointer "32"
+TargetBitPerSizeT "32"
+TargetBitPerPtrDiffT "32"
+TargetLargestAtomicInteger "Char"
+TargetLargestAtomicFloat "None"
+TargetShiftRightIntArith on
+TargetLongLongMode off
+TargetIntDivRoundTo "Undefined"
+TargetEndianess "Unspecified"
+TargetWordSize "32"
+TargetPreprocMaxBitsSint "32"
+TargetPreprocMaxBitsUint "32"
+TargetHWDeviceType "Specified"
+TargetUnknown off
+ProdEqTarget on
+UseEmbeddedCoderFeatures on
+UseSimulinkCoderFeatures on
+HardwareBoardFeatureSet "EmbeddedCoderHSP"
+}
+
+Simulink.ModelReferenceCC {
+$ObjectID 14
+Version "19.1.1"
+$ClassName "Simulink.ModelReferenceCC"
+DisabledProps []
+Description ""
+Components []
+UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+EnableRefExpFcnMdlSchedulingChecks on
+CheckModelReferenceTargetMessage "error"
+EnableParallelModelReferenceBuilds off
+ParallelModelReferenceErrorOnInvalidPool on
+ParallelModelReferenceMATLABWorkerInit "None"
+ModelReferenceNumInstancesAllowed "Multi"
+PropagateVarSize "Infer from blocks in model"
+ModelDependencies ""
+ModelReferencePassRootInputsByReference on
+ModelReferenceMinAlgLoopOccurrences off
+PropagateSignalLabelsOutOfModel off
+SupportModelReferenceSimTargetCustomCode off
+}
+
+Simulink.SFSimCC {
+$ObjectID 15
+Version "19.1.1"
+$ClassName "Simulink.SFSimCC"
+DisabledProps []
+Description ""
+Components []
+SimCustomSourceCode ""
+SimCustomHeaderCode ""
+SimCustomInitializer ""
+SimCustomTerminator ""
+SimReservedNameArray []
+SimUserSources ""
+SimUserIncludeDirs ""
+SimUserLibraries ""
+SimUserDefines ""
+SimCustomCompilerFlags ""
+SimCustomLinkerFlags ""
+SFSimEcho on
+SimCtrlC on
+SimIntegrity on
+SimUseLocalCustomCode off
+SimParseCustomCode on
+SimAnalyzeCustomCode off
+SimBuildMode "sf_incremental_build"
+SimGenImportedTypeDefs off
+ModelFunctionsGlobalVisibility on
+CompileTimeRecursionLimit "50"
+EnableRuntimeRecursion on
+MATLABDynamicMemAlloc on
+MATLABDynamicMemAllocThreshold "65536"
+CustomCodeFunctionArrayLayout []
+DefaultCustomCodeFunctionArrayLayout "NotSpecified"
+CustomCodeUndefinedFunction "UseInterfaceOnly"
+}
+
+Simulink.RTWCC {
+BackupClass "Simulink.RTWCC"
+$ObjectID 16
+Version "19.1.1"
+$ClassName "Simulink.RTWCC"
+Description ""
+SystemTargetFile "grt.tlc"
+HardwareBoard "None"
+ShowCustomHardwareApp off
+ShowEmbeddedHardwareApp off
+TLCOptions ""
+GenCodeOnly off
+MakeCommand "make_rtw"
+GenerateMakefile on
+PackageGeneratedCodeAndArtifacts off
+PackageName ""
+TemplateMakefile "grt_default_tmf"
+PostCodeGenCommand ""
+GenerateReport off
+RTWVerbose on
+RetainRTWFile off
+RTWBuildHooks []
+ProfileTLC off
+TLCDebug off
+TLCCoverage off
+TLCAssert off
+RTWUseLocalCustomCode off
+RTWUseSimCustomCode off
+CustomSourceCode ""
+CustomHeaderCode ""
+CustomInclude ""
+CustomSource ""
+CustomLibrary ""
+CustomDefine ""
+CustomBLASCallback ""
+CustomLAPACKCallback ""
+CustomFFTCallback ""
+CustomInitializer ""
+CustomTerminator ""
+Toolchain "Automatically locate an installed toolchain"
+BuildConfiguration "Faster Builds"
+CustomToolchainOptions []
+IncludeHyperlinkInReport off
+LaunchReport off
+PortableWordSizes off
+CreateSILPILBlock "None"
+CodeExecutionProfiling off
+CodeExecutionProfileVariable "executionProfile"
+CodeProfilingSaveOptions "SummaryOnly"
+CodeProfilingInstrumentation off
+SILDebugging off
+TargetLang "C"
+IncludeBusHierarchyInRTWFileBlockHierarchyMap off
+GenerateTraceInfo off
+GenerateTraceReport off
+GenerateTraceReportSl off
+GenerateTraceReportSf off
+GenerateTraceReportEml off
+GenerateWebview off
+GenerateCodeMetricsReport off
+GenerateCodeReplacementReport off
+GenerateMissedCodeReplacementReport off
+RTWCompilerOptimization off
+ObjectivePriorities []
+RTWCustomCompilerOptimizations ""
+CheckMdlBeforeBuild "Off"
+SharedConstantsCachingThreshold "1024"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 16
+Cell "IncludeHyperlinkInReport"
+Cell "GenerateTraceInfo"
+Cell "GenerateTraceReport"
+Cell "GenerateTraceReportSl"
+Cell "GenerateTraceReportSf"
+Cell "GenerateTraceReportEml"
+Cell "PortableWordSizes"
+Cell "GenerateWebview"
+Cell "GenerateCodeMetricsReport"
+Cell "GenerateCodeReplacementReport"
+Cell "GenerateErtSFunction"
+Cell "CreateSILPILBlock"
+Cell "CodeExecutionProfiling"
+Cell "CodeProfilingSaveOptions"
+Cell "CodeProfilingInstrumentation"
+Cell "GenerateMissedCodeReplacementReport"
+}
+
+Array {
+PropName "Components"
+Type "Handle"
+Dimension 2
+Object {
+$ObjectID 17
+Version "19.1.1"
+$ClassName "Simulink.CodeAppCC"
+Description ""
+Components []
+Comment ""
+ForceParamTrailComments off
+GenerateComments on
+CommentStyle "Auto"
+IgnoreCustomStorageClasses on
+IgnoreTestpoints off
+MaxIdLength "31"
+PreserveName off
+PreserveNameWithParent off
+ShowEliminatedStatement off
+OperatorAnnotations off
+SimulinkDataObjDesc off
+SFDataObjDesc off
+MATLABFcnDesc off
+MangleLength "1"
+SharedChecksumLength "8"
+CustomSymbolStrGlobalVar "$R$N$M"
+CustomSymbolStrType "$N$R$M_T"
+CustomSymbolStrField "$N$M"
+CustomSymbolStrFcn "$R$N$M$F"
+CustomSymbolStrModelFcn "$R$N"
+CustomSymbolStrFcnArg "rt$I$N$M"
+CustomSymbolStrBlkIO "rtb_$N$M"
+CustomSymbolStrTmpVar "$N$M"
+CustomSymbolStrMacro "$R$N$M"
+CustomSymbolStrUtil "$N$C"
+CustomSymbolStrEmxType "emxArray_$M$N"
+CustomSymbolStrEmxFcn "emx$M$N"
+CustomUserTokenString ""
+CustomCommentsFcn ""
+DefineNamingRule "None"
+DefineNamingFcn ""
+ParamNamingRule "None"
+ParamNamingFcn ""
+SignalNamingRule "None"
+SignalNamingFcn ""
+InsertBlockDesc off
+InsertPolySpaceComments off
+SimulinkBlockComments on
+BlockCommentType "BlockPathComment"
+StateflowObjectComments on
+MATLABSourceComments off
+EnableCustomComments off
+InternalIdentifierFile ""
+InternalIdentifier "Shortened"
+InlinedPrmAccess "Literals"
+ReqsInCode off
+UseSimReservedNames off
+ReservedNameArray []
+EnumMemberNameClash "error"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 28
+Cell "IgnoreCustomStorageClasses"
+Cell "IgnoreTestpoints"
+Cell "InsertBlockDesc"
+Cell "InsertPolySpaceComments"
+Cell "SFDataObjDesc"
+Cell "MATLABFcnDesc"
+Cell "SimulinkDataObjDesc"
+Cell "DefineNamingRule"
+Cell "SignalNamingRule"
+Cell "ParamNamingRule"
+Cell "InternalIdentifier"
+Cell "InlinedPrmAccess"
+Cell "CustomSymbolStr"
+Cell "CustomSymbolStrGlobalVar"
+Cell "CustomSymbolStrType"
+Cell "CustomSymbolStrField"
+Cell "CustomSymbolStrFcn"
+Cell "CustomSymbolStrFcnArg"
+Cell "CustomSymbolStrBlkIO"
+Cell "CustomSymbolStrTmpVar"
+Cell "CustomSymbolStrMacro"
+Cell "ReqsInCode"
+Cell "BlockCommentType"
+Cell "CustomSymbolStrModelFcn"
+Cell "CustomSymbolStrUtil"
+Cell "CustomSymbolStrEmxType"
+Cell "CustomSymbolStrEmxFcn"
+Cell "CustomUserTokenString"
+}
+}
+
+Object {
+BackupClass "Simulink.TargetCC"
+$ObjectID 18
+Version "19.1.1"
+$ClassName "Simulink.GRTTargetCC"
+Description ""
+Components []
+TargetFcnLib "ansi_tfl_table_tmw.mat"
+TargetLibSuffix ""
+TargetPreCompLibLocation ""
+GenFloatMathFcnCalls "NOT IN USE"
+TargetLangStandard "C89/C90 (ANSI)"
+CodeReplacementLibrary "None"
+UtilityFuncGeneration "Auto"
+MultiwordTypeDef "System defined"
+MultiwordLength "2048"
+DynamicStringBufferSize "256"
+GenerateFullHeader on
+InferredTypesCompatibility off
+ExistingSharedCode ""
+GenerateSampleERTMain off
+GenerateTestInterfaces off
+ModelReferenceCompliant on
+ParMdlRefBuildCompliant on
+CompOptLevelCompliant on
+ConcurrentExecutionCompliant on
+IncludeMdlTerminateFcn on
+GeneratePreprocessorConditionals "Disable all"
+CombineOutputUpdateFcns on
+CombineSignalStateStructs off
+GroupInternalDataByFunction off
+SuppressErrorStatus off
+IncludeFileDelimiter "Auto"
+ERTCustomFileBanners off
+SupportAbsoluteTime on
+LogVarNameModifier "rt_"
+MatFileLogging on
+MultiInstanceERTCode off
+CodeInterfacePackaging "Nonreusable function"
+PurelyIntegerCode off
+SupportNonFinite on
+SupportComplex on
+SupportContinuousTime on
+SupportNonInlinedSFcns on
+RemoveDisableFunc off
+RemoveResetFunc off
+SupportVariableSizeSignals off
+ParenthesesLevel "Nominal"
+CastingMode "Nominal"
+PreserveStateflowLocalDataDimensions off
+MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
+ModelStepFunctionPrototypeControlCompliant off
+CPPClassGenCompliant on
+AutosarCompliant off
+MDXCompliant off
+GRTInterface off
+GenerateAllocFcn off
+UseToolchainInfoCompliant on
+GenerateSharedConstants on
+CoderGroups []
+AccessMethods []
+LookupTableObjectStructAxisOrder "1,2,3,4,..."
+LUTObjectStructOrderExplicitValues "Size,Breakpoints,Table"
+LUTObjectStructOrderEvenSpacing "Size,Breakpoints,Table"
+ArrayLayout "Column-major"
+UnsupportedSFcnMsg "error"
+ERTHeaderFileRootName "$R$E"
+ERTSourceFileRootName "$R$E"
+ERTDataFileRootName "$R_data"
+UseMalloc off
+ExtMode off
+ExtModeStaticAlloc off
+ExtModeTesting off
+ExtModeStaticAllocSize "1000000"
+ExtModeTransport "0"
+ExtModeMexFile "ext_comm"
+ExtModeMexArgs ""
+ExtModeIntrfLevel "Level1"
+RTWCAPISignals off
+RTWCAPIParams off
+RTWCAPIStates off
+RTWCAPIRootIO off
+GenerateASAP2 off
+MultiInstanceErrorCode "Error"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 18
+Cell "GeneratePreprocessorConditionals"
+Cell "IncludeMdlTerminateFcn"
+Cell "PreserveStateflowLocalDataDimensions"
+Cell "SuppressErrorStatus"
+Cell "ERTCustomFileBanners"
+Cell "GenerateSampleERTMain"
+Cell "GenerateTestInterfaces"
+Cell "ModelStepFunctionPrototypeControlCompliant"
+Cell "CPPClassGenCompliant"
+Cell "SupportNonInlinedSFcns"
+Cell "PurelyIntegerCode"
+Cell "SupportComplex"
+Cell "SupportAbsoluteTime"
+Cell "SupportContinuousTime"
+Cell "GenerateAllocFcn"
+Cell "ExistingSharedCode"
+Cell "RemoveDisableFunc"
+Cell "RemoveResetFunc"
+}
+}
+}
+}
+
+SlCovCC.ConfigComp {
+$ObjectID 19
+Version "19.1.1"
+$ClassName "SlCovCC.ConfigComp"
+DisabledProps []
+Description "Simulink Coverage Configuration Component"
+Components []
+Name "Simulink Coverage"
+CovEnable off
+CovScope "EntireSystem"
+CovIncludeTopModel on
+RecordCoverage off
+CovPath "/"
+CovSaveName "covdata"
+CovCompData ""
+CovMetricSettings "dw"
+CovFilter ""
+CovHTMLOptions ""
+CovNameIncrementing off
+CovHtmlReporting on
+CovForceBlockReductionOff on
+CovEnableCumulative on
+CovSaveCumulativeToWorkspaceVar on
+CovSaveSingleToWorkspaceVar on
+CovCumulativeVarName "covCumulativeData"
+CovCumulativeReport off
+CovSaveOutputData on
+CovOutputDir "slcov_output/$ModelName$"
+CovDataFileName "$ModelName$_cvdata"
+CovShowResultsExplorer on
+CovReportOnPause on
+CovModelRefEnable off
+CovModelRefExcluded ""
+CovExternalEMLEnable off
+CovSFcnEnable on
+CovBoundaryAbsTol "1e-05"
+CovBoundaryRelTol "0.01"
+CovUseTimeInterval off
+CovStartTime "0"
+CovStopTime "0"
+CovMcdcMode "Masking"
+}
+
+Object {
+$ObjectID 20
+Version "1.0"
+$ClassName "SSC.SimscapeCC"
+Description ""
+Name "Simscape"
+EditingMode "Full"
+ExplicitSolverDiagnosticOptions "warning"
+GlobalZcOffDiagnosticOptions "warning"
+SimscapeNormalizeSystem off
+SimscapeNominalValues "[{\"value\":\"1\",\"unit\":\"A\"},{\"value\":\"1\",\"unit\":\"bar\"},{\"value\":\"1\",\"unit\":\"cm^2\"},{\"value\":\"1\",\"unit\":\"cm^3/s\"},{\"value\":\"1\",\"unit\":\"kJ/kg\"},{\"value\":\"1\",\"unit\":\"kW\"},{\"value\":\"1\",\"unit\":\"l\"},{\"value\":\"1\",\"unit\":\"N\"},{\"value\":\"1\",\"unit\":\"N*m\"},{\"value\":\"1\",\"unit\":\"V\"}]"
+SimscapeLogType "none"
+SimscapeLogSimulationStatistics off
+SimscapeLogToSDI off
+SimscapeLogOpenViewer off
+SimscapeLogName "simlog"
+SimscapeLogDecimation "1"
+SimscapeLogLimitData on
+SimscapeLogDataHistory "5000"
+SimscapeUseOperatingPoints off
+SimscapeOperatingPoint ""
+SelectedTab ""
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 1
+Cell "Name"
+}
+
+Array {
+PropName "Components"
+Type "Handle"
+Dimension 2
+Object {
+$ObjectID 21
+Version "19.1.1"
+$ClassName "MECH.SimMechanicsCC"
+DisabledProps []
+Description ""
+Components []
+Name "SimscapeMultibody1G"
+WarnOnRedundantConstraints on
+WarnOnSingularInitialAssembly off
+ShowCutJoints off
+VisOnUpdateDiagram off
+VisDuringSimulation off
+EnableVisSimulationTime on
+VisSampleTime "0"
+DisableBodyVisControl off
+ShowCG on
+ShowCS on
+ShowOnlyPortCS off
+HighlightModel on
+FramesToBeSkipped "0"
+AnimationDelay "3"
+RecordAVI off
+CompressAVI on
+AviFileName ""
+AutoFitVis off
+EnableSelection on
+LastVizWinPosition [-1 -1 -1 -1]
+CamPosition [0 0 0]
+CamTarget [0 0 -1]
+CamUpVector [0 1 0]
+CamHeight "-1"
+CamViewAngle "0"
+VisBackgroundColor [0.9 0.9 0.95]
+DefaultBodyColor [1 0 0]
+MDLBodyVisualizationType "Convex hull from body CS locations"
+OVRRIDBodyVisualizationType "NONE"
+VisConfigFile ""
+}
+
+Object {
+$ObjectID 22
+Version "19.1.1"
+$ClassName "simmechanics.ConfigurationSet"
+DisabledProps []
+Description "SimMechanics 2G"
+Name "SimscapeMultibody"
+Array {
+PropName "Components"
+Type "Handle"
+Dimension 2
+Object {
+$ObjectID 23
+Version "19.1.1"
+$ClassName "simmechanics.DiagnosticsConfigSet"
+DisabledProps []
+Description "Diagnostics"
+Components []
+Name "DiagnosticsConfigSet"
+SimMechanicsInvalidVisualProperty "warning"
+SimMechanicsCrossSectionNullEdge "warning"
+SimMechanicsUnconnectedFramePorts "warning"
+SimMechanicsUnconnectedGeometryPorts "warning"
+SimMechanicsRedundantBlock "warning"
+SimMechanicsConflictingReferenceFrames "warning"
+SimMechanicsRigidlyBoundBlock "error"
+SimMechanicsUnsatisfiedHighPriorityTargets "warning"
+SimMechanicsJointTargetOverSpecification "error"
+}
+
+Object {
+$ObjectID 24
+Version "19.1.1"
+$ClassName "simmechanics.ExplorerConfigSet"
+DisabledProps []
+Description "Explorer"
+Components []
+Name "ExplorerConfigSet"
+SimMechanicsOpenEditorOnUpdate on
+InternalSimMechanicsExplorerSettings ""
+}
+}
+}
+}
+}
+}
+}
+}
+
+System {
+PaperOrientation "landscape"
+PaperPositionMode "auto"
+PaperType "usletter"
+PaperUnits "inches"
+TiledPaperMargins [0.500000, 0.500000, 0.500000, 0.500000]
+TiledPageScale "1"
+ShowPageBoundaries off
+ModelBrowserVisibility on
+ModelBrowserWidth "200"
+ScreenColor "white"
+ZoomFactor "100"
+PortBlocksUseCompactNotation off
+Open off
+}
+
+BlockDefaults {
+ForegroundColor "black"
+BackgroundColor "white"
+DropShadow off
+NamePlacement "normal"
+FontName "Helvetica"
+FontSize "10"
+FontWeight "normal"
+FontAngle "normal"
+ShowName on
+HideAutomaticName on
+BlockRotation "0"
+BlockMirror off
+}
+
+AnnotationDefaults {
+HorizontalAlignment "center"
+VerticalAlignment "middle"
+ForegroundColor "black"
+BackgroundColor "white"
+DropShadow off
+FontName "Helvetica"
+FontSize "10"
+FontWeight "normal"
+FontAngle "normal"
+MarkupType "model"
+UseDisplayTextAsClickCallback off
+AnnotationType "note_annotation"
+FixedHeight off
+FixedWidth off
+Interpreter off
+}
+
+LineDefaults {
+FontName "Helvetica"
+FontSize "9"
+FontWeight "normal"
+FontAngle "normal"
+}
+
+MaskDefaults {
+SelfModifiable "off"
+IconFrame "on"
+IconOpaque "opaque"
+RunInitForIconRedraw "analyze"
+IconRotate "none"
+PortRotate "default"
+IconUnits "autoscale"
+Display ""
+
+}
+
+MaskParameterDefaults {
+Evaluate "on"
+Tunable "on"
+NeverSave "off"
+Internal "off"
+ReadOnly "off"
+Enabled "on"
+Visible "on"
+ToolTip "on"
+Value ""
+}
+
+BlockParameterDefaults {
+Block {
+BlockType "Constant"
+Value "1"
+VectorParams1D on
+SamplingMode "Sample based"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Inherit from 'Constant value'"
+LockScale off
+SampleTime "inf"
+FramePeriod "inf"
+PreserveConstantTs off
+}
+
+Block {
+BlockType "Demux"
+Outputs "4"
+DisplayOption "none"
+BusSelectionMode off
+}
+
+Block {
+BlockType "Display"
+Format "short"
+Decimation "10"
+Floating off
+Lockdown off
+SampleTime "-1"
+}
+
+Block {
+BlockType "Fcn"
+Expr "sin(u[1])"
+SampleTime "-1"
+}
+
+Block {
+BlockType "Inport"
+Port "1"
+OutputFunctionCall off
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: auto"
+LockScale off
+BusOutputAsStruct off
+Unit "inherit"
+PortDimensions "-1"
+VarSizeSig "Inherit"
+SampleTime "-1"
+SignalType "auto"
+SamplingMode "auto"
+LatchByDelayingOutsideSignal off
+LatchInputForFeedbackSignals off
+Interpolate on
+}
+
+Block {
+BlockType "MATLABFcn"
+MATLABFcn "sin"
+OutputDimensions "-1"
+OutputSignalType "auto"
+Output1D on
+SampleTime "-1"
+}
+
+Block {
+BlockType "Mux"
+Inputs "4"
+DisplayOption "none"
+UseBusObject off
+BusObject "BusObject"
+NonVirtualBus off
+}
+
+Block {
+BlockType "Outport"
+Port "1"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: auto"
+LockScale off
+BusOutputAsStruct off
+Unit "inherit"
+PortDimensions "-1"
+VarSizeSig "Inherit"
+SampleTime "-1"
+SignalType "auto"
+SamplingMode "auto"
+EnsureOutportIsVirtual off
+SourceOfInitialOutputValue "Dialog"
+OutputWhenDisabled "held"
+InitialOutput []
+MustResolveToSignalObject off
+OutputWhenUnConnected off
+OutputWhenUnconnectedValue "0"
+VectorParamsAs1DForOutWhenUnconnected on
+}
+
+Block {
+BlockType "PMIOPort"
+Port "1"
+}
+
+Block {
+BlockType "Scope"
+DefaultConfigurationName "Simulink.scopes.TimeScopeBlockCfg"
+}
+
+Block {
+BlockType "Selector"
+NumberOfDimensions "1"
+IndexMode "One-based"
+InputPortWidth "-1"
+SampleTime "-1"
+}
+
+Block {
+BlockType "SubSystem"
+ShowPortLabels "FromPortIcon"
+Permissions "ReadWrite"
+PermitHierarchicalResolution "All"
+TreatAsAtomicUnit off
+MinAlgLoopOccurrences off
+PropExecContextOutsideSubsystem off
+ScheduleAs "Sample time"
+SystemSampleTime "-1"
+RTWSystemCode "Auto"
+RTWFcnNameOpts "Auto"
+RTWFileNameOpts "Auto"
+FunctionInterfaceSpec "void_void"
+FunctionWithSeparateData off
+RTWMemSecFuncInitTerm "Inherit from model"
+RTWMemSecFuncExecute "Inherit from model"
+RTWMemSecDataConstants "Inherit from model"
+RTWMemSecDataInternal "Inherit from model"
+RTWMemSecDataParameters "Inherit from model"
+SimViewingDevice off
+DataTypeOverride "UseLocalSettings"
+DataTypeOverrideAppliesTo "AllNumericTypes"
+MinMaxOverflowLogging "UseLocalSettings"
+Opaque off
+MaskHideContents off
+SFBlockType "NONE"
+VariantControlMode "Expression"
+Variant off
+GeneratePreprocessorConditionals off
+AllowZeroVariantControls off
+PropagateVariantConditions off
+TreatAsGroupedWhenPropagatingVariantConditions on
+ContentPreviewEnabled off
+IsWebBlock off
+IsObserver off
+Latency "0"
+AutoFrameSizeCalculation off
+IsWebBlockPanel off
+}
+}
+}
+

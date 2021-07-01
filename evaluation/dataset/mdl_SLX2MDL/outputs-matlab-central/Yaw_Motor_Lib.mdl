@@ -1,0 +1,3082 @@
+Library {
+SavedCharacterEncoding "ISO-8859-1"
+LibraryType "BlockLibrary"
+EnableAccessToBaseWorkspace on
+SLXCompressionType "Normal"
+ScopeRefreshTime "0.035000"
+OverrideScopeRefreshTime off
+DisableAllScopes off
+FPTRunName "Run 1"
+MaxMDLFileLineLength "120"
+LastSavedArchitecture "maci64"
+HideAutomaticNames off
+UpdateHistory "UpdateHistoryNever"
+ModifiedByFormat "%<Auto>"
+ModifiedDateFormat "%<Auto>"
+RTWModifiedTimeStamp "408024868"
+ModelVersionFormat "1.%<AutoIncrement:49>"
+
+SampleTimeColors off
+SampleTimeAnnotations off
+LibraryLinkDisplay "none"
+WideLines off
+ShowLineDimensions off
+ShowPortDataTypes off
+ShowAllPropagatedSignalLabels off
+PortDataTypeDisplayFormat "AliasTypeOnly"
+ShowEditTimeErrors on
+ShowEditTimeWarnings off
+ShowEditTimeAdvisorChecks off
+ShowPortUnits off
+ShowDesignRanges off
+ShowLoopsOnError on
+IgnoreBidirectionalLines off
+ShowStorageClass off
+ShowTestPointIcons on
+ShowSignalResolutionIcons on
+ShowViewerIcons on
+SortedOrder off
+VariantCondition off
+ShowSubsystemDomainSpec off
+ExecutionContextIcon off
+ShowLinearizationAnnotations on
+ShowVisualizeInsertedRTB on
+ShowMarkup on
+BlockNameDataTip off
+BlockParametersDataTip off
+BlockDescriptionStringDataTip off
+BlockVariantConditionDataTip off
+ToolBar on
+StatusBar on
+BrowserShowLibraryLinks off
+FunctionConnectors off
+BrowserLookUnderMasks off
+MultiThreadCoSim on
+
+SimulationMode "normal"
+PauseTimes "5"
+NumberOfSteps "1"
+SnapshotBufferSize "10"
+SnapshotInterval "10"
+NumberOfLastSnapshots "0"
+LinearizationMsg "none"
+Profile off
+ParamWorkspaceSource "MATLABWorkspace"
+
+ExtModeBatchMode off
+ExtModeEnableFloating on
+ExtModeTrigType "manual"
+ExtModeTrigMode "normal"
+ExtModeTrigPort "1"
+ExtModeTrigElement "any"
+ExtModeTrigDuration "1000"
+ExtModeTrigDurationFloating "auto"
+ExtModeTrigHoldOff "0"
+ExtModeTrigDelay "0"
+ExtModeTrigDirection "rising"
+ExtModeTrigLevel "0"
+ExtModeArchiveMode off
+ExtModeAutoIncOneShot off
+ExtModeIncDirWhenArm off
+ExtModeAddSuffixToVar off
+ExtModeWriteAllDataToWs off
+ExtModeArmWhenConnect on
+ExtModeSkipDownloadWhenConnect off
+ExtModeLogAll on
+ExtModeAutoUpdateStatusClock on
+
+ShowModelReferenceBlockVersion off
+ShowModelReferenceBlockIO off
+OrderedModelArguments on
+
+ExplicitPartitioning off
+
+System {
+Location [72, 52, 900, 552]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ReportName "simulink-default.rpt"
+SIDHighWatermark "130"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "SubSystem"
+Name "Yaw Motor"
+SID "97"
+Ports [1, 3, 0, 0, 0, 0, 1]
+Position [55, 22, 195, 98]
+ZOrder "31"
+FontSize "12"
+RequestExecContextInheritance off
+Object {
+$PropName "MaskObject"
+$ObjectID 1
+$ClassName "Simulink.Mask"
+Display "image(imread('Yaw_Servomotor_Horizontal_IMAGE.jpg'));\n"
+
+}
+
+System {
+Location [74, 52, 902, 554]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+PaperType "A4"
+PaperUnits "centimeters"
+TiledPaperMargins [1.270000, 1.270000, 1.270000, 1.270000]
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Trq"
+SID "98"
+Position [45, 63, 75, 77]
+ZOrder "-1"
+FontSize "12"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Gain"
+Name "Actuator Position\nto Nacelle Angle"
+SID "99"
+Position [155, 160, 185, 190]
+ZOrder "-3"
+BlockMirror on
+FontSize "12"
+Gain "WT_Params.Yaw_Actuator.yaw_gear_diameter/WT_Params.Yaw_Actuator.yaw_ring_diameter"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Actuator Speed\nto Nacelle Yaw Rate"
+SID "100"
+Position [235, 210, 265, 240]
+ZOrder "-4"
+BlockMirror on
+FontSize "12"
+Gain "WT_Params.Yaw_Actuator.yaw_gear_diameter/WT_Params.Yaw_Actuator.yaw_ring_diameter"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "From"
+Name "From"
+SID "101"
+Position [650, 172, 680, 188]
+ZOrder "-6"
+ForegroundColor [0.752941, 0.752941, 0.752941]
+ShowName off
+CloseFcn "tagdialog Close"
+GotoTag "TQ"
+}
+
+Block {
+BlockType "Goto"
+Name "Goto"
+SID "102"
+Position [305, 25, 330, 45]
+ZOrder "-7"
+BlockMirror on
+ForegroundColor [0.752941, 0.752941, 0.752941]
+NamePlacement "alternate"
+ShowName off
+GotoTag "TQ"
+}
+
+Block {
+BlockType "Reference"
+Name "Ideal Rotational\nMotion Sensor"
+SID "103"
+Ports [0, 0, 0, 0, 0, 1, 3]
+Position [545, 120, 585, 160]
+ZOrder "21"
+BlockRotation "90"
+LibraryVersion "10000000.1"
+FontSize "12"
+SourceBlock "fl_lib/Mechanical/Mechanical Sensors/Ideal Rotational\nMotion Sensor"
+SourceType "Ideal Rotational\nMotion Sensor"
+SourceProductName "Simscape"
+SourceProductBaseCode "SS"
+Port {
+PortType "2"
+PortNumber "1"
+Rotation "-1.5707963267948966"
+Position [565, 116]
+}
+
+Port {
+PortType "3"
+PortNumber "1"
+Rotation "-1.5707963267948966"
+Position [580, 164]
+}
+
+Port {
+PortType "3"
+PortNumber "2"
+Rotation "-1.5707963267948966"
+Position [565, 164]
+}
+
+Port {
+PortType "3"
+PortNumber "3"
+Rotation "-1.5707963267948966"
+Position [550, 164]
+}
+
+LogSimulationData off
+SourceFile "foundation.mechanical.sensors.angular_velocity"
+InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"R\",\"label\":\"R\",\"type\":\"foundation.mechanical.rotational.rotational\"}],\"Right\":[{\"id\":\"C\",\"label\":\"C\",\"type\":\"foundation.mechanical.rotational.rotational\"},{\"id\":\"W\",\"label\":\"W\",\"type\":\"output\"},{\"id\":\"A\",\"label\":\"A\",\"type\":\"output\"}],\"Top\":[]}"
+ComponentPath "foundation.mechanical.sensors.angular_velocity"
+ComponentVariants "foundation.mechanical.sensors.angular_velocity"
+ComponentVariantNames "angular_velocity"
+ClassName "angular_velocity"
+SchemaVersion "1"
+offset "0"
+offset_unit "rad"
+offset_conf "compiletime"
+
+LogSimulationData off
+SourceFile "foundation.mechanical.sensors.angular_velocity"
+InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"R\",\"label\":\"R\",\"type\":\"foundation.mechanical.rotational.rotational\"}],\"Right\":[{\"id\":\"C\",\"label\":\"C\",\"type\":\"foundation.mechanical.rotational.rotational\"},{\"id\":\"W\",\"label\":\"W\",\"type\":\"output\"},{\"id\":\"A\",\"label\":\"A\",\"type\":\"output\"}],\"Top\":[]}"
+ComponentPath "foundation.mechanical.sensors.angular_velocity"
+ComponentVariants "foundation.mechanical.sensors.angular_velocity"
+ComponentVariantNames "angular_velocity"
+ClassName "angular_velocity"
+SchemaVersion "1"
+offset "0"
+offset_unit "rad"
+offset_conf "compiletime"
+
+LogSimulationData off
+SourceFile "foundation.mechanical.sensors.angular_velocity"
+InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"R\",\"label\":\"R\",\"type\":\"foundation.mechanical.rotational.rotational\"}],\"Right\":[{\"id\":\"C\",\"label\":\"C\",\"type\":\"foundation.mechanical.rotational.rotational\"},{\"id\":\"W\",\"label\":\"W\",\"type\":\"output\"},{\"id\":\"A\",\"label\":\"A\",\"type\":\"output\"}],\"Top\":[]}"
+ComponentPath "foundation.mechanical.sensors.angular_velocity"
+ComponentVariants "foundation.mechanical.sensors.angular_velocity"
+ComponentVariantNames "angular_velocity"
+ClassName "angular_velocity"
+SchemaVersion "1"
+offset "0"
+offset_unit "rad"
+offset_conf "compiletime"
+
+LogSimulationData off
+SourceFile "foundation.mechanical.sensors.angular_velocity"
+InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"R\",\"label\":\"R\",\"type\":\"foundation.mechanical.rotational.rotational\"}],\"Right\":[{\"id\":\"C\",\"label\":\"C\",\"type\":\"foundation.mechanical.rotational.rotational\"},{\"id\":\"W\",\"label\":\"W\",\"type\":\"output\"},{\"id\":\"A\",\"label\":\"A\",\"type\":\"output\"}],\"Top\":[]}"
+ComponentPath "foundation.mechanical.sensors.angular_velocity"
+ComponentVariants "foundation.mechanical.sensors.angular_velocity"
+ComponentVariantNames "angular_velocity"
+ClassName "angular_velocity"
+SchemaVersion "1"
+offset "0"
+offset_unit "rad"
+offset_conf "compiletime"
+
+}
+
+Block {
+BlockType "Reference"
+Name "Mechanical Rotational Reference"
+SID "104"
+Ports [0, 0, 0, 0, 0, 1]
+Position [570, 190, 590, 210]
+ZOrder "24"
+BlockRotation "270"
+BlockMirror on
+ShowName off
+LibraryVersion "10000000.1"
+SourceBlock "fl_lib/Mechanical/Rotational Elements/Mechanical\nRotational Reference"
+SourceType "Mechanical\nRotational Reference"
+SourceProductName "Simscape"
+SourceProductBaseCode "SS"
+Port {
+PortType "2"
+PortNumber "1"
+Rotation "-1.5707963267948966"
+Position [580, 186]
+}
+
+LogSimulationData off
+SourceFile "foundation.mechanical.rotational.reference"
+InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"W\",\"label\":\"\",\"type\":\"foundation.mechanical.rotational.rotational\"}],\"Right\":[],\"Top\":[]}"
+ComponentPath "foundation.mechanical.rotational.reference"
+ComponentVariants "foundation.mechanical.rotational.reference"
+ComponentVariantNames "reference"
+ClassName "reference"
+SchemaVersion "1"
+
+LogSimulationData off
+SourceFile "foundation.mechanical.rotational.reference"
+InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"W\",\"label\":\"\",\"type\":\"foundation.mechanical.rotational.rotational\"}],\"Right\":[],\"Top\":[]}"
+ComponentPath "foundation.mechanical.rotational.reference"
+ComponentVariants "foundation.mechanical.rotational.reference"
+ComponentVariantNames "reference"
+ClassName "reference"
+SchemaVersion "1"
+
+LogSimulationData off
+SourceFile "foundation.mechanical.rotational.reference"
+InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"W\",\"label\":\"\",\"type\":\"foundation.mechanical.rotational.rotational\"}],\"Right\":[],\"Top\":[]}"
+ComponentPath "foundation.mechanical.rotational.reference"
+ComponentVariants "foundation.mechanical.rotational.reference"
+ComponentVariantNames "reference"
+ClassName "reference"
+SchemaVersion "1"
+
+LogSimulationData off
+SourceFile "foundation.mechanical.rotational.reference"
+InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"W\",\"label\":\"\",\"type\":\"foundation.mechanical.rotational.rotational\"}],\"Right\":[],\"Top\":[]}"
+ComponentPath "foundation.mechanical.rotational.reference"
+ComponentVariants "foundation.mechanical.rotational.reference"
+ComponentVariantNames "reference"
+ClassName "reference"
+SchemaVersion "1"
+
+}
+
+Block {
+BlockType "Reference"
+Name "PS-Simulink Converter"
+SID "105"
+Ports [0, 1, 0, 0, 0, 1]
+Position [465, 160, 495, 190]
+ZOrder "22"
+BlockMirror on
+NamePlacement "alternate"
+ShowName off
+LibraryVersion "5.0"
+SourceBlock "nesl_utility/PS-Simulink\nConverter"
+SourceType "PS-Simulink\nConverter"
+SourceProductName "Simscape"
+SourceProductBaseCode "SS"
+ContentPreviewEnabled off
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "deg"
+AffineConversion off
+
+ContentPreviewEnabled off
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "deg"
+AffineConversion off
+
+ContentPreviewEnabled off
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "deg"
+AffineConversion off
+
+ContentPreviewEnabled off
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "deg"
+AffineConversion off
+
+}
+
+Block {
+BlockType "Reference"
+Name "PS-Simulink Converter1"
+SID "106"
+Ports [0, 1, 0, 0, 0, 1]
+Position [465, 210, 495, 240]
+ZOrder "23"
+BlockMirror on
+NamePlacement "alternate"
+ShowName off
+LibraryVersion "5.0"
+SourceBlock "nesl_utility/PS-Simulink\nConverter"
+SourceType "PS-Simulink\nConverter"
+SourceProductName "Simscape"
+SourceProductBaseCode "SS"
+ContentPreviewEnabled off
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "deg/s"
+AffineConversion off
+
+ContentPreviewEnabled off
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "deg/s"
+AffineConversion off
+
+ContentPreviewEnabled off
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "deg/s"
+AffineConversion off
+
+ContentPreviewEnabled off
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "deg/s"
+AffineConversion off
+
+}
+
+Block {
+BlockType "SubSystem"
+Name "Servomotor"
+SID "107"
+Ports [1, 0, 0, 0, 0, 0, 1]
+Position [120, 22, 265, 118]
+ZOrder "-10"
+FontSize "12"
+ShowPortLabels "FromPortBlockName"
+RequestExecContextInheritance off
+Object {
+$PropName "MaskObject"
+$ObjectID 2
+$ClassName "Simulink.Mask"
+IconOpaque "transparent"
+Display "image(imread('Yaw_Servomotor_IMAGE.jpg'));\n"
+
+}
+
+System {
+Location [74, 52, 902, 554]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+PaperType "A4"
+PaperUnits "centimeters"
+TiledPaperMargins [1.270000, 1.270000, 1.270000, 1.270000]
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Trq"
+SID "108"
+Position [25, 38, 55, 52]
+ZOrder "-1"
+FontSize "12"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Reference"
+Name "DC Voltage Source"
+SID "109"
+Ports [0, 0, 0, 0, 0, 1, 1]
+Position [66, 130, 94, 170]
+ZOrder "-2"
+BlockRotation "270"
+BlockMirror on
+ShowName off
+LibraryVersion "8009000.1"
+FontSize "12"
+SourceBlock "fl_lib/Electrical/Electrical Sources/DC Voltage Source"
+SourceType "DC Voltage Source"
+SourceProductName "Simscape"
+SourceProductBaseCode "SS"
+LogSimulationData off
+SourceFile "foundation.electrical.sources.dc_voltage"
+ComponentPath "foundation.electrical.sources.dc_voltage"
+ComponentVariants "foundation.electrical.sources.dc_voltage"
+ComponentVariantNames "dc_voltage"
+ClassName "dc_voltage_source"
+SchemaVersion "1"
+v0 "WT_Params.Yaw_Actuator.Motor.voltage"
+v0_unit "V"
+v0_conf "compiletime"
+
+LogSimulationData off
+SourceFile "foundation.electrical.sources.dc_voltage"
+ComponentPath "foundation.electrical.sources.dc_voltage"
+ComponentVariants "foundation.electrical.sources.dc_voltage"
+ComponentVariantNames "dc_voltage"
+ClassName "dc_voltage_source"
+SchemaVersion "1"
+v0 "WT_Params.Yaw_Actuator.Motor.voltage"
+v0_unit "V"
+v0_conf "compiletime"
+
+LogSimulationData off
+SourceFile "foundation.electrical.sources.dc_voltage"
+ComponentPath "foundation.electrical.sources.dc_voltage"
+ComponentVariants "foundation.electrical.sources.dc_voltage"
+ComponentVariantNames "dc_voltage"
+ClassName "dc_voltage_source"
+SchemaVersion "1"
+v0 "WT_Params.Yaw_Actuator.Motor.voltage"
+v0_unit "V"
+v0_conf "compiletime"
+
+LogSimulationData off
+SourceFile "foundation.electrical.sources.dc_voltage"
+ComponentPath "foundation.electrical.sources.dc_voltage"
+ComponentVariants "foundation.electrical.sources.dc_voltage"
+ComponentVariantNames "dc_voltage"
+ClassName "dc_voltage_source"
+SchemaVersion "1"
+v0 "WT_Params.Yaw_Actuator.Motor.voltage"
+v0_unit "V"
+v0_conf "compiletime"
+
+}
+
+Block {
+BlockType "Reference"
+Name "Electrical Reference"
+SID "110"
+Ports [0, 0, 0, 0, 0, 1]
+Position [70, 230, 90, 250]
+ZOrder "-3"
+BlockRotation "270"
+BlockMirror on
+ShowName off
+LibraryVersion "8009000.1"
+FontSize "12"
+SourceBlock "fl_lib/Electrical/Electrical Elements/Electrical Reference"
+SourceType "Electrical Reference"
+SourceProductName "Simscape"
+SourceProductBaseCode "SS"
+LogSimulationData off
+SourceFile "foundation.electrical.elements.reference"
+ComponentPath "foundation.electrical.elements.reference"
+ComponentVariants "foundation.electrical.elements.reference"
+ComponentVariantNames "reference"
+ClassName "reference_electrical"
+SchemaVersion "1"
+
+LogSimulationData off
+SourceFile "foundation.electrical.elements.reference"
+ComponentPath "foundation.electrical.elements.reference"
+ComponentVariants "foundation.electrical.elements.reference"
+ComponentVariantNames "reference"
+ClassName "reference_electrical"
+SchemaVersion "1"
+
+LogSimulationData off
+SourceFile "foundation.electrical.elements.reference"
+ComponentPath "foundation.electrical.elements.reference"
+ComponentVariants "foundation.electrical.elements.reference"
+ComponentVariantNames "reference"
+ClassName "reference_electrical"
+SchemaVersion "1"
+
+LogSimulationData off
+SourceFile "foundation.electrical.elements.reference"
+ComponentPath "foundation.electrical.elements.reference"
+ComponentVariants "foundation.electrical.elements.reference"
+ComponentVariantNames "reference"
+ClassName "reference_electrical"
+SchemaVersion "1"
+
+}
+
+Block {
+BlockType "Reference"
+Name "Mechanical\nRotational Reference"
+SID "111"
+Ports [0, 0, 0, 0, 0, 1]
+Position [201, 195, 229, 220]
+ZOrder "-4"
+BlockRotation "270"
+BlockMirror on
+ShowName off
+LibraryVersion "8009000.1"
+FontSize "12"
+SourceBlock "fl_lib/Mechanical/Rotational Elements/Mechanical\nRotational Reference"
+SourceType "Mechanical\nRotational Reference"
+SourceProductName "Simscape"
+SourceProductBaseCode "SS"
+LogSimulationData off
+SourceFile "foundation.mechanical.rotational.reference"
+ComponentPath "foundation.mechanical.rotational.reference"
+ComponentVariants "foundation.mechanical.rotational.reference"
+ComponentVariantNames "reference"
+ClassName "reference_rot"
+SchemaVersion "1"
+
+LogSimulationData off
+SourceFile "foundation.mechanical.rotational.reference"
+ComponentPath "foundation.mechanical.rotational.reference"
+ComponentVariants "foundation.mechanical.rotational.reference"
+ComponentVariantNames "reference"
+ClassName "reference_rot"
+SchemaVersion "1"
+
+LogSimulationData off
+SourceFile "foundation.mechanical.rotational.reference"
+ComponentPath "foundation.mechanical.rotational.reference"
+ComponentVariants "foundation.mechanical.rotational.reference"
+ComponentVariantNames "reference"
+ClassName "reference_rot"
+SchemaVersion "1"
+
+LogSimulationData off
+SourceFile "foundation.mechanical.rotational.reference"
+ComponentPath "foundation.mechanical.rotational.reference"
+ComponentVariants "foundation.mechanical.rotational.reference"
+ComponentVariantNames "reference"
+ClassName "reference_rot"
+SchemaVersion "1"
+
+}
+
+Block {
+BlockType "Reference"
+Name "PS-Simulink\nConverter"
+SID "112"
+Ports [0, 1, 0, 0, 0, 1]
+Position [130, 260, 160, 290]
+ZOrder "-5"
+BlockMirror on
+ShowName off
+LibraryVersion "2.0"
+FontSize "12"
+SourceBlock "nesl_utility/PS-Simulink\nConverter"
+SourceType "PS-Simulink\nConverter"
+SourceProductName "Simscape"
+SourceProductBaseCode "SS"
+ContentPreviewEnabled off
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "deg/s"
+AffineConversion off
+
+ContentPreviewEnabled off
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "deg/s"
+AffineConversion off
+
+ContentPreviewEnabled off
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "deg/s"
+AffineConversion off
+
+ContentPreviewEnabled off
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "deg/s"
+AffineConversion off
+
+}
+
+Block {
+BlockType "Reference"
+Name "Servomotor"
+SID "113"
+Ports [0, 0, 0, 0, 0, 3, 3]
+Position [130, 120, 230, 170]
+ZOrder "-6"
+BlockRotation "270"
+BlockMirror on
+LibraryVersion "8009000.1"
+FontSize "14"
+FontWeight "bold"
+SourceBlock "elec_lib/Actuators & Drivers/Rotational Actuators/Servomotor"
+SourceType "Servomotor"
+SourceProductName "Simscape Electrical"
+SourceProductBaseCode "PS"
+LogSimulationData off
+SourceFile "elec.actuators.rotational.controlled_servomotor"
+ComponentPath "elec.actuators.rotational.controlled_servomotor"
+ComponentVariants "elec.actuators.rotational.controlled_servomotor, elec.actuators.rotational.controlled_servomotor_thermal, elec.actuators.rotational.controlled_servomotor_faultable, elec.actuators.rotational.controlled_servomotor_thermal_faultable"
+ComponentVariantNames "No thermal port, Show thermal port, Faultable | No thermal port, Faultable | Show thermal port"
+ClassName "controlled_servomotor"
+SchemaVersion "1"
+torque_speed_param "1"
+torque_speed_param_unit "1"
+torque_speed_param_conf "compiletime"
+w_t "WT_Params.Yaw_Actuator.Motor.max_speed_vector"
+w_t_unit "rpm"
+w_t_conf "compiletime"
+T_t "WT_Params.Yaw_Actuator.Motor.max_torque_vector"
+T_t_unit "N*m"
+T_t_conf "compiletime"
+torque_max "0.1"
+torque_max_unit "N*m"
+torque_max_conf "compiletime"
+power_max "30"
+power_max_unit "W"
+power_max_conf "compiletime"
+Tc "WT_Params.Yaw_Actuator.Motor.control_time_constant"
+Tc_unit "s"
+Tc_conf "compiletime"
+losses_param "1"
+losses_param_unit "1"
+losses_param_conf "compiletime"
+eff "100"
+eff_unit "1"
+eff_conf "compiletime"
+w_eff "3.75e+03"
+w_eff_unit "rpm"
+w_eff_conf "compiletime"
+T_eff "0.08"
+T_eff_unit "N*m"
+T_eff_conf "compiletime"
+Piron "0"
+Piron_unit "W"
+Piron_conf "compiletime"
+Pbase "0"
+Pbase_unit "W"
+Pbase_conf "compiletime"
+w_eff_vec [-8000 -4000 0 4000 8000]
+w_eff_vec_unit "rpm"
+w_eff_vec_conf "compiletime"
+T_eff_vec [0 0.03 0.06 0.09]
+T_eff_vec_unit "N*m"
+T_eff_vec_conf "compiletime"
+losses_mat [1.49 1.67 2.21 3.10; 0.42 0.69 1.14 2.03; 0.06 0.24 0.78 1.68; 0.42 0.69 1.14 2.03; 1.49 1.67 2.21 3.10]
+losses_mat_unit "W"
+losses_mat_conf "compiletime"
+efficiency_mat [95 95 95 95; 95 95 95 95; 95 95 95 95; 95 95 95 95; 95 95 95 95]
+efficiency_mat_unit "1"
+efficiency_mat_conf "compiletime"
+Res "WT_Params.Yaw_Actuator.Motor.resistance"
+Res_unit "Ohm"
+Res_conf "compiletime"
+J "0"
+J_unit "kg*m^2"
+J_conf "compiletime"
+lam "WT_Params.Yaw_Actuator.Motor.damping"
+lam_unit "N*m/(rad/s)"
+lam_conf "compiletime"
+speed0 "0"
+speed0_unit "rpm"
+speed0_conf "compiletime"
+alpha "0.00393"
+alpha_unit "1/K"
+alpha_conf "compiletime"
+Tmeas "25"
+Tmeas_unit "C"
+Tmeas_conf "compiletime"
+Tmeas2 "125"
+Tmeas2_unit "C"
+Tmeas2_conf "compiletime"
+losses_mat_T2 [1.49 1.74 2.49 3.74;0.42 0.67 1.42 2.67;0.06 0.31 1.06 2.31;0.42 0.67 1.42 2.67;1.49 1.74 2.49 3.74]
+losses_mat_T2_unit "W"
+losses_mat_T2_conf "compiletime"
+efficiency_mat_T2 [95 95 95 95; 95 95 95 95; 95 95 95 95; 95 95 95 95; 95 95 95 95]
+efficiency_mat_T2_unit "1"
+efficiency_mat_T2_conf "compiletime"
+thermal_mass "100"
+thermal_mass_unit "J/K"
+thermal_mass_conf "compiletime"
+initial_temperature "25"
+initial_temperature_unit "C"
+initial_temperature_conf "compiletime"
+fault_condition "1"
+fault_condition_unit "1"
+fault_condition_conf "compiletime"
+fault_threshold "0.5"
+fault_threshold_unit "1"
+fault_threshold_conf "compiletime"
+
+LogSimulationData off
+SourceFile "elec.actuators.rotational.controlled_servomotor"
+ComponentPath "elec.actuators.rotational.controlled_servomotor"
+ComponentVariants "elec.actuators.rotational.controlled_servomotor, elec.actuators.rotational.controlled_servomotor_thermal, elec.actuators.rotational.controlled_servomotor_faultable, elec.actuators.rotational.controlled_servomotor_thermal_faultable"
+ComponentVariantNames "No thermal port, Show thermal port, Faultable | No thermal port, Faultable | Show thermal port"
+ClassName "controlled_servomotor"
+SchemaVersion "1"
+torque_speed_param "1"
+torque_speed_param_unit "1"
+torque_speed_param_conf "compiletime"
+w_t "WT_Params.Yaw_Actuator.Motor.max_speed_vector"
+w_t_unit "rpm"
+w_t_conf "compiletime"
+T_t "WT_Params.Yaw_Actuator.Motor.max_torque_vector"
+T_t_unit "N*m"
+T_t_conf "compiletime"
+torque_max "0.1"
+torque_max_unit "N*m"
+torque_max_conf "compiletime"
+power_max "30"
+power_max_unit "W"
+power_max_conf "compiletime"
+Tc "WT_Params.Yaw_Actuator.Motor.control_time_constant"
+Tc_unit "s"
+Tc_conf "compiletime"
+losses_param "1"
+losses_param_unit "1"
+losses_param_conf "compiletime"
+eff "100"
+eff_unit "1"
+eff_conf "compiletime"
+w_eff "3.75e+03"
+w_eff_unit "rpm"
+w_eff_conf "compiletime"
+T_eff "0.08"
+T_eff_unit "N*m"
+T_eff_conf "compiletime"
+Piron "0"
+Piron_unit "W"
+Piron_conf "compiletime"
+Pbase "0"
+Pbase_unit "W"
+Pbase_conf "compiletime"
+w_eff_vec [-8000 -4000 0 4000 8000]
+w_eff_vec_unit "rpm"
+w_eff_vec_conf "compiletime"
+T_eff_vec [0 0.03 0.06 0.09]
+T_eff_vec_unit "N*m"
+T_eff_vec_conf "compiletime"
+losses_mat [1.49 1.67 2.21 3.10; 0.42 0.69 1.14 2.03; 0.06 0.24 0.78 1.68; 0.42 0.69 1.14 2.03; 1.49 1.67 2.21 3.10]
+losses_mat_unit "W"
+losses_mat_conf "compiletime"
+efficiency_mat [95 95 95 95; 95 95 95 95; 95 95 95 95; 95 95 95 95; 95 95 95 95]
+efficiency_mat_unit "1"
+efficiency_mat_conf "compiletime"
+Res "WT_Params.Yaw_Actuator.Motor.resistance"
+Res_unit "Ohm"
+Res_conf "compiletime"
+J "0"
+J_unit "kg*m^2"
+J_conf "compiletime"
+lam "WT_Params.Yaw_Actuator.Motor.damping"
+lam_unit "N*m/(rad/s)"
+lam_conf "compiletime"
+speed0 "0"
+speed0_unit "rpm"
+speed0_conf "compiletime"
+alpha "0.00393"
+alpha_unit "1/K"
+alpha_conf "compiletime"
+Tmeas "25"
+Tmeas_unit "C"
+Tmeas_conf "compiletime"
+Tmeas2 "125"
+Tmeas2_unit "C"
+Tmeas2_conf "compiletime"
+losses_mat_T2 [1.49 1.74 2.49 3.74;0.42 0.67 1.42 2.67;0.06 0.31 1.06 2.31;0.42 0.67 1.42 2.67;1.49 1.74 2.49 3.74]
+losses_mat_T2_unit "W"
+losses_mat_T2_conf "compiletime"
+efficiency_mat_T2 [95 95 95 95; 95 95 95 95; 95 95 95 95; 95 95 95 95; 95 95 95 95]
+efficiency_mat_T2_unit "1"
+efficiency_mat_T2_conf "compiletime"
+thermal_mass "100"
+thermal_mass_unit "J/K"
+thermal_mass_conf "compiletime"
+initial_temperature "25"
+initial_temperature_unit "C"
+initial_temperature_conf "compiletime"
+fault_condition "1"
+fault_condition_unit "1"
+fault_condition_conf "compiletime"
+fault_threshold "0.5"
+fault_threshold_unit "1"
+fault_threshold_conf "compiletime"
+
+LogSimulationData off
+SourceFile "elec.actuators.rotational.controlled_servomotor"
+ComponentPath "elec.actuators.rotational.controlled_servomotor"
+ComponentVariants "elec.actuators.rotational.controlled_servomotor, elec.actuators.rotational.controlled_servomotor_thermal, elec.actuators.rotational.controlled_servomotor_faultable, elec.actuators.rotational.controlled_servomotor_thermal_faultable"
+ComponentVariantNames "No thermal port, Show thermal port, Faultable | No thermal port, Faultable | Show thermal port"
+ClassName "controlled_servomotor"
+SchemaVersion "1"
+torque_speed_param "1"
+torque_speed_param_unit "1"
+torque_speed_param_conf "compiletime"
+w_t "WT_Params.Yaw_Actuator.Motor.max_speed_vector"
+w_t_unit "rpm"
+w_t_conf "compiletime"
+T_t "WT_Params.Yaw_Actuator.Motor.max_torque_vector"
+T_t_unit "N*m"
+T_t_conf "compiletime"
+torque_max "0.1"
+torque_max_unit "N*m"
+torque_max_conf "compiletime"
+power_max "30"
+power_max_unit "W"
+power_max_conf "compiletime"
+Tc "WT_Params.Yaw_Actuator.Motor.control_time_constant"
+Tc_unit "s"
+Tc_conf "compiletime"
+losses_param "1"
+losses_param_unit "1"
+losses_param_conf "compiletime"
+eff "100"
+eff_unit "1"
+eff_conf "compiletime"
+w_eff "3.75e+03"
+w_eff_unit "rpm"
+w_eff_conf "compiletime"
+T_eff "0.08"
+T_eff_unit "N*m"
+T_eff_conf "compiletime"
+Piron "0"
+Piron_unit "W"
+Piron_conf "compiletime"
+Pbase "0"
+Pbase_unit "W"
+Pbase_conf "compiletime"
+w_eff_vec [-8000 -4000 0 4000 8000]
+w_eff_vec_unit "rpm"
+w_eff_vec_conf "compiletime"
+T_eff_vec [0 0.03 0.06 0.09]
+T_eff_vec_unit "N*m"
+T_eff_vec_conf "compiletime"
+losses_mat [1.49 1.67 2.21 3.10; 0.42 0.69 1.14 2.03; 0.06 0.24 0.78 1.68; 0.42 0.69 1.14 2.03; 1.49 1.67 2.21 3.10]
+losses_mat_unit "W"
+losses_mat_conf "compiletime"
+efficiency_mat [95 95 95 95; 95 95 95 95; 95 95 95 95; 95 95 95 95; 95 95 95 95]
+efficiency_mat_unit "1"
+efficiency_mat_conf "compiletime"
+Res "WT_Params.Yaw_Actuator.Motor.resistance"
+Res_unit "Ohm"
+Res_conf "compiletime"
+J "0"
+J_unit "kg*m^2"
+J_conf "compiletime"
+lam "WT_Params.Yaw_Actuator.Motor.damping"
+lam_unit "N*m/(rad/s)"
+lam_conf "compiletime"
+speed0 "0"
+speed0_unit "rpm"
+speed0_conf "compiletime"
+alpha "0.00393"
+alpha_unit "1/K"
+alpha_conf "compiletime"
+Tmeas "25"
+Tmeas_unit "C"
+Tmeas_conf "compiletime"
+Tmeas2 "125"
+Tmeas2_unit "C"
+Tmeas2_conf "compiletime"
+losses_mat_T2 [1.49 1.74 2.49 3.74;0.42 0.67 1.42 2.67;0.06 0.31 1.06 2.31;0.42 0.67 1.42 2.67;1.49 1.74 2.49 3.74]
+losses_mat_T2_unit "W"
+losses_mat_T2_conf "compiletime"
+efficiency_mat_T2 [95 95 95 95; 95 95 95 95; 95 95 95 95; 95 95 95 95; 95 95 95 95]
+efficiency_mat_T2_unit "1"
+efficiency_mat_T2_conf "compiletime"
+thermal_mass "100"
+thermal_mass_unit "J/K"
+thermal_mass_conf "compiletime"
+initial_temperature "25"
+initial_temperature_unit "C"
+initial_temperature_conf "compiletime"
+fault_condition "1"
+fault_condition_unit "1"
+fault_condition_conf "compiletime"
+fault_threshold "0.5"
+fault_threshold_unit "1"
+fault_threshold_conf "compiletime"
+
+LogSimulationData off
+SourceFile "elec.actuators.rotational.controlled_servomotor"
+ComponentPath "elec.actuators.rotational.controlled_servomotor"
+ComponentVariants "elec.actuators.rotational.controlled_servomotor, elec.actuators.rotational.controlled_servomotor_thermal, elec.actuators.rotational.controlled_servomotor_faultable, elec.actuators.rotational.controlled_servomotor_thermal_faultable"
+ComponentVariantNames "No thermal port, Show thermal port, Faultable | No thermal port, Faultable | Show thermal port"
+ClassName "controlled_servomotor"
+SchemaVersion "1"
+torque_speed_param "1"
+torque_speed_param_unit "1"
+torque_speed_param_conf "compiletime"
+w_t "WT_Params.Yaw_Actuator.Motor.max_speed_vector"
+w_t_unit "rpm"
+w_t_conf "compiletime"
+T_t "WT_Params.Yaw_Actuator.Motor.max_torque_vector"
+T_t_unit "N*m"
+T_t_conf "compiletime"
+torque_max "0.1"
+torque_max_unit "N*m"
+torque_max_conf "compiletime"
+power_max "30"
+power_max_unit "W"
+power_max_conf "compiletime"
+Tc "WT_Params.Yaw_Actuator.Motor.control_time_constant"
+Tc_unit "s"
+Tc_conf "compiletime"
+losses_param "1"
+losses_param_unit "1"
+losses_param_conf "compiletime"
+eff "100"
+eff_unit "1"
+eff_conf "compiletime"
+w_eff "3.75e+03"
+w_eff_unit "rpm"
+w_eff_conf "compiletime"
+T_eff "0.08"
+T_eff_unit "N*m"
+T_eff_conf "compiletime"
+Piron "0"
+Piron_unit "W"
+Piron_conf "compiletime"
+Pbase "0"
+Pbase_unit "W"
+Pbase_conf "compiletime"
+w_eff_vec [-8000 -4000 0 4000 8000]
+w_eff_vec_unit "rpm"
+w_eff_vec_conf "compiletime"
+T_eff_vec [0 0.03 0.06 0.09]
+T_eff_vec_unit "N*m"
+T_eff_vec_conf "compiletime"
+losses_mat [1.49 1.67 2.21 3.10; 0.42 0.69 1.14 2.03; 0.06 0.24 0.78 1.68; 0.42 0.69 1.14 2.03; 1.49 1.67 2.21 3.10]
+losses_mat_unit "W"
+losses_mat_conf "compiletime"
+efficiency_mat [95 95 95 95; 95 95 95 95; 95 95 95 95; 95 95 95 95; 95 95 95 95]
+efficiency_mat_unit "1"
+efficiency_mat_conf "compiletime"
+Res "WT_Params.Yaw_Actuator.Motor.resistance"
+Res_unit "Ohm"
+Res_conf "compiletime"
+J "0"
+J_unit "kg*m^2"
+J_conf "compiletime"
+lam "WT_Params.Yaw_Actuator.Motor.damping"
+lam_unit "N*m/(rad/s)"
+lam_conf "compiletime"
+speed0 "0"
+speed0_unit "rpm"
+speed0_conf "compiletime"
+alpha "0.00393"
+alpha_unit "1/K"
+alpha_conf "compiletime"
+Tmeas "25"
+Tmeas_unit "C"
+Tmeas_conf "compiletime"
+Tmeas2 "125"
+Tmeas2_unit "C"
+Tmeas2_conf "compiletime"
+losses_mat_T2 [1.49 1.74 2.49 3.74;0.42 0.67 1.42 2.67;0.06 0.31 1.06 2.31;0.42 0.67 1.42 2.67;1.49 1.74 2.49 3.74]
+losses_mat_T2_unit "W"
+losses_mat_T2_conf "compiletime"
+efficiency_mat_T2 [95 95 95 95; 95 95 95 95; 95 95 95 95; 95 95 95 95; 95 95 95 95]
+efficiency_mat_T2_unit "1"
+efficiency_mat_T2_conf "compiletime"
+thermal_mass "100"
+thermal_mass_unit "J/K"
+thermal_mass_conf "compiletime"
+initial_temperature "25"
+initial_temperature_unit "C"
+initial_temperature_conf "compiletime"
+fault_condition "1"
+fault_condition_unit "1"
+fault_condition_conf "compiletime"
+fault_threshold "0.5"
+fault_threshold_unit "1"
+fault_threshold_conf "compiletime"
+
+}
+
+Block {
+BlockType "Reference"
+Name "Simulink-PS\nConverter"
+SID "114"
+Ports [1, 0, 0, 0, 0, 0, 1]
+Position [80, 29, 110, 61]
+ZOrder "-7"
+ShowName off
+LibraryVersion "2.0"
+FontSize "12"
+SourceBlock "nesl_utility/Simulink-PS\nConverter"
+SourceType "Simulink-PS\nConverter"
+SourceProductName "Simscape"
+SourceProductBaseCode "SS"
+ContentPreviewEnabled off
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_input"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+NoiseDistribution "none"
+NoiseParameters []
+Unit "1"
+AffineConversion off
+FilteringAndDerivatives "filter"
+SimscapeFilterOrder "1"
+InputFilterTimeConstant "WT_Params.Yaw_Actuator.Motor.filter_constant"
+UdotUserProvided "1"
+
+ContentPreviewEnabled off
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_input"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+NoiseDistribution "none"
+NoiseParameters []
+Unit "1"
+AffineConversion off
+FilteringAndDerivatives "filter"
+SimscapeFilterOrder "1"
+InputFilterTimeConstant "WT_Params.Yaw_Actuator.Motor.filter_constant"
+UdotUserProvided "1"
+
+ContentPreviewEnabled off
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_input"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+NoiseDistribution "none"
+NoiseParameters []
+Unit "1"
+AffineConversion off
+FilteringAndDerivatives "filter"
+SimscapeFilterOrder "1"
+InputFilterTimeConstant "WT_Params.Yaw_Actuator.Motor.filter_constant"
+UdotUserProvided "1"
+
+ContentPreviewEnabled off
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_input"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+NoiseDistribution "none"
+NoiseParameters []
+Unit "1"
+AffineConversion off
+FilteringAndDerivatives "filter"
+SimscapeFilterOrder "1"
+InputFilterTimeConstant "WT_Params.Yaw_Actuator.Motor.filter_constant"
+UdotUserProvided "1"
+
+}
+
+Block {
+BlockType "Terminator"
+Name "Terminator"
+SID "115"
+Position [70, 265, 90, 285]
+ZOrder "-8"
+BlockMirror on
+ShowName off
+FontSize "12"
+}
+
+Block {
+BlockType "PMIOPort"
+Name "YGb"
+SID "116"
+Position [255, 88, 285, 102]
+ZOrder "-9"
+BlockMirror on
+FontSize "12"
+Side "Right"
+}
+
+Line {
+LineType "Connection"
+ZOrder "1"
+Src "116#rconn:1"
+Points [-25, 0]
+Dst "113#lconn:3"
+}
+
+Line {
+ZOrder "2"
+Src "108#out:1"
+Dst "114#in:1"
+}
+
+Line {
+ZOrder "3"
+Src "112#out:1"
+Dst "115#in:1"
+}
+
+Line {
+LineType "Connection"
+ZOrder "4"
+Src "114#rconn:1"
+Points [55, 0]
+Dst "113#lconn:2"
+}
+
+Line {
+LineType "Connection"
+ZOrder "5"
+Src "112#lconn:1"
+Points [5, 0]
+Dst "113#rconn:2"
+}
+
+Line {
+LineType "Connection"
+ZOrder "6"
+Src "111#lconn:1"
+Dst "113#rconn:3"
+}
+
+Line {
+LineType "Connection"
+ZOrder "7"
+Src "110#lconn:1"
+Points [0, -20]
+Branch {
+ConnectType "DEST_SRC"
+Dst "109#rconn:1"
+}
+
+Branch {
+ConnectType "DEST_DEST"
+Src "113#rconn:1"
+Points [0, 10; -65, 0]
+}
+}
+
+Line {
+LineType "Connection"
+ZOrder "10"
+Src "109#lconn:1"
+Points [0, -10]
+Dst "113#lconn:1"
+}
+
+Annotation {
+SID "117"
+Name "Copyright 2009-2017 The MathWorks, Inc."
+Position [112, 312, 303, 328]
+InternalMargins [1, 1, 1, 1]
+ZOrder "-1"
+}
+}
+}
+
+Block {
+BlockType "Reference"
+Name "Simple Gear"
+SID "118"
+Ports [0, 0, 0, 0, 0, 1, 1]
+Position [635, 42, 690, 98]
+ZOrder "25"
+LibraryVersion "10000000.1"
+FontSize "12"
+SourceBlock "sdl_lib/Gears/Simple Gear"
+SourceType "Simple Gear"
+SourceProductName "Simscape Driveline"
+SourceProductBaseCode "LD"
+Port {
+PortType "2"
+PortNumber "1"
+Position [631, 70]
+}
+
+Port {
+PortType "3"
+PortNumber "1"
+Position [694, 70]
+}
+
+LogSimulationData off
+SourceFile "sdl.gears.simple_gear"
+InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"B\",\"label\":\"B\",\"type\":\"foundation.mechanical.rotational.rotational\"}],\"Right\":[{\"id\":\"F\",\"label\":\"F\",\"type\":\"foundation.mechanical.rotational.rotational\"}],\"Top\":[]}"
+ComponentPath "sdl.gears.simple_gear"
+ComponentVariants "sdl.gears.simple_gear, sdl.gears.simple_gear_th"
+ComponentVariantNames "No thermal port, Show thermal port"
+ClassName "simple_gear"
+SchemaVersion "1"
+ratio "1/(WT_Params.Yaw_Actuator.yaw_gear_diameter/WT_Params.Yaw_Actuator.yaw_ring_diameter)"
+ratio_unit "1"
+ratio_conf "compiletime"
+rotation_direction "2"
+rotation_direction_unit "1"
+rotation_direction_conf "compiletime"
+friction_model "1"
+friction_model_unit "1"
+friction_model_conf "compiletime"
+T_noload "0.1"
+T_noload_unit "N*m"
+T_noload_conf "compiletime"
+T_nom "5"
+T_nom_unit "N*m"
+T_nom_conf "compiletime"
+efficiency_nom "0.8"
+efficiency_nom_unit "1"
+efficiency_nom_conf "compiletime"
+efficiency "0.8"
+efficiency_unit "1"
+efficiency_conf "compiletime"
+mu_visc [ 0 0 ]
+mu_visc_unit "N*m/(rad/s)"
+mu_visc_conf "compiletime"
+w_thr "0.01"
+w_thr_unit "rad/s"
+w_thr_conf "compiletime"
+pwr_thr "0.001"
+pwr_thr_unit "W"
+pwr_thr_conf "compiletime"
+enable_faults "simscape.enum.onoff.off"
+enable_faults_unit "1"
+enable_faults_conf "compiletime"
+efficiency_fault "0.05"
+efficiency_fault_unit "1"
+efficiency_fault_conf "compiletime"
+external_fault "simscape.enum.onoff.off"
+external_fault_unit "1"
+external_fault_conf "compiletime"
+temporal_fault "simscape.enum.onoff.off"
+temporal_fault_unit "1"
+temporal_fault_conf "compiletime"
+fault_time "5"
+fault_time_unit "s"
+fault_time_conf "compiletime"
+fault_angles "pi / 12"
+fault_angles_unit "rad"
+fault_angles_conf "compiletime"
+report_fault "1"
+report_fault_unit "1"
+report_fault_conf "compiletime"
+temperature_TLU [ 280 300 320 ]
+temperature_TLU_unit "K"
+temperature_TLU_conf "compiletime"
+load_TLU [ 1 5 10 ]
+load_TLU_unit "N*m"
+load_TLU_conf "compiletime"
+efficiency_TLU [ 0.95 0.9 0.85 ]
+efficiency_TLU_unit "1"
+efficiency_TLU_conf "compiletime"
+efficiency_TLU2 [ 0.85 0.8 0.75; 0.95 0.9 0.85; 0.85 0.8 0.7 ]
+efficiency_TLU2_unit "1"
+efficiency_TLU2_conf "compiletime"
+thermal_mass "50"
+thermal_mass_unit "J/K"
+thermal_mass_conf "compiletime"
+T_init "300"
+T_init_unit "K"
+T_init_conf "compiletime"
+
+LogSimulationData off
+SourceFile "sdl.gears.simple_gear"
+InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"B\",\"label\":\"B\",\"type\":\"foundation.mechanical.rotational.rotational\"}],\"Right\":[{\"id\":\"F\",\"label\":\"F\",\"type\":\"foundation.mechanical.rotational.rotational\"}],\"Top\":[]}"
+ComponentPath "sdl.gears.simple_gear"
+ComponentVariants "sdl.gears.simple_gear, sdl.gears.simple_gear_th"
+ComponentVariantNames "No thermal port, Show thermal port"
+ClassName "simple_gear"
+SchemaVersion "1"
+ratio "1/(WT_Params.Yaw_Actuator.yaw_gear_diameter/WT_Params.Yaw_Actuator.yaw_ring_diameter)"
+ratio_unit "1"
+ratio_conf "compiletime"
+rotation_direction "2"
+rotation_direction_unit "1"
+rotation_direction_conf "compiletime"
+friction_model "1"
+friction_model_unit "1"
+friction_model_conf "compiletime"
+T_noload "0.1"
+T_noload_unit "N*m"
+T_noload_conf "compiletime"
+T_nom "5"
+T_nom_unit "N*m"
+T_nom_conf "compiletime"
+efficiency_nom "0.8"
+efficiency_nom_unit "1"
+efficiency_nom_conf "compiletime"
+efficiency "0.8"
+efficiency_unit "1"
+efficiency_conf "compiletime"
+mu_visc [ 0 0 ]
+mu_visc_unit "N*m/(rad/s)"
+mu_visc_conf "compiletime"
+w_thr "0.01"
+w_thr_unit "rad/s"
+w_thr_conf "compiletime"
+pwr_thr "0.001"
+pwr_thr_unit "W"
+pwr_thr_conf "compiletime"
+enable_faults "simscape.enum.onoff.off"
+enable_faults_unit "1"
+enable_faults_conf "compiletime"
+efficiency_fault "0.05"
+efficiency_fault_unit "1"
+efficiency_fault_conf "compiletime"
+external_fault "simscape.enum.onoff.off"
+external_fault_unit "1"
+external_fault_conf "compiletime"
+temporal_fault "simscape.enum.onoff.off"
+temporal_fault_unit "1"
+temporal_fault_conf "compiletime"
+fault_time "5"
+fault_time_unit "s"
+fault_time_conf "compiletime"
+fault_angles "pi / 12"
+fault_angles_unit "rad"
+fault_angles_conf "compiletime"
+report_fault "1"
+report_fault_unit "1"
+report_fault_conf "compiletime"
+temperature_TLU [ 280 300 320 ]
+temperature_TLU_unit "K"
+temperature_TLU_conf "compiletime"
+load_TLU [ 1 5 10 ]
+load_TLU_unit "N*m"
+load_TLU_conf "compiletime"
+efficiency_TLU [ 0.95 0.9 0.85 ]
+efficiency_TLU_unit "1"
+efficiency_TLU_conf "compiletime"
+efficiency_TLU2 [ 0.85 0.8 0.75; 0.95 0.9 0.85; 0.85 0.8 0.7 ]
+efficiency_TLU2_unit "1"
+efficiency_TLU2_conf "compiletime"
+thermal_mass "50"
+thermal_mass_unit "J/K"
+thermal_mass_conf "compiletime"
+T_init "300"
+T_init_unit "K"
+T_init_conf "compiletime"
+
+LogSimulationData off
+SourceFile "sdl.gears.simple_gear"
+InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"B\",\"label\":\"B\",\"type\":\"foundation.mechanical.rotational.rotational\"}],\"Right\":[{\"id\":\"F\",\"label\":\"F\",\"type\":\"foundation.mechanical.rotational.rotational\"}],\"Top\":[]}"
+ComponentPath "sdl.gears.simple_gear"
+ComponentVariants "sdl.gears.simple_gear, sdl.gears.simple_gear_th"
+ComponentVariantNames "No thermal port, Show thermal port"
+ClassName "simple_gear"
+SchemaVersion "1"
+ratio "1/(WT_Params.Yaw_Actuator.yaw_gear_diameter/WT_Params.Yaw_Actuator.yaw_ring_diameter)"
+ratio_unit "1"
+ratio_conf "compiletime"
+rotation_direction "2"
+rotation_direction_unit "1"
+rotation_direction_conf "compiletime"
+friction_model "1"
+friction_model_unit "1"
+friction_model_conf "compiletime"
+T_noload "0.1"
+T_noload_unit "N*m"
+T_noload_conf "compiletime"
+T_nom "5"
+T_nom_unit "N*m"
+T_nom_conf "compiletime"
+efficiency_nom "0.8"
+efficiency_nom_unit "1"
+efficiency_nom_conf "compiletime"
+efficiency "0.8"
+efficiency_unit "1"
+efficiency_conf "compiletime"
+mu_visc [ 0 0 ]
+mu_visc_unit "N*m/(rad/s)"
+mu_visc_conf "compiletime"
+w_thr "0.01"
+w_thr_unit "rad/s"
+w_thr_conf "compiletime"
+pwr_thr "0.001"
+pwr_thr_unit "W"
+pwr_thr_conf "compiletime"
+enable_faults "simscape.enum.onoff.off"
+enable_faults_unit "1"
+enable_faults_conf "compiletime"
+efficiency_fault "0.05"
+efficiency_fault_unit "1"
+efficiency_fault_conf "compiletime"
+external_fault "simscape.enum.onoff.off"
+external_fault_unit "1"
+external_fault_conf "compiletime"
+temporal_fault "simscape.enum.onoff.off"
+temporal_fault_unit "1"
+temporal_fault_conf "compiletime"
+fault_time "5"
+fault_time_unit "s"
+fault_time_conf "compiletime"
+fault_angles "pi / 12"
+fault_angles_unit "rad"
+fault_angles_conf "compiletime"
+report_fault "1"
+report_fault_unit "1"
+report_fault_conf "compiletime"
+temperature_TLU [ 280 300 320 ]
+temperature_TLU_unit "K"
+temperature_TLU_conf "compiletime"
+load_TLU [ 1 5 10 ]
+load_TLU_unit "N*m"
+load_TLU_conf "compiletime"
+efficiency_TLU [ 0.95 0.9 0.85 ]
+efficiency_TLU_unit "1"
+efficiency_TLU_conf "compiletime"
+efficiency_TLU2 [ 0.85 0.8 0.75; 0.95 0.9 0.85; 0.85 0.8 0.7 ]
+efficiency_TLU2_unit "1"
+efficiency_TLU2_conf "compiletime"
+thermal_mass "50"
+thermal_mass_unit "J/K"
+thermal_mass_conf "compiletime"
+T_init "300"
+T_init_unit "K"
+T_init_conf "compiletime"
+
+LogSimulationData off
+SourceFile "sdl.gears.simple_gear"
+InternalSimscapePortConfiguration "{\"Bottom\":[],\"Left\":[{\"id\":\"B\",\"label\":\"B\",\"type\":\"foundation.mechanical.rotational.rotational\"}],\"Right\":[{\"id\":\"F\",\"label\":\"F\",\"type\":\"foundation.mechanical.rotational.rotational\"}],\"Top\":[]}"
+ComponentPath "sdl.gears.simple_gear"
+ComponentVariants "sdl.gears.simple_gear, sdl.gears.simple_gear_th"
+ComponentVariantNames "No thermal port, Show thermal port"
+ClassName "simple_gear"
+SchemaVersion "1"
+ratio "1/(WT_Params.Yaw_Actuator.yaw_gear_diameter/WT_Params.Yaw_Actuator.yaw_ring_diameter)"
+ratio_unit "1"
+ratio_conf "compiletime"
+rotation_direction "2"
+rotation_direction_unit "1"
+rotation_direction_conf "compiletime"
+friction_model "1"
+friction_model_unit "1"
+friction_model_conf "compiletime"
+T_noload "0.1"
+T_noload_unit "N*m"
+T_noload_conf "compiletime"
+T_nom "5"
+T_nom_unit "N*m"
+T_nom_conf "compiletime"
+efficiency_nom "0.8"
+efficiency_nom_unit "1"
+efficiency_nom_conf "compiletime"
+efficiency "0.8"
+efficiency_unit "1"
+efficiency_conf "compiletime"
+mu_visc [ 0 0 ]
+mu_visc_unit "N*m/(rad/s)"
+mu_visc_conf "compiletime"
+w_thr "0.01"
+w_thr_unit "rad/s"
+w_thr_conf "compiletime"
+pwr_thr "0.001"
+pwr_thr_unit "W"
+pwr_thr_conf "compiletime"
+enable_faults "simscape.enum.onoff.off"
+enable_faults_unit "1"
+enable_faults_conf "compiletime"
+efficiency_fault "0.05"
+efficiency_fault_unit "1"
+efficiency_fault_conf "compiletime"
+external_fault "simscape.enum.onoff.off"
+external_fault_unit "1"
+external_fault_conf "compiletime"
+temporal_fault "simscape.enum.onoff.off"
+temporal_fault_unit "1"
+temporal_fault_conf "compiletime"
+fault_time "5"
+fault_time_unit "s"
+fault_time_conf "compiletime"
+fault_angles "pi / 12"
+fault_angles_unit "rad"
+fault_angles_conf "compiletime"
+report_fault "1"
+report_fault_unit "1"
+report_fault_conf "compiletime"
+temperature_TLU [ 280 300 320 ]
+temperature_TLU_unit "K"
+temperature_TLU_conf "compiletime"
+load_TLU [ 1 5 10 ]
+load_TLU_unit "N*m"
+load_TLU_conf "compiletime"
+efficiency_TLU [ 0.95 0.9 0.85 ]
+efficiency_TLU_unit "1"
+efficiency_TLU_conf "compiletime"
+efficiency_TLU2 [ 0.85 0.8 0.75; 0.95 0.9 0.85; 0.85 0.8 0.7 ]
+efficiency_TLU2_unit "1"
+efficiency_TLU2_conf "compiletime"
+thermal_mass "50"
+thermal_mass_unit "J/K"
+thermal_mass_conf "compiletime"
+T_init "300"
+T_init_unit "K"
+T_init_conf "compiletime"
+
+}
+
+Block {
+BlockType "SubSystem"
+Name "Torque\nSensor"
+SID "119"
+Ports [0, 1, 0, 0, 0, 1, 1]
+Position [305, 54, 330, 76]
+ZOrder "-11"
+ForegroundColor [0.752941, 0.752941, 0.752941]
+RequestExecContextInheritance off
+Object {
+$PropName "MaskObject"
+$ObjectID 3
+$ClassName "Simulink.Mask"
+Display "disp('S')\n"
+
+}
+
+System {
+Location [74, 52, 902, 554]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+PaperType "A4"
+PaperUnits "centimeters"
+TiledPaperMargins [1.270000, 1.270000, 1.270000, 1.270000]
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Reference"
+Name "Ideal Torque Sensor"
+SID "120"
+Ports [0, 0, 0, 0, 0, 1, 2]
+Position [85, 20, 125, 60]
+ZOrder "-1"
+BlockRotation "180"
+BlockMirror on
+LibraryVersion "8009000.1"
+FontSize "12"
+SourceBlock "fl_lib/Mechanical/Mechanical Sensors/Ideal Torque Sensor"
+SourceType "Ideal Torque Sensor"
+SourceProductName "Simscape"
+SourceProductBaseCode "SS"
+LogSimulationData off
+SourceFile "foundation.mechanical.sensors.torque"
+ComponentPath "foundation.mechanical.sensors.torque"
+ComponentVariants "foundation.mechanical.sensors.torque"
+ComponentVariantNames "torque"
+ClassName "torque"
+SchemaVersion "1"
+
+LogSimulationData off
+SourceFile "foundation.mechanical.sensors.torque"
+ComponentPath "foundation.mechanical.sensors.torque"
+ComponentVariants "foundation.mechanical.sensors.torque"
+ComponentVariantNames "torque"
+ClassName "torque"
+SchemaVersion "1"
+
+LogSimulationData off
+SourceFile "foundation.mechanical.sensors.torque"
+ComponentPath "foundation.mechanical.sensors.torque"
+ComponentVariants "foundation.mechanical.sensors.torque"
+ComponentVariantNames "torque"
+ClassName "torque"
+SchemaVersion "1"
+
+LogSimulationData off
+SourceFile "foundation.mechanical.sensors.torque"
+ComponentPath "foundation.mechanical.sensors.torque"
+ComponentVariants "foundation.mechanical.sensors.torque"
+ComponentVariantNames "torque"
+ClassName "torque"
+SchemaVersion "1"
+
+}
+
+Block {
+BlockType "Reference"
+Name "PS-Simulink\nConverter"
+SID "121"
+Ports [0, 1, 0, 0, 0, 1]
+Position [210, 15, 240, 45]
+ZOrder "-2"
+ShowName off
+LibraryVersion "2.0"
+SourceBlock "nesl_utility/PS-Simulink\nConverter"
+SourceType "PS-Simulink\nConverter"
+SourceProductName "Simscape"
+SourceProductBaseCode "SS"
+ContentPreviewEnabled off
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "1"
+AffineConversion off
+
+ContentPreviewEnabled off
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "1"
+AffineConversion off
+
+ContentPreviewEnabled off
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "1"
+AffineConversion off
+
+ContentPreviewEnabled off
+PhysicalDomain "network_engine_domain"
+SubClassName "ps_output"
+LeftPortType "input"
+RightPortType "output"
+PseudoPeriodic off
+Frequencies []
+Unit "1"
+AffineConversion off
+
+}
+
+Block {
+BlockType "PMIOPort"
+Name "R"
+SID "122"
+Position [15, 33, 45, 47]
+ZOrder "-3"
+FontSize "12"
+Side "Left"
+}
+
+Block {
+BlockType "PMIOPort"
+Name "C"
+SID "123"
+Position [165, 43, 195, 57]
+ZOrder "-4"
+BlockMirror on
+FontSize "12"
+Port "2"
+Side "Right"
+}
+
+Block {
+BlockType "Outport"
+Name "Trq"
+SID "124"
+Position [270, 23, 300, 37]
+ZOrder "-5"
+FontSize "12"
+IconDisplay "Port number"
+}
+
+Line {
+LineType "Connection"
+ZOrder "1"
+Src "120#rconn:2"
+Dst "121#lconn:1"
+}
+
+Line {
+LineType "Connection"
+ZOrder "2"
+Src "123#rconn:1"
+Dst "120#rconn:1"
+}
+
+Line {
+LineType "Connection"
+ZOrder "3"
+Src "122#rconn:1"
+Dst "120#lconn:1"
+}
+
+Line {
+ZOrder "4"
+Src "121#out:1"
+Dst "124#in:1"
+}
+}
+}
+
+Block {
+BlockType "Reference"
+Name "Yaw Gearbox"
+SID "125"
+Ports [0, 0, 0, 0, 0, 1, 1]
+Position [380, 22, 530, 118]
+ZOrder "-12"
+LibraryVersion "1.38"
+FontSize "12"
+SourceBlock "Yaw_Gearbox_Lib/Yaw Gearbox"
+SourceType ""
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+}
+
+Block {
+BlockType "PMIOPort"
+Name "YG"
+SID "126"
+Position [725, 63, 755, 77]
+ZOrder "-13"
+BlockMirror on
+FontSize "12"
+Side "Right"
+}
+
+Block {
+BlockType "Outport"
+Name "NYA"
+SID "127"
+Position [45, 168, 75, 182]
+ZOrder "-14"
+BlockMirror on
+FontSize "12"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "NYR"
+SID "128"
+Position [45, 218, 75, 232]
+ZOrder "-15"
+BlockMirror on
+FontSize "12"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "Torque"
+SID "129"
+Position [725, 173, 755, 187]
+ZOrder "-16"
+FontSize "12"
+Port "3"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "106#out:1"
+Dst "100#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "105#out:1"
+Dst "99#in:1"
+}
+
+Line {
+LineType "Connection"
+ZOrder "3"
+Src "126#rconn:1"
+Dst "118#rconn:1"
+}
+
+Line {
+LineType "Connection"
+ZOrder "4"
+Src "105#lconn:1"
+Dst "103#rconn:3"
+}
+
+Line {
+LineType "Connection"
+ZOrder "5"
+Src "104#lconn:1"
+Dst "103#rconn:1"
+}
+
+Line {
+LineType "Connection"
+ZOrder "6"
+Src "106#lconn:1"
+Points [55, 0]
+Dst "103#rconn:2"
+}
+
+Line {
+LineType "Connection"
+ZOrder "7"
+Points [565, 70; -20, 0]
+Dst "125#rconn:1"
+Branch {
+ConnectType "SRC_SRC"
+Dst "103#lconn:1"
+}
+
+Branch {
+ConnectType "SRC_DEST"
+Src "118#lconn:1"
+Points [-55, 0]
+}
+}
+
+Line {
+ZOrder "10"
+Src "101#out:1"
+Dst "129#in:1"
+}
+
+Line {
+ZOrder "11"
+Src "119#out:1"
+Points [10, 0]
+Dst "102#in:1"
+}
+
+Line {
+LineType "Connection"
+ZOrder "12"
+Src "119#rconn:1"
+Dst "125#lconn:1"
+}
+
+Line {
+LineType "Connection"
+ZOrder "13"
+Src "119#lconn:1"
+Points [0, 5]
+Dst "107#rconn:1"
+}
+
+Line {
+ZOrder "14"
+Src "100#out:1"
+Dst "128#in:1"
+}
+
+Line {
+ZOrder "15"
+Src "99#out:1"
+Dst "127#in:1"
+}
+
+Line {
+ZOrder "16"
+Src "98#out:1"
+Dst "107#in:1"
+}
+
+Annotation {
+SID "130"
+Name "Copyright 2009-2017 The MathWorks, Inc."
+Position [272, 272, 463, 288]
+InternalMargins [1, 1, 1, 1]
+ZOrder "-1"
+}
+}
+}
+
+Annotation {
+SID "56"
+Name "Copyright 2009-2017 The MathWorks, Inc."
+Position [17, 127, 208, 143]
+InternalMargins [1, 1, 1, 1]
+ZOrder "-1"
+}
+}
+
+DiagnosticSuppressor on
+
+LogicAnalyzerPlugin on
+
+NotesPlugin on
+
+SLCCPlugin on
+
+WebScopes_FoundationPlugin on
+
+Object {
+$PropName "BdWindowsInfo"
+$ObjectID 4
+$ClassName "Simulink.BDWindowsInfo"
+BDUuid "9d2bcc14-7fed-4548-a798-0fdf0c2351d6"
+Object {
+$PropName "WindowsInfo"
+$ObjectID 5
+$ClassName "Simulink.WindowInfo"
+IsActive [1]
+Location [72.0, 52.0, 828.0, 500.0]
+WindowState "AAAA/wAAAAD9AAAAAgAAAAAAAAC9AAAB+PwCAAAAA/sAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAAB4AP///wAAAAEAAAAAAAAAAPwCAAAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZQBjAHQAbwByAAAAAAD/////AAAANAD///8AAAP5AAAB5wAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/////wEAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAACR/////wAAAAAAAAAA/////wEAAAEE/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAFh/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA"
+WindowUuid ""
+Array {
+PropName "PersistedApps"
+Type "Cell"
+Dimension 0
+}
+
+Object {
+$PropName "ModelBrowserInfo"
+$ObjectID 6
+$ClassName "Simulink.ModelBrowserInfo"
+Visible [0]
+DockPosition "Left"
+Width [50]
+Height [50]
+Filter [9]
+Minimized "Unset"
+}
+
+Object {
+$PropName "ExplorerBarInfo"
+$ObjectID 7
+$ClassName "Simulink.ExplorerBarInfo"
+Visible [0]
+}
+
+Object {
+$PropName "EditorsInfo"
+$ObjectID 8
+$ClassName "Simulink.EditorInfo"
+IsActive [1]
+IsTabbed [1]
+ViewObjType "SimulinkTopLevel"
+LoadSaveID "0"
+Extents [972.0, 457.0]
+ZoomFactor [1.0]
+Offset [1.5, -6.7250000238418579]
+SceneRectInView [0.0, 0.0, 0.0, 0.0]
+}
+
+Object {
+$PropName "DockComponentsInfo"
+$ObjectID 9
+$ClassName "Simulink.DockComponentInfo"
+Type "GLUE2:PropertyInspector"
+ID "Property Inspector"
+Visible [0]
+CreateCallback ""
+UserData ""
+Floating [0]
+DockPosition "Right"
+Width [512]
+Height [384]
+Minimized "Unset"
+}
+}
+}
+
+Array {
+Type "Handle"
+Dimension 1
+Simulink.ConfigSet {
+Version "19.1.1"
+$ClassName "Simulink.ConfigSet"
+DisabledProps []
+Description ""
+Name "Configuration"
+CurrentDlgPage "Solver"
+ConfigPrmDlgPosition [ 260, 210, 1140, 840 ]
+ExtraOptions ""
+Array {
+PropName "Components"
+Type "Handle"
+Dimension 10
+Simulink.SolverCC {
+$ObjectID 11
+Version "19.1.1"
+$ClassName "Simulink.SolverCC"
+DisabledProps []
+Description ""
+Components []
+StartTime "0.0"
+StopTime "10.0"
+AbsTol "auto"
+AutoScaleAbsTol on
+FixedStep "auto"
+InitialStep "auto"
+MaxOrder "5"
+ZcThreshold "auto"
+ConsecutiveZCsStepRelTol "10*128*eps"
+MaxConsecutiveZCs "1000"
+ExtrapolationOrder "4"
+NumberNewtonIterations "1"
+MaxStep "auto"
+MinStep "auto"
+MaxConsecutiveMinStep "1"
+RelTol "1e-3"
+EnableMultiTasking on
+ConcurrentTasks off
+Solver "ode45"
+SolverName "ode45"
+SolverJacobianMethodControl "auto"
+ShapePreserveControl "DisableAll"
+ZeroCrossControl "UseLocalSettings"
+ZeroCrossAlgorithm "Nonadaptive"
+AlgebraicLoopSolver "TrustRegion"
+SolverInfoToggleStatus off
+IsAutoAppliedInSIP off
+SolverResetMethod "Fast"
+PositivePriorityOrder off
+AutoInsertRateTranBlk off
+SampleTimeConstraint "Unconstrained"
+InsertRTBMode "Whenever possible"
+SampleTimeProperty []
+DecoupledContinuousIntegration off
+MinimalZcImpactIntegration off
+SolverOrder "3"
+}
+
+Simulink.DataIOCC {
+$ObjectID 12
+Version "19.1.1"
+$ClassName "Simulink.DataIOCC"
+DisabledProps []
+Description ""
+Components []
+Decimation "1"
+ExternalInput [t, u]
+FinalStateName "xFinal"
+InitialState "xInitial"
+LimitDataPoints on
+MaxDataPoints "1000"
+LoadExternalInput off
+LoadInitialState off
+SaveFinalState off
+SaveOperatingPoint off
+SaveFormat "Array"
+SignalLoggingSaveFormat "ModelDataLogs"
+SaveOutput on
+SaveState off
+SignalLogging on
+DSMLogging on
+InspectSignalLogs off
+VisualizeSimOutput on
+StreamToWorkspace off
+StreamVariableName "streamout"
+SaveTime on
+ReturnWorkspaceOutputs off
+StateSaveName "xout"
+TimeSaveName "tout"
+OutputSaveName "yout"
+SignalLoggingName "logsout"
+DSMLoggingName "dsmout"
+OutputOption "RefineOutputTimes"
+OutputTimes []
+ReturnWorkspaceOutputsName "out"
+Refine "1"
+LoggingToFile off
+DatasetSignalFormat "timeseries"
+LoggingFileName "out.mat"
+LoggingIntervals [-inf, inf]
+}
+
+Simulink.OptimizationCC {
+$ObjectID 13
+Version "19.1.1"
+$ClassName "Simulink.OptimizationCC"
+Description ""
+Components []
+BlockReduction on
+BooleanDataType on
+ConditionallyExecuteInputs on
+DefaultParameterBehavior "Tunable"
+UseDivisionForNetSlopeComputation off
+GainParamInheritBuiltInType off
+UseFloatMulNetSlope off
+DefaultUnderspecifiedDataType "double"
+UseSpecifiedMinMax off
+InlineInvariantSignals off
+OptimizeBlockIOStorage on
+BufferReuse on
+EnhancedBackFolding off
+CachingGlobalReferences off
+GlobalBufferReuse on
+StrengthReduction off
+AdvancedOptControl ""
+ExpressionFolding on
+BooleansAsBitfields off
+BitfieldContainerType "uint_T"
+EnableMemcpy on
+MemcpyThreshold "64"
+PassReuseOutputArgsAs "Structure reference"
+PassReuseOutputArgsThreshold "12"
+ExpressionDepthLimit "2147483647"
+LocalBlockOutputs on
+RollThreshold "5"
+StateBitsets off
+DataBitsets off
+ActiveStateOutputEnumStorageType "Native Integer"
+ZeroExternalMemoryAtStartup on
+ZeroInternalMemoryAtStartup on
+InitFltsAndDblsToZero off
+NoFixptDivByZeroProtection off
+EfficientFloat2IntCast off
+EfficientMapNaN2IntZero on
+LifeSpan "inf"
+MaxStackSize "Inherit from target"
+BufferReusableBoundary on
+SimCompilerOptimization off
+AccelVerboseBuild off
+OptimizeBlockOrder off
+OptimizeDataStoreBuffers on
+BusAssignmentInplaceUpdate on
+DifferentSizesBufferReuse off
+UseRowMajorAlgorithm off
+OptimizationLevel "level2"
+OptimizationPriority "Balanced"
+OptimizationCustomize on
+LabelGuidedReuse off
+MultiThreadedLoops off
+DenormalBehavior "GradualUnderflow"
+EfficientTunableParamExpr off
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 9
+Cell "ZeroExternalMemoryAtStartup"
+Cell "ZeroInternalMemoryAtStartup"
+Cell "OptimizeModelRefInitCode"
+Cell "NoFixptDivByZeroProtection"
+Cell "BooleansAsBitfields"
+Cell "PassReuseOutputArgsAs"
+Cell "PassReuseOutputArgsThreshold"
+Cell "UseSpecifiedMinMax"
+Cell "EfficientTunableParamExpr"
+}
+}
+
+Simulink.DebuggingCC {
+$ObjectID 14
+Version "19.1.1"
+$ClassName "Simulink.DebuggingCC"
+Description ""
+Components []
+RTPrefix "error"
+ConsistencyChecking "none"
+ArrayBoundsChecking "none"
+SignalInfNanChecking "none"
+StringTruncationChecking "error"
+SignalRangeChecking "none"
+ReadBeforeWriteMsg "UseLocalSettings"
+WriteAfterWriteMsg "UseLocalSettings"
+WriteAfterReadMsg "UseLocalSettings"
+AlgebraicLoopMsg "warning"
+ArtificialAlgebraicLoopMsg "warning"
+SaveWithDisabledLinksMsg "warning"
+SaveWithParameterizedLinksMsg "warning"
+CheckSSInitialOutputMsg on
+UnderspecifiedInitializationDetection "Classic"
+MergeDetectMultiDrivingBlocksExec "none"
+CheckExecutionContextPreStartOutputMsg off
+CheckExecutionContextRuntimeOutputMsg off
+SignalResolutionControl "UseLocalSettings"
+BlockPriorityViolationMsg "warning"
+MinStepSizeMsg "warning"
+TimeAdjustmentMsg "none"
+MaxConsecutiveZCsMsg "error"
+MaskedZcDiagnostic "warning"
+IgnoredZcDiagnostic "warning"
+SolverPrmCheckMsg "warning"
+InheritedTsInSrcMsg "warning"
+MultiTaskDSMMsg "error"
+MultiTaskCondExecSysMsg "error"
+MultiTaskRateTransMsg "error"
+SingleTaskRateTransMsg "none"
+TasksWithSamePriorityMsg "warning"
+ExportedTasksRateTransMsg "none"
+SigSpecEnsureSampleTimeMsg "warning"
+CheckMatrixSingularityMsg "none"
+IntegerOverflowMsg "warning"
+Int32ToFloatConvMsg "warning"
+ParameterDowncastMsg "error"
+ParameterOverflowMsg "error"
+ParameterUnderflowMsg "none"
+ParameterPrecisionLossMsg "warning"
+ParameterTunabilityLossMsg "warning"
+FixptConstUnderflowMsg "none"
+FixptConstOverflowMsg "none"
+FixptConstPrecisionLossMsg "none"
+UnderSpecifiedDataTypeMsg "none"
+UnnecessaryDatatypeConvMsg "none"
+VectorMatrixConversionMsg "none"
+InvalidFcnCallConnMsg "error"
+FcnCallInpInsideContextMsg "warning"
+SignalLabelMismatchMsg "none"
+UnconnectedInputMsg "warning"
+UnconnectedOutputMsg "warning"
+UnconnectedLineMsg "warning"
+UseOnlyExistingSharedCode "error"
+SFcnCompatibilityMsg "none"
+FrameProcessingCompatibilityMsg "error"
+UniqueDataStoreMsg "none"
+BusObjectLabelMismatch "warning"
+RootOutportRequireBusObject "warning"
+AssertControl "UseLocalSettings"
+AllowSymbolicDim off
+RowMajorDimensionSupport off
+ModelReferenceIOMsg "none"
+ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+ModelReferenceVersionMismatchMessage "none"
+ModelReferenceIOMismatchMessage "none"
+UnknownTsInhSupMsg "warning"
+ModelReferenceDataLoggingMessage "warning"
+ModelReferenceSymbolNameMessage "warning"
+ModelReferenceExtraNoncontSigs "error"
+StateNameClashWarn "warning"
+OperatingPointInterfaceChecksumMismatchMsg "warning"
+NonCurrentReleaseOperatingPointMsg "error"
+ChecksumConsistencyForSSReuse "none"
+PregeneratedLibrarySubsystemCodeDiagnostic "warning"
+MatchCodeGenerationContextForUpdateDiagram "none"
+InitInArrayFormatMsg "warning"
+StrictBusMsg "ErrorLevel1"
+BusNameAdapt "WarnAndRepair"
+NonBusSignalsTreatedAsBus "none"
+SymbolicDimMinMaxWarning "warning"
+LossOfSymbolicDimsSimulationWarning "warning"
+LossOfSymbolicDimsCodeGenerationWarning "error"
+SymbolicDimsDataTypeCodeGenerationDiagnostic "error"
+BlockIODiagnostic "none"
+SFUnusedDataAndEventsDiag "warning"
+SFUnexpectedBacktrackingDiag "warning"
+SFInvalidInputDataAccessInChartInitDiag "warning"
+SFNoUnconditionalDefaultTransitionDiag "warning"
+SFTransitionOutsideNaturalParentDiag "warning"
+SFUnreachableExecutionPathDiag "warning"
+SFUndirectedBroadcastEventsDiag "warning"
+SFTransitionActionBeforeConditionDiag "warning"
+SFOutputUsedAsStateInMooreChartDiag "error"
+SFTemporalDelaySmallerThanSampleTimeDiag "warning"
+SFSelfTransitionDiag "warning"
+SFExecutionAtInitializationDiag "none"
+SFMachineParentedDataDiag "warning"
+IntegerSaturationMsg "warning"
+AllowedUnitSystems "all"
+UnitsInconsistencyMsg "warning"
+AllowAutomaticUnitConversions on
+RCSCRenamedMsg "warning"
+RCSCObservableMsg "warning"
+ForceCombineOutputUpdateInSim off
+UnitDatabase ""
+UnderSpecifiedDimensionMsg "none"
+DebugExecutionForFMUViaOutOfProcess off
+ArithmeticOperatorsInVariantConditions "warning"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 1
+Cell "UseOnlyExistingSharedCode"
+}
+}
+
+Simulink.HardwareCC {
+$ObjectID 15
+Version "19.1.1"
+$ClassName "Simulink.HardwareCC"
+DisabledProps []
+Description ""
+Components []
+ProdBitPerChar "8"
+ProdBitPerShort "16"
+ProdBitPerInt "32"
+ProdBitPerLong "32"
+ProdBitPerLongLong "64"
+ProdBitPerFloat "32"
+ProdBitPerDouble "64"
+ProdBitPerPointer "32"
+ProdBitPerSizeT "32"
+ProdBitPerPtrDiffT "32"
+ProdLargestAtomicInteger "Char"
+ProdLargestAtomicFloat "None"
+ProdIntDivRoundTo "Undefined"
+ProdEndianess "Unspecified"
+ProdWordSize "32"
+ProdShiftRightIntArith on
+ProdLongLongMode off
+ProdHWDeviceType "32-bit Generic"
+TargetBitPerChar "8"
+TargetBitPerShort "16"
+TargetBitPerInt "32"
+TargetBitPerLong "32"
+TargetBitPerLongLong "64"
+TargetBitPerFloat "32"
+TargetBitPerDouble "64"
+TargetBitPerPointer "32"
+TargetBitPerSizeT "32"
+TargetBitPerPtrDiffT "32"
+TargetLargestAtomicInteger "Char"
+TargetLargestAtomicFloat "None"
+TargetShiftRightIntArith on
+TargetLongLongMode off
+TargetIntDivRoundTo "Undefined"
+TargetEndianess "Unspecified"
+TargetWordSize "32"
+TargetPreprocMaxBitsSint "32"
+TargetPreprocMaxBitsUint "32"
+TargetHWDeviceType "Specified"
+TargetUnknown off
+ProdEqTarget on
+UseEmbeddedCoderFeatures on
+UseSimulinkCoderFeatures on
+HardwareBoardFeatureSet "EmbeddedCoderHSP"
+}
+
+Simulink.ModelReferenceCC {
+$ObjectID 16
+Version "19.1.1"
+$ClassName "Simulink.ModelReferenceCC"
+DisabledProps []
+Description ""
+Components []
+UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+EnableRefExpFcnMdlSchedulingChecks on
+CheckModelReferenceTargetMessage "error"
+EnableParallelModelReferenceBuilds off
+ParallelModelReferenceErrorOnInvalidPool on
+ParallelModelReferenceMATLABWorkerInit "None"
+ModelReferenceNumInstancesAllowed "Multi"
+PropagateVarSize "Infer from blocks in model"
+ModelDependencies ""
+ModelReferencePassRootInputsByReference on
+ModelReferenceMinAlgLoopOccurrences off
+PropagateSignalLabelsOutOfModel off
+SupportModelReferenceSimTargetCustomCode off
+}
+
+Simulink.SFSimCC {
+$ObjectID 17
+Version "19.1.1"
+$ClassName "Simulink.SFSimCC"
+DisabledProps []
+Description ""
+Components []
+SimCustomSourceCode ""
+SimCustomHeaderCode ""
+SimCustomInitializer ""
+SimCustomTerminator ""
+SimReservedNameArray []
+SimUserSources ""
+SimUserIncludeDirs ""
+SimUserLibraries ""
+SimUserDefines ""
+SimCustomCompilerFlags ""
+SimCustomLinkerFlags ""
+SFSimEcho on
+SimCtrlC on
+SimIntegrity on
+SimUseLocalCustomCode off
+SimParseCustomCode on
+SimAnalyzeCustomCode off
+SimBuildMode "sf_incremental_build"
+SimGenImportedTypeDefs off
+ModelFunctionsGlobalVisibility on
+CompileTimeRecursionLimit "50"
+EnableRuntimeRecursion on
+MATLABDynamicMemAlloc on
+MATLABDynamicMemAllocThreshold "65536"
+CustomCodeFunctionArrayLayout []
+DefaultCustomCodeFunctionArrayLayout "NotSpecified"
+CustomCodeUndefinedFunction "UseInterfaceOnly"
+}
+
+Simulink.RTWCC {
+BackupClass "Simulink.RTWCC"
+$ObjectID 18
+Version "19.1.1"
+$ClassName "Simulink.RTWCC"
+Description ""
+SystemTargetFile "grt.tlc"
+HardwareBoard "None"
+ShowCustomHardwareApp off
+ShowEmbeddedHardwareApp off
+TLCOptions ""
+GenCodeOnly off
+MakeCommand "make_rtw"
+GenerateMakefile on
+PackageGeneratedCodeAndArtifacts off
+PackageName ""
+TemplateMakefile "grt_default_tmf"
+PostCodeGenCommand ""
+GenerateReport off
+RTWVerbose on
+RetainRTWFile off
+RTWBuildHooks []
+ProfileTLC off
+TLCDebug off
+TLCCoverage off
+TLCAssert off
+RTWUseLocalCustomCode off
+RTWUseSimCustomCode off
+CustomSourceCode ""
+CustomHeaderCode ""
+CustomInclude ""
+CustomSource ""
+CustomLibrary ""
+CustomDefine ""
+CustomBLASCallback ""
+CustomLAPACKCallback ""
+CustomFFTCallback ""
+CustomInitializer ""
+CustomTerminator ""
+Toolchain "Automatically locate an installed toolchain"
+BuildConfiguration "Faster Builds"
+CustomToolchainOptions []
+IncludeHyperlinkInReport off
+LaunchReport off
+PortableWordSizes off
+CreateSILPILBlock "None"
+CodeExecutionProfiling off
+CodeExecutionProfileVariable "executionProfile"
+CodeProfilingSaveOptions "SummaryOnly"
+CodeProfilingInstrumentation off
+SILDebugging off
+TargetLang "C"
+IncludeBusHierarchyInRTWFileBlockHierarchyMap off
+GenerateTraceInfo off
+GenerateTraceReport off
+GenerateTraceReportSl off
+GenerateTraceReportSf off
+GenerateTraceReportEml off
+GenerateWebview off
+GenerateCodeMetricsReport off
+GenerateCodeReplacementReport off
+GenerateMissedCodeReplacementReport off
+RTWCompilerOptimization off
+ObjectivePriorities []
+RTWCustomCompilerOptimizations ""
+CheckMdlBeforeBuild "Off"
+SharedConstantsCachingThreshold "1024"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 16
+Cell "IncludeHyperlinkInReport"
+Cell "GenerateTraceInfo"
+Cell "GenerateTraceReport"
+Cell "GenerateTraceReportSl"
+Cell "GenerateTraceReportSf"
+Cell "GenerateTraceReportEml"
+Cell "PortableWordSizes"
+Cell "GenerateWebview"
+Cell "GenerateCodeMetricsReport"
+Cell "GenerateCodeReplacementReport"
+Cell "GenerateMissedCodeReplacementReport"
+Cell "GenerateErtSFunction"
+Cell "CreateSILPILBlock"
+Cell "CodeExecutionProfiling"
+Cell "CodeProfilingSaveOptions"
+Cell "CodeProfilingInstrumentation"
+}
+
+Array {
+PropName "Components"
+Type "Handle"
+Dimension 2
+Object {
+$ObjectID 19
+Version "19.1.1"
+$ClassName "Simulink.CodeAppCC"
+Description ""
+Components []
+Comment ""
+ForceParamTrailComments off
+GenerateComments on
+CommentStyle "Auto"
+IgnoreCustomStorageClasses on
+IgnoreTestpoints off
+MaxIdLength "31"
+PreserveName off
+PreserveNameWithParent off
+ShowEliminatedStatement off
+OperatorAnnotations off
+SimulinkDataObjDesc off
+SFDataObjDesc off
+MATLABFcnDesc off
+MangleLength "1"
+SharedChecksumLength "8"
+CustomSymbolStrGlobalVar "$R$N$M"
+CustomSymbolStrType "$N$R$M_T"
+CustomSymbolStrField "$N$M"
+CustomSymbolStrFcn "$R$N$M$F"
+CustomSymbolStrModelFcn "$R$N"
+CustomSymbolStrFcnArg "rt$I$N$M"
+CustomSymbolStrBlkIO "rtb_$N$M"
+CustomSymbolStrTmpVar "$N$M"
+CustomSymbolStrMacro "$R$N$M"
+CustomSymbolStrUtil "$N$C"
+CustomSymbolStrEmxType "emxArray_$M$N"
+CustomSymbolStrEmxFcn "emx$M$N"
+CustomUserTokenString ""
+CustomCommentsFcn ""
+DefineNamingRule "None"
+DefineNamingFcn ""
+ParamNamingRule "None"
+ParamNamingFcn ""
+SignalNamingRule "None"
+SignalNamingFcn ""
+InsertBlockDesc off
+InsertPolySpaceComments off
+SimulinkBlockComments on
+BlockCommentType "BlockPathComment"
+StateflowObjectComments on
+MATLABSourceComments off
+EnableCustomComments off
+InternalIdentifierFile ""
+InternalIdentifier "Shortened"
+InlinedPrmAccess "Literals"
+ReqsInCode off
+UseSimReservedNames off
+ReservedNameArray []
+EnumMemberNameClash "error"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 29
+Cell "IgnoreCustomStorageClasses"
+Cell "IgnoreTestpoints"
+Cell "InsertBlockDesc"
+Cell "SFDataObjDesc"
+Cell "SimulinkDataObjDesc"
+Cell "DefineNamingRule"
+Cell "SignalNamingRule"
+Cell "ParamNamingRule"
+Cell "InlinedPrmAccess"
+Cell "CustomSymbolStr"
+Cell "CustomSymbolStrGlobalVar"
+Cell "CustomSymbolStrType"
+Cell "CustomSymbolStrField"
+Cell "CustomSymbolStrFcn"
+Cell "CustomSymbolStrBlkIO"
+Cell "CustomSymbolStrTmpVar"
+Cell "CustomSymbolStrMacro"
+Cell "InsertPolySpaceComments"
+Cell "MATLABFcnDesc"
+Cell "InternalIdentifier"
+Cell "CustomSymbolStrSimulinkFcn"
+Cell "CustomSymbolStrFcnArg"
+Cell "CustomSymbolStrUtil"
+Cell "CustomUserTokenString"
+Cell "ReqsInCode"
+Cell "CustomSymbolStrModelFcn"
+Cell "CustomSymbolStrEmxType"
+Cell "CustomSymbolStrEmxFcn"
+Cell "BlockCommentType"
+}
+}
+
+Object {
+BackupClass "Simulink.TargetCC"
+$ObjectID 20
+Version "19.1.1"
+$ClassName "Simulink.GRTTargetCC"
+Description ""
+Components []
+TargetFcnLib "ansi_tfl_table_tmw.mat"
+TargetLibSuffix ""
+TargetPreCompLibLocation ""
+GenFloatMathFcnCalls "NOT IN USE"
+TargetLangStandard "C89/C90 (ANSI)"
+CodeReplacementLibrary "None"
+UtilityFuncGeneration "Auto"
+MultiwordTypeDef "System defined"
+MultiwordLength "2048"
+DynamicStringBufferSize "256"
+GenerateFullHeader on
+InferredTypesCompatibility off
+ExistingSharedCode ""
+GenerateSampleERTMain off
+GenerateTestInterfaces off
+ModelReferenceCompliant on
+ParMdlRefBuildCompliant on
+CompOptLevelCompliant on
+ConcurrentExecutionCompliant on
+IncludeMdlTerminateFcn on
+GeneratePreprocessorConditionals "Disable all"
+CombineOutputUpdateFcns off
+CombineSignalStateStructs off
+GroupInternalDataByFunction off
+SuppressErrorStatus off
+IncludeFileDelimiter "Auto"
+ERTCustomFileBanners off
+SupportAbsoluteTime on
+LogVarNameModifier "rt_"
+MatFileLogging on
+MultiInstanceERTCode off
+CodeInterfacePackaging "Nonreusable function"
+PurelyIntegerCode off
+SupportNonFinite on
+SupportComplex on
+SupportContinuousTime on
+SupportNonInlinedSFcns on
+RemoveDisableFunc off
+RemoveResetFunc off
+SupportVariableSizeSignals off
+ParenthesesLevel "Nominal"
+CastingMode "Nominal"
+PreserveStateflowLocalDataDimensions off
+MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
+ModelStepFunctionPrototypeControlCompliant off
+CPPClassGenCompliant on
+AutosarCompliant off
+MDXCompliant off
+GRTInterface on
+GenerateAllocFcn off
+UseToolchainInfoCompliant on
+GenerateSharedConstants on
+CoderGroups []
+AccessMethods []
+LookupTableObjectStructAxisOrder "1,2,3,4,..."
+LUTObjectStructOrderExplicitValues "Size,Breakpoints,Table"
+LUTObjectStructOrderEvenSpacing "Size,Breakpoints,Table"
+ArrayLayout "Column-major"
+UnsupportedSFcnMsg "error"
+ERTHeaderFileRootName "$R$E"
+ERTSourceFileRootName "$R$E"
+ERTDataFileRootName "$R_data"
+UseMalloc off
+ExtMode off
+ExtModeStaticAlloc off
+ExtModeTesting off
+ExtModeStaticAllocSize "1000000"
+ExtModeTransport "0"
+ExtModeMexFile "ext_comm"
+ExtModeMexArgs ""
+ExtModeIntrfLevel "Level1"
+RTWCAPISignals off
+RTWCAPIParams off
+RTWCAPIStates off
+RTWCAPIRootIO off
+GenerateASAP2 off
+MultiInstanceErrorCode "Error"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 18
+Cell "IncludeMdlTerminateFcn"
+Cell "GenerateAllocFcn"
+Cell "SuppressErrorStatus"
+Cell "ERTCustomFileBanners"
+Cell "GenerateSampleERTMain"
+Cell "GenerateTestInterfaces"
+Cell "ModelStepFunctionPrototypeControlCompliant"
+Cell "CPPClassGenCompliant"
+Cell "SupportNonInlinedSFcns"
+Cell "PurelyIntegerCode"
+Cell "PortableWordSizes"
+Cell "SupportComplex"
+Cell "SupportAbsoluteTime"
+Cell "SupportContinuousTime"
+Cell "RemoveResetFunc"
+Cell "ExistingSharedCode"
+Cell "RemoveDisableFunc"
+Cell "PreserveStateflowLocalDataDimensions"
+}
+}
+}
+}
+
+SlCovCC.ConfigComp {
+$ObjectID 21
+Version "19.1.1"
+$ClassName "SlCovCC.ConfigComp"
+DisabledProps []
+Description "Simulink Coverage Configuration Component"
+Components []
+Name "Simulink Coverage"
+CovEnable off
+CovScope "EntireSystem"
+CovIncludeTopModel on
+RecordCoverage off
+CovPath "/"
+CovSaveName "covdata"
+CovCompData ""
+CovMetricSettings "dw"
+CovFilter ""
+CovHTMLOptions ""
+CovNameIncrementing off
+CovHtmlReporting on
+CovForceBlockReductionOff on
+CovEnableCumulative on
+CovSaveCumulativeToWorkspaceVar on
+CovSaveSingleToWorkspaceVar on
+CovCumulativeVarName "covCumulativeData"
+CovCumulativeReport off
+CovSaveOutputData on
+CovOutputDir "slcov_output/$ModelName$"
+CovDataFileName "$ModelName$_cvdata"
+CovShowResultsExplorer on
+CovReportOnPause on
+CovModelRefEnable off
+CovModelRefExcluded ""
+CovExternalEMLEnable off
+CovSFcnEnable off
+CovBoundaryAbsTol "1e-05"
+CovBoundaryRelTol "0.01"
+CovUseTimeInterval off
+CovStartTime "0"
+CovStopTime "0"
+CovMcdcMode "Masking"
+}
+
+hdlcoderui.hdlcc {
+$ObjectID 22
+Version "19.1.1"
+$ClassName "hdlcoderui.hdlcc"
+DisabledProps []
+Description "HDL Coder custom configuration component"
+Components []
+Name "HDL Coder"
+HDLCActiveTab "0"
+Array {
+PropName "HDLConfigFile"
+Type "Cell"
+Dimension 1
+Cell " "
+}
+}
+}
+}
+}
+
+System {
+PaperOrientation "landscape"
+PaperPositionMode "auto"
+PaperType "usletter"
+PaperUnits "inches"
+TiledPaperMargins [0.500000, 0.500000, 0.500000, 0.500000]
+TiledPageScale "1"
+ShowPageBoundaries off
+ModelBrowserVisibility off
+ModelBrowserWidth "200"
+ScreenColor "white"
+ZoomFactor "100"
+PortBlocksUseCompactNotation off
+Open off
+}
+
+BlockDefaults {
+ForegroundColor "black"
+BackgroundColor "white"
+DropShadow off
+NamePlacement "normal"
+FontName "Arial"
+FontSize "10"
+FontWeight "normal"
+FontAngle "normal"
+ShowName on
+HideAutomaticName on
+BlockRotation "0"
+BlockMirror off
+}
+
+AnnotationDefaults {
+HorizontalAlignment "center"
+VerticalAlignment "middle"
+ForegroundColor "black"
+BackgroundColor "white"
+DropShadow off
+FontName "Arial"
+FontSize "10"
+FontWeight "normal"
+FontAngle "normal"
+MarkupType "model"
+UseDisplayTextAsClickCallback off
+AnnotationType "note_annotation"
+FixedHeight off
+FixedWidth off
+Interpreter off
+}
+
+LineDefaults {
+FontName "Arial"
+FontSize "10"
+FontWeight "normal"
+FontAngle "normal"
+}
+
+MaskDefaults {
+SelfModifiable "off"
+IconFrame "on"
+IconOpaque "opaque"
+RunInitForIconRedraw "analyze"
+IconRotate "none"
+PortRotate "default"
+IconUnits "autoscale"
+Display ""
+
+}
+
+MaskParameterDefaults {
+Evaluate "on"
+Tunable "on"
+NeverSave "off"
+Internal "off"
+ReadOnly "off"
+Enabled "on"
+Visible "on"
+ToolTip "on"
+Value ""
+}
+
+BlockParameterDefaults {
+Block {
+BlockType "From"
+GotoTag "A"
+IconDisplay "Tag"
+TagVisibility "local"
+}
+
+Block {
+BlockType "Gain"
+Gain "1"
+Multiplication "Element-wise(K.*u)"
+ParamMin []
+ParamMax []
+ParamDataTypeStr "Inherit: Same as input"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Same as input"
+LockScale off
+RndMeth "Floor"
+SaturateOnIntegerOverflow on
+SampleTime "-1"
+}
+
+Block {
+BlockType "Goto"
+GotoTag "A"
+IconDisplay "Tag"
+TagVisibility "local"
+}
+
+Block {
+BlockType "Inport"
+Port "1"
+OutputFunctionCall off
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: auto"
+LockScale off
+BusOutputAsStruct off
+Unit "inherit"
+PortDimensions "-1"
+VarSizeSig "Inherit"
+SampleTime "-1"
+SignalType "auto"
+SamplingMode "auto"
+LatchByDelayingOutsideSignal off
+LatchInputForFeedbackSignals off
+Interpolate on
+}
+
+Block {
+BlockType "Outport"
+Port "1"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: auto"
+LockScale off
+BusOutputAsStruct off
+Unit "inherit"
+PortDimensions "-1"
+VarSizeSig "Inherit"
+SampleTime "-1"
+SignalType "auto"
+SamplingMode "auto"
+EnsureOutportIsVirtual off
+SourceOfInitialOutputValue "Dialog"
+OutputWhenDisabled "held"
+InitialOutput []
+MustResolveToSignalObject off
+OutputWhenUnConnected off
+OutputWhenUnconnectedValue "0"
+VectorParamsAs1DForOutWhenUnconnected on
+}
+
+Block {
+BlockType "PMIOPort"
+Port "1"
+}
+
+Block {
+BlockType "SubSystem"
+ShowPortLabels "FromPortIcon"
+Permissions "ReadWrite"
+PermitHierarchicalResolution "All"
+TreatAsAtomicUnit off
+MinAlgLoopOccurrences off
+PropExecContextOutsideSubsystem off
+ScheduleAs "Sample time"
+SystemSampleTime "-1"
+RTWSystemCode "Auto"
+RTWFcnNameOpts "Auto"
+RTWFileNameOpts "Auto"
+FunctionInterfaceSpec "void_void"
+FunctionWithSeparateData off
+RTWMemSecFuncInitTerm "Inherit from model"
+RTWMemSecFuncExecute "Inherit from model"
+RTWMemSecDataConstants "Inherit from model"
+RTWMemSecDataInternal "Inherit from model"
+RTWMemSecDataParameters "Inherit from model"
+SimViewingDevice off
+DataTypeOverride "UseLocalSettings"
+DataTypeOverrideAppliesTo "AllNumericTypes"
+MinMaxOverflowLogging "UseLocalSettings"
+Opaque off
+MaskHideContents off
+SFBlockType "NONE"
+VariantControlMode "Expression"
+Variant off
+GeneratePreprocessorConditionals off
+AllowZeroVariantControls off
+PropagateVariantConditions off
+TreatAsGroupedWhenPropagatingVariantConditions on
+ContentPreviewEnabled off
+IsWebBlock off
+IsObserver off
+Latency "0"
+AutoFrameSizeCalculation off
+IsWebBlockPanel off
+}
+
+Block {
+BlockType "Terminator"
+}
+}
+}
+

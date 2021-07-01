@@ -1,0 +1,2773 @@
+Model {
+SavedCharacterEncoding "ISO-8859-1"
+EnableAccessToBaseWorkspace on
+SLXCompressionType "Normal"
+ScopeRefreshTime "0.035000"
+OverrideScopeRefreshTime on
+DisableAllScopes off
+DataTypeOverride "UseLocalSettings"
+DataTypeOverrideAppliesTo "AllNumericTypes"
+MinMaxOverflowLogging "UseLocalSettings"
+MinMaxOverflowArchiveMode "Overwrite"
+FPTRunName "Run 1"
+MaxMDLFileLineLength "120"
+StopFcn "stopFcn_hyperloop_arc"
+LastSavedArchitecture "maci64"
+HideAutomaticNames on
+UpdateHistory "UpdateHistoryNever"
+ModifiedByFormat "%<Auto>"
+ModifiedDateFormat "%<Auto>"
+RTWModifiedTimeStamp "348161149"
+ModelVersionFormat "1.%<AutoIncrement:266>"
+
+SampleTimeColors off
+SampleTimeAnnotations on
+LibraryLinkDisplay "all"
+WideLines off
+ShowLineDimensions off
+ShowPortDataTypes off
+ShowAllPropagatedSignalLabels off
+PortDataTypeDisplayFormat "AliasTypeOnly"
+ShowEditTimeErrors on
+ShowEditTimeWarnings on
+ShowEditTimeAdvisorChecks off
+ShowPortUnits off
+ShowDesignRanges off
+ShowLoopsOnError on
+IgnoreBidirectionalLines off
+ShowStorageClass off
+ShowTestPointIcons on
+ShowSignalResolutionIcons on
+ShowViewerIcons on
+SortedOrder off
+VariantCondition off
+ShowSubsystemDomainSpec off
+ExecutionContextIcon off
+ShowLinearizationAnnotations on
+ShowVisualizeInsertedRTB on
+ShowMarkup on
+BlockNameDataTip off
+BlockParametersDataTip off
+BlockDescriptionStringDataTip off
+BlockVariantConditionDataTip off
+ToolBar on
+StatusBar on
+BrowserShowLibraryLinks on
+FunctionConnectors off
+BrowserLookUnderMasks on
+MultiThreadCoSim on
+
+SimulationMode "normal"
+SILPILModeSetting "automated"
+SILPILSystemUnderTest "topmodel"
+SILPILSimulationModeTopModel "normal"
+SILPILSimulationModeModelRef "normal"
+SimTabSimulationMode "normal"
+CodeVerificationMode "software-in-the-loop (sil)"
+PauseTimes "5"
+NumberOfSteps "1"
+SnapshotBufferSize "10"
+SnapshotInterval "10"
+NumberOfLastSnapshots "0"
+EnablePacing off
+PacingRate "1"
+LinearizationMsg "none"
+Profile off
+ParamWorkspaceSource "MATLABWorkspace"
+AccelSystemTargetFile "accel.tlc"
+AccelTemplateMakefile "accel_default_tmf"
+AccelMakeCommand "make_rtw"
+TryForcingSFcnDF off
+Object {
+$PropName "DataLoggingOverride"
+$ObjectID 2
+$ClassName "Simulink.SimulationData.ModelLoggingInfo"
+model_ "$bdroot"
+overrideMode_ [0U]
+Array {
+PropName "logAsSpecifiedByModels_"
+Type "Cell"
+Dimension 1
+Cell "$bdroot"
+}
+
+Array {
+PropName "logAsSpecifiedByModelsSSIDs_"
+Type "Cell"
+Dimension 1
+Cell []
+}
+}
+
+ExtModeBatchMode off
+ExtModeEnableFloating on
+ExtModeTrigType "manual"
+ExtModeTrigMode "normal"
+ExtModeTrigPort "1"
+ExtModeTrigElement "any"
+ExtModeTrigDuration "1000"
+ExtModeTrigDurationFloating "auto"
+ExtModeTrigHoldOff "0"
+ExtModeTrigDelay "0"
+ExtModeTrigDirection "rising"
+ExtModeTrigLevel "0"
+ExtModeArchiveMode off
+ExtModeAutoIncOneShot off
+ExtModeIncDirWhenArm off
+ExtModeAddSuffixToVar off
+ExtModeWriteAllDataToWs off
+ExtModeArmWhenConnect on
+ExtModeSkipDownloadWhenConnect off
+ExtModeLogAll on
+ExtModeAutoUpdateStatusClock on
+
+ShowModelReferenceBlockVersion off
+ShowModelReferenceBlockIO off
+OrderedModelArguments on
+
+ExplicitPartitioning off
+Object {
+$PropName "DataTransfer"
+$ObjectID 3
+$ClassName "Simulink.GlobalDataTransfer"
+DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
+DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
+DefaultTransitionBetweenContTasks "Ensure deterministic transfer (minimum delay)"
+DefaultExtrapolationMethodBetweenContTasks "None"
+}
+
+System {
+Location [173, 80, 1621, 1042]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "94"
+ReportName "simulink-default.rpt"
+SIDHighWatermark "1220"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "SubSystem"
+Name "Chassis"
+SID "1156"
+Ports [3, 1]
+Position [375, 485, 780, 685]
+ZOrder "149"
+ForegroundColor [0.666667, 0.333333, 1.000000]
+FontSize "24"
+ShowPortLabels "FromPortBlockName"
+RequestExecContextInheritance off
+Variant on
+Object {
+$PropName "MaskObject"
+$ObjectID 4
+$ClassName "Simulink.Mask"
+IconOpaque "transparent"
+Display "image('Chassis.png',[110 10 200 150])"
+
+}
+
+System {
+Location [-1542, 68, -94, 1030]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Tube\n"
+SID "1157"
+Position [50, 123, 80, 137]
+ZOrder "163"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Comp"
+SID "1158"
+Position [50, 183, 80, 197]
+ZOrder "165"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Propulsion"
+SID "1160"
+Position [50, 303, 80, 317]
+ZOrder "164"
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "SubSystem"
+Name "Alpha_sl"
+SID "1161"
+Ports [3, 1]
+Position [165, 108, 350, 242]
+ZOrder "168"
+RequestExecContextInheritance off
+VariantControl "VAR_Chassis==varChassis.Alpha"
+System {
+Location [335, 100, 1610, 1055]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Tube\n"
+SID "1162"
+Position [20, 40, 40, 60]
+ZOrder "-1"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Comp"
+SID "1163"
+Position [20, 80, 40, 100]
+ZOrder "-2"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Propulsion"
+SID "1165"
+Position [20, 160, 40, 180]
+ZOrder "-4"
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Reference"
+Name "Alpha"
+SID "1196"
+Ports [3, 1]
+Position [105, 23, 290, 157]
+ZOrder "171"
+LibraryVersion "1.47"
+SourceBlock "Chassis_Alpha/Alpha"
+SourceType "SubSystem"
+ContentPreviewEnabled off
+
+ContentPreviewEnabled off
+
+ContentPreviewEnabled off
+
+ContentPreviewEnabled off
+
+}
+
+Block {
+BlockType "Outport"
+Name "Chassis"
+SID "1167"
+Position [335, 95, 355, 115]
+ZOrder "-5"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "8"
+Src "1165#out:1"
+Points [45, 0]
+Dst "1196#in:3"
+}
+
+Line {
+ZOrder "6"
+Src "1163#out:1"
+Dst "1196#in:2"
+}
+
+Line {
+ZOrder "7"
+Src "1162#out:1"
+Points [45, 0]
+Dst "1196#in:1"
+}
+
+Line {
+ZOrder "9"
+Src "1196#out:1"
+Points [17, 0; 0, 15]
+Dst "1167#in:1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Alpha_sm"
+SID "1168"
+Ports [3, 1]
+Position [160, 308, 345, 442]
+ZOrder "169"
+RequestExecContextInheritance off
+VariantControl "VAR_Chassis==varChassis.Alpha_sm"
+System {
+Location [335, 100, 1825, 1035]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Tube\n"
+SID "1169"
+Position [20, 60, 40, 80]
+ZOrder "-1"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Comp"
+SID "1170"
+Position [20, 105, 40, 125]
+ZOrder "-2"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Propulsion"
+SID "1172"
+Position [20, 150, 40, 170]
+ZOrder "-4"
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Reference"
+Name "Alpha_sm"
+SID "1218"
+Ports [3, 1]
+Position [105, 48, 290, 182]
+ZOrder "179"
+LibraryVersion "1.43"
+SourceBlock "Chassis_Alpha_sm/Alpha_sm"
+SourceType "SubSystem"
+ContentPreviewEnabled off
+
+ContentPreviewEnabled off
+
+ContentPreviewEnabled off
+
+ContentPreviewEnabled off
+
+}
+
+Block {
+BlockType "Outport"
+Name "Chassis"
+SID "1174"
+Position [345, 105, 365, 125]
+ZOrder "-5"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "14"
+Src "1172#out:1"
+Dst "1218#in:3"
+}
+
+Line {
+ZOrder "12"
+Src "1170#out:1"
+Dst "1218#in:2"
+}
+
+Line {
+ZOrder "13"
+Src "1169#out:1"
+Dst "1218#in:1"
+}
+
+Line {
+ZOrder "15"
+Src "1218#out:1"
+Dst "1174#in:1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Alpha_sm_s3D"
+SID "1210"
+Ports [3, 1]
+Position [160, 503, 345, 637]
+ZOrder "170"
+RequestExecContextInheritance off
+VariantControl "VAR_Chassis==varChassis.Alpha_sm_s3D"
+System {
+Location [-1542, 68, -94, 1030]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "301"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Tube\n"
+SID "1211"
+Position [20, 40, 40, 60]
+ZOrder "-1"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Comp"
+SID "1212"
+Position [20, 85, 40, 105]
+ZOrder "-2"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Propulsion"
+SID "1213"
+Position [20, 127, 40, 153]
+ZOrder "-3"
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Reference"
+Name "Alpha_sm_s3D"
+SID "1220"
+Ports [3, 1]
+Position [90, 28, 275, 162]
+ZOrder "180"
+LibraryVersion "1.41"
+SourceBlock "Chassis_Alpha_sm_s3d/Alpha_sm_s3D"
+SourceType "SubSystem"
+ContentPreviewEnabled off
+
+ContentPreviewEnabled off
+
+ContentPreviewEnabled off
+
+ContentPreviewEnabled off
+
+}
+
+Block {
+BlockType "Outport"
+Name "Chassis"
+SID "1215"
+Position [325, 85, 345, 105]
+ZOrder "-4"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "5"
+Src "1211#out:1"
+Dst "1220#in:1"
+}
+
+Line {
+ZOrder "7"
+Src "1212#out:1"
+Dst "1220#in:2"
+}
+
+Line {
+ZOrder "6"
+Src "1213#out:1"
+Dst "1220#in:3"
+}
+
+Line {
+ZOrder "8"
+Src "1220#out:1"
+Dst "1215#in:1"
+}
+}
+}
+
+Block {
+BlockType "Outport"
+Name "Chassis"
+SID "1175"
+Position [420, 128, 450, 142]
+ZOrder "167"
+IconDisplay "Port number"
+}
+
+Annotation {
+SID "1176"
+Name "1) Only subsystems can be added as variant choices at this level\n2) Blocks cannot be connected at this level as connectivity is\nautomatically determined at simulation, based on the active variant"
+Position [91, 23, 387, 55]
+InternalMargins [0, 0, 0, 0]
+HorizontalAlignment "left"
+ZOrder "-1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Compressor"
+SID "1066"
+Ports [3, 1]
+Position [915, 177, 1290, 363]
+ZOrder "142"
+ForegroundColor "red"
+FontSize "24"
+RequestExecContextInheritance off
+Variant on
+Object {
+$PropName "MaskObject"
+$ObjectID 5
+$ClassName "Simulink.Mask"
+IconOpaque "transparent"
+Display "image('Compressor.png',[90 10 200 135])"
+
+}
+
+System {
+Location [-1912, 12, -100, 1149]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "135"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Chassis"
+SID "1077"
+Position [50, 168, 80, 182]
+ZOrder "189"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Tube"
+SID "1078"
+Position [50, 213, 80, 227]
+ZOrder "190"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Power"
+SID "1076"
+Position [50, 123, 80, 137]
+ZOrder "188"
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "SubSystem"
+Name "Alpha"
+SID "1144"
+Ports [3, 1]
+Position [155, 311, 365, 449]
+ZOrder "211"
+RequestExecContextInheritance off
+VariantControl "VAR_COMP==varComp.Alpha"
+System {
+Location [-1912, 12, -100, 1149]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Chassis"
+SID "1146"
+Position [20, 85, 40, 105]
+ZOrder "-2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Tube"
+SID "1147"
+Position [20, 130, 40, 150]
+ZOrder "-3"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Power"
+SID "1145"
+Position [20, 40, 40, 60]
+ZOrder "-1"
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Reference"
+Name "Compressor_Alpha"
+SID "1216"
+Ports [3, 1]
+Position [105, 27, 315, 163]
+ZOrder "186"
+LibraryVersion "1.19"
+SourceBlock "Compressor_Alpha/Compressor_Alpha"
+SourceType "SubSystem"
+ContentPreviewEnabled off
+
+ContentPreviewEnabled off
+
+ContentPreviewEnabled off
+
+ContentPreviewEnabled off
+
+}
+
+Block {
+BlockType "Outport"
+Name "Comp"
+SID "1150"
+Position [360, 85, 380, 105]
+ZOrder "-4"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "5"
+Src "1145#out:1"
+Dst "1216#in:1"
+}
+
+Line {
+ZOrder "6"
+Src "1146#out:1"
+Dst "1216#in:2"
+}
+
+Line {
+ZOrder "7"
+Src "1147#out:1"
+Dst "1216#in:3"
+}
+
+Line {
+ZOrder "8"
+Src "1216#out:1"
+Dst "1150#in:1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Defaults"
+SID "1087"
+Ports [3, 1]
+Position [155, 112, 365, 248]
+ZOrder "193"
+RequestExecContextInheritance off
+VariantControl "VAR_COMP==varComp.Defaults"
+System {
+Location [130, 24, 1852, 1155]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Chassis"
+SID "1089"
+Position [20, 80, 40, 100]
+ZOrder "-2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Tube"
+SID "1090"
+Position [20, 120, 40, 140]
+ZOrder "-3"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Power"
+SID "1088"
+Position [20, 40, 40, 60]
+ZOrder "-1"
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Reference"
+Name "Compressor_Defaults"
+SID "1091"
+Ports [3, 1]
+Position [100, 52, 310, 188]
+ZOrder "186"
+LibraryVersion "1.5"
+SourceBlock "Compressor_Defaults/Compressor_Defaults"
+SourceType "SubSystem"
+VariantControl "VAR_Compressor_Defaults"
+ContentPreviewEnabled off
+
+VariantControl "VAR_Compressor_Defaults"
+ContentPreviewEnabled off
+
+VariantControl "VAR_Compressor_Defaults"
+ContentPreviewEnabled off
+
+VariantControl "VAR_Compressor_Defaults"
+ContentPreviewEnabled off
+
+}
+
+Block {
+BlockType "Outport"
+Name "Comp"
+SID "1092"
+Position [330, 40, 350, 60]
+ZOrder "-4"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "1088#out:1"
+Points [26, 0; 0, 25]
+Dst "1091#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "1089#out:1"
+Points [27, 0; 0, 30]
+Dst "1091#in:2"
+}
+
+Line {
+ZOrder "3"
+Src "1090#out:1"
+Points [11, 0; 0, 35]
+Dst "1091#in:3"
+}
+
+Line {
+ZOrder "4"
+Src "1091#out:1"
+Points [5, 0; 0, -70]
+Dst "1092#in:1"
+}
+}
+}
+
+Block {
+BlockType "Outport"
+Name "Comp"
+SID "1079"
+Position [440, 168, 470, 182]
+ZOrder "191"
+IconDisplay "Port number"
+}
+
+Annotation {
+SID "1069"
+Name "1) Only subsystems can be added as variant choices at this level\n2) Blocks cannot be connected at this level as connectivity is\nautomatically determined at simulation, based on the active variant"
+Position [91, 23, 387, 55]
+InternalMargins [0, 0, 0, 0]
+HorizontalAlignment "left"
+ZOrder "-1"
+}
+}
+}
+
+Block {
+BlockType "Reference"
+Name "Model Info"
+SID "1209"
+Ports []
+Position [650, 69, 1063, 138]
+ZOrder "151"
+ShowName off
+LibraryVersion "1.453"
+FontName "Arial"
+SourceBlock "simulink/Model-Wide\nUtilities/Model Info"
+SourceType "CMBlock"
+SourceProductName "Simulink"
+SourceProductBaseCode "SL"
+ContentPreviewEnabled off
+Frame on
+DisplayStringWithTags "%<Description>"
+HorizontalTextAlignment "Center"
+LeftAlignmentValue "0.5"
+
+ContentPreviewEnabled off
+Frame on
+DisplayStringWithTags "%<Description>"
+HorizontalTextAlignment "Center"
+LeftAlignmentValue "0.5"
+
+ContentPreviewEnabled off
+Frame on
+DisplayStringWithTags "%<Description>"
+HorizontalTextAlignment "Center"
+LeftAlignmentValue "0.5"
+
+ContentPreviewEnabled off
+Frame on
+DisplayStringWithTags "%<Description>"
+HorizontalTextAlignment "Center"
+LeftAlignmentValue "0.5"
+
+}
+
+Block {
+BlockType "SubSystem"
+Name "OnBoardPower"
+SID "1107"
+Ports [2, 1]
+Position [950, 405, 1255, 580]
+ZOrder "143"
+BlockMirror on
+FontSize "24"
+RequestExecContextInheritance off
+Variant on
+Object {
+$PropName "MaskObject"
+$ObjectID 6
+$ClassName "Simulink.Mask"
+IconOpaque "transparent"
+Display "image('OnBoardPower.png',[70 20 170 120])"
+
+}
+
+System {
+Location [49, 60, 1829, 1133]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "172"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Comp"
+SID "1128"
+Position [225, 218, 255, 232]
+ZOrder "201"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Prop"
+SID "1129"
+Position [225, 138, 255, 152]
+ZOrder "202"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "SubSystem"
+Name "Alpha"
+SID "1130"
+Ports [2, 1]
+Position [350, 107, 495, 218]
+ZOrder "203"
+RequestExecContextInheritance off
+VariantControl "VAR_POWER==varPower.Alpha"
+System {
+Location [20, 63, 1896, 1132]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Comp"
+SID "1132"
+Position [20, 80, 40, 100]
+ZOrder "-2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Prop"
+SID "1133"
+Position [20, 120, 40, 140]
+ZOrder "-3"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Reference"
+Name "Power_Alpha"
+SID "1155"
+Ports [2, 1]
+Position [100, 49, 245, 156]
+ZOrder "57"
+LibraryVersion "1.5"
+SourceBlock "Power_Alpha/Power_Alpha"
+SourceType "SubSystem"
+ContentPreviewEnabled off
+
+ContentPreviewEnabled off
+
+ContentPreviewEnabled off
+
+ContentPreviewEnabled off
+
+}
+
+Block {
+BlockType "Outport"
+Name "Power"
+SID "1136"
+Position [265, 40, 285, 60]
+ZOrder "-4"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "1132#out:1"
+Points [25, 0; 0, -15]
+Dst "1155#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "1133#out:1"
+Dst "1155#in:2"
+}
+
+Line {
+ZOrder "3"
+Src "1155#out:1"
+Points [4, 0; 0, -55]
+Dst "1136#in:1"
+}
+}
+}
+
+Block {
+BlockType "Outport"
+Name "Power"
+SID "1117"
+Position [565, 158, 595, 172]
+ZOrder "198"
+BackgroundColor "red"
+IconDisplay "Port number"
+}
+
+Annotation {
+SID "1110"
+Name "1) Only subsystems can be added as variant choices at this level\n2) Blocks cannot be connected at this level as connectivity is\nautomatically determined at simulation, based on the active variant"
+Position [91, 23, 387, 55]
+InternalMargins [0, 0, 0, 0]
+HorizontalAlignment "left"
+ZOrder "-1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Propulsion"
+SID "1178"
+Ports [2, 1]
+Position [925, 623, 1300, 812]
+ZOrder "150"
+ForegroundColor [0.796078, 0.580392, 0.227451]
+FontSize "24"
+ShowPortLabels "FromPortBlockName"
+RequestExecContextInheritance off
+Variant on
+Object {
+$PropName "MaskObject"
+$ObjectID 7
+$ClassName "Simulink.Mask"
+IconOpaque "transparent"
+Display "image('Propulsion.png',[90 10 200 155])"
+
+}
+
+System {
+Location [49, 60, 1780, 1141]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Power"
+SID "1187"
+Position [65, 333, 95, 347]
+ZOrder "145"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Chassis"
+SID "1186"
+Position [65, 203, 95, 217]
+ZOrder "144"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "SubSystem"
+Name "Alpha"
+SID "1189"
+Ports [2, 1]
+Position [265, 134, 385, 201]
+ZOrder "147"
+RequestExecContextInheritance off
+VariantControl "VAR_PROP==varProp.Alpha"
+System {
+Location [70, 20, 1801, 1101]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Power"
+SID "1192"
+Position [20, 125, 40, 145]
+ZOrder "-3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Chassis"
+SID "1191"
+Position [20, 80, 40, 100]
+ZOrder "-2"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Reference"
+Name "Prop_Alpha"
+SID "1193"
+Ports [2, 1]
+Position [100, 54, 220, 121]
+ZOrder "77"
+LibraryVersion "1.4"
+SourceBlock "Prop_Alpha/Prop_Alpha"
+SourceType "SubSystem"
+ContentPreviewEnabled off
+
+ContentPreviewEnabled off
+
+ContentPreviewEnabled off
+
+ContentPreviewEnabled off
+
+}
+
+Block {
+BlockType "Outport"
+Name "Prop"
+SID "1194"
+Position [260, 75, 280, 95]
+ZOrder "-4"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "4"
+Src "1193#out:1"
+Points [0, -5]
+Dst "1194#in:1"
+}
+
+Line {
+ZOrder "8"
+Src "1191#out:1"
+Points [25, 0; 0, -20]
+Dst "1193#in:1"
+}
+
+Line {
+ZOrder "9"
+Src "1192#out:1"
+Points [27, 0; 0, -30]
+Dst "1193#in:2"
+}
+}
+}
+
+Block {
+BlockType "Outport"
+Name "Prop"
+SID "1188"
+Position [895, 228, 925, 242]
+ZOrder "143"
+IconDisplay "Port number"
+}
+
+Annotation {
+SID "1184"
+Name "1) Only subsystems can be added as variant choices at this level\n2) Blocks cannot be connected at this level as connectivity is\nautomatically determined at simulation, based on the active variant"
+Position [91, 23, 387, 55]
+InternalMargins [0, 0, 0, 0]
+HorizontalAlignment "left"
+ZOrder "-1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Tube"
+SID "1061"
+Ports [2, 1]
+Position [365, 170, 765, 365]
+ZOrder "141"
+ForegroundColor [0.000000, 0.666667, 1.000000]
+FontSize "24"
+ShowPortLabels "FromPortBlockName"
+RequestExecContextInheritance off
+Variant on
+Object {
+$PropName "MaskObject"
+$ObjectID 8
+$ClassName "Simulink.Mask"
+IconOpaque "transparent"
+IconUnits "normalized"
+Display "image('Tube.png',[0.2 0.05 0.6 0.75])"
+
+}
+
+System {
+Location [79, 47, 1527, 1009]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Chassis"
+SID "1062"
+Position [55, 103, 85, 117]
+ZOrder "-1"
+ForegroundColor [0.666667, 0.333333, 1.000000]
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Prop"
+SID "1065"
+Position [55, 178, 85, 192]
+ZOrder "141"
+ForegroundColor [0.666667, 0.666667, 0.000000]
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "SubSystem"
+Name "Alpha"
+SID "1199"
+Ports [2, 1]
+Position [185, 100, 315, 215]
+ZOrder "143"
+RequestExecContextInheritance off
+VariantControl "VAR_TUBE == varTube.Alpha"
+System {
+Location [70, 20, 1683, 1101]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Chassis"
+SID "1200"
+Position [20, 40, 40, 60]
+ZOrder "-1"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Prop"
+SID "1201"
+Position [20, 80, 40, 100]
+ZOrder "-2"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Reference"
+Name "Tube_Alpha"
+SID "1202"
+Ports [2, 1]
+Position [100, 50, 230, 165]
+ZOrder "140"
+LibraryVersion "1.5"
+SourceBlock "Tube_Alpha/Tube_Alpha"
+SourceType "SubSystem"
+VariantControl "VAR_Tube_Alpha"
+ContentPreviewEnabled off
+
+VariantControl "VAR_Tube_Alpha"
+ContentPreviewEnabled off
+
+VariantControl "VAR_Tube_Alpha"
+ContentPreviewEnabled off
+
+VariantControl "VAR_Tube_Alpha"
+ContentPreviewEnabled off
+
+}
+
+Block {
+BlockType "Outport"
+Name "Tube"
+SID "1203"
+Position [250, 40, 270, 60]
+ZOrder "-3"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "1200#out:1"
+Points [27, 0; 0, 30]
+Dst "1202#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "1201#out:1"
+Points [25, 0; 0, 45]
+Dst "1202#in:2"
+}
+
+Line {
+ZOrder "3"
+Src "1202#out:1"
+Points [5, 0; 0, -60]
+Dst "1203#in:1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Alpha_sf"
+SID "1204"
+Ports [2, 1]
+Position [185, 295, 315, 410]
+ZOrder "144"
+RequestExecContextInheritance off
+VariantControl "VAR_TUBE == varTube.Alpha_sf"
+System {
+Location [-1622, 15, -600, 685]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Chassis"
+SID "1205"
+Position [20, 40, 40, 60]
+ZOrder "-1"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Prop"
+SID "1206"
+Position [20, 80, 40, 100]
+ZOrder "-2"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Reference"
+Name "Tube_Alpha_sf"
+SID "1207"
+Ports [2, 1]
+Position [100, 50, 230, 165]
+ZOrder "140"
+LibraryVersion "1.5"
+SourceBlock "Tube_Alpha_sf/Tube_Alpha_sf"
+SourceType "SubSystem"
+VariantControl "VAR_Tube_Alpha"
+ContentPreviewEnabled off
+
+VariantControl "VAR_Tube_Alpha"
+ContentPreviewEnabled off
+
+VariantControl "VAR_Tube_Alpha"
+ContentPreviewEnabled off
+
+VariantControl "VAR_Tube_Alpha"
+ContentPreviewEnabled off
+
+}
+
+Block {
+BlockType "Outport"
+Name "Tube"
+SID "1208"
+Position [250, 40, 270, 60]
+ZOrder "-3"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "1205#out:1"
+Points [27, 0; 0, 30]
+Dst "1207#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "1206#out:1"
+Points [25, 0; 0, 45]
+Dst "1207#in:2"
+}
+
+Line {
+ZOrder "3"
+Src "1207#out:1"
+Points [5, 0; 0, -60]
+Dst "1208#in:1"
+}
+}
+}
+
+Block {
+BlockType "Outport"
+Name "Tube"
+SID "1063"
+Position [415, 103, 445, 117]
+ZOrder "-2"
+IconDisplay "Port number"
+}
+
+Annotation {
+SID "1064"
+Name "1) Only subsystems can be added as variant choices at this level\n2) Blocks cannot be connected at this level as connectivity is\nautomatically determined at simulation, based on the active variant"
+Position [91, 23, 387, 55]
+InternalMargins [0, 0, 0, 0]
+HorizontalAlignment "left"
+ZOrder "-1"
+}
+}
+}
+
+Block {
+BlockType "Scope"
+Name "Scope"
+SID "1139"
+Ports []
+Position [20, 15, 60, 55]
+ZOrder "144"
+IOType "viewer"
+ScopeSpecificationString "C++SS(StrPVP('Location','[902, 180, 1582, 1050]'),StrPVP('Open','off'),MxPVP('AxesTitles',54,'struct(''axes1'',''%<SignalLabel>'',''axes2'',''%<SignalLabel>'',''axes3'',''%<SignalLabel>'')'),StrPVP('ShowLegends','off'),StrPVP('YMin','95~-1~332.975'),StrPVP('YMax','105~1~368.025'),StrPVP('MaxDataPoints','10000'),StrPVP('Decimation','10'),StrPVP('ScrollMode','off'),StrPVP('LimitDataPoints','on'),StrPVP('DataFormat','Array'),StrPVP('BlockParamSampleInput','off'))"
+NumInputPorts "1"
+Floating off
+}
+
+Block {
+BlockType "Scope"
+Name "Scope1"
+SID "1142"
+Ports []
+Position [20, 15, 60, 55]
+ZOrder "146"
+IOType "viewer"
+ScopeSpecificationString "C++SS(StrPVP('Location','[188, 365, 512, 604]'),StrPVP('Open','off'),MxPVP('AxesTitles',54,'struct(''axes1'',''%<SignalLabel>'')'),StrPVP('ShowLegends','off'),StrPVP('YMin','-1616.74'),StrPVP('YMax','-1616.74'),StrPVP('SaveName','ScopeData1'),StrPVP('MaxDataPoints','7500'),StrPVP('ScrollMode','off'),StrPVP('LimitDataPoints','on'),StrPVP('DataFormat','Array'),StrPVP('Decimation','1'),StrPVP('BlockParamSampleInput','off'))"
+NumInputPorts "1"
+Floating off
+}
+
+Line {
+ZOrder "741"
+Src "1178#out:1"
+Points [20, 0]
+Branch {
+ZOrder "893"
+Points [0, -185]
+Dst "1107#in:2"
+}
+
+Branch {
+ZOrder "892"
+Points [0, 129; -1010, 0; 0, -199]
+Branch {
+ZOrder "895"
+Points [0, -335]
+Dst "1061#in:2"
+}
+
+Branch {
+ZOrder "889"
+Dst "1156#in:3"
+}
+}
+}
+
+Line {
+ZOrder "548"
+Src "1066#out:1"
+Points [53, 0; 0, 180]
+Branch {
+ZOrder "881"
+Points [0, 428; -1058, 0; 0, -293]
+Dst "1156#in:2"
+}
+
+Branch {
+ZOrder "855"
+Dst "1107#in:1"
+}
+}
+
+Line {
+ZOrder "575"
+Src "1107#out:1"
+Points [-72, 0]
+Branch {
+ZOrder "880"
+Points [0, 175]
+Dst "1178#in:1"
+}
+
+Branch {
+ZOrder "848"
+Points [0, -165]
+Dst "1066#in:3"
+}
+}
+
+Line {
+ZOrder "517"
+Src "1061#out:1"
+Points [22, 0]
+Branch {
+ZOrder "940"
+Points [0, 155; -455, 0; 0, 95]
+Dst "1156#in:1"
+}
+
+Branch {
+ZOrder "939"
+Dst "1066#in:2"
+}
+}
+
+Line {
+ZOrder "704"
+Src "1156#out:1"
+Points [24, 0]
+Branch {
+ZOrder "935"
+Points [0, -375]
+Branch {
+ZOrder "875"
+Points [0, -55; -497, 0; 0, 65]
+Dst "1061#in:1"
+}
+
+Branch {
+ZOrder "885"
+Dst "1066#in:1"
+}
+}
+
+Branch {
+ZOrder "919"
+Points [0, 180]
+Dst "1178#in:2"
+}
+}
+}
+
+DiagnosticSuppressor on
+
+LogicAnalyzerPlugin on
+
+NotesPlugin on
+
+SLCCPlugin on
+
+WebScopes_FoundationPlugin on
+
+GraphicalInterface {
+NumRootInports "0"
+NumRootOutports "0"
+ParameterArgumentNames ""
+NumModelReferences "0"
+NumTestPointedSignals "0"
+NumProvidedFunctions "0"
+NumRequiredFunctions "0"
+NumResetEvents "0"
+HasInitializeEvent "0"
+HasTerminateEvent "0"
+PreCompExecutionDomainType "Unset"
+IsExportFunctionModel "0"
+IsArchitectureModel "0"
+IsAUTOSARArchitectureModel "0"
+NumParameterArguments "0"
+NumExternalFileReferences "10"
+OrderedModelArguments "1"
+ExternalFileReference {
+Reference "Chassis_Alpha/Alpha"
+Path "$bdroot/Chassis/Alpha_sl/Alpha"
+SID "1196"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "Chassis_Alpha_sm/Alpha_sm"
+Path "$bdroot/Chassis/Alpha_sm/Alpha_sm"
+SID "1218"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "Chassis_Alpha_sm_s3d/Alpha_sm_s3D"
+Path "$bdroot/Chassis/Alpha_sm_s3D/Alpha_sm_s3D"
+SID "1220"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "Compressor_Alpha/Compressor_Alpha"
+Path "$bdroot/Compressor/Alpha/Compressor_Alpha"
+SID "1216"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "Compressor_Defaults/Compressor_Defaults"
+Path "$bdroot/Compressor/Defaults/Compressor_Defaults"
+SID "1091"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "simulink/Model-Wide\nUtilities/Model Info"
+Path "$bdroot/Model Info"
+SID "1209"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "Power_Alpha/Power_Alpha"
+Path "$bdroot/OnBoardPower/Alpha/Power_Alpha"
+SID "1155"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "Prop_Alpha/Prop_Alpha"
+Path "$bdroot/Propulsion/Alpha/Prop_Alpha"
+SID "1193"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "Tube_Alpha/Tube_Alpha"
+Path "$bdroot/Tube/Alpha/Tube_Alpha"
+SID "1202"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "Tube_Alpha_sf/Tube_Alpha_sf"
+Path "$bdroot/Tube/Alpha_sf/Tube_Alpha_sf"
+SID "1207"
+Type "LIBRARY_BLOCK"
+}
+}
+
+PhysicalModelingChecksum "3381887984"
+PhysicalModelingParameterChecksum "3610971242"
+PhysicalModelingProducts "SimMechanics|Simscape"
+
+Object {
+$PropName "HDLParams"
+$ObjectID 1
+$ClassName "slprops.hdlmdlprops"
+Array {
+PropName "mdlProps"
+Type "Cell"
+Dimension 2
+Cell "HDLSubsystem"
+Cell "$bdroot"
+}
+}
+
+Object {
+$PropName "BdWindowsInfo"
+$ObjectID 9
+$ClassName "Simulink.BDWindowsInfo"
+BDUuid "7eef0a0d-98cd-46a4-944d-3c247f863ac8"
+Object {
+$PropName "WindowsInfo"
+$ObjectID 10
+$ClassName "Simulink.WindowInfo"
+IsActive [1]
+Location [173.0, 80.0, 1448.0, 962.0]
+DockComponentsInfo []
+WindowState ""
+WindowUuid ""
+Array {
+PropName "PersistedApps"
+Type "Cell"
+Dimension 0
+}
+
+Object {
+$PropName "ModelBrowserInfo"
+$ObjectID 11
+$ClassName "Simulink.ModelBrowserInfo"
+Visible [1]
+DockPosition "Left"
+Width [50]
+Height [50]
+Filter [59]
+Minimized "Unset"
+}
+
+Object {
+$PropName "ExplorerBarInfo"
+$ObjectID 12
+$ClassName "Simulink.ExplorerBarInfo"
+Visible [1]
+}
+
+Object {
+$PropName "EditorsInfo"
+$ObjectID 13
+$ClassName "Simulink.EditorInfo"
+IsActive [1]
+IsTabbed [1]
+ViewObjType "SimulinkTopLevel"
+LoadSaveID "0"
+Extents [1205.0, 788.0]
+ZoomFactor [0.93943139678615561]
+Offset [178.65460526315786, 54.097368421052629]
+SceneRectInView [0.0, 0.0, 0.0, 0.0]
+}
+}
+}
+
+Array {
+Type "Handle"
+Dimension 1
+Simulink.ConfigSet {
+Version "19.1.1"
+$ClassName "Simulink.ConfigSet"
+DisabledProps []
+Description ""
+Name "Configuration"
+CurrentDlgPage "Diagnostics/Stateflow"
+ConfigPrmDlgPosition [ 43, 21, 1283, 909 ]
+ExtraOptions ""
+Array {
+PropName "Components"
+Type "Handle"
+Dimension 11
+Simulink.SolverCC {
+$ObjectID 15
+Version "19.1.1"
+$ClassName "Simulink.SolverCC"
+DisabledProps []
+Description ""
+Components []
+StartTime "0.0"
+StopTime "inf"
+AbsTol "auto"
+AutoScaleAbsTol on
+FixedStep "0.01"
+InitialStep "auto"
+MaxOrder "5"
+ZcThreshold "auto"
+ConsecutiveZCsStepRelTol "10*128*eps"
+MaxConsecutiveZCs "1000"
+ExtrapolationOrder "4"
+NumberNewtonIterations "1"
+MaxStep "auto"
+MinStep "auto"
+MaxConsecutiveMinStep "1"
+RelTol "1e-3"
+EnableMultiTasking on
+ConcurrentTasks off
+Solver "ode45"
+SolverName "ode45"
+SolverJacobianMethodControl "auto"
+ShapePreserveControl "DisableAll"
+ZeroCrossControl "UseLocalSettings"
+ZeroCrossAlgorithm "Nonadaptive"
+AlgebraicLoopSolver "TrustRegion"
+SolverInfoToggleStatus off
+IsAutoAppliedInSIP off
+SolverResetMethod "Fast"
+PositivePriorityOrder off
+AutoInsertRateTranBlk off
+SampleTimeConstraint "Unconstrained"
+InsertRTBMode "Whenever possible"
+SampleTimeProperty []
+DecoupledContinuousIntegration off
+MinimalZcImpactIntegration off
+SolverOrder "3"
+}
+
+Simulink.DataIOCC {
+$ObjectID 16
+Version "19.1.1"
+$ClassName "Simulink.DataIOCC"
+DisabledProps []
+Description ""
+Components []
+Decimation "10"
+ExternalInput [t, u]
+FinalStateName "xFinal"
+InitialState "xInitial"
+LimitDataPoints on
+MaxDataPoints "1000"
+LoadExternalInput off
+LoadInitialState off
+SaveFinalState off
+SaveOperatingPoint off
+SaveFormat "Array"
+SignalLoggingSaveFormat "Dataset"
+SaveOutput on
+SaveState off
+SignalLogging on
+DSMLogging on
+InspectSignalLogs on
+VisualizeSimOutput on
+StreamToWorkspace off
+StreamVariableName "streamout"
+SaveTime on
+ReturnWorkspaceOutputs off
+StateSaveName "xout"
+TimeSaveName "tout"
+OutputSaveName "yout"
+SignalLoggingName "logsout"
+DSMLoggingName "dsmout"
+OutputOption "RefineOutputTimes"
+OutputTimes []
+ReturnWorkspaceOutputsName "out"
+Refine "1"
+LoggingToFile off
+DatasetSignalFormat "timeseries"
+LoggingFileName "out.mat"
+LoggingIntervals [-inf, inf]
+}
+
+Simulink.OptimizationCC {
+$ObjectID 17
+Version "19.1.1"
+$ClassName "Simulink.OptimizationCC"
+Description ""
+Components []
+BlockReduction off
+BooleanDataType on
+ConditionallyExecuteInputs on
+DefaultParameterBehavior "Inlined"
+UseDivisionForNetSlopeComputation off
+GainParamInheritBuiltInType off
+UseFloatMulNetSlope off
+DefaultUnderspecifiedDataType "double"
+UseSpecifiedMinMax off
+InlineInvariantSignals off
+OptimizeBlockIOStorage on
+BufferReuse off
+EnhancedBackFolding off
+CachingGlobalReferences off
+GlobalBufferReuse on
+StrengthReduction off
+AdvancedOptControl ""
+ExpressionFolding on
+BooleansAsBitfields off
+BitfieldContainerType "uint_T"
+EnableMemcpy on
+MemcpyThreshold "64"
+PassReuseOutputArgsAs "Structure reference"
+PassReuseOutputArgsThreshold "12"
+ExpressionDepthLimit "128"
+LocalBlockOutputs on
+RollThreshold "5"
+StateBitsets off
+DataBitsets off
+ActiveStateOutputEnumStorageType "Native Integer"
+ZeroExternalMemoryAtStartup on
+ZeroInternalMemoryAtStartup on
+InitFltsAndDblsToZero off
+NoFixptDivByZeroProtection off
+EfficientFloat2IntCast off
+EfficientMapNaN2IntZero on
+LifeSpan "inf"
+MaxStackSize "Inherit from target"
+BufferReusableBoundary on
+SimCompilerOptimization off
+AccelVerboseBuild off
+OptimizeBlockOrder off
+OptimizeDataStoreBuffers on
+BusAssignmentInplaceUpdate on
+DifferentSizesBufferReuse off
+UseRowMajorAlgorithm off
+OptimizationLevel "level2"
+OptimizationPriority "Balanced"
+OptimizationCustomize on
+LabelGuidedReuse off
+MultiThreadedLoops off
+DenormalBehavior "GradualUnderflow"
+EfficientTunableParamExpr off
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 9
+Cell "BooleansAsBitfields"
+Cell "PassReuseOutputArgsAs"
+Cell "PassReuseOutputArgsThreshold"
+Cell "ZeroExternalMemoryAtStartup"
+Cell "ZeroInternalMemoryAtStartup"
+Cell "OptimizeModelRefInitCode"
+Cell "NoFixptDivByZeroProtection"
+Cell "UseSpecifiedMinMax"
+Cell "EfficientTunableParamExpr"
+}
+}
+
+Simulink.DebuggingCC {
+$ObjectID 18
+Version "19.1.1"
+$ClassName "Simulink.DebuggingCC"
+Description ""
+Components []
+RTPrefix "error"
+ConsistencyChecking "none"
+ArrayBoundsChecking "none"
+SignalInfNanChecking "none"
+StringTruncationChecking "error"
+SignalRangeChecking "none"
+ReadBeforeWriteMsg "UseLocalSettings"
+WriteAfterWriteMsg "UseLocalSettings"
+WriteAfterReadMsg "UseLocalSettings"
+AlgebraicLoopMsg "none"
+ArtificialAlgebraicLoopMsg "warning"
+SaveWithDisabledLinksMsg "warning"
+SaveWithParameterizedLinksMsg "warning"
+CheckSSInitialOutputMsg on
+UnderspecifiedInitializationDetection "Classic"
+MergeDetectMultiDrivingBlocksExec "none"
+CheckExecutionContextPreStartOutputMsg off
+CheckExecutionContextRuntimeOutputMsg off
+SignalResolutionControl "UseLocalSettings"
+BlockPriorityViolationMsg "warning"
+MinStepSizeMsg "warning"
+TimeAdjustmentMsg "none"
+MaxConsecutiveZCsMsg "error"
+MaskedZcDiagnostic "warning"
+IgnoredZcDiagnostic "warning"
+SolverPrmCheckMsg "none"
+InheritedTsInSrcMsg "warning"
+MultiTaskDSMMsg "error"
+MultiTaskCondExecSysMsg "error"
+MultiTaskRateTransMsg "error"
+SingleTaskRateTransMsg "none"
+TasksWithSamePriorityMsg "warning"
+ExportedTasksRateTransMsg "none"
+SigSpecEnsureSampleTimeMsg "warning"
+CheckMatrixSingularityMsg "none"
+IntegerOverflowMsg "warning"
+Int32ToFloatConvMsg "warning"
+ParameterDowncastMsg "error"
+ParameterOverflowMsg "error"
+ParameterUnderflowMsg "none"
+ParameterPrecisionLossMsg "none"
+ParameterTunabilityLossMsg "warning"
+FixptConstUnderflowMsg "none"
+FixptConstOverflowMsg "none"
+FixptConstPrecisionLossMsg "none"
+UnderSpecifiedDataTypeMsg "none"
+UnnecessaryDatatypeConvMsg "none"
+VectorMatrixConversionMsg "none"
+InvalidFcnCallConnMsg "error"
+FcnCallInpInsideContextMsg "error"
+SignalLabelMismatchMsg "none"
+UnconnectedInputMsg "none"
+UnconnectedOutputMsg "none"
+UnconnectedLineMsg "none"
+UseOnlyExistingSharedCode "error"
+SFcnCompatibilityMsg "none"
+FrameProcessingCompatibilityMsg "error"
+UniqueDataStoreMsg "none"
+BusObjectLabelMismatch "warning"
+RootOutportRequireBusObject "warning"
+AssertControl "UseLocalSettings"
+AllowSymbolicDim on
+RowMajorDimensionSupport off
+ModelReferenceIOMsg "none"
+ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+ModelReferenceVersionMismatchMessage "none"
+ModelReferenceIOMismatchMessage "none"
+UnknownTsInhSupMsg "warning"
+ModelReferenceDataLoggingMessage "warning"
+ModelReferenceSymbolNameMessage "warning"
+ModelReferenceExtraNoncontSigs "error"
+StateNameClashWarn "none"
+OperatingPointInterfaceChecksumMismatchMsg "warning"
+NonCurrentReleaseOperatingPointMsg "error"
+ChecksumConsistencyForSSReuse "none"
+PregeneratedLibrarySubsystemCodeDiagnostic "warning"
+MatchCodeGenerationContextForUpdateDiagram "none"
+InitInArrayFormatMsg "warning"
+StrictBusMsg "ErrorLevel1"
+BusNameAdapt "WarnAndRepair"
+NonBusSignalsTreatedAsBus "none"
+SymbolicDimMinMaxWarning "warning"
+LossOfSymbolicDimsSimulationWarning "warning"
+LossOfSymbolicDimsCodeGenerationWarning "error"
+SymbolicDimsDataTypeCodeGenerationDiagnostic "error"
+BlockIODiagnostic "none"
+SFUnusedDataAndEventsDiag "none"
+SFUnexpectedBacktrackingDiag "warning"
+SFInvalidInputDataAccessInChartInitDiag "warning"
+SFNoUnconditionalDefaultTransitionDiag "warning"
+SFTransitionOutsideNaturalParentDiag "warning"
+SFUnreachableExecutionPathDiag "warning"
+SFUndirectedBroadcastEventsDiag "warning"
+SFTransitionActionBeforeConditionDiag "warning"
+SFOutputUsedAsStateInMooreChartDiag "error"
+SFTemporalDelaySmallerThanSampleTimeDiag "warning"
+SFSelfTransitionDiag "warning"
+SFExecutionAtInitializationDiag "none"
+SFMachineParentedDataDiag "warning"
+IntegerSaturationMsg "warning"
+AllowedUnitSystems "all"
+UnitsInconsistencyMsg "warning"
+AllowAutomaticUnitConversions on
+RCSCRenamedMsg "warning"
+RCSCObservableMsg "warning"
+ForceCombineOutputUpdateInSim off
+UnitDatabase ""
+UnderSpecifiedDimensionMsg "none"
+DebugExecutionForFMUViaOutOfProcess off
+ArithmeticOperatorsInVariantConditions "warning"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 1
+Cell "UseOnlyExistingSharedCode"
+}
+}
+
+Simulink.HardwareCC {
+$ObjectID 19
+Version "19.1.1"
+$ClassName "Simulink.HardwareCC"
+DisabledProps []
+Description ""
+Components []
+ProdBitPerChar "8"
+ProdBitPerShort "16"
+ProdBitPerInt "32"
+ProdBitPerLong "32"
+ProdBitPerLongLong "64"
+ProdBitPerFloat "32"
+ProdBitPerDouble "64"
+ProdBitPerPointer "32"
+ProdBitPerSizeT "32"
+ProdBitPerPtrDiffT "32"
+ProdLargestAtomicInteger "Char"
+ProdLargestAtomicFloat "None"
+ProdIntDivRoundTo "Undefined"
+ProdEndianess "Unspecified"
+ProdWordSize "32"
+ProdShiftRightIntArith on
+ProdLongLongMode off
+ProdHWDeviceType "32-bit Generic"
+TargetBitPerChar "8"
+TargetBitPerShort "16"
+TargetBitPerInt "32"
+TargetBitPerLong "32"
+TargetBitPerLongLong "64"
+TargetBitPerFloat "32"
+TargetBitPerDouble "64"
+TargetBitPerPointer "32"
+TargetBitPerSizeT "32"
+TargetBitPerPtrDiffT "32"
+TargetLargestAtomicInteger "Char"
+TargetLargestAtomicFloat "None"
+TargetShiftRightIntArith on
+TargetLongLongMode off
+TargetIntDivRoundTo "Undefined"
+TargetEndianess "Unspecified"
+TargetWordSize "32"
+TargetPreprocMaxBitsSint "32"
+TargetPreprocMaxBitsUint "32"
+TargetHWDeviceType "Specified"
+TargetUnknown off
+ProdEqTarget on
+UseEmbeddedCoderFeatures on
+UseSimulinkCoderFeatures on
+HardwareBoardFeatureSet "EmbeddedCoderHSP"
+}
+
+Simulink.ModelReferenceCC {
+$ObjectID 20
+Version "19.1.1"
+$ClassName "Simulink.ModelReferenceCC"
+DisabledProps []
+Description ""
+Components []
+UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+EnableRefExpFcnMdlSchedulingChecks on
+CheckModelReferenceTargetMessage "error"
+EnableParallelModelReferenceBuilds off
+ParallelModelReferenceErrorOnInvalidPool on
+ParallelModelReferenceMATLABWorkerInit "None"
+ModelReferenceNumInstancesAllowed "Multi"
+PropagateVarSize "Infer from blocks in model"
+ModelDependencies ""
+ModelReferencePassRootInputsByReference on
+ModelReferenceMinAlgLoopOccurrences off
+PropagateSignalLabelsOutOfModel off
+SupportModelReferenceSimTargetCustomCode off
+}
+
+Simulink.SFSimCC {
+$ObjectID 21
+Version "19.1.1"
+$ClassName "Simulink.SFSimCC"
+DisabledProps []
+Description ""
+Components []
+SimCustomSourceCode ""
+SimCustomHeaderCode ""
+SimCustomInitializer ""
+SimCustomTerminator ""
+SimReservedNameArray []
+SimUserSources ""
+SimUserIncludeDirs ""
+SimUserLibraries ""
+SimUserDefines ""
+SimCustomCompilerFlags ""
+SimCustomLinkerFlags ""
+SFSimEcho on
+SimCtrlC on
+SimIntegrity on
+SimUseLocalCustomCode off
+SimParseCustomCode on
+SimAnalyzeCustomCode off
+SimBuildMode "sf_incremental_build"
+SimGenImportedTypeDefs off
+ModelFunctionsGlobalVisibility on
+CompileTimeRecursionLimit "50"
+EnableRuntimeRecursion on
+MATLABDynamicMemAlloc on
+MATLABDynamicMemAllocThreshold "65536"
+CustomCodeFunctionArrayLayout []
+DefaultCustomCodeFunctionArrayLayout "NotSpecified"
+CustomCodeUndefinedFunction "UseInterfaceOnly"
+}
+
+Simulink.RTWCC {
+BackupClass "Simulink.RTWCC"
+$ObjectID 22
+Version "19.1.1"
+$ClassName "Simulink.RTWCC"
+Description ""
+SystemTargetFile "grt.tlc"
+HardwareBoard "None"
+ShowCustomHardwareApp off
+ShowEmbeddedHardwareApp off
+TLCOptions ""
+GenCodeOnly off
+MakeCommand "make_rtw"
+GenerateMakefile on
+PackageGeneratedCodeAndArtifacts off
+PackageName ""
+TemplateMakefile "grt_default_tmf"
+PostCodeGenCommand ""
+GenerateReport off
+RTWVerbose on
+RetainRTWFile off
+RTWBuildHooks []
+ProfileTLC off
+TLCDebug off
+TLCCoverage off
+TLCAssert off
+RTWUseLocalCustomCode off
+RTWUseSimCustomCode off
+CustomSourceCode ""
+CustomHeaderCode ""
+CustomInclude ""
+CustomSource ""
+CustomLibrary ""
+CustomDefine ""
+CustomBLASCallback ""
+CustomLAPACKCallback ""
+CustomFFTCallback ""
+CustomInitializer ""
+CustomTerminator ""
+Toolchain "Automatically locate an installed toolchain"
+BuildConfiguration "Faster Builds"
+CustomToolchainOptions []
+IncludeHyperlinkInReport off
+LaunchReport off
+PortableWordSizes off
+CreateSILPILBlock "None"
+CodeExecutionProfiling off
+CodeExecutionProfileVariable "executionProfile"
+CodeProfilingSaveOptions "SummaryOnly"
+CodeProfilingInstrumentation off
+SILDebugging off
+TargetLang "C"
+IncludeBusHierarchyInRTWFileBlockHierarchyMap off
+GenerateTraceInfo off
+GenerateTraceReport off
+GenerateTraceReportSl off
+GenerateTraceReportSf off
+GenerateTraceReportEml off
+GenerateWebview off
+GenerateCodeMetricsReport off
+GenerateCodeReplacementReport off
+GenerateMissedCodeReplacementReport off
+RTWCompilerOptimization off
+ObjectivePriorities []
+RTWCustomCompilerOptimizations ""
+CheckMdlBeforeBuild "Off"
+SharedConstantsCachingThreshold "1024"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 16
+Cell "IncludeHyperlinkInReport"
+Cell "GenerateTraceInfo"
+Cell "GenerateTraceReport"
+Cell "GenerateTraceReportSl"
+Cell "GenerateTraceReportSf"
+Cell "GenerateTraceReportEml"
+Cell "PortableWordSizes"
+Cell "GenerateWebview"
+Cell "GenerateCodeMetricsReport"
+Cell "GenerateCodeReplacementReport"
+Cell "GenerateErtSFunction"
+Cell "CreateSILPILBlock"
+Cell "CodeExecutionProfiling"
+Cell "CodeProfilingSaveOptions"
+Cell "CodeProfilingInstrumentation"
+Cell "GenerateMissedCodeReplacementReport"
+}
+
+Array {
+PropName "Components"
+Type "Handle"
+Dimension 2
+Object {
+$ObjectID 23
+Version "19.1.1"
+$ClassName "Simulink.CodeAppCC"
+Description ""
+Components []
+Comment ""
+ForceParamTrailComments off
+GenerateComments on
+CommentStyle "Auto"
+IgnoreCustomStorageClasses on
+IgnoreTestpoints off
+MaxIdLength "31"
+PreserveName off
+PreserveNameWithParent off
+ShowEliminatedStatement off
+OperatorAnnotations off
+SimulinkDataObjDesc off
+SFDataObjDesc off
+MATLABFcnDesc off
+MangleLength "1"
+SharedChecksumLength "8"
+CustomSymbolStrGlobalVar "$R$N$M"
+CustomSymbolStrType "$N$R$M_T"
+CustomSymbolStrField "$N$M"
+CustomSymbolStrFcn "$R$N$M$F"
+CustomSymbolStrModelFcn "$R$N"
+CustomSymbolStrFcnArg "rt$I$N$M"
+CustomSymbolStrBlkIO "rtb_$N$M"
+CustomSymbolStrTmpVar "$N$M"
+CustomSymbolStrMacro "$R$N$M"
+CustomSymbolStrUtil "$N$C"
+CustomSymbolStrEmxType "emxArray_$M$N"
+CustomSymbolStrEmxFcn "emx$M$N"
+CustomUserTokenString ""
+CustomCommentsFcn ""
+DefineNamingRule "None"
+DefineNamingFcn ""
+ParamNamingRule "None"
+ParamNamingFcn ""
+SignalNamingRule "None"
+SignalNamingFcn ""
+InsertBlockDesc off
+InsertPolySpaceComments off
+SimulinkBlockComments on
+BlockCommentType "BlockPathComment"
+StateflowObjectComments on
+MATLABSourceComments off
+EnableCustomComments off
+InternalIdentifierFile ""
+InternalIdentifier "Shortened"
+InlinedPrmAccess "Literals"
+ReqsInCode off
+UseSimReservedNames off
+ReservedNameArray []
+EnumMemberNameClash "error"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 29
+Cell "IgnoreCustomStorageClasses"
+Cell "IgnoreTestpoints"
+Cell "InsertBlockDesc"
+Cell "InsertPolySpaceComments"
+Cell "SFDataObjDesc"
+Cell "MATLABFcnDesc"
+Cell "SimulinkDataObjDesc"
+Cell "DefineNamingRule"
+Cell "SignalNamingRule"
+Cell "ParamNamingRule"
+Cell "InternalIdentifier"
+Cell "InlinedPrmAccess"
+Cell "CustomSymbolStr"
+Cell "CustomSymbolStrGlobalVar"
+Cell "CustomSymbolStrType"
+Cell "CustomSymbolStrField"
+Cell "CustomSymbolStrFcn"
+Cell "CustomSymbolStrFcnArg"
+Cell "CustomSymbolStrBlkIO"
+Cell "CustomSymbolStrTmpVar"
+Cell "CustomSymbolStrMacro"
+Cell "ReqsInCode"
+Cell "ParameterTuningSideEffectCode"
+Cell "CustomSymbolStrUtil"
+Cell "BlockCommentType"
+Cell "CustomSymbolStrModelFcn"
+Cell "CustomSymbolStrEmxType"
+Cell "CustomSymbolStrEmxFcn"
+Cell "CustomUserTokenString"
+}
+}
+
+Object {
+BackupClass "Simulink.TargetCC"
+$ObjectID 24
+Version "19.1.1"
+$ClassName "Simulink.GRTTargetCC"
+Description ""
+Components []
+TargetFcnLib "ansi_tfl_table_tmw.mat"
+TargetLibSuffix ""
+TargetPreCompLibLocation ""
+GenFloatMathFcnCalls "NOT IN USE"
+TargetLangStandard "C89/C90 (ANSI)"
+CodeReplacementLibrary "None"
+UtilityFuncGeneration "Auto"
+MultiwordTypeDef "System defined"
+MultiwordLength "2048"
+DynamicStringBufferSize "256"
+GenerateFullHeader on
+InferredTypesCompatibility off
+ExistingSharedCode ""
+GenerateSampleERTMain off
+GenerateTestInterfaces off
+ModelReferenceCompliant on
+ParMdlRefBuildCompliant on
+CompOptLevelCompliant on
+ConcurrentExecutionCompliant on
+IncludeMdlTerminateFcn on
+GeneratePreprocessorConditionals "Disable all"
+CombineOutputUpdateFcns on
+CombineSignalStateStructs off
+GroupInternalDataByFunction off
+SuppressErrorStatus off
+IncludeFileDelimiter "Auto"
+ERTCustomFileBanners off
+SupportAbsoluteTime on
+LogVarNameModifier "rt_"
+MatFileLogging on
+MultiInstanceERTCode off
+CodeInterfacePackaging "Nonreusable function"
+PurelyIntegerCode off
+SupportNonFinite on
+SupportComplex on
+SupportContinuousTime on
+SupportNonInlinedSFcns on
+RemoveDisableFunc off
+RemoveResetFunc off
+SupportVariableSizeSignals off
+ParenthesesLevel "Nominal"
+CastingMode "Nominal"
+PreserveStateflowLocalDataDimensions off
+MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
+ModelStepFunctionPrototypeControlCompliant off
+CPPClassGenCompliant on
+AutosarCompliant off
+MDXCompliant off
+GRTInterface off
+GenerateAllocFcn off
+UseToolchainInfoCompliant on
+GenerateSharedConstants on
+CoderGroups []
+AccessMethods []
+LookupTableObjectStructAxisOrder "1,2,3,4,..."
+LUTObjectStructOrderExplicitValues "Size,Breakpoints,Table"
+LUTObjectStructOrderEvenSpacing "Size,Breakpoints,Table"
+ArrayLayout "Column-major"
+UnsupportedSFcnMsg "error"
+ERTHeaderFileRootName "$R$E"
+ERTSourceFileRootName "$R$E"
+ERTDataFileRootName "$R_data"
+UseMalloc off
+ExtMode off
+ExtModeStaticAlloc off
+ExtModeTesting off
+ExtModeStaticAllocSize "1000000"
+ExtModeTransport "0"
+ExtModeMexFile "ext_comm"
+ExtModeMexArgs ""
+ExtModeIntrfLevel "Level1"
+RTWCAPISignals off
+RTWCAPIParams off
+RTWCAPIStates off
+RTWCAPIRootIO off
+GenerateASAP2 off
+MultiInstanceErrorCode "Error"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 18
+Cell "GeneratePreprocessorConditionals"
+Cell "IncludeMdlTerminateFcn"
+Cell "CPPClassGenCompliant"
+Cell "SuppressErrorStatus"
+Cell "ERTCustomFileBanners"
+Cell "GenerateSampleERTMain"
+Cell "GenerateTestInterfaces"
+Cell "ModelStepFunctionPrototypeControlCompliant"
+Cell "GenerateAllocFcn"
+Cell "SupportNonInlinedSFcns"
+Cell "PurelyIntegerCode"
+Cell "SupportComplex"
+Cell "SupportAbsoluteTime"
+Cell "SupportContinuousTime"
+Cell "ExistingSharedCode"
+Cell "RemoveDisableFunc"
+Cell "RemoveResetFunc"
+Cell "PreserveStateflowLocalDataDimensions"
+}
+}
+}
+}
+
+SlCovCC.ConfigComp {
+$ObjectID 25
+Version "19.1.1"
+$ClassName "SlCovCC.ConfigComp"
+DisabledProps []
+Description "Simulink Coverage Configuration Component"
+Components []
+Name "Simulink Coverage"
+CovEnable off
+CovScope "EntireSystem"
+CovIncludeTopModel on
+RecordCoverage off
+CovPath "/"
+CovSaveName "covdata"
+CovCompData ""
+CovMetricSettings "dw"
+CovFilter ""
+CovHTMLOptions ""
+CovNameIncrementing off
+CovHtmlReporting on
+CovForceBlockReductionOff on
+CovEnableCumulative on
+CovSaveCumulativeToWorkspaceVar on
+CovSaveSingleToWorkspaceVar on
+CovCumulativeVarName "covCumulativeData"
+CovCumulativeReport off
+CovSaveOutputData on
+CovOutputDir "slcov_output/$ModelName$"
+CovDataFileName "$ModelName$_cvdata"
+CovShowResultsExplorer on
+CovReportOnPause on
+CovModelRefEnable off
+CovModelRefExcluded ""
+CovExternalEMLEnable off
+CovSFcnEnable off
+CovBoundaryAbsTol "1e-05"
+CovBoundaryRelTol "0.01"
+CovUseTimeInterval off
+CovStartTime "0"
+CovStopTime "0"
+CovMcdcMode "Masking"
+}
+
+hdlcoderui.hdlcc {
+$ObjectID 26
+Version "19.1.1"
+$ClassName "hdlcoderui.hdlcc"
+DisabledProps []
+Description "HDL Coder custom configuration component"
+Components []
+Name "HDL Coder"
+HDLCActiveTab "0"
+Array {
+PropName "HDLConfigFile"
+Type "Cell"
+Dimension 1
+Cell ""
+}
+}
+
+Object {
+$ObjectID 27
+Version "1.13.1"
+$ClassName "SSC.SimscapeCC"
+Description ""
+Name "Simscape"
+EditingMode "Full"
+ExplicitSolverDiagnosticOptions "warning"
+GlobalZcOffDiagnosticOptions "warning"
+SimscapeNormalizeSystem off
+SimscapeNominalValues "[{\"value\":\"1\",\"unit\":\"A\"},{\"value\":\"1\",\"unit\":\"bar\"},{\"value\":\"1\",\"unit\":\"cm^2\"},{\"value\":\"1\",\"unit\":\"cm^3/s\"},{\"value\":\"1\",\"unit\":\"kJ/kg\"},{\"value\":\"1\",\"unit\":\"kW\"},{\"value\":\"1\",\"unit\":\"l\"},{\"value\":\"1\",\"unit\":\"N\"},{\"value\":\"1\",\"unit\":\"N*m\"},{\"value\":\"1\",\"unit\":\"V\"}]"
+SimscapeLogType "none"
+SimscapeLogSimulationStatistics off
+SimscapeLogToSDI off
+SimscapeLogOpenViewer off
+SimscapeLogName "simlog"
+SimscapeLogDecimation "1"
+SimscapeLogLimitData on
+SimscapeLogDataHistory "5000"
+SimscapeUseOperatingPoints off
+SimscapeOperatingPoint ""
+SelectedTab ""
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 1
+Cell "Name"
+}
+
+Array {
+PropName "Components"
+Type "Handle"
+Dimension 2
+Object {
+$ObjectID 28
+Version "19.1.1"
+$ClassName "MECH.SimMechanicsCC"
+DisabledProps []
+Description ""
+Components []
+Name "SimscapeMultibody1G"
+WarnOnRedundantConstraints on
+WarnOnSingularInitialAssembly off
+ShowCutJoints off
+VisOnUpdateDiagram off
+VisDuringSimulation off
+EnableVisSimulationTime on
+VisSampleTime "0"
+DisableBodyVisControl off
+ShowCG on
+ShowCS on
+ShowOnlyPortCS off
+HighlightModel on
+FramesToBeSkipped "0"
+AnimationDelay "3"
+RecordAVI off
+CompressAVI on
+AviFileName ""
+AutoFitVis off
+EnableSelection on
+LastVizWinPosition [-1 -1 -1 -1]
+CamPosition [0 0 0]
+CamTarget [0 0 -1]
+CamUpVector [0 1 0]
+CamHeight "-1"
+CamViewAngle "0"
+VisBackgroundColor [0.9 0.9 0.95]
+DefaultBodyColor [1 0 0]
+MDLBodyVisualizationType "Convex hull from body CS locations"
+OVRRIDBodyVisualizationType "NONE"
+VisConfigFile ""
+}
+
+Object {
+$ObjectID 29
+Version "19.1.1"
+$ClassName "simmechanics.ConfigurationSet"
+DisabledProps []
+Description "SimMechanics 2G"
+Name "SimscapeMultibody"
+Array {
+PropName "Components"
+Type "Handle"
+Dimension 2
+Object {
+$ObjectID 30
+Version "19.1.1"
+$ClassName "simmechanics.DiagnosticsConfigSet"
+DisabledProps []
+Description "Diagnostics"
+Components []
+Name "DiagnosticsConfigSet"
+SimMechanicsInvalidVisualProperty "warning"
+SimMechanicsCrossSectionNullEdge "warning"
+SimMechanicsUnconnectedFramePorts "warning"
+SimMechanicsUnconnectedGeometryPorts "warning"
+SimMechanicsRedundantBlock "warning"
+SimMechanicsConflictingReferenceFrames "warning"
+SimMechanicsRigidlyBoundBlock "error"
+SimMechanicsUnsatisfiedHighPriorityTargets "warning"
+SimMechanicsJointTargetOverSpecification "error"
+}
+
+Object {
+$ObjectID 31
+Version "19.1.1"
+$ClassName "simmechanics.ExplorerConfigSet"
+DisabledProps []
+Description "Explorer"
+Components []
+Name "ExplorerConfigSet"
+SimMechanicsOpenEditorOnUpdate on
+InternalSimMechanicsExplorerSettings "<ExplorerConfiguration><canonicalview>default</canonicalview><AnimationSetting><BasePlaybackSpeed>1.0</BasePlaybackSpeed><PlaybackSpeedFactor>1.0</PlaybackSpeedFactor></AnimationSetting><TilePanel><TileInfo><Tiles Columns=\"1\" Count=\"1\" Rows=\"1\"><Column Left=\"2\" Weight=\"1\"/><Column Left=\"884\"/><Row Top=\"2\" Weight=\"1\"/><Row Top=\"811\"/><Tile Height=\"1\" Width=\"1\" X=\"0\" Y=\"0\"/></Tiles></TileInfo><SceneInfo><SceneViewer><BGColor><R>0.60000002384185791</R><G>0.60000002384185791</G><B>0.60000002384185791</B></BGColor><Camera><Position><X>0</X><Y>0</Y><Z>3.2527065277099609</Z></Position><Center><X>0</X><Y>0</Y><Z>0</Z></Center><Up><X>0</X><Y>1</Y><Z>-0</Z></Up><Left>-1.2074999749660493</Left><Right>1.2074999749660493</Right><Bottom>-1.2074999749660493</Bottom><Top>1.2074999749660493</Top></Camera></SceneViewer></SceneInfo></TilePanel></ExplorerConfiguration>"
+}
+}
+}
+}
+}
+}
+}
+}
+
+System {
+PaperOrientation "landscape"
+PaperPositionMode "auto"
+PaperType "usletter"
+PaperUnits "inches"
+TiledPaperMargins [0.500000, 0.500000, 0.500000, 0.500000]
+TiledPageScale "1"
+ShowPageBoundaries off
+ModelBrowserVisibility on
+ModelBrowserWidth "200"
+ScreenColor "white"
+ZoomFactor "100"
+PortBlocksUseCompactNotation off
+Open off
+}
+
+BlockDefaults {
+ForegroundColor "black"
+BackgroundColor "white"
+DropShadow off
+NamePlacement "normal"
+FontName "Helvetica"
+FontSize "10"
+FontWeight "normal"
+FontAngle "normal"
+ShowName on
+HideAutomaticName on
+BlockRotation "0"
+BlockMirror off
+}
+
+AnnotationDefaults {
+HorizontalAlignment "center"
+VerticalAlignment "middle"
+ForegroundColor "black"
+BackgroundColor "white"
+DropShadow off
+FontName "Helvetica"
+FontSize "10"
+FontWeight "normal"
+FontAngle "normal"
+MarkupType "model"
+UseDisplayTextAsClickCallback off
+AnnotationType "note_annotation"
+FixedHeight off
+FixedWidth off
+Interpreter off
+}
+
+LineDefaults {
+FontName "Helvetica"
+FontSize "9"
+FontWeight "normal"
+FontAngle "normal"
+}
+
+MaskDefaults {
+SelfModifiable "off"
+IconFrame "on"
+IconOpaque "opaque"
+RunInitForIconRedraw "analyze"
+IconRotate "none"
+PortRotate "default"
+IconUnits "autoscale"
+Display ""
+
+}
+
+MaskParameterDefaults {
+Evaluate "on"
+Tunable "on"
+NeverSave "off"
+Internal "off"
+ReadOnly "off"
+Enabled "on"
+Visible "on"
+ToolTip "on"
+Value ""
+}
+
+BlockParameterDefaults {
+Block {
+BlockType "Inport"
+Port "1"
+OutputFunctionCall off
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: auto"
+LockScale off
+BusOutputAsStruct off
+Unit "inherit"
+PortDimensions "-1"
+VarSizeSig "Inherit"
+SampleTime "-1"
+SignalType "auto"
+SamplingMode "auto"
+LatchByDelayingOutsideSignal off
+LatchInputForFeedbackSignals off
+Interpolate on
+}
+
+Block {
+BlockType "Outport"
+Port "1"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: auto"
+LockScale off
+BusOutputAsStruct off
+Unit "inherit"
+PortDimensions "-1"
+VarSizeSig "Inherit"
+SampleTime "-1"
+SignalType "auto"
+SamplingMode "auto"
+EnsureOutportIsVirtual off
+SourceOfInitialOutputValue "Dialog"
+OutputWhenDisabled "held"
+InitialOutput []
+MustResolveToSignalObject off
+OutputWhenUnConnected off
+OutputWhenUnconnectedValue "0"
+VectorParamsAs1DForOutWhenUnconnected on
+}
+
+Block {
+BlockType "Scope"
+DefaultConfigurationName "Simulink.scopes.TimeScopeBlockCfg"
+}
+
+Block {
+BlockType "SubSystem"
+ShowPortLabels "FromPortIcon"
+Permissions "ReadWrite"
+PermitHierarchicalResolution "All"
+TreatAsAtomicUnit off
+MinAlgLoopOccurrences off
+PropExecContextOutsideSubsystem off
+ScheduleAs "Sample time"
+SystemSampleTime "-1"
+RTWSystemCode "Auto"
+RTWFcnNameOpts "Auto"
+RTWFileNameOpts "Auto"
+FunctionInterfaceSpec "void_void"
+FunctionWithSeparateData off
+RTWMemSecFuncInitTerm "Inherit from model"
+RTWMemSecFuncExecute "Inherit from model"
+RTWMemSecDataConstants "Inherit from model"
+RTWMemSecDataInternal "Inherit from model"
+RTWMemSecDataParameters "Inherit from model"
+SimViewingDevice off
+DataTypeOverride "UseLocalSettings"
+DataTypeOverrideAppliesTo "AllNumericTypes"
+MinMaxOverflowLogging "UseLocalSettings"
+Opaque off
+MaskHideContents off
+SFBlockType "NONE"
+VariantControlMode "Expression"
+Variant off
+GeneratePreprocessorConditionals off
+AllowZeroVariantControls off
+PropagateVariantConditions off
+TreatAsGroupedWhenPropagatingVariantConditions on
+ContentPreviewEnabled off
+IsWebBlock off
+IsObserver off
+Latency "0"
+AutoFrameSizeCalculation off
+IsWebBlockPanel off
+}
+}
+}
+
+Stateflow {
+
+machine {
+id 1
+name "dummy_name"
+firstTarget 2
+sfVersion 80000019
+}
+
+target {
+id 2
+linkNode [1 0 3]
+machine 1
+name "sfun"
+description "Default Simulink S-Function Target."
+}
+
+target {
+id 3
+linkNode [1 2 0]
+machine 1
+name "rtw"
+}
+
+}

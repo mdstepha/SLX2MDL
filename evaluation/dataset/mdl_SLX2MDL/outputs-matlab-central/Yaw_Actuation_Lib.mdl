@@ -1,0 +1,3194 @@
+Library {
+SavedCharacterEncoding "ISO-8859-1"
+LibraryType "BlockLibrary"
+EnableAccessToBaseWorkspace on
+SLXCompressionType "Normal"
+ScopeRefreshTime "0.035000"
+OverrideScopeRefreshTime off
+DisableAllScopes off
+FPTRunName "Run 1"
+MaxMDLFileLineLength "120"
+LastSavedArchitecture "maci64"
+HideAutomaticNames off
+UpdateHistory "UpdateHistoryNever"
+ModifiedByFormat "%<Auto>"
+ModifiedDateFormat "%<Auto>"
+RTWModifiedTimeStamp "408024852"
+ModelVersionFormat "1.%<AutoIncrement:73>"
+
+SampleTimeColors off
+SampleTimeAnnotations off
+LibraryLinkDisplay "none"
+WideLines off
+ShowLineDimensions off
+ShowPortDataTypes off
+ShowAllPropagatedSignalLabels off
+PortDataTypeDisplayFormat "AliasTypeOnly"
+ShowEditTimeErrors on
+ShowEditTimeWarnings off
+ShowEditTimeAdvisorChecks off
+ShowPortUnits off
+ShowDesignRanges off
+ShowLoopsOnError on
+IgnoreBidirectionalLines off
+ShowStorageClass off
+ShowTestPointIcons on
+ShowSignalResolutionIcons on
+ShowViewerIcons on
+SortedOrder off
+VariantCondition off
+ShowSubsystemDomainSpec off
+ExecutionContextIcon off
+ShowLinearizationAnnotations on
+ShowVisualizeInsertedRTB on
+ShowMarkup on
+BlockNameDataTip off
+BlockParametersDataTip off
+BlockDescriptionStringDataTip off
+BlockVariantConditionDataTip off
+ToolBar on
+StatusBar on
+BrowserShowLibraryLinks on
+FunctionConnectors off
+BrowserLookUnderMasks on
+MultiThreadCoSim on
+
+SimulationMode "normal"
+PauseTimes "5"
+NumberOfSteps "1"
+SnapshotBufferSize "10"
+SnapshotInterval "10"
+NumberOfLastSnapshots "0"
+LinearizationMsg "none"
+Profile off
+ParamWorkspaceSource "MATLABWorkspace"
+
+ExtModeBatchMode off
+ExtModeEnableFloating on
+ExtModeTrigType "manual"
+ExtModeTrigMode "normal"
+ExtModeTrigPort "1"
+ExtModeTrigElement "any"
+ExtModeTrigDuration "1000"
+ExtModeTrigDurationFloating "auto"
+ExtModeTrigHoldOff "0"
+ExtModeTrigDelay "0"
+ExtModeTrigDirection "rising"
+ExtModeTrigLevel "0"
+ExtModeArchiveMode off
+ExtModeAutoIncOneShot off
+ExtModeIncDirWhenArm off
+ExtModeAddSuffixToVar off
+ExtModeWriteAllDataToWs off
+ExtModeArmWhenConnect on
+ExtModeSkipDownloadWhenConnect off
+ExtModeLogAll on
+ExtModeAutoUpdateStatusClock on
+
+ShowModelReferenceBlockVersion off
+ShowModelReferenceBlockIO off
+OrderedModelArguments on
+
+ExplicitPartitioning off
+
+System {
+Location [204, 56, 952, 908]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ReportName "simulink-default.rpt"
+SIDHighWatermark "346"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "SubSystem"
+Name "Ideal Actuator"
+SID "112"
+Ports [0, 0, 0, 0, 0, 1, 1]
+Position [55, 3, 175, 117]
+ZOrder "109"
+FontSize "12"
+RequestExecContextInheritance off
+Object {
+$PropName "MaskObject"
+$ObjectID 1
+$ClassName "Simulink.Mask"
+Display "image(imread('Yaw_Ideal_Actuation_IMAGE.jpg'));"
+
+}
+
+System {
+Location [204, 58, 953, 911]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+PaperType "A4"
+PaperUnits "centimeters"
+TiledPaperMargins [1.270000, 1.270000, 1.270000, 1.270000]
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Demux"
+Name "Demux"
+SID "113"
+Ports [1, 4]
+Position [200, 161, 205, 199]
+ZOrder "-1"
+ShowName off
+FontSize "12"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Gain"
+Name "Gearbox Factor"
+SID "114"
+Position [130, 165, 160, 195]
+ZOrder "-2"
+FontSize "12"
+Gain "WT_Params.Yaw_Actuator.p_gear_rato_step_1*WT_Params.Yaw_Actuator.p_gear_rato_step_2*WT_Params.Yaw_Actuator.p_gear_rato_step_3*WT_Params.Yaw_Actuator.p_gear_rato_step_4*(WT_Params.Yaw_Actuator.yaw_ring_diameter/WT_Params.Yaw_Actuator.yaw_gear_diameter)"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Goto"
+Name "Goto_Yaw_Actuator_Torque"
+SID "115"
+Position [50, 79, 200, 101]
+ZOrder "-3"
+BlockMirror on
+NamePlacement "alternate"
+ShowName off
+FontSize "12"
+GotoTag "Yaw_Actuator_Torque"
+TagVisibility "global"
+}
+
+Block {
+BlockType "Reference"
+Name "Ideal Yaw Actuator 1"
+SID "116"
+Ports [1, 2, 0, 0, 0, 0, 1]
+Position [285, 27, 420, 103]
+ZOrder "84"
+LibraryVersion "1.26"
+FontSize "12"
+SourceBlock "Yaw_Ideal_Actuator_Lib/Ideal Yaw Actuator 1"
+SourceType ""
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+}
+
+Block {
+BlockType "Reference"
+Name "Ideal Yaw Actuator 2"
+SID "117"
+Ports [1, 2, 0, 0, 0, 0, 1]
+Position [285, 137, 420, 213]
+ZOrder "85"
+LibraryVersion "1.26"
+FontSize "12"
+SourceBlock "Yaw_Ideal_Actuator_Lib/Ideal Yaw Actuator 1"
+SourceType ""
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+}
+
+Block {
+BlockType "Reference"
+Name "Ideal Yaw Actuator 3"
+SID "118"
+Ports [1, 2, 0, 0, 0, 0, 1]
+Position [285, 252, 420, 328]
+ZOrder "86"
+LibraryVersion "1.26"
+FontSize "12"
+SourceBlock "Yaw_Ideal_Actuator_Lib/Ideal Yaw Actuator 1"
+SourceType ""
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+}
+
+Block {
+BlockType "Reference"
+Name "Ideal Yaw Actuator 4"
+SID "119"
+Ports [1, 2, 0, 0, 0, 0, 1]
+Position [285, 362, 420, 438]
+ZOrder "87"
+LibraryVersion "1.26"
+FontSize "12"
+SourceBlock "Yaw_Ideal_Actuator_Lib/Ideal Yaw Actuator 1"
+SourceType ""
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+}
+
+Block {
+BlockType "Mux"
+Name "Mux"
+SID "120"
+Ports [5, 1]
+Position [200, 213, 205, 277]
+ZOrder "-8"
+BlockMirror on
+NamePlacement "alternate"
+ShowName off
+FontSize "12"
+Inputs "5"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "SubSystem"
+Name "Ring Gear\nInteraction"
+SID "121"
+Ports [0, 0, 0, 0, 0, 4, 1]
+Position [545, 165, 615, 260]
+ZOrder "83"
+FontSize "12"
+RequestExecContextInheritance off
+System {
+Location [204, 58, 953, 911]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+PaperType "A4"
+PaperUnits "centimeters"
+TiledPaperMargins [1.270000, 1.270000, 1.270000, 1.270000]
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Gain"
+Name "1/Yaw Ring Ratio"
+SID "122"
+Position [365, 70, 395, 100]
+ZOrder "95"
+NamePlacement "alternate"
+FontSize "12"
+Gain "1/(WT_Params.Yaw_Actuator.yaw_gear_diameter/WT_Params.Yaw_Actuator.yaw_ring_diameter)"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Sum"
+SID "123"
+Ports [4, 1]
+Position [295, 32, 315, 133]
+ZOrder "93"
+ShowName off
+FontSize "12"
+Inputs "++++"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "TwoWayConnection"
+Name "Two-Way\nConnection1"
+SID "124"
+Ports [1, 1, 0, 0, 0, 0, 1]
+Position [77, 90, 108, 120]
+ZOrder "82"
+BlockRotation "270"
+FontSize "12"
+}
+
+Block {
+BlockType "TwoWayConnection"
+Name "Two-Way\nConnection2"
+SID "125"
+Ports [1, 1, 0, 0, 0, 0, 1]
+Position [77, 195, 108, 225]
+ZOrder "86"
+BlockRotation "270"
+FontSize "12"
+}
+
+Block {
+BlockType "TwoWayConnection"
+Name "Two-Way\nConnection3"
+SID "126"
+Ports [1, 1, 0, 0, 0, 0, 1]
+Position [77, 300, 108, 330]
+ZOrder "89"
+BlockRotation "270"
+FontSize "12"
+}
+
+Block {
+BlockType "TwoWayConnection"
+Name "Two-Way\nConnection4"
+SID "127"
+Ports [1, 1, 0, 0, 0, 0, 1]
+Position [77, 415, 108, 445]
+ZOrder "91"
+BlockRotation "270"
+FontSize "12"
+}
+
+Block {
+BlockType "TwoWayConnection"
+Name "Two-Way\nConnection5"
+SID "128"
+Ports [1, 1, 0, 0, 0, 0, 1]
+Position [435, 67, 465, 98]
+ZOrder "94"
+FontSize "12"
+}
+
+Block {
+BlockType "Gain"
+Name "Yaw Ring Ratio"
+SID "129"
+Position [340, 415, 370, 445]
+ZOrder "96"
+BlockMirror on
+FontSize "12"
+Gain "1/(WT_Params.Yaw_Actuator.yaw_gear_diameter/WT_Params.Yaw_Actuator.yaw_ring_diameter)"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "PMIOPort"
+Name "YA1"
+SID "130"
+Position [35, 63, 65, 77]
+ZOrder "85"
+NamePlacement "alternate"
+FontSize "12"
+Side "Left"
+}
+
+Block {
+BlockType "PMIOPort"
+Name "YA2"
+SID "131"
+Position [35, 148, 65, 162]
+ZOrder "87"
+NamePlacement "alternate"
+FontSize "12"
+Port "2"
+Side "Left"
+}
+
+Block {
+BlockType "PMIOPort"
+Name "YG"
+SID "132"
+Position [550, 83, 580, 97]
+ZOrder "88"
+BlockMirror on
+FontSize "12"
+Port "3"
+Side "Right"
+}
+
+Block {
+BlockType "PMIOPort"
+Name "YA3"
+SID "133"
+Position [35, 268, 65, 282]
+ZOrder "90"
+NamePlacement "alternate"
+FontSize "12"
+Port "4"
+Side "Left"
+}
+
+Block {
+BlockType "PMIOPort"
+Name "YA4"
+SID "134"
+Position [35, 368, 65, 382]
+ZOrder "92"
+NamePlacement "alternate"
+FontSize "12"
+Port "5"
+Side "Left"
+}
+
+Line {
+ZOrder "1"
+Src "129#out:1"
+Points [-135, 0]
+Branch {
+ZOrder "2"
+Points [0, -78]
+Branch {
+ZOrder "3"
+Points [0, -104]
+Branch {
+ZOrder "4"
+Points [0, -103; -105, 0]
+Dst "124#in:1"
+}
+
+Branch {
+ZOrder "5"
+Points [-105, 0]
+Dst "125#in:1"
+}
+}
+
+Branch {
+ZOrder "6"
+Points [-105, 0]
+Dst "126#in:1"
+}
+}
+
+Branch {
+ZOrder "7"
+Points [0, 30]
+Dst "127#in:1"
+}
+}
+
+Line {
+ZOrder "8"
+Src "127#out:1"
+Points [0, -10; 165, 0; 0, -280]
+Dst "123#in:4"
+}
+
+Line {
+LineType "Connection"
+ZOrder "9"
+Src "132#rconn:1"
+Dst "128#rconn:1"
+}
+
+Line {
+ZOrder "10"
+Src "123#out:1"
+Dst "122#in:1"
+}
+
+Line {
+ZOrder "11"
+Src "128#out:1"
+Points [36, 0; 0, 355]
+Dst "129#in:1"
+}
+
+Line {
+LineType "Connection"
+ZOrder "12"
+Src "127#rconn:1"
+Points [0, -25]
+Dst "134#rconn:1"
+}
+
+Line {
+ZOrder "13"
+Src "126#out:1"
+Points [0, -9; 149, 0; 0, -191]
+Dst "123#in:3"
+}
+
+Line {
+LineType "Connection"
+ZOrder "14"
+Src "126#rconn:1"
+Points [0, -10]
+Dst "133#rconn:1"
+}
+
+Line {
+ZOrder "15"
+Src "125#out:1"
+Points [136, 0; 0, -120]
+Dst "123#in:2"
+}
+
+Line {
+LineType "Connection"
+ZOrder "16"
+Src "125#rconn:1"
+Points [0, -25]
+Dst "131#rconn:1"
+}
+
+Line {
+ZOrder "17"
+Src "124#out:1"
+Points [0, -40]
+Dst "123#in:1"
+}
+
+Line {
+LineType "Connection"
+ZOrder "18"
+Src "124#rconn:1"
+Points [0, -5]
+Dst "130#rconn:1"
+}
+
+Line {
+ZOrder "19"
+Src "122#out:1"
+Dst "128#in:1"
+}
+}
+}
+
+Block {
+BlockType "Gain"
+Name "Scaling Factor"
+SID "135"
+Position [70, 165, 100, 195]
+ZOrder "-9"
+NamePlacement "alternate"
+FontSize "12"
+Gain "WT_Params.Yaw_Actuator.Ideal.scaling_factor"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Terminator"
+Name "Terminator"
+SID "136"
+Position [465, 55, 485, 75]
+ZOrder "-10"
+ShowName off
+FontSize "12"
+}
+
+Block {
+BlockType "Terminator"
+Name "Terminator1"
+SID "137"
+Position [465, 165, 485, 185]
+ZOrder "-11"
+ShowName off
+FontSize "12"
+}
+
+Block {
+BlockType "Terminator"
+Name "Terminator2"
+SID "138"
+Position [465, 280, 485, 300]
+ZOrder "-12"
+ShowName off
+FontSize "12"
+}
+
+Block {
+BlockType "TwoWayConnection"
+Name "Two-Way\nConnection"
+SID "139"
+Ports [1, 1, 0, 0, 0, 0, 1]
+Position [110, 227, 140, 258]
+ZOrder "-13"
+BlockMirror on
+FontSize "12"
+}
+
+Block {
+BlockType "PMIOPort"
+Name "YG"
+SID "140"
+Tag "PMCPort"
+Position [655, 206, 685, 224]
+ZOrder "-17"
+BlockMirror on
+NamePlacement "alternate"
+FontSize "12"
+Side "Left"
+}
+
+Block {
+BlockType "PMIOPort"
+Name "YC"
+SID "141"
+Tag "PMCPort"
+Position [40, 241, 70, 259]
+ZOrder "-18"
+FontSize "12"
+Port "2"
+Side "Right"
+}
+
+Line {
+LineType "Connection"
+ZOrder "1"
+Src "119#rconn:1"
+Points [88, 0; 0, -175]
+Dst "121#lconn:4"
+}
+
+Line {
+LineType "Connection"
+ZOrder "2"
+Src "118#rconn:1"
+Points [67, 0; 0, -90]
+Dst "121#lconn:3"
+}
+
+Line {
+LineType "Connection"
+ZOrder "3"
+Src "117#rconn:1"
+Dst "121#lconn:2"
+}
+
+Line {
+LineType "Connection"
+ZOrder "4"
+Src "116#rconn:1"
+Points [80, 0; 0, 85]
+Dst "121#lconn:1"
+}
+
+Line {
+LineType "Connection"
+ZOrder "5"
+Src "140#rconn:1"
+Dst "121#rconn:1"
+}
+
+Line {
+ZOrder "6"
+Src "135#out:1"
+Dst "114#in:1"
+}
+
+Line {
+ZOrder "7"
+Src "119#out:1"
+Points [9, 0; 0, -23; -197, 0; 0, -97]
+Dst "120#in:4"
+}
+
+Line {
+ZOrder "8"
+Src "118#out:1"
+Points [9, 0; 0, -20]
+Dst "120#in:3"
+}
+
+Line {
+ZOrder "9"
+Src "117#out:1"
+Points [9, 0; 0, -22; -204, 0; 0, 107]
+Dst "120#in:2"
+}
+
+Line {
+ZOrder "10"
+Src "113#out:4"
+Points [41, 0; 0, 205]
+Dst "119#in:1"
+}
+
+Line {
+ZOrder "11"
+Src "113#out:3"
+Points [52, 0; 0, 105]
+Dst "118#in:1"
+}
+
+Line {
+ZOrder "12"
+Src "113#out:2"
+Dst "117#in:1"
+}
+
+Line {
+ZOrder "13"
+Src "119#out:2"
+Points [9, 0; 0, 64; -210, 0; 0, -199]
+Dst "120#in:5"
+}
+
+Line {
+ZOrder "14"
+Src "118#out:2"
+Dst "138#in:1"
+}
+
+Line {
+ZOrder "15"
+Src "117#out:2"
+Dst "137#in:1"
+}
+
+Line {
+ZOrder "16"
+Src "116#out:2"
+Dst "136#in:1"
+}
+
+Line {
+ZOrder "17"
+Src "113#out:1"
+Points [10, 0; 0, -75]
+Branch {
+ZOrder "18"
+Dst "115#in:1"
+}
+
+Branch {
+ZOrder "19"
+Points [0, -25]
+Dst "116#in:1"
+}
+}
+
+Line {
+LineType "Connection"
+ZOrder "20"
+Src "141#rconn:1"
+Dst "139#rconn:1"
+}
+
+Line {
+ZOrder "21"
+Src "139#out:1"
+Points [-55, 0; 0, -55]
+Dst "135#in:1"
+}
+
+Line {
+ZOrder "22"
+Src "116#out:1"
+Points [9, 0; 0, -28; -209, 0; 0, 213]
+Dst "120#in:1"
+}
+
+Line {
+ZOrder "23"
+Src "114#out:1"
+Dst "113#in:1"
+}
+
+Line {
+ZOrder "24"
+Src "120#out:1"
+Dst "139#in:1"
+}
+
+Annotation {
+SID "142"
+Name "Copyright 2009-2017 The MathWorks, Inc."
+Position [216, 486, 445, 504]
+InternalMargins [1, 1, 1, 1]
+ZOrder "-1"
+FontSize "12"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Ideal Motor"
+SID "144"
+Ports [0, 0, 0, 0, 0, 1, 1]
+Position [55, 147, 175, 263]
+ZOrder "112"
+FontSize "12"
+RequestExecContextInheritance off
+Object {
+$PropName "MaskObject"
+$ObjectID 2
+$ClassName "Simulink.Mask"
+Display "image(imread('Yaw_Ideal_Motors_IMAGE.jpg'));"
+
+}
+
+System {
+Location [1231, 100, 1890, 953]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+PaperType "A4"
+PaperUnits "centimeters"
+TiledPaperMargins [1.270000, 1.270000, 1.270000, 1.270000]
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "SubSystem"
+Name "Actuator Dynamics"
+SID "145"
+Ports [1, 1]
+Position [65, 159, 115, 181]
+ZOrder "4"
+FontSize "12"
+RequestExecContextInheritance off
+Object {
+$PropName "MaskObject"
+$ObjectID 3
+$ClassName "Simulink.Mask"
+Display ""
+
+Type "First-order lag supporting vector signals"
+Array {
+Type "Simulink.MaskParameter"
+PropName "Parameters"
+Dimension 2
+Object {
+$ObjectID 4
+Name "b"
+Type "edit"
+Prompt "Filter time constant"
+Value "WT_Params.Yaw_Actuator.ideal_actuator_time_constant"
+}
+
+Object {
+$ObjectID 5
+Name "x_initial"
+Type "edit"
+Prompt "Initial output"
+Value "0"
+}
+}
+Description "Models a lag of the form 1/(b*s+1) where s is the Laplace operator."
+}
+
+System {
+Location [382, 339, 873, 656]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+PaperType "A4"
+PaperUnits "centimeters"
+TiledPaperMargins [1.270000, 1.270000, 1.270000, 1.270000]
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "In"
+SID "146"
+Position [25, 33, 55, 47]
+ZOrder "-1"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Gain"
+Name "Gain"
+SID "147"
+Position [265, 25, 295, 55]
+ZOrder "-2"
+Gain "1/b"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Integrator"
+Name "Integrator"
+SID "148"
+Ports [1, 1]
+Position [185, 25, 215, 55]
+ZOrder "-3"
+InitialCondition "x_initial"
+}
+
+Block {
+BlockType "Sum"
+Name "Sum"
+SID "149"
+Ports [2, 1]
+Position [110, 30, 130, 50]
+ZOrder "-4"
+ShowName off
+IconShape "round"
+Inputs "|+-"
+}
+
+Block {
+BlockType "Outport"
+Name "Out"
+SID "150"
+Position [380, 33, 410, 47]
+ZOrder "-5"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "147#out:1"
+Points [35, 0]
+Branch {
+ZOrder "2"
+Dst "150#in:1"
+}
+
+Branch {
+ZOrder "3"
+Points [0, 65; -215, 0]
+Dst "149#in:2"
+}
+}
+
+Line {
+ZOrder "4"
+Src "148#out:1"
+Dst "147#in:1"
+}
+
+Line {
+ZOrder "5"
+Src "146#out:1"
+Dst "149#in:1"
+}
+
+Line {
+ZOrder "6"
+Src "149#out:1"
+Dst "148#in:1"
+}
+}
+}
+
+Block {
+BlockType "Demux"
+Name "Demux"
+SID "151"
+Ports [1, 4]
+Position [160, 151, 165, 189]
+ZOrder "-1"
+ShowName off
+FontSize "12"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Goto"
+Name "Goto_Yaw_Actuator_Torque"
+SID "152"
+Position [15, 69, 165, 91]
+ZOrder "-2"
+BlockMirror on
+NamePlacement "alternate"
+ShowName off
+FontSize "12"
+GotoTag "Yaw_Actuator_Torque"
+TagVisibility "global"
+}
+
+Block {
+BlockType "Reference"
+Name "Ideal Yaw Motor 1"
+SID "153"
+Ports [1, 2, 0, 0, 0, 0, 1]
+Position [230, 17, 365, 93]
+ZOrder "26"
+LibraryVersion "1.37"
+FontSize "12"
+SourceBlock "Yaw_Ideal_Motor_Lib/Ideal Yaw Motor"
+SourceType ""
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+}
+
+Block {
+BlockType "Reference"
+Name "Ideal Yaw Motor 2"
+SID "154"
+Ports [1, 2, 0, 0, 0, 0, 1]
+Position [230, 127, 365, 203]
+ZOrder "27"
+LibraryVersion "1.37"
+FontSize "12"
+SourceBlock "Yaw_Ideal_Motor_Lib/Ideal Yaw Motor"
+SourceType ""
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+}
+
+Block {
+BlockType "Reference"
+Name "Ideal Yaw Motor 3"
+SID "155"
+Ports [1, 2, 0, 0, 0, 0, 1]
+Position [230, 247, 365, 323]
+ZOrder "28"
+LibraryVersion "1.37"
+FontSize "12"
+SourceBlock "Yaw_Ideal_Motor_Lib/Ideal Yaw Motor"
+SourceType ""
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+}
+
+Block {
+BlockType "Reference"
+Name "Ideal Yaw Motor 4"
+SID "156"
+Ports [1, 2, 0, 0, 0, 0, 1]
+Position [235, 352, 370, 428]
+ZOrder "29"
+LibraryVersion "1.37"
+FontSize "12"
+SourceBlock "Yaw_Ideal_Motor_Lib/Ideal Yaw Motor"
+SourceType ""
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+}
+
+Block {
+BlockType "Mux"
+Name "Mux"
+SID "157"
+Ports [5, 1]
+Position [160, 203, 165, 267]
+ZOrder "-7"
+BlockMirror on
+NamePlacement "alternate"
+ShowName off
+FontSize "12"
+Inputs "5"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Terminator"
+Name "Terminator"
+SID "158"
+Position [405, 45, 425, 65]
+ZOrder "-8"
+ShowName off
+FontSize "12"
+}
+
+Block {
+BlockType "Terminator"
+Name "Terminator1"
+SID "159"
+Position [405, 155, 425, 175]
+ZOrder "-9"
+ShowName off
+FontSize "12"
+}
+
+Block {
+BlockType "Terminator"
+Name "Terminator2"
+SID "160"
+Position [405, 275, 425, 295]
+ZOrder "-10"
+ShowName off
+FontSize "12"
+}
+
+Block {
+BlockType "TwoWayConnection"
+Name "Two-Way\nConnection"
+SID "161"
+Ports [1, 1, 0, 0, 0, 0, 1]
+Position [85, 217, 115, 248]
+ZOrder "-11"
+BlockMirror on
+FontSize "12"
+}
+
+Block {
+BlockType "PMIOPort"
+Name "YG1"
+SID "162"
+Tag "PMCPort"
+Position [490, 236, 520, 254]
+ZOrder "-15"
+BlockMirror on
+FontSize "12"
+Side "Left"
+}
+
+Block {
+BlockType "PMIOPort"
+Name "YC"
+SID "163"
+Tag "PMCPort"
+Position [15, 231, 45, 249]
+ZOrder "-16"
+FontSize "12"
+Port "2"
+Side "Right"
+}
+
+Line {
+ZOrder "1"
+Src "156#out:2"
+Points [12, 0; 0, 60; -211, 0; 0, -195]
+Dst "157#in:5"
+}
+
+Line {
+ZOrder "2"
+Src "156#out:1"
+Points [12, 0; 0, -22; -204, 0; 0, -98]
+Dst "157#in:4"
+}
+
+Line {
+ZOrder "3"
+Src "155#out:1"
+Points [14, 0; 0, -25]
+Dst "157#in:3"
+}
+
+Line {
+ZOrder "4"
+Src "154#out:1"
+Points [14, 0; 0, -20; -197, 0; 0, 105]
+Dst "157#in:2"
+}
+
+Line {
+ZOrder "5"
+Src "153#out:1"
+Points [10, 0; 0, -25; -200, 0]
+Dst "157#in:1"
+}
+
+Line {
+ZOrder "6"
+Src "151#out:4"
+Points [38, 0; 0, 205]
+Dst "156#in:1"
+}
+
+Line {
+ZOrder "7"
+Src "151#out:3"
+Points [25, 0; 0, 110]
+Dst "155#in:1"
+}
+
+Line {
+ZOrder "8"
+Src "151#out:2"
+Dst "154#in:1"
+}
+
+Line {
+ZOrder "9"
+Src "151#out:1"
+Points [40, 0; 0, -75]
+Branch {
+ZOrder "10"
+Points [0, -25]
+Dst "153#in:1"
+}
+
+Branch {
+ZOrder "11"
+Dst "152#in:1"
+}
+}
+
+Line {
+ZOrder "12"
+Src "155#out:2"
+Dst "160#in:1"
+}
+
+Line {
+ZOrder "13"
+Src "154#out:2"
+Dst "159#in:1"
+}
+
+Line {
+ZOrder "14"
+Src "153#out:2"
+Dst "158#in:1"
+}
+
+Line {
+ZOrder "15"
+Src "161#out:1"
+Points [-52, 0; 0, -55]
+Dst "145#in:1"
+}
+
+Line {
+ZOrder "16"
+Src "157#out:1"
+Dst "161#in:1"
+}
+
+Line {
+LineType "Connection"
+ZOrder "17"
+Src "163#rconn:1"
+Dst "161#rconn:1"
+}
+
+Line {
+ZOrder "18"
+Src "145#out:1"
+Dst "151#in:1"
+}
+
+Line {
+LineType "Connection"
+ZOrder "19"
+Src "155#rconn:1"
+Points [66, 0]
+Branch {
+ConnectType "DEST_SRC"
+Points [0, -65]
+Branch {
+ConnectType "DEST_DEST"
+Points [446, 190; 0, 55]
+Branch {
+ConnectType "SRC_DEST"
+Src "154#rconn:1"
+Points [66, 0]
+}
+
+Branch {
+ConnectType "SRC_DEST"
+Src "153#rconn:1"
+Points [66, 0; 0, 110]
+}
+}
+
+Branch {
+ConnectType "DEST_SRC"
+Dst "162#rconn:1"
+}
+}
+
+Branch {
+ConnectType "DEST_DEST"
+Src "156#rconn:1"
+Points [61, 0; 0, -105]
+}
+}
+
+Annotation {
+SID "164"
+Name "Copyright 2009-2017 The MathWorks, Inc."
+Position [147, 462, 338, 478]
+InternalMargins [1, 1, 1, 1]
+ZOrder "-1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "Servomotor"
+SID "321"
+Ports [0, 0, 0, 0, 0, 1, 1]
+Position [55, 312, 175, 428]
+ZOrder "114"
+FontSize "12"
+RequestExecContextInheritance off
+Object {
+$PropName "MaskObject"
+$ObjectID 6
+$ClassName "Simulink.Mask"
+Display "image(imread('Yaw_Servomotors_IMAGE.jpg'));"
+
+}
+
+System {
+Location [204, 58, 953, 911]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+PaperType "A4"
+PaperUnits "centimeters"
+TiledPaperMargins [1.270000, 1.270000, 1.270000, 1.270000]
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "SubSystem"
+Name "Actuator Dynamics"
+SID "322"
+Ports [1, 1]
+Position [65, 159, 115, 181]
+ZOrder "4"
+FontSize "12"
+RequestExecContextInheritance off
+Object {
+$PropName "MaskObject"
+$ObjectID 7
+$ClassName "Simulink.Mask"
+Display ""
+
+Type "First-order lag supporting vector signals"
+Array {
+Type "Simulink.MaskParameter"
+PropName "Parameters"
+Dimension 2
+Object {
+$ObjectID 8
+Name "b"
+Type "edit"
+Prompt "Filter time constant"
+Value "WT_Params.Yaw_Actuator.ideal_actuator_time_constant"
+}
+
+Object {
+$ObjectID 9
+Name "x_initial"
+Type "edit"
+Prompt "Initial output"
+Value "0"
+}
+}
+Description "Models a lag of the form 1/(b*s+1) where s is the Laplace operator."
+}
+
+System {
+Location [382, 339, 873, 656]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+PaperType "A4"
+PaperUnits "centimeters"
+TiledPaperMargins [1.270000, 1.270000, 1.270000, 1.270000]
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "In"
+SID "323"
+Position [25, 33, 55, 47]
+ZOrder "-1"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Gain"
+Name "Gain"
+SID "324"
+Position [265, 25, 295, 55]
+ZOrder "-2"
+Gain "1/b"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Integrator"
+Name "Integrator"
+SID "325"
+Ports [1, 1]
+Position [185, 25, 215, 55]
+ZOrder "-3"
+InitialCondition "x_initial"
+}
+
+Block {
+BlockType "Sum"
+Name "Sum"
+SID "326"
+Ports [2, 1]
+Position [110, 30, 130, 50]
+ZOrder "-4"
+ShowName off
+IconShape "round"
+Inputs "|+-"
+}
+
+Block {
+BlockType "Outport"
+Name "Out"
+SID "327"
+Position [380, 33, 410, 47]
+ZOrder "-5"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "326#out:1"
+Dst "325#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "323#out:1"
+Dst "326#in:1"
+}
+
+Line {
+ZOrder "3"
+Src "325#out:1"
+Dst "324#in:1"
+}
+
+Line {
+ZOrder "4"
+Src "324#out:1"
+Points [35, 0]
+Branch {
+ZOrder "5"
+Points [0, 65; -215, 0]
+Dst "326#in:2"
+}
+
+Branch {
+ZOrder "6"
+Dst "327#in:1"
+}
+}
+}
+}
+
+Block {
+BlockType "Demux"
+Name "Demux"
+SID "328"
+Ports [1, 4]
+Position [160, 151, 165, 189]
+ZOrder "-1"
+ShowName off
+FontSize "12"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Goto"
+Name "Goto_Yaw_Actuator_Torque1"
+SID "329"
+Position [425, 54, 575, 76]
+ZOrder "31"
+ShowName off
+FontSize "12"
+GotoTag "Yaw_Actuator_Torque"
+TagVisibility "global"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux"
+SID "330"
+Ports [5, 1]
+Position [160, 203, 165, 267]
+ZOrder "-7"
+BlockMirror on
+NamePlacement "alternate"
+ShowName off
+FontSize "12"
+Inputs "5"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Terminator"
+Name "Terminator"
+SID "331"
+Position [405, 35, 425, 55]
+ZOrder "-8"
+ForegroundColor [0.725490, 0.725490, 0.725490]
+ShowName off
+FontSize "12"
+}
+
+Block {
+BlockType "Terminator"
+Name "Terminator1"
+SID "332"
+Position [405, 145, 425, 165]
+ZOrder "-9"
+ForegroundColor [0.725490, 0.725490, 0.725490]
+ShowName off
+FontSize "12"
+}
+
+Block {
+BlockType "Terminator"
+Name "Terminator2"
+SID "333"
+Position [405, 265, 425, 285]
+ZOrder "-10"
+ForegroundColor [0.725490, 0.725490, 0.725490]
+ShowName off
+FontSize "12"
+}
+
+Block {
+BlockType "Terminator"
+Name "Terminator3"
+SID "334"
+Position [405, 165, 425, 185]
+ZOrder "32"
+ForegroundColor [0.725490, 0.725490, 0.725490]
+ShowName off
+FontSize "12"
+}
+
+Block {
+BlockType "Terminator"
+Name "Terminator4"
+SID "335"
+Position [405, 285, 425, 305]
+ZOrder "34"
+ForegroundColor [0.725490, 0.725490, 0.725490]
+ShowName off
+FontSize "12"
+}
+
+Block {
+BlockType "Terminator"
+Name "Terminator5"
+SID "336"
+Position [405, 390, 425, 410]
+ZOrder "35"
+ForegroundColor [0.725490, 0.725490, 0.725490]
+ShowName off
+FontSize "12"
+}
+
+Block {
+BlockType "TwoWayConnection"
+Name "Two-Way\nConnection"
+SID "337"
+Ports [1, 1, 0, 0, 0, 0, 1]
+Position [85, 217, 115, 248]
+ZOrder "-11"
+BlockMirror on
+FontSize "12"
+}
+
+Block {
+BlockType "Reference"
+Name "Yaw Motor 1"
+SID "338"
+Ports [1, 3, 0, 0, 0, 0, 1]
+Position [225, 17, 365, 93]
+ZOrder "40"
+LibraryVersion "1.48"
+FontSize "12"
+SourceBlock "Yaw_Motor_Lib/Yaw Motor"
+SourceType ""
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+}
+
+Block {
+BlockType "Reference"
+Name "Yaw Motor 2"
+SID "339"
+Ports [1, 3, 0, 0, 0, 0, 1]
+Position [225, 127, 365, 203]
+ZOrder "41"
+LibraryVersion "1.48"
+FontSize "12"
+SourceBlock "Yaw_Motor_Lib/Yaw Motor"
+SourceType ""
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+}
+
+Block {
+BlockType "Reference"
+Name "Yaw Motor 3"
+SID "340"
+Ports [1, 3, 0, 0, 0, 0, 1]
+Position [225, 247, 365, 323]
+ZOrder "43"
+LibraryVersion "1.48"
+FontSize "12"
+SourceBlock "Yaw_Motor_Lib/Yaw Motor"
+SourceType ""
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+}
+
+Block {
+BlockType "Reference"
+Name "Yaw Motor 4"
+SID "341"
+Ports [1, 3, 0, 0, 0, 0, 1]
+Position [225, 352, 365, 428]
+ZOrder "44"
+LibraryVersion "1.48"
+FontSize "12"
+SourceBlock "Yaw_Motor_Lib/Yaw Motor"
+SourceType ""
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+ShowPortLabels "FromPortIcon"
+SystemSampleTime "-1"
+FunctionWithSeparateData off
+GeneratePreprocessorConditionals off
+ContentPreviewEnabled off
+
+}
+
+Block {
+BlockType "PMIOPort"
+Name "YG1"
+SID "342"
+Tag "PMCPort"
+Position [490, 236, 520, 254]
+ZOrder "-15"
+BlockMirror on
+FontSize "12"
+Side "Left"
+}
+
+Block {
+BlockType "PMIOPort"
+Name "YC"
+SID "343"
+Tag "PMCPort"
+Position [15, 231, 45, 249]
+ZOrder "-16"
+FontSize "12"
+Port "2"
+Side "Right"
+}
+
+Line {
+ZOrder "1"
+Src "341#out:3"
+Dst "336#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "340#out:3"
+Dst "335#in:1"
+}
+
+Line {
+ZOrder "3"
+Src "339#out:3"
+Dst "334#in:1"
+}
+
+Line {
+ZOrder "4"
+Src "338#out:3"
+Dst "329#in:1"
+}
+
+Line {
+LineType "Connection"
+ZOrder "5"
+Src "341#rconn:1"
+Points [66, 0; 0, -105]
+Branch {
+ConnectType "DEST_SRC"
+Points [0, -70]
+Branch {
+ConnectType "DEST_SRC"
+Dst "342#rconn:1"
+}
+
+Branch {
+ConnectType "DEST_DEST"
+Points [446, 195; 0, 50]
+Branch {
+ConnectType "SRC_DEST"
+Src "338#rconn:1"
+Points [66, 0; 0, 110]
+}
+
+Branch {
+ConnectType "SRC_DEST"
+Src "339#rconn:1"
+Points [66, 0]
+}
+}
+}
+
+Branch {
+ConnectType "DEST_DEST"
+Src "340#rconn:1"
+Points [66, 0]
+}
+}
+
+Line {
+ZOrder "12"
+Src "322#out:1"
+Dst "328#in:1"
+}
+
+Line {
+LineType "Connection"
+ZOrder "13"
+Src "343#rconn:1"
+Dst "337#rconn:1"
+}
+
+Line {
+ZOrder "14"
+Src "330#out:1"
+Dst "337#in:1"
+}
+
+Line {
+ZOrder "15"
+Src "337#out:1"
+Points [-52, 0; 0, -55]
+Dst "322#in:1"
+}
+
+Line {
+ZOrder "16"
+Src "338#out:2"
+Dst "331#in:1"
+}
+
+Line {
+ZOrder "17"
+Src "339#out:2"
+Dst "332#in:1"
+}
+
+Line {
+ZOrder "18"
+Src "340#out:2"
+Dst "333#in:1"
+}
+
+Line {
+ZOrder "19"
+Src "328#out:1"
+Points [34, 0; 0, -100]
+Dst "338#in:1"
+}
+
+Line {
+ZOrder "20"
+Src "328#out:2"
+Dst "339#in:1"
+}
+
+Line {
+ZOrder "21"
+Src "328#out:3"
+Points [37, 0; 0, 110]
+Dst "340#in:1"
+}
+
+Line {
+ZOrder "22"
+Src "328#out:4"
+Points [8, 0; 0, 205]
+Dst "341#in:1"
+}
+
+Line {
+ZOrder "23"
+Src "338#out:1"
+Points [9, 0; 0, -17; -193, 0; 0, 207]
+Dst "330#in:1"
+}
+
+Line {
+ZOrder "24"
+Src "339#out:1"
+Points [9, 0; 0, -16; -185, 0; 0, 106]
+Dst "330#in:2"
+}
+
+Line {
+ZOrder "25"
+Src "340#out:1"
+Points [9, 0; 0, -20]
+Dst "330#in:3"
+}
+
+Line {
+ZOrder "26"
+Src "341#out:1"
+Points [9, 0; 0, -14; -193, 0; 0, -101]
+Dst "330#in:4"
+}
+
+Line {
+ZOrder "27"
+Src "341#out:2"
+Points [9, 0; 0, 69; -185, 0; 0, -194]
+Dst "330#in:5"
+}
+
+Annotation {
+SID "344"
+Name "Copyright 2009-2017 The MathWorks, Inc."
+Position [147, 462, 338, 478]
+InternalMargins [1, 1, 1, 1]
+ZOrder "-1"
+}
+}
+}
+
+Annotation {
+SID "110"
+Name "Copyright 2009-2017 The MathWorks, Inc."
+Position [12, 462, 203, 478]
+InternalMargins [1, 1, 1, 1]
+ZOrder "-1"
+}
+}
+
+DiagnosticSuppressor on
+
+LogicAnalyzerPlugin on
+
+NotesPlugin on
+
+SLCCPlugin on
+
+WebScopes_FoundationPlugin on
+
+Object {
+$PropName "BdWindowsInfo"
+$ObjectID 10
+$ClassName "Simulink.BDWindowsInfo"
+BDUuid "d09cd5bb-4786-4cf6-8f19-8a3705816bd2"
+Object {
+$PropName "WindowsInfo"
+$ObjectID 11
+$ClassName "Simulink.WindowInfo"
+IsActive [1]
+Location [204.0, 56.0, 748.0, 852.0]
+WindowState "AAAA/wAAAAD9AAAAAgAAAAAAAAC9AAAB+PwCAAAAA/sAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAAB4AP///wAAAAEAAAAAAAAAAPwCAAAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZQBjAHQAbwByAAAAAAD/////AAAANAD///8AAAOVAAADnwAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/////wEAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAACR/////wAAAAAAAAAA/////wEAAAEE/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAFh/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA"
+WindowUuid ""
+Array {
+PropName "PersistedApps"
+Type "Cell"
+Dimension 0
+}
+
+Object {
+$PropName "ModelBrowserInfo"
+$ObjectID 12
+$ClassName "Simulink.ModelBrowserInfo"
+Visible [0]
+DockPosition "Left"
+Width [50]
+Height [50]
+Filter [59]
+Minimized "Unset"
+}
+
+Object {
+$PropName "ExplorerBarInfo"
+$ObjectID 13
+$ClassName "Simulink.ExplorerBarInfo"
+Visible [0]
+}
+
+Object {
+$PropName "EditorsInfo"
+$ObjectID 14
+$ClassName "Simulink.EditorInfo"
+IsActive [1]
+IsTabbed [1]
+ViewObjType "SimulinkTopLevel"
+LoadSaveID "0"
+Extents [872.0, 897.0]
+ZoomFactor [1.0]
+Offset [-232.5, -173.5]
+SceneRectInView [0.0, 0.0, 0.0, 0.0]
+}
+
+Object {
+$PropName "DockComponentsInfo"
+$ObjectID 15
+$ClassName "Simulink.DockComponentInfo"
+Type "GLUE2:PropertyInspector"
+ID "Property Inspector"
+Visible [0]
+CreateCallback ""
+UserData ""
+Floating [0]
+DockPosition "Right"
+Width [512]
+Height [384]
+Minimized "Unset"
+}
+}
+}
+
+Array {
+Type "Handle"
+Dimension 1
+Simulink.ConfigSet {
+Version "19.1.1"
+$ClassName "Simulink.ConfigSet"
+DisabledProps []
+Description ""
+Name "Configuration"
+CurrentDlgPage "Solver"
+ConfigPrmDlgPosition [ 260, 210, 1140, 840 ]
+ExtraOptions ""
+Array {
+PropName "Components"
+Type "Handle"
+Dimension 10
+Simulink.SolverCC {
+$ObjectID 17
+Version "19.1.1"
+$ClassName "Simulink.SolverCC"
+DisabledProps []
+Description ""
+Components []
+StartTime "0.0"
+StopTime "10.0"
+AbsTol "auto"
+AutoScaleAbsTol on
+FixedStep "auto"
+InitialStep "auto"
+MaxOrder "5"
+ZcThreshold "auto"
+ConsecutiveZCsStepRelTol "10*128*eps"
+MaxConsecutiveZCs "1000"
+ExtrapolationOrder "4"
+NumberNewtonIterations "1"
+MaxStep "auto"
+MinStep "auto"
+MaxConsecutiveMinStep "1"
+RelTol "1e-3"
+EnableMultiTasking on
+ConcurrentTasks off
+Solver "ode45"
+SolverName "ode45"
+SolverJacobianMethodControl "auto"
+ShapePreserveControl "DisableAll"
+ZeroCrossControl "UseLocalSettings"
+ZeroCrossAlgorithm "Nonadaptive"
+AlgebraicLoopSolver "TrustRegion"
+SolverInfoToggleStatus off
+IsAutoAppliedInSIP off
+SolverResetMethod "Fast"
+PositivePriorityOrder off
+AutoInsertRateTranBlk off
+SampleTimeConstraint "Unconstrained"
+InsertRTBMode "Whenever possible"
+SampleTimeProperty []
+DecoupledContinuousIntegration off
+MinimalZcImpactIntegration off
+SolverOrder "3"
+}
+
+Simulink.DataIOCC {
+$ObjectID 18
+Version "19.1.1"
+$ClassName "Simulink.DataIOCC"
+DisabledProps []
+Description ""
+Components []
+Decimation "1"
+ExternalInput [t, u]
+FinalStateName "xFinal"
+InitialState "xInitial"
+LimitDataPoints on
+MaxDataPoints "1000"
+LoadExternalInput off
+LoadInitialState off
+SaveFinalState off
+SaveOperatingPoint off
+SaveFormat "Array"
+SignalLoggingSaveFormat "ModelDataLogs"
+SaveOutput on
+SaveState off
+SignalLogging on
+DSMLogging on
+InspectSignalLogs off
+VisualizeSimOutput on
+StreamToWorkspace off
+StreamVariableName "streamout"
+SaveTime on
+ReturnWorkspaceOutputs off
+StateSaveName "xout"
+TimeSaveName "tout"
+OutputSaveName "yout"
+SignalLoggingName "logsout"
+DSMLoggingName "dsmout"
+OutputOption "RefineOutputTimes"
+OutputTimes []
+ReturnWorkspaceOutputsName "out"
+Refine "1"
+LoggingToFile off
+DatasetSignalFormat "timeseries"
+LoggingFileName "out.mat"
+LoggingIntervals [-inf, inf]
+}
+
+Simulink.OptimizationCC {
+$ObjectID 19
+Version "19.1.1"
+$ClassName "Simulink.OptimizationCC"
+Description ""
+Components []
+BlockReduction on
+BooleanDataType on
+ConditionallyExecuteInputs on
+DefaultParameterBehavior "Tunable"
+UseDivisionForNetSlopeComputation off
+GainParamInheritBuiltInType off
+UseFloatMulNetSlope off
+DefaultUnderspecifiedDataType "double"
+UseSpecifiedMinMax off
+InlineInvariantSignals off
+OptimizeBlockIOStorage on
+BufferReuse on
+EnhancedBackFolding off
+CachingGlobalReferences off
+GlobalBufferReuse on
+StrengthReduction off
+AdvancedOptControl ""
+ExpressionFolding on
+BooleansAsBitfields off
+BitfieldContainerType "uint_T"
+EnableMemcpy on
+MemcpyThreshold "64"
+PassReuseOutputArgsAs "Structure reference"
+PassReuseOutputArgsThreshold "12"
+ExpressionDepthLimit "2147483647"
+LocalBlockOutputs on
+RollThreshold "5"
+StateBitsets off
+DataBitsets off
+ActiveStateOutputEnumStorageType "Native Integer"
+ZeroExternalMemoryAtStartup on
+ZeroInternalMemoryAtStartup on
+InitFltsAndDblsToZero off
+NoFixptDivByZeroProtection off
+EfficientFloat2IntCast off
+EfficientMapNaN2IntZero on
+LifeSpan "inf"
+MaxStackSize "Inherit from target"
+BufferReusableBoundary on
+SimCompilerOptimization off
+AccelVerboseBuild off
+OptimizeBlockOrder off
+OptimizeDataStoreBuffers on
+BusAssignmentInplaceUpdate on
+DifferentSizesBufferReuse off
+UseRowMajorAlgorithm off
+OptimizationLevel "level2"
+OptimizationPriority "Balanced"
+OptimizationCustomize on
+LabelGuidedReuse off
+MultiThreadedLoops off
+DenormalBehavior "GradualUnderflow"
+EfficientTunableParamExpr off
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 9
+Cell "ZeroExternalMemoryAtStartup"
+Cell "ZeroInternalMemoryAtStartup"
+Cell "OptimizeModelRefInitCode"
+Cell "NoFixptDivByZeroProtection"
+Cell "BooleansAsBitfields"
+Cell "PassReuseOutputArgsAs"
+Cell "PassReuseOutputArgsThreshold"
+Cell "UseSpecifiedMinMax"
+Cell "EfficientTunableParamExpr"
+}
+}
+
+Simulink.DebuggingCC {
+$ObjectID 20
+Version "19.1.1"
+$ClassName "Simulink.DebuggingCC"
+Description ""
+Components []
+RTPrefix "error"
+ConsistencyChecking "none"
+ArrayBoundsChecking "none"
+SignalInfNanChecking "none"
+StringTruncationChecking "error"
+SignalRangeChecking "none"
+ReadBeforeWriteMsg "UseLocalSettings"
+WriteAfterWriteMsg "UseLocalSettings"
+WriteAfterReadMsg "UseLocalSettings"
+AlgebraicLoopMsg "warning"
+ArtificialAlgebraicLoopMsg "warning"
+SaveWithDisabledLinksMsg "warning"
+SaveWithParameterizedLinksMsg "warning"
+CheckSSInitialOutputMsg on
+UnderspecifiedInitializationDetection "Classic"
+MergeDetectMultiDrivingBlocksExec "none"
+CheckExecutionContextPreStartOutputMsg off
+CheckExecutionContextRuntimeOutputMsg off
+SignalResolutionControl "UseLocalSettings"
+BlockPriorityViolationMsg "warning"
+MinStepSizeMsg "warning"
+TimeAdjustmentMsg "none"
+MaxConsecutiveZCsMsg "error"
+MaskedZcDiagnostic "warning"
+IgnoredZcDiagnostic "warning"
+SolverPrmCheckMsg "warning"
+InheritedTsInSrcMsg "warning"
+MultiTaskDSMMsg "error"
+MultiTaskCondExecSysMsg "error"
+MultiTaskRateTransMsg "error"
+SingleTaskRateTransMsg "none"
+TasksWithSamePriorityMsg "warning"
+ExportedTasksRateTransMsg "none"
+SigSpecEnsureSampleTimeMsg "warning"
+CheckMatrixSingularityMsg "none"
+IntegerOverflowMsg "warning"
+Int32ToFloatConvMsg "warning"
+ParameterDowncastMsg "error"
+ParameterOverflowMsg "error"
+ParameterUnderflowMsg "none"
+ParameterPrecisionLossMsg "warning"
+ParameterTunabilityLossMsg "warning"
+FixptConstUnderflowMsg "none"
+FixptConstOverflowMsg "none"
+FixptConstPrecisionLossMsg "none"
+UnderSpecifiedDataTypeMsg "none"
+UnnecessaryDatatypeConvMsg "none"
+VectorMatrixConversionMsg "none"
+InvalidFcnCallConnMsg "error"
+FcnCallInpInsideContextMsg "warning"
+SignalLabelMismatchMsg "none"
+UnconnectedInputMsg "warning"
+UnconnectedOutputMsg "warning"
+UnconnectedLineMsg "warning"
+UseOnlyExistingSharedCode "error"
+SFcnCompatibilityMsg "none"
+FrameProcessingCompatibilityMsg "error"
+UniqueDataStoreMsg "none"
+BusObjectLabelMismatch "warning"
+RootOutportRequireBusObject "warning"
+AssertControl "UseLocalSettings"
+AllowSymbolicDim off
+RowMajorDimensionSupport off
+ModelReferenceIOMsg "none"
+ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+ModelReferenceVersionMismatchMessage "none"
+ModelReferenceIOMismatchMessage "none"
+UnknownTsInhSupMsg "warning"
+ModelReferenceDataLoggingMessage "warning"
+ModelReferenceSymbolNameMessage "warning"
+ModelReferenceExtraNoncontSigs "error"
+StateNameClashWarn "warning"
+OperatingPointInterfaceChecksumMismatchMsg "warning"
+NonCurrentReleaseOperatingPointMsg "error"
+ChecksumConsistencyForSSReuse "none"
+PregeneratedLibrarySubsystemCodeDiagnostic "warning"
+MatchCodeGenerationContextForUpdateDiagram "none"
+InitInArrayFormatMsg "warning"
+StrictBusMsg "ErrorLevel1"
+BusNameAdapt "WarnAndRepair"
+NonBusSignalsTreatedAsBus "none"
+SymbolicDimMinMaxWarning "warning"
+LossOfSymbolicDimsSimulationWarning "warning"
+LossOfSymbolicDimsCodeGenerationWarning "error"
+SymbolicDimsDataTypeCodeGenerationDiagnostic "error"
+BlockIODiagnostic "none"
+SFUnusedDataAndEventsDiag "warning"
+SFUnexpectedBacktrackingDiag "warning"
+SFInvalidInputDataAccessInChartInitDiag "warning"
+SFNoUnconditionalDefaultTransitionDiag "warning"
+SFTransitionOutsideNaturalParentDiag "warning"
+SFUnreachableExecutionPathDiag "warning"
+SFUndirectedBroadcastEventsDiag "warning"
+SFTransitionActionBeforeConditionDiag "warning"
+SFOutputUsedAsStateInMooreChartDiag "error"
+SFTemporalDelaySmallerThanSampleTimeDiag "warning"
+SFSelfTransitionDiag "warning"
+SFExecutionAtInitializationDiag "none"
+SFMachineParentedDataDiag "warning"
+IntegerSaturationMsg "warning"
+AllowedUnitSystems "all"
+UnitsInconsistencyMsg "warning"
+AllowAutomaticUnitConversions on
+RCSCRenamedMsg "warning"
+RCSCObservableMsg "warning"
+ForceCombineOutputUpdateInSim off
+UnitDatabase ""
+UnderSpecifiedDimensionMsg "none"
+DebugExecutionForFMUViaOutOfProcess off
+ArithmeticOperatorsInVariantConditions "warning"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 1
+Cell "UseOnlyExistingSharedCode"
+}
+}
+
+Simulink.HardwareCC {
+$ObjectID 21
+Version "19.1.1"
+$ClassName "Simulink.HardwareCC"
+DisabledProps []
+Description ""
+Components []
+ProdBitPerChar "8"
+ProdBitPerShort "16"
+ProdBitPerInt "32"
+ProdBitPerLong "32"
+ProdBitPerLongLong "64"
+ProdBitPerFloat "32"
+ProdBitPerDouble "64"
+ProdBitPerPointer "32"
+ProdBitPerSizeT "32"
+ProdBitPerPtrDiffT "32"
+ProdLargestAtomicInteger "Char"
+ProdLargestAtomicFloat "None"
+ProdIntDivRoundTo "Undefined"
+ProdEndianess "Unspecified"
+ProdWordSize "32"
+ProdShiftRightIntArith on
+ProdLongLongMode off
+ProdHWDeviceType "32-bit Generic"
+TargetBitPerChar "8"
+TargetBitPerShort "16"
+TargetBitPerInt "32"
+TargetBitPerLong "32"
+TargetBitPerLongLong "64"
+TargetBitPerFloat "32"
+TargetBitPerDouble "64"
+TargetBitPerPointer "32"
+TargetBitPerSizeT "32"
+TargetBitPerPtrDiffT "32"
+TargetLargestAtomicInteger "Char"
+TargetLargestAtomicFloat "None"
+TargetShiftRightIntArith on
+TargetLongLongMode off
+TargetIntDivRoundTo "Undefined"
+TargetEndianess "Unspecified"
+TargetWordSize "32"
+TargetPreprocMaxBitsSint "32"
+TargetPreprocMaxBitsUint "32"
+TargetHWDeviceType "Specified"
+TargetUnknown off
+ProdEqTarget on
+UseEmbeddedCoderFeatures on
+UseSimulinkCoderFeatures on
+HardwareBoardFeatureSet "EmbeddedCoderHSP"
+}
+
+Simulink.ModelReferenceCC {
+$ObjectID 22
+Version "19.1.1"
+$ClassName "Simulink.ModelReferenceCC"
+DisabledProps []
+Description ""
+Components []
+UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+EnableRefExpFcnMdlSchedulingChecks on
+CheckModelReferenceTargetMessage "error"
+EnableParallelModelReferenceBuilds off
+ParallelModelReferenceErrorOnInvalidPool on
+ParallelModelReferenceMATLABWorkerInit "None"
+ModelReferenceNumInstancesAllowed "Multi"
+PropagateVarSize "Infer from blocks in model"
+ModelDependencies ""
+ModelReferencePassRootInputsByReference on
+ModelReferenceMinAlgLoopOccurrences off
+PropagateSignalLabelsOutOfModel off
+SupportModelReferenceSimTargetCustomCode off
+}
+
+Simulink.SFSimCC {
+$ObjectID 23
+Version "19.1.1"
+$ClassName "Simulink.SFSimCC"
+DisabledProps []
+Description ""
+Components []
+SimCustomSourceCode ""
+SimCustomHeaderCode ""
+SimCustomInitializer ""
+SimCustomTerminator ""
+SimReservedNameArray []
+SimUserSources ""
+SimUserIncludeDirs ""
+SimUserLibraries ""
+SimUserDefines ""
+SimCustomCompilerFlags ""
+SimCustomLinkerFlags ""
+SFSimEcho on
+SimCtrlC on
+SimIntegrity on
+SimUseLocalCustomCode off
+SimParseCustomCode on
+SimAnalyzeCustomCode off
+SimBuildMode "sf_incremental_build"
+SimGenImportedTypeDefs off
+ModelFunctionsGlobalVisibility on
+CompileTimeRecursionLimit "50"
+EnableRuntimeRecursion on
+MATLABDynamicMemAlloc on
+MATLABDynamicMemAllocThreshold "65536"
+CustomCodeFunctionArrayLayout []
+DefaultCustomCodeFunctionArrayLayout "NotSpecified"
+CustomCodeUndefinedFunction "UseInterfaceOnly"
+}
+
+Simulink.RTWCC {
+BackupClass "Simulink.RTWCC"
+$ObjectID 24
+Version "19.1.1"
+$ClassName "Simulink.RTWCC"
+Description ""
+SystemTargetFile "grt.tlc"
+HardwareBoard "None"
+ShowCustomHardwareApp off
+ShowEmbeddedHardwareApp off
+TLCOptions ""
+GenCodeOnly off
+MakeCommand "make_rtw"
+GenerateMakefile on
+PackageGeneratedCodeAndArtifacts off
+PackageName ""
+TemplateMakefile "grt_default_tmf"
+PostCodeGenCommand ""
+GenerateReport off
+RTWVerbose on
+RetainRTWFile off
+RTWBuildHooks []
+ProfileTLC off
+TLCDebug off
+TLCCoverage off
+TLCAssert off
+RTWUseLocalCustomCode off
+RTWUseSimCustomCode off
+CustomSourceCode ""
+CustomHeaderCode ""
+CustomInclude ""
+CustomSource ""
+CustomLibrary ""
+CustomDefine ""
+CustomBLASCallback ""
+CustomLAPACKCallback ""
+CustomFFTCallback ""
+CustomInitializer ""
+CustomTerminator ""
+Toolchain "Automatically locate an installed toolchain"
+BuildConfiguration "Faster Builds"
+CustomToolchainOptions []
+IncludeHyperlinkInReport off
+LaunchReport off
+PortableWordSizes off
+CreateSILPILBlock "None"
+CodeExecutionProfiling off
+CodeExecutionProfileVariable "executionProfile"
+CodeProfilingSaveOptions "SummaryOnly"
+CodeProfilingInstrumentation off
+SILDebugging off
+TargetLang "C"
+IncludeBusHierarchyInRTWFileBlockHierarchyMap off
+GenerateTraceInfo off
+GenerateTraceReport off
+GenerateTraceReportSl off
+GenerateTraceReportSf off
+GenerateTraceReportEml off
+GenerateWebview off
+GenerateCodeMetricsReport off
+GenerateCodeReplacementReport off
+GenerateMissedCodeReplacementReport off
+RTWCompilerOptimization off
+ObjectivePriorities []
+RTWCustomCompilerOptimizations ""
+CheckMdlBeforeBuild "Off"
+SharedConstantsCachingThreshold "1024"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 16
+Cell "IncludeHyperlinkInReport"
+Cell "GenerateTraceInfo"
+Cell "GenerateTraceReport"
+Cell "GenerateTraceReportSl"
+Cell "GenerateTraceReportSf"
+Cell "GenerateTraceReportEml"
+Cell "PortableWordSizes"
+Cell "GenerateWebview"
+Cell "GenerateCodeMetricsReport"
+Cell "GenerateCodeReplacementReport"
+Cell "GenerateMissedCodeReplacementReport"
+Cell "GenerateErtSFunction"
+Cell "CreateSILPILBlock"
+Cell "CodeExecutionProfiling"
+Cell "CodeProfilingSaveOptions"
+Cell "CodeProfilingInstrumentation"
+}
+
+Array {
+PropName "Components"
+Type "Handle"
+Dimension 2
+Object {
+$ObjectID 25
+Version "19.1.1"
+$ClassName "Simulink.CodeAppCC"
+Description ""
+Components []
+Comment ""
+ForceParamTrailComments off
+GenerateComments on
+CommentStyle "Auto"
+IgnoreCustomStorageClasses on
+IgnoreTestpoints off
+MaxIdLength "31"
+PreserveName off
+PreserveNameWithParent off
+ShowEliminatedStatement off
+OperatorAnnotations off
+SimulinkDataObjDesc off
+SFDataObjDesc off
+MATLABFcnDesc off
+MangleLength "1"
+SharedChecksumLength "8"
+CustomSymbolStrGlobalVar "$R$N$M"
+CustomSymbolStrType "$N$R$M_T"
+CustomSymbolStrField "$N$M"
+CustomSymbolStrFcn "$R$N$M$F"
+CustomSymbolStrModelFcn "$R$N"
+CustomSymbolStrFcnArg "rt$I$N$M"
+CustomSymbolStrBlkIO "rtb_$N$M"
+CustomSymbolStrTmpVar "$N$M"
+CustomSymbolStrMacro "$R$N$M"
+CustomSymbolStrUtil "$N$C"
+CustomSymbolStrEmxType "emxArray_$M$N"
+CustomSymbolStrEmxFcn "emx$M$N"
+CustomUserTokenString ""
+CustomCommentsFcn ""
+DefineNamingRule "None"
+DefineNamingFcn ""
+ParamNamingRule "None"
+ParamNamingFcn ""
+SignalNamingRule "None"
+SignalNamingFcn ""
+InsertBlockDesc off
+InsertPolySpaceComments off
+SimulinkBlockComments on
+BlockCommentType "BlockPathComment"
+StateflowObjectComments on
+MATLABSourceComments off
+EnableCustomComments off
+InternalIdentifierFile ""
+InternalIdentifier "Shortened"
+InlinedPrmAccess "Literals"
+ReqsInCode off
+UseSimReservedNames off
+ReservedNameArray []
+EnumMemberNameClash "error"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 29
+Cell "IgnoreCustomStorageClasses"
+Cell "IgnoreTestpoints"
+Cell "InsertBlockDesc"
+Cell "SFDataObjDesc"
+Cell "SimulinkDataObjDesc"
+Cell "DefineNamingRule"
+Cell "SignalNamingRule"
+Cell "ParamNamingRule"
+Cell "InlinedPrmAccess"
+Cell "CustomSymbolStr"
+Cell "CustomSymbolStrGlobalVar"
+Cell "CustomSymbolStrType"
+Cell "CustomSymbolStrField"
+Cell "CustomSymbolStrFcn"
+Cell "CustomSymbolStrBlkIO"
+Cell "CustomSymbolStrTmpVar"
+Cell "CustomSymbolStrMacro"
+Cell "InsertPolySpaceComments"
+Cell "MATLABFcnDesc"
+Cell "InternalIdentifier"
+Cell "CustomSymbolStrSimulinkFcn"
+Cell "CustomSymbolStrFcnArg"
+Cell "CustomSymbolStrUtil"
+Cell "CustomUserTokenString"
+Cell "ReqsInCode"
+Cell "CustomSymbolStrModelFcn"
+Cell "CustomSymbolStrEmxType"
+Cell "CustomSymbolStrEmxFcn"
+Cell "BlockCommentType"
+}
+}
+
+Object {
+BackupClass "Simulink.TargetCC"
+$ObjectID 26
+Version "19.1.1"
+$ClassName "Simulink.GRTTargetCC"
+Description ""
+Components []
+TargetFcnLib "ansi_tfl_table_tmw.mat"
+TargetLibSuffix ""
+TargetPreCompLibLocation ""
+GenFloatMathFcnCalls "NOT IN USE"
+TargetLangStandard "C89/C90 (ANSI)"
+CodeReplacementLibrary "None"
+UtilityFuncGeneration "Auto"
+MultiwordTypeDef "System defined"
+MultiwordLength "2048"
+DynamicStringBufferSize "256"
+GenerateFullHeader on
+InferredTypesCompatibility off
+ExistingSharedCode ""
+GenerateSampleERTMain off
+GenerateTestInterfaces off
+ModelReferenceCompliant on
+ParMdlRefBuildCompliant on
+CompOptLevelCompliant on
+ConcurrentExecutionCompliant on
+IncludeMdlTerminateFcn on
+GeneratePreprocessorConditionals "Disable all"
+CombineOutputUpdateFcns off
+CombineSignalStateStructs off
+GroupInternalDataByFunction off
+SuppressErrorStatus off
+IncludeFileDelimiter "Auto"
+ERTCustomFileBanners off
+SupportAbsoluteTime on
+LogVarNameModifier "rt_"
+MatFileLogging on
+MultiInstanceERTCode off
+CodeInterfacePackaging "Nonreusable function"
+PurelyIntegerCode off
+SupportNonFinite on
+SupportComplex on
+SupportContinuousTime on
+SupportNonInlinedSFcns on
+RemoveDisableFunc off
+RemoveResetFunc off
+SupportVariableSizeSignals off
+ParenthesesLevel "Nominal"
+CastingMode "Nominal"
+PreserveStateflowLocalDataDimensions off
+MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
+ModelStepFunctionPrototypeControlCompliant off
+CPPClassGenCompliant on
+AutosarCompliant off
+MDXCompliant off
+GRTInterface on
+GenerateAllocFcn off
+UseToolchainInfoCompliant on
+GenerateSharedConstants on
+CoderGroups []
+AccessMethods []
+LookupTableObjectStructAxisOrder "1,2,3,4,..."
+LUTObjectStructOrderExplicitValues "Size,Breakpoints,Table"
+LUTObjectStructOrderEvenSpacing "Size,Breakpoints,Table"
+ArrayLayout "Column-major"
+UnsupportedSFcnMsg "error"
+ERTHeaderFileRootName "$R$E"
+ERTSourceFileRootName "$R$E"
+ERTDataFileRootName "$R_data"
+UseMalloc off
+ExtMode off
+ExtModeStaticAlloc off
+ExtModeTesting off
+ExtModeStaticAllocSize "1000000"
+ExtModeTransport "0"
+ExtModeMexFile "ext_comm"
+ExtModeMexArgs ""
+ExtModeIntrfLevel "Level1"
+RTWCAPISignals off
+RTWCAPIParams off
+RTWCAPIStates off
+RTWCAPIRootIO off
+GenerateASAP2 off
+MultiInstanceErrorCode "Error"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 18
+Cell "IncludeMdlTerminateFcn"
+Cell "GenerateAllocFcn"
+Cell "SuppressErrorStatus"
+Cell "ERTCustomFileBanners"
+Cell "GenerateSampleERTMain"
+Cell "GenerateTestInterfaces"
+Cell "ModelStepFunctionPrototypeControlCompliant"
+Cell "CPPClassGenCompliant"
+Cell "SupportNonInlinedSFcns"
+Cell "PurelyIntegerCode"
+Cell "PortableWordSizes"
+Cell "SupportComplex"
+Cell "SupportAbsoluteTime"
+Cell "SupportContinuousTime"
+Cell "RemoveResetFunc"
+Cell "ExistingSharedCode"
+Cell "RemoveDisableFunc"
+Cell "PreserveStateflowLocalDataDimensions"
+}
+}
+}
+}
+
+SlCovCC.ConfigComp {
+$ObjectID 27
+Version "19.1.1"
+$ClassName "SlCovCC.ConfigComp"
+DisabledProps []
+Description "Simulink Coverage Configuration Component"
+Components []
+Name "Simulink Coverage"
+CovEnable off
+CovScope "EntireSystem"
+CovIncludeTopModel on
+RecordCoverage off
+CovPath "/"
+CovSaveName "covdata"
+CovCompData ""
+CovMetricSettings "dw"
+CovFilter ""
+CovHTMLOptions ""
+CovNameIncrementing off
+CovHtmlReporting on
+CovForceBlockReductionOff on
+CovEnableCumulative on
+CovSaveCumulativeToWorkspaceVar on
+CovSaveSingleToWorkspaceVar on
+CovCumulativeVarName "covCumulativeData"
+CovCumulativeReport off
+CovSaveOutputData on
+CovOutputDir "slcov_output/$ModelName$"
+CovDataFileName "$ModelName$_cvdata"
+CovShowResultsExplorer on
+CovReportOnPause on
+CovModelRefEnable off
+CovModelRefExcluded ""
+CovExternalEMLEnable off
+CovSFcnEnable off
+CovBoundaryAbsTol "1e-05"
+CovBoundaryRelTol "0.01"
+CovUseTimeInterval off
+CovStartTime "0"
+CovStopTime "0"
+CovMcdcMode "Masking"
+}
+
+hdlcoderui.hdlcc {
+$ObjectID 28
+Version "19.1.1"
+$ClassName "hdlcoderui.hdlcc"
+DisabledProps []
+Description "HDL Coder custom configuration component"
+Components []
+Name "HDL Coder"
+HDLCActiveTab "0"
+Array {
+PropName "HDLConfigFile"
+Type "Cell"
+Dimension 1
+Cell " "
+}
+}
+}
+}
+}
+
+System {
+PaperOrientation "landscape"
+PaperPositionMode "auto"
+PaperType "usletter"
+PaperUnits "inches"
+TiledPaperMargins [0.500000, 0.500000, 0.500000, 0.500000]
+TiledPageScale "1"
+ShowPageBoundaries off
+ModelBrowserVisibility off
+ModelBrowserWidth "200"
+ScreenColor "white"
+ZoomFactor "100"
+PortBlocksUseCompactNotation off
+Open off
+}
+
+BlockDefaults {
+ForegroundColor "black"
+BackgroundColor "white"
+DropShadow off
+NamePlacement "normal"
+FontName "Arial"
+FontSize "10"
+FontWeight "normal"
+FontAngle "normal"
+ShowName on
+HideAutomaticName on
+BlockRotation "0"
+BlockMirror off
+}
+
+AnnotationDefaults {
+HorizontalAlignment "center"
+VerticalAlignment "middle"
+ForegroundColor "black"
+BackgroundColor "white"
+DropShadow off
+FontName "Arial"
+FontSize "10"
+FontWeight "normal"
+FontAngle "normal"
+MarkupType "model"
+UseDisplayTextAsClickCallback off
+AnnotationType "note_annotation"
+FixedHeight off
+FixedWidth off
+Interpreter off
+}
+
+LineDefaults {
+FontName "Arial"
+FontSize "10"
+FontWeight "normal"
+FontAngle "normal"
+}
+
+MaskDefaults {
+SelfModifiable "off"
+IconFrame "on"
+IconOpaque "opaque"
+RunInitForIconRedraw "analyze"
+IconRotate "none"
+PortRotate "default"
+IconUnits "autoscale"
+Display ""
+
+}
+
+MaskParameterDefaults {
+Evaluate "on"
+Tunable "on"
+NeverSave "off"
+Internal "off"
+ReadOnly "off"
+Enabled "on"
+Visible "on"
+ToolTip "on"
+Value ""
+}
+
+BlockParameterDefaults {
+Block {
+BlockType "Demux"
+Outputs "4"
+DisplayOption "none"
+BusSelectionMode off
+}
+
+Block {
+BlockType "Gain"
+Gain "1"
+Multiplication "Element-wise(K.*u)"
+ParamMin []
+ParamMax []
+ParamDataTypeStr "Inherit: Same as input"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Same as input"
+LockScale off
+RndMeth "Floor"
+SaturateOnIntegerOverflow on
+SampleTime "-1"
+}
+
+Block {
+BlockType "Goto"
+GotoTag "A"
+IconDisplay "Tag"
+TagVisibility "local"
+}
+
+Block {
+BlockType "Inport"
+Port "1"
+OutputFunctionCall off
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: auto"
+LockScale off
+BusOutputAsStruct off
+Unit "inherit"
+PortDimensions "-1"
+VarSizeSig "Inherit"
+SampleTime "-1"
+SignalType "auto"
+SamplingMode "auto"
+LatchByDelayingOutsideSignal off
+LatchInputForFeedbackSignals off
+Interpolate on
+}
+
+Block {
+BlockType "Integrator"
+ExternalReset "none"
+InitialConditionSource "internal"
+InitialCondition "0"
+LimitOutput off
+UpperSaturationLimit "inf"
+LowerSaturationLimit "-inf"
+WrapState off
+WrappedStateUpperValue "pi"
+WrappedStateLowerValue "-pi"
+ShowSaturationPort off
+ShowStatePort off
+AbsoluteTolerance "auto"
+IgnoreLimit off
+ZeroCross on
+ContinuousStateAttributes "''"
+}
+
+Block {
+BlockType "Mux"
+Inputs "4"
+DisplayOption "none"
+UseBusObject off
+BusObject "BusObject"
+NonVirtualBus off
+}
+
+Block {
+BlockType "Outport"
+Port "1"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: auto"
+LockScale off
+BusOutputAsStruct off
+Unit "inherit"
+PortDimensions "-1"
+VarSizeSig "Inherit"
+SampleTime "-1"
+SignalType "auto"
+SamplingMode "auto"
+EnsureOutportIsVirtual off
+SourceOfInitialOutputValue "Dialog"
+OutputWhenDisabled "held"
+InitialOutput []
+MustResolveToSignalObject off
+OutputWhenUnConnected off
+OutputWhenUnconnectedValue "0"
+VectorParamsAs1DForOutWhenUnconnected on
+}
+
+Block {
+BlockType "PMIOPort"
+Port "1"
+}
+
+Block {
+BlockType "SubSystem"
+ShowPortLabels "FromPortIcon"
+Permissions "ReadWrite"
+PermitHierarchicalResolution "All"
+TreatAsAtomicUnit off
+MinAlgLoopOccurrences off
+PropExecContextOutsideSubsystem off
+ScheduleAs "Sample time"
+SystemSampleTime "-1"
+RTWSystemCode "Auto"
+RTWFcnNameOpts "Auto"
+RTWFileNameOpts "Auto"
+FunctionInterfaceSpec "void_void"
+FunctionWithSeparateData off
+RTWMemSecFuncInitTerm "Inherit from model"
+RTWMemSecFuncExecute "Inherit from model"
+RTWMemSecDataConstants "Inherit from model"
+RTWMemSecDataInternal "Inherit from model"
+RTWMemSecDataParameters "Inherit from model"
+SimViewingDevice off
+DataTypeOverride "UseLocalSettings"
+DataTypeOverrideAppliesTo "AllNumericTypes"
+MinMaxOverflowLogging "UseLocalSettings"
+Opaque off
+MaskHideContents off
+SFBlockType "NONE"
+VariantControlMode "Expression"
+Variant off
+GeneratePreprocessorConditionals off
+AllowZeroVariantControls off
+PropagateVariantConditions off
+TreatAsGroupedWhenPropagatingVariantConditions on
+ContentPreviewEnabled off
+IsWebBlock off
+IsObserver off
+Latency "0"
+AutoFrameSizeCalculation off
+IsWebBlockPanel off
+}
+
+Block {
+BlockType "Sum"
+IconShape "rectangular"
+Inputs "++"
+CollapseMode "All dimensions"
+CollapseDim "1"
+InputSameDT on
+AccumDataTypeStr "Inherit: Inherit via internal rule"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Same as first input"
+LockScale off
+RndMeth "Floor"
+SaturateOnIntegerOverflow on
+SampleTime "-1"
+}
+
+Block {
+BlockType "Terminator"
+}
+
+Block {
+BlockType "TwoWayConnection"
+}
+}
+}
+

@@ -1,0 +1,9444 @@
+Model {
+SavedCharacterEncoding "ISO-8859-1"
+EnableAccessToBaseWorkspace on
+SLXCompressionType "Normal"
+ScopeRefreshTime "0.035000"
+OverrideScopeRefreshTime on
+DisableAllScopes off
+DataTypeOverride "UseLocalSettings"
+DataTypeOverrideAppliesTo "AllNumericTypes"
+MinMaxOverflowLogging "UseLocalSettings"
+MinMaxOverflowArchiveMode "Overwrite"
+FPTRunName "Run 1"
+MaxMDLFileLineLength "120"
+LastSavedArchitecture "maci64"
+HideAutomaticNames on
+UpdateHistory "UpdateHistoryNever"
+ModifiedByFormat "%<Auto>"
+ModifiedDateFormat "%<Auto>"
+RTWModifiedTimeStamp "348670075"
+ModelVersionFormat "1.%<AutoIncrement:433>"
+
+SampleTimeColors on
+SampleTimeAnnotations on
+LibraryLinkDisplay "disabled"
+WideLines on
+ShowLineDimensions on
+ShowPortDataTypes off
+ShowAllPropagatedSignalLabels off
+PortDataTypeDisplayFormat "AliasTypeOnly"
+ShowEditTimeErrors on
+ShowEditTimeWarnings on
+ShowEditTimeAdvisorChecks off
+ShowPortUnits off
+ShowDesignRanges off
+ShowLoopsOnError on
+IgnoreBidirectionalLines off
+ShowStorageClass off
+ShowTestPointIcons on
+ShowSignalResolutionIcons on
+ShowViewerIcons on
+SortedOrder off
+VariantCondition off
+ShowSubsystemDomainSpec off
+ExecutionContextIcon off
+ShowLinearizationAnnotations on
+ShowVisualizeInsertedRTB on
+ShowMarkup on
+BlockNameDataTip off
+BlockParametersDataTip off
+BlockDescriptionStringDataTip off
+BlockVariantConditionDataTip off
+ToolBar on
+StatusBar on
+BrowserShowLibraryLinks off
+FunctionConnectors off
+BrowserLookUnderMasks off
+MultiThreadCoSim on
+
+SimulationMode "normal"
+SILPILModeSetting "automated"
+SILPILSystemUnderTest "topmodel"
+SILPILSimulationModeTopModel "normal"
+SILPILSimulationModeModelRef "normal"
+SimTabSimulationMode "normal"
+CodeVerificationMode "software-in-the-loop (sil)"
+PauseTimes "5"
+NumberOfSteps "1"
+SnapshotBufferSize "10"
+SnapshotInterval "10"
+NumberOfLastSnapshots "0"
+EnablePacing off
+PacingRate "1"
+LinearizationMsg "none"
+Profile off
+ParamWorkspaceSource "MATLABWorkspace"
+AccelSystemTargetFile "accel.tlc"
+AccelTemplateMakefile "accel_default_tmf"
+AccelMakeCommand "make_rtw"
+TryForcingSFcnDF off
+Object {
+$PropName "DataLoggingOverride"
+$ObjectID 2
+$ClassName "Simulink.SimulationData.ModelLoggingInfo"
+model_ "$bdroot"
+signals_ []
+overrideMode_ [0.0]
+Array {
+PropName "logAsSpecifiedByModels_"
+Type "Cell"
+Dimension 1
+Cell "$bdroot"
+}
+
+Array {
+PropName "logAsSpecifiedByModelsSSIDs_"
+Type "Cell"
+Dimension 1
+Cell []
+}
+}
+
+ExtModeBatchMode off
+ExtModeEnableFloating on
+ExtModeTrigType "manual"
+ExtModeTrigMode "normal"
+ExtModeTrigPort "1"
+ExtModeTrigElement "any"
+ExtModeTrigDuration "1000"
+ExtModeTrigDurationFloating "auto"
+ExtModeTrigHoldOff "0"
+ExtModeTrigDelay "0"
+ExtModeTrigDirection "rising"
+ExtModeTrigLevel "0"
+ExtModeArchiveMode off
+ExtModeAutoIncOneShot off
+ExtModeIncDirWhenArm off
+ExtModeAddSuffixToVar off
+ExtModeWriteAllDataToWs off
+ExtModeArmWhenConnect on
+ExtModeSkipDownloadWhenConnect off
+ExtModeLogAll on
+ExtModeAutoUpdateStatusClock on
+
+ShowModelReferenceBlockVersion off
+ShowModelReferenceBlockIO off
+OrderedModelArguments on
+
+ExplicitPartitioning off
+Object {
+$PropName "DataTransfer"
+$ObjectID 3
+$ClassName "Simulink.GlobalDataTransfer"
+DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
+DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
+DefaultTransitionBetweenContTasks "Ensure deterministic transfer (minimum delay)"
+DefaultExtrapolationMethodBetweenContTasks "None"
+}
+
+System {
+Location [17, 84, 1882, 1077]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "158"
+ReportName "simulink-default.rpt"
+SIDHighWatermark "717"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Reference"
+Name "Real-Time Pacer"
+SID "169"
+Ports []
+Position [85, 424, 187, 481]
+ZOrder "75"
+ForegroundColor "red"
+BackgroundColor "yellow"
+DropShadow on
+ShowName off
+LibraryVersion "1.10"
+SourceBlock "realtime_pacer_lib/Real-Time Pacer"
+SourceType "RealTime_Pacer"
+simTimePerRealTime "0.125"
+
+simTimePerRealTime "0.125"
+
+simTimePerRealTime "0.125"
+
+simTimePerRealTime "0.125"
+
+}
+
+Block {
+BlockType "SubSystem"
+Name "VirtualReality"
+SID "432"
+Ports [1]
+Position [1040, 520, 1210, 590]
+ZOrder "269"
+RequestExecContextInheritance off
+ContentPreviewEnabled on
+System {
+Location [-1928, -8, 8, 1208]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "297"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "rollAngle"
+SID "610"
+Position [295, 208, 325, 222]
+ZOrder "268"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Constant"
+Name "CenterOfRotation"
+SID "288"
+Position [125, 32, 465, 68]
+ZOrder "197"
+Value "[-1.54/2 sqrt(Chassis.TubeRadius^2-(1.54/2)^2) 0]' "
+SampleTime "-1"
+}
+
+Block {
+BlockType "Constant"
+Name "Constant"
+SID "289"
+Position [245, 125, 345, 155]
+ZOrder "196"
+Value "[0 0 1]'"
+SampleTime "-1"
+}
+
+Block {
+BlockType "Gain"
+Name "Gain6"
+SID "428"
+Position [380, 202, 420, 228]
+ZOrder "266"
+Gain "-1"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Reference"
+Name "VR Sink"
+SID "290"
+Ports [2]
+Position [545, 80, 720, 215]
+ZOrder "194"
+LibraryVersion "1.93"
+SourceBlock "vrlib/VR Sink"
+SourceType "Virtual Reality Sink"
+SourceProductName "Simulink"
+SourceProductBaseCode "SL"
+InstantiateOnLoad on
+MultiThreadCoSim "auto"
+SampleTime "-1"
+ViewEnable on
+RemoteChange off
+RemoteView off
+FieldsWritten "HyperPod.center.3.1.1.double#HyperPod.rotation.4.1.1.double"
+WorldFileName "hyperLoopPod3DTubeIso.wrl"
+WorldDescription "Simulink 3D Animation : Front View of Pod"
+AutoView off
+VideoDimensions []
+AllowVariableSize off
+
+MultiThreadCoSim "auto"
+SampleTime "-1"
+ViewEnable on
+RemoteChange off
+RemoteView off
+FieldsWritten "HyperPod.center.3.1.1.double#HyperPod.rotation.4.1.1.double"
+WorldFileName "hyperLoopPod3DTubeIso.wrl"
+WorldDescription "Simulink 3D Animation : Front View of Pod"
+AutoView off
+VideoDimensions []
+AllowVariableSize off
+
+MultiThreadCoSim "auto"
+SampleTime "-1"
+ViewEnable on
+RemoteChange off
+RemoteView off
+FieldsWritten "HyperPod.center.3.1.1.double#HyperPod.rotation.4.1.1.double"
+WorldFileName "hyperLoopPod3DTubeIso.wrl"
+WorldDescription "Simulink 3D Animation : Front View of Pod"
+AutoView off
+VideoDimensions []
+AllowVariableSize off
+
+MultiThreadCoSim "auto"
+SampleTime "-1"
+ViewEnable on
+RemoteChange off
+RemoteView off
+FieldsWritten "HyperPod.center.3.1.1.double#HyperPod.rotation.4.1.1.double"
+WorldFileName "hyperLoopPod3DTubeIso.wrl"
+WorldDescription "Simulink 3D Animation : Front View of Pod"
+AutoView off
+VideoDimensions []
+AllowVariableSize off
+
+}
+
+Block {
+BlockType "Concatenate"
+Name "Vector\nConcatenate1"
+SID "291"
+Ports [2, 1]
+Position [485, 103, 495, 252]
+ZOrder "195"
+}
+
+Line {
+ZOrder "914"
+Src "428#out:1"
+Dst "291#in:2"
+}
+
+Line {
+ZOrder "644"
+Src "289#out:1"
+Dst "291#in:1"
+}
+
+Line {
+ZOrder "643"
+Src "288#out:1"
+Points [48, 0; 0, 65]
+Dst "290#in:1"
+}
+
+Line {
+ZOrder "642"
+Src "291#out:1"
+Dst "290#in:2"
+}
+
+Line {
+ZOrder "933"
+Src "610#out:1"
+Dst "428#in:1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "heightData"
+SID "429"
+Ports [1, 3]
+Position [260, 312, 385, 498]
+ZOrder "267"
+RequestExecContextInheritance off
+ContentPreviewEnabled on
+System {
+Location [42, 81, 1907, 1074]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "205"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "simResults"
+SID "687"
+Position [55, 78, 85, 92]
+ZOrder "296"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Sum"
+Name "Add1"
+SID "576"
+Ports [2, 1]
+Position [365, 197, 395, 268]
+ZOrder "268"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "BusCreator"
+Name "Bus\nCreator"
+SID "621"
+Ports [3, 1]
+Position [775, 101, 780, 329]
+ZOrder "294"
+ShowName off
+Inputs "3"
+DisplayOption "bar"
+InheritFromInputs on
+}
+
+Block {
+BlockType "BusSelector"
+Name "Bus\nSelector"
+SID "686"
+Ports [1, 1]
+Position [160, 66, 165, 104]
+ZOrder "295"
+ShowName off
+OutputSignals "dact"
+OutputAsBus off
+Port {
+PortNumber "1"
+Name "<dact>"
+}
+}
+
+Block {
+BlockType "Reference"
+Name "HeightWrtVehicle1"
+SID "358"
+Ports [1, 1]
+Position [650, 125, 690, 155]
+ZOrder "292"
+LibraryVersion "1.453"
+SourceBlock "simulink/Math\nOperations/Slider\nGain"
+SourceType "Slider Gain"
+SourceProductName "Simulink"
+SourceProductBaseCode "SL"
+Port {
+PortNumber "1"
+Name "heightAdjustment"
+}
+
+ContentPreviewEnabled off
+gain "4"
+low "-10"
+high "30"
+
+ContentPreviewEnabled off
+gain "4"
+low "-10"
+high "30"
+
+ContentPreviewEnabled off
+gain "4"
+low "-10"
+high "30"
+
+ContentPreviewEnabled off
+gain "4"
+low "-10"
+high "30"
+
+}
+
+Block {
+BlockType "Constant"
+Name "One1"
+SID "357"
+Position [550, 129, 620, 151]
+ZOrder "291"
+VectorParams1D off
+}
+
+Block {
+BlockType "Constant"
+Name "dactOffset"
+SID "577"
+Position [270, 235, 330, 265]
+ZOrder "269"
+Value "dactOffset"
+}
+
+Block {
+BlockType "Lookup_n-D"
+Name "height_vs_dist"
+SID "305"
+Ports [1, 1]
+Position [460, 258, 525, 322]
+ZOrder "210"
+NumberOfTableDimensions "1"
+BreakpointsForDimension1 "z_dist"
+BeginIndexSearchUsingPreviousIndexResult on
+Table "z_height"
+ExtrapMethod "Clip"
+InternalRulePriority "Speed"
+RndMeth "Simplest"
+Port {
+PortNumber "1"
+Name "height"
+}
+}
+
+Block {
+BlockType "Lookup_n-D"
+Name "height_vs_distProj"
+SID "406"
+Ports [1, 1]
+Position [460, 163, 525, 227]
+ZOrder "246"
+NumberOfTableDimensions "1"
+BreakpointsForDimension1 "z_dist-200"
+BeginIndexSearchUsingPreviousIndexResult on
+Table "z_height"
+ExtrapMethod "Clip"
+UseLastTableValue on
+InternalRulePriority "Speed"
+RndMeth "Simplest"
+Port {
+PortNumber "1"
+Name "heightProjected"
+}
+}
+
+Block {
+BlockType "Lookup_n-D"
+Name "tubeElev_vs_dist"
+SID "301"
+Ports [1, 1]
+Position [460, 358, 525, 422]
+ZOrder "206"
+NumberOfTableDimensions "1"
+BreakpointsForDimension1 "z_dist"
+BeginIndexSearchUsingPreviousIndexResult on
+Table "z_elevTube"
+InternalRulePriority "Speed"
+RndMeth "Simplest"
+}
+
+Block {
+BlockType "Lookup_n-D"
+Name "vertAccel_vs_dist"
+SID "425"
+Ports [1, 1]
+Position [460, 53, 525, 117]
+ZOrder "263"
+NumberOfTableDimensions "1"
+BreakpointsForDimension1 "z_dist"
+BeginIndexSearchUsingPreviousIndexResult on
+Table "z_accel"
+ExtrapMethod "Clip"
+UseLastTableValue on
+InternalRulePriority "Speed"
+RndMeth "Simplest"
+}
+
+Block {
+BlockType "Outport"
+Name "elevTube"
+SID "430"
+Position [810, 383, 840, 397]
+ZOrder "265"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "heightBus"
+SID "617"
+Position [815, 208, 845, 222]
+ZOrder "293"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "vertAccel"
+SID "614"
+Position [810, 78, 840, 92]
+ZOrder "272"
+Port "3"
+IconDisplay "Port number"
+}
+
+Line {
+Name "heightProjected"
+ZOrder "830"
+Labels [1, 1]
+Src "406#out:1"
+Points [120, 0; 0, 20]
+Dst "621#in:2"
+}
+
+Line {
+ZOrder "999"
+Src "425#out:1"
+Dst "614#in:1"
+}
+
+Line {
+Name "height"
+ZOrder "684"
+Labels [1, 1]
+Src "305#out:1"
+Dst "621#in:3"
+}
+
+Line {
+ZOrder "911"
+Src "301#out:1"
+Dst "430#in:1"
+}
+
+Line {
+Name "<dact>"
+ZOrder "1026"
+Labels [0, 0]
+Src "686#out:1"
+Points [63, 0]
+Branch {
+ZOrder "1012"
+Dst "425#in:1"
+}
+
+Branch {
+ZOrder "980"
+Points [0, 130]
+Branch {
+ZOrder "1010"
+Points [0, 175]
+Dst "301#in:1"
+}
+
+Branch {
+ZOrder "986"
+Dst "576#in:1"
+}
+}
+}
+
+Line {
+ZOrder "960"
+Src "577#out:1"
+Dst "576#in:2"
+}
+
+Line {
+ZOrder "966"
+Src "576#out:1"
+Points [27, 0]
+Branch {
+ZOrder "968"
+Points [0, -40]
+Dst "406#in:1"
+}
+
+Branch {
+ZOrder "967"
+Points [1, 0; 0, 55]
+Dst "305#in:1"
+}
+}
+
+Line {
+ZOrder "1000"
+Src "357#out:1"
+Dst "358#in:1"
+}
+
+Line {
+Name "heightAdjustment"
+ZOrder "1003"
+Labels [0, 0]
+Src "358#out:1"
+Dst "621#in:1"
+}
+
+Line {
+ZOrder "1008"
+Src "621#out:1"
+Dst "617#in:1"
+}
+
+Line {
+ZOrder "1025"
+Src "687#out:1"
+Dst "686#in:1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "pillarTransition"
+SID "445"
+Ports [2, 2]
+Position [445, 376, 640, 494]
+ZOrder "279"
+RequestExecContextInheritance off
+ContentPreviewEnabled on
+System {
+Location [42, 81, 1907, 1074]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "170"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "heightBus"
+SID "618"
+Position [600, 388, 630, 402]
+ZOrder "301"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "simResults"
+SID "688"
+Position [20, 73, 50, 87]
+ZOrder "305"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Saturate"
+Name "AvoidZero"
+SID "471"
+Ports [1, 1]
+Position [460, 20, 490, 50]
+ZOrder "297"
+InputPortMap "u0"
+UpperLimit "inf"
+LowerLimit "1"
+}
+
+Block {
+BlockType "Bias"
+Name "Bias"
+SID "465"
+Position [440, 130, 525, 160]
+ZOrder "292"
+Bias "numPillars-2"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "BusSelector"
+Name "Bus\nSelector"
+SID "622"
+Ports [1, 1]
+Position [775, 376, 780, 414]
+ZOrder "303"
+ShowName off
+OutputSignals "heightAdjustment"
+OutputAsBus off
+Port {
+PortNumber "1"
+Name "<heightAdjustment>"
+}
+}
+
+Block {
+BlockType "BusSelector"
+Name "Bus\nSelector1"
+SID "689"
+Ports [1, 1]
+Position [80, 61, 85, 99]
+ZOrder "304"
+ShowName off
+OutputSignals "dact"
+OutputAsBus off
+Port {
+PortNumber "1"
+Name "<dact>"
+}
+}
+
+Block {
+BlockType "RelationalOperator"
+Name "Change"
+SID "447"
+Ports [2, 1]
+Position [760, 154, 790, 221]
+ZOrder "280"
+Operator "~="
+InputSameDT off
+OutDataTypeStr "boolean"
+}
+
+Block {
+BlockType "Constant"
+Name "Constant"
+SID "457"
+Position [330, 372, 410, 398]
+ZOrder "284"
+Value "numPillars-1"
+}
+
+Block {
+BlockType "Constant"
+Name "Constant1"
+SID "460"
+Position [615, 102, 695, 128]
+ZOrder "287"
+Value "2"
+}
+
+Block {
+BlockType "Gain"
+Name "Increments"
+SID "439"
+Position [145, 65, 300, 95]
+ZOrder "273"
+Gain "1/pillarSpacing"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "UnitDelay"
+Name "Last"
+SID "446"
+Position [635, 195, 675, 215]
+ZOrder "279"
+SampleTime "-1"
+HasFrameUpgradeWarning on
+}
+
+Block {
+BlockType "UnitDelay"
+Name "Last1"
+SID "464"
+Position [655, 355, 695, 375]
+ZOrder "291"
+InitialCondition "1"
+SampleTime "-1"
+HasFrameUpgradeWarning on
+}
+
+Block {
+BlockType "Logic"
+Name "Logical\nOperator"
+SID "458"
+Ports [2, 1]
+Position [855, 56, 890, 234]
+ZOrder "285"
+AllPortsSameDT off
+OutDataTypeStr "boolean"
+}
+
+Block {
+BlockType "RelationalOperator"
+Name "NotAtStart"
+SID "459"
+Ports [2, 1]
+Position [760, 64, 790, 131]
+ZOrder "286"
+Operator ">"
+InputSameDT off
+OutDataTypeStr "boolean"
+}
+
+Block {
+BlockType "Rounding"
+Name "RoundUp"
+SID "440"
+Position [340, 65, 370, 95]
+ZOrder "274"
+Operator "ceil"
+}
+
+Block {
+BlockType "Math"
+Name "mod"
+SID "442"
+Ports [2, 1]
+Position [550, 119, 585, 221]
+ZOrder "276"
+Operator "mod"
+}
+
+Block {
+BlockType "SubSystem"
+Name "movePillar"
+SID "448"
+Ports [3, 0, 1]
+Position [890, 320, 1050, 410]
+ZOrder "281"
+TreatAsAtomicUnit on
+RequestExecContextInheritance off
+System {
+Location [42, 81, 1907, 1074]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "386"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "indexObjects"
+SID "449"
+Position [110, 103, 140, 117]
+ZOrder "-1"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "indexOverall"
+SID "454"
+Position [110, 148, 140, 162]
+ZOrder "253"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "heightAdj"
+SID "488"
+Position [110, 193, 140, 207]
+ZOrder "256"
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "EnablePort"
+Name "Enable"
+SID "450"
+Ports []
+Position [235, 20, 255, 40]
+ZOrder "-2"
+StatesWhenEnabling "reset"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux"
+SID "455"
+Ports [3, 1]
+Position [210, 85, 220, 225]
+ZOrder "254"
+ShowName off
+Inputs "3"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "MATLABFcn"
+Name "updatePillar"
+SID "452"
+Ports [1]
+Position [335, 140, 405, 170]
+ZOrder "252"
+MATLABFcn "updatePillars"
+OutputDimensions "0"
+}
+
+Line {
+ZOrder "5"
+Src "449#out:1"
+Dst "455#in:1"
+}
+
+Line {
+ZOrder "7"
+Src "454#out:1"
+Dst "455#in:2"
+}
+
+Line {
+ZOrder "8"
+Src "455#out:1"
+Dst "452#in:1"
+}
+
+Line {
+ZOrder "10"
+Src "488#out:1"
+Dst "455#in:3"
+}
+}
+}
+
+Block {
+BlockType "Constant"
+Name "numPillars"
+SID "443"
+Position [450, 180, 520, 210]
+ZOrder "277"
+Value "numPillars"
+}
+
+Block {
+BlockType "Sum"
+Name "overall"
+SID "456"
+Ports [2, 1]
+Position [455, 324, 485, 406]
+ZOrder "283"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Outport"
+Name "heightBus_"
+SID "619"
+Position [895, 443, 925, 457]
+ZOrder "302"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "crntPillarIndex"
+SID "606"
+Position [605, 28, 635, 42]
+ZOrder "300"
+Port "2"
+IconDisplay "Port number"
+}
+
+Line {
+Name "<dact>"
+ZOrder "1139"
+Labels [0, 0]
+Src "689#out:1"
+Dst "439#in:1"
+}
+
+Line {
+ZOrder "963"
+Src "439#out:1"
+Dst "440#in:1"
+}
+
+Line {
+ZOrder "967"
+Src "442#out:1"
+Points [17, 0]
+Branch {
+ZOrder "974"
+Dst "447#in:1"
+}
+
+Branch {
+ZOrder "971"
+Points [0, 35]
+Dst "446#in:1"
+}
+}
+
+Line {
+ZOrder "965"
+Src "443#out:1"
+Dst "442#in:2"
+}
+
+Line {
+ZOrder "975"
+Src "446#out:1"
+Points [20, 0]
+Branch {
+ZOrder "1004"
+Points [0, 130]
+Dst "448#in:1"
+}
+
+Branch {
+ZOrder "1003"
+Dst "447#in:2"
+}
+}
+
+Line {
+ZOrder "1011"
+Src "456#out:1"
+Dst "464#in:1"
+}
+
+Line {
+ZOrder "1012"
+Src "457#out:1"
+Dst "456#in:2"
+}
+
+Line {
+ZOrder "1017"
+Src "447#out:1"
+Dst "458#in:2"
+}
+
+Line {
+ZOrder "1018"
+Src "459#out:1"
+Dst "458#in:1"
+}
+
+Line {
+ZOrder "1019"
+Src "460#out:1"
+Dst "459#in:2"
+}
+
+Line {
+ZOrder "1022"
+Src "458#out:1"
+Points [75, 0]
+Dst "448#enable"
+}
+
+Line {
+ZOrder "1052"
+Src "465#out:1"
+Dst "442#in:1"
+}
+
+Line {
+ZOrder "966"
+Src "440#out:1"
+Points [41, 0]
+Branch {
+ZOrder "1090"
+Points [0, -45]
+Dst "471#in:1"
+}
+
+Branch {
+ZOrder "1074"
+Points [0, 65]
+Branch {
+ZOrder "1045"
+Points [0, 200]
+Dst "456#in:1"
+}
+
+Branch {
+ZOrder "1049"
+Dst "465#in:1"
+}
+}
+
+Branch {
+ZOrder "1060"
+Dst "459#in:1"
+}
+}
+
+Line {
+ZOrder "1044"
+Src "464#out:1"
+Dst "448#in:2"
+}
+
+Line {
+ZOrder "1111"
+Src "471#out:1"
+Dst "606#in:1"
+}
+
+Line {
+ZOrder "1112"
+Src "618#out:1"
+Points [66, 0]
+Branch {
+ZOrder "1123"
+Dst "622#in:1"
+}
+
+Branch {
+ZOrder "1119"
+Points [0, 55]
+Dst "619#in:1"
+}
+}
+
+Line {
+Name "<heightAdjustment>"
+ZOrder "1122"
+Labels [0, 0]
+Src "622#out:1"
+Dst "448#in:3"
+}
+
+Line {
+ZOrder "1138"
+Src "688#out:1"
+Dst "689#in:1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "simulationResults"
+SID "653"
+Ports [0, 1]
+Position [80, 237, 200, 333]
+ZOrder "281"
+RequestExecContextInheritance off
+ContentPreviewEnabled on
+System {
+Location [17, 84, 1882, 1077]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "154"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "BusCreator"
+Name "Bus\nCreator"
+SID "684"
+Ports [8, 1]
+Position [935, 137, 940, 648]
+ZOrder "312"
+ShowName off
+Inputs "8"
+DisplayOption "bar"
+InheritFromInputs on
+Port {
+PortNumber "1"
+Name "simResults"
+}
+}
+
+Block {
+BlockType "Gain"
+Name "Gain"
+SID "660"
+Position [790, 345, 820, 375]
+ZOrder "182"
+Gain "-1"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+Port {
+PortNumber "1"
+Name "heading_deg"
+}
+}
+
+Block {
+BlockType "RateLimiter"
+Name "Rate Limiter"
+SID "664"
+Position [715, 345, 745, 375]
+ZOrder "241"
+RisingSlewLimit "5"
+FallingSlewLimit "-5"
+SampleTimeMode "inherited"
+InitialCondition "getLOatTime(logsout, 'heading_deg', startTime)"
+}
+
+Block {
+BlockType "FromWorkspace"
+Name "aHpassenger"
+SID "514"
+Position [480, 543, 675, 567]
+ZOrder "309"
+VariableName "logsout.getElement('aHpassenger')"
+ZeroCross on
+Port {
+PortNumber "1"
+Name "aHpassenger"
+}
+}
+
+Block {
+BlockType "FromWorkspace"
+Name "aVpassenger"
+SID "515"
+Position [480, 608, 675, 632]
+ZOrder "310"
+VariableName "logsout.getElement('aVpassenger')"
+ZeroCross on
+Port {
+PortNumber "1"
+Name "aVpassenger"
+}
+}
+
+Block {
+BlockType "FromWorkspace"
+Name "dact"
+SID "300"
+Position [495, 413, 670, 437]
+ZOrder "308"
+VariableName "logsout.getElement('dact')"
+ZeroCross on
+Port {
+PortNumber "1"
+Name "dact"
+}
+}
+
+Block {
+BlockType "FromWorkspace"
+Name "heading"
+SID "667"
+Position [485, 348, 660, 372]
+ZOrder "169"
+VariableName "logsout.getElement('heading_deg')"
+ZeroCross on
+}
+
+Block {
+BlockType "FromWorkspace"
+Name "latitude"
+SID "668"
+Position [500, 153, 660, 177]
+ZOrder "157"
+VariableName "logsout.getElement('lat')"
+ZeroCross on
+Port {
+PortNumber "1"
+Name "latitude"
+}
+}
+
+Block {
+BlockType "FromWorkspace"
+Name "longitude"
+SID "669"
+Position [495, 218, 655, 242]
+ZOrder "159"
+VariableName "logsout.getElement('lon')"
+ZeroCross on
+Port {
+PortNumber "1"
+Name "longitude"
+}
+}
+
+Block {
+BlockType "FromWorkspace"
+Name "rollAngle"
+SID "670"
+Position [495, 283, 655, 307]
+ZOrder "254"
+VariableName "logsout.getElement('rollAngle')"
+ZeroCross on
+Port {
+PortNumber "1"
+Name "rollAngle"
+}
+}
+
+Block {
+BlockType "FromWorkspace"
+Name "velocityTrans"
+SID "296"
+Position [495, 478, 670, 502]
+ZOrder "311"
+VariableName "logsout.getElement('velocityTrans')"
+ZeroCross on
+Port {
+PortNumber "1"
+Name "velocityTrans"
+}
+}
+
+Block {
+BlockType "Outport"
+Name "simResults"
+SID "685"
+Position [1035, 388, 1065, 402]
+ZOrder "313"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "11"
+Src "664#out:1"
+Dst "660#in:1"
+}
+
+Line {
+ZOrder "13"
+Src "667#out:1"
+Dst "664#in:1"
+}
+
+Line {
+Name "latitude"
+ZOrder "34"
+Labels [1, 1]
+Src "668#out:1"
+Dst "684#in:1"
+}
+
+Line {
+Name "longitude"
+ZOrder "35"
+Labels [1, 1]
+Src "669#out:1"
+Dst "684#in:2"
+}
+
+Line {
+Name "rollAngle"
+ZOrder "36"
+Labels [1, 1]
+Src "670#out:1"
+Dst "684#in:3"
+}
+
+Line {
+Name "heading_deg"
+ZOrder "37"
+Labels [1, 1]
+Src "660#out:1"
+Dst "684#in:4"
+}
+
+Line {
+Name "aHpassenger"
+ZOrder "47"
+Labels [1, 1]
+Src "514#out:1"
+Dst "684#in:7"
+}
+
+Line {
+Name "velocityTrans"
+ZOrder "48"
+Labels [1, 1]
+Src "296#out:1"
+Dst "684#in:6"
+}
+
+Line {
+Name "aVpassenger"
+ZOrder "46"
+Labels [1, 1]
+Src "515#out:1"
+Dst "684#in:8"
+}
+
+Line {
+Name "dact"
+ZOrder "41"
+Labels [1, 1]
+Src "300#out:1"
+Dst "684#in:5"
+}
+
+Line {
+Name "simResults"
+ZOrder "42"
+Labels [1, 1]
+Src "684#out:1"
+Dst "685#in:1"
+}
+
+Annotation {
+SID "702"
+Name "all units are SI unless noted otherwise\n(latitude, longitude and heading_deg in degrees)"
+Position [967, 193, 1183, 215]
+InternalMargins [0, 0, 0, 0]
+HorizontalAlignment "left"
+VerticalAlignment "top"
+ZOrder "-1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "updateDataPlots"
+SID "431"
+Ports [3]
+Position [1040, 617, 1210, 693]
+ZOrder "268"
+RequestExecContextInheritance off
+ContentPreviewEnabled on
+System {
+Location [-1928, -8, 8, 1208]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "196"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "crntPillarIndex"
+SID "605"
+Position [535, 308, 565, 322]
+ZOrder "287"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "simResults"
+SID "690"
+Position [20, 48, 50, 62]
+ZOrder "307"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "vertAccel"
+SID "615"
+Position [150, 178, 180, 192]
+ZOrder "288"
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "BusSelector"
+Name "Bus\nSelector1"
+SID "691"
+Ports [1, 1]
+Position [565, 36, 570, 74]
+ZOrder "306"
+ShowName off
+OutputSignals "dact"
+OutputAsBus off
+Port {
+PortNumber "1"
+Name "<dact>"
+}
+}
+
+Block {
+BlockType "BusSelector"
+Name "Bus\nSelector2"
+SID "692"
+Ports [1, 2]
+Position [265, 388, 270, 432]
+ZOrder "308"
+ShowName off
+OutputSignals "velocityTrans,dact"
+OutputAsBus off
+Port {
+PortNumber "1"
+Name "<velocityTrans>"
+}
+
+Port {
+PortNumber "2"
+Name "<dact>"
+}
+}
+
+Block {
+BlockType "Clock"
+Name "Clock"
+SID "501"
+Position [420, 430, 440, 450]
+ZOrder "274"
+Port {
+PortNumber "1"
+Name "TravelTime_sec"
+}
+}
+
+Block {
+BlockType "Gain"
+Name "Gain1"
+SID "298"
+Position [395, 235, 475, 265]
+ZOrder "268"
+Gain "3.6/1.61"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain3"
+SID "419"
+Position [400, 107, 465, 133]
+ZOrder "257"
+Gain "1/9.81"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain4"
+SID "420"
+Position [400, 172, 470, 198]
+ZOrder "258"
+Gain "1/9.81"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain5"
+SID "421"
+Position [530, 237, 570, 263]
+ZOrder "259"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "SubSystem"
+Name "PassengerAcceleration"
+SID "516"
+Ports [2, 2]
+Position [225, 88, 345, 217]
+ZOrder "285"
+RequestExecContextInheritance off
+System {
+Location [20, 48, 1868, 1126]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "216"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "simResults"
+SID "693"
+Position [40, 213, 70, 227]
+ZOrder "310"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "vertAccel"
+SID "616"
+Position [260, 198, 290, 212]
+ZOrder "309"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "BusSelector"
+Name "Bus\nSelector2"
+SID "694"
+Ports [1, 3]
+Position [110, 40, 115, 400]
+ZOrder "311"
+ShowName off
+OutputSignals "aHpassenger,rollAngle,aVpassenger"
+OutputAsBus off
+Port {
+PortNumber "1"
+Name "<aHpassenger>"
+}
+
+Port {
+PortNumber "2"
+Name "<rollAngle>"
+}
+
+Port {
+PortNumber "3"
+Name "<aVpassenger>"
+}
+}
+
+Block {
+BlockType "Constant"
+Name "Normalize"
+SID "524"
+Position [160, 385, 190, 415]
+ZOrder "292"
+Value "9.81"
+}
+
+Block {
+BlockType "Gain"
+Name "PassengerCentripetal"
+SID "570"
+Position [350, 190, 380, 220]
+ZOrder "305"
+Gain "-1"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Product"
+Name "Product"
+SID "526"
+Ports [2, 1]
+Position [465, 124, 490, 186]
+ZOrder "294"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+RndMeth "Floor"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Product"
+Name "Product1"
+SID "527"
+Ports [2, 1]
+Position [470, 229, 495, 291]
+ZOrder "295"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+RndMeth "Floor"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "compensateForTubeRise"
+SID "528"
+Ports [2, 1]
+Position [580, 87, 600, 143]
+ZOrder "296"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "compensateForTubeRise1"
+SID "529"
+Ports [2, 1]
+Position [585, 327, 605, 383]
+ZOrder "297"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Trigonometry"
+Name "cos"
+SID "523"
+Ports [1, 1]
+Position [350, 260, 380, 290]
+ZOrder "291"
+Operator "cos"
+}
+
+Block {
+BlockType "Sum"
+Name "normalizeGravity"
+SID "525"
+Ports [2, 1]
+Position [260, 312, 285, 428]
+ZOrder "293"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Trigonometry"
+Name "sin"
+SID "522"
+Ports [1, 1]
+Position [350, 125, 380, 155]
+ZOrder "290"
+}
+
+Block {
+BlockType "Outport"
+Name "aHor"
+SID "517"
+Position [685, 108, 715, 122]
+ZOrder "285"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "aVert"
+SID "518"
+Position [685, 348, 715, 362]
+ZOrder "286"
+Port "2"
+IconDisplay "Port number"
+}
+
+Line {
+Name "<aVpassenger>"
+ZOrder "1052"
+Labels [0, 0]
+Src "694#out:3"
+Dst "525#in:1"
+}
+
+Line {
+ZOrder "962"
+Src "524#out:1"
+Dst "525#in:2"
+}
+
+Line {
+Name "<rollAngle>"
+ZOrder "1053"
+Labels [0, 0]
+Src "694#out:2"
+Points [94, 0]
+Branch {
+ZOrder "1055"
+Points [0, 55]
+Dst "523#in:1"
+}
+
+Branch {
+ZOrder "1054"
+Points [0, -80]
+Dst "522#in:1"
+}
+}
+
+Line {
+ZOrder "968"
+Src "522#out:1"
+Dst "526#in:1"
+}
+
+Line {
+ZOrder "969"
+Src "523#out:1"
+Dst "527#in:2"
+}
+
+Line {
+ZOrder "1036"
+Src "616#out:1"
+Dst "570#in:1"
+}
+
+Line {
+ZOrder "973"
+Src "528#out:1"
+Dst "517#in:1"
+}
+
+Line {
+Name "<aHpassenger>"
+ZOrder "1051"
+Labels [0, 0]
+Src "694#out:1"
+Dst "528#in:1"
+}
+
+Line {
+ZOrder "975"
+Src "529#out:1"
+Dst "518#in:1"
+}
+
+Line {
+ZOrder "976"
+Src "525#out:1"
+Dst "529#in:2"
+}
+
+Line {
+ZOrder "977"
+Src "527#out:1"
+Points [22, 0; 0, 80]
+Dst "529#in:1"
+}
+
+Line {
+ZOrder "978"
+Src "526#out:1"
+Points [22, 0; 0, -25]
+Dst "528#in:2"
+}
+
+Line {
+ZOrder "1002"
+Src "570#out:1"
+Points [51, 0]
+Branch {
+ZOrder "972"
+Points [0, 40]
+Dst "527#in:1"
+}
+
+Branch {
+ZOrder "971"
+Points [1, 0; 0, -35]
+Dst "526#in:2"
+}
+}
+
+Line {
+ZOrder "1050"
+Src "693#out:1"
+Dst "694#in:1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "UpdateText"
+SID "508"
+Ports [3]
+Position [580, 390, 665, 450]
+ZOrder "281"
+ForegroundColor "red"
+RequestExecContextInheritance off
+System {
+Location [20, 48, 1868, 1126]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "332"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Speed_mps"
+SID "509"
+Position [105, 142, 135, 158]
+ZOrder "280"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Dist_meters"
+SID "510"
+Position [105, 183, 135, 197]
+ZOrder "281"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Time_sec"
+SID "511"
+Position [105, 223, 135, 237]
+ZOrder "282"
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Sum"
+Name "Add"
+SID "504"
+Ports [2, 1]
+Position [320, 252, 350, 283]
+ZOrder "277"
+Inputs "-+"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+Port {
+PortNumber "1"
+Name "TimeToDest_sec"
+}
+}
+
+Block {
+BlockType "Gain"
+Name "Meters to Miles"
+SID "500"
+Position [215, 174, 350, 206]
+ZOrder "273"
+Gain "0.000621371"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+Port {
+PortNumber "1"
+Name "DistanceTravled_miles"
+}
+}
+
+Block {
+BlockType "Gain"
+Name "Mps2Mph"
+SID "506"
+Position [240, 135, 320, 165]
+ZOrder "279"
+Gain "2.2369"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+Port {
+PortNumber "1"
+Name "Speed_mph"
+}
+}
+
+Block {
+BlockType "Concatenate"
+Name "Vector\nConcatenate1"
+SID "499"
+Ports [4, 1]
+Position [470, 132, 475, 288]
+ZOrder "272"
+NumInputs "4"
+Mode "Multidimensional array"
+ConcatenateDimension "2"
+}
+
+Block {
+BlockType "Constant"
+Name "stopTime"
+SID "503"
+Position [185, 264, 255, 286]
+ZOrder "276"
+Value "stopTime"
+}
+
+Block {
+BlockType "MATLABFcn"
+Name "updateStatus"
+SID "497"
+Ports [1]
+Position [535, 195, 605, 225]
+ZOrder "270"
+MATLABFcn "updateStatus"
+OutputDimensions "0"
+}
+
+Line {
+ZOrder "946"
+Src "510#out:1"
+Dst "500#in:1"
+}
+
+Line {
+ZOrder "927"
+Src "499#out:1"
+Dst "497#in:1"
+}
+
+Line {
+Name "Speed_mph"
+ZOrder "944"
+Labels [1, 1]
+Src "506#out:1"
+Dst "499#in:1"
+}
+
+Line {
+Name "DistanceTravled_miles"
+ZOrder "936"
+Labels [1, 1]
+Src "500#out:1"
+Dst "499#in:2"
+}
+
+Line {
+ZOrder "947"
+Src "511#out:1"
+Points [154, 0]
+Branch {
+ZOrder "935"
+Dst "499#in:3"
+}
+
+Branch {
+ZOrder "933"
+Points [0, 30]
+Dst "504#in:1"
+}
+}
+
+Line {
+ZOrder "931"
+Src "503#out:1"
+Dst "504#in:2"
+}
+
+Line {
+Name "TimeToDest_sec"
+ZOrder "934"
+Labels [1, 1]
+Src "504#out:1"
+Dst "499#in:4"
+}
+
+Line {
+ZOrder "945"
+Src "509#out:1"
+Dst "506#in:1"
+}
+}
+}
+
+Block {
+BlockType "Concatenate"
+Name "Vector\nConcatenate3"
+SID "414"
+Ports [5, 1]
+Position [765, 23, 770, 347]
+ZOrder "252"
+NumInputs "5"
+Mode "Multidimensional array"
+ConcatenateDimension "2"
+}
+
+Block {
+BlockType "MATLABFcn"
+Name "updateAxes"
+SID "413"
+Ports [1]
+Position [845, 170, 915, 200]
+ZOrder "251"
+MATLABFcn "updateAxes"
+OutputDimensions "0"
+}
+
+Line {
+ZOrder "897"
+Src "421#out:1"
+Dst "414#in:4"
+}
+
+Line {
+ZOrder "891"
+Src "414#out:1"
+Dst "413#in:1"
+}
+
+Line {
+ZOrder "895"
+Src "419#out:1"
+Dst "414#in:2"
+}
+
+Line {
+ZOrder "896"
+Src "420#out:1"
+Dst "414#in:3"
+}
+
+Line {
+ZOrder "921"
+Src "298#out:1"
+Dst "421#in:1"
+}
+
+Line {
+Name "<velocityTrans>"
+ZOrder "986"
+Labels [0, 0]
+Src "692#out:1"
+Points [93, 0]
+Branch {
+ZOrder "995"
+Points [0, -150]
+Dst "298#in:1"
+}
+
+Branch {
+ZOrder "993"
+Dst "508#in:1"
+}
+}
+
+Line {
+ZOrder "961"
+Src "605#out:1"
+Dst "414#in:5"
+}
+
+Line {
+Name "<dact>"
+ZOrder "980"
+Labels [0, 0]
+Src "691#out:1"
+Dst "414#in:1"
+}
+
+Line {
+Name "TravelTime_sec"
+ZOrder "947"
+Labels [0, 0]
+Src "501#out:1"
+Dst "508#in:3"
+}
+
+Line {
+ZOrder "956"
+Src "516#out:1"
+Dst "419#in:1"
+}
+
+Line {
+ZOrder "957"
+Src "516#out:2"
+Dst "420#in:1"
+}
+
+Line {
+ZOrder "962"
+Src "615#out:1"
+Dst "516#in:2"
+}
+
+Line {
+ZOrder "979"
+Src "690#out:1"
+Points [69, 0]
+Branch {
+ZOrder "985"
+Points [0, 65]
+Branch {
+ZOrder "998"
+Dst "516#in:1"
+}
+
+Branch {
+ZOrder "997"
+Points [0, 290]
+Dst "692#in:1"
+}
+}
+
+Branch {
+ZOrder "984"
+Dst "691#in:1"
+}
+}
+
+Line {
+Name "<dact>"
+ZOrder "988"
+Labels [0, 0]
+Src "692#out:2"
+Dst "508#in:2"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "updateGoogleEarth"
+SID "433"
+Ports [3]
+Position [1040, 256, 1210, 494]
+ZOrder "270"
+RequestExecContextInheritance off
+ContentPreviewEnabled on
+System {
+Location [17, 84, 1882, 1077]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "250"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "vehLLAHTI"
+SID "633"
+Position [85, 152, 120, 168]
+ZOrder "307"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "heightBus"
+SID "625"
+Position [315, 273, 345, 287]
+ZOrder "303"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "rollAngle"
+SID "683"
+Position [315, 308, 345, 322]
+ZOrder "312"
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "SubSystem"
+Name "CameraLogic"
+SID "703"
+Ports [3, 1]
+Position [395, 225, 545, 335]
+ZOrder "313"
+RequestExecContextInheritance off
+System {
+Location [17, 84, 1882, 1077]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "168"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "vehLLAH"
+SID "704"
+Position [270, 78, 300, 92]
+ZOrder "251"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "heightBus"
+SID "705"
+Position [380, 258, 410, 272]
+ZOrder "304"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "rollAngle"
+SID "706"
+Position [380, 313, 410, 327]
+ZOrder "313"
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "SubSystem"
+Name "AdjustHeight"
+SID "314"
+Ports [2, 1]
+Position [435, 237, 495, 273]
+ZOrder "219"
+RequestExecContextInheritance off
+Port {
+PortNumber "1"
+Name "cameraHeight_wrtVeh"
+}
+
+System {
+Location [42, 81, 1907, 1074]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "188"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "In2"
+SID "316"
+Position [705, 288, 735, 302]
+ZOrder "220"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "heightBus"
+SID "626"
+Position [20, 108, 50, 122]
+ZOrder "304"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Sum"
+Name "Add"
+SID "561"
+Ports [2, 1]
+Position [310, 107, 340, 138]
+ZOrder "241"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Add1"
+SID "563"
+Ports [2, 1]
+Position [310, 52, 340, 83]
+ZOrder "243"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Sum"
+Name "Add4"
+SID "308"
+Ports [2, 1]
+Position [815, 219, 850, 321]
+ZOrder "213"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "BusSelector"
+Name "Bus\nSelector"
+SID "627"
+Ports [1, 3]
+Position [85, 33, 90, 197]
+ZOrder "305"
+ShowName off
+OutputSignals "height,heightProjected,heightAdjustment"
+OutputAsBus off
+Port {
+PortNumber "1"
+Name "<height>"
+}
+
+Port {
+PortNumber "2"
+Name "<heightProjected>"
+}
+
+Port {
+PortNumber "3"
+Name "<heightAdjustment>"
+}
+}
+
+Block {
+BlockType "From"
+Name "From3"
+SID "555"
+Position [410, 226, 495, 254]
+ZOrder "238"
+GotoTag "htOff"
+TagVisibility "global"
+}
+
+Block {
+BlockType "Gain"
+Name "Gain1"
+SID "562"
+Position [205, 155, 255, 185]
+ZOrder "242"
+Gain "0.5"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain2"
+SID "311"
+Position [450, 85, 505, 115]
+ZOrder "216"
+Gain "-1.5"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Goto"
+Name "Goto"
+SID "475"
+Position [830, 105, 930, 135]
+ZOrder "233"
+GotoTag "heightViewAdjust"
+TagVisibility "global"
+}
+
+Block {
+BlockType "Goto"
+Name "Goto1"
+SID "556"
+Position [610, 90, 680, 110]
+ZOrder "239"
+GotoTag "htAdjust"
+TagVisibility "global"
+}
+
+Block {
+BlockType "ManualSwitch"
+Name "Manual Switch3"
+SID "307"
+Position [570, 212, 600, 248]
+ZOrder "212"
+CurrentSetting "0"
+}
+
+Block {
+BlockType "MinMax"
+Name "MinMax"
+SID "474"
+Ports [2, 1]
+Position [375, 44, 405, 151]
+ZOrder "232"
+Inputs "2"
+InputSameDT off
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "RateLimiter"
+Name "Rate Limiter"
+SID "362"
+Position [660, 215, 690, 245]
+ZOrder "225"
+RisingSlewLimit "5"
+FallingSlewLimit "-5"
+SampleTimeMode "inherited"
+}
+
+Block {
+BlockType "Outport"
+Name "Out1"
+SID "317"
+Position [935, 263, 965, 277]
+ZOrder "221"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "698"
+Src "308#out:1"
+Dst "317#in:1"
+}
+
+Line {
+ZOrder "743"
+Src "555#out:1"
+Dst "307#in:2"
+}
+
+Line {
+ZOrder "721"
+Src "474#out:1"
+Dst "311#in:1"
+}
+
+Line {
+ZOrder "689"
+Src "307#out:1"
+Dst "362#in:1"
+}
+
+Line {
+ZOrder "697"
+Src "316#out:1"
+Dst "308#in:2"
+}
+
+Line {
+ZOrder "750"
+Src "561#out:1"
+Dst "474#in:2"
+}
+
+Line {
+ZOrder "742"
+Src "362#out:1"
+Points [61, 0]
+Branch {
+ZOrder "829"
+Points [0, -110]
+Dst "475#in:1"
+}
+
+Branch {
+ZOrder "828"
+Points [1, 0; 0, 15]
+Dst "308#in:1"
+}
+}
+
+Line {
+Name "<heightProjected>"
+ZOrder "826"
+Labels [0, 0]
+Src "627#out:2"
+Dst "561#in:1"
+}
+
+Line {
+ZOrder "753"
+Src "562#out:1"
+Points [25, 0; 0, -40]
+Branch {
+ZOrder "758"
+Points [0, -55]
+Dst "563#in:2"
+}
+
+Branch {
+ZOrder "757"
+Dst "561#in:2"
+}
+}
+
+Line {
+ZOrder "756"
+Src "563#out:1"
+Dst "474#in:1"
+}
+
+Line {
+ZOrder "762"
+Src "311#out:1"
+Points [30, 0]
+Branch {
+ZOrder "823"
+Points [0, 120]
+Dst "307#in:1"
+}
+
+Branch {
+ZOrder "804"
+Dst "556#in:1"
+}
+}
+
+Line {
+ZOrder "824"
+Src "626#out:1"
+Dst "627#in:1"
+}
+
+Line {
+Name "<height>"
+ZOrder "825"
+Labels [0, 0]
+Src "627#out:1"
+Dst "563#in:1"
+}
+
+Line {
+Name "<heightAdjustment>"
+ZOrder "827"
+Labels [0, 0]
+Src "627#out:3"
+Dst "562#in:1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "AdjustRange"
+SID "372"
+Ports [1, 1]
+Position [440, 394, 495, 416]
+ZOrder "234"
+RequestExecContextInheritance off
+Port {
+PortNumber "1"
+Name "cameraRange"
+}
+
+System {
+Location [20, 48, 1868, 1126]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "In2"
+SID "373"
+Position [575, 283, 605, 297]
+ZOrder "220"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Lookup_n-D"
+Name "1-D Lookup\nTable"
+SID "374"
+Ports [1, 1]
+Position [205, 108, 270, 172]
+ZOrder "225"
+NumberOfTableDimensions "1"
+BreakpointsForDimension1 [0 45 90]
+Table [120 80 0]
+ExtrapMethod "Clip"
+UseLastTableValue on
+InternalRulePriority "Speed"
+RndMeth "Simplest"
+}
+
+Block {
+BlockType "Sum"
+Name "Add4"
+SID "375"
+Ports [2, 1]
+Position [685, 214, 720, 316]
+ZOrder "213"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "From"
+Name "From"
+SID "377"
+Position [80, 126, 120, 154]
+ZOrder "224"
+GotoTag "Tilt"
+TagVisibility "global"
+}
+
+Block {
+BlockType "Gain"
+Name "Gain"
+SID "581"
+Position [405, 150, 435, 180]
+ZOrder "238"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Ground"
+Name "Ground1"
+SID "379"
+Position [150, 330, 170, 350]
+ZOrder "218"
+}
+
+Block {
+BlockType "ManualSwitch"
+Name "Manual Switch3"
+SID "380"
+Position [585, 144, 605, 231]
+ZOrder "212"
+}
+
+Block {
+BlockType "Outport"
+Name "Out1"
+SID "383"
+Position [870, 168, 900, 182]
+ZOrder "221"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "32"
+Src "581#out:1"
+Dst "380#in:1"
+}
+
+Line {
+ZOrder "2"
+Src "375#out:1"
+Points [50, 0; 0, -90]
+Dst "383#in:1"
+}
+
+Line {
+ZOrder "5"
+Src "379#out:1"
+Points [169, 0; 0, -130]
+Dst "380#in:2"
+}
+
+Line {
+ZOrder "6"
+Src "377#out:1"
+Dst "374#in:1"
+}
+
+Line {
+ZOrder "9"
+Src "380#out:1"
+Points [45, 0; 0, 50]
+Dst "375#in:1"
+}
+
+Line {
+ZOrder "10"
+Src "373#out:1"
+Dst "375#in:2"
+}
+
+Line {
+ZOrder "14"
+Src "374#out:1"
+Points [90, 0; 0, 25]
+Dst "581#in:1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "AdjustTilt"
+SID "331"
+Ports [1, 1]
+Position [440, 346, 495, 364]
+ZOrder "222"
+RequestExecContextInheritance off
+Port {
+PortNumber "1"
+Name "cameraTilt"
+}
+
+System {
+Location [20, 48, 1868, 1126]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "In2"
+SID "332"
+Position [675, 283, 705, 297]
+ZOrder "220"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Lookup_n-D"
+Name "1-D Lookup\nTable"
+SID "341"
+Ports [1, 1]
+Position [280, 68, 345, 132]
+ZOrder "225"
+NumberOfTableDimensions "1"
+BreakpointsForDimension1 [0 2 30 60]
+Table [0  -5 -50 -80]
+InternalRulePriority "Speed"
+RndMeth "Simplest"
+}
+
+Block {
+BlockType "Sum"
+Name "Add4"
+SID "333"
+Ports [2, 1]
+Position [785, 214, 820, 316]
+ZOrder "213"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "From"
+Name "From2"
+SID "476"
+Position [65, 86, 205, 114]
+ZOrder "231"
+GotoTag "heightViewAdjust"
+TagVisibility "global"
+}
+
+Block {
+BlockType "Gain"
+Name "Gain"
+SID "580"
+Position [420, 85, 450, 115]
+ZOrder "235"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Goto"
+Name "Goto"
+SID "371"
+Position [910, 102, 1025, 138]
+ZOrder "227"
+GotoTag "Tilt"
+TagVisibility "global"
+}
+
+Block {
+BlockType "Ground"
+Name "Ground1"
+SID "337"
+Position [250, 330, 270, 350]
+ZOrder "218"
+}
+
+Block {
+BlockType "ManualSwitch"
+Name "Manual Switch3"
+SID "338"
+Position [675, 202, 705, 238]
+ZOrder "212"
+}
+
+Block {
+BlockType "Outport"
+Name "Out1"
+SID "340"
+Position [970, 168, 1000, 182]
+ZOrder "221"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "49"
+Src "341#out:1"
+Dst "580#in:1"
+}
+
+Line {
+ZOrder "4"
+Src "332#out:1"
+Dst "333#in:2"
+}
+
+Line {
+ZOrder "5"
+Src "338#out:1"
+Points [17, 0; 0, 20]
+Dst "333#in:1"
+}
+
+Line {
+ZOrder "40"
+Src "476#out:1"
+Dst "341#in:1"
+}
+
+Line {
+ZOrder "9"
+Src "337#out:1"
+Points [169, 0; 0, -110]
+Dst "338#in:2"
+}
+
+Line {
+ZOrder "10"
+Src "333#out:1"
+Points [50, 0; 0, -90]
+Branch {
+ZOrder "22"
+Points [0, -55]
+Dst "371#in:1"
+}
+
+Branch {
+ZOrder "21"
+Dst "340#in:1"
+}
+}
+
+Line {
+ZOrder "65"
+Src "580#out:1"
+Points [103, 0; 0, 110]
+Dst "338#in:1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "CameraControl"
+SID "343"
+Ports [2, 1]
+Position [435, 292, 500, 328]
+ZOrder "224"
+ForegroundColor "red"
+RequestExecContextInheritance off
+Port {
+PortNumber "1"
+Name "cameraHeading_wrtVeh"
+}
+
+System {
+Location [-1876, 52, -28, 1130]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "123"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "In2"
+SID "344"
+Position [955, 278, 985, 292]
+ZOrder "220"
+ForegroundColor "red"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "rollAngle"
+SID "682"
+Position [125, 93, 155, 107]
+ZOrder "256"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Lookup_n-D"
+Name "1-D Lookup\nTable"
+SID "345"
+Ports [1, 1]
+Position [215, 108, 280, 172]
+ZOrder "225"
+NumberOfTableDimensions "1"
+BreakpointsForDimension1 [-0.5 0 0.5]
+Table [-30 0 30]
+InternalRulePriority "Speed"
+RndMeth "Simplest"
+}
+
+Block {
+BlockType "Sum"
+Name "Add4"
+SID "346"
+Ports [2, 1]
+Position [1060, 144, 1090, 331]
+ZOrder "213"
+ForegroundColor "red"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "SubSystem"
+Name "CameraState"
+SID "489"
+Ports [2, 1, 0, 1]
+Position [425, 116, 555, 209]
+ZOrder "231"
+ForegroundColor "red"
+LibraryVersion "1.263"
+ErrorFcn "Stateflow.Translate.translate"
+PermitHierarchicalResolution "ExplicitOnly"
+TreatAsAtomicUnit on
+RequestExecContextInheritance off
+SFBlockType "Chart"
+System {
+Location [124, 87, 1754, 1131]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+SIDHighWatermark "65"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "hOff_in"
+SID "489::54"
+Position [20, 101, 40, 119]
+ZOrder "34"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "htAdj"
+SID "489::59"
+Position [20, 136, 40, 154]
+ZOrder "39"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "TriggerPort"
+Name "secs"
+SID "489::58"
+Ports [0, 1]
+Position [20, 171, 40, 189]
+ZOrder "38"
+VariantControl "(inherit)"
+StatesWhenEnabling "held"
+ShowOutputPort on
+}
+
+Block {
+BlockType "Demux"
+Name " Demux "
+SID "489::64"
+Ports [1, 1]
+Position [270, 230, 320, 270]
+ZOrder "44"
+Outputs "1"
+}
+
+Block {
+BlockType "S-Function"
+Name " SFunction "
+SID "489::63"
+Tag "Stateflow S-Function 3"
+Ports [3, 2]
+Position [180, 100, 230, 180]
+ZOrder "43"
+FunctionName "sf_sfun"
+PortCounts [3 2]
+SFunctionDeploymentMode off
+EnableBusSupport off
+SFcnIsStateOwnerBlock off
+Port {
+PortNumber "2"
+Name "hOff"
+}
+}
+
+Block {
+BlockType "Terminator"
+Name " Terminator "
+SID "489::65"
+Position [460, 241, 480, 259]
+ZOrder "45"
+}
+
+Block {
+BlockType "Outport"
+Name "hOff"
+SID "489::53"
+Position [460, 101, 480, 119]
+ZOrder "33"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "36"
+Src "489::54#out:1"
+Dst "489::63#in:1"
+}
+
+Line {
+ZOrder "37"
+Src "489::59#out:1"
+Dst "489::63#in:2"
+}
+
+Line {
+Name "hOff"
+ZOrder "38"
+Labels [0, 0]
+Src "489::63#out:2"
+Dst "489::53#in:1"
+}
+
+Line {
+ZOrder "39"
+Src "489::58#out:1"
+Dst "489::63#in:3"
+}
+
+Line {
+ZOrder "40"
+Src "489::64#out:1"
+Dst "489::65#in:1"
+}
+
+Line {
+ZOrder "41"
+Src "489::63#out:1"
+Points [20, 0]
+Dst "489::64#in:1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "CameraStateflow"
+SID "553"
+Ports [2, 2]
+Position [710, 295, 840, 390]
+ZOrder "247"
+ForegroundColor "red"
+LibraryVersion "1.263"
+ErrorFcn "Stateflow.Translate.translate"
+PermitHierarchicalResolution "ExplicitOnly"
+TreatAsAtomicUnit on
+RequestExecContextInheritance off
+SFBlockType "Chart"
+System {
+Location [-1860, 203, -142, 1072]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+SIDHighWatermark "68"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "htAdj"
+SID "553::59"
+Position [20, 101, 40, 119]
+ZOrder "39"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "hOff_in"
+SID "553::62"
+Position [20, 136, 40, 154]
+ZOrder "41"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Demux"
+Name " Demux "
+SID "553::67"
+Ports [1, 1]
+Position [270, 230, 320, 270]
+ZOrder "46"
+Outputs "1"
+}
+
+Block {
+BlockType "S-Function"
+Name " SFunction "
+SID "553::66"
+Tag "Stateflow S-Function 1"
+Ports [2, 3]
+Position [180, 100, 230, 180]
+ZOrder "45"
+FunctionName "sf_sfun"
+Parameters "camHt_1LVal,camHt_1UVal"
+PortCounts [2 3]
+SFunctionDeploymentMode off
+EnableBusSupport off
+SFcnIsStateOwnerBlock off
+Port {
+PortNumber "2"
+Name "hOff"
+}
+
+Port {
+PortNumber "3"
+Name "htOff"
+}
+}
+
+Block {
+BlockType "Terminator"
+Name " Terminator "
+SID "553::68"
+Position [460, 241, 480, 259]
+ZOrder "47"
+}
+
+Block {
+BlockType "Outport"
+Name "hOff"
+SID "553::53"
+Position [460, 101, 480, 119]
+ZOrder "33"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "htOff"
+SID "553::60"
+Position [460, 136, 480, 154]
+ZOrder "40"
+Port "2"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "48"
+Src "553::59#out:1"
+Points [120, 0]
+Dst "553::66#in:1"
+}
+
+Line {
+ZOrder "49"
+Src "553::62#out:1"
+Dst "553::66#in:2"
+}
+
+Line {
+Name "hOff"
+ZOrder "50"
+Labels [0, 0]
+Src "553::66#out:2"
+Dst "553::53#in:1"
+}
+
+Line {
+Name "htOff"
+ZOrder "51"
+Labels [0, 0]
+Src "553::66#out:3"
+Dst "553::60#in:1"
+}
+
+Line {
+ZOrder "52"
+Src "553::67#out:1"
+Dst "553::68#in:1"
+}
+
+Line {
+ZOrder "53"
+Src "553::66#out:1"
+Dst "553::67#in:1"
+}
+}
+}
+
+Block {
+BlockType "Display"
+Name "Display"
+SID "354"
+Ports [1]
+Position [1190, 155, 1280, 185]
+ZOrder "226"
+Decimation "1"
+}
+
+Block {
+BlockType "Display"
+Name "Display1"
+SID "355"
+Ports [1]
+Position [250, 45, 340, 75]
+ZOrder "227"
+Decimation "1"
+}
+
+Block {
+BlockType "Display"
+Name "Display2"
+SID "595"
+Ports [1]
+Position [905, 452, 965, 478]
+ZOrder "253"
+Decimation "1"
+}
+
+Block {
+BlockType "Display"
+Name "Display3"
+SID "493"
+Ports [1]
+Position [595, 37, 655, 63]
+ZOrder "234"
+Decimation "1"
+}
+
+Block {
+BlockType "Display"
+Name "Display5"
+SID "557"
+Ports [1]
+Position [485, 457, 545, 483]
+ZOrder "249"
+Decimation "1"
+}
+
+Block {
+BlockType "Display"
+Name "Display6"
+SID "558"
+Ports [1]
+Position [560, 422, 620, 448]
+ZOrder "250"
+Decimation "1"
+}
+
+Block {
+BlockType "Display"
+Name "Display7"
+SID "559"
+Ports [1]
+Position [725, 452, 785, 478]
+ZOrder "251"
+Decimation "1"
+}
+
+Block {
+BlockType "SubSystem"
+Name "FirstRelay"
+SID "541"
+Ports [1, 1]
+Position [410, 309, 515, 401]
+ZOrder "245"
+RequestExecContextInheritance off
+Object {
+$PropName "MaskObject"
+$ObjectID 4
+$ClassName "Simulink.Mask"
+Display ""
+
+Array {
+Type "Simulink.MaskParameter"
+PropName "Parameters"
+Dimension 4
+Object {
+$ObjectID 5
+Name "UL"
+Type "edit"
+Prompt "Upper Threshold"
+Value "camHt_1UTh"
+}
+
+Object {
+$ObjectID 6
+Name "LL"
+Type "edit"
+Prompt "Lower Threshold"
+Value "camHt_1LTh"
+}
+
+Object {
+$ObjectID 7
+Name "UValue"
+Type "edit"
+Prompt "Upper Value"
+Value "camHt_1UVal"
+}
+
+Object {
+$ObjectID 8
+Name "LValue"
+Type "edit"
+Prompt "Lower Value"
+Value "camHt_1LVal"
+}
+}
+}
+
+System {
+Location [-1876, 52, -28, 1130]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "284"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Depth"
+SID "542"
+Position [20, 118, 50, 132]
+ZOrder "244"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Constant"
+Name "Constant"
+SID "551"
+Position [160, 60, 210, 80]
+ZOrder "247"
+Value "UValue"
+}
+
+Block {
+BlockType "Constant"
+Name "Constant1"
+SID "552"
+Position [350, 20, 400, 40]
+ZOrder "248"
+Value "LValue"
+}
+
+Block {
+BlockType "Reference"
+Name "GreaterThan"
+SID "544"
+Ports [1, 1]
+Position [165, 110, 195, 140]
+ZOrder "240"
+LibraryVersion "1.453"
+SourceBlock "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+SourceType "Compare To Constant"
+SourceProductName "Simulink"
+SourceProductBaseCode "SL"
+ContentPreviewEnabled off
+relop ">"
+const "UL"
+OutDataTypeStr "boolean"
+ZeroCross on
+
+ContentPreviewEnabled off
+relop ">"
+const "UL"
+OutDataTypeStr "boolean"
+ZeroCross on
+
+ContentPreviewEnabled off
+relop ">"
+const "UL"
+OutDataTypeStr "boolean"
+ZeroCross on
+
+ContentPreviewEnabled off
+relop ">"
+const "UL"
+OutDataTypeStr "boolean"
+ZeroCross on
+
+}
+
+Block {
+BlockType "Reference"
+Name "LessThan"
+SID "545"
+Ports [1, 1]
+Position [360, 75, 390, 105]
+ZOrder "242"
+LibraryVersion "1.453"
+SourceBlock "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+SourceType "Compare To Constant"
+SourceProductName "Simulink"
+SourceProductBaseCode "SL"
+ContentPreviewEnabled off
+relop "<"
+const "LL"
+OutDataTypeStr "boolean"
+ZeroCross on
+
+ContentPreviewEnabled off
+relop "<"
+const "LL"
+OutDataTypeStr "boolean"
+ZeroCross on
+
+ContentPreviewEnabled off
+relop "<"
+const "LL"
+OutDataTypeStr "boolean"
+ZeroCross on
+
+ContentPreviewEnabled off
+relop "<"
+const "LL"
+OutDataTypeStr "boolean"
+ZeroCross on
+
+}
+
+Block {
+BlockType "UnitDelay"
+Name "Relay"
+SID "546"
+Position [365, 203, 400, 237]
+ZOrder "243"
+BlockMirror on
+SampleTime "-1"
+HasFrameUpgradeWarning on
+}
+
+Block {
+BlockType "Switch"
+Name "Switch"
+SID "547"
+Position [250, 70, 290, 180]
+ZOrder "238"
+Criteria "u2 > Threshold"
+InputSameDT off
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Switch"
+Name "Switch1"
+SID "548"
+Position [465, 35, 505, 145]
+ZOrder "241"
+Criteria "u2 > Threshold"
+InputSameDT off
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Outport"
+Name "Out"
+SID "549"
+Position [595, 213, 625, 227]
+ZOrder "246"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "548#out:1"
+Points [24, 0; 0, 130]
+Branch {
+ZOrder "2"
+Dst "546#in:1"
+}
+
+Branch {
+ZOrder "3"
+Dst "549#in:1"
+}
+}
+
+Line {
+ZOrder "4"
+Src "546#out:1"
+Points [-139, 0; 0, -60]
+Dst "547#in:3"
+}
+
+Line {
+ZOrder "6"
+Src "545#out:1"
+Dst "548#in:2"
+}
+
+Line {
+ZOrder "7"
+Src "542#out:1"
+Points [67, 0]
+Branch {
+ZOrder "15"
+Points [0, -100; 198, 0; 0, 65]
+Dst "545#in:1"
+}
+
+Branch {
+ZOrder "14"
+Dst "544#in:1"
+}
+}
+
+Line {
+ZOrder "13"
+Src "544#out:1"
+Dst "547#in:2"
+}
+
+Line {
+ZOrder "16"
+Src "547#out:1"
+Dst "548#in:3"
+}
+
+Line {
+ZOrder "18"
+Src "551#out:1"
+Points [15, 0; 0, 20]
+Dst "547#in:1"
+}
+
+Line {
+ZOrder "19"
+Src "552#out:1"
+Points [45, 0]
+Dst "548#in:1"
+}
+}
+}
+
+Block {
+BlockType "From"
+Name "From2"
+SID "494"
+Position [110, 256, 250, 284]
+ZOrder "235"
+GotoTag "htAdjust"
+TagVisibility "global"
+}
+
+Block {
+BlockType "Gain"
+Name "Gain"
+SID "394"
+Position [310, 125, 355, 155]
+ZOrder "229"
+Gain "-0.7"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Gain"
+Name "Gain1"
+SID "550"
+Position [315, 340, 360, 370]
+ZOrder "246"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Goto"
+Name "Goto"
+SID "554"
+Position [885, 350, 940, 380]
+ZOrder "248"
+GotoTag "htOff"
+TagVisibility "global"
+}
+
+Block {
+BlockType "Ground"
+Name "Ground"
+SID "579"
+Position [870, 140, 890, 160]
+ZOrder "252"
+}
+
+Block {
+BlockType "ManualSwitch"
+Name "Manual Switch3"
+SID "350"
+Position [935, 141, 965, 234]
+ZOrder "212"
+ForegroundColor "red"
+CurrentSetting "0"
+}
+
+Block {
+BlockType "SubSystem"
+Name "SecondaryRelay"
+SID "537"
+Ports [2, 1]
+Position [545, 249, 650, 391]
+ZOrder "244"
+RequestExecContextInheritance off
+Object {
+$PropName "MaskObject"
+$ObjectID 9
+$ClassName "Simulink.Mask"
+Display ""
+
+Array {
+Type "Simulink.MaskParameter"
+PropName "Parameters"
+Dimension 2
+Object {
+$ObjectID 10
+Name "UL"
+Type "edit"
+Prompt "Upper Threshold"
+Value "camHt_2UTh"
+}
+
+Object {
+$ObjectID 11
+Name "LL"
+Type "edit"
+Prompt "Lower Threshold"
+Value "camHt_2LTh"
+}
+}
+}
+
+System {
+Location [7, 51, 1801, 1179]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "172"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "Depth"
+SID "538"
+Position [20, 68, 50, 82]
+ZOrder "244"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "FirstRelay"
+SID "539"
+Position [275, 183, 305, 197]
+ZOrder "245"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Reference"
+Name "GreaterThan"
+SID "533"
+Ports [1, 1]
+Position [165, 60, 195, 90]
+ZOrder "240"
+LibraryVersion "1.453"
+SourceBlock "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+SourceType "Compare To Constant"
+SourceProductName "Simulink"
+SourceProductBaseCode "SL"
+ContentPreviewEnabled off
+relop ">"
+const "UL"
+OutDataTypeStr "boolean"
+ZeroCross on
+
+ContentPreviewEnabled off
+relop ">"
+const "UL"
+OutDataTypeStr "boolean"
+ZeroCross on
+
+ContentPreviewEnabled off
+relop ">"
+const "UL"
+OutDataTypeStr "boolean"
+ZeroCross on
+
+ContentPreviewEnabled off
+relop ">"
+const "UL"
+OutDataTypeStr "boolean"
+ZeroCross on
+
+}
+
+Block {
+BlockType "Reference"
+Name "LessThan"
+SID "535"
+Ports [1, 1]
+Position [355, 140, 385, 170]
+ZOrder "242"
+LibraryVersion "1.453"
+SourceBlock "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+SourceType "Compare To Constant"
+SourceProductName "Simulink"
+SourceProductBaseCode "SL"
+ContentPreviewEnabled off
+relop ">="
+const "LL"
+OutDataTypeStr "boolean"
+ZeroCross on
+
+ContentPreviewEnabled off
+relop ">="
+const "LL"
+OutDataTypeStr "boolean"
+ZeroCross on
+
+ContentPreviewEnabled off
+relop ">="
+const "LL"
+OutDataTypeStr "boolean"
+ZeroCross on
+
+ContentPreviewEnabled off
+relop ">="
+const "LL"
+OutDataTypeStr "boolean"
+ZeroCross on
+
+}
+
+Block {
+BlockType "UnitDelay"
+Name "Relay"
+SID "536"
+Position [345, 233, 380, 267]
+ZOrder "243"
+BlockMirror on
+SampleTime "-1"
+HasFrameUpgradeWarning on
+}
+
+Block {
+BlockType "Switch"
+Name "Switch"
+SID "531"
+Position [250, 20, 290, 130]
+ZOrder "238"
+Criteria "u2 > Threshold"
+InputSameDT off
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Switch"
+Name "Switch1"
+SID "534"
+Position [450, 100, 490, 210]
+ZOrder "241"
+Criteria "u2 > Threshold"
+InputSameDT off
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Outport"
+Name "Out"
+SID "540"
+Position [620, 148, 650, 162]
+ZOrder "246"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "76"
+Src "533#out:1"
+Dst "531#in:2"
+}
+
+Line {
+ZOrder "93"
+Src "538#out:1"
+Points [51, 0]
+Branch {
+ZOrder "81"
+Points [0, -35]
+Dst "531#in:1"
+}
+
+Branch {
+ZOrder "85"
+Points [0, 80]
+Dst "535#in:1"
+}
+
+Branch {
+ZOrder "80"
+Dst "533#in:1"
+}
+}
+
+Line {
+ZOrder "83"
+Src "535#out:1"
+Dst "534#in:2"
+}
+
+Line {
+ZOrder "94"
+Src "539#out:1"
+Dst "534#in:3"
+}
+
+Line {
+ZOrder "92"
+Src "536#out:1"
+Points [-135, 0; 0, -140]
+Dst "531#in:3"
+}
+
+Line {
+ZOrder "89"
+Src "534#out:1"
+Points [39, 0]
+Branch {
+ZOrder "95"
+Dst "540#in:1"
+}
+
+Branch {
+ZOrder "90"
+Points [0, 95]
+Dst "536#in:1"
+}
+}
+
+Line {
+ZOrder "97"
+Src "531#out:1"
+Points [75, 0; 0, 45]
+Dst "534#in:1"
+}
+}
+}
+
+Block {
+BlockType "DiscretePulseGenerator"
+Name "Timer"
+SID "492"
+Ports [0, 1]
+Position [405, 18, 450, 52]
+ZOrder "233"
+ForegroundColor "red"
+PulseType "Time based"
+Period "1"
+PulseWidth "50"
+}
+
+Block {
+BlockType "Outport"
+Name "heading"
+SID "352"
+Position [1220, 233, 1250, 247]
+ZOrder "221"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "346#out:1"
+Points [50, 0]
+Branch {
+ZOrder "54"
+Points [0, -70]
+Dst "354#in:1"
+}
+
+Branch {
+ZOrder "52"
+Dst "352#in:1"
+}
+}
+
+Line {
+ZOrder "115"
+Src "553#out:1"
+Points [27, 0; 0, -110]
+Dst "350#in:2"
+}
+
+Line {
+ZOrder "207"
+Src "682#out:1"
+Points [41, 0]
+Branch {
+ZOrder "16"
+Points [0, 40]
+Dst "345#in:1"
+}
+
+Branch {
+ZOrder "15"
+Points [0, -40]
+Dst "355#in:1"
+}
+}
+
+Line {
+ZOrder "7"
+Src "344#out:1"
+Dst "346#in:2"
+}
+
+Line {
+ZOrder "11"
+Src "345#out:1"
+Dst "394#in:1"
+}
+
+Line {
+ZOrder "36"
+Src "492#out:1"
+Points [35, 0]
+Dst "489#trigger"
+}
+
+Line {
+ZOrder "45"
+Src "489#out:1"
+Points [29, 0; 0, -115]
+Dst "493#in:1"
+}
+
+Line {
+ZOrder "48"
+Src "394#out:1"
+Points [43, 0]
+Branch {
+ZOrder "148"
+Points [0, 96; 283, 0; 0, 129]
+Dst "553#in:2"
+}
+
+Branch {
+ZOrder "147"
+Dst "489#in:1"
+}
+}
+
+Line {
+ZOrder "61"
+Src "494#out:1"
+Points [37, 0]
+Branch {
+ZOrder "101"
+Points [0, 85]
+Dst "550#in:1"
+}
+
+Branch {
+ZOrder "100"
+Points [0, -85]
+Dst "489#in:2"
+}
+}
+
+Line {
+ZOrder "93"
+Src "541#out:1"
+Points [7, 0]
+Branch {
+ZOrder "123"
+Points [0, 80]
+Dst "558#in:1"
+}
+
+Branch {
+ZOrder "122"
+Dst "537#in:2"
+}
+}
+
+Line {
+ZOrder "97"
+Src "550#out:1"
+Points [7, 0]
+Branch {
+ZOrder "113"
+Points [14, 0]
+Branch {
+ZOrder "121"
+Points [0, 115]
+Dst "557#in:1"
+}
+
+Branch {
+ZOrder "120"
+Dst "541#in:1"
+}
+}
+
+Branch {
+ZOrder "108"
+Points [0, -70]
+Dst "537#in:1"
+}
+}
+
+Line {
+ZOrder "103"
+Src "537#out:1"
+Points [15, 0]
+Branch {
+ZOrder "125"
+Points [0, 145]
+Dst "559#in:1"
+}
+
+Branch {
+ZOrder "124"
+Dst "553#in:1"
+}
+}
+
+Line {
+ZOrder "173"
+Src "350#out:1"
+Dst "346#in:1"
+}
+
+Line {
+ZOrder "117"
+Src "553#out:2"
+Points [13, 0]
+Branch {
+ZOrder "170"
+Points [0, 100]
+Dst "595#in:1"
+}
+
+Branch {
+ZOrder "169"
+Dst "554#in:1"
+}
+}
+
+Line {
+ZOrder "168"
+Src "579#out:1"
+Points [19, 0; 0, 15]
+Dst "350#in:1"
+}
+}
+}
+
+Block {
+BlockType "Demux"
+Name "Demux"
+SID "244"
+Ports [1, 4]
+Position [390, 20, 395, 150]
+ZOrder "140"
+ShowName off
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Demux"
+Name "Demux1"
+SID "587"
+Ports [1, 4]
+Position [355, 212, 360, 443]
+ZOrder "241"
+ShowName off
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Demux"
+Name "Demux2"
+SID "598"
+Ports [1, 6]
+Position [825, 260, 830, 390]
+ZOrder "247"
+ShowName off
+Outputs "6"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Reference"
+Name "HeadingWrtVehicle"
+SID "283"
+Ports [1, 1]
+Position [135, 255, 175, 285]
+ZOrder "178"
+LibraryVersion "1.453"
+SourceBlock "simulink/Math\nOperations/Slider\nGain"
+SourceType "Slider Gain"
+SourceProductName "Simulink"
+SourceProductBaseCode "SL"
+Port {
+PortNumber "1"
+Name "HeadingWrtVehicle"
+}
+
+ContentPreviewEnabled off
+gain "90"
+low "65"
+high "115"
+
+ContentPreviewEnabled off
+gain "90"
+low "65"
+high "115"
+
+ContentPreviewEnabled off
+gain "90"
+low "65"
+high "115"
+
+ContentPreviewEnabled off
+gain "90"
+low "65"
+high "115"
+
+}
+
+Block {
+BlockType "Reference"
+Name "HeightWrtVehicle"
+SID "280"
+Ports [1, 1]
+Position [135, 200, 175, 230]
+ZOrder "175"
+LibraryVersion "1.453"
+SourceBlock "simulink/Math\nOperations/Slider\nGain"
+SourceType "Slider Gain"
+SourceProductName "Simulink"
+SourceProductBaseCode "SL"
+Port {
+PortNumber "1"
+Name "HeightWrtVehicle"
+}
+
+ContentPreviewEnabled off
+gain "4.5"
+low "0"
+high "30"
+
+ContentPreviewEnabled off
+gain "4.5"
+low "0"
+high "30"
+
+ContentPreviewEnabled off
+gain "4.5"
+low "0"
+high "30"
+
+ContentPreviewEnabled off
+gain "4.5"
+low "0"
+high "30"
+
+}
+
+Block {
+BlockType "Mux"
+Name "Mux"
+SID "586"
+Ports [4, 1]
+Position [260, 191, 265, 404]
+ZOrder "240"
+ShowName off
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux1"
+SID "589"
+Ports [4, 1]
+Position [180, 438, 185, 472]
+ZOrder "243"
+ShowName off
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Mux"
+Name "Mux2"
+SID "243"
+Ports [6, 1]
+Position [745, 30, 750, 200]
+ZOrder "139"
+ShowName off
+Inputs "6"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Constant"
+Name "One"
+SID "268"
+Position [20, 204, 90, 226]
+ZOrder "163"
+VectorParams1D off
+}
+
+Block {
+BlockType "Reference"
+Name "Range"
+SID "281"
+Ports [1, 1]
+Position [135, 365, 175, 395]
+ZOrder "176"
+LibraryVersion "1.453"
+SourceBlock "simulink/Math\nOperations/Slider\nGain"
+SourceType "Slider Gain"
+SourceProductName "Simulink"
+SourceProductBaseCode "SL"
+Port {
+PortNumber "1"
+Name "Range"
+}
+
+ContentPreviewEnabled off
+gain "40"
+low "20"
+high "60"
+
+ContentPreviewEnabled off
+gain "40"
+low "20"
+high "60"
+
+ContentPreviewEnabled off
+gain "40"
+low "20"
+high "60"
+
+ContentPreviewEnabled off
+gain "40"
+low "20"
+high "60"
+
+}
+
+Block {
+BlockType "SubSystem"
+Name "Signal Builder"
+SID "588"
+Tag "STV Subsys"
+Ports [0, 4]
+Position [40, 435, 125, 475]
+ZOrder "242"
+CopyFcn "sigbuilder_block('copy');"
+DeleteFcn "sigbuilder_block('delete');"
+LoadFcn "sigbuilder_block('load');"
+ModelCloseFcn "sigbuilder_block('modelClose');"
+PreSaveFcn "sigbuilder_block('preSave');"
+StartFcn "sigbuilder_block('start');"
+PauseFcn "sigbuilder_block('pause');"
+ContinueFcn "sigbuilder_block('continue');"
+StopFcn "sigbuilder_block('stop');"
+NameChangeFcn "sigbuilder_block('namechange');"
+ClipboardFcn "sigbuilder_block('clipboard');"
+OpenFcn "sigbuilder_block('open',[679.5 100.5 550.5 399.75 ]);"
+CloseFcn "sigbuilder_block('close');"
+RequestExecContextInheritance off
+MaskHideContents on
+Object {
+$PropName "MaskObject"
+$ObjectID 12
+$ClassName "Simulink.Mask"
+SelfModifiable "on"
+IconOpaque "transparent"
+IconRotate "port"
+Display "plot(0, 0, 100, 100,[2, 2, 32, 32, 2], [68, 8, 8, 68, 68],[32, 2], [38, 38], [32, 19, 2],[53, 60, 44], [32, 17, 17, 2],[16, 16, 31, 31]);txt = getActiveGroup(gcbh);text(2, 100, txt,'verticalAlignment', 'top');"
+
+Type "Sigbuilder block"
+Object {
+$ObjectID 13
+$PropName "Parameters"
+$ClassName "Simulink.MaskParameter"
+Name "tuvar"
+Type "edit"
+Visible "off"
+Value "[0:10]"
+}
+
+Description "Simulink:masks:SigbuilderBlock_MD"
+Initialization "if ~strcmp(get_param(bdroot(gcbh),'SimulationStatus'),'stopped') tuvar = sigbuilder_block('maskInit'); end"
+Capabilities "slmaskedcaps(gcbh)"
+}
+
+System {
+Location [480, 85, 980, 386]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+SIDHighWatermark "7"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Demux"
+Name "Demux"
+SID "588:1"
+Tag "STV Demux"
+Ports [1, 4]
+Position [150, 40, 160, 615]
+ZOrder "-1"
+}
+
+Block {
+BlockType "FromWorkspace"
+Name "FromWs"
+SID "588:2"
+Tag "STV FromWs"
+Position [30, 300, 115, 350]
+ZOrder "-2"
+VariableName "tuvar"
+SampleTime "0.025"
+ZeroCross on
+SigBuilderData ""
+VnvData ""
+}
+
+Block {
+BlockType "Outport"
+Name "Signal 1"
+SID "588:3"
+Tag "STV Outport"
+Position [280, 30, 300, 40]
+ZOrder "-3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "Signal 2"
+SID "588:4"
+Tag "STV Outport"
+Position [280, 60, 300, 70]
+ZOrder "1"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "Signal 4"
+SID "588:6"
+Tag "STV Outport"
+Position [280, 90, 300, 100]
+ZOrder "3"
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "Signal 3"
+SID "588:5"
+Tag "STV Outport"
+Position [280, 120, 300, 130]
+ZOrder "2"
+Port "4"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "2"
+Src "588:2#out:1"
+Points [15, 0]
+Dst "588:1#in:1"
+}
+
+Line {
+ZOrder "6"
+Src "588:1#out:1"
+Dst "588:3#in:1"
+}
+
+Line {
+ZOrder "7"
+Src "588:1#out:2"
+Dst "588:4#in:1"
+}
+
+Line {
+ZOrder "8"
+Src "588:1#out:3"
+Dst "588:6#in:1"
+}
+
+Line {
+ZOrder "9"
+Src "588:1#out:4"
+Dst "588:5#in:1"
+}
+}
+}
+
+Block {
+BlockType "Reference"
+Name "Tilt"
+SID "282"
+Ports [1, 1]
+Position [135, 310, 175, 340]
+ZOrder "177"
+LibraryVersion "1.453"
+SourceBlock "simulink/Math\nOperations/Slider\nGain"
+SourceType "Slider Gain"
+SourceProductName "Simulink"
+SourceProductBaseCode "SL"
+Port {
+PortNumber "1"
+Name "Tilt"
+}
+
+ContentPreviewEnabled off
+gain "90"
+low "0"
+high "180"
+
+ContentPreviewEnabled off
+gain "90"
+low "0"
+high "180"
+
+ContentPreviewEnabled off
+gain "90"
+low "0"
+high "180"
+
+ContentPreviewEnabled off
+gain "90"
+low "0"
+high "180"
+
+}
+
+Block {
+BlockType "Sum"
+Name "altitude"
+SID "246"
+Ports [2, 1]
+Position [500, 81, 530, 114]
+ZOrder "142"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Scope"
+Name "cameraAHTR"
+SID "596"
+Ports [4]
+Position [740, 228, 770, 432]
+ZOrder "245"
+ScopeSpecificationString "C++SS(StrPVP('Location','[-1222, 259, -784, 1069]'),StrPVP('Open','off'),StrPVP('ZoomMode','yonly'),MxPVP('AxesTitles',54,'struct(''axes1'',''%<SignalLabel>'',''axes2'',''%<SignalLabel>'',''axes3'',''%<SignalLabel>'',''axes4'',''%<SignalLabel>'')'),MxPVP('ScopeGraphics',57,'struct(''FigureColor'',''[0.5 0.5 0.5]'',''AxesColor'',''[0 0 0]'',''AxesTickColor'',''[1 1 1]'',''LineColors'',''[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]'',''LineStyles'',''-|-|-|-|-|-'',''LineWidths'',''[0.5 0.5 0.5 0.5 0.5 0.5]'',''MarkerStyles'',''none|none|none|none|none|none'')'),StrPVP('ShowLegends','off'),StrPVP('YMin','1.8~35~90~15'),StrPVP('YMax','3~70~90~15'),StrPVP('SaveName','ScopeData1'),StrPVP('DataFormat','StructureWithTime'),StrPVP('BlockParamSampleTime','0'),StrPVP('ScrollMode','off'),StrPVP('LimitDataPoints','on'),StrPVP('Decimation','1'),StrPVP('BlockParamSampleInput','off'))"
+NumInputPorts "4"
+Floating off
+}
+
+Block {
+BlockType "Scope"
+Name "cameraLLAHTR_absolute"
+SID "597"
+Ports [6]
+Position [895, 266, 935, 384]
+ZOrder "246"
+ScopeSpecificationString "C++SS(StrPVP('Location','[-1853, 191, -1196, 1158]'),StrPVP('Open','off'),StrPVP('ZoomMode','yonly'),MxPVP('AxesTitles',54,'struct(''axes1'',''%<SignalLabel>'',''axes2'',''%<SignalLabel>'',''axes3'',''%<SignalLabel>'',''axes4'',''%<SignalLabel>'',''axes5'',''%<SignalLabel>'',''axes6'',''%<SignalLabel>'')'),MxPVP('ScopeGraphics',57,'struct(''FigureColor'',''[0.5 0.5 0.5]'',''AxesColor'',''[0 0 0]'',''AxesTickColor'',''[1 1 1]'',''LineColors'',''[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]'',''LineStyles'',''-|-|-|-|-|-'',''LineWidths'',''[0.5 0.5 0.5 0.5 0.5 0.5]'',''MarkerStyles'',''none|none|none|none|none|none'')'),StrPVP('ShowLegends','off'),StrPVP('YMin','-5~-5~-5~-5~-5~-5'),StrPVP('YMax','5~5~5~5~5~5'),StrPVP('SaveName','ScopeData2'),StrPVP('DataFormat','StructureWithTime'),StrPVP('BlockParamSampleTime','0'),StrPVP('ScrollMode','off'),StrPVP('LimitDataPoints','on'),StrPVP('Decimation','1'),StrPVP('BlockParamSampleInput','off'))"
+NumInputPorts "6"
+Floating off
+}
+
+Block {
+BlockType "SubSystem"
+Name "heading"
+SID "709"
+Ports [2, 1]
+Position [610, 112, 695, 143]
+ZOrder "315"
+RequestExecContextInheritance off
+System {
+Location [20, 48, 1868, 1126]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "172"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "vehH"
+SID "710"
+Position [20, 33, 50, 47]
+ZOrder "251"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "offset"
+SID "711"
+Position [255, 225, 285, 240]
+ZOrder "252"
+BlockRotation "270"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Ground"
+Name "Ground"
+SID "285"
+Position [155, 50, 175, 70]
+ZOrder "180"
+}
+
+Block {
+BlockType "ManualSwitch"
+Name "Manual Switch"
+SID "284"
+Position [205, 32, 235, 68]
+ZOrder "179"
+}
+
+Block {
+BlockType "RateLimiter"
+Name "Rate Limiter1"
+SID "601"
+Position [340, 25, 370, 55]
+ZOrder "250"
+RisingSlewLimit "7.5"
+FallingSlewLimit "-7.5"
+SampleTimeMode "inherited"
+InitialCondition "getLOatTime(logsout, 'heading_deg', startTime)"
+}
+
+Block {
+BlockType "Sum"
+Name "height"
+SID "273"
+Ports [2, 1]
+Position [285, 21, 315, 54]
+ZOrder "168"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "Outport"
+Name "camH"
+SID "712"
+Position [435, 33, 465, 47]
+ZOrder "253"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "603"
+Src "285#out:1"
+Dst "284#in:2"
+}
+
+Line {
+ZOrder "1073"
+Src "710#out:1"
+Dst "284#in:1"
+}
+
+Line {
+ZOrder "546"
+Src "273#out:1"
+Dst "601#in:1"
+}
+
+Line {
+ZOrder "602"
+Src "284#out:1"
+Points [18, 0; 0, -20]
+Dst "273#in:1"
+}
+
+Line {
+ZOrder "1075"
+Src "601#out:1"
+Dst "712#in:1"
+}
+
+Line {
+ZOrder "1074"
+Src "711#out:1"
+Dst "273#in:2"
+}
+}
+}
+
+Block {
+BlockType "ManualSwitch"
+Name "initialPan"
+SID "584"
+Position [305, 272, 330, 383]
+ZOrder "238"
+CurrentSetting "0"
+}
+
+Block {
+BlockType "Outport"
+Name "cameraLLAHTR"
+SID "707"
+Position [870, 108, 900, 122]
+ZOrder "314"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "361"
+Src "243#out:1"
+Points [46, 0]
+Branch {
+ZOrder "1049"
+Dst "707#in:1"
+}
+
+Branch {
+ZOrder "893"
+Points [0, 210]
+Dst "598#in:1"
+}
+}
+
+Line {
+ZOrder "1046"
+Src "704#out:1"
+Dst "244#in:1"
+}
+
+Line {
+ZOrder "378"
+Src "244#out:1"
+Dst "243#in:1"
+}
+
+Line {
+Name "Range"
+ZOrder "850"
+Labels [1, 1]
+Src "281#out:1"
+Dst "586#in:4"
+}
+
+Line {
+ZOrder "853"
+Src "587#out:2"
+Dst "343#in:1"
+}
+
+Line {
+Name "HeightWrtVehicle"
+ZOrder "848"
+Labels [1, 1]
+Src "280#out:1"
+Dst "586#in:1"
+}
+
+Line {
+Name "cameraRange"
+ZOrder "778"
+Labels [1, 1]
+Src "372#out:1"
+Points [196, 0]
+Branch {
+ZOrder "1079"
+Points [0, -215]
+Dst "243#in:6"
+}
+
+Branch {
+ZOrder "876"
+Dst "596#in:4"
+}
+}
+
+Line {
+ZOrder "847"
+Src "586#out:1"
+Dst "584#in:1"
+}
+
+Line {
+Name "HeadingWrtVehicle"
+ZOrder "849"
+Labels [1, 1]
+Src "283#out:1"
+Dst "586#in:2"
+}
+
+Line {
+ZOrder "352"
+Src "244#out:3"
+Points [30, 0; 0, -10]
+Dst "246#in:1"
+}
+
+Line {
+ZOrder "543"
+Src "268#out:1"
+Points [10, 0]
+Branch {
+ZOrder "686"
+Dst "280#in:1"
+}
+
+Branch {
+ZOrder "596"
+Points [0, 55]
+Branch {
+ZOrder "842"
+Points [0, 55]
+Branch {
+ZOrder "844"
+Points [0, 55]
+Dst "281#in:1"
+}
+
+Branch {
+ZOrder "599"
+Dst "282#in:1"
+}
+}
+
+Branch {
+ZOrder "597"
+Dst "283#in:1"
+}
+}
+}
+
+Line {
+ZOrder "348"
+Src "244#out:2"
+Dst "243#in:2"
+}
+
+Line {
+Name "cameraHeight_wrtVeh"
+ZOrder "698"
+Src "314#out:1"
+Points [21, 0]
+Branch {
+ZOrder "1081"
+Labels [0, 0]
+Dst "596#in:1"
+}
+
+Branch {
+ZOrder "1080"
+Points [0, -50; -60, 0; 0, -100]
+Dst "246#in:2"
+}
+}
+
+Line {
+Name "Tilt"
+ZOrder "851"
+Labels [1, 1]
+Src "282#out:1"
+Dst "586#in:3"
+}
+
+Line {
+ZOrder "854"
+Src "587#out:3"
+Dst "331#in:1"
+}
+
+Line {
+ZOrder "856"
+Src "584#out:1"
+Dst "587#in:1"
+}
+
+Line {
+ZOrder "852"
+Src "587#out:1"
+Dst "314#in:1"
+}
+
+Line {
+ZOrder "855"
+Src "587#out:4"
+Points [35, 0; 0, -5]
+Dst "372#in:1"
+}
+
+Line {
+ZOrder "896"
+Src "598#out:6"
+Dst "597#in:6"
+}
+
+Line {
+ZOrder "859"
+Src "588#out:3"
+Dst "589#in:3"
+}
+
+Line {
+ZOrder "860"
+Src "588#out:1"
+Dst "589#in:1"
+}
+
+Line {
+ZOrder "1123"
+Src "589#out:1"
+Points [89, 0; 0, -100]
+Dst "584#in:2"
+}
+
+Line {
+ZOrder "894"
+Src "598#out:5"
+Dst "597#in:5"
+}
+
+Line {
+ZOrder "895"
+Src "598#out:1"
+Dst "597#in:1"
+}
+
+Line {
+ZOrder "858"
+Src "588#out:4"
+Dst "589#in:4"
+}
+
+Line {
+Name "cameraHeading_wrtVeh"
+ZOrder "705"
+Labels [1, 1]
+Src "343#out:1"
+Points [89, 0; 0, -5]
+Branch {
+ZOrder "1085"
+Dst "596#in:2"
+}
+
+Branch {
+ZOrder "1083"
+Points [0, -170]
+Dst "709#in:2"
+}
+}
+
+Line {
+ZOrder "902"
+Src "246#out:1"
+Dst "243#in:3"
+}
+
+Line {
+ZOrder "857"
+Src "588#out:2"
+Dst "589#in:2"
+}
+
+Line {
+ZOrder "897"
+Src "598#out:2"
+Dst "597#in:2"
+}
+
+Line {
+ZOrder "899"
+Src "598#out:4"
+Dst "597#in:4"
+}
+
+Line {
+ZOrder "898"
+Src "598#out:3"
+Dst "597#in:3"
+}
+
+Line {
+ZOrder "1048"
+Src "706#out:1"
+Dst "343#in:2"
+}
+
+Line {
+Name "cameraTilt"
+ZOrder "1067"
+Labels [1, 1]
+Src "331#out:1"
+Points [181, 0]
+Branch {
+ZOrder "1089"
+Points [0, -195]
+Dst "243#in:5"
+}
+
+Branch {
+ZOrder "1088"
+Dst "596#in:3"
+}
+}
+
+Line {
+ZOrder "1078"
+Src "705#out:1"
+Dst "314#in:2"
+}
+
+Line {
+ZOrder "1082"
+Src "244#out:4"
+Points [171, 0; 0, -10]
+Dst "709#in:1"
+}
+
+Line {
+ZOrder "1084"
+Src "709#out:1"
+Dst "243#in:4"
+}
+}
+}
+
+Block {
+BlockType "Mux"
+Name "Mux3"
+SID "637"
+Ports [2, 1]
+Position [655, 102, 660, 338]
+ZOrder "311"
+ShowName off
+Inputs "2"
+DisplayOption "bar"
+}
+
+Block {
+BlockType "Selector"
+Name "Selector"
+SID "635"
+Ports [1, 1]
+Position [185, 221, 225, 269]
+ZOrder "309"
+InputPortWidth "6"
+IndexOptions "Index vector (dialog)"
+Indices [1 2 3 4]
+OutputSizes "1"
+}
+
+Block {
+BlockType "Math"
+Name "Transpose"
+SID "249"
+Ports [1, 1]
+Position [580, 265, 610, 295]
+ZOrder "145"
+Operator "transpose"
+}
+
+Block {
+BlockType "Math"
+Name "Transpose1"
+SID "248"
+Ports [1, 1]
+Position [265, 230, 295, 260]
+ZOrder "144"
+Operator "transpose"
+}
+
+Block {
+BlockType "MATLABFcn"
+Name "updateGoogleEarth"
+SID "636"
+Ports [1]
+Position [705, 197, 790, 243]
+ZOrder "310"
+MATLABFcn "updateGoogleEarth"
+OutputDimensions "0"
+}
+
+Line {
+ZOrder "983"
+Src "635#out:1"
+Dst "248#in:1"
+}
+
+Line {
+ZOrder "362"
+Src "249#out:1"
+Dst "637#in:2"
+}
+
+Line {
+ZOrder "982"
+Src "633#out:1"
+Points [37, 0]
+Branch {
+ZOrder "994"
+Points [0, 85]
+Dst "635#in:1"
+}
+
+Branch {
+ZOrder "984"
+Dst "637#in:1"
+}
+}
+
+Line {
+ZOrder "992"
+Src "637#out:1"
+Dst "636#in:1"
+}
+
+Line {
+ZOrder "1046"
+Src "248#out:1"
+Dst "703#in:1"
+}
+
+Line {
+ZOrder "1047"
+Src "625#out:1"
+Dst "703#in:2"
+}
+
+Line {
+ZOrder "1048"
+Src "683#out:1"
+Dst "703#in:3"
+}
+
+Line {
+ZOrder "1049"
+Src "703#out:1"
+Dst "249#in:1"
+}
+
+Annotation {
+SID "708"
+Name "Latitude\nLongitude\nAltitude\nHeading\nTilt (Roll)\nIndex"
+Position [86, 195, 131, 257]
+InternalMargins [0, 0, 0, 0]
+HorizontalAlignment "left"
+VerticalAlignment "top"
+ZOrder "-1"
+}
+}
+}
+
+Block {
+BlockType "SubSystem"
+Name "vehicleMovement"
+SID "435"
+Ports [4, 3]
+Position [690, 251, 980, 499]
+ZOrder "271"
+RequestExecContextInheritance off
+ContentPreviewEnabled on
+System {
+Location [17, 84, 1882, 1077]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "149"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "simResults"
+SID "695"
+Position [230, 138, 260, 152]
+ZOrder "309"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "elevTube"
+SID "436"
+Position [230, 358, 260, 372]
+ZOrder "246"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "heightBus"
+SID "620"
+Position [230, 323, 260, 337]
+ZOrder "302"
+Port "3"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "crntPillarIndex"
+SID "613"
+Position [1005, 353, 1035, 367]
+ZOrder "288"
+Port "4"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Sum"
+Name "Add3"
+SID "303"
+Ports [2, 1]
+Position [420, 314, 450, 381]
+ZOrder "208"
+InputSameDT off
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "BusSelector"
+Name "Bus\nSelector"
+SID "623"
+Ports [1, 1]
+Position [325, 311, 330, 349]
+ZOrder "304"
+ShowName off
+OutputSignals "heightAdjustment"
+OutputAsBus off
+Port {
+PortNumber "1"
+Name "<heightAdjustment>"
+}
+}
+
+Block {
+BlockType "BusSelector"
+Name "Bus\nSelector1"
+SID "696"
+Ports [1, 2]
+Position [465, 15, 470, 270]
+ZOrder "308"
+ShowName off
+OutputSignals "latitude,longitude"
+OutputAsBus off
+Port {
+PortNumber "1"
+Name "<latitude>"
+}
+
+Port {
+PortNumber "2"
+Name "<longitude>"
+}
+}
+
+Block {
+BlockType "BusSelector"
+Name "Bus\nSelector2"
+SID "698"
+Ports [1, 1]
+Position [320, 458, 325, 502]
+ZOrder "311"
+ShowName off
+OutputSignals "heading_deg"
+OutputAsBus off
+Port {
+PortNumber "1"
+Name "<heading_deg>"
+}
+}
+
+Block {
+BlockType "BusSelector"
+Name "Bus\nSelector3"
+SID "701"
+Ports [1, 1]
+Position [915, 423, 920, 467]
+ZOrder "314"
+ShowName off
+OutputSignals "rollAngle"
+OutputAsBus off
+Port {
+PortNumber "1"
+Name "<rollAngle>"
+}
+}
+
+Block {
+BlockType "Reference"
+Name "ManualHeading"
+SID "295"
+Ports [1, 1]
+Position [540, 415, 580, 445]
+ZOrder "201"
+LibraryVersion "1.453"
+SourceBlock "simulink/Math\nOperations/Slider\nGain"
+SourceType "Slider Gain"
+SourceProductName "Simulink"
+SourceProductBaseCode "SL"
+ContentPreviewEnabled off
+gain "360"
+low "-360"
+high "360"
+
+ContentPreviewEnabled off
+gain "360"
+low "-360"
+high "360"
+
+ContentPreviewEnabled off
+gain "360"
+low "-360"
+high "360"
+
+ContentPreviewEnabled off
+gain "360"
+low "-360"
+high "360"
+
+}
+
+Block {
+BlockType "ManualSwitch"
+Name "ManualHeadingSwitch"
+SID "293"
+Position [660, 407, 690, 503]
+ZOrder "199"
+CurrentSetting "0"
+Port {
+PortNumber "1"
+Name "heading"
+}
+}
+
+Block {
+BlockType "Concatenate"
+Name "Vector\nConcatenate"
+SID "265"
+Ports [4, 1]
+Position [775, 19, 790, 516]
+ZOrder "160"
+NumInputs "4"
+Mode "Multidimensional array"
+ConcatenateDimension "2"
+}
+
+Block {
+BlockType "Concatenate"
+Name "Vector\nConcatenate2"
+SID "397"
+Ports [3, 1]
+Position [1105, 250, 1115, 380]
+ZOrder "238"
+NumInputs "3"
+ConcatenateDimension "2"
+}
+
+Block {
+BlockType "Bias"
+Name "latOffset"
+SID "716"
+Position [590, 65, 660, 95]
+ZOrder "318"
+Bias "latOffset"
+SaturateOnIntegerOverflow off
+Port {
+PortNumber "1"
+Name "latitude"
+}
+}
+
+Block {
+BlockType "Bias"
+Name "lonOffset"
+SID "717"
+Position [585, 190, 655, 220]
+ZOrder "319"
+Bias "lonOffset"
+SaturateOnIntegerOverflow off
+Port {
+PortNumber "1"
+Name "longitude"
+}
+}
+
+Block {
+BlockType "Constant"
+Name "manualAltitude"
+SID "266"
+Position [525, 297, 595, 323]
+ZOrder "161"
+Value "5"
+VectorParams1D off
+}
+
+Block {
+BlockType "ManualSwitch"
+Name "manualAltitudeSwitch"
+SID "302"
+Position [660, 289, 685, 371]
+ZOrder "207"
+CurrentSetting "0"
+Port {
+PortNumber "1"
+Name "altitude"
+}
+}
+
+Block {
+BlockType "Constant"
+Name "one"
+SID "294"
+Position [460, 417, 515, 443]
+ZOrder "200"
+VectorParams1D off
+}
+
+Block {
+BlockType "Gain"
+Name "rollAngle_deg"
+SID "400"
+Position [985, 300, 1040, 330]
+ZOrder "240"
+Gain "180/pi"
+ParamDataTypeStr "Inherit: Inherit via internal rule"
+OutDataTypeStr "Inherit: Inherit via internal rule"
+SaturateOnIntegerOverflow off
+}
+
+Block {
+BlockType "InportShadow"
+Name "simResults1"
+SID "699"
+Position [225, 473, 255, 487]
+ZOrder "312"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "InportShadow"
+Name "simResults2"
+SID "700"
+Position [850, 438, 880, 452]
+ZOrder "313"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "vehLLAHTI"
+SID "632"
+Position [1200, 308, 1230, 322]
+ZOrder "307"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "heightBus_"
+SID "624"
+Position [360, 278, 390, 292]
+ZOrder "305"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "rollAngle"
+SID "609"
+Position [1200, 438, 1230, 452]
+ZOrder "257"
+Port "3"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1098"
+Src "397#out:1"
+Dst "632#in:1"
+}
+
+Line {
+ZOrder "811"
+Src "400#out:1"
+Dst "397#in:2"
+}
+
+Line {
+ZOrder "497"
+Src "265#out:1"
+Dst "397#in:1"
+}
+
+Line {
+ZOrder "1060"
+Src "303#out:1"
+Dst "302#in:2"
+}
+
+Line {
+ZOrder "1036"
+Src "620#out:1"
+Points [23, 0]
+Branch {
+ZOrder "1040"
+Dst "623#in:1"
+}
+
+Branch {
+ZOrder "1039"
+Points [0, -45]
+Dst "624#in:1"
+}
+}
+
+Line {
+Name "altitude"
+ZOrder "676"
+Labels [-1, 0]
+Src "302#out:1"
+Dst "265#in:3"
+}
+
+Line {
+ZOrder "675"
+Src "266#out:1"
+Dst "302#in:1"
+}
+
+Line {
+Name "<heading_deg>"
+ZOrder "1144"
+Labels [0, 0]
+Src "698#out:1"
+Dst "293#in:2"
+}
+
+Line {
+ZOrder "653"
+Src "294#out:1"
+Dst "295#in:1"
+}
+
+Line {
+Name "heading"
+ZOrder "1056"
+Labels [-1, 0]
+Src "293#out:1"
+Dst "265#in:4"
+}
+
+Line {
+Name "<longitude>"
+ZOrder "1165"
+Labels [0, 0]
+Src "696#out:2"
+Dst "717#in:1"
+}
+
+Line {
+ZOrder "1033"
+Src "613#out:1"
+Dst "397#in:3"
+}
+
+Line {
+Name "<latitude>"
+ZOrder "1163"
+Labels [0, 0]
+Src "696#out:1"
+Dst "716#in:1"
+}
+
+Line {
+Name "latitude"
+ZOrder "1164"
+Labels [-1, 0]
+Src "716#out:1"
+Dst "265#in:1"
+}
+
+Line {
+Name "<heightAdjustment>"
+ZOrder "1059"
+Labels [0, 0]
+Src "623#out:1"
+Dst "303#in:1"
+}
+
+Line {
+ZOrder "1061"
+Src "436#out:1"
+Dst "303#in:2"
+}
+
+Line {
+ZOrder "1062"
+Src "295#out:1"
+Dst "293#in:1"
+}
+
+Line {
+ZOrder "1120"
+Src "695#out:1"
+Dst "696#in:1"
+}
+
+Line {
+ZOrder "1124"
+Src "699#out:1"
+Dst "698#in:1"
+}
+
+Line {
+ZOrder "1126"
+Src "700#out:1"
+Dst "701#in:1"
+}
+
+Line {
+Name "<rollAngle>"
+ZOrder "1130"
+Labels [0, 0]
+Src "701#out:1"
+Points [24, 0]
+Branch {
+ZOrder "1132"
+Points [0, -130]
+Dst "400#in:1"
+}
+
+Branch {
+ZOrder "1131"
+Dst "609#in:1"
+}
+}
+
+Line {
+Name "longitude"
+ZOrder "1166"
+Labels [-1, 0]
+Src "717#out:1"
+Dst "265#in:2"
+}
+}
+}
+
+Line {
+ZOrder "960"
+Src "429#out:1"
+Dst "435#in:2"
+}
+
+Line {
+ZOrder "971"
+Src "445#out:2"
+Points [15, 0]
+Branch {
+ZOrder "993"
+Dst "435#in:4"
+}
+
+Branch {
+ZOrder "980"
+Points [0, 165]
+Dst "431#in:1"
+}
+}
+
+Line {
+ZOrder "973"
+Src "435#out:3"
+Points [21, 0]
+Branch {
+ZOrder "1026"
+Dst "433#in:3"
+}
+
+Branch {
+ZOrder "1024"
+Points [0, 100]
+Dst "432#in:1"
+}
+}
+
+Line {
+ZOrder "984"
+Src "429#out:3"
+Points [12, 0; 0, 215]
+Dst "431#in:3"
+}
+
+Line {
+ZOrder "988"
+Src "429#out:2"
+Dst "445#in:1"
+}
+
+Line {
+ZOrder "990"
+Src "445#out:1"
+Dst "435#in:3"
+}
+
+Line {
+ZOrder "994"
+Src "435#out:2"
+Dst "433#in:2"
+}
+
+Line {
+ZOrder "1000"
+Src "435#out:1"
+Dst "433#in:1"
+}
+
+Line {
+ZOrder "1005"
+Src "653#out:1"
+Points [25, 0]
+Branch {
+ZOrder "1023"
+Points [185, 0]
+Branch {
+ZOrder "1021"
+Dst "435#in:1"
+}
+
+Branch {
+ZOrder "1020"
+Points [0, 180]
+Branch {
+ZOrder "1013"
+Points [0, 190]
+Dst "431#in:2"
+}
+
+Branch {
+ZOrder "1012"
+Dst "445#in:2"
+}
+}
+}
+
+Branch {
+ZOrder "1006"
+Points [0, 120]
+Dst "429#in:1"
+}
+}
+}
+
+DiagnosticSuppressor on
+
+LogicAnalyzerPlugin on
+
+NotesPlugin on
+
+SLCCPlugin on
+
+WebScopes_FoundationPlugin on
+
+GraphicalInterface {
+NumRootInports "0"
+NumRootOutports "0"
+ParameterArgumentNames ""
+NumModelReferences "0"
+NumTestPointedSignals "0"
+NumProvidedFunctions "0"
+NumRequiredFunctions "0"
+NumResetEvents "0"
+HasInitializeEvent "0"
+HasTerminateEvent "0"
+PreCompExecutionDomainType "Unset"
+IsExportFunctionModel "0"
+IsArchitectureModel "0"
+IsAUTOSARArchitectureModel "0"
+NumParameterArguments "0"
+NumExternalFileReferences "12"
+OrderedModelArguments "1"
+ExternalFileReference {
+Reference "realtime_pacer_lib/Real-Time Pacer"
+Path "$bdroot/Real-Time Pacer"
+SID "169"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "vrlib/VR Sink"
+Path "$bdroot/VirtualReality/VR Sink"
+SID "290"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "simulink/Math\nOperations/Slider\nGain"
+Path "$bdroot/heightData/HeightWrtVehicle1"
+SID "358"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+Path "$bdroot/updateGoogleEarth/CameraLogic/CameraControl/FirstRelay/GreaterThan"
+SID "544"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+Path "$bdroot/updateGoogleEarth/CameraLogic/CameraControl/FirstRelay/LessThan"
+SID "545"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+Path "$bdroot/updateGoogleEarth/CameraLogic/CameraControl/SecondaryRelay/GreaterThan"
+SID "533"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+Path "$bdroot/updateGoogleEarth/CameraLogic/CameraControl/SecondaryRelay/LessThan"
+SID "535"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "simulink/Math\nOperations/Slider\nGain"
+Path "$bdroot/updateGoogleEarth/CameraLogic/HeadingWrtVehicle"
+SID "283"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "simulink/Math\nOperations/Slider\nGain"
+Path "$bdroot/updateGoogleEarth/CameraLogic/HeightWrtVehicle"
+SID "280"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "simulink/Math\nOperations/Slider\nGain"
+Path "$bdroot/updateGoogleEarth/CameraLogic/Range"
+SID "281"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "simulink/Math\nOperations/Slider\nGain"
+Path "$bdroot/updateGoogleEarth/CameraLogic/Tilt"
+SID "282"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "simulink/Math\nOperations/Slider\nGain"
+Path "$bdroot/vehicleMovement/ManualHeading"
+SID "295"
+Type "LIBRARY_BLOCK"
+}
+}
+
+Object {
+$PropName "HDLParams"
+$ObjectID 1
+$ClassName "slprops.hdlmdlprops"
+Array {
+PropName "mdlProps"
+Type "Cell"
+Dimension 2
+Cell "HDLSubsystem"
+Cell "$bdroot"
+}
+}
+
+Object {
+$PropName "BdWindowsInfo"
+$ObjectID 14
+$ClassName "Simulink.BDWindowsInfo"
+BDUuid "78235d3d-38ac-4382-a23c-879a9ad68849"
+Object {
+$PropName "WindowsInfo"
+$ObjectID 15
+$ClassName "Simulink.WindowInfo"
+IsActive [1]
+Location [17.0, 84.0, 1865.0, 993.0]
+DockComponentsInfo []
+WindowState ""
+WindowUuid ""
+Array {
+PropName "PersistedApps"
+Type "Cell"
+Dimension 0
+}
+
+Object {
+$PropName "ModelBrowserInfo"
+$ObjectID 16
+$ClassName "Simulink.ModelBrowserInfo"
+Visible [0]
+DockPosition "Left"
+Width [50]
+Height [50]
+Filter [9]
+Minimized "Unset"
+}
+
+Object {
+$PropName "ExplorerBarInfo"
+$ObjectID 17
+$ClassName "Simulink.ExplorerBarInfo"
+Visible [1]
+}
+
+Object {
+$PropName "EditorsInfo"
+$ObjectID 18
+$ClassName "Simulink.EditorInfo"
+IsActive [1]
+IsTabbed [1]
+ViewObjType "SimulinkTopLevel"
+LoadSaveID "0"
+Extents [1815.0, 819.0]
+ZoomFactor [1.5814159292035401]
+Offset [71.147174034695013, 214.55484051482938]
+SceneRectInView [0.0, 0.0, 0.0, 0.0]
+}
+}
+}
+
+Array {
+Type "Handle"
+Dimension 1
+Simulink.ConfigSet {
+Version "19.1.1"
+$ClassName "Simulink.ConfigSet"
+DisabledProps []
+Description ""
+Name "Configuration"
+CurrentDlgPage "Diagnostics"
+ConfigPrmDlgPosition [ 421, 21, 1581, 1070 ]
+ExtraOptions ""
+Array {
+PropName "Components"
+Type "Handle"
+Dimension 10
+Simulink.SolverCC {
+$ObjectID 20
+Version "19.1.1"
+$ClassName "Simulink.SolverCC"
+DisabledProps []
+Description ""
+Components []
+StartTime "startTime"
+StopTime "stopTime"
+AbsTol "auto"
+AutoScaleAbsTol on
+FixedStep "0.025"
+InitialStep "auto"
+MaxOrder "5"
+ZcThreshold "auto"
+ConsecutiveZCsStepRelTol "10*128*eps"
+MaxConsecutiveZCs "1000"
+ExtrapolationOrder "4"
+NumberNewtonIterations "1"
+MaxStep "0.1"
+MinStep "auto"
+MaxConsecutiveMinStep "1"
+RelTol "1e-3"
+EnableMultiTasking on
+ConcurrentTasks off
+Solver "FixedStepDiscrete"
+SolverName "FixedStepDiscrete"
+SolverJacobianMethodControl "auto"
+ShapePreserveControl "DisableAll"
+ZeroCrossControl "UseLocalSettings"
+ZeroCrossAlgorithm "Nonadaptive"
+AlgebraicLoopSolver "TrustRegion"
+SolverInfoToggleStatus off
+IsAutoAppliedInSIP off
+SolverResetMethod "Fast"
+PositivePriorityOrder off
+AutoInsertRateTranBlk off
+SampleTimeConstraint "Unconstrained"
+InsertRTBMode "Whenever possible"
+SampleTimeProperty []
+DecoupledContinuousIntegration off
+MinimalZcImpactIntegration off
+SolverOrder "3"
+}
+
+Simulink.DataIOCC {
+$ObjectID 21
+Version "19.1.1"
+$ClassName "Simulink.DataIOCC"
+DisabledProps []
+Description ""
+Components []
+Decimation "1"
+ExternalInput [t, u]
+FinalStateName "xFinal"
+InitialState "xInitial"
+LimitDataPoints on
+MaxDataPoints "1000"
+LoadExternalInput off
+LoadInitialState off
+SaveFinalState off
+SaveOperatingPoint off
+SaveFormat "Array"
+SignalLoggingSaveFormat "ModelDataLogs"
+SaveOutput on
+SaveState off
+SignalLogging off
+DSMLogging on
+InspectSignalLogs off
+VisualizeSimOutput on
+StreamToWorkspace off
+StreamVariableName "streamout"
+SaveTime on
+ReturnWorkspaceOutputs off
+StateSaveName "xout"
+TimeSaveName "tout"
+OutputSaveName "yout"
+SignalLoggingName "logsout"
+DSMLoggingName "dsmout"
+OutputOption "RefineOutputTimes"
+OutputTimes []
+ReturnWorkspaceOutputsName "out"
+Refine "1"
+LoggingToFile off
+DatasetSignalFormat "timeseries"
+LoggingFileName "out.mat"
+LoggingIntervals [-inf, inf]
+}
+
+Simulink.OptimizationCC {
+$ObjectID 22
+Version "19.1.1"
+$ClassName "Simulink.OptimizationCC"
+Description ""
+Components []
+BlockReduction on
+BooleanDataType on
+ConditionallyExecuteInputs on
+DefaultParameterBehavior "Tunable"
+UseDivisionForNetSlopeComputation off
+GainParamInheritBuiltInType off
+UseFloatMulNetSlope off
+DefaultUnderspecifiedDataType "double"
+UseSpecifiedMinMax off
+InlineInvariantSignals off
+OptimizeBlockIOStorage on
+BufferReuse on
+EnhancedBackFolding off
+CachingGlobalReferences off
+GlobalBufferReuse on
+StrengthReduction off
+AdvancedOptControl ""
+ExpressionFolding on
+BooleansAsBitfields off
+BitfieldContainerType "uint_T"
+EnableMemcpy on
+MemcpyThreshold "64"
+PassReuseOutputArgsAs "Structure reference"
+PassReuseOutputArgsThreshold "12"
+ExpressionDepthLimit "2147483647"
+LocalBlockOutputs on
+RollThreshold "5"
+StateBitsets off
+DataBitsets off
+ActiveStateOutputEnumStorageType "Native Integer"
+ZeroExternalMemoryAtStartup on
+ZeroInternalMemoryAtStartup on
+InitFltsAndDblsToZero off
+NoFixptDivByZeroProtection off
+EfficientFloat2IntCast off
+EfficientMapNaN2IntZero on
+LifeSpan "inf"
+MaxStackSize "Inherit from target"
+BufferReusableBoundary on
+SimCompilerOptimization off
+AccelVerboseBuild off
+OptimizeBlockOrder off
+OptimizeDataStoreBuffers on
+BusAssignmentInplaceUpdate on
+DifferentSizesBufferReuse off
+UseRowMajorAlgorithm off
+OptimizationLevel "level2"
+OptimizationPriority "Balanced"
+OptimizationCustomize on
+LabelGuidedReuse off
+MultiThreadedLoops off
+DenormalBehavior "GradualUnderflow"
+EfficientTunableParamExpr off
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 9
+Cell "BooleansAsBitfields"
+Cell "PassReuseOutputArgsAs"
+Cell "PassReuseOutputArgsThreshold"
+Cell "ZeroExternalMemoryAtStartup"
+Cell "ZeroInternalMemoryAtStartup"
+Cell "OptimizeModelRefInitCode"
+Cell "NoFixptDivByZeroProtection"
+Cell "UseSpecifiedMinMax"
+Cell "EfficientTunableParamExpr"
+}
+}
+
+Simulink.DebuggingCC {
+$ObjectID 23
+Version "19.1.1"
+$ClassName "Simulink.DebuggingCC"
+Description ""
+Components []
+RTPrefix "error"
+ConsistencyChecking "none"
+ArrayBoundsChecking "none"
+SignalInfNanChecking "none"
+StringTruncationChecking "error"
+SignalRangeChecking "none"
+ReadBeforeWriteMsg "UseLocalSettings"
+WriteAfterWriteMsg "UseLocalSettings"
+WriteAfterReadMsg "UseLocalSettings"
+AlgebraicLoopMsg "warning"
+ArtificialAlgebraicLoopMsg "warning"
+SaveWithDisabledLinksMsg "warning"
+SaveWithParameterizedLinksMsg "warning"
+CheckSSInitialOutputMsg on
+UnderspecifiedInitializationDetection "Classic"
+MergeDetectMultiDrivingBlocksExec "none"
+CheckExecutionContextPreStartOutputMsg off
+CheckExecutionContextRuntimeOutputMsg off
+SignalResolutionControl "UseLocalSettings"
+BlockPriorityViolationMsg "warning"
+MinStepSizeMsg "warning"
+TimeAdjustmentMsg "none"
+MaxConsecutiveZCsMsg "error"
+MaskedZcDiagnostic "warning"
+IgnoredZcDiagnostic "warning"
+SolverPrmCheckMsg "warning"
+InheritedTsInSrcMsg "none"
+MultiTaskDSMMsg "error"
+MultiTaskCondExecSysMsg "error"
+MultiTaskRateTransMsg "error"
+SingleTaskRateTransMsg "none"
+TasksWithSamePriorityMsg "warning"
+ExportedTasksRateTransMsg "none"
+SigSpecEnsureSampleTimeMsg "warning"
+CheckMatrixSingularityMsg "none"
+IntegerOverflowMsg "warning"
+Int32ToFloatConvMsg "warning"
+ParameterDowncastMsg "error"
+ParameterOverflowMsg "error"
+ParameterUnderflowMsg "none"
+ParameterPrecisionLossMsg "warning"
+ParameterTunabilityLossMsg "warning"
+FixptConstUnderflowMsg "none"
+FixptConstOverflowMsg "none"
+FixptConstPrecisionLossMsg "none"
+UnderSpecifiedDataTypeMsg "none"
+UnnecessaryDatatypeConvMsg "none"
+VectorMatrixConversionMsg "none"
+InvalidFcnCallConnMsg "error"
+FcnCallInpInsideContextMsg "warning"
+SignalLabelMismatchMsg "none"
+UnconnectedInputMsg "warning"
+UnconnectedOutputMsg "warning"
+UnconnectedLineMsg "warning"
+UseOnlyExistingSharedCode "error"
+SFcnCompatibilityMsg "none"
+FrameProcessingCompatibilityMsg "error"
+UniqueDataStoreMsg "none"
+BusObjectLabelMismatch "warning"
+RootOutportRequireBusObject "warning"
+AssertControl "UseLocalSettings"
+AllowSymbolicDim on
+RowMajorDimensionSupport off
+ModelReferenceIOMsg "none"
+ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+ModelReferenceVersionMismatchMessage "none"
+ModelReferenceIOMismatchMessage "none"
+UnknownTsInhSupMsg "warning"
+ModelReferenceDataLoggingMessage "warning"
+ModelReferenceSymbolNameMessage "warning"
+ModelReferenceExtraNoncontSigs "error"
+StateNameClashWarn "warning"
+OperatingPointInterfaceChecksumMismatchMsg "warning"
+NonCurrentReleaseOperatingPointMsg "error"
+ChecksumConsistencyForSSReuse "none"
+PregeneratedLibrarySubsystemCodeDiagnostic "warning"
+MatchCodeGenerationContextForUpdateDiagram "none"
+InitInArrayFormatMsg "warning"
+StrictBusMsg "ErrorLevel1"
+BusNameAdapt "WarnAndRepair"
+NonBusSignalsTreatedAsBus "none"
+SymbolicDimMinMaxWarning "warning"
+LossOfSymbolicDimsSimulationWarning "warning"
+LossOfSymbolicDimsCodeGenerationWarning "error"
+SymbolicDimsDataTypeCodeGenerationDiagnostic "error"
+BlockIODiagnostic "none"
+SFUnusedDataAndEventsDiag "warning"
+SFUnexpectedBacktrackingDiag "warning"
+SFInvalidInputDataAccessInChartInitDiag "warning"
+SFNoUnconditionalDefaultTransitionDiag "warning"
+SFTransitionOutsideNaturalParentDiag "warning"
+SFUnreachableExecutionPathDiag "warning"
+SFUndirectedBroadcastEventsDiag "warning"
+SFTransitionActionBeforeConditionDiag "warning"
+SFOutputUsedAsStateInMooreChartDiag "error"
+SFTemporalDelaySmallerThanSampleTimeDiag "warning"
+SFSelfTransitionDiag "warning"
+SFExecutionAtInitializationDiag "none"
+SFMachineParentedDataDiag "warning"
+IntegerSaturationMsg "warning"
+AllowedUnitSystems "all"
+UnitsInconsistencyMsg "warning"
+AllowAutomaticUnitConversions on
+RCSCRenamedMsg "warning"
+RCSCObservableMsg "warning"
+ForceCombineOutputUpdateInSim off
+UnitDatabase ""
+UnderSpecifiedDimensionMsg "none"
+DebugExecutionForFMUViaOutOfProcess off
+ArithmeticOperatorsInVariantConditions "warning"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 1
+Cell "UseOnlyExistingSharedCode"
+}
+}
+
+Simulink.HardwareCC {
+$ObjectID 24
+Version "19.1.1"
+$ClassName "Simulink.HardwareCC"
+DisabledProps []
+Description ""
+Components []
+ProdBitPerChar "8"
+ProdBitPerShort "16"
+ProdBitPerInt "32"
+ProdBitPerLong "32"
+ProdBitPerLongLong "64"
+ProdBitPerFloat "32"
+ProdBitPerDouble "64"
+ProdBitPerPointer "32"
+ProdBitPerSizeT "32"
+ProdBitPerPtrDiffT "32"
+ProdLargestAtomicInteger "Char"
+ProdLargestAtomicFloat "None"
+ProdIntDivRoundTo "Undefined"
+ProdEndianess "Unspecified"
+ProdWordSize "32"
+ProdShiftRightIntArith on
+ProdLongLongMode off
+ProdHWDeviceType "32-bit Generic"
+TargetBitPerChar "8"
+TargetBitPerShort "16"
+TargetBitPerInt "32"
+TargetBitPerLong "32"
+TargetBitPerLongLong "64"
+TargetBitPerFloat "32"
+TargetBitPerDouble "64"
+TargetBitPerPointer "32"
+TargetBitPerSizeT "32"
+TargetBitPerPtrDiffT "32"
+TargetLargestAtomicInteger "Char"
+TargetLargestAtomicFloat "None"
+TargetShiftRightIntArith on
+TargetLongLongMode off
+TargetIntDivRoundTo "Undefined"
+TargetEndianess "Unspecified"
+TargetWordSize "32"
+TargetPreprocMaxBitsSint "32"
+TargetPreprocMaxBitsUint "32"
+TargetHWDeviceType "Specified"
+TargetUnknown off
+ProdEqTarget on
+UseEmbeddedCoderFeatures on
+UseSimulinkCoderFeatures on
+HardwareBoardFeatureSet "EmbeddedCoderHSP"
+}
+
+Simulink.ModelReferenceCC {
+$ObjectID 25
+Version "19.1.1"
+$ClassName "Simulink.ModelReferenceCC"
+DisabledProps []
+Description ""
+Components []
+UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+EnableRefExpFcnMdlSchedulingChecks on
+CheckModelReferenceTargetMessage "error"
+EnableParallelModelReferenceBuilds off
+ParallelModelReferenceErrorOnInvalidPool on
+ParallelModelReferenceMATLABWorkerInit "None"
+ModelReferenceNumInstancesAllowed "Multi"
+PropagateVarSize "Infer from blocks in model"
+ModelDependencies ""
+ModelReferencePassRootInputsByReference on
+ModelReferenceMinAlgLoopOccurrences off
+PropagateSignalLabelsOutOfModel off
+SupportModelReferenceSimTargetCustomCode off
+}
+
+Simulink.SFSimCC {
+$ObjectID 26
+Version "19.1.1"
+$ClassName "Simulink.SFSimCC"
+DisabledProps []
+Description ""
+Components []
+SimCustomSourceCode ""
+SimCustomHeaderCode ""
+SimCustomInitializer ""
+SimCustomTerminator ""
+SimReservedNameArray []
+SimUserSources ""
+SimUserIncludeDirs ""
+SimUserLibraries ""
+SimUserDefines ""
+SimCustomCompilerFlags ""
+SimCustomLinkerFlags ""
+SFSimEcho on
+SimCtrlC on
+SimIntegrity on
+SimUseLocalCustomCode off
+SimParseCustomCode on
+SimAnalyzeCustomCode off
+SimBuildMode "sf_incremental_build"
+SimGenImportedTypeDefs off
+ModelFunctionsGlobalVisibility on
+CompileTimeRecursionLimit "50"
+EnableRuntimeRecursion on
+MATLABDynamicMemAlloc on
+MATLABDynamicMemAllocThreshold "65536"
+CustomCodeFunctionArrayLayout []
+DefaultCustomCodeFunctionArrayLayout "NotSpecified"
+CustomCodeUndefinedFunction "UseInterfaceOnly"
+}
+
+Simulink.RTWCC {
+BackupClass "Simulink.RTWCC"
+$ObjectID 27
+Version "19.1.1"
+$ClassName "Simulink.RTWCC"
+Description "Generic Real-Time Target"
+SystemTargetFile "grt.tlc"
+HardwareBoard "None"
+ShowCustomHardwareApp off
+ShowEmbeddedHardwareApp off
+TLCOptions ""
+GenCodeOnly off
+MakeCommand "make_rtw"
+GenerateMakefile on
+PackageGeneratedCodeAndArtifacts off
+PackageName ""
+TemplateMakefile "grt_default_tmf"
+PostCodeGenCommand ""
+GenerateReport off
+RTWVerbose on
+RetainRTWFile off
+RTWBuildHooks []
+ProfileTLC off
+TLCDebug off
+TLCCoverage off
+TLCAssert off
+RTWUseLocalCustomCode off
+RTWUseSimCustomCode off
+CustomSourceCode ""
+CustomHeaderCode ""
+CustomInclude ""
+CustomSource ""
+CustomLibrary ""
+CustomDefine ""
+CustomBLASCallback ""
+CustomLAPACKCallback ""
+CustomFFTCallback ""
+CustomInitializer ""
+CustomTerminator ""
+Toolchain "Automatically locate an installed toolchain"
+BuildConfiguration "Faster Builds"
+CustomToolchainOptions []
+IncludeHyperlinkInReport off
+LaunchReport off
+PortableWordSizes off
+CreateSILPILBlock "None"
+CodeExecutionProfiling off
+CodeExecutionProfileVariable "executionProfile"
+CodeProfilingSaveOptions "SummaryOnly"
+CodeProfilingInstrumentation off
+SILDebugging off
+TargetLang "C"
+IncludeBusHierarchyInRTWFileBlockHierarchyMap off
+GenerateTraceInfo off
+GenerateTraceReport off
+GenerateTraceReportSl off
+GenerateTraceReportSf off
+GenerateTraceReportEml off
+GenerateWebview off
+GenerateCodeMetricsReport off
+GenerateCodeReplacementReport off
+GenerateMissedCodeReplacementReport off
+RTWCompilerOptimization off
+ObjectivePriorities []
+RTWCustomCompilerOptimizations ""
+CheckMdlBeforeBuild "Off"
+SharedConstantsCachingThreshold "1024"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 16
+Cell "IncludeHyperlinkInReport"
+Cell "GenerateTraceInfo"
+Cell "GenerateTraceReport"
+Cell "GenerateTraceReportSl"
+Cell "GenerateTraceReportSf"
+Cell "GenerateTraceReportEml"
+Cell "PortableWordSizes"
+Cell "GenerateWebview"
+Cell "GenerateCodeMetricsReport"
+Cell "GenerateCodeReplacementReport"
+Cell "GenerateErtSFunction"
+Cell "CreateSILPILBlock"
+Cell "CodeExecutionProfiling"
+Cell "CodeProfilingSaveOptions"
+Cell "CodeProfilingInstrumentation"
+Cell "GenerateMissedCodeReplacementReport"
+}
+
+Array {
+PropName "Components"
+Type "Handle"
+Dimension 2
+Object {
+$ObjectID 28
+Version "19.1.1"
+$ClassName "Simulink.CodeAppCC"
+Description ""
+Components []
+Comment ""
+ForceParamTrailComments off
+GenerateComments on
+CommentStyle "Auto"
+IgnoreCustomStorageClasses on
+IgnoreTestpoints off
+MaxIdLength "31"
+PreserveName off
+PreserveNameWithParent off
+ShowEliminatedStatement off
+OperatorAnnotations off
+SimulinkDataObjDesc off
+SFDataObjDesc off
+MATLABFcnDesc off
+MangleLength "1"
+SharedChecksumLength "8"
+CustomSymbolStrGlobalVar "$R$N$M"
+CustomSymbolStrType "$N$R$M_T"
+CustomSymbolStrField "$N$M"
+CustomSymbolStrFcn "$R$N$M$F"
+CustomSymbolStrModelFcn "$R$N"
+CustomSymbolStrFcnArg "rt$I$N$M"
+CustomSymbolStrBlkIO "rtb_$N$M"
+CustomSymbolStrTmpVar "$N$M"
+CustomSymbolStrMacro "$R$N$M"
+CustomSymbolStrUtil "$N$C"
+CustomSymbolStrEmxType "emxArray_$M$N"
+CustomSymbolStrEmxFcn "emx$M$N"
+CustomUserTokenString ""
+CustomCommentsFcn ""
+DefineNamingRule "None"
+DefineNamingFcn ""
+ParamNamingRule "None"
+ParamNamingFcn ""
+SignalNamingRule "None"
+SignalNamingFcn ""
+InsertBlockDesc off
+InsertPolySpaceComments off
+SimulinkBlockComments on
+BlockCommentType "BlockPathComment"
+StateflowObjectComments on
+MATLABSourceComments off
+EnableCustomComments off
+InternalIdentifierFile ""
+InternalIdentifier "Shortened"
+InlinedPrmAccess "Literals"
+ReqsInCode off
+UseSimReservedNames off
+ReservedNameArray []
+EnumMemberNameClash "error"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 28
+Cell "IgnoreCustomStorageClasses"
+Cell "IgnoreTestpoints"
+Cell "InsertBlockDesc"
+Cell "InsertPolySpaceComments"
+Cell "SFDataObjDesc"
+Cell "MATLABFcnDesc"
+Cell "SimulinkDataObjDesc"
+Cell "DefineNamingRule"
+Cell "SignalNamingRule"
+Cell "ParamNamingRule"
+Cell "InternalIdentifier"
+Cell "InlinedPrmAccess"
+Cell "CustomSymbolStr"
+Cell "CustomSymbolStrGlobalVar"
+Cell "CustomSymbolStrType"
+Cell "CustomSymbolStrField"
+Cell "CustomSymbolStrFcn"
+Cell "CustomSymbolStrFcnArg"
+Cell "CustomSymbolStrBlkIO"
+Cell "CustomSymbolStrTmpVar"
+Cell "CustomSymbolStrMacro"
+Cell "CustomSymbolStrUtil"
+Cell "ReqsInCode"
+Cell "BlockCommentType"
+Cell "CustomSymbolStrModelFcn"
+Cell "CustomSymbolStrEmxType"
+Cell "CustomSymbolStrEmxFcn"
+Cell "CustomUserTokenString"
+}
+}
+
+Object {
+BackupClass "Simulink.TargetCC"
+$ObjectID 29
+Version "19.1.1"
+$ClassName "Simulink.GRTTargetCC"
+Description ""
+Components []
+TargetFcnLib "ansi_tfl_table_tmw.mat"
+TargetLibSuffix ""
+TargetPreCompLibLocation ""
+GenFloatMathFcnCalls "NOT IN USE"
+TargetLangStandard "C89/C90 (ANSI)"
+CodeReplacementLibrary "None"
+UtilityFuncGeneration "Auto"
+MultiwordTypeDef "System defined"
+MultiwordLength "2048"
+DynamicStringBufferSize "256"
+GenerateFullHeader on
+InferredTypesCompatibility off
+ExistingSharedCode ""
+GenerateSampleERTMain off
+GenerateTestInterfaces off
+ModelReferenceCompliant on
+ParMdlRefBuildCompliant on
+CompOptLevelCompliant on
+ConcurrentExecutionCompliant on
+IncludeMdlTerminateFcn on
+GeneratePreprocessorConditionals "Disable all"
+CombineOutputUpdateFcns on
+CombineSignalStateStructs off
+GroupInternalDataByFunction off
+SuppressErrorStatus off
+IncludeFileDelimiter "Auto"
+ERTCustomFileBanners off
+SupportAbsoluteTime on
+LogVarNameModifier "rt_"
+MatFileLogging on
+MultiInstanceERTCode off
+CodeInterfacePackaging "Nonreusable function"
+PurelyIntegerCode off
+SupportNonFinite on
+SupportComplex on
+SupportContinuousTime on
+SupportNonInlinedSFcns on
+RemoveDisableFunc off
+RemoveResetFunc off
+SupportVariableSizeSignals off
+ParenthesesLevel "Nominal"
+CastingMode "Nominal"
+PreserveStateflowLocalDataDimensions off
+MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
+ModelStepFunctionPrototypeControlCompliant off
+CPPClassGenCompliant on
+AutosarCompliant off
+MDXCompliant off
+GRTInterface off
+GenerateAllocFcn off
+UseToolchainInfoCompliant on
+GenerateSharedConstants on
+CoderGroups []
+AccessMethods []
+LookupTableObjectStructAxisOrder "1,2,3,4,..."
+LUTObjectStructOrderExplicitValues "Size,Breakpoints,Table"
+LUTObjectStructOrderEvenSpacing "Size,Breakpoints,Table"
+ArrayLayout "Column-major"
+UnsupportedSFcnMsg "error"
+ERTHeaderFileRootName "$R$E"
+ERTSourceFileRootName "$R$E"
+ERTDataFileRootName "$R_data"
+UseMalloc off
+ExtMode off
+ExtModeStaticAlloc off
+ExtModeTesting off
+ExtModeStaticAllocSize "1000000"
+ExtModeTransport "0"
+ExtModeMexFile "ext_comm"
+ExtModeMexArgs ""
+ExtModeIntrfLevel "Level1"
+RTWCAPISignals off
+RTWCAPIParams off
+RTWCAPIStates off
+RTWCAPIRootIO off
+GenerateASAP2 off
+MultiInstanceErrorCode "Error"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 18
+Cell "GeneratePreprocessorConditionals"
+Cell "IncludeMdlTerminateFcn"
+Cell "SupportNonInlinedSFcns"
+Cell "SuppressErrorStatus"
+Cell "ERTCustomFileBanners"
+Cell "GenerateSampleERTMain"
+Cell "GenerateTestInterfaces"
+Cell "ModelStepFunctionPrototypeControlCompliant"
+Cell "CPPClassGenCompliant"
+Cell "GenerateAllocFcn"
+Cell "PurelyIntegerCode"
+Cell "SupportComplex"
+Cell "SupportAbsoluteTime"
+Cell "SupportContinuousTime"
+Cell "ExistingSharedCode"
+Cell "RemoveDisableFunc"
+Cell "RemoveResetFunc"
+Cell "PreserveStateflowLocalDataDimensions"
+}
+}
+}
+}
+
+SlCovCC.ConfigComp {
+$ObjectID 30
+Version "19.1.1"
+$ClassName "SlCovCC.ConfigComp"
+DisabledProps []
+Description "Simulink Coverage Configuration Component"
+Components []
+Name "Simulink Coverage"
+CovEnable off
+CovScope "EntireSystem"
+CovIncludeTopModel on
+RecordCoverage off
+CovPath "/"
+CovSaveName "covdata"
+CovCompData ""
+CovMetricSettings "dw"
+CovFilter ""
+CovHTMLOptions ""
+CovNameIncrementing off
+CovHtmlReporting on
+CovForceBlockReductionOff on
+CovEnableCumulative on
+CovSaveCumulativeToWorkspaceVar on
+CovSaveSingleToWorkspaceVar on
+CovCumulativeVarName "covCumulativeData"
+CovCumulativeReport off
+CovSaveOutputData on
+CovOutputDir "slcov_output/$ModelName$"
+CovDataFileName "$ModelName$_cvdata"
+CovShowResultsExplorer on
+CovReportOnPause on
+CovModelRefEnable off
+CovModelRefExcluded ""
+CovExternalEMLEnable off
+CovSFcnEnable off
+CovBoundaryAbsTol "1e-05"
+CovBoundaryRelTol "0.01"
+CovUseTimeInterval off
+CovStartTime "0"
+CovStopTime "0"
+CovMcdcMode "Masking"
+}
+
+hdlcoderui.hdlcc {
+$ObjectID 31
+Version "19.1.1"
+$ClassName "hdlcoderui.hdlcc"
+DisabledProps []
+Description "HDL Coder custom configuration component"
+Components []
+Name "HDL Coder"
+HDLCActiveTab "0"
+Array {
+PropName "HDLConfigFile"
+Type "Cell"
+Dimension 1
+Cell ""
+}
+}
+}
+}
+}
+
+System {
+PaperOrientation "landscape"
+PaperPositionMode "auto"
+PaperType "usletter"
+PaperUnits "inches"
+TiledPaperMargins [0.500000, 0.500000, 0.500000, 0.500000]
+TiledPageScale "1"
+ShowPageBoundaries off
+ModelBrowserVisibility off
+ModelBrowserWidth "200"
+ScreenColor "white"
+ZoomFactor "100"
+PortBlocksUseCompactNotation off
+Open off
+}
+
+BlockDefaults {
+ForegroundColor "black"
+BackgroundColor "white"
+DropShadow off
+NamePlacement "normal"
+FontName "Helvetica"
+FontSize "10"
+FontWeight "normal"
+FontAngle "normal"
+ShowName on
+HideAutomaticName on
+BlockRotation "0"
+BlockMirror off
+}
+
+AnnotationDefaults {
+HorizontalAlignment "center"
+VerticalAlignment "middle"
+ForegroundColor "black"
+BackgroundColor "white"
+DropShadow off
+FontName "Helvetica"
+FontSize "10"
+FontWeight "normal"
+FontAngle "normal"
+MarkupType "model"
+UseDisplayTextAsClickCallback off
+AnnotationType "note_annotation"
+FixedHeight off
+FixedWidth off
+Interpreter off
+}
+
+LineDefaults {
+FontName "Helvetica"
+FontSize "9"
+FontWeight "normal"
+FontAngle "normal"
+}
+
+MaskDefaults {
+SelfModifiable "off"
+IconFrame "on"
+IconOpaque "opaque"
+RunInitForIconRedraw "analyze"
+IconRotate "none"
+PortRotate "default"
+IconUnits "autoscale"
+Display ""
+
+}
+
+MaskParameterDefaults {
+Evaluate "on"
+Tunable "on"
+NeverSave "off"
+Internal "off"
+ReadOnly "off"
+Enabled "on"
+Visible "on"
+ToolTip "on"
+Value ""
+}
+
+BlockParameterDefaults {
+Block {
+BlockType "Bias"
+Bias "0"
+SaturateOnIntegerOverflow on
+}
+
+Block {
+BlockType "BusCreator"
+DisplayOption "none"
+OutDataTypeStr "Inherit: auto"
+NonVirtualBus off
+}
+
+Block {
+BlockType "BusSelector"
+}
+
+Block {
+BlockType "Clock"
+DisplayTime off
+Decimation "10"
+}
+
+Block {
+BlockType "Concatenate"
+NumInputs "2"
+Mode "Vector"
+ConcatenateDimension "1"
+}
+
+Block {
+BlockType "Constant"
+Value "1"
+VectorParams1D on
+SamplingMode "Sample based"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Inherit from 'Constant value'"
+LockScale off
+SampleTime "inf"
+FramePeriod "inf"
+PreserveConstantTs off
+}
+
+Block {
+BlockType "Demux"
+Outputs "4"
+DisplayOption "none"
+BusSelectionMode off
+}
+
+Block {
+BlockType "DiscretePulseGenerator"
+PulseType "Sample based"
+TimeSource "Use simulation time"
+Amplitude "1"
+Period "2"
+PulseWidth "1"
+PhaseDelay "0"
+SampleTime "1"
+VectorParams1D on
+}
+
+Block {
+BlockType "Display"
+Format "short"
+Decimation "10"
+Floating off
+Lockdown off
+SampleTime "-1"
+}
+
+Block {
+BlockType "EnablePort"
+StatesWhenEnabling "held"
+PropagateVarSize "Only when enabling"
+ShowOutputPort off
+ZeroCross on
+DisallowConstTsAndPrmTs off
+PortDimensions "1"
+SampleTime "-1"
+OutMin []
+OutMax []
+OutDataTypeStr "double"
+Interpolate on
+}
+
+Block {
+BlockType "From"
+GotoTag "A"
+IconDisplay "Tag"
+TagVisibility "local"
+}
+
+Block {
+BlockType "FromWorkspace"
+VariableName "simulink_input"
+OutDataTypeStr "Inherit: auto"
+SampleTime "-1"
+Interpolate on
+ZeroCross off
+OutputAfterFinalValue "Extrapolation"
+}
+
+Block {
+BlockType "Gain"
+Gain "1"
+Multiplication "Element-wise(K.*u)"
+ParamMin []
+ParamMax []
+ParamDataTypeStr "Inherit: Same as input"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Same as input"
+LockScale off
+RndMeth "Floor"
+SaturateOnIntegerOverflow on
+SampleTime "-1"
+}
+
+Block {
+BlockType "Goto"
+GotoTag "A"
+IconDisplay "Tag"
+TagVisibility "local"
+}
+
+Block {
+BlockType "Ground"
+}
+
+Block {
+BlockType "Inport"
+Port "1"
+OutputFunctionCall off
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: auto"
+LockScale off
+BusOutputAsStruct off
+Unit "inherit"
+PortDimensions "-1"
+VarSizeSig "Inherit"
+SampleTime "-1"
+SignalType "auto"
+SamplingMode "auto"
+LatchByDelayingOutsideSignal off
+LatchInputForFeedbackSignals off
+Interpolate on
+}
+
+Block {
+BlockType "InportShadow"
+Port "1"
+OutputFunctionCall off
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: auto"
+LockScale off
+BusOutputAsStruct off
+Unit "inherit"
+PortDimensions "-1"
+VarSizeSig "Inherit"
+SampleTime "-1"
+SignalType "auto"
+SamplingMode "auto"
+LatchByDelayingOutsideSignal off
+LatchInputForFeedbackSignals off
+Interpolate on
+}
+
+Block {
+BlockType "Logic"
+Operator "AND"
+Inputs "2"
+IconShape "rectangular"
+AllPortsSameDT on
+OutDataTypeStr "Inherit: Logical (see Configuration Parameters: Optimization)"
+SampleTime "-1"
+}
+
+Block {
+BlockType "Lookup_n-D"
+NumberOfTableDimensions "2"
+DataSpecification "Table and breakpoints"
+BreakpointsSpecification "Explicit values"
+BreakpointsForDimension1 [10,22,31]
+BreakpointsForDimension2 [10,22,31]
+BreakpointsForDimension3 [1:3]
+BreakpointsForDimension4 [1:3]
+BreakpointsForDimension5 [1:3]
+BreakpointsForDimension6 [1:3]
+BreakpointsForDimension7 [1:3]
+BreakpointsForDimension8 [1:3]
+BreakpointsForDimension9 [1:3]
+BreakpointsForDimension10 [1:3]
+BreakpointsForDimension11 [1:3]
+BreakpointsForDimension12 [1:3]
+BreakpointsForDimension13 [1:3]
+BreakpointsForDimension14 [1:3]
+BreakpointsForDimension15 [1:3]
+BreakpointsForDimension16 [1:3]
+BreakpointsForDimension17 [1:3]
+BreakpointsForDimension18 [1:3]
+BreakpointsForDimension19 [1:3]
+BreakpointsForDimension20 [1:3]
+BreakpointsForDimension21 [1:3]
+BreakpointsForDimension22 [1:3]
+BreakpointsForDimension23 [1:3]
+BreakpointsForDimension24 [1:3]
+BreakpointsForDimension25 [1:3]
+BreakpointsForDimension26 [1:3]
+BreakpointsForDimension27 [1:3]
+BreakpointsForDimension28 [1:3]
+BreakpointsForDimension29 [1:3]
+BreakpointsForDimension30 [1:3]
+BreakpointsForDimension1FirstPoint "1"
+BreakpointsForDimension2FirstPoint "1"
+BreakpointsForDimension3FirstPoint "1"
+BreakpointsForDimension4FirstPoint "1"
+BreakpointsForDimension5FirstPoint "1"
+BreakpointsForDimension6FirstPoint "1"
+BreakpointsForDimension7FirstPoint "1"
+BreakpointsForDimension8FirstPoint "1"
+BreakpointsForDimension9FirstPoint "1"
+BreakpointsForDimension10FirstPoint "1"
+BreakpointsForDimension11FirstPoint "1"
+BreakpointsForDimension12FirstPoint "1"
+BreakpointsForDimension13FirstPoint "1"
+BreakpointsForDimension14FirstPoint "1"
+BreakpointsForDimension15FirstPoint "1"
+BreakpointsForDimension16FirstPoint "1"
+BreakpointsForDimension17FirstPoint "1"
+BreakpointsForDimension18FirstPoint "1"
+BreakpointsForDimension19FirstPoint "1"
+BreakpointsForDimension20FirstPoint "1"
+BreakpointsForDimension21FirstPoint "1"
+BreakpointsForDimension22FirstPoint "1"
+BreakpointsForDimension23FirstPoint "1"
+BreakpointsForDimension24FirstPoint "1"
+BreakpointsForDimension25FirstPoint "1"
+BreakpointsForDimension26FirstPoint "1"
+BreakpointsForDimension27FirstPoint "1"
+BreakpointsForDimension28FirstPoint "1"
+BreakpointsForDimension29FirstPoint "1"
+BreakpointsForDimension30FirstPoint "1"
+BreakpointsForDimension1Spacing "1"
+BreakpointsForDimension2Spacing "1"
+BreakpointsForDimension3Spacing "1"
+BreakpointsForDimension4Spacing "1"
+BreakpointsForDimension5Spacing "1"
+BreakpointsForDimension6Spacing "1"
+BreakpointsForDimension7Spacing "1"
+BreakpointsForDimension8Spacing "1"
+BreakpointsForDimension9Spacing "1"
+BreakpointsForDimension10Spacing "1"
+BreakpointsForDimension11Spacing "1"
+BreakpointsForDimension12Spacing "1"
+BreakpointsForDimension13Spacing "1"
+BreakpointsForDimension14Spacing "1"
+BreakpointsForDimension15Spacing "1"
+BreakpointsForDimension16Spacing "1"
+BreakpointsForDimension17Spacing "1"
+BreakpointsForDimension18Spacing "1"
+BreakpointsForDimension19Spacing "1"
+BreakpointsForDimension20Spacing "1"
+BreakpointsForDimension21Spacing "1"
+BreakpointsForDimension22Spacing "1"
+BreakpointsForDimension23Spacing "1"
+BreakpointsForDimension24Spacing "1"
+BreakpointsForDimension25Spacing "1"
+BreakpointsForDimension26Spacing "1"
+BreakpointsForDimension27Spacing "1"
+BreakpointsForDimension28Spacing "1"
+BreakpointsForDimension29Spacing "1"
+BreakpointsForDimension30Spacing "1"
+BreakpointsForDimension1Min []
+BreakpointsForDimension2Min []
+BreakpointsForDimension3Min []
+BreakpointsForDimension4Min []
+BreakpointsForDimension5Min []
+BreakpointsForDimension6Min []
+BreakpointsForDimension7Min []
+BreakpointsForDimension8Min []
+BreakpointsForDimension9Min []
+BreakpointsForDimension10Min []
+BreakpointsForDimension11Min []
+BreakpointsForDimension12Min []
+BreakpointsForDimension13Min []
+BreakpointsForDimension14Min []
+BreakpointsForDimension15Min []
+BreakpointsForDimension16Min []
+BreakpointsForDimension17Min []
+BreakpointsForDimension18Min []
+BreakpointsForDimension19Min []
+BreakpointsForDimension20Min []
+BreakpointsForDimension21Min []
+BreakpointsForDimension22Min []
+BreakpointsForDimension23Min []
+BreakpointsForDimension24Min []
+BreakpointsForDimension25Min []
+BreakpointsForDimension26Min []
+BreakpointsForDimension27Min []
+BreakpointsForDimension28Min []
+BreakpointsForDimension29Min []
+BreakpointsForDimension30Min []
+BreakpointsForDimension1Max []
+BreakpointsForDimension2Max []
+BreakpointsForDimension3Max []
+BreakpointsForDimension4Max []
+BreakpointsForDimension5Max []
+BreakpointsForDimension6Max []
+BreakpointsForDimension7Max []
+BreakpointsForDimension8Max []
+BreakpointsForDimension9Max []
+BreakpointsForDimension10Max []
+BreakpointsForDimension11Max []
+BreakpointsForDimension12Max []
+BreakpointsForDimension13Max []
+BreakpointsForDimension14Max []
+BreakpointsForDimension15Max []
+BreakpointsForDimension16Max []
+BreakpointsForDimension17Max []
+BreakpointsForDimension18Max []
+BreakpointsForDimension19Max []
+BreakpointsForDimension20Max []
+BreakpointsForDimension21Max []
+BreakpointsForDimension22Max []
+BreakpointsForDimension23Max []
+BreakpointsForDimension24Max []
+BreakpointsForDimension25Max []
+BreakpointsForDimension26Max []
+BreakpointsForDimension27Max []
+BreakpointsForDimension28Max []
+BreakpointsForDimension29Max []
+BreakpointsForDimension30Max []
+BreakpointsForDimension1DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension2DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension3DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension4DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension5DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension6DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension7DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension8DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension9DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension10DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension11DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension12DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension13DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension14DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension15DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension16DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension17DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension18DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension19DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension20DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension21DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension22DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension23DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension24DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension25DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension26DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension27DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension28DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension29DataTypeStr "Inherit: Same as corresponding input"
+BreakpointsForDimension30DataTypeStr "Inherit: Same as corresponding input"
+IndexSearchMethod "Binary search"
+BeginIndexSearchUsingPreviousIndexResult off
+UseOneInputPortForAllInputData off
+Table [4 5 6;16 19 20;10 18 23]
+TableMin []
+TableMax []
+TableDataTypeStr "Inherit: Same as output"
+IntermediateResultsDataTypeStr "Inherit: Same as output"
+InterpMethod "Linear point-slope"
+ExtrapMethod "Linear"
+DiagnosticForOutOfRangeInput "None"
+RemoveProtectionInput off
+UseLastTableValue off
+SampleTime "-1"
+InternalRulePriority "Precision"
+InputSameDT on
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Same as first input"
+LockScale off
+RndMeth "Floor"
+SaturateOnIntegerOverflow off
+FractionDataTypeStr "Inherit: Inherit via internal rule"
+SupportTunableTableSize off
+MaximumIndicesForEachDimension []
+LUTDesignTableMode "Redesign Table"
+LUTDesignDataSource "Block Dialog"
+LUTDesignFunctionName "sqrt(x)"
+LUTDesignUseExistingBP on
+LUTDesignRelError "0.01"
+LUTDesignAbsError "1e-6"
+}
+
+Block {
+BlockType "MATLABFcn"
+MATLABFcn "sin"
+OutputDimensions "-1"
+OutputSignalType "auto"
+Output1D on
+SampleTime "-1"
+}
+
+Block {
+BlockType "ManualSwitch"
+CurrentSetting "1"
+varsize off
+SampleTime "-1"
+}
+
+Block {
+BlockType "Math"
+Operator "exp"
+SignedPower on
+OutputSignalType "auto"
+SampleTime "-1"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Same as first input"
+LockScale off
+RndMeth "Floor"
+SaturateOnIntegerOverflow on
+IntermediateResultsDataTypeStr "Inherit: Inherit via internal rule"
+AlgorithmType "Newton-Raphson"
+Iterations "3"
+}
+
+Block {
+BlockType "MinMax"
+Function "min"
+Inputs "1"
+InputSameDT on
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Inherit via internal rule"
+LockScale off
+RndMeth "Floor"
+SaturateOnIntegerOverflow on
+ZeroCross on
+SampleTime "-1"
+}
+
+Block {
+BlockType "Mux"
+Inputs "4"
+DisplayOption "none"
+UseBusObject off
+BusObject "BusObject"
+NonVirtualBus off
+}
+
+Block {
+BlockType "Outport"
+Port "1"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: auto"
+LockScale off
+BusOutputAsStruct off
+Unit "inherit"
+PortDimensions "-1"
+VarSizeSig "Inherit"
+SampleTime "-1"
+SignalType "auto"
+SamplingMode "auto"
+EnsureOutportIsVirtual off
+SourceOfInitialOutputValue "Dialog"
+OutputWhenDisabled "held"
+InitialOutput []
+MustResolveToSignalObject off
+OutputWhenUnConnected off
+OutputWhenUnconnectedValue "0"
+VectorParamsAs1DForOutWhenUnconnected on
+}
+
+Block {
+BlockType "Product"
+Inputs "2"
+Multiplication "Element-wise(.*)"
+CollapseMode "All dimensions"
+CollapseDim "1"
+InputSameDT on
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Same as first input"
+LockScale off
+RndMeth "Zero"
+SaturateOnIntegerOverflow on
+SampleTime "-1"
+}
+
+Block {
+BlockType "RateLimiter"
+RisingSlewLimit "1"
+FallingSlewLimit "-1"
+SampleTimeMode "continuous"
+InitialCondition "0"
+LinearizeAsGain on
+}
+
+Block {
+BlockType "RelationalOperator"
+Operator ">="
+InputSameDT on
+OutDataTypeStr "Inherit: Logical (see Configuration Parameters: Optimization)"
+ZeroCross on
+SampleTime "-1"
+RndMeth "Nearest"
+}
+
+Block {
+BlockType "Rounding"
+Operator "floor"
+SampleTime "-1"
+}
+
+Block {
+BlockType "S-Function"
+FunctionName "system"
+SFunctionModules "''"
+PortCounts []
+MultiThreadCoSim "auto"
+}
+
+Block {
+BlockType "Saturate"
+UpperLimitSource "Dialog"
+UpperLimit "0.5"
+LowerLimitSource "Dialog"
+LowerLimit "-0.5"
+LinearizeAsGain on
+ZeroCross on
+SampleTime "-1"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Same as input"
+LockScale off
+RndMeth "Floor"
+}
+
+Block {
+BlockType "Scope"
+DefaultConfigurationName "Simulink.scopes.TimeScopeBlockCfg"
+}
+
+Block {
+BlockType "Selector"
+NumberOfDimensions "1"
+IndexMode "One-based"
+InputPortWidth "-1"
+SampleTime "-1"
+}
+
+Block {
+BlockType "SubSystem"
+ShowPortLabels "FromPortIcon"
+Permissions "ReadWrite"
+PermitHierarchicalResolution "All"
+TreatAsAtomicUnit off
+MinAlgLoopOccurrences off
+PropExecContextOutsideSubsystem off
+ScheduleAs "Sample time"
+SystemSampleTime "-1"
+RTWSystemCode "Auto"
+RTWFcnNameOpts "Auto"
+RTWFileNameOpts "Auto"
+FunctionInterfaceSpec "void_void"
+FunctionWithSeparateData off
+RTWMemSecFuncInitTerm "Inherit from model"
+RTWMemSecFuncExecute "Inherit from model"
+RTWMemSecDataConstants "Inherit from model"
+RTWMemSecDataInternal "Inherit from model"
+RTWMemSecDataParameters "Inherit from model"
+SimViewingDevice off
+DataTypeOverride "UseLocalSettings"
+DataTypeOverrideAppliesTo "AllNumericTypes"
+MinMaxOverflowLogging "UseLocalSettings"
+Opaque off
+MaskHideContents off
+SFBlockType "NONE"
+VariantControlMode "Expression"
+Variant off
+GeneratePreprocessorConditionals off
+AllowZeroVariantControls off
+PropagateVariantConditions off
+TreatAsGroupedWhenPropagatingVariantConditions on
+ContentPreviewEnabled off
+IsWebBlock off
+IsObserver off
+Latency "0"
+AutoFrameSizeCalculation off
+IsWebBlockPanel off
+}
+
+Block {
+BlockType "Sum"
+IconShape "rectangular"
+Inputs "++"
+CollapseMode "All dimensions"
+CollapseDim "1"
+InputSameDT on
+AccumDataTypeStr "Inherit: Inherit via internal rule"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Same as first input"
+LockScale off
+RndMeth "Floor"
+SaturateOnIntegerOverflow on
+SampleTime "-1"
+}
+
+Block {
+BlockType "Switch"
+Criteria "u2 >= Threshold"
+Threshold "0"
+InputSameDT on
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: Inherit via internal rule"
+LockScale off
+RndMeth "Floor"
+SaturateOnIntegerOverflow on
+ZeroCross on
+SampleTime "-1"
+AllowDiffInputSizes off
+}
+
+Block {
+BlockType "Terminator"
+}
+
+Block {
+BlockType "TriggerPort"
+TriggerType "rising"
+IsSimulinkFunction off
+FunctionVisibility "global"
+Variant off
+GeneratePreprocessorConditionals off
+StatesWhenEnabling "inherit"
+PropagateVarSize "During execution"
+ShowOutputPort off
+OutputDataType "auto"
+SampleTimeType "triggered"
+SampleTime "1"
+ZeroCross on
+DisallowConstTsAndPrmTs off
+InitialTriggerSignalState "compatibility (no trigger on first evaluation)"
+PortDimensions "-1"
+TriggerSignalSampleTime "-1"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: auto"
+Interpolate on
+}
+
+Block {
+BlockType "Trigonometry"
+Operator "sin"
+ApproximationMethod "None"
+NumberOfIterations "11"
+OutputSignalType "auto"
+SampleTime "-1"
+}
+
+Block {
+BlockType "UnitDelay"
+InitialCondition "0"
+InputProcessing "Elements as channels (sample based)"
+SampleTime "1"
+StateMustResolveToSignalObject off
+CodeGenStateStorageClass "Auto"
+HasFrameUpgradeWarning off
+}
+}
+}
+
+Stateflow {
+
+machine {
+id 1
+name "dummy_name"
+firstTarget 2
+sfVersion 80000019
+}
+
+chart {
+id 4
+treeNode [0 5 0 0]
+machine 1
+viewObj 4
+firstData 31
+firstTransition 38
+name "updateGoogleEarth/CameraLogic/CameraControl/CameraStateflow"
+windowPosition [374 491 800 383]
+viewLimits [116.859 2682.66 -76.495 1052.581]
+zoomFactor 2.051
+stateColor [0.3803921568627451 0.2745098039215687 0.1803921568627451]
+stateLabelColor [0.4588235294117647 0.2980392156862745 0.1411764705882353]
+transitionColor [0.3215686274509804 0.5450980392156862 0.7725490196078432]
+transitionLabelColor [0.3215686274509804 0.5450980392156862 0.7725490196078432]
+junctionColor [0.7764705882352941 0.4980392156862745 0]
+chartColor [1 0.9882352941176471 0.9254901960784314]
+screen [1 1 3200 1200 1.25]
+ssIdHighWaterMark 92
+decomposition CLUSTER_CHART
+chartFileNumber 1
+saturateOnIntegerOverflow 1
+userSpecifiedStateTransitionExecutionOrder 1
+disableImplicitCasting 1
+actionLanguage 2
+}
+
+state {
+id 5
+ssIdNumber 89
+treeNode [4 6 0 11]
+chart 4
+subviewer 4
+firstTransition 8
+labelString "Overhead"
+position [1042.842 40.0549 209.1222 278.8418]
+fontSize 12
+visible 0
+type OR_STATE
+decomposition CLUSTER_STATE
+}
+
+state {
+id 6
+ssIdNumber 36
+treeNode [5 0 0 7]
+chart 4
+subviewer 4
+labelString "Overhead\ndu: htOff=max(20,htAdj);\n hOff=hOff_in;"
+position [1081.6897 74.5946 141.1876 52.6505]
+fontSize 12
+visible 0
+type OR_STATE
+decomposition CLUSTER_STATE
+}
+
+state {
+id 7
+ssIdNumber 85
+treeNode [5 0 6 0]
+chart 4
+subviewer 4
+labelString "Delay\n"
+position [1084.298 256.7708 99.9882 46.3266]
+fontSize 12
+visible 0
+type OR_STATE
+decomposition CLUSTER_STATE
+}
+
+transition {
+id 8
+ssIdNumber 90
+linkNode [5 0 9]
+chart 4
+subviewer 4
+labelString ""
+labelPosition [1069.447 92.015 0 0]
+fontSize 12
+midPoint [1064.1596 96.2573]
+dataLimits [1054.63 1081.69 93.857 98.657]
+drawStyle SMART
+executionOrder 1
+
+src {
+intersection [0 1 -0 0 1054.6295 96.2573 0 0]
+}
+
+dst {
+id 6
+intersection [4 -1 0 0.5886 1081.6897 96.2573 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 9
+ssIdNumber 88
+linkNode [5 8 10]
+chart 4
+subviewer 4
+labelString "[htAdj > camHt_1UVal]"
+labelPosition [970.059 153.662 122.5 17]
+fontSize 12
+midPoint [1101.2026 196.008]
+dataLimits [1098.803 1103.603 127.245 256.771]
+drawStyle SMART
+executionOrder 2
+
+src {
+id 7
+intersection [1 0 -1 0.1691 1101.2026 256.7708 0 0]
+}
+
+dst {
+id 6
+intersection [3 0 1 0.8618 1101.2026 127.2451 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 10
+ssIdNumber 81
+linkNode [5 9 0]
+chart 4
+subviewer 4
+labelString "[htAdj < camHt_1UVal]"
+labelPosition [1125.259 197.304 122.5 17]
+fontSize 12
+midPoint [1115.6295 188.008]
+dataLimits [1113.229 1118.03 127.245 256.771]
+drawStyle SMART
+executionOrder 1
+
+src {
+id 6
+intersection [3 0 1 0.7596 1115.6295 127.2451 0 0]
+}
+
+dst {
+id 7
+intersection [1 0 -1 0.3134 1115.6295 256.7708 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+state {
+id 11
+ssIdNumber 14
+treeNode [4 12 5 22]
+chart 4
+subviewer 4
+firstJunction 19
+firstTransition 15
+labelString "Flat"
+position [228.3626 48.7793 663.57 106.0555]
+fontSize 12
+visible 0
+type OR_STATE
+decomposition CLUSTER_STATE
+}
+
+state {
+id 12
+ssIdNumber 3
+treeNode [11 0 0 13]
+chart 4
+subviewer 4
+labelString "PanRight\nen:hOff = -25;\ncoinRight = false;\n"
+position [759.2828 67.6056 123.3873 52.704]
+fontSize 12
+visible 0
+type OR_STATE
+decomposition CLUSTER_STATE
+}
+
+state {
+id 13
+ssIdNumber 2
+treeNode [11 0 12 14]
+chart 4
+subviewer 4
+labelString "PanLeft\nen:hOff = 25;\ncoinRight = true;\n"
+position [242.4382 69.1765 129.814 65.5676]
+fontSize 12
+visible 0
+type OR_STATE
+decomposition CLUSTER_STATE
+}
+
+state {
+id 14
+ssIdNumber 1
+treeNode [11 0 13 0]
+chart 4
+subviewer 4
+labelString "RearView\nentry: hOff = 0;\n htOff = camHt_1LVal;"
+position [454.3562 70.0675 133.8327 55.4563]
+fontSize 12
+visible 0
+type OR_STATE
+decomposition CLUSTER_STATE
+}
+
+transition {
+id 15
+ssIdNumber 4
+linkNode [11 0 16]
+chart 4
+subviewer 4
+labelString ""
+labelPosition [480.856 49.527 0 0]
+fontSize 12
+midPoint [486.5752 58.4946]
+dataLimits [480.401 492.984 55.853 70.067]
+drawStyle SMART
+executionOrder 1
+
+src {
+intersection [0 0.726 0.6877 0 480.4011 55.8532 0 0]
+}
+
+dst {
+id 14
+intersection [1 0 -1 0.2707 490.5841 70.0675 0 0]
+}
+
+slide {
+mode MIRROR_SLIDE
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 16
+ssIdNumber 34
+linkNode [11 15 17]
+chart 4
+subviewer 4
+labelString "after(6,sec)"
+labelPosition [377.298 63.34 62.75 17]
+fontSize 12
+midPoint [409.3042 77.862]
+dataLimits [372.252 454.356 75.427 80.227]
+drawStyle SMART
+executionOrder 1
+
+src {
+id 13
+intersection [2 1 0 0.133 372.2522 77.897 0 0]
+}
+
+dst {
+id 14
+intersection [4 -1 0 0.8601 454.3562 77.8269 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 17
+ssIdNumber 33
+linkNode [11 16 18]
+chart 4
+subviewer 4
+labelString "after(8,sec)"
+labelPosition [643.74 63.991 62.75 17]
+fontSize 12
+midPoint [677.7358 80.2421]
+dataLimits [588.189 759.283 77.842 82.642]
+drawStyle SMART
+executionOrder 1
+
+src {
+id 12
+intersection [4 -1 0 0.7602 759.2828 80.2421 0 0]
+}
+
+dst {
+id 14
+intersection [2 1 0 0.1835 588.1888 80.2421 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 18
+ssIdNumber 5
+linkNode [11 17 20]
+chart 4
+subviewer 4
+labelString "after(2,sec)"
+labelPosition [602.079 86.284 62.75 17]
+fontSize 12
+midPoint [619.4414 104.7413]
+dataLimits [588.189 658.694 102.341 107.141]
+drawStyle SMART
+executionOrder 1
+
+src {
+id 14
+intersection [2 1 0 0.6252 588.1888 104.7413 0 0]
+}
+
+dst {
+id 19
+intersection [4 -1 0 0 658.694 104.7413 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 20
+ssIdNumber 8
+linkNode [11 18 21]
+chart 4
+subviewer 4
+labelString "[coinRight]"
+labelPosition [695.332 116.811 58.5 17]
+fontSize 12
+midPoint [711.9884 104.7413]
+dataLimits [672.694 759.283 102.341 107.141]
+stampAngle -1.2933
+drawStyle SMART
+executionOrder 1
+
+src {
+id 19
+intersection [2 1 0 0 672.694 104.7413 0 0]
+}
+
+dst {
+id 12
+intersection [4 -1 0 0.2954 759.2828 104.7413 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 21
+ssIdNumber 9
+linkNode [11 20 0]
+chart 4
+subviewer 4
+labelString ""
+labelPosition [494.566 130.334 0 0]
+fontSize 12
+midPoint [532.209 143.3422]
+dataLimits [372.252 661.001 109.935 144.004]
+stampAngle 2.7979
+drawStyle SMART
+executionOrder 2
+
+src {
+id 19
+intersection [3 -0.6704 0.742 0 661.0011 109.9353 0 0]
+}
+
+dst {
+id 13
+intersection [2 1 0 0.8453 372.2522 124.5997 0 0]
+}
+
+slide {
+mode MIRROR_SLIDE
+sticky BOTH_STICK
+}
+
+}
+
+junction {
+id 19
+ssIdNumber 6
+linkNode [11 0 0]
+chart 4
+subviewer 4
+position [665.694 104.7413 7]
+type CONNECTIVE_JUNCTION
+}
+
+state {
+id 22
+ssIdNumber 78
+treeNode [4 23 11 0]
+chart 4
+subviewer 4
+firstJunction 26
+firstTransition 25
+labelString "Shallow"
+position [227.9072 202.8639 661.8816 113.3719]
+fontSize 12
+visible 0
+type OR_STATE
+decomposition CLUSTER_STATE
+}
+
+state {
+id 23
+ssIdNumber 69
+treeNode [22 0 0 24]
+chart 4
+subviewer 4
+labelString "PanRight\nen:hOff = -25;\ncoinRight = false;"
+position [756.5763 222.2531 123.3873 76.622]
+fontSize 12
+visible 0
+type OR_STATE
+decomposition CLUSTER_STATE
+}
+
+state {
+id 24
+ssIdNumber 76
+treeNode [22 0 23 0]
+chart 4
+subviewer 4
+labelString "PanLeft\nen:hOff = 25;\ncoinRight = true;\n"
+position [241.42 226.638 126.6872 71.2878]
+fontSize 12
+visible 0
+type OR_STATE
+decomposition CLUSTER_STATE
+}
+
+transition {
+id 25
+ssIdNumber 71
+linkNode [22 0 27]
+chart 4
+subviewer 4
+labelString "{ htOff=camHt_1UVal;}"
+labelPosition [413.806 236.226 122.25 17]
+fontSize 12
+midPoint [547.084 231.9923]
+visible 0
+dataLimits [537.83 561.219 219.975 250.348]
+executionOrder 1
+
+src {
+intersection [0 0.6101 0.7923 0 537.83 219.9752 0 0]
+}
+
+dst {
+id 26
+intersection [1 -0.6101 -0.7923 0 561.2191 250.3478 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 27
+ssIdNumber 70
+linkNode [22 25 28]
+chart 4
+subviewer 4
+labelString ""
+labelPosition [449.379 245.814 0 0]
+fontSize 12
+midPoint [467.2986 255.8939]
+visible 0
+dataLimits [368.107 558.49 253.494 258.294]
+stampAngle 2.7979
+drawStyle SMART
+executionOrder 2
+
+src {
+id 26
+intersection [4 -1 0 0 558.49 255.8939 0 0]
+}
+
+dst {
+id 24
+intersection [2 1 0 0.4104 368.1072 255.8939 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 28
+ssIdNumber 74
+linkNode [22 27 29]
+chart 4
+subviewer 4
+labelString "[hOff<=0]"
+labelPosition [617.5 233.759 51.5 17]
+fontSize 12
+midPoint [660.5331 255.8939]
+visible 0
+dataLimits [572.49 756.576 253.494 258.294]
+stampAngle -1.2933
+drawStyle SMART
+executionOrder 1
+
+src {
+id 26
+intersection [2 1 0 0 572.49 255.8939 0 0]
+}
+
+dst {
+id 23
+intersection [4 -1 0 0.561 756.5763 255.8939 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 29
+ssIdNumber 68
+linkNode [22 28 30]
+chart 4
+subviewer 4
+labelString "after(10,sec)"
+labelPosition [437.063 275.43 69.5 17]
+fontSize 12
+midPoint [558.3417 270.4695]
+visible 0
+dataLimits [368.107 756.576 268.07 272.869]
+drawStyle SMART
+executionOrder 1
+
+src {
+id 24
+intersection [2 1 0 0.6149 368.1072 270.4695 0 0]
+}
+
+dst {
+id 23
+intersection [4 -1 0 0.3707 756.5763 270.4695 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 30
+ssIdNumber 66
+linkNode [22 29 0]
+chart 4
+subviewer 4
+labelString "after(10,sec)"
+labelPosition [669.413 297.063 69.5 17]
+fontSize 12
+midPoint [566.3417 287.0605]
+visible 0
+dataLimits [368.107 756.576 284.661 289.46]
+drawStyle SMART
+executionOrder 1
+
+src {
+id 23
+intersection [4 -1 0 0.1542 756.5763 287.0605 0 0]
+}
+
+dst {
+id 24
+intersection [2 1 0 0.8476 368.1072 287.0605 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+junction {
+id 26
+ssIdNumber 73
+linkNode [22 0 0]
+chart 4
+subviewer 4
+position [565.49 255.8939 7]
+visible 0
+type CONNECTIVE_JUNCTION
+}
+
+transition {
+id 38
+ssIdNumber 15
+linkNode [4 0 39]
+chart 4
+subviewer 4
+labelString "{coinRight=true;}"
+labelPosition [139.318 72.748 91 17]
+fontSize 12
+midPoint [201.095 92.2408]
+dataLimits [181.827 228.363 89.841 94.641]
+drawStyle SMART
+executionOrder 1
+
+src {
+intersection [0 1 0 0 181.8275 92.2408 0 0]
+}
+
+dst {
+id 11
+intersection [4 -1 0 0.5902 228.3626 92.2408 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 39
+ssIdNumber 80
+linkNode [4 38 40]
+chart 4
+subviewer 4
+labelString "[htAdj <= camHt_1LVal]"
+labelPosition [382.871 176.956 126.5 17]
+fontSize 12
+midPoint [365.4789 182.8494]
+dataLimits [363.079 367.879 154.835 202.864]
+drawStyle SMART
+executionOrder 1
+
+src {
+id 22
+intersection [1 0 -1 0.2078 365.4789 202.8639 0 0]
+}
+
+dst {
+id 11
+intersection [3 -0 1 0.7934 365.4789 154.8348 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 40
+ssIdNumber 37
+linkNode [4 39 41]
+chart 4
+subviewer 4
+labelString "[htAdj > camHt_1LVal]"
+labelPosition [577.13 184.831 119.5 17]
+fontSize 12
+midPoint [561.9199 174.8494]
+dataLimits [559.52 564.32 154.835 202.864]
+drawStyle SMART
+executionOrder 1
+
+src {
+id 11
+intersection [3 0 1 0.4973 561.9199 154.8348 0 0]
+}
+
+dst {
+id 22
+intersection [1 0 -1 0.5046 561.9199 202.8639 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 41
+ssIdNumber 75
+linkNode [4 40 42]
+chart 4
+subviewer 4
+labelString "[htAdj > camHt_1UVal]"
+labelPosition [916.138 208.383 122.5 17]
+fontSize 12
+midPoint [962.3154 229.8617]
+dataLimits [889.789 1042.842 227.462 232.262]
+executionOrder 2
+
+src {
+id 22
+intersection [2 1 0 0.2381 889.7888 229.8617 0 0]
+}
+
+dst {
+id 5
+intersection [4 -1 0 0.3193 1042.842 229.8617 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 42
+ssIdNumber 86
+linkNode [4 41 0]
+chart 4
+subviewer 4
+labelString "after(1.5,sec)"
+labelPosition [953.999 296.655 72.75 17]
+fontSize 12
+midPoint [991.0434 273.3549]
+dataLimits [889.789 1084.298 270.955 275.755]
+drawStyle SMART
+executionOrder 1
+
+src {
+id 7
+intersection [4 -1 0 0.642 1084.298 273.3549 0 0]
+}
+
+dst {
+id 22
+intersection [2 1 -0 0.6218 889.7888 273.3549 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+data {
+id 31
+ssIdNumber 17
+linkNode [4 0 32]
+machine 1
+name "hOff"
+scope OUTPUT_DATA
+dataType "Inherit: Same as Simulink"
+props {
+complexity SF_COMPLEX_INHERITED
+frame SF_FRAME_NO
+array {
+size "-1"
+}
+
+type {
+method SF_INHERITED_TYPE
+primitive SF_DOUBLE_TYPE
+isSigned 1
+wordLength 16
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 32
+ssIdNumber 19
+linkNode [4 31 33]
+machine 1
+name "coinRight"
+scope LOCAL_DATA
+dataType "boolean"
+props {
+complexity SF_COMPLEX_INHERITED
+frame SF_FRAME_INHERITED
+array {
+size "-1"
+}
+
+type {
+primitive SF_BOOLEAN_TYPE
+isSigned 1
+wordLength 16
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 33
+ssIdNumber 35
+linkNode [4 32 34]
+machine 1
+name "htAdj"
+scope INPUT_DATA
+dataType "Inherit: Same as Simulink"
+props {
+complexity SF_COMPLEX_INHERITED
+frame SF_FRAME_INHERITED
+array {
+size "-1"
+}
+
+type {
+method SF_INHERITED_TYPE
+primitive SF_DOUBLE_TYPE
+isSigned 1
+wordLength 16
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 34
+ssIdNumber 64
+linkNode [4 33 35]
+machine 1
+name "htOff"
+scope OUTPUT_DATA
+dataType "Inherit: Same as Simulink"
+props {
+complexity SF_COMPLEX_INHERITED
+frame SF_FRAME_NO
+array {
+size "-1"
+}
+
+type {
+method SF_INHERITED_TYPE
+primitive SF_DOUBLE_TYPE
+isSigned 1
+wordLength 16
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 35
+ssIdNumber 79
+linkNode [4 34 36]
+machine 1
+name "camHt_1LVal"
+scope PARAMETER_DATA
+dataType "Inherit: Same as Simulink"
+props {
+complexity SF_COMPLEX_INHERITED
+frame SF_FRAME_INHERITED
+array {
+size "-1"
+}
+
+type {
+method SF_INHERITED_TYPE
+primitive SF_DOUBLE_TYPE
+isSigned 1
+wordLength 16
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 36
+ssIdNumber 84
+linkNode [4 35 37]
+machine 1
+name "camHt_1UVal"
+scope PARAMETER_DATA
+paramIndexForInitFromWorkspace 1
+dataType "Inherit: Same as Simulink"
+props {
+complexity SF_COMPLEX_INHERITED
+frame SF_FRAME_INHERITED
+array {
+size "-1"
+}
+
+type {
+method SF_INHERITED_TYPE
+primitive SF_DOUBLE_TYPE
+isSigned 1
+wordLength 16
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 37
+ssIdNumber 92
+linkNode [4 36 0]
+machine 1
+name "hOff_in"
+scope INPUT_DATA
+dataType "Inherit: Same as Simulink"
+props {
+complexity SF_COMPLEX_INHERITED
+frame SF_FRAME_INHERITED
+array {
+size "-1"
+}
+
+type {
+method SF_INHERITED_TYPE
+primitive SF_DOUBLE_TYPE
+isSigned 1
+wordLength 16
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+chart {
+id 43
+treeNode [0 44 0 0]
+machine 1
+viewObj 43
+firstData 68
+firstEvent 72
+firstTransition 73
+name "updateGoogleEarth/CameraLogic/CameraControl/CameraState"
+windowPosition [8 55 1794 1128]
+viewLimits [112.367 959.642 -33.479 464.697]
+zoomFactor 0.715
+stateColor [0.3803921568627451 0.2745098039215687 0.1803921568627451]
+stateLabelColor [0.4588235294117647 0.2980392156862745 0.1411764705882353]
+transitionColor [0.3215686274509804 0.5450980392156862 0.7725490196078432]
+transitionLabelColor [0.3215686274509804 0.5450980392156862 0.7725490196078432]
+junctionColor [0.7764705882352941 0.4980392156862745 0]
+chartColor [1 0.9882352941176471 0.9254901960784314]
+screen [1 1 3200 1200 1.25]
+ssIdHighWaterMark 50
+decomposition CLUSTER_CHART
+chartFileNumber 3
+saturateOnIntegerOverflow 1
+userSpecifiedStateTransitionExecutionOrder 1
+disableImplicitCasting 1
+actionLanguage 2
+}
+
+state {
+id 44
+ssIdNumber 28
+treeNode [43 45 0 50]
+chart 43
+subviewer 43
+firstTransition 47
+labelString "PanLeft"
+position [163.6823 120.8304 144.5826 190.977]
+fontSize 12
+visible 0
+type OR_STATE
+decomposition CLUSTER_STATE
+}
+
+state {
+id 45
+ssIdNumber 10
+treeNode [44 0 0 46]
+chart 43
+subviewer 43
+labelString "Proportional\nen:hOff = 20;"
+position [172.1667 148.7351 109.8852 65.4915]
+fontSize 12
+visible 0
+type OR_STATE
+decomposition CLUSTER_STATE
+}
+
+state {
+id 46
+ssIdNumber 27
+treeNode [44 0 45 0]
+chart 43
+subviewer 43
+labelString "ScanToFront\ndu:\nhOff = 70;"
+position [177.0596 245.0927 106.5409 53.7645]
+fontSize 12
+visible 0
+type OR_STATE
+decomposition CLUSTER_STATE
+}
+
+transition {
+id 47
+ssIdNumber 46
+linkNode [44 0 48]
+chart 43
+subviewer 43
+labelString ""
+labelPosition [250.852 133.735 0 0]
+fontSize 12
+midPoint [250.8528 138.2322]
+dataLimits [248.453 253.253 135.729 148.735]
+drawStyle SMART
+executionOrder 1
+
+src {
+intersection [0 -0 1 0 250.8528 135.7292 0 0]
+}
+
+dst {
+id 45
+intersection [1 0 -1 0.7161 250.8528 148.7351 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 48
+ssIdNumber 30
+linkNode [44 47 49]
+chart 43
+subviewer 43
+labelString "after(10,secs)"
+labelPosition [122.802 223.473 75.5 17]
+fontSize 12
+midPoint [202.5672 225.6596]
+dataLimits [200.167 204.967 214.227 245.093]
+drawStyle SMART
+executionOrder 1
+
+src {
+id 45
+intersection [3 0 1 0.7233 202.5672 214.2266 0 0]
+}
+
+dst {
+id 46
+intersection [1 -0 -1 0.2394 202.5672 245.0927 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 49
+ssIdNumber 31
+linkNode [44 48 0]
+chart 43
+subviewer 43
+labelString "after(10,secs)"
+labelPosition [228.312 227.343 75.5 17]
+fontSize 12
+midPoint [216.6186 233.6596]
+dataLimits [214.219 219.019 214.227 245.093]
+drawStyle SMART
+executionOrder 1
+
+src {
+id 46
+intersection [1 0 -1 0.3713 216.6186 245.0927 0 0]
+}
+
+dst {
+id 45
+intersection [3 -0 1 0.5955 216.6186 214.2266 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+state {
+id 50
+ssIdNumber 26
+treeNode [43 51 44 56]
+chart 43
+subviewer 43
+firstTransition 53
+labelString "PanRight"
+position [889.3256 128 138.4383 185.8036]
+fontSize 12
+visible 0
+type OR_STATE
+decomposition CLUSTER_STATE
+}
+
+state {
+id 51
+ssIdNumber 21
+treeNode [50 0 0 52]
+chart 43
+subviewer 43
+labelString "Proportional\nen:hOff = -20;"
+position [900.4715 152.7268 102.0071 61.3936]
+fontSize 12
+visible 0
+type OR_STATE
+decomposition CLUSTER_STATE
+}
+
+state {
+id 52
+ssIdNumber 25
+treeNode [50 0 51 0]
+chart 43
+subviewer 43
+labelString "ScanToFront\ndu:\nhOff = -70;"
+position [904.1092 245.2676 105.4673 53.2277]
+fontSize 12
+visible 0
+type OR_STATE
+decomposition CLUSTER_STATE
+}
+
+transition {
+id 53
+ssIdNumber 47
+linkNode [50 0 54]
+chart 43
+subviewer 43
+labelString ""
+labelPosition [975.519 137.727 0 0]
+fontSize 12
+midPoint [975.5197 141.57]
+dataLimits [973.12 977.92 138.413 152.727]
+drawStyle SMART
+executionOrder 1
+
+src {
+intersection [0 -0 1 0 975.5197 138.4131 0 0]
+}
+
+dst {
+id 51
+intersection [1 0 -1 0.7357 975.5197 152.7268 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 54
+ssIdNumber 29
+linkNode [50 53 55]
+chart 43
+subviewer 43
+labelString "after(10,secs)"
+labelPosition [837.62 231.43 75.5 17]
+fontSize 12
+midPoint [920.0228 225.694]
+dataLimits [917.623 922.423 214.12 245.268]
+drawStyle SMART
+executionOrder 1
+
+src {
+id 51
+intersection [3 0 1 0.8083 920.0228 214.1204 0 0]
+}
+
+dst {
+id 52
+intersection [1 -0 -1 0.1509 920.0228 245.2676 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 55
+ssIdNumber 32
+linkNode [50 54 0]
+chart 43
+subviewer 43
+labelString "after(10,secs)"
+labelPosition [944.479 227.461 75.5 17]
+fontSize 12
+midPoint [929.1508 233.694]
+dataLimits [926.751 931.551 214.12 245.268]
+drawStyle SMART
+executionOrder 1
+
+src {
+id 52
+intersection [1 0 -1 0.2374 929.1508 245.2676 0 0]
+}
+
+dst {
+id 51
+intersection [3 -0 1 0.7188 929.1508 214.1204 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+state {
+id 56
+ssIdNumber 14
+treeNode [43 57 50 67]
+chart 43
+subviewer 43
+firstJunction 61
+firstTransition 60
+labelString "Hover"
+position [385.0744 128.5372 430.0524 183.7686]
+fontSize 12
+visible 0
+type OR_STATE
+decomposition CLUSTER_STATE
+}
+
+state {
+id 57
+ssIdNumber 2
+treeNode [56 0 0 58]
+chart 43
+subviewer 43
+labelString "HoverLeft\nen:hOff = 20;\ncoinRight = true;\n"
+position [405.0454 153.222 127 56]
+fontSize 12
+visible 0
+type OR_STATE
+decomposition CLUSTER_STATE
+}
+
+state {
+id 58
+ssIdNumber 3
+treeNode [56 0 57 59]
+chart 43
+subviewer 43
+labelString "HoverRight\nen:hOff = -20;\ncoinRight = false;\n"
+position [670.9805 161.9146 118.5638 59.1353]
+fontSize 12
+visible 0
+type OR_STATE
+decomposition CLUSTER_STATE
+}
+
+state {
+id 59
+ssIdNumber 1
+treeNode [56 0 58 0]
+chart 43
+subviewer 43
+labelString "HoverOver\nentry: hOff = 0;"
+position [537.591 233.1653 110.2511 47.4171]
+fontSize 12
+visible 0
+type OR_STATE
+decomposition CLUSTER_STATE
+}
+
+transition {
+id 60
+ssIdNumber 9
+linkNode [56 0 62]
+chart 43
+subviewer 43
+labelString ""
+labelPosition [547.515 175.382 0 0]
+fontSize 12
+midPoint [554.9571 184.1111]
+dataLimits [532.045 569.869 181.711 186.511]
+stampAngle 2.7979
+drawStyle SMART
+executionOrder 2
+
+src {
+id 61
+intersection [4 -1 0 0 569.8688 184.1111 0 0]
+}
+
+dst {
+id 57
+intersection [2 1 0 0.5516 532.0454 184.1111 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 62
+ssIdNumber 8
+linkNode [56 60 63]
+chart 43
+subviewer 43
+labelString "[coinRight]"
+labelPosition [603.085 164.683 58.5 17]
+fontSize 12
+midPoint [623.4246 184.1111]
+dataLimits [583.869 670.981 181.711 186.511]
+stampAngle -1.2933
+drawStyle SMART
+executionOrder 1
+
+src {
+id 61
+intersection [2 1 0 0 583.8688 184.1111 0 0]
+}
+
+dst {
+id 58
+intersection [4 -1 0 0.6246 670.9805 184.1111 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 63
+ssIdNumber 5
+linkNode [56 62 64]
+chart 43
+subviewer 43
+labelString "after(2,secs)"
+labelPosition [584.91 208.12 68.75 17]
+fontSize 12
+midPoint [576.8688 216.1382]
+dataLimits [574.469 579.269 191.111 233.165]
+drawStyle SMART
+executionOrder 1
+
+src {
+id 59
+intersection [1 0 -1 0.3563 576.8688 233.1653 0 0]
+}
+
+dst {
+id 61
+intersection [3 0 1 0 576.8688 191.1111 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 64
+ssIdNumber 34
+linkNode [56 63 65]
+chart 43
+subviewer 43
+labelString "after(10,secs)"
+labelPosition [415.011 248.672 75.5 17]
+fontSize 12
+midPoint [489.1964 236.8393]
+dataLimits [476.41 537.591 209.222 255.948]
+drawStyle SMART
+executionOrder 1
+
+src {
+id 57
+intersection [3 0 1 0.4381 476.4099 209.222 0 0]
+}
+
+dst {
+id 59
+intersection [4 -1 0 0.5701 537.591 253.5481 0 0]
+}
+
+slide {
+mode MIRROR_SLIDE
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 65
+ssIdNumber 33
+linkNode [56 64 66]
+chart 43
+subviewer 43
+labelString "after(10,secs)"
+labelPosition [708.665 252.397 75.5 17]
+fontSize 12
+midPoint [694.3369 249.3758]
+dataLimits [647.842 715.106 221.05 262.376]
+drawStyle SMART
+executionOrder 1
+
+src {
+id 58
+intersection [3 0 1 0.6278 715.1057 221.0499 0 0]
+}
+
+dst {
+id 59
+intersection [2 1 0 0.5654 647.8421 259.9757 0 0]
+}
+
+slide {
+mode MIRROR_SLIDE
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 66
+ssIdNumber 4
+linkNode [56 65 0]
+chart 43
+subviewer 43
+labelString ""
+labelPosition [582.625 289.983 0 0]
+fontSize 12
+midPoint [586.8835 294.8215]
+dataLimits [584.484 589.284 280.582 301.061]
+drawStyle SMART
+executionOrder 1
+
+src {
+intersection [0 0 -1 0 586.8835 301.0606 0 0]
+}
+
+dst {
+id 59
+intersection [3 0 1 0.5529 586.8835 280.5824 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+junction {
+id 61
+ssIdNumber 6
+linkNode [56 0 0]
+chart 43
+subviewer 43
+position [576.8688 184.1111 7]
+type CONNECTIVE_JUNCTION
+}
+
+state {
+id 67
+ssIdNumber 36
+treeNode [43 0 56 0]
+chart 43
+subviewer 43
+labelString "Overhead\ndu: hOff=hOff_in;"
+position [389.6804 342.8498 421.1282 43.884]
+fontSize 12
+visible 0
+type OR_STATE
+decomposition CLUSTER_STATE
+}
+
+transition {
+id 73
+ssIdNumber 15
+linkNode [43 0 74]
+chart 43
+subviewer 43
+labelString "{coinRight=true;}"
+labelPosition [442.962 107.587 91 17]
+fontSize 12
+midPoint [423.3515 106.9885]
+dataLimits [420.952 425.751 93.44 128.537]
+drawStyle SMART
+executionOrder 1
+
+src {
+intersection [0 0 1 0 423.3515 93.4398 0 0]
+}
+
+dst {
+id 56
+intersection [1 0 -1 0.089 423.3515 128.5372 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 74
+ssIdNumber 22
+linkNode [43 73 75]
+chart 43
+subviewer 43
+labelString "[hOff_in<-10]"
+labelPosition [819.214 150.439 71.25 17]
+fontSize 12
+midPoint [848.2262 170.0837]
+dataLimits [815.127 889.326 167.684 172.484]
+drawStyle SMART
+executionOrder 2
+
+src {
+id 56
+intersection [2 1 0 0.2261 815.1269 170.0837 0 0]
+}
+
+dst {
+id 50
+intersection [4 -1 -0 0.7735 889.3256 170.0837 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 75
+ssIdNumber 16
+linkNode [43 74 76]
+chart 43
+subviewer 43
+labelString "[hOff_in>10]"
+labelPosition [318.319 152.377 67.25 17]
+fontSize 12
+midPoint [350.6697 171.6941]
+dataLimits [308.265 385.074 169.294 174.094]
+drawStyle SMART
+executionOrder 1
+
+src {
+id 56
+intersection [4 -1 0 0.7652 385.0744 171.6941 0 0]
+}
+
+dst {
+id 44
+intersection [2 1 -0 0.2663 308.2649 171.6941 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 76
+ssIdNumber 20
+linkNode [43 75 77]
+chart 43
+subviewer 43
+labelString "[hOff_in<5]"
+labelPosition [315.848 210.095 60.5 17]
+fontSize 12
+midPoint [352.6551 194.5294]
+dataLimits [308.265 405.045 192.129 196.929]
+drawStyle SMART
+executionOrder 1
+
+src {
+id 44
+intersection [2 1 0 0.3859 308.2649 194.5294 0 0]
+}
+
+dst {
+id 57
+intersection [4 -1 -0 0.2624 405.0454 194.5294 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 77
+ssIdNumber 23
+linkNode [43 76 78]
+chart 43
+subviewer 43
+labelString "[hOff_in>-5]"
+labelPosition [816.856 212.238 64.5 17]
+fontSize 12
+midPoint [843.435 200.1481]
+dataLimits [789.544 889.326 197.748 202.548]
+drawStyle SMART
+executionOrder 1
+
+src {
+id 50
+intersection [4 -1 0 0.6117 889.3256 200.1481 0 0]
+}
+
+dst {
+id 58
+intersection [2 1 -0 0.6465 789.5444 200.1481 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 78
+ssIdNumber 42
+linkNode [43 77 79]
+chart 43
+subviewer 43
+labelString "[htAdj > 3]"
+labelPosition [315.926 336.877 56 17]
+fontSize 12
+midPoint [320.6268 351.6745]
+dataLimits [286.713 389.68 311.807 366.802]
+drawStyle SMART
+executionOrder 2
+
+src {
+id 44
+intersection [3 0 1 0.1491 286.7129 311.8074 0 0]
+}
+
+dst {
+id 67
+intersection [4 -1 0 0.5089 389.6804 364.4019 0 0]
+}
+
+slide {
+mode MIRROR_SLIDE
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 79
+ssIdNumber 50
+linkNode [43 78 80]
+chart 43
+subviewer 43
+labelString "[htAdj<1]"
+labelPosition [538.298 316.214 49.5 17]
+fontSize 12
+midPoint [515.4904 331.5778]
+dataLimits [513.09 517.89 312.306 342.85]
+drawStyle SMART
+executionOrder 1
+
+src {
+id 67
+intersection [1 0 -1 0.2987 515.4904 342.8498 0 0]
+}
+
+dst {
+id 56
+intersection [3 -0 1 0.6967 515.4904 312.3058 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 80
+ssIdNumber 37
+linkNode [43 79 81]
+chart 43
+subviewer 43
+labelString "[htAdj > 3]"
+labelPosition [650.352 322.077 56 17]
+fontSize 12
+midPoint [633.0475 323.5778]
+dataLimits [630.648 635.447 312.306 342.85]
+drawStyle SMART
+executionOrder 3
+
+src {
+id 56
+intersection [3 0 1 0.4234 633.0475 312.3058 0 0]
+}
+
+dst {
+id 67
+intersection [1 0 -1 0.5779 633.0475 342.8498 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+transition {
+id 81
+ssIdNumber 43
+linkNode [43 80 0]
+chart 43
+subviewer 43
+labelString "[htAdj > 3]"
+labelPosition [840.253 376.73 56 17]
+fontSize 12
+midPoint [877.6157 351.8753]
+dataLimits [810.809 910.341 313.804 366.265]
+executionOrder 2
+
+src {
+id 50
+intersection [3 0 1 0.8482 910.3409 313.8036 0 0]
+}
+
+dst {
+id 67
+intersection [2 1 0 0.4789 810.8086 363.8651 0 0]
+}
+
+slide {
+mode MIRROR_SLIDE
+sticky BOTH_STICK
+}
+
+}
+
+data {
+id 68
+ssIdNumber 17
+linkNode [43 0 69]
+machine 1
+name "hOff"
+scope OUTPUT_DATA
+dataType "Inherit: Same as Simulink"
+props {
+complexity SF_COMPLEX_INHERITED
+frame SF_FRAME_NO
+array {
+size "-1"
+}
+
+type {
+method SF_INHERITED_TYPE
+primitive SF_DOUBLE_TYPE
+isSigned 1
+wordLength 16
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 69
+ssIdNumber 18
+linkNode [43 68 70]
+machine 1
+name "hOff_in"
+scope INPUT_DATA
+dataType "Inherit: Same as Simulink"
+props {
+complexity SF_COMPLEX_INHERITED
+frame SF_FRAME_INHERITED
+array {
+size "-1"
+}
+
+type {
+method SF_INHERITED_TYPE
+primitive SF_DOUBLE_TYPE
+isSigned 1
+wordLength 16
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 70
+ssIdNumber 19
+linkNode [43 69 71]
+machine 1
+name "coinRight"
+scope LOCAL_DATA
+dataType "boolean"
+props {
+complexity SF_COMPLEX_INHERITED
+frame SF_FRAME_INHERITED
+array {
+size "-1"
+}
+
+type {
+primitive SF_BOOLEAN_TYPE
+isSigned 1
+wordLength 16
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 71
+ssIdNumber 35
+linkNode [43 70 0]
+machine 1
+name "htAdj"
+scope INPUT_DATA
+dataType "Inherit: Same as Simulink"
+props {
+complexity SF_COMPLEX_INHERITED
+frame SF_FRAME_INHERITED
+array {
+size "-1"
+}
+
+type {
+method SF_INHERITED_TYPE
+primitive SF_DOUBLE_TYPE
+isSigned 1
+wordLength 16
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+event {
+id 72
+ssIdNumber 24
+linkNode [43 0 0]
+machine 1
+name "secs"
+scope INPUT_EVENT
+trigger RISING_EDGE_EVENT
+}
+
+target {
+id 2
+linkNode [1 0 3]
+machine 1
+name "sfun"
+description "Default Simulink S-Function Target."
+}
+
+target {
+id 3
+linkNode [1 2 0]
+machine 1
+name "rtw"
+}
+
+instance {
+id 82
+machine 1
+chart 4
+name "updateGoogleEarth/CameraLogic/CameraControl/CameraStateflow"
+}
+
+instance {
+id 83
+machine 1
+chart 43
+name "updateGoogleEarth/CameraLogic/CameraControl/CameraState"
+}
+
+}

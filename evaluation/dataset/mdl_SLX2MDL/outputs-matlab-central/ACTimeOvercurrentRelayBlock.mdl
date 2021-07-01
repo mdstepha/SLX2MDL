@@ -1,0 +1,3519 @@
+Model {
+SavedCharacterEncoding "ISO-8859-1"
+EnableAccessToBaseWorkspace on
+SLXCompressionType "Normal"
+ScopeRefreshTime "0.035000"
+OverrideScopeRefreshTime on
+DisableAllScopes on
+DataTypeOverride "UseLocalSettings"
+DataTypeOverrideAppliesTo "AllNumericTypes"
+MinMaxOverflowLogging "UseLocalSettings"
+MinMaxOverflowArchiveMode "Overwrite"
+FPTRunName "Run 1"
+MaxMDLFileLineLength "120"
+LastSavedArchitecture "maci64"
+HideAutomaticNames on
+UpdateHistory "UpdateHistoryNever"
+ModifiedByFormat "%<Auto>"
+ModifiedDateFormat "%<Auto>"
+RTWModifiedTimeStamp "387068620"
+ModelVersionFormat "1.%<AutoIncrement:176>"
+
+SampleTimeColors off
+SampleTimeAnnotations off
+LibraryLinkDisplay "disabled"
+WideLines off
+ShowLineDimensions off
+ShowPortDataTypes off
+ShowAllPropagatedSignalLabels off
+PortDataTypeDisplayFormat "AliasTypeOnly"
+ShowEditTimeErrors on
+ShowEditTimeWarnings on
+ShowEditTimeAdvisorChecks off
+ShowPortUnits off
+ShowDesignRanges off
+ShowLoopsOnError on
+IgnoreBidirectionalLines off
+ShowStorageClass off
+ShowTestPointIcons on
+ShowSignalResolutionIcons on
+ShowViewerIcons on
+SortedOrder off
+VariantCondition off
+ShowSubsystemDomainSpec off
+ExecutionContextIcon off
+ShowLinearizationAnnotations on
+ShowVisualizeInsertedRTB on
+ShowMarkup on
+BlockNameDataTip off
+BlockParametersDataTip off
+BlockDescriptionStringDataTip off
+BlockVariantConditionDataTip off
+ToolBar on
+StatusBar on
+BrowserShowLibraryLinks off
+FunctionConnectors off
+BrowserLookUnderMasks off
+MultiThreadCoSim on
+
+SimulationMode "normal"
+SILPILModeSetting "automated"
+SILPILSystemUnderTest "topmodel"
+SILPILSimulationModeTopModel "normal"
+SILPILSimulationModeModelRef "normal"
+SimTabSimulationMode "normal"
+CodeVerificationMode "software-in-the-loop (sil)"
+PauseTimes "5"
+NumberOfSteps "1"
+SnapshotBufferSize "10"
+SnapshotInterval "10"
+NumberOfLastSnapshots "0"
+EnablePacing off
+PacingRate "1"
+LinearizationMsg "none"
+Profile off
+ParamWorkspaceSource "MATLABWorkspace"
+AccelSystemTargetFile "accel.tlc"
+AccelTemplateMakefile "accel_default_tmf"
+AccelMakeCommand "make_rtw"
+TryForcingSFcnDF off
+Object {
+$PropName "DataLoggingOverride"
+$ObjectID 2
+$ClassName "Simulink.SimulationData.ModelLoggingInfo"
+model_ "$bdroot"
+overrideMode_ [0U]
+Array {
+PropName "logAsSpecifiedByModels_"
+Type "Cell"
+Dimension 1
+Cell "$bdroot"
+}
+
+Array {
+PropName "logAsSpecifiedByModelsSSIDs_"
+Type "Cell"
+Dimension 1
+Cell []
+}
+}
+
+ExtModeBatchMode off
+ExtModeEnableFloating on
+ExtModeTrigType "manual"
+ExtModeTrigMode "normal"
+ExtModeTrigPort "1"
+ExtModeTrigElement "any"
+ExtModeTrigDuration "1000"
+ExtModeTrigDurationFloating "auto"
+ExtModeTrigHoldOff "0"
+ExtModeTrigDelay "0"
+ExtModeTrigDirection "rising"
+ExtModeTrigLevel "0"
+ExtModeArchiveMode off
+ExtModeAutoIncOneShot off
+ExtModeIncDirWhenArm off
+ExtModeAddSuffixToVar off
+ExtModeWriteAllDataToWs off
+ExtModeArmWhenConnect on
+ExtModeSkipDownloadWhenConnect off
+ExtModeLogAll on
+ExtModeAutoUpdateStatusClock on
+
+ShowModelReferenceBlockVersion off
+ShowModelReferenceBlockIO off
+OrderedModelArguments on
+
+ExplicitPartitioning off
+Object {
+$PropName "DataTransfer"
+$ObjectID 3
+$ClassName "Simulink.GlobalDataTransfer"
+DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
+DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
+DefaultTransitionBetweenContTasks "Ensure deterministic transfer (minimum delay)"
+DefaultExtrapolationMethodBetweenContTasks "None"
+}
+
+System {
+Location [257, 51, 1209, 616]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "125"
+ReportName "simulink-default.rpt"
+SIDHighWatermark "67"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "SubSystem"
+Name "AC Time\nOvercurrent Relay"
+SID "55"
+Ports [1, 2]
+Position [280, 279, 340, 321]
+ZOrder "126"
+ForegroundColor "red"
+RequestExecContextInheritance off
+Object {
+$PropName "MaskObject"
+$ObjectID 4
+$ClassName "Simulink.Mask"
+Display "disp('(51)');\nport_label('input', 1, 'I');\nport_label('output', 1, 'trip');\nport_label('output', 2, 'OT');"
+
+Type "AC Time Overcurrent Relay Block"
+Array {
+Type "Simulink.MaskParameter"
+PropName "Parameters"
+Dimension 11
+Object {
+$ObjectID 5
+Name "tcpopup"
+Type "popup"
+Prompt "Trip Characteristic"
+Value "IEC Standard Inverse"
+Array {
+Type "Cell"
+Dimension 9
+PropName "TypeOptions"
+Cell "Definite Minimum Time"
+Cell "IEC Standard Inverse"
+Cell "IEC Very Inverse"
+Cell "IEC Long Time Inverse"
+Cell "IEC Extremely Inverse"
+Cell "IEC Ultra Inverse"
+Cell "IEEE Moderately Inverse"
+Cell "IEEE Very Inverse"
+Cell "IEEE Extremely Inverse"
+}
+
+Callback "switch(get_param(gcb,'tcpopup'))\n    case 'IEC Standard Inverse'\n        set_param(gcb,'k','0.14');\n        set_param(gcb,'alpha','0.02');\n        set_param(gcb,'B','0');\n        set_param(gcb,'MaskEnables',{'on','off','off','off',...\n                  'on','on','off','on','on','on','on'});\n    case 'IEC Very Inverse'\n        set_param(gcb,'k','13.5');\n        set_param(gcb,'alpha','1');\n        set_param(gcb,'B','0');\n        set_param(gcb,'MaskEnables',{'on','off','off','off',...\n                  'on','on','off','on','on','on','on'});\n    case 'IEC Long Time Inverse'\n        set_param(gcb,'k','120');\n        set_param(gcb,'alpha','1');\n        set_param(gcb,'B','0');\n        set_param(gcb,'MaskEnables',{'on','off','off','off',...\n                  'on','on','off','on','on','on','on'});\n    case 'IEC Extremely Inverse'\n        set_param(gcb,'k','80');\n        set_param(gcb,'alpha','2');\n        set_param(gcb,'B','0');\n        set_param(gcb,'MaskEnables',{'on','off','off','off',...\n                  'on','on','off','on','on','on','on'});\n    case 'IEC Ultra Inverse'\n        set_param(gcb,'k','315.2');\n        set_param(gcb,'alpha','2.5');\n        set_param(gcb,'B','0');\n        set_param(gcb,'MaskEnables',{'on','off','off','off',...\n                  'on','on','off','on','on','on','on'});\n    case 'IEEE Moderately Inverse'\n        set_param(gcb,'k','0.0515');\n        set_param(gcb,'alpha','0.02');\n        set_param(gcb,'B','0.114');\n        set_param(gcb,'MaskEnables',{'on','off','off','off',...\n                  'on','on','off','on','on','on','on'});\n    case 'IEEE Very Inverse'\n        set_param(gcb,'k','19.61');\n        set_param(gcb,'alpha','2');\n        set_param(gcb,'B','0.491');\n        set_param(gcb,'MaskEnables',{'on','off','off','off',...\n                  'on','on','off','on','on','on','on'});\n    case 'IEEE Extremely Inverse'\n        set_param(gcb,'k','28.2');\n        set_param(gcb,'alpha','2');\n        set_param(gcb,'B','0.1217');\n        set_param(gcb,'MaskEnables',{'on','off','off','off',...\n                  'on','on','off','on','on','on','on'});\n    otherwise\n        set_param(gcb,'k','0');\n        set_param(gcb,'MaskEnables',{'on','off','off','off',...\n                  'on','off','on','on','on','on','on'});\nend"
+}
+
+Object {
+$ObjectID 6
+Name "k"
+Type "edit"
+Enabled "off"
+Visible "off"
+Prompt "k"
+Value "0.14"
+}
+
+Object {
+$ObjectID 7
+Name "alpha"
+Type "edit"
+Enabled "off"
+Visible "off"
+Prompt "alpha"
+Value "0.02"
+}
+
+Object {
+$ObjectID 8
+Name "B"
+Type "edit"
+Enabled "off"
+Visible "off"
+Prompt "B"
+Value "0"
+}
+
+Object {
+$ObjectID 9
+Name "PS"
+Type "radiobutton"
+Prompt "Plug Setting (PS) / Low-set (I >)"
+Value "100%"
+Array {
+Type "Cell"
+Dimension 8
+PropName "TypeOptions"
+Cell "25%"
+Cell "50%"
+Cell "75%"
+Cell "100%"
+Cell "125%"
+Cell "150%"
+Cell "175%"
+Cell "200%"
+}
+
+Callback "\n"
+}
+
+Object {
+$ObjectID 10
+Name "TMS"
+Type "popup"
+Prompt "Time Multiplier Setting (TMS)"
+Value "0.1"
+Array {
+Type "Cell"
+Dimension 20
+PropName "TypeOptions"
+Cell "0.05"
+Cell "0.1"
+Cell "0.15"
+Cell "0.2"
+Cell "0.25"
+Cell "0.3"
+Cell "0.35"
+Cell "0.4"
+Cell "0.45"
+Cell "0.5"
+Cell "0.55"
+Cell "0.6"
+Cell "0.65"
+Cell "0.7"
+Cell "0.75"
+Cell "0.8"
+Cell "0.85"
+Cell "0.9"
+Cell "0.95"
+Cell "1.0"
+}
+}
+
+Object {
+$ObjectID 11
+Name "TDS"
+Type "edit"
+Enabled "off"
+Prompt "Time Delay Setting (TDS) in sec"
+Value "0.1"
+Callback "TDS = str2double(get_param(gcb,'TDS'));\nif (TDS > 99)||(TDS < 0.05)||isnan(TDS)\n    msgbox('TDS must be in the range of 0.05-99 sec',...\n    'Invalid Value !','error');\n    set_param(gcb,'TDS','0.1');\nend"
+}
+
+Object {
+$ObjectID 12
+Name "CTpri"
+Type "edit"
+Prompt "Current Transformer Primary (A)"
+Value "300"
+}
+
+Object {
+$ObjectID 13
+Name "CTsec"
+Type "edit"
+Prompt "Current Transformer Secondary (A)"
+Value "5"
+}
+
+Object {
+$ObjectID 14
+Name "Freq"
+Type "promote"
+Prompt "Fundamental frequency (Hz):"
+Value "50"
+Array {
+Type "Cell"
+Dimension 1
+PropName "TypeOptions"
+Cell "Irms/Freq"
+}
+}
+
+Object {
+$ObjectID 15
+Name "RMSInit"
+Type "promote"
+Prompt "Initial RMS value:"
+Value "0"
+Array {
+Type "Cell"
+Dimension 1
+PropName "TypeOptions"
+Cell "Irms/RMSInit"
+}
+}
+}
+Object {
+$ObjectID 16
+$ClassName "Simulink.dialog.Group"
+$PropName "DialogControls"
+Name "DescGroupVar"
+Prompt "%<MaskType>"
+Array {
+Type "Simulink.dialog.Control"
+PropName "DialogControls"
+Dimension 2
+Object {
+$ObjectID 17
+$ClassName "Simulink.dialog.Text"
+Name "DescTextVar"
+Prompt "%<MaskDescription>"
+}
+
+Object {
+$ObjectID 18
+$ClassName "Simulink.dialog.TabContainer"
+Name "Container1"
+Array {
+Type "Simulink.dialog.Control"
+PropName "DialogControls"
+Dimension 2
+Object {
+$ObjectID 19
+$ClassName "Simulink.dialog.Tab"
+Name "Container2"
+Prompt "Relay Setting"
+Array {
+Type "Simulink.dialog.Control"
+PropName "DialogControls"
+Dimension 8
+Object {
+$ObjectID 20
+$ClassName "Simulink.dialog.parameter.Popup"
+Name "tcpopup"
+
+PromptLocation "left"
+
+Prompt "Trip Characteristic"
+}
+
+Object {
+$ObjectID 21
+$ClassName "Simulink.dialog.parameter.Edit"
+Name "k"
+
+PromptLocation "left"
+
+Prompt "k"
+}
+
+Object {
+$ObjectID 22
+$ClassName "Simulink.dialog.parameter.Edit"
+Name "alpha"
+
+Row "current"
+PromptLocation "left"
+
+Prompt "alpha"
+}
+
+Object {
+$ObjectID 23
+$ClassName "Simulink.dialog.parameter.Edit"
+Name "B"
+Prompt "B"
+}
+
+Object {
+$ObjectID 24
+$ClassName "Simulink.dialog.parameter.RadioButton"
+Name "PS"
+
+PromptLocation "<unknown>"
+
+Prompt "Plug Setting (PS) / Low-set (I >)"
+}
+
+Object {
+$ObjectID 25
+$ClassName "Simulink.dialog.parameter.Popup"
+Name "TMS"
+
+PromptLocation "left"
+
+Prompt "Time Multiplier Setting (TMS)"
+}
+
+Object {
+$ObjectID 26
+$ClassName "Simulink.dialog.Button"
+Name "plotbutton"
+
+Row "current"
+
+Prompt "Plot Curve"
+Callback "% Plotting IDMT Curve\nTMS = str2num(get_param(gcb,'TMS'));\nk = str2num(get_param(gcb,'k'));\nalpha = str2num(get_param(gcb,'alpha'));\nB = str2num(get_param(gcb,'B'));\nI = 1:20;\ntd = ((k./((I.^alpha)-1))+B)*TMS;\nloglog(td);\nset(gcf, 'Position', [200 150 300 500]);\nswitch(get_param(gcb,'tcpopup'))\n    case 'IEC Standard Inverse'\n        title('IEC Standard Inverse');\n        set(gca, 'YTick', (1:10));\n        ylim([0.1 10]);\n    case 'IEC Very Inverse'\n        title('IEC Very Inverse');\n        set(gca, 'YTick', (1:2:15));\n        ylim([0.01 15]);\n    case 'IEC Long Time Inverse'\n        title('IEC Long Time Inverse');\n        set(gca, 'YTick', (0:20:120));\n        ylim([0.1 120]);\n    case 'IEC Extremely Inverse'\n        title('IEC Extremely Inverse');\n        set(gca, 'YTick', (0:5:30));\n        ylim([0.01 30]);\n    case 'IEC Ultra Inverse'\n        title('IEC Ultra Inverse');\n        set(gca, 'YTick', (0:20:100));\n        ylim([0.01 100]);\n    case 'IEEE Moderately Inverse'\n        title('IEEE Moderately Inverse');\n        set(gca, 'YTick', (1:5));\n        ylim([0.01 5]);\n    case 'IEEE Very Inverse'\n        title('IEEE Very Inverse');\n        set(gca, 'YTick', (1:10));\n        ylim([0.01 10]);\n    case 'IEEE Extremely Inverse'\n        title('IEEE Extremely Inverse');\n        set(gca, 'YTick', (1:10));\n        ylim([0.01 10]);\nend\n        \nset(gca, 'XTick', [1:10 20]);\nxlim([1 30]);\nxlabel('Current (Multiples of Plug Setting)');\nylabel('Operating Time (sec)');\ngrid on;"
+}
+
+Object {
+$ObjectID 27
+$ClassName "Simulink.dialog.parameter.Edit"
+Name "TDS"
+
+PromptLocation "left"
+
+Prompt "Time Delay Setting (TDS) in sec"
+}
+}
+}
+
+Object {
+$ObjectID 28
+$ClassName "Simulink.dialog.Tab"
+Name "Container3"
+Prompt "Current Transformer Setting"
+Array {
+Type "Simulink.dialog.Control"
+PropName "DialogControls"
+Dimension 3
+Object {
+$ObjectID 29
+$ClassName "Simulink.dialog.parameter.Edit"
+Name "CTpri"
+
+PromptLocation "left"
+
+Prompt "Current Transformer Primary (A)"
+}
+
+Object {
+$ObjectID 30
+$ClassName "Simulink.dialog.parameter.Edit"
+Name "CTsec"
+
+PromptLocation "left"
+
+Prompt "Current Transformer Secondary (A)"
+}
+
+Object {
+$ObjectID 31
+$ClassName "Simulink.dialog.Group"
+Name "RMS"
+Prompt "RMS Current Measurement"
+Array {
+Type "Simulink.dialog.Control"
+PropName "DialogControls"
+Dimension 2
+Object {
+$ObjectID 32
+$ClassName "Simulink.dialog.parameter.Edit"
+Name "Freq"
+Prompt "Fundamental frequency (Hz):"
+}
+
+Object {
+$ObjectID 33
+$ClassName "Simulink.dialog.parameter.Edit"
+Name "RMSInit"
+Prompt "Initial RMS value:"
+}
+}
+}
+}
+}
+}
+}
+}
+}
+
+Description "AC Time Overcurrent Relay Block developed by Dr Rodney Tan\nVersion 1.0 (Jun 2016)\n\nAC Time Overcurrent Relay (ANSI/IEEE C37.2 device number 51) that operates when the current exceeds a predetermined value.\n\nThis relay operates with either a Definite Minimum Time (DMT) or Inverse Definite Minimum Time (IDMT) characteristic.\n\nThis relay support both IEC 60255 Standard and IEEE Standard C37.112-1996 IDMT trip characteristic."
+Help "<b><u>Block Setting</u></b>\n<b>Trip Characteristic</b>\nRelay operation mode selection of Definite Minimum Time (DMT), IEC 60255 Standard or IEEE Standard C37.112-1996 Inverse Definite Minimum Time (IDMT).\n\n<b>Plug-Setting(PS) / Low-set (I >)</b>\nSpecify relay pick-up current based on current transformer rating ranging from 25% to 200% with 25% step interval.\n\n<b>Time Multiplier Setting (TMS)</b>\nSpecify time delay multiplier ranging from 0.05 to 1.0 for IDMT relay operation. This setting will be disabled DMT relay operation mode.\n\n<b>Plot Curve Button</b>\nPlot current Inverse Definite Minimum Time trip curve.\n\n<b>Time Delay Setting (TDS)</b>\nSpecify time delay ranging from 0.05sec to 99sec for Definite Minimum Time relay operation. This setting will be disabled in IDMT relay operation mode.\n\n<b>Current Transformer Primary (A)</b>\nSpecify current transformer primary in Ampere.\n\n<b>Current Transformer Secondary (A)</b>\nSpecify current transformer secondary in Ampere.\n\n<b>Fundamental Frequency (Hz)</b>\nSpecify the RMS current measurement fundamental frequency, in hertz, of the input signal.\n\n<b>Initial RMS Value</b>\nSpecify the RMS current measurement initial RMS value of the output signal.\n\n<b><u>Block Input Output</u></b>\n<b>I</b>\nCurrent input to the AC time overcurrent relay\n\n<b>trip</b>\nTrip control signal output (1-0), commonly connected to circuit breaker\n\n<b>OT</b>\nRelay operating time output"
+}
+
+System {
+Location [257, 51, 1209, 616]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+ZoomFactor "125"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "I"
+SID "56"
+Position [145, 148, 175, 162]
+ZOrder "124"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Clock"
+Name "Clock"
+SID "57"
+Position [210, 65, 230, 85]
+ZOrder "118"
+}
+
+Block {
+BlockType "Reference"
+Name "Irms"
+SID "59"
+Ports [1, 1]
+Position [195, 135, 245, 175]
+ZOrder "109"
+LibraryVersion "1.186"
+FontName "Arial"
+SourceBlock "powerlib_meascontrol/Measurements/RMS"
+SourceType "RMS"
+SourceProductName "Simscape Electrical"
+SourceProductBaseCode "PS"
+ContentPreviewEnabled off
+TrueRMS on
+Freq "Freq"
+RMSInit "RMSInit"
+Ts "0"
+
+ContentPreviewEnabled off
+TrueRMS on
+Freq "Freq"
+RMSInit "RMSInit"
+Ts "0"
+
+ContentPreviewEnabled off
+TrueRMS on
+Freq "Freq"
+RMSInit "RMSInit"
+Ts "0"
+
+ContentPreviewEnabled off
+TrueRMS on
+Freq "Freq"
+RMSInit "RMSInit"
+Ts "0"
+
+}
+
+Block {
+BlockType "RelationalOperator"
+Name "Relational\nOperator"
+SID "60"
+Ports [2, 1]
+Position [380, 67, 410, 98]
+ZOrder "119"
+Operator "<="
+InputSameDT off
+OutDataTypeStr "boolean"
+}
+
+Block {
+BlockType "SubSystem"
+Name "Time Relay Function"
+SID "58"
+Ports [2, 2]
+Position [275, 111, 345, 169]
+ZOrder "116"
+LibraryVersion "1.32"
+ErrorFcn "Stateflow.Translate.translate"
+PermitHierarchicalResolution "ExplicitOnly"
+TreatAsAtomicUnit on
+RequestExecContextInheritance off
+SFBlockType "MATLAB Function"
+System {
+Location [223, 338, 826, 833]
+SetExecutionDomain off
+ExecutionDomainType "Deduce"
+SIDHighWatermark "36"
+SimulinkSubDomain "Simulink"
+Block {
+BlockType "Inport"
+Name "clk"
+SID "58::20"
+Position [20, 101, 40, 119]
+ZOrder "11"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Inport"
+Name "Irms"
+SID "58::1"
+Position [20, 136, 40, 154]
+ZOrder "-1"
+Port "2"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Demux"
+Name " Demux "
+SID "58::35"
+Ports [1, 1]
+Position [270, 230, 320, 270]
+ZOrder "14"
+Outputs "1"
+}
+
+Block {
+BlockType "S-Function"
+Name " SFunction "
+SID "58::34"
+Tag "Stateflow S-Function 1"
+Ports [2, 3]
+Position [180, 100, 230, 180]
+ZOrder "13"
+FunctionName "sf_sfun"
+Parameters "B,CTpri,CTsec,PS,TDS,TMS,alpha,k"
+PortCounts [2 3]
+SFunctionDeploymentMode off
+EnableBusSupport off
+SFcnIsStateOwnerBlock off
+Port {
+PortNumber "2"
+Name "TT"
+}
+
+Port {
+PortNumber "3"
+Name "OT"
+}
+}
+
+Block {
+BlockType "Terminator"
+Name " Terminator "
+SID "58::36"
+Position [460, 241, 480, 259]
+ZOrder "15"
+}
+
+Block {
+BlockType "Outport"
+Name "TT"
+SID "58::22"
+Position [460, 101, 480, 119]
+ZOrder "12"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "OT"
+SID "58::5"
+Position [460, 136, 480, 154]
+ZOrder "-5"
+Port "2"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "33"
+Src "58::20#out:1"
+Points [120, 0]
+Dst "58::34#in:1"
+}
+
+Line {
+ZOrder "34"
+Src "58::1#out:1"
+Dst "58::34#in:2"
+}
+
+Line {
+Name "TT"
+ZOrder "35"
+Labels [0, 0]
+Src "58::34#out:2"
+Dst "58::22#in:1"
+}
+
+Line {
+Name "OT"
+ZOrder "36"
+Labels [0, 0]
+Src "58::34#out:3"
+Dst "58::5#in:1"
+}
+
+Line {
+ZOrder "37"
+Src "58::35#out:1"
+Dst "58::36#in:1"
+}
+
+Line {
+ZOrder "38"
+Src "58::34#out:1"
+Dst "58::35#in:1"
+}
+}
+}
+
+Block {
+BlockType "Outport"
+Name "trip"
+SID "61"
+Position [440, 78, 470, 92]
+ZOrder "121"
+IconDisplay "Port number"
+}
+
+Block {
+BlockType "Outport"
+Name "OT"
+SID "62"
+Position [440, 148, 470, 162]
+ZOrder "123"
+Port "2"
+IconDisplay "Port number"
+}
+
+Line {
+ZOrder "1"
+Src "57#out:1"
+Points [22, 0]
+Branch {
+ZOrder "2"
+Dst "60#in:1"
+}
+
+Branch {
+ZOrder "3"
+Points [0, 50]
+Dst "58#in:1"
+}
+}
+
+Line {
+ZOrder "4"
+Src "59#out:1"
+Dst "58#in:2"
+}
+
+Line {
+ZOrder "5"
+Src "58#out:1"
+Points [8, 0; 0, -35]
+Dst "60#in:2"
+}
+
+Line {
+ZOrder "6"
+Src "58#out:2"
+Dst "62#in:1"
+}
+
+Line {
+ZOrder "7"
+Src "60#out:1"
+Dst "61#in:1"
+}
+
+Line {
+ZOrder "8"
+Src "56#out:1"
+Dst "59#in:1"
+}
+}
+}
+
+Block {
+BlockType "Reference"
+Name "Bus A"
+SID "2"
+Ports [0, 2, 0, 0, 0, 3, 3]
+Position [165, 142, 175, 218]
+ZOrder "32"
+BackgroundColor "black"
+LibraryVersion "1.2834"
+SourceBlock "powerlib/Measurements/Three-Phase\nV-I Measurement"
+SourceType "Three-Phase VI Measurement"
+SourceProductName "Simscape Electrical"
+SourceProductBaseCode "PS"
+ContentPreviewEnabled off
+VoltageMeasurement "phase-to-ground"
+SetLabelV off
+LabelV "Vabc"
+Vpu off
+VpuLL off
+CurrentMeasurement "yes"
+SetLabelI off
+LabelI "Iabc"
+Ipu off
+Pbase "100e6"
+Vbase "500e3"
+OutputType "Complex"
+PhasorSimulation off
+PSBequivalent "0"
+
+ContentPreviewEnabled off
+VoltageMeasurement "phase-to-ground"
+SetLabelV off
+LabelV "Vabc"
+Vpu off
+VpuLL off
+CurrentMeasurement "yes"
+SetLabelI off
+LabelI "Iabc"
+Ipu off
+Pbase "100e6"
+Vbase "500e3"
+OutputType "Complex"
+PhasorSimulation off
+PSBequivalent "0"
+
+ContentPreviewEnabled off
+VoltageMeasurement "phase-to-ground"
+SetLabelV off
+LabelV "Vabc"
+Vpu off
+VpuLL off
+CurrentMeasurement "yes"
+SetLabelI off
+LabelI "Iabc"
+Ipu off
+Pbase "100e6"
+Vbase "500e3"
+OutputType "Complex"
+PhasorSimulation off
+PSBequivalent "0"
+
+ContentPreviewEnabled off
+VoltageMeasurement "phase-to-ground"
+SetLabelV off
+LabelV "Vabc"
+Vpu off
+VpuLL off
+CurrentMeasurement "yes"
+SetLabelI off
+LabelI "Iabc"
+Ipu off
+Pbase "100e6"
+Vbase "500e3"
+OutputType "Complex"
+PhasorSimulation off
+PSBequivalent "0"
+
+}
+
+Block {
+BlockType "Reference"
+Name "Bus A Load"
+SID "27"
+Ports [0, 0, 0, 0, 0, 3]
+Position [192, 260, 248, 325]
+ZOrder "56"
+BlockRotation "270"
+BlockMirror on
+NamePlacement "alternate"
+AttributesFormatString "\\n"
+LibraryVersion "1.2834"
+SourceBlock "powerlib/Elements/Three-Phase\nSeries RLC Load"
+SourceType "Three-Phase Series RLC Load"
+SourceProductName "Simscape Electrical"
+SourceProductBaseCode "PS"
+LConnTagsString "A|B|C"
+Configuration "Y (grounded)"
+NominalVoltage "400"
+Vabc [1e3 1e3 1e3]
+Vabcp [1e3 1e3 1e3]
+NominalFrequency "50"
+UnbalancedPower off
+ActivePower "100e3"
+InductivePower "1000"
+CapacitivePower "0"
+Pabc [10e3 9e3 11e3]
+QLabc [100 90 110]
+QCabc [100 90 110]
+Pabcp [10e3 9e3 11e3]
+QLabcp [100 90 110]
+QCabcp [100 90 110]
+Measurements "None"
+LoadType "constant Z"
+
+LConnTagsString "A|B|C"
+Configuration "Y (grounded)"
+NominalVoltage "400"
+Vabc [1e3 1e3 1e3]
+Vabcp [1e3 1e3 1e3]
+NominalFrequency "50"
+UnbalancedPower off
+ActivePower "100e3"
+InductivePower "1000"
+CapacitivePower "0"
+Pabc [10e3 9e3 11e3]
+QLabc [100 90 110]
+QCabc [100 90 110]
+Pabcp [10e3 9e3 11e3]
+QLabcp [100 90 110]
+QCabcp [100 90 110]
+Measurements "None"
+LoadType "constant Z"
+
+LConnTagsString "A|B|C"
+Configuration "Y (grounded)"
+NominalVoltage "400"
+Vabc [1e3 1e3 1e3]
+Vabcp [1e3 1e3 1e3]
+NominalFrequency "50"
+UnbalancedPower off
+ActivePower "100e3"
+InductivePower "1000"
+CapacitivePower "0"
+Pabc [10e3 9e3 11e3]
+QLabc [100 90 110]
+QCabc [100 90 110]
+Pabcp [10e3 9e3 11e3]
+QLabcp [100 90 110]
+QCabcp [100 90 110]
+Measurements "None"
+LoadType "constant Z"
+
+LConnTagsString "A|B|C"
+Configuration "Y (grounded)"
+NominalVoltage "400"
+Vabc [1e3 1e3 1e3]
+Vabcp [1e3 1e3 1e3]
+NominalFrequency "50"
+UnbalancedPower off
+ActivePower "100e3"
+InductivePower "1000"
+CapacitivePower "0"
+Pabc [10e3 9e3 11e3]
+QLabc [100 90 110]
+QCabc [100 90 110]
+Pabcp [10e3 9e3 11e3]
+QLabcp [100 90 110]
+QCabcp [100 90 110]
+Measurements "None"
+LoadType "constant Z"
+
+}
+
+Block {
+BlockType "Scope"
+Name "Bus A Scope"
+SID "49"
+Ports [2]
+Position [295, 141, 325, 174]
+ZOrder "124"
+NamePlacement "alternate"
+ScopeSpecificationString "C++SS(StrPVP('Location','[535, 239, 1112, 649]'),StrPVP('Open','off'),MxPVP('AxesTitles',54,'struct(''axes1'',''%<SignalLabel>'',''axes2'',''%<SignalLabel>'')'),MxPVP('ScopeGraphics',57,'struct(''FigureColor'',''[0.5 0.5 0.5]'',''AxesColor'',''[0 0 0]'',''AxesTickColor'',''[1 1 1]'',''LineColors'',''[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]'',''LineStyles'',''-|-|-|-|-|-'',''LineWidths'',''[0.5 0.5 0.5 0.5 0.5 0.5]'',''MarkerStyles'',''none|none|none|none|none|none'')'),StrPVP('YMin','-5~-5'),StrPVP('YMax','5~5'),StrPVP('LimitDataPoints','off'),StrPVP('DataFormat','Array'),StrPVP('Decimation','1'),StrPVP('BlockParamSampleInput','off'))"
+NumInputPorts "2"
+Floating off
+}
+
+Block {
+BlockType "Reference"
+Name "Bus B"
+SID "12"
+Ports [0, 2, 0, 0, 0, 3, 3]
+Position [465, 152, 475, 228]
+ZOrder "41"
+BackgroundColor "black"
+LibraryVersion "1.2834"
+SourceBlock "powerlib/Measurements/Three-Phase\nV-I Measurement"
+SourceType "Three-Phase VI Measurement"
+SourceProductName "Simscape Electrical"
+SourceProductBaseCode "PS"
+ContentPreviewEnabled off
+VoltageMeasurement "phase-to-ground"
+SetLabelV off
+LabelV "Vabc"
+Vpu off
+VpuLL off
+CurrentMeasurement "yes"
+SetLabelI off
+LabelI "Iabc"
+Ipu off
+Pbase "100e6"
+Vbase "500e3"
+OutputType "Complex"
+PhasorSimulation off
+PSBequivalent "0"
+
+ContentPreviewEnabled off
+VoltageMeasurement "phase-to-ground"
+SetLabelV off
+LabelV "Vabc"
+Vpu off
+VpuLL off
+CurrentMeasurement "yes"
+SetLabelI off
+LabelI "Iabc"
+Ipu off
+Pbase "100e6"
+Vbase "500e3"
+OutputType "Complex"
+PhasorSimulation off
+PSBequivalent "0"
+
+ContentPreviewEnabled off
+VoltageMeasurement "phase-to-ground"
+SetLabelV off
+LabelV "Vabc"
+Vpu off
+VpuLL off
+CurrentMeasurement "yes"
+SetLabelI off
+LabelI "Iabc"
+Ipu off
+Pbase "100e6"
+Vbase "500e3"
+OutputType "Complex"
+PhasorSimulation off
+PSBequivalent "0"
+
+ContentPreviewEnabled off
+VoltageMeasurement "phase-to-ground"
+SetLabelV off
+LabelV "Vabc"
+Vpu off
+VpuLL off
+CurrentMeasurement "yes"
+SetLabelI off
+LabelI "Iabc"
+Ipu off
+Pbase "100e6"
+Vbase "500e3"
+OutputType "Complex"
+PhasorSimulation off
+PSBequivalent "0"
+
+}
+
+Block {
+BlockType "Reference"
+Name "Bus B Load"
+SID "1"
+Ports [0, 0, 0, 0, 0, 3]
+Position [650, 177, 715, 233]
+ZOrder "31"
+NamePlacement "alternate"
+AttributesFormatString "\\n"
+LibraryVersion "1.2834"
+SourceBlock "powerlib/Elements/Three-Phase\nSeries RLC Load"
+SourceType "Three-Phase Series RLC Load"
+SourceProductName "Simscape Electrical"
+SourceProductBaseCode "PS"
+LConnTagsString "A|B|C"
+Configuration "Y (grounded)"
+NominalVoltage "400"
+Vabc [1e3 1e3 1e3]
+Vabcp [1e3 1e3 1e3]
+NominalFrequency "50"
+UnbalancedPower off
+ActivePower "100e3"
+InductivePower "1000"
+CapacitivePower "0"
+Pabc [10e3 9e3 11e3]
+QLabc [100 90 110]
+QCabc [100 90 110]
+Pabcp [10e3 9e3 11e3]
+QLabcp [100 90 110]
+QCabcp [100 90 110]
+Measurements "None"
+LoadType "constant Z"
+
+LConnTagsString "A|B|C"
+Configuration "Y (grounded)"
+NominalVoltage "400"
+Vabc [1e3 1e3 1e3]
+Vabcp [1e3 1e3 1e3]
+NominalFrequency "50"
+UnbalancedPower off
+ActivePower "100e3"
+InductivePower "1000"
+CapacitivePower "0"
+Pabc [10e3 9e3 11e3]
+QLabc [100 90 110]
+QCabc [100 90 110]
+Pabcp [10e3 9e3 11e3]
+QLabcp [100 90 110]
+QCabcp [100 90 110]
+Measurements "None"
+LoadType "constant Z"
+
+LConnTagsString "A|B|C"
+Configuration "Y (grounded)"
+NominalVoltage "400"
+Vabc [1e3 1e3 1e3]
+Vabcp [1e3 1e3 1e3]
+NominalFrequency "50"
+UnbalancedPower off
+ActivePower "100e3"
+InductivePower "1000"
+CapacitivePower "0"
+Pabc [10e3 9e3 11e3]
+QLabc [100 90 110]
+QCabc [100 90 110]
+Pabcp [10e3 9e3 11e3]
+QLabcp [100 90 110]
+QCabcp [100 90 110]
+Measurements "None"
+LoadType "constant Z"
+
+LConnTagsString "A|B|C"
+Configuration "Y (grounded)"
+NominalVoltage "400"
+Vabc [1e3 1e3 1e3]
+Vabcp [1e3 1e3 1e3]
+NominalFrequency "50"
+UnbalancedPower off
+ActivePower "100e3"
+InductivePower "1000"
+CapacitivePower "0"
+Pabc [10e3 9e3 11e3]
+QLabc [100 90 110]
+QCabc [100 90 110]
+Pabcp [10e3 9e3 11e3]
+QLabcp [100 90 110]
+QCabcp [100 90 110]
+Measurements "None"
+LoadType "constant Z"
+
+}
+
+Block {
+BlockType "Scope"
+Name "Bus B Scope"
+SID "50"
+Ports [2]
+Position [585, 151, 615, 184]
+ZOrder "125"
+NamePlacement "alternate"
+ScopeSpecificationString "C++SS(StrPVP('Location','[450, 239, 1027, 649]'),StrPVP('Open','off'),MxPVP('AxesTitles',54,'struct(''axes1'',''%<SignalLabel>'',''axes2'',''%<SignalLabel>'')'),MxPVP('ScopeGraphics',57,'struct(''FigureColor'',''[0.5 0.5 0.5]'',''AxesColor'',''[0 0 0]'',''AxesTickColor'',''[1 1 1]'',''LineColors'',''[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]'',''LineStyles'',''-|-|-|-|-|-'',''LineWidths'',''[0.5 0.5 0.5 0.5 0.5 0.5]'',''MarkerStyles'',''none|none|none|none|none|none'')'),StrPVP('YMin','-5~-5'),StrPVP('YMax','5~5'),StrPVP('SaveName','ScopeData1'),StrPVP('LimitDataPoints','off'),StrPVP('DataFormat','Array'),StrPVP('Decimation','1'),StrPVP('BlockParamSampleInput','off'))"
+NumInputPorts "2"
+Floating off
+}
+
+Block {
+BlockType "Display"
+Name "Relay Operating Time"
+SID "63"
+Ports [1]
+Position [365, 297, 455, 323]
+ZOrder "127"
+Decimation "1"
+}
+
+Block {
+BlockType "Scope"
+Name "Scope"
+SID "48"
+Ports [1]
+Position [395, 243, 425, 277]
+ZOrder "123"
+ScopeSpecificationString "C++SS(StrPVP('Location','[603, 279, 926, 531]'),StrPVP('Open','off'),MxPVP('AxesTitles',54,'struct(''axes1'',''%<SignalLabel>'')'),MxPVP('ScopeGraphics',57,'struct(''FigureColor'',''[0.5 0.5 0.5]'',''AxesColor'',''[0 0 0]'',''AxesTickColor'',''[1 1 1]'',''LineColors'',''[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]'',''LineStyles'',''-|-|-|-|-|-'',''LineWidths'',''[0.5 0.5 0.5 0.5 0.5 0.5]'',''MarkerStyles'',''none|none|none|none|none|none'')'),StrPVP('SaveName','ScopeData3'),StrPVP('LimitDataPoints','off'),StrPVP('DataFormat','Array'),StrPVP('Decimation','1'),StrPVP('BlockParamSampleInput','off'))"
+NumInputPorts "1"
+Floating off
+}
+
+Block {
+BlockType "Reference"
+Name "Three-Phase Breaker"
+SID "4"
+Ports [1, 0, 0, 0, 0, 3, 3]
+Position [380, 154, 435, 221]
+ZOrder "33"
+LibraryVersion "1.2834"
+SourceBlock "powerlib/Elements/Three-Phase Breaker"
+SourceType "Three-Phase Breaker"
+SourceProductName "Simscape Electrical"
+SourceProductBaseCode "PS"
+ContentPreviewEnabled off
+InitialState "closed"
+SwitchA on
+SwitchB on
+SwitchC on
+SwitchTimes [1/60  5/60]
+External on
+BreakerResistance "0.01"
+SnubberResistance "1e6"
+SnubberCapacitance "inf"
+Measurements "None"
+
+ContentPreviewEnabled off
+InitialState "closed"
+SwitchA on
+SwitchB on
+SwitchC on
+SwitchTimes [1/60  5/60]
+External on
+BreakerResistance "0.01"
+SnubberResistance "1e6"
+SnubberCapacitance "inf"
+Measurements "None"
+
+ContentPreviewEnabled off
+InitialState "closed"
+SwitchA on
+SwitchB on
+SwitchC on
+SwitchTimes [1/60  5/60]
+External on
+BreakerResistance "0.01"
+SnubberResistance "1e6"
+SnubberCapacitance "inf"
+Measurements "None"
+
+ContentPreviewEnabled off
+InitialState "closed"
+SwitchA on
+SwitchB on
+SwitchC on
+SwitchTimes [1/60  5/60]
+External on
+BreakerResistance "0.01"
+SnubberResistance "1e6"
+SnubberCapacitance "inf"
+Measurements "None"
+
+}
+
+Block {
+BlockType "Reference"
+Name "Three-Phase Fault"
+SID "22"
+Ports [0, 0, 0, 0, 0, 3]
+Position [580, 264, 620, 326]
+ZOrder "51"
+LibraryVersion "1.2834"
+SourceBlock "powerlib/Elements/Three-Phase Fault"
+SourceType "Three-Phase Fault"
+SourceProductName "Simscape Electrical"
+SourceProductBaseCode "PS"
+ContentPreviewEnabled off
+InitialStates "0"
+FaultA on
+FaultB on
+FaultC on
+GroundFault on
+SwitchTimes "0.1"
+External off
+SwitchStatus "NaN"
+FaultResistance "0.001"
+GroundResistance "0.01"
+SnubberResistance "1e6"
+SnubberCapacitance "inf"
+Measurements "None"
+
+ContentPreviewEnabled off
+InitialStates "0"
+FaultA on
+FaultB on
+FaultC on
+GroundFault on
+SwitchTimes "0.1"
+External off
+SwitchStatus "NaN"
+FaultResistance "0.001"
+GroundResistance "0.01"
+SnubberResistance "1e6"
+SnubberCapacitance "inf"
+Measurements "None"
+
+ContentPreviewEnabled off
+InitialStates "0"
+FaultA on
+FaultB on
+FaultC on
+GroundFault on
+SwitchTimes "0.1"
+External off
+SwitchStatus "NaN"
+FaultResistance "0.001"
+GroundResistance "0.01"
+SnubberResistance "1e6"
+SnubberCapacitance "inf"
+Measurements "None"
+
+ContentPreviewEnabled off
+InitialStates "0"
+FaultA on
+FaultB on
+FaultC on
+GroundFault on
+SwitchTimes "0.1"
+External off
+SwitchStatus "NaN"
+FaultResistance "0.001"
+GroundResistance "0.01"
+SnubberResistance "1e6"
+SnubberCapacitance "inf"
+Measurements "None"
+
+}
+
+Block {
+BlockType "Reference"
+Name "Three-Phase Source"
+SID "5"
+Ports [0, 0, 0, 0, 0, 0, 3]
+Position [35, 151, 120, 209]
+ZOrder "30"
+LibraryVersion "1.2834"
+SourceBlock "powerlib/Electrical\nSources/Three-Phase Source"
+SourceType "Three-Phase Source"
+SourceProductName "Simscape Electrical"
+SourceProductBaseCode "PS"
+ContentPreviewEnabled off
+InternalConnection "Yg"
+VoltagePhases off
+Voltage "400"
+PhaseAngle "0"
+Voltage_phases "[25e3 25e3 25e3]/sqrt(3)"
+PhaseAngles_phases [0 -120 +120]
+Frequency "50"
+NonIdealSource on
+SpecifyImpedance on
+Resistance "0.8929"
+Inductance "16.58e-3"
+ShortCircuitLevel "1e6"
+BaseVoltage "400"
+XRratio "7"
+BusType "swing"
+Pref "0"
+Qref "0"
+Prefabc [10e3, 10e3, 10e3]
+Qrefabc [0, 0, 0]
+Qmin "-inf"
+Qmax "inf"
+
+ContentPreviewEnabled off
+InternalConnection "Yg"
+VoltagePhases off
+Voltage "400"
+PhaseAngle "0"
+Voltage_phases "[25e3 25e3 25e3]/sqrt(3)"
+PhaseAngles_phases [0 -120 +120]
+Frequency "50"
+NonIdealSource on
+SpecifyImpedance on
+Resistance "0.8929"
+Inductance "16.58e-3"
+ShortCircuitLevel "1e6"
+BaseVoltage "400"
+XRratio "7"
+BusType "swing"
+Pref "0"
+Qref "0"
+Prefabc [10e3, 10e3, 10e3]
+Qrefabc [0, 0, 0]
+Qmin "-inf"
+Qmax "inf"
+
+ContentPreviewEnabled off
+InternalConnection "Yg"
+VoltagePhases off
+Voltage "400"
+PhaseAngle "0"
+Voltage_phases "[25e3 25e3 25e3]/sqrt(3)"
+PhaseAngles_phases [0 -120 +120]
+Frequency "50"
+NonIdealSource on
+SpecifyImpedance on
+Resistance "0.8929"
+Inductance "16.58e-3"
+ShortCircuitLevel "1e6"
+BaseVoltage "400"
+XRratio "7"
+BusType "swing"
+Pref "0"
+Qref "0"
+Prefabc [10e3, 10e3, 10e3]
+Qrefabc [0, 0, 0]
+Qmin "-inf"
+Qmax "inf"
+
+ContentPreviewEnabled off
+InternalConnection "Yg"
+VoltagePhases off
+Voltage "400"
+PhaseAngle "0"
+Voltage_phases "[25e3 25e3 25e3]/sqrt(3)"
+PhaseAngles_phases [0 -120 +120]
+Frequency "50"
+NonIdealSource on
+SpecifyImpedance on
+Resistance "0.8929"
+Inductance "16.58e-3"
+ShortCircuitLevel "1e6"
+BaseVoltage "400"
+XRratio "7"
+BusType "swing"
+Pref "0"
+Qref "0"
+Prefabc [10e3, 10e3, 10e3]
+Qrefabc [0, 0, 0]
+Qmin "-inf"
+Qmax "inf"
+
+}
+
+Block {
+BlockType "Reference"
+Name "powergui"
+SID "8"
+Ports []
+Position [45, 270, 111, 309]
+ZOrder "37"
+Priority "1"
+LibraryVersion "1.2834"
+SourceBlock "powerlib/powergui"
+SourceType "PSB option menu block"
+SourceProductName "Simscape Electrical"
+SourceProductBaseCode "PS"
+ContentPreviewEnabled off
+SimulationMode "Continuous"
+SampleTime "50e-6"
+frequency "60"
+Iterations "50"
+frequencyindice "50"
+Pbase "100e6"
+ErrMax "1e-4"
+UnitsV "kV"
+UnitsW "MW"
+buscounter "0"
+FunctionMessages off
+echomessages off
+EnableUseOfTLC off
+CurrentSourceSwitches off
+DisableSnubberDevices on
+DisableRonSwitches off
+DisableVfSwitches off
+DisplayEquations off
+AutomaticDiscreteSolvers off
+SolverType "Tustin/Backward Euler (TBE)"
+Interpol off
+ExternalGateDelay off
+methode off
+Ts "100"
+x0status "blocks"
+SPID on
+SwTol "0"
+HookPort off
+NonlinearTolerance "1e-4"
+nMaxIteration "100"
+ContinueOnMaxIteration off
+RestoreLinks "warning"
+ResistiveCurrentMeasurement off
+Frange [0:2:500]
+Ylog off
+Xlog on
+ShowGrid off
+save off
+variable "ZData"
+structure "0"
+ZoomFFT off
+StartTime "0.0"
+cycles "1"
+DisplayStyle "1"
+fundamental "60"
+FreqAxis off
+MaxFrequency "1000"
+frequencyindicesteady "1"
+RmsSteady "1"
+display off
+
+ContentPreviewEnabled off
+SimulationMode "Continuous"
+SampleTime "50e-6"
+frequency "60"
+Iterations "50"
+frequencyindice "50"
+Pbase "100e6"
+ErrMax "1e-4"
+UnitsV "kV"
+UnitsW "MW"
+buscounter "0"
+FunctionMessages off
+echomessages off
+EnableUseOfTLC off
+CurrentSourceSwitches off
+DisableSnubberDevices on
+DisableRonSwitches off
+DisableVfSwitches off
+DisplayEquations off
+AutomaticDiscreteSolvers off
+SolverType "Tustin/Backward Euler (TBE)"
+Interpol off
+ExternalGateDelay off
+methode off
+Ts "100"
+x0status "blocks"
+SPID on
+SwTol "0"
+HookPort off
+NonlinearTolerance "1e-4"
+nMaxIteration "100"
+ContinueOnMaxIteration off
+RestoreLinks "warning"
+ResistiveCurrentMeasurement off
+Frange [0:2:500]
+Ylog off
+Xlog on
+ShowGrid off
+save off
+variable "ZData"
+structure "0"
+ZoomFFT off
+StartTime "0.0"
+cycles "1"
+DisplayStyle "1"
+fundamental "60"
+FreqAxis off
+MaxFrequency "1000"
+frequencyindicesteady "1"
+RmsSteady "1"
+display off
+
+ContentPreviewEnabled off
+SimulationMode "Continuous"
+SampleTime "50e-6"
+frequency "60"
+Iterations "50"
+frequencyindice "50"
+Pbase "100e6"
+ErrMax "1e-4"
+UnitsV "kV"
+UnitsW "MW"
+buscounter "0"
+FunctionMessages off
+echomessages off
+EnableUseOfTLC off
+CurrentSourceSwitches off
+DisableSnubberDevices on
+DisableRonSwitches off
+DisableVfSwitches off
+DisplayEquations off
+AutomaticDiscreteSolvers off
+SolverType "Tustin/Backward Euler (TBE)"
+Interpol off
+ExternalGateDelay off
+methode off
+Ts "100"
+x0status "blocks"
+SPID on
+SwTol "0"
+HookPort off
+NonlinearTolerance "1e-4"
+nMaxIteration "100"
+ContinueOnMaxIteration off
+RestoreLinks "warning"
+ResistiveCurrentMeasurement off
+Frange [0:2:500]
+Ylog off
+Xlog on
+ShowGrid off
+save off
+variable "ZData"
+structure "0"
+ZoomFFT off
+StartTime "0.0"
+cycles "1"
+DisplayStyle "1"
+fundamental "60"
+FreqAxis off
+MaxFrequency "1000"
+frequencyindicesteady "1"
+RmsSteady "1"
+display off
+
+ContentPreviewEnabled off
+SimulationMode "Continuous"
+SampleTime "50e-6"
+frequency "60"
+Iterations "50"
+frequencyindice "50"
+Pbase "100e6"
+ErrMax "1e-4"
+UnitsV "kV"
+UnitsW "MW"
+buscounter "0"
+FunctionMessages off
+echomessages off
+EnableUseOfTLC off
+CurrentSourceSwitches off
+DisableSnubberDevices on
+DisableRonSwitches off
+DisableVfSwitches off
+DisplayEquations off
+AutomaticDiscreteSolvers off
+SolverType "Tustin/Backward Euler (TBE)"
+Interpol off
+ExternalGateDelay off
+methode off
+Ts "100"
+x0status "blocks"
+SPID on
+SwTol "0"
+HookPort off
+NonlinearTolerance "1e-4"
+nMaxIteration "100"
+ContinueOnMaxIteration off
+RestoreLinks "warning"
+ResistiveCurrentMeasurement off
+Frange [0:2:500]
+Ylog off
+Xlog on
+ShowGrid off
+save off
+variable "ZData"
+structure "0"
+ZoomFFT off
+StartTime "0.0"
+cycles "1"
+DisplayStyle "1"
+fundamental "60"
+FreqAxis off
+MaxFrequency "1000"
+frequencyindicesteady "1"
+RmsSteady "1"
+display off
+
+}
+
+Line {
+LineType "Connection"
+ZOrder "3"
+Src "2#lconn:1"
+Points [0, 5]
+Dst "5#rconn:1"
+}
+
+Line {
+LineType "Connection"
+ZOrder "4"
+Src "4#lconn:2"
+Points [-145, 0]
+Branch {
+ConnectType "DEST_DEST"
+Src "27#lconn:2"
+Points [0, -50]
+}
+
+Branch {
+ConnectType "DEST_SRC"
+Dst "2#rconn:2"
+}
+}
+
+Line {
+LineType "Connection"
+ZOrder "6"
+Src "4#lconn:1"
+Points [-165, 0]
+Branch {
+ConnectType "DEST_DEST"
+Src "27#lconn:1"
+Points [0, -65]
+}
+
+Branch {
+ConnectType "DEST_SRC"
+Dst "2#rconn:1"
+}
+}
+
+Line {
+LineType "Connection"
+ZOrder "7"
+Src "2#lconn:2"
+Dst "5#rconn:2"
+}
+
+Line {
+LineType "Connection"
+ZOrder "8"
+Src "2#lconn:3"
+Points [0, -5]
+Dst "5#rconn:3"
+}
+
+Line {
+LineType "Connection"
+ZOrder "11"
+Src "4#lconn:3"
+Points [-125, 0]
+Branch {
+ConnectType "DEST_DEST"
+Src "27#lconn:3"
+Points [0, -35]
+}
+
+Branch {
+ConnectType "DEST_SRC"
+Dst "2#rconn:3"
+}
+}
+
+Line {
+LineType "Connection"
+ZOrder "32"
+Src "4#rconn:2"
+Dst "12#lconn:2"
+}
+
+Line {
+LineType "Connection"
+ZOrder "33"
+Src "12#lconn:1"
+Points [-1, 0; 0, 5]
+Dst "4#rconn:1"
+}
+
+Line {
+LineType "Connection"
+ZOrder "34"
+Src "4#rconn:3"
+Dst "12#lconn:3"
+}
+
+Line {
+ZOrder "24"
+Src "2#out:2"
+Points [80, 0]
+Branch {
+ZOrder "339"
+Dst "49#in:2"
+}
+
+Branch {
+ZOrder "315"
+Points [0, 135]
+Dst "55#in:1"
+}
+}
+
+Line {
+ZOrder "316"
+Src "55#out:1"
+Points [9, 0; 0, -30]
+Branch {
+ZOrder "341"
+Points [0, -95]
+Dst "4#in:1"
+}
+
+Branch {
+ZOrder "340"
+Dst "48#in:1"
+}
+}
+
+Line {
+ZOrder "258"
+Src "2#out:1"
+Dst "49#in:1"
+}
+
+Line {
+ZOrder "267"
+Src "12#out:1"
+Dst "50#in:1"
+}
+
+Line {
+ZOrder "268"
+Src "12#out:2"
+Dst "50#in:2"
+}
+
+Line {
+LineType "Connection"
+ZOrder "270"
+Src "1#lconn:2"
+Points [-120, 0]
+Branch {
+ConnectType "DEST_DEST"
+Src "22#lconn:2"
+Points [-50, 0; 0, -90]
+}
+
+Branch {
+ConnectType "DEST_SRC"
+Dst "12#rconn:2"
+}
+}
+
+Line {
+LineType "Connection"
+ZOrder "271"
+Src "12#rconn:3"
+Points [12, 0]
+Branch {
+ConnectType "DEST_SRC"
+Points [133, 0]
+Dst "1#lconn:3"
+}
+
+Branch {
+ConnectType "DEST_DEST"
+Src "22#lconn:3"
+Points [-63, 0; 0, -95]
+}
+}
+
+Line {
+LineType "Connection"
+ZOrder "272"
+Src "1#lconn:1"
+Points [-1, 0; 0, 5; -105, 0]
+Branch {
+ConnectType "DEST_DEST"
+Src "22#lconn:1"
+Points [-36, 0; 0, -85]
+}
+
+Branch {
+ConnectType "DEST_SRC"
+Dst "12#rconn:1"
+}
+}
+
+Line {
+ZOrder "319"
+Src "55#out:2"
+Dst "63#in:1"
+}
+
+Annotation {
+SID "67"
+Name "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</style></head><body style=\" font-family:'Helvetica'; font-size:10px; font-weight:400; font-style:normal;\">\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt;\">AC Time Overcurrent Relay Block</span></p></body></html>"
+Position [192, 72, 512, 99]
+InternalMargins [0, 0, 0, 0]
+HorizontalAlignment "left"
+VerticalAlignment "top"
+Interpreter "rich"
+ZOrder "-1"
+}
+}
+
+DiagnosticSuppressor on
+
+LogicAnalyzerPlugin on
+
+NotesPlugin on
+
+SLCCPlugin on
+
+WebScopes_FoundationPlugin on
+
+GraphicalInterface {
+NumRootInports "0"
+NumRootOutports "0"
+ParameterArgumentNames ""
+NumModelReferences "0"
+NumTestPointedSignals "0"
+NumProvidedFunctions "0"
+NumRequiredFunctions "0"
+NumResetEvents "0"
+HasInitializeEvent "0"
+HasTerminateEvent "0"
+PreCompExecutionDomainType "Unset"
+IsExportFunctionModel "0"
+IsArchitectureModel "0"
+IsAUTOSARArchitectureModel "0"
+NumParameterArguments "0"
+NumExternalFileReferences "9"
+OrderedModelArguments "1"
+ExternalFileReference {
+Reference "powerlib_meascontrol/Measurements/RMS"
+Path "$bdroot/AC Time Overcurrent Relay/Irms"
+SID "59"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "powerlib/Measurements/Three-Phase\nV-I Measurement"
+Path "$bdroot/Bus A"
+SID "2"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "powerlib/Elements/Three-Phase\nSeries RLC Load"
+Path "$bdroot/Bus A Load"
+SID "27"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "powerlib/Measurements/Three-Phase\nV-I Measurement"
+Path "$bdroot/Bus B"
+SID "12"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "powerlib/Elements/Three-Phase\nSeries RLC Load"
+Path "$bdroot/Bus B Load"
+SID "1"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "powerlib/Elements/Three-Phase Breaker"
+Path "$bdroot/Three-Phase Breaker"
+SID "4"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "powerlib/Elements/Three-Phase Fault"
+Path "$bdroot/Three-Phase Fault"
+SID "22"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "powerlib/Electrical\nSources/Three-Phase Source"
+Path "$bdroot/Three-Phase Source"
+SID "5"
+Type "LIBRARY_BLOCK"
+}
+
+ExternalFileReference {
+Reference "powerlib/powergui"
+Path "$bdroot/powergui"
+SID "8"
+Type "LIBRARY_BLOCK"
+}
+}
+
+PhysicalModelingChecksum "3848346941"
+PhysicalModelingParameterChecksum "1445926564"
+PhysicalModelingProducts "Power_System_Blocks"
+
+Object {
+$PropName "HDLParams"
+$ObjectID 1
+$ClassName "slprops.hdlmdlprops"
+Array {
+PropName "mdlProps"
+Type "Cell"
+Dimension 2
+Cell "HDLSubsystem"
+Cell "$bdroot"
+}
+}
+
+Object {
+$PropName "BdWindowsInfo"
+$ObjectID 34
+$ClassName "Simulink.BDWindowsInfo"
+BDUuid "4211ec65-f0db-45be-b2ff-183d64a1e1ae"
+Object {
+$PropName "WindowsInfo"
+$ObjectID 35
+$ClassName "Simulink.WindowInfo"
+IsActive [1]
+Location [257.0, 51.0, 952.0, 565.0]
+DockComponentsInfo []
+WindowState ""
+WindowUuid ""
+Array {
+PropName "PersistedApps"
+Type "Cell"
+Dimension 0
+}
+
+Object {
+$PropName "ModelBrowserInfo"
+$ObjectID 36
+$ClassName "Simulink.ModelBrowserInfo"
+Visible [0]
+DockPosition "Left"
+Width [50]
+Height [50]
+Filter [9]
+Minimized "Unset"
+}
+
+Object {
+$PropName "ExplorerBarInfo"
+$ObjectID 37
+$ClassName "Simulink.ExplorerBarInfo"
+Visible [1]
+}
+
+Object {
+$PropName "EditorsInfo"
+$ObjectID 38
+$ClassName "Simulink.EditorInfo"
+IsActive [1]
+IsTabbed [1]
+ViewObjType "SimulinkTopLevel"
+LoadSaveID "0"
+Extents [902.0, 390.0]
+ZoomFactor [1.25]
+Offset [13.854999828338634, 58.633092011224107]
+SceneRectInView [0.0, 0.0, 0.0, 0.0]
+}
+}
+}
+
+Array {
+Type "Handle"
+Dimension 1
+Simulink.ConfigSet {
+Version "19.1.1"
+$ClassName "Simulink.ConfigSet"
+DisabledProps []
+Description ""
+Name "Configuration"
+CurrentDlgPage "Solver"
+ConfigPrmDlgPosition [ 220, 77, 1146, 628 ]
+ExtraOptions ""
+Array {
+PropName "Components"
+Type "Handle"
+Dimension 11
+Simulink.SolverCC {
+$ObjectID 40
+Version "19.1.1"
+$ClassName "Simulink.SolverCC"
+DisabledProps []
+Description ""
+Components []
+StartTime "0.0"
+StopTime "1"
+AbsTol "auto"
+AutoScaleAbsTol on
+FixedStep "auto"
+InitialStep "auto"
+MaxOrder "5"
+ZcThreshold "auto"
+ConsecutiveZCsStepRelTol "10*128*eps"
+MaxConsecutiveZCs "1000"
+ExtrapolationOrder "4"
+NumberNewtonIterations "1"
+MaxStep "auto"
+MinStep "auto"
+MaxConsecutiveMinStep "1"
+RelTol "1e-3"
+EnableMultiTasking on
+ConcurrentTasks off
+Solver "ode23tb"
+SolverName "ode23tb"
+SolverJacobianMethodControl "auto"
+ShapePreserveControl "DisableAll"
+ZeroCrossControl "UseLocalSettings"
+ZeroCrossAlgorithm "Nonadaptive"
+AlgebraicLoopSolver "TrustRegion"
+SolverInfoToggleStatus off
+IsAutoAppliedInSIP off
+SolverResetMethod "Fast"
+PositivePriorityOrder off
+AutoInsertRateTranBlk off
+SampleTimeConstraint "Unconstrained"
+InsertRTBMode "Whenever possible"
+SampleTimeProperty []
+DecoupledContinuousIntegration off
+MinimalZcImpactIntegration off
+SolverOrder "3"
+}
+
+Simulink.DataIOCC {
+$ObjectID 41
+Version "19.1.1"
+$ClassName "Simulink.DataIOCC"
+DisabledProps []
+Description ""
+Components []
+Decimation "1"
+ExternalInput [t, u]
+FinalStateName "xFinal"
+InitialState "xInitial"
+LimitDataPoints on
+MaxDataPoints "1000"
+LoadExternalInput off
+LoadInitialState off
+SaveFinalState off
+SaveOperatingPoint off
+SaveFormat "Array"
+SignalLoggingSaveFormat "Dataset"
+SaveOutput on
+SaveState off
+SignalLogging on
+DSMLogging on
+InspectSignalLogs off
+VisualizeSimOutput on
+StreamToWorkspace off
+StreamVariableName "streamout"
+SaveTime on
+ReturnWorkspaceOutputs off
+StateSaveName "xout"
+TimeSaveName "tout"
+OutputSaveName "yout"
+SignalLoggingName "logsout"
+DSMLoggingName "dsmout"
+OutputOption "RefineOutputTimes"
+OutputTimes []
+ReturnWorkspaceOutputsName "out"
+Refine "1"
+LoggingToFile off
+DatasetSignalFormat "timeseries"
+LoggingFileName "out.mat"
+LoggingIntervals [-inf, inf]
+}
+
+Simulink.OptimizationCC {
+$ObjectID 42
+Version "19.1.1"
+$ClassName "Simulink.OptimizationCC"
+Description ""
+Components []
+BlockReduction on
+BooleanDataType on
+ConditionallyExecuteInputs on
+DefaultParameterBehavior "Tunable"
+UseDivisionForNetSlopeComputation off
+GainParamInheritBuiltInType off
+UseFloatMulNetSlope off
+DefaultUnderspecifiedDataType "double"
+UseSpecifiedMinMax off
+InlineInvariantSignals off
+OptimizeBlockIOStorage on
+BufferReuse on
+EnhancedBackFolding off
+CachingGlobalReferences off
+GlobalBufferReuse on
+StrengthReduction off
+AdvancedOptControl ""
+ExpressionFolding on
+BooleansAsBitfields off
+BitfieldContainerType "uint_T"
+EnableMemcpy on
+MemcpyThreshold "64"
+PassReuseOutputArgsAs "Structure reference"
+PassReuseOutputArgsThreshold "12"
+ExpressionDepthLimit "128"
+LocalBlockOutputs on
+RollThreshold "5"
+StateBitsets off
+DataBitsets off
+ActiveStateOutputEnumStorageType "Native Integer"
+ZeroExternalMemoryAtStartup on
+ZeroInternalMemoryAtStartup on
+InitFltsAndDblsToZero off
+NoFixptDivByZeroProtection off
+EfficientFloat2IntCast off
+EfficientMapNaN2IntZero on
+LifeSpan "inf"
+MaxStackSize "Inherit from target"
+BufferReusableBoundary on
+SimCompilerOptimization off
+AccelVerboseBuild off
+OptimizeBlockOrder off
+OptimizeDataStoreBuffers on
+BusAssignmentInplaceUpdate on
+DifferentSizesBufferReuse off
+UseRowMajorAlgorithm off
+OptimizationLevel "level2"
+OptimizationPriority "Balanced"
+OptimizationCustomize on
+LabelGuidedReuse off
+MultiThreadedLoops off
+DenormalBehavior "GradualUnderflow"
+EfficientTunableParamExpr off
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 9
+Cell "BooleansAsBitfields"
+Cell "PassReuseOutputArgsAs"
+Cell "PassReuseOutputArgsThreshold"
+Cell "ZeroExternalMemoryAtStartup"
+Cell "ZeroInternalMemoryAtStartup"
+Cell "OptimizeModelRefInitCode"
+Cell "NoFixptDivByZeroProtection"
+Cell "UseSpecifiedMinMax"
+Cell "EfficientTunableParamExpr"
+}
+}
+
+Simulink.DebuggingCC {
+$ObjectID 43
+Version "19.1.1"
+$ClassName "Simulink.DebuggingCC"
+Description ""
+Components []
+RTPrefix "error"
+ConsistencyChecking "none"
+ArrayBoundsChecking "none"
+SignalInfNanChecking "none"
+StringTruncationChecking "error"
+SignalRangeChecking "none"
+ReadBeforeWriteMsg "UseLocalSettings"
+WriteAfterWriteMsg "UseLocalSettings"
+WriteAfterReadMsg "UseLocalSettings"
+AlgebraicLoopMsg "warning"
+ArtificialAlgebraicLoopMsg "warning"
+SaveWithDisabledLinksMsg "warning"
+SaveWithParameterizedLinksMsg "warning"
+CheckSSInitialOutputMsg on
+UnderspecifiedInitializationDetection "Simplified"
+MergeDetectMultiDrivingBlocksExec "error"
+CheckExecutionContextPreStartOutputMsg off
+CheckExecutionContextRuntimeOutputMsg off
+SignalResolutionControl "UseLocalSettings"
+BlockPriorityViolationMsg "warning"
+MinStepSizeMsg "warning"
+TimeAdjustmentMsg "none"
+MaxConsecutiveZCsMsg "error"
+MaskedZcDiagnostic "warning"
+IgnoredZcDiagnostic "warning"
+SolverPrmCheckMsg "none"
+InheritedTsInSrcMsg "warning"
+MultiTaskDSMMsg "error"
+MultiTaskCondExecSysMsg "error"
+MultiTaskRateTransMsg "error"
+SingleTaskRateTransMsg "none"
+TasksWithSamePriorityMsg "warning"
+ExportedTasksRateTransMsg "none"
+SigSpecEnsureSampleTimeMsg "warning"
+CheckMatrixSingularityMsg "none"
+IntegerOverflowMsg "warning"
+Int32ToFloatConvMsg "warning"
+ParameterDowncastMsg "error"
+ParameterOverflowMsg "error"
+ParameterUnderflowMsg "none"
+ParameterPrecisionLossMsg "warning"
+ParameterTunabilityLossMsg "warning"
+FixptConstUnderflowMsg "none"
+FixptConstOverflowMsg "none"
+FixptConstPrecisionLossMsg "none"
+UnderSpecifiedDataTypeMsg "none"
+UnnecessaryDatatypeConvMsg "none"
+VectorMatrixConversionMsg "none"
+InvalidFcnCallConnMsg "error"
+FcnCallInpInsideContextMsg "error"
+SignalLabelMismatchMsg "none"
+UnconnectedInputMsg "warning"
+UnconnectedOutputMsg "warning"
+UnconnectedLineMsg "warning"
+UseOnlyExistingSharedCode "error"
+SFcnCompatibilityMsg "none"
+FrameProcessingCompatibilityMsg "error"
+UniqueDataStoreMsg "none"
+BusObjectLabelMismatch "warning"
+RootOutportRequireBusObject "warning"
+AssertControl "UseLocalSettings"
+AllowSymbolicDim on
+RowMajorDimensionSupport off
+ModelReferenceIOMsg "none"
+ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+ModelReferenceVersionMismatchMessage "none"
+ModelReferenceIOMismatchMessage "none"
+UnknownTsInhSupMsg "warning"
+ModelReferenceDataLoggingMessage "warning"
+ModelReferenceSymbolNameMessage "warning"
+ModelReferenceExtraNoncontSigs "error"
+StateNameClashWarn "none"
+OperatingPointInterfaceChecksumMismatchMsg "warning"
+NonCurrentReleaseOperatingPointMsg "error"
+ChecksumConsistencyForSSReuse "none"
+PregeneratedLibrarySubsystemCodeDiagnostic "warning"
+MatchCodeGenerationContextForUpdateDiagram "none"
+InitInArrayFormatMsg "warning"
+StrictBusMsg "ErrorLevel1"
+BusNameAdapt "WarnAndRepair"
+NonBusSignalsTreatedAsBus "none"
+SymbolicDimMinMaxWarning "warning"
+LossOfSymbolicDimsSimulationWarning "warning"
+LossOfSymbolicDimsCodeGenerationWarning "error"
+SymbolicDimsDataTypeCodeGenerationDiagnostic "error"
+BlockIODiagnostic "none"
+SFUnusedDataAndEventsDiag "warning"
+SFUnexpectedBacktrackingDiag "warning"
+SFInvalidInputDataAccessInChartInitDiag "warning"
+SFNoUnconditionalDefaultTransitionDiag "warning"
+SFTransitionOutsideNaturalParentDiag "warning"
+SFUnreachableExecutionPathDiag "warning"
+SFUndirectedBroadcastEventsDiag "warning"
+SFTransitionActionBeforeConditionDiag "warning"
+SFOutputUsedAsStateInMooreChartDiag "error"
+SFTemporalDelaySmallerThanSampleTimeDiag "warning"
+SFSelfTransitionDiag "warning"
+SFExecutionAtInitializationDiag "none"
+SFMachineParentedDataDiag "warning"
+IntegerSaturationMsg "warning"
+AllowedUnitSystems "all"
+UnitsInconsistencyMsg "warning"
+AllowAutomaticUnitConversions on
+RCSCRenamedMsg "warning"
+RCSCObservableMsg "warning"
+ForceCombineOutputUpdateInSim off
+UnitDatabase ""
+UnderSpecifiedDimensionMsg "none"
+DebugExecutionForFMUViaOutOfProcess off
+ArithmeticOperatorsInVariantConditions "warning"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 1
+Cell "UseOnlyExistingSharedCode"
+}
+}
+
+Simulink.HardwareCC {
+$ObjectID 44
+Version "19.1.1"
+$ClassName "Simulink.HardwareCC"
+DisabledProps []
+Description ""
+Components []
+ProdBitPerChar "8"
+ProdBitPerShort "16"
+ProdBitPerInt "32"
+ProdBitPerLong "32"
+ProdBitPerLongLong "64"
+ProdBitPerFloat "32"
+ProdBitPerDouble "64"
+ProdBitPerPointer "32"
+ProdBitPerSizeT "32"
+ProdBitPerPtrDiffT "32"
+ProdLargestAtomicInteger "Char"
+ProdLargestAtomicFloat "None"
+ProdIntDivRoundTo "Undefined"
+ProdEndianess "Unspecified"
+ProdWordSize "32"
+ProdShiftRightIntArith on
+ProdLongLongMode off
+ProdHWDeviceType "32-bit Generic"
+TargetBitPerChar "8"
+TargetBitPerShort "16"
+TargetBitPerInt "32"
+TargetBitPerLong "32"
+TargetBitPerLongLong "64"
+TargetBitPerFloat "32"
+TargetBitPerDouble "64"
+TargetBitPerPointer "32"
+TargetBitPerSizeT "32"
+TargetBitPerPtrDiffT "32"
+TargetLargestAtomicInteger "Char"
+TargetLargestAtomicFloat "None"
+TargetShiftRightIntArith on
+TargetLongLongMode off
+TargetIntDivRoundTo "Undefined"
+TargetEndianess "Unspecified"
+TargetWordSize "32"
+TargetPreprocMaxBitsSint "32"
+TargetPreprocMaxBitsUint "32"
+TargetHWDeviceType "Specified"
+TargetUnknown off
+ProdEqTarget on
+UseEmbeddedCoderFeatures on
+UseSimulinkCoderFeatures on
+HardwareBoardFeatureSet "EmbeddedCoderHSP"
+}
+
+Simulink.ModelReferenceCC {
+$ObjectID 45
+Version "19.1.1"
+$ClassName "Simulink.ModelReferenceCC"
+DisabledProps []
+Description ""
+Components []
+UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+EnableRefExpFcnMdlSchedulingChecks on
+CheckModelReferenceTargetMessage "error"
+EnableParallelModelReferenceBuilds off
+ParallelModelReferenceErrorOnInvalidPool on
+ParallelModelReferenceMATLABWorkerInit "None"
+ModelReferenceNumInstancesAllowed "Multi"
+PropagateVarSize "Infer from blocks in model"
+ModelDependencies ""
+ModelReferencePassRootInputsByReference on
+ModelReferenceMinAlgLoopOccurrences off
+PropagateSignalLabelsOutOfModel off
+SupportModelReferenceSimTargetCustomCode off
+}
+
+Simulink.SFSimCC {
+$ObjectID 46
+Version "19.1.1"
+$ClassName "Simulink.SFSimCC"
+DisabledProps []
+Description ""
+Components []
+SimCustomSourceCode ""
+SimCustomHeaderCode ""
+SimCustomInitializer ""
+SimCustomTerminator ""
+SimReservedNameArray []
+SimUserSources ""
+SimUserIncludeDirs ""
+SimUserLibraries ""
+SimUserDefines ""
+SimCustomCompilerFlags ""
+SimCustomLinkerFlags ""
+SFSimEcho on
+SimCtrlC on
+SimIntegrity on
+SimUseLocalCustomCode off
+SimParseCustomCode on
+SimAnalyzeCustomCode off
+SimBuildMode "sf_incremental_build"
+SimGenImportedTypeDefs off
+ModelFunctionsGlobalVisibility on
+CompileTimeRecursionLimit "50"
+EnableRuntimeRecursion on
+MATLABDynamicMemAlloc on
+MATLABDynamicMemAllocThreshold "65536"
+CustomCodeFunctionArrayLayout []
+DefaultCustomCodeFunctionArrayLayout "NotSpecified"
+CustomCodeUndefinedFunction "UseInterfaceOnly"
+}
+
+Simulink.RTWCC {
+BackupClass "Simulink.RTWCC"
+$ObjectID 47
+Version "19.1.1"
+$ClassName "Simulink.RTWCC"
+Description ""
+SystemTargetFile "grt.tlc"
+HardwareBoard "None"
+ShowCustomHardwareApp off
+ShowEmbeddedHardwareApp off
+TLCOptions ""
+GenCodeOnly off
+MakeCommand "make_rtw"
+GenerateMakefile on
+PackageGeneratedCodeAndArtifacts off
+PackageName ""
+TemplateMakefile "grt_default_tmf"
+PostCodeGenCommand ""
+GenerateReport off
+RTWVerbose on
+RetainRTWFile off
+RTWBuildHooks []
+ProfileTLC off
+TLCDebug off
+TLCCoverage off
+TLCAssert off
+RTWUseLocalCustomCode off
+RTWUseSimCustomCode off
+CustomSourceCode ""
+CustomHeaderCode ""
+CustomInclude ""
+CustomSource ""
+CustomLibrary ""
+CustomDefine ""
+CustomBLASCallback ""
+CustomLAPACKCallback ""
+CustomFFTCallback ""
+CustomInitializer ""
+CustomTerminator ""
+Toolchain "Automatically locate an installed toolchain"
+BuildConfiguration "Faster Builds"
+CustomToolchainOptions []
+IncludeHyperlinkInReport off
+LaunchReport off
+PortableWordSizes off
+CreateSILPILBlock "None"
+CodeExecutionProfiling off
+CodeExecutionProfileVariable "executionProfile"
+CodeProfilingSaveOptions "SummaryOnly"
+CodeProfilingInstrumentation off
+SILDebugging off
+TargetLang "C"
+IncludeBusHierarchyInRTWFileBlockHierarchyMap off
+GenerateTraceInfo off
+GenerateTraceReport off
+GenerateTraceReportSl off
+GenerateTraceReportSf off
+GenerateTraceReportEml off
+GenerateWebview off
+GenerateCodeMetricsReport off
+GenerateCodeReplacementReport off
+GenerateMissedCodeReplacementReport off
+RTWCompilerOptimization off
+ObjectivePriorities []
+RTWCustomCompilerOptimizations ""
+CheckMdlBeforeBuild "Off"
+SharedConstantsCachingThreshold "1024"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 16
+Cell "IncludeHyperlinkInReport"
+Cell "GenerateTraceInfo"
+Cell "GenerateTraceReport"
+Cell "GenerateTraceReportSl"
+Cell "GenerateTraceReportSf"
+Cell "GenerateTraceReportEml"
+Cell "PortableWordSizes"
+Cell "GenerateWebview"
+Cell "GenerateCodeMetricsReport"
+Cell "GenerateCodeReplacementReport"
+Cell "GenerateMissedCodeReplacementReport"
+Cell "GenerateErtSFunction"
+Cell "CreateSILPILBlock"
+Cell "CodeExecutionProfiling"
+Cell "CodeProfilingSaveOptions"
+Cell "CodeProfilingInstrumentation"
+}
+
+Array {
+PropName "Components"
+Type "Handle"
+Dimension 2
+Object {
+$ObjectID 48
+Version "19.1.1"
+$ClassName "Simulink.CodeAppCC"
+Description ""
+Components []
+Comment ""
+ForceParamTrailComments off
+GenerateComments on
+CommentStyle "Auto"
+IgnoreCustomStorageClasses on
+IgnoreTestpoints off
+MaxIdLength "31"
+PreserveName off
+PreserveNameWithParent off
+ShowEliminatedStatement off
+OperatorAnnotations off
+SimulinkDataObjDesc off
+SFDataObjDesc off
+MATLABFcnDesc off
+MangleLength "1"
+SharedChecksumLength "8"
+CustomSymbolStrGlobalVar "$R$N$M"
+CustomSymbolStrType "$N$R$M_T"
+CustomSymbolStrField "$N$M"
+CustomSymbolStrFcn "$R$N$M$F"
+CustomSymbolStrModelFcn "$R$N"
+CustomSymbolStrFcnArg "rt$I$N$M"
+CustomSymbolStrBlkIO "rtb_$N$M"
+CustomSymbolStrTmpVar "$N$M"
+CustomSymbolStrMacro "$R$N$M"
+CustomSymbolStrUtil "$N$C"
+CustomSymbolStrEmxType "emxArray_$M$N"
+CustomSymbolStrEmxFcn "emx$M$N"
+CustomUserTokenString ""
+CustomCommentsFcn ""
+DefineNamingRule "None"
+DefineNamingFcn ""
+ParamNamingRule "None"
+ParamNamingFcn ""
+SignalNamingRule "None"
+SignalNamingFcn ""
+InsertBlockDesc off
+InsertPolySpaceComments off
+SimulinkBlockComments on
+BlockCommentType "BlockPathComment"
+StateflowObjectComments on
+MATLABSourceComments off
+EnableCustomComments off
+InternalIdentifierFile ""
+InternalIdentifier "Shortened"
+InlinedPrmAccess "Literals"
+ReqsInCode off
+UseSimReservedNames off
+ReservedNameArray []
+EnumMemberNameClash "error"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 29
+Cell "IgnoreCustomStorageClasses"
+Cell "ParameterTuningSideEffectCode"
+Cell "IgnoreTestpoints"
+Cell "InsertBlockDesc"
+Cell "InsertPolySpaceComments"
+Cell "SFDataObjDesc"
+Cell "MATLABFcnDesc"
+Cell "SimulinkDataObjDesc"
+Cell "DefineNamingRule"
+Cell "SignalNamingRule"
+Cell "ParamNamingRule"
+Cell "InternalIdentifier"
+Cell "InlinedPrmAccess"
+Cell "CustomSymbolStr"
+Cell "CustomSymbolStrGlobalVar"
+Cell "CustomSymbolStrType"
+Cell "CustomSymbolStrField"
+Cell "CustomSymbolStrFcn"
+Cell "CustomSymbolStrFcnArg"
+Cell "CustomSymbolStrBlkIO"
+Cell "CustomSymbolStrTmpVar"
+Cell "CustomSymbolStrMacro"
+Cell "CustomSymbolStrUtil"
+Cell "ReqsInCode"
+Cell "BlockCommentType"
+Cell "CustomSymbolStrModelFcn"
+Cell "CustomSymbolStrEmxType"
+Cell "CustomSymbolStrEmxFcn"
+Cell "CustomUserTokenString"
+}
+}
+
+Object {
+BackupClass "Simulink.TargetCC"
+$ObjectID 49
+Version "19.1.1"
+$ClassName "Simulink.GRTTargetCC"
+Description ""
+Components []
+TargetFcnLib "ansi_tfl_table_tmw.mat"
+TargetLibSuffix ""
+TargetPreCompLibLocation ""
+GenFloatMathFcnCalls "NOT IN USE"
+TargetLangStandard "C89/C90 (ANSI)"
+CodeReplacementLibrary "None"
+UtilityFuncGeneration "Auto"
+MultiwordTypeDef "System defined"
+MultiwordLength "2048"
+DynamicStringBufferSize "256"
+GenerateFullHeader on
+InferredTypesCompatibility off
+ExistingSharedCode ""
+GenerateSampleERTMain off
+GenerateTestInterfaces off
+ModelReferenceCompliant on
+ParMdlRefBuildCompliant on
+CompOptLevelCompliant on
+ConcurrentExecutionCompliant on
+IncludeMdlTerminateFcn on
+GeneratePreprocessorConditionals "Disable all"
+CombineOutputUpdateFcns on
+CombineSignalStateStructs off
+GroupInternalDataByFunction off
+SuppressErrorStatus off
+IncludeFileDelimiter "Auto"
+ERTCustomFileBanners off
+SupportAbsoluteTime on
+LogVarNameModifier "rt_"
+MatFileLogging on
+MultiInstanceERTCode off
+CodeInterfacePackaging "Nonreusable function"
+PurelyIntegerCode off
+SupportNonFinite on
+SupportComplex on
+SupportContinuousTime on
+SupportNonInlinedSFcns on
+RemoveDisableFunc off
+RemoveResetFunc off
+SupportVariableSizeSignals off
+ParenthesesLevel "Nominal"
+CastingMode "Nominal"
+PreserveStateflowLocalDataDimensions off
+MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
+ModelStepFunctionPrototypeControlCompliant off
+CPPClassGenCompliant on
+AutosarCompliant off
+MDXCompliant off
+GRTInterface off
+GenerateAllocFcn off
+UseToolchainInfoCompliant on
+GenerateSharedConstants on
+CoderGroups []
+AccessMethods []
+LookupTableObjectStructAxisOrder "1,2,3,4,..."
+LUTObjectStructOrderExplicitValues "Size,Breakpoints,Table"
+LUTObjectStructOrderEvenSpacing "Size,Breakpoints,Table"
+ArrayLayout "Column-major"
+UnsupportedSFcnMsg "error"
+ERTHeaderFileRootName "$R$E"
+ERTSourceFileRootName "$R$E"
+ERTDataFileRootName "$R_data"
+UseMalloc off
+ExtMode off
+ExtModeStaticAlloc off
+ExtModeTesting off
+ExtModeStaticAllocSize "1000000"
+ExtModeTransport "0"
+ExtModeMexFile "ext_comm"
+ExtModeMexArgs ""
+ExtModeIntrfLevel "Level1"
+RTWCAPISignals off
+RTWCAPIParams off
+RTWCAPIStates off
+RTWCAPIRootIO off
+GenerateASAP2 off
+MultiInstanceErrorCode "Error"
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 17
+Cell "GeneratePreprocessorConditionals"
+Cell "IncludeMdlTerminateFcn"
+Cell "SuppressErrorStatus"
+Cell "ERTCustomFileBanners"
+Cell "GenerateSampleERTMain"
+Cell "GenerateTestInterfaces"
+Cell "ModelStepFunctionPrototypeControlCompliant"
+Cell "GenerateAllocFcn"
+Cell "PurelyIntegerCode"
+Cell "SupportComplex"
+Cell "SupportAbsoluteTime"
+Cell "SupportContinuousTime"
+Cell "SupportNonInlinedSFcns"
+Cell "ExistingSharedCode"
+Cell "RemoveDisableFunc"
+Cell "RemoveResetFunc"
+Cell "PreserveStateflowLocalDataDimensions"
+}
+}
+}
+}
+
+SlCovCC.ConfigComp {
+$ObjectID 50
+Version "19.1.1"
+$ClassName "SlCovCC.ConfigComp"
+DisabledProps []
+Description "Simulink Coverage Configuration Component"
+Components []
+Name "Simulink Coverage"
+CovEnable off
+CovScope "EntireSystem"
+CovIncludeTopModel on
+RecordCoverage off
+CovPath "/"
+CovSaveName "covdata"
+CovCompData ""
+CovMetricSettings "dw"
+CovFilter ""
+CovHTMLOptions ""
+CovNameIncrementing off
+CovHtmlReporting on
+CovForceBlockReductionOff on
+CovEnableCumulative on
+CovSaveCumulativeToWorkspaceVar on
+CovSaveSingleToWorkspaceVar on
+CovCumulativeVarName "covCumulativeData"
+CovCumulativeReport off
+CovSaveOutputData on
+CovOutputDir "slcov_output/$ModelName$"
+CovDataFileName "$ModelName$_cvdata"
+CovShowResultsExplorer on
+CovReportOnPause on
+CovModelRefEnable off
+CovModelRefExcluded ""
+CovExternalEMLEnable off
+CovSFcnEnable on
+CovBoundaryAbsTol "1e-05"
+CovBoundaryRelTol "0.01"
+CovUseTimeInterval off
+CovStartTime "0"
+CovStopTime "0"
+CovMcdcMode "Masking"
+}
+
+hdlcoderui.hdlcc {
+$ObjectID 51
+Version "19.1.1"
+$ClassName "hdlcoderui.hdlcc"
+DisabledProps []
+Description "HDL Coder custom configuration component"
+Components []
+Name "HDL Coder"
+HDLCActiveTab "0"
+Array {
+PropName "HDLConfigFile"
+Type "Cell"
+Dimension 1
+Cell " "
+}
+}
+
+Object {
+$ObjectID 52
+Version "1.0"
+$ClassName "SSC.SimscapeCC"
+Description ""
+Components []
+Name "Simscape"
+EditingMode "Full"
+ExplicitSolverDiagnosticOptions "warning"
+GlobalZcOffDiagnosticOptions "warning"
+SimscapeNormalizeSystem off
+SimscapeNominalValues "[{\"value\":\"1\",\"unit\":\"A\"},{\"value\":\"1\",\"unit\":\"bar\"},{\"value\":\"1\",\"unit\":\"cm^2\"},{\"value\":\"1\",\"unit\":\"cm^3/s\"},{\"value\":\"1\",\"unit\":\"kJ/kg\"},{\"value\":\"1\",\"unit\":\"kW\"},{\"value\":\"1\",\"unit\":\"l\"},{\"value\":\"1\",\"unit\":\"N\"},{\"value\":\"1\",\"unit\":\"N*m\"},{\"value\":\"1\",\"unit\":\"V\"}]"
+SimscapeLogType "none"
+SimscapeLogSimulationStatistics off
+SimscapeLogToSDI off
+SimscapeLogOpenViewer off
+SimscapeLogName "simlog"
+SimscapeLogDecimation "1"
+SimscapeLogLimitData on
+SimscapeLogDataHistory "5000"
+SimscapeUseOperatingPoints off
+SimscapeOperatingPoint ""
+SelectedTab ""
+Array {
+PropName "DisabledProps"
+Type "Cell"
+Dimension 1
+Cell "Name"
+}
+}
+}
+}
+}
+
+System {
+PaperOrientation "landscape"
+PaperPositionMode "auto"
+PaperType "usletter"
+PaperUnits "inches"
+TiledPaperMargins [0.500000, 0.500000, 0.500000, 0.500000]
+TiledPageScale "1"
+ShowPageBoundaries off
+ModelBrowserVisibility off
+ModelBrowserWidth "200"
+ScreenColor "white"
+ZoomFactor "100"
+PortBlocksUseCompactNotation off
+Open off
+}
+
+BlockDefaults {
+ForegroundColor "black"
+BackgroundColor "white"
+DropShadow off
+NamePlacement "normal"
+FontName "Helvetica"
+FontSize "10"
+FontWeight "normal"
+FontAngle "normal"
+ShowName on
+HideAutomaticName on
+BlockRotation "0"
+BlockMirror off
+}
+
+AnnotationDefaults {
+HorizontalAlignment "center"
+VerticalAlignment "middle"
+ForegroundColor "black"
+BackgroundColor "white"
+DropShadow off
+FontName "Helvetica"
+FontSize "10"
+FontWeight "normal"
+FontAngle "normal"
+MarkupType "model"
+UseDisplayTextAsClickCallback off
+AnnotationType "note_annotation"
+FixedHeight off
+FixedWidth off
+Interpreter off
+}
+
+LineDefaults {
+FontName "Helvetica"
+FontSize "9"
+FontWeight "normal"
+FontAngle "normal"
+}
+
+MaskDefaults {
+SelfModifiable "off"
+IconFrame "on"
+IconOpaque "opaque"
+RunInitForIconRedraw "analyze"
+IconRotate "none"
+PortRotate "default"
+IconUnits "autoscale"
+Display ""
+
+}
+
+MaskParameterDefaults {
+Evaluate "on"
+Tunable "on"
+NeverSave "off"
+Internal "off"
+ReadOnly "off"
+Enabled "on"
+Visible "on"
+ToolTip "on"
+Value ""
+}
+
+BlockParameterDefaults {
+Block {
+BlockType "Clock"
+DisplayTime off
+Decimation "10"
+}
+
+Block {
+BlockType "Demux"
+Outputs "4"
+DisplayOption "none"
+BusSelectionMode off
+}
+
+Block {
+BlockType "Display"
+Format "short"
+Decimation "10"
+Floating off
+Lockdown off
+SampleTime "-1"
+}
+
+Block {
+BlockType "Inport"
+Port "1"
+OutputFunctionCall off
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: auto"
+LockScale off
+BusOutputAsStruct off
+Unit "inherit"
+PortDimensions "-1"
+VarSizeSig "Inherit"
+SampleTime "-1"
+SignalType "auto"
+SamplingMode "auto"
+LatchByDelayingOutsideSignal off
+LatchInputForFeedbackSignals off
+Interpolate on
+}
+
+Block {
+BlockType "Outport"
+Port "1"
+OutMin []
+OutMax []
+OutDataTypeStr "Inherit: auto"
+LockScale off
+BusOutputAsStruct off
+Unit "inherit"
+PortDimensions "-1"
+VarSizeSig "Inherit"
+SampleTime "-1"
+SignalType "auto"
+SamplingMode "auto"
+EnsureOutportIsVirtual off
+SourceOfInitialOutputValue "Dialog"
+OutputWhenDisabled "held"
+InitialOutput []
+MustResolveToSignalObject off
+OutputWhenUnConnected off
+OutputWhenUnconnectedValue "0"
+VectorParamsAs1DForOutWhenUnconnected on
+}
+
+Block {
+BlockType "RelationalOperator"
+Operator ">="
+InputSameDT on
+OutDataTypeStr "Inherit: Logical (see Configuration Parameters: Optimization)"
+ZeroCross on
+SampleTime "-1"
+RndMeth "Nearest"
+}
+
+Block {
+BlockType "S-Function"
+FunctionName "system"
+SFunctionModules "''"
+PortCounts []
+MultiThreadCoSim "auto"
+}
+
+Block {
+BlockType "Scope"
+DefaultConfigurationName "Simulink.scopes.TimeScopeBlockCfg"
+}
+
+Block {
+BlockType "SubSystem"
+ShowPortLabels "FromPortIcon"
+Permissions "ReadWrite"
+PermitHierarchicalResolution "All"
+TreatAsAtomicUnit off
+MinAlgLoopOccurrences off
+PropExecContextOutsideSubsystem off
+ScheduleAs "Sample time"
+SystemSampleTime "-1"
+RTWSystemCode "Auto"
+RTWFcnNameOpts "Auto"
+RTWFileNameOpts "Auto"
+FunctionInterfaceSpec "void_void"
+FunctionWithSeparateData off
+RTWMemSecFuncInitTerm "Inherit from model"
+RTWMemSecFuncExecute "Inherit from model"
+RTWMemSecDataConstants "Inherit from model"
+RTWMemSecDataInternal "Inherit from model"
+RTWMemSecDataParameters "Inherit from model"
+SimViewingDevice off
+DataTypeOverride "UseLocalSettings"
+DataTypeOverrideAppliesTo "AllNumericTypes"
+MinMaxOverflowLogging "UseLocalSettings"
+Opaque off
+MaskHideContents off
+SFBlockType "NONE"
+VariantControlMode "Expression"
+Variant off
+GeneratePreprocessorConditionals off
+AllowZeroVariantControls off
+PropagateVariantConditions off
+TreatAsGroupedWhenPropagatingVariantConditions on
+ContentPreviewEnabled off
+IsWebBlock off
+IsObserver off
+Latency "0"
+AutoFrameSizeCalculation off
+IsWebBlockPanel off
+}
+
+Block {
+BlockType "Terminator"
+}
+}
+}
+
+Stateflow {
+
+machine {
+id 1
+name "dummy_name"
+firstTarget 2
+sfVersion 80000019
+}
+
+chart {
+id 3
+treeNode [0 4 0 0]
+machine 1
+viewObj 3
+firstData 5
+firstJunction 18
+firstTransition 17
+name "AC Time\nOvercurrent Relay/Time Relay Function"
+windowPosition [422 539.941 189 413]
+viewLimits [0 156.75 0 153.75]
+screen [1 1 3600 1200 1.180555555555556]
+ssIdHighWaterMark 20
+decomposition CLUSTER_CHART
+type EML_CHART
+chartFileNumber 1
+disableImplicitCasting 1
+eml {
+name "fcn"
+}
+
+}
+
+state {
+id 4
+ssIdNumber 1
+treeNode [3 0 0 0]
+chart 3
+subviewer 3
+labelString "eML_blk_kernel()"
+position [18 64.5 118 66]
+fontSize 12
+superState SUBCHART
+type FUNC_STATE
+decomposition CLUSTER_STATE
+eml {
+isEML 1
+script "function [TT, OT] = fcn(clk,Irms,CTpri,CTsec,PS,TMS,k,alpha,B,TDS)\n\npersistent RelayState TripTime OperatingTime PickupTime\n\nif isempty(RelayState)\n    RelayState = 0;\n    TripTime = inf;\n    OperatingTime = inf;\n    PickupTime = 0;\nend\n\nCT = max(Irms/(CTpri/CTsec));\nPickup = (PS*0.25)*CTsec;\n\nif (RelayState == 0)&&(CT > Pickup)\n    PickupTime = clk;\n    RelayState = 1;\nend\n\nif (RelayState == 1)&&(clk>(PickupTime+0.02)) % Wait for 20ms fault current rise time\n    if k == 0\n        OperatingTime = TDS;\n    else\n        PMS = CT/Pickup;                          % Calculate Plug Multiplier Setting\n        OperatingTime = ((k/((PMS^alpha)-1))+B)*(TMS*0.05); % Determine Definite Inverse Minimum Time\n    end\n    TripTime = PickupTime + OperatingTime;\n    RelayState = 2;\nend\n\nTT = TripTime;\nOT = OperatingTime;"
+editorLayout "Matrix(4,1)\n[10.0, 5.0, 700.0, 500.0]"
+}
+
+}
+
+transition {
+id 17
+ssIdNumber 2
+linkNode [3 0 0]
+chart 3
+subviewer 3
+labelString "{eML_blk_kernel();}"
+labelPosition [28.125 13.875 102.544 14.964]
+fontSize 12
+midPoint [23.5747 24.9468]
+dataLimits [21.175 25.975 14.625 42.575]
+drawStyle SMART
+executionOrder 1
+
+src {
+intersection [0 0 1 0 23.5747 14.625 0 0]
+}
+
+dst {
+id 18
+intersection [1 0 -1 0 23.5747 42.5747 0 0]
+}
+
+slide {
+sticky BOTH_STICK
+}
+
+}
+
+junction {
+id 18
+ssIdNumber 3
+linkNode [3 0 0]
+chart 3
+subviewer 3
+position [23.5747 49.5747 7]
+type CONNECTIVE_JUNCTION
+}
+
+data {
+id 5
+ssIdNumber 9
+linkNode [3 0 6]
+machine 1
+name "TT"
+scope OUTPUT_DATA
+dataType "Inherit: Same as Simulink"
+props {
+complexity SF_COMPLEX_INHERITED
+frame SF_FRAME_NO
+array {
+size "-1"
+}
+
+type {
+method SF_INHERITED_TYPE
+primitive SF_DOUBLE_TYPE
+isSigned 1
+wordLength 16
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 6
+ssIdNumber 7
+linkNode [3 5 7]
+machine 1
+name "clk"
+scope INPUT_DATA
+dataType "Inherit: Same as Simulink"
+props {
+complexity SF_COMPLEX_INHERITED
+frame SF_FRAME_INHERITED
+array {
+size "-1"
+}
+
+type {
+method SF_INHERITED_TYPE
+primitive SF_DOUBLE_TYPE
+isSigned 1
+wordLength 16
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 7
+ssIdNumber 4
+linkNode [3 6 8]
+machine 1
+name "Irms"
+scope INPUT_DATA
+dataType "Inherit: Same as Simulink"
+props {
+complexity SF_COMPLEX_INHERITED
+array {
+size "-1"
+}
+
+type {
+method SF_INHERITED_TYPE
+primitive SF_DOUBLE_TYPE
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 8
+ssIdNumber 11
+linkNode [3 7 9]
+machine 1
+name "CTpri"
+scope PARAMETER_DATA
+paramIndexForInitFromWorkspace 1
+dataType "Inherit: Same as Simulink"
+props {
+complexity SF_COMPLEX_INHERITED
+frame SF_FRAME_INHERITED
+array {
+size "-1"
+}
+
+type {
+method SF_INHERITED_TYPE
+primitive SF_DOUBLE_TYPE
+isSigned 1
+wordLength 16
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 9
+ssIdNumber 16
+linkNode [3 8 10]
+machine 1
+name "CTsec"
+scope PARAMETER_DATA
+paramIndexForInitFromWorkspace 2
+dataType "Inherit: Same as Simulink"
+props {
+complexity SF_COMPLEX_INHERITED
+frame SF_FRAME_INHERITED
+array {
+size "-1"
+}
+
+type {
+method SF_INHERITED_TYPE
+primitive SF_DOUBLE_TYPE
+isSigned 1
+wordLength 16
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 10
+ssIdNumber 14
+linkNode [3 9 11]
+machine 1
+name "PS"
+scope PARAMETER_DATA
+paramIndexForInitFromWorkspace 3
+dataType "Inherit: Same as Simulink"
+props {
+complexity SF_COMPLEX_INHERITED
+frame SF_FRAME_INHERITED
+array {
+size "-1"
+}
+
+type {
+method SF_INHERITED_TYPE
+primitive SF_DOUBLE_TYPE
+isSigned 1
+wordLength 16
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 11
+ssIdNumber 5
+linkNode [3 10 12]
+machine 1
+name "OT"
+scope OUTPUT_DATA
+dataType "Inherit: Same as Simulink"
+props {
+complexity SF_COMPLEX_INHERITED
+frame SF_FRAME_NO
+array {
+size "-1"
+}
+
+type {
+method SF_INHERITED_TYPE
+primitive SF_DOUBLE_TYPE
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 12
+ssIdNumber 10
+linkNode [3 11 13]
+machine 1
+name "TMS"
+scope PARAMETER_DATA
+paramIndexForInitFromWorkspace 5
+dataType "Inherit: Same as Simulink"
+props {
+complexity SF_COMPLEX_INHERITED
+frame SF_FRAME_INHERITED
+array {
+size "-1"
+}
+
+type {
+method SF_INHERITED_TYPE
+primitive SF_DOUBLE_TYPE
+isSigned 1
+wordLength 16
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 13
+ssIdNumber 17
+linkNode [3 12 14]
+machine 1
+name "k"
+scope PARAMETER_DATA
+paramIndexForInitFromWorkspace 7
+dataType "Inherit: Same as Simulink"
+props {
+complexity SF_COMPLEX_INHERITED
+frame SF_FRAME_INHERITED
+array {
+size "-1"
+}
+
+type {
+method SF_INHERITED_TYPE
+primitive SF_DOUBLE_TYPE
+isSigned 1
+wordLength 16
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 14
+ssIdNumber 18
+linkNode [3 13 15]
+machine 1
+name "alpha"
+scope PARAMETER_DATA
+paramIndexForInitFromWorkspace 6
+dataType "Inherit: Same as Simulink"
+props {
+complexity SF_COMPLEX_INHERITED
+frame SF_FRAME_INHERITED
+array {
+size "-1"
+}
+
+type {
+method SF_INHERITED_TYPE
+primitive SF_DOUBLE_TYPE
+isSigned 1
+wordLength 16
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 15
+ssIdNumber 20
+linkNode [3 14 16]
+machine 1
+name "B"
+scope PARAMETER_DATA
+dataType "Inherit: Same as Simulink"
+props {
+complexity SF_COMPLEX_INHERITED
+frame SF_FRAME_INHERITED
+array {
+size "-1"
+}
+
+type {
+method SF_INHERITED_TYPE
+primitive SF_DOUBLE_TYPE
+isSigned 1
+wordLength 16
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+data {
+id 16
+ssIdNumber 19
+linkNode [3 15 0]
+machine 1
+name "TDS"
+scope PARAMETER_DATA
+paramIndexForInitFromWorkspace 4
+dataType "Inherit: Same as Simulink"
+props {
+complexity SF_COMPLEX_INHERITED
+frame SF_FRAME_INHERITED
+array {
+size "-1"
+}
+
+type {
+method SF_INHERITED_TYPE
+primitive SF_DOUBLE_TYPE
+isSigned 1
+wordLength 16
+}
+
+unit {
+name "inherit"
+}
+
+}
+
+}
+
+target {
+id 2
+linkNode [1 0 0]
+machine 1
+name "sfun"
+description "Default Simulink S-Function Target."
+}
+
+instance {
+id 19
+machine 1
+chart 3
+name "AC Time\nOvercurrent Relay/Time Relay Function"
+}
+
+}
