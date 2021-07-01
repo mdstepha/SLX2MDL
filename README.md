@@ -5,9 +5,9 @@
   - Linux, MacOS 
     - Make sure '/usr/local/bin/' is in the env var PATH
     - Make sure python3 is installed 
-    - Run the script install.py as follows: 
-      - try: ./install.py 
-      - if that does not work, try: sudo ./install.py  
+    - Run the script INSTALL.py as follows: 
+      - try: ./INSTALL.py 
+      - if that does not work, try: sudo ./INSTALL.py  
     - Now, you can use the command 'slx2mdl' (see example usage below) from the command line to use this software. 
   - Windows 
     - Make sure python3 is installed.
