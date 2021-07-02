@@ -1,4 +1,4 @@
-#!/Users/bhisma/opt/anaconda3/bin/python
+#!/usr/bin/python3
 
 from commons import Utils, UtilsStfl, XmlElement 
 
