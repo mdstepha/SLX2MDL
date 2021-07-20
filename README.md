@@ -1,4 +1,4 @@
-# SLX2MDL transormation
+# SLX2MDL transformation
 
 ---
 ## INSTALLATION:
